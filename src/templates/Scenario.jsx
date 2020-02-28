@@ -5,8 +5,8 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO"
 
-import common from "../scss/_common.scss"
-import { hexToRgb } from "../helpers"
+// import common from "../scss/_common.module.scss"
+// import { hexToRgb } from "../helpers"
 
 class ScenarioTemplate extends React.Component {
   render() {
@@ -14,10 +14,7 @@ class ScenarioTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
-    console.log(post.frontmatter)
-    console.log(common.brandBackground)
-    console.log(hexToRgb(common.brandBackground).join(", "))
-    console.log()
+    // console.log(hexToRgb(common.brandBackground).join(", "))
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

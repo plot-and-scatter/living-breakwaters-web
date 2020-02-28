@@ -1,5 +1,5 @@
 {
-  "name": "livingbreakwaters.com",
+  "name": "living-breakwaters-web",
   "private": true,
   "description": "Living Breakwaters online platform",
   "version": "0.1.0",
@@ -63,6 +63,6 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "predeploy": "gatsby build --prefix-paths",
-    "deploy": "gh-pages -d public -b master"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }

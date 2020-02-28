@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "",
+  pathPrefix: "/living-breakwaters-web",
   siteMetadata: {
     title: `Living Breakwaters`,
     author: `Frank Hangler`,
