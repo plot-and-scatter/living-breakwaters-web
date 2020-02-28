@@ -1,0 +1,9 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ],
+  "files.exclude": {
+    "**/*.css": true
+  }
+}

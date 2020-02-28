@@ -1,0 +1,10 @@
+@import "../../scss/common";
+
+.Footer {
+  &.bg-dark {
+    background-color: $color-brand-background !important;
+  }
+  h6 {
+    color: $gray-500;
+  }
+}

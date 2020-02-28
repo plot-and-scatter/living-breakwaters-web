@@ -1,0 +1,11 @@
+@import "./common";
+
+$navbar-height: 56px;
+
+body {
+  padding-top: $navbar-height;
+  font-variant-numeric: lining-nums;
+  min-height: calc(100vh - #{$navbar-height});
+  // background-color: $gray-800;
+  background-color: $color-brand-background;
+}

@@ -1,0 +1,15 @@
+@import "../../scss/common";
+
+.Nav {
+  &.bg-dark {
+    background-color: $color-brand-background !important;
+  }
+  .navbar-brand img {
+    filter: grayscale(100%);
+    opacity: 0.9;
+    transition: 0.4s;
+    &:hover {
+      filter: none;
+    }
+  }
+}
