@@ -28,6 +28,8 @@ class Map extends React.Component {
     this.map = new mapboxgl.Map({
       container: "Map",
       style: "mapbox://styles/mapbox/streets-v11",
+      center: [-123.1, 49.2], // Vancouver
+      zoom: 9,
     })
   }
 
