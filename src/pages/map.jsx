@@ -26,6 +26,7 @@ class Map extends React.Component {
 
     this.mapRef = React.createRef()
     this.addLayer = this.addLayer.bind(this)
+    this.onCheckboxChange = this.onCheckboxChange.bind(this)
   }
 
   addLayer(layer) {
@@ -49,6 +50,10 @@ class Map extends React.Component {
     )
   }
 
+  onCheckboxChange(event) {
+    console.log("event.target.value", event.target.value)
+  }
+
   componentDidMount() {
     console.log(this.mapRef.current)
 
@@ -69,7 +74,7 @@ class Map extends React.Component {
     })
     this.map.addControl(new mapboxgl.NavigationControl())
 
-    console.log(LAYERS)
+    // console.log(LAYERS)
 
     this.layers = this.map.on("load", () => {
       this.addLayer(Object.values(LAYERS)[0])
@@ -79,6 +84,27 @@ class Map extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
+
+    console.log(LAYERS)
+
+    const checkboxes = Object.values(LAYERS).map(layer => {
+      return (
+        <div key={layer.id} className="form-check">
+          <input
+            type="checkbox"
+            id={layer.id}
+            name={layer.id}
+            value={layer.id}
+            className="form-check-input"
+            onChange={this.onCheckboxChange}
+          />
+          <label htmlFor={layer.id} className="form-check-label">
+            {layer.name}
+          </label>
+        </div>
+      )
+    })
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Map" />
@@ -90,7 +116,14 @@ class Map extends React.Component {
         >
           Map
         </BannerRow> */}
-        <div className="Map mt-3" id="Map" ref={this.mapRef}></div>
+        <div className="row mt-3">
+          <div className="col-3">
+            <form>{checkboxes}</form>
+          </div>
+          <div className="col-9">
+            <div className="Map" id="Map" ref={this.mapRef} />
+          </div>
+        </div>
       </Layout>
     )
   }
