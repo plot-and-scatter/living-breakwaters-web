@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO"
-import BannerRow from "../components/Rows/BannerRow"
+// import BannerRow from "../components/Rows/BannerRow"
 
-import image from "../../content/assets/images/alistair-mackenzie-EEgtTQPQ81Q-unsplash.jpg"
+// import image from "../../content/assets/images/alistair-mackenzie-EEgtTQPQ81Q-unsplash.jpg"
 
 import "./Map.scss"
 
