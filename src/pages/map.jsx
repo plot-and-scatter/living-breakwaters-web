@@ -28,7 +28,7 @@ class Map extends React.Component {
     // Styles: streets-v11, light-v10, outdoors-v11, satellite-v9
     this.map = new mapboxgl.Map({
       container: "Map",
-      style: "mapbox://styles/mapbox/light-v10",
+      style: "mapbox://styles/hangler/ck9d26xev0g6l1ipb2qhrwy3y",
       center: [-123.1, 49.2], // Vancouver
       zoom: 9,
     })
