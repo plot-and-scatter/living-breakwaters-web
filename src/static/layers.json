@@ -1,0 +1,489 @@
+{
+  "aboriginal_land_2": {
+    "name": "Aboriginal Land (Reserves)",
+    "id": "aboriginal_land_2",
+    "color": "#5b231b",
+    "opacity": 0.6,
+    "type": "fill"
+  },
+  "Airport": {
+    "name": "Airport",
+    "id": "Airport",
+    "color": "#c3d1cf",
+    "opacity": 0.4,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "alttrnst": {
+    "name": "Alternative Transit",
+    "id": "alttrnst",
+    "color": "#e2e1e0",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "BLD_EAGLE_polygon": {
+    "name": "Bald Eagle Range",
+    "id": "BLD_EAGLE_polygon",
+    "color": "#46a0ad",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "BLU_HERON_polygon": {
+    "name": "Blue Heron Range",
+    "id": "BLU_HERON_polygon",
+    "color": "#4692c4",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "cmmnty_bldg": {
+    "name": "Community Building",
+    "id": "cmmnty_bldg",
+    "color": "#849ac0",
+    "opacity": 0.5,
+    "type": "fill"
+  },
+  "cmmnty_cntrt": {
+    "name": "Community Centre",
+    "id": "cmmnty_cntrt",
+    "color": "#376fa3",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "commercial": {
+    "name": "commercial",
+    "id": "commercial",
+    "color": "#948831",
+    "opacity": 0.8,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "contour_-0.5": {
+    "name": "contour_-0.5",
+    "id": "contour_-0.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_-1": {
+    "name": "contour_-1",
+    "id": "contour_-1",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_0.5": {
+    "name": "contour_0.5",
+    "id": "contour_0.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_0": {
+    "name": "contour_0",
+    "id": "contour_0",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_1.5": {
+    "name": "contour_1.5",
+    "id": "contour_1.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_1": {
+    "name": "contour_1",
+    "id": "contour_1",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_2.5": {
+    "name": "contour_2.5",
+    "id": "contour_2.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_2": {
+    "name": "contour_2",
+    "id": "contour_2",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_3.5": {
+    "name": "contour_3.5",
+    "id": "contour_3.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_3": {
+    "name": "contour_3",
+    "id": "contour_3",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_4.5": {
+    "name": "contour_4.5",
+    "id": "contour_4.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_4": {
+    "name": "contour_4",
+    "id": "contour_4",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_5.5": {
+    "name": "contour_5.5",
+    "id": "contour_5.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_5": {
+    "name": "contour_5",
+    "id": "contour_5",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_6.5": {
+    "name": "contour_6.5",
+    "id": "contour_6.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_6": {
+    "name": "contour_6",
+    "id": "contour_6",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "CORMORANTS_polygon": {
+    "name": "Cormorant habitat",
+    "id": "CORMORANTS_polygon",
+    "color": "#4a9791",
+    "opacity": 0.3,
+    "type": "fill"
+  },
+  "DRPDSSTRRS_Line": {
+    "name": "Disaster Prepardeness Routes",
+    "id": "DRPDSSTRRS_Line",
+    "color": "#f1a21f",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "eelgrasses_polygon": {
+    "name": "eelgrasses",
+    "id": "eelgrasses_polygon",
+    "color": "#afa734",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "electrc_pwr_Statn": {
+    "name": "Electric Power Station",
+    "id": "electrc_pwr_Statn",
+    "color": "#d66969",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "estuary": {
+    "name": "estuary",
+    "id": "estuary",
+    "color": "#237066",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "FNT_TRT_LN_polygon": {
+    "name": "First Nations Treaty Land",
+    "id": "FNT_TRT_LN_polygon",
+    "color": "#8f2e1d",
+    "opacity": 0.6,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "FPW_FPWKLN_Line": {
+    "name": "Flood Protection Infrastructure",
+    "id": "FPW_FPWKLN_Line",
+    "color": "#0f9490",
+    "opacity": 0.6,
+    "type": "line"
+  },
+  "FRST_RSPND_point": {
+    "name": "First Responder",
+    "id": "FRST_RSPND_point",
+    "color": "#151b45",
+    "opacity": 0.4,
+    "type": "circle"
+  },
+  "hospital": {
+    "name": "Hospital",
+    "id": "hospital",
+    "color": "#dc1f26",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "HOSPITALS_Point": {
+    "name": "Hospitals(labels)",
+    "id": "HOSPITALS_Point",
+    "color": "#dc1f26",
+    "opacity": 0.4,
+    "type": "circle"
+  },
+  "Industrial": {
+    "name": "Industrial",
+    "id": "Industrial",
+    "color": "#038a8b",
+    "opacity": 0.4,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "Institutional": {
+    "name": "Institutional",
+    "id": "Institutional",
+    "color": "#3953a4",
+    "opacity": 0.5,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "LOCREG_GRN_polygon": {
+    "name": "Local Regional Greenspace",
+    "id": "LOCREG_GRN_polygon",
+    "color": "#575a27",
+    "opacity": 0.4,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "mudflats": {
+    "name": "Mudflats",
+    "id": "mudflats",
+    "color": "#e3eee9",
+    "opacity": 0.6,
+    "type": "fill"
+  },
+  "mv_rec_prtct": {
+    "name": "Open Space and Protected Areas",
+    "id": "mv_rec_prtct",
+    "color": "#7b8d39",
+    "opacity": 0.5,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "NAT_WLDLND_polygon": {
+    "name": "Natural Wildlands",
+    "id": "NAT_WLDLND_polygon",
+    "color": "#d6d96b",
+    "opacity": 0.4,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "nautical_facility_1": {
+    "name": "Docks",
+    "id": "nautical_facility_1",
+    "color": "#3e419a",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "pipeline_1": {
+    "name": "Pipelines",
+    "id": "pipeline_1",
+    "color": "#075144",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "port_van": {
+    "name": "Port of Vancouver Terminals",
+    "id": "port_van",
+    "color": "#454478",
+    "opacity": 0.3,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "power_line_1": {
+    "name": "Power Lines",
+    "id": "power_line_1",
+    "color": "#f59c95",
+    "opacity": 0.6,
+    "type": "line"
+  },
+  "PRT_TERMNAL_point": {
+    "name": "Port Terminal Points",
+    "id": "PRT_TERMNAL_point",
+    "color": "#454478",
+    "opacity": 0.4,
+    "type": "circle",
+    "position": "building-fill"
+  },
+  "REC_FISH_polygon": {
+    "name": "Recreational Fishing grounds",
+    "id": "REC_FISH_polygon",
+    "color": "#4f5c96",
+    "opacity": 0.3,
+    "type": "fill"
+  },
+  "residential_area_2": {
+    "name": "Residential",
+    "id": "residential_area_2",
+    "color": "#f9f28a",
+    "opacity": 0.3,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "ritual_cultural_area_2": {
+    "name": "Ritual Cultural Area",
+    "id": "ritual_cultural_area_2",
+    "color": "#542e89",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "rlgs_cntr": {
+    "name": "Religious Centre's",
+    "id": "rlgs_cntr",
+    "color": "#65cdef",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "roads_Arterial": {
+    "name": "Arterial corridor's",
+    "id": "roads_Arterial",
+    "color": "#ffc933",
+    "opacity": 0.7,
+    "type": "line"
+  },
+  "roads_collector": {
+    "name": "Collector roads",
+    "id": "roads_collector",
+    "color": "#ee9d21",
+    "opacity": 0.6,
+    "type": "line"
+  },
+  "roads_expressway": {
+    "name": "Expressway",
+    "id": "roads_expressway",
+    "color": "#B13737",
+    "opacity": 0.7,
+    "type": "line"
+  },
+  "roads_freeway": {
+    "name": "Freeway",
+    "id": "roads_freeway",
+    "color": "#3e1211",
+    "opacity": 0.9,
+    "type": "line"
+  },
+  "roads_ramp": {
+    "name": " Exit Ramps",
+    "id": "roads_ramp",
+    "color": "#c15627",
+    "opacity": 0.8,
+    "type": "line"
+  },
+  "runway_2": {
+    "name": "Airport Runway",
+    "id": "runway_2",
+    "color": "#4b3c38",
+    "opacity": 0.8,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "sandflats": {
+    "name": "Sandflats",
+    "id": "sandflats",
+    "color": "#e3eee9",
+    "opacity": 0.6,
+    "type": "fill"
+  },
+  "Scenario_a": {
+    "name": "present day 1-500yr storm surge",
+    "id": "Scenario_a",
+    "color": "#9bb3ce",
+    "opacity": 0.4,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "Scenario_b": {
+    "name": "2100 1/500 yr storm +1m slr",
+    "id": "Scenario_b",
+    "color": "#7b96af",
+    "opacity": 0.5,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "Scenario_c": {
+    "name": "Fraser 1984 flood record+peak flow",
+    "id": "Scenario_c",
+    "color": "#9cbad3",
+    "opacity": 0.4,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "Scenario_d": {
+    "name": "fraser-1/500 flood+1m slr",
+    "id": "Scenario_d",
+    "color": "#7493b2",
+    "opacity": 0.5,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "schools": {
+    "name": "schools",
+    "id": "schools",
+    "color": "#263c84",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "track_Segment_1": {
+    "name": "Train Tracks",
+    "id": "track_Segment_1",
+    "color": "#231f20",
+    "opacity": 0.3,
+    "type": "line"
+  },
+  "transformer_Station_0": {
+    "name": "Power Transformer",
+    "id": "transformer_Station_0",
+    "color": "#e38964",
+    "opacity": 0.8,
+    "type": "circle"
+  },
+  "TRNSMT_LNS_line": {
+    "name": "BC Hydro Transmission lines",
+    "id": "TRNSMT_LNS_line",
+    "color": "#ec7c67",
+    "opacity": 0.6,
+    "type": "line"
+  },
+  "TSLRPLS_polygon": {
+    "name": "Agricultural Land Reserve",
+    "id": "TSLRPLS_polygon",
+    "color": "#cdb79e",
+    "opacity": 0.3,
+    "type": "fill",
+    "position": "building-fill"
+  },
+  "waste_2": {
+    "name": "Waste Site",
+    "id": "waste_2",
+    "color": "#70b77e",
+    "opacity": 0.4,
+    "type": "fill"
+  },
+  "wetlands": {
+    "name": "Wetlands",
+    "id": "wetlands",
+    "color": "#6dbfb8",
+    "opacity": 0.9,
+    "type": "fill",
+    "position": "building-fill"
+  }
+}

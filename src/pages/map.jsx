@@ -10,7 +10,12 @@ import SEO from "../components/SEO"
 
 import "./Map.scss"
 
+import LAYERS from "../static/layers.json"
+
 import mapboxgl from "mapbox-gl"
+
+const BASE_URL =
+  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters"
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
@@ -20,6 +25,28 @@ class Map extends React.Component {
     super(props)
 
     this.mapRef = React.createRef()
+    this.addLayer = this.addLayer.bind(this)
+  }
+
+  addLayer(layer) {
+    console.log("layer", layer)
+    const type = layer.type
+    this.map.addLayer(
+      {
+        id: layer.id,
+        type: type,
+        source: {
+          type: "geojson",
+          data: `${BASE_URL}/${layer.id}.geojson`,
+        },
+        layout: {},
+        paint: {
+          [`${type}-color`]: layer.color,
+          [`${type}-opacity`]: layer.opacity,
+        },
+      },
+      layer.position
+    )
   }
 
   componentDidMount() {
@@ -41,21 +68,11 @@ class Map extends React.Component {
       maxZoom: 15,
     })
     this.map.addControl(new mapboxgl.NavigationControl())
-    this.map.on("load", () => {
-      this.map.addLayer({
-        id: "aboriginal_land",
-        type: "fill",
-        source: {
-          type: "geojson",
-          data:
-            "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/aboriginal_land_2.geojson",
-        },
-        layout: {},
-        paint: {
-          "fill-color": "#ff0000",
-          "fill-opacity": 0.6,
-        },
-      })
+
+    console.log(LAYERS)
+
+    this.layers = this.map.on("load", () => {
+      this.addLayer(Object.values(LAYERS)[0])
     })
   }
 
