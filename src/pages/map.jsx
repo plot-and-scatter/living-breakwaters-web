@@ -13,7 +13,7 @@ import "./Map.scss"
 import mapboxgl from "mapbox-gl"
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiI4VXhDYlFnIn0.DoacKWeoUZwE-UPhf9sCMQ"
+  "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
 
 class Map extends React.Component {
   constructor(props) {
@@ -25,12 +25,14 @@ class Map extends React.Component {
   componentDidMount() {
     console.log(this.mapRef.current)
 
+    // Styles: streets-v11, light-v10, outdoors-v11, satellite-v9
     this.map = new mapboxgl.Map({
       container: "Map",
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/mapbox/light-v10",
       center: [-123.1, 49.2], // Vancouver
       zoom: 9,
     })
+    this.map.addControl(new mapboxgl.NavigationControl())
   }
 
   render() {
