@@ -39,6 +39,12 @@ export default function HTML(props) {
           integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
           crossOrigin="anonymous"
         ></script>
+
+        {/* Mapbox */}
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
