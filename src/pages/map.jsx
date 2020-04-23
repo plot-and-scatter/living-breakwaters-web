@@ -25,14 +25,38 @@ class Map extends React.Component {
   componentDidMount() {
     console.log(this.mapRef.current)
 
+    // mapbox://styles/mapbox/...
     // Styles: streets-v11, light-v10, outdoors-v11, satellite-v9
+    // Custom outdoors: mapbox://styles/hangler/ck9d26xev0g6l1ipb2qhrwy3y
     this.map = new mapboxgl.Map({
       container: "Map",
-      style: "mapbox://styles/hangler/ck9d26xev0g6l1ipb2qhrwy3y",
-      center: [-123.1, 49.2], // Vancouver
+      style: "mapbox://styles/mapbox/light-v10",
+      center: [-123.1, 49.2], // Vancouver,
+      bounds: [
+        [-123.5, 48.9],
+        [-122.25, 49.4],
+      ],
       zoom: 9,
+      minZoom: 2,
+      maxZoom: 15,
     })
     this.map.addControl(new mapboxgl.NavigationControl())
+    this.map.on("load", () => {
+      this.map.addLayer({
+        id: "aboriginal_land",
+        type: "fill",
+        source: {
+          type: "geojson",
+          data:
+            "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/aboriginal_land_2.geojson",
+        },
+        layout: {},
+        paint: {
+          "fill-color": "#ff0000",
+          "fill-opacity": 0.6,
+        },
+      })
+    })
   }
 
   render() {
