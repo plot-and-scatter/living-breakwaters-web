@@ -7,12 +7,18 @@ class LayerGroup extends React.Component {
     const layers = Object.values(this.props.layers)
       .sort((a, b) => a.name.localeCompare(b.name))
       .map(layer => {
-        return <LayerCheckbox key={layer.id} layer={layer} />
+        return (
+          <LayerCheckbox
+            key={layer.id}
+            layer={layer}
+            toggleIdCallback={this.props.toggleIdCallback}
+          />
+        )
       })
 
     return (
-      <div className="LayerGroup p-1 pb-3">
-        <h4>{this.props.layerGroup.name}</h4>
+      <div className="LayerGroup pb-3">
+        <h6>{this.props.layerGroup.name}</h6>
         {layers}
       </div>
     )
@@ -23,5 +29,6 @@ export default LayerGroup
 
 LayerGroup.propTypes = {
   layerGroup: PropTypes.object,
-  layers: PropTypes.object,
+  layers: PropTypes.array,
+  toggleIdCallback: PropTypes.func,
 }

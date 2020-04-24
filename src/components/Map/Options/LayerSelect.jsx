@@ -12,25 +12,29 @@ class LayerSelect extends React.Component {
       .map(key => {
         const layerGroup = LAYER_GROUPS[key]
         const layers = Object.values(LAYERS).filter(
-          l => l.grouping === layerGroup.id
+          layer => layer.grouping === layerGroup.id
         )
-        console.log(layerGroup)
         return (
           <LayerGroup
             key={layerGroup.id}
             layerGroup={layerGroup}
             layers={layers}
+            toggleIdCallback={this.props.toggleIdCallback}
           />
         )
       })
 
     return (
-      <div className="LayerSelect p-1">
-        <h3>Layer Select</h3>
+      <div className="LayerSelect">
+        <h5>Layer Select</h5>
         {layerGroups}
       </div>
     )
   }
+}
+
+LayerSelect.propTypes = {
+  toggleIdCallback: PropTypes.func,
 }
 
 export default LayerSelect

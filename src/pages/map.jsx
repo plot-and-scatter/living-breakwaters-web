@@ -10,6 +10,8 @@ import SEO from "../components/SEO"
 
 import "./Map.scss"
 
+import LAYERS from "../static/layers.json"
+
 import mapboxgl from "mapbox-gl"
 import LayerSelect from "../components/Map/Options/LayerSelect"
 
@@ -25,11 +27,11 @@ class Map extends React.Component {
 
     this.mapRef = React.createRef()
     this.addLayer = this.addLayer.bind(this)
-    this.onCheckboxChange = this.onCheckboxChange.bind(this)
+    this.toggleIdCallback = this.toggleIdCallback.bind(this)
   }
 
   addLayer(layer) {
-    console.log("layer", layer)
+    // console.log("layer", layer)
     const type = layer.type
     this.map.addSource(`${layer.id}`, {
       type: "geojson",
@@ -45,25 +47,25 @@ class Map extends React.Component {
         [`${type}-opacity`]: layer.opacity,
       },
     })
-    console.log(this.map.getLayer(layer.id))
+    // console.log(this.map.getLayer(layer.id))
   }
 
-  onCheckboxChange(event) {
-    console.log("event.target.value", event.target.value, event.target.checked)
-    const id = event.target.value
+  toggleIdCallback(toggleTuple) {
+    const [id, checked] = toggleTuple
     if (this.addedLayers && this.addedLayers[id]) {
       // The layer is already on the map; toggle its visibility
+      const visibility = checked ? "visible" : "none"
+      // const layer = this.map.getLayer(id)
+      this.map.setLayoutProperty(id, "visibility", visibility)
     } else {
       // This can only ever happen when the layer is first added, so we don't
       // need to test for whether the box has been checked or not
-      // this.addLayer(LAYERS[event.target.value])
+      this.addLayer(LAYERS[id])
       this.addedLayers[id] = true
     }
   }
 
   componentDidMount() {
-    console.log(this.mapRef.current)
-
     // mapbox://styles/mapbox/...
     // Styles: streets-v11, light-v10, outdoors-v11, satellite-v9
     // Custom outdoors: mapbox://styles/hangler/ck9d26xev0g6l1ipb2qhrwy3y
@@ -80,8 +82,6 @@ class Map extends React.Component {
       maxZoom: 15,
     })
     this.map.addControl(new mapboxgl.NavigationControl())
-
-    // console.log(LAYERS)
 
     this.addedLayers = {}
 
@@ -106,7 +106,7 @@ class Map extends React.Component {
         <div className="row mt-3">
           <div className="col-3">
             {/* <form>{checkboxes}</form> */}
-            <LayerSelect />
+            <LayerSelect toggleIdCallback={this.toggleIdCallback} />
           </div>
           <div className="col-9">
             <div className="Map" id="Map" ref={this.mapRef} />
