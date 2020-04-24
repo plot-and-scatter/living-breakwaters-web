@@ -5,11 +5,20 @@ class LayerCheckbox extends React.Component {
   constructor(props) {
     super(props)
     this.onCheckboxChange = this.onCheckboxChange.bind(this)
+    this.ref = React.createRef()
   }
 
   onCheckboxChange(event) {
     // console.log(event.target.checked)
     this.props.toggleIdCallback([event.target.value, event.target.checked])
+  }
+
+  componentDidUpdate(prevProps) {
+    // console.log(prevProps.checked)
+    if (prevProps.checkedTs != this.props.checkedTs) {
+      this.ref.current.checked = this.props.checked
+      this.props.toggleIdCallback([this.props.layer.id, this.props.checked])
+    }
   }
 
   render() {
@@ -44,6 +53,7 @@ class LayerCheckbox extends React.Component {
               value={layer.id}
               className="form-check-input"
               onChange={this.onCheckboxChange}
+              ref={this.ref}
             />
             <label htmlFor={layer.id} className="form-check-label">
               {layer.name}
@@ -58,6 +68,8 @@ class LayerCheckbox extends React.Component {
 export default LayerCheckbox
 
 LayerCheckbox.propTypes = {
+  checked: PropTypes.bool,
+  checkedTs: PropTypes.number,
   layer: PropTypes.object,
   toggleIdCallback: PropTypes.func,
 }
