@@ -94,3 +94,20 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+// Temporary workaround for mapbox-gl import error described in
+// https://github.com/mapbox/mapbox-gl-js/issues/4593
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /mapbox-gl/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
