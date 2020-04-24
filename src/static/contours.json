@@ -1,0 +1,114 @@
+{
+  "contour_-0.5": {
+    "name": "contour_-0.5",
+    "id": "contour_-0.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_-1": {
+    "name": "contour_-1",
+    "id": "contour_-1",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_0.5": {
+    "name": "contour_0.5",
+    "id": "contour_0.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_0": {
+    "name": "contour_0",
+    "id": "contour_0",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_1.5": {
+    "name": "contour_1.5",
+    "id": "contour_1.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_1": {
+    "name": "contour_1",
+    "id": "contour_1",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_2.5": {
+    "name": "contour_2.5",
+    "id": "contour_2.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_2": {
+    "name": "contour_2",
+    "id": "contour_2",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_3.5": {
+    "name": "contour_3.5",
+    "id": "contour_3.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_3": {
+    "name": "contour_3",
+    "id": "contour_3",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_4.5": {
+    "name": "contour_4.5",
+    "id": "contour_4.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_4": {
+    "name": "contour_4",
+    "id": "contour_4",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_5.5": {
+    "name": "contour_5.5",
+    "id": "contour_5.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_5": {
+    "name": "contour_5",
+    "id": "contour_5",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_6.5": {
+    "name": "contour_6.5",
+    "id": "contour_6.5",
+    "color": "#5d6c82",
+    "opacity": 0.4,
+    "type": "line"
+  },
+  "contour_6": {
+    "name": "contour_6",
+    "id": "contour_6",
+    "color": "#2d3d56",
+    "opacity": 0.4,
+    "type": "line"
+  }
+}

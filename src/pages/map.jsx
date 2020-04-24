@@ -15,7 +15,7 @@ import LAYERS from "../static/layers.json"
 import mapboxgl from "mapbox-gl"
 
 const BASE_URL =
-  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters"
+  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/wgs84"
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
@@ -32,26 +32,34 @@ class Map extends React.Component {
   addLayer(layer) {
     console.log("layer", layer)
     const type = layer.type
-    this.map.addLayer(
-      {
-        id: layer.id,
-        type: type,
-        source: {
-          type: "geojson",
-          data: `${BASE_URL}/${layer.id}.geojson`,
-        },
-        layout: {},
-        paint: {
-          [`${type}-color`]: layer.color,
-          [`${type}-opacity`]: layer.opacity,
-        },
+    this.map.addSource(`${layer.id}`, {
+      type: "geojson",
+      data: `${BASE_URL}/${layer.id}.geojson`,
+    })
+    this.map.addLayer({
+      id: layer.id,
+      type: type,
+      source: `${layer.id}`,
+      layout: { visibility: "visible" },
+      paint: {
+        [`${type}-color`]: layer.color,
+        [`${type}-opacity`]: layer.opacity,
       },
-      layer.position
-    )
+    })
+    console.log(this.map.getLayer(layer.id))
   }
 
   onCheckboxChange(event) {
-    console.log("event.target.value", event.target.value)
+    console.log("event.target.value", event.target.value, event.target.checked)
+    const id = event.target.value
+    if (this.addedLayers && this.addedLayers[id]) {
+      // The layer is already on the map; toggle its visibility
+    } else {
+      // This can only ever happen when the layer is first added, so we don't
+      // need to test for whether the box has been checked or not
+      this.addLayer(LAYERS[event.target.value])
+      this.addedLayers[id] = true
+    }
   }
 
   componentDidMount() {
@@ -76,9 +84,9 @@ class Map extends React.Component {
 
     // console.log(LAYERS)
 
-    this.layers = this.map.on("load", () => {
-      this.addLayer(Object.values(LAYERS)[0])
-    })
+    this.addedLayers = {}
+
+    this.layers = this.map.on("load", () => {})
   }
 
   render() {
