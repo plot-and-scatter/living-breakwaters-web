@@ -1,0 +1,64 @@
+{
+  "anthropocentric": {
+    "index": 0,
+    "id": "anthropocentric",
+    "name": "Anthropocentric"
+  },
+  "civic_spaces": {
+    "index": 0,
+    "id": "civic_spaces",
+    "name": "Civic Spaces"
+  },
+  "emergency_response": {
+    "index": 0,
+    "id": "emergency_response",
+    "name": "Emergency Response"
+  },
+  "flood_scenario": {
+    "index": 0,
+    "id": "flood_scenario",
+    "name": "Flood Scenario"
+  },
+  "intertidal": {
+    "index": 0,
+    "id": "intertidal",
+    "name": "Intertidal"
+  },
+  "park_wildland": {
+    "index": 0,
+    "id": "park_wildland",
+    "name": "Park & Wildland"
+  },
+  "power": {
+    "index": 0,
+    "id": "power",
+    "name": "Power"
+  },
+  "sensitive_ecosystem": {
+    "index": 0,
+    "id": "sensitive_ecosystem",
+    "name": "Sensitive Ecosystem"
+  },
+  "shipping": {
+    "index": 0,
+    "id": "shipping",
+    "name": "Shipping"
+  },
+  "species_range": {
+    "index": 0,
+    "id": "species_range",
+    "name": "Species Range"
+  },
+  "transportation": {
+    "index": 0,
+    "id": "transportation",
+    "name": "Transportation"
+  },
+  "utilities": {
+    "index": 0,
+    "id": "utilities",
+    "name": "Utilities"
+  }
+
+
+}

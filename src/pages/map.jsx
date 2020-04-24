@@ -10,9 +10,8 @@ import SEO from "../components/SEO"
 
 import "./Map.scss"
 
-import LAYERS from "../static/layers.json"
-
 import mapboxgl from "mapbox-gl"
+import LayerSelect from "../components/Map/Options/LayerSelect"
 
 const BASE_URL =
   "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/wgs84"
@@ -57,7 +56,7 @@ class Map extends React.Component {
     } else {
       // This can only ever happen when the layer is first added, so we don't
       // need to test for whether the box has been checked or not
-      this.addLayer(LAYERS[event.target.value])
+      // this.addLayer(LAYERS[event.target.value])
       this.addedLayers[id] = true
     }
   }
@@ -93,50 +92,6 @@ class Map extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
 
-    console.log(LAYERS)
-
-    const checkboxes = Object.keys(LAYERS)
-      .sort()
-      .map(key => {
-        const layer = LAYERS[key]
-        const splitColorR = parseInt(layer.color.substring(1, 3), 16)
-        const splitColorG = parseInt(layer.color.substring(3, 5), 16)
-        const splitColorB = parseInt(layer.color.substring(5), 16)
-
-        console.log(splitColorR, splitColorG, splitColorB)
-
-        const threshold = 80
-
-        const color =
-          splitColorR > threshold &&
-          splitColorG > threshold &&
-          splitColorB > threshold
-            ? "black"
-            : "white"
-
-        return (
-          <div
-            key={layer.id}
-            className="CheckboxWrapper p-1"
-            style={{ backgroundColor: layer.color, color }}
-          >
-            <div className="form-check">
-              <input
-                type="checkbox"
-                id={layer.id}
-                name={layer.id}
-                value={layer.id}
-                className="form-check-input"
-                onChange={this.onCheckboxChange}
-              />
-              <label htmlFor={layer.id} className="form-check-label">
-                {layer.name}
-              </label>
-            </div>
-          </div>
-        )
-      })
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Map" />
@@ -150,7 +105,8 @@ class Map extends React.Component {
         </BannerRow> */}
         <div className="row mt-3">
           <div className="col-3">
-            <form>{checkboxes}</form>
+            {/* <form>{checkboxes}</form> */}
+            <LayerSelect />
           </div>
           <div className="col-9">
             <div className="Map" id="Map" ref={this.mapRef} />
