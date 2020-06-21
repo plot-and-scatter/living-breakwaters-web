@@ -1,64 +1,37 @@
 {
-  "anthropocentric": {
+  "flood_scenarios": {
     "index": 0,
-    "id": "anthropocentric",
-    "name": "Anthropocentric"
+    "id": "flood_scenarios",
+    "name": "Flood Scenarios"
   },
-  "civic_spaces": {
-    "index": 0,
-    "id": "civic_spaces",
-    "name": "Civic Spaces"
+  "flood_control_infrastructure": {
+    "index": 1,
+    "id": "flood_control_infrastructure",
+    "name": "Flood Control Infrastructure"
+  },  
+  "emergency_preparedness": {
+    "index": 2,
+    "id": "emergency_preparedness",
+    "name": "Emergency Preparedness"
   },
-  "emergency_response": {
-    "index": 0,
-    "id": "emergency_response",
-    "name": "Emergency Response"
+  "land_uses": {
+    "index": 3,
+    "id": "land_uses",
+    "name": "Land Uses"
   },
-  "flood_scenario": {
-    "index": 0,
-    "id": "flood_scenario",
-    "name": "Flood Scenario"
-  },
-  "intertidal": {
-    "index": 0,
-    "id": "intertidal",
-    "name": "Intertidal"
-  },
-  "park_wildland": {
-    "index": 0,
-    "id": "park_wildland",
-    "name": "Park & Wildland"
-  },
-  "power": {
-    "index": 0,
-    "id": "power",
-    "name": "Power"
-  },
-  "sensitive_ecosystem": {
-    "index": 0,
-    "id": "sensitive_ecosystem",
-    "name": "Sensitive Ecosystem"
-  },
-  "shipping": {
-    "index": 0,
-    "id": "shipping",
-    "name": "Shipping"
-  },
-  "species_range": {
-    "index": 0,
-    "id": "species_range",
-    "name": "Species Range"
-  },
-  "transportation": {
-    "index": 0,
-    "id": "transportation",
-    "name": "Transportation"
+  "logistics": {
+    "index": 4,
+    "id": "logistics",
+    "name": "Logistics"
   },
   "utilities": {
-    "index": 0,
+    "index": 5,
     "id": "utilities",
     "name": "Utilities"
+  },
+  "sensitive_ecosystems": {
+    "index": 6,
+    "id": "sensitive_ecosystems",
+    "name": "Sensitive Ecosystems"
   }
-
-
 }

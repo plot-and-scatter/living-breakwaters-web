@@ -1,0 +1,98 @@
+{
+  "alternative_transit": {
+    "name": "Alternative Transit",
+    "id": "alternative_transit",
+    "color": "#e2e1e0",
+    "opacity": 0.4,
+    "type": "fill",
+    "grouping": "anthropocentric"
+  },
+  "bald_eagle_range": {
+    "name": "Bald Eagle Range",
+    "id": "bald_eagle_range",
+    "color": "#46a0ad",
+    "opacity": 1.0,
+    "type": "fill",
+    "grouping": "species_range"
+  },
+  "blue_heron_range": {
+    "name": "Blue Heron Range",
+    "id": "blue_heron_range",
+    "color": "#4692c4",
+    "opacity": 0.4,
+    "type": "fill",
+    "grouping": "species_range"
+  },
+  "cormorant_habitat": {
+    "name": "Cormorant Habitat",
+    "id": "cormorant_habitat",
+    "color": "#4a9791",
+    "opacity": 0.3,
+    "type": "fill",
+    "grouping": "species_range"
+  },
+  "electric_power_station": {
+    "name": "Electric Power Stations",
+    "id": "electric_power_station",
+    "color": "#d66969",
+    "opacity": 0.4,
+    "type": "fill",
+    "grouping": "utilities"
+  },
+  "first_nations_treaty_land": {
+    "name": "First Nations Treaty Land",
+    "id": "first_nations_treaty_land",
+    "color": "#8f2e1d",
+    "opacity": 0.6,
+    "type": "fill",
+    "grouping": "land_uses"
+  },
+  "local_regional_greenspace": {
+    "name": "Local Regional Greenspace",
+    "id": "local_regional_greenspace",
+    "color": "#575a27",
+    "opacity": 0.4,
+    "type": "fill",
+    "grouping": "park_wildland"
+  },
+  "recreational_fishing_ground": {
+    "name": "Recreational Fishing Grounds",
+    "id": "recreational_fishing_ground",
+    "color": "#4f5c96",
+    "opacity": 0.3,
+    "type": "fill",
+    "grouping": "species_range"
+  },
+  "roads_collector": {
+    "name": "Collector Roads",
+    "id": "roads_collector",
+    "color": "#ee9d21",
+    "opacity": 0.6,
+    "type": "line",
+    "grouping": "logistics"
+  },
+  "power_line": {
+    "name": "Power Lines",
+    "id": "power_line",
+    "color": "#f59c95",
+    "opacity": 0.6,
+    "type": "line",
+    "grouping": "utilities"
+  },
+  "airport_runway": {
+    "name": "Airport Runway",
+    "id": "airport_runway",
+    "color": "#4b3c38",
+    "opacity": 0.8,
+    "type": "fill",
+    "grouping": "logistics"
+  },
+  "port_terminal": {
+    "name": "Port Terminal Points",
+    "id": "port_terminal",
+    "color": "#454478",
+    "opacity": 0.4,
+    "type": "circle",
+    "grouping": "logistics"
+  }
+}

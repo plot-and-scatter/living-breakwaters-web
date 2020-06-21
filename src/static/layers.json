@@ -5,7 +5,7 @@
     "color": "#5b231b",
     "opacity": 0.6,
     "type": "fill",
-    "grouping": "anthropocentric"
+    "grouping": "land_uses"
   },
   "airport": {
     "name": "Airports",
@@ -13,32 +13,7 @@
     "color": "#c3d1cf",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "anthropocentric"
-
-  },
-  "alternative_transit": {
-    "name": "Alternative Transit",
-    "id": "alternative_transit",
-    "color": "#e2e1e0",
-    "opacity": 0.4,
-    "type": "fill",
-    "grouping": "anthropocentric"
-  },
-  "bald_eagle_range": {
-    "name": "Bald Eagle Range",
-    "id": "bald_eagle_range",
-    "color": "#46a0ad",
-    "opacity": 1.0,
-    "type": "fill",
-    "grouping": "species_range"
-  },
-  "blue_heron_range": {
-    "name": "Blue Heron Range",
-    "id": "blue_heron_range",
-    "color": "#4692c4",
-    "opacity": 0.4,
-    "type": "fill",
-    "grouping": "species_range"
+    "grouping": "logistics"
   },
   "community_building": {
     "name": "Community Buildings",
@@ -46,7 +21,7 @@
     "color": "#849ac0",
     "opacity": 0.5,
     "type": "fill",
-    "grouping": "civic_spaces"
+    "grouping": "emergency_preparedness"
   },
   "community_centre": {
     "name": "Community Centre",
@@ -54,7 +29,7 @@
     "color": "#376fa3",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "civic_spaces"
+    "grouping": "emergency_preparedness"
   },
   "commercial": {
     "name": "Commercial",
@@ -62,15 +37,7 @@
     "color": "#948831",
     "opacity": 0.8,
     "type": "fill",
-    "grouping": "anthropocentric"
-  },
-  "cormorant_habitat": {
-    "name": "Cormorant Habitat",
-    "id": "cormorant_habitat",
-    "color": "#4a9791",
-    "opacity": 0.3,
-    "type": "fill",
-    "grouping": "species_range"
+    "grouping": "land_uses"
   },
   "disaster_preparedness_route": {
     "name": "Disaster Prepardeness Routes",
@@ -78,7 +45,7 @@
     "color": "#f1a21f",
     "opacity": 0.4,
     "type": "line",
-    "grouping": "emergency_response"
+    "grouping": "emergency_preparedness"
   },
   "eelgrasses": {
     "name": "Eelgrasses",
@@ -86,15 +53,7 @@
     "color": "#afa734",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "sensitive_ecosystem"
-  },
-  "electric_power_station": {
-    "name": "Electric Power Stations",
-    "id": "electric_power_station",
-    "color": "#d66969",
-    "opacity": 0.4,
-    "type": "fill",
-    "grouping": "power"
+    "grouping": "sensitive_ecosystems"
   },
   "estuary": {
     "name": "Estuary",
@@ -102,15 +61,7 @@
     "color": "#237066",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "intertidal"
-  },
-  "first_nations_treaty_land": {
-    "name": "First Nations Treaty Land",
-    "id": "first_nations_treaty_land",
-    "color": "#8f2e1d",
-    "opacity": 0.6,
-    "type": "fill",
-    "grouping": "anthropocentric"
+    "grouping": "sensitive_ecosystems"
   },
   "flood_protection_infrastructure": {
     "name": "Flood Protection Infrastructure",
@@ -118,7 +69,7 @@
     "color": "#0f9490",
     "opacity": 0.6,
     "type": "line",
-    "grouping": "utilities"
+    "grouping": "flood_control_infrastructure"
   },
   "first_responder": {
     "name": "First Responder",
@@ -126,7 +77,7 @@
     "color": "#151b45",
     "opacity": 0.4,
     "type": "circle",
-    "grouping": "emergency_response"
+    "grouping": "emergency_preparedness"
   },
   "hospital": {
     "name": "Hospital",
@@ -134,7 +85,7 @@
     "color": "#dc1f26",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "emergency_response"
+    "grouping": "emergency_preparedness"
   },
   "hospital_label": {
     "name": "Hospital (labels)",
@@ -142,7 +93,7 @@
     "color": "#dc1f26",
     "opacity": 0.4,
     "type": "circle",
-    "grouping": "emergency_response"
+    "grouping": "emergency_preparedness"
   },
   "industrial": {
     "name": "Industrial",
@@ -150,7 +101,7 @@
     "color": "#038a8b",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "anthropocentric"
+    "grouping": "land_uses"
   },
   "institutional": {
     "name": "Institutional",
@@ -158,15 +109,7 @@
     "color": "#3953a4",
     "opacity": 0.5,
     "type": "fill",
-    "grouping": "anthropocentric"
-  },
-  "local_regional_greenspace": {
-    "name": "Local Regional Greenspace",
-    "id": "local_regional_greenspace",
-    "color": "#575a27",
-    "opacity": 0.4,
-    "type": "fill",
-    "grouping": "park_wildland"
+    "grouping": "land_uses"
   },
   "mudflats": {
     "name": "Mudflats",
@@ -174,7 +117,7 @@
     "color": "#e3eee9",
     "opacity": 0.6,
     "type": "fill",
-    "grouping": "sensitive_ecosystem"
+    "grouping": "sensitive_ecosystems"
   },
   "open_space_protected_areas": {
     "name": "Open Space and Protected Areas",
@@ -182,7 +125,7 @@
     "color": "#7b8d39",
     "opacity": 0.5,
     "type": "fill",
-    "grouping": "park_wildland"
+    "grouping": "land_uses"
   },
   "natural_wildlands": {
     "name": "Natural Wildlands",
@@ -190,7 +133,7 @@
     "color": "#d6d96b",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "park_wildland"
+    "grouping": "land_uses"
   },
   "dock": {
     "name": "Docks",
@@ -198,7 +141,7 @@
     "color": "#3e419a",
     "opacity": 0.4,
     "type": "line",
-    "grouping": "shipping"
+    "grouping": "logistics"
   },
   "pipeline": {
     "name": "Pipelines",
@@ -214,31 +157,7 @@
     "color": "#454478",
     "opacity": 0.3,
     "type": "fill",
-    "grouping": "shipping"
-  },
-  "power_line": {
-    "name": "Power Lines",
-    "id": "power_line",
-    "color": "#f59c95",
-    "opacity": 0.6,
-    "type": "line",
-    "grouping": "power"
-  },
-  "port_terminal": {
-    "name": "Port Terminal Points",
-    "id": "port_terminal",
-    "color": "#454478",
-    "opacity": 0.4,
-    "type": "circle",
-    "grouping": "shipping"
-  },
-  "recreational_fishing_ground": {
-    "name": "Recreational Fishing Grounds",
-    "id": "recreational_fishing_ground",
-    "color": "#4f5c96",
-    "opacity": 0.3,
-    "type": "fill",
-    "grouping": "species_range"
+    "grouping": "logistics"
   },
   "residential": {
     "name": "Residential",
@@ -246,15 +165,15 @@
     "color": "#f9f28a",
     "opacity": 0.3,
     "type": "fill",
-    "grouping": "anthropocentric"
+    "grouping": "land_uses"
   },
   "ritual_cultural_area": {
-    "name": "Ritual Cultural Area",
+    "name": "Cemeteries",
     "id": "ritual_cultural_area",
     "color": "#542e89",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "anthropocentric"
+    "grouping": "land_uses"
   },
   "religious_centre": {
     "name": "Religious Centres",
@@ -262,7 +181,7 @@
     "color": "#65cdef",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "civic_spaces"
+    "grouping": "emergency_preparedness"
   },
   "roads_arterial": {
     "name": "Arterial Corridors",
@@ -270,15 +189,7 @@
     "color": "#ffc933",
     "opacity": 0.7,
     "type": "line",
-    "grouping": "transportation"
-  },
-  "roads_collector": {
-    "name": "Collector Roads",
-    "id": "roads_collector",
-    "color": "#ee9d21",
-    "opacity": 0.6,
-    "type": "line",
-    "grouping": "transportation"
+    "grouping": "logistics"
   },
   "roads_expressway": {
     "name": "Expressway",
@@ -286,7 +197,7 @@
     "color": "#B13737",
     "opacity": 0.7,
     "type": "line",
-    "grouping": "transportation"
+    "grouping": "logistics"
   },
   "roads_freeway": {
     "name": "Freeway",
@@ -294,7 +205,7 @@
     "color": "#3e1211",
     "opacity": 0.9,
     "type": "line",
-    "grouping": "transportation"
+    "grouping": "logistics"
   },
   "roads_ramp": {
     "name": " Exit Ramps",
@@ -302,15 +213,7 @@
     "color": "#c15627",
     "opacity": 0.8,
     "type": "line",
-    "grouping": "transportation"
-  },
-  "airport_runway": {
-    "name": "Airport Runway",
-    "id": "airport_runway",
-    "color": "#4b3c38",
-    "opacity": 0.8,
-    "type": "fill",
-    "grouping": "transportation"
+    "grouping": "logistics"
   },
   "sandflats": {
     "name": "Sandflats",
@@ -318,39 +221,39 @@
     "color": "#e3eee9",
     "opacity": 0.6,
     "type": "fill",
-    "grouping": "intertidal"
+    "grouping": "sensitive_ecosystems"
   },
   "scenario_a": {
-    "name": "1 in 500 Year Storm Surge (Present Day)",
+    "name": "Coastal: 1 in 500 Year Storm Surge (Present Day)",
     "id": "scenario_a",
     "color": "#9bb3ce",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "flood_scenario"
+    "grouping": "flood_scenarios"
   },
   "scenario_b": {
-    "name": "1 in 500 Year Storm Surge (2100, +1m Sea Level Rise)",
+    "name": "Coastal: 1 in 500 Year Storm Surge + 1m Sea Level Rise",
     "id": "scenario_b",
     "color": "#7b96af",
     "opacity": 0.5,
     "type": "fill",
-    "grouping": "flood_scenario"
+    "grouping": "flood_scenarios"
   },
   "scenario_c": {
-    "name": "Fraser River 1984 Flood Record + Peak Flow",
+    "name": "Riverine: Fraser River 1984 Flood Record + Peak Flow",
     "id": "scenario_c",
     "color": "#9cbad3",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "flood_scenario"
+    "grouping": "flood_scenarios"
   },
   "scenario_d": {
-    "name": "Fraser River 1 in 500 Year Flood +1m Sea Level Rise",
+    "name": "Riverine: Fraser River 1 in 500 Year Flood +1m Sea Level Rise",
     "id": "scenario_d",
     "color": "#7493b2",
     "opacity": 0.5,
     "type": "fill",
-    "grouping": "flood_scenario"
+    "grouping": "flood_scenarios"
   },
   "schools": {
     "name": "Schools",
@@ -358,7 +261,7 @@
     "color": "#263c84",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "civic_spaces"
+    "grouping": "emergency_preparedness"
   },
   "train_track": {
     "name": "Train Tracks",
@@ -366,7 +269,7 @@
     "color": "#231f20",
     "opacity": 0.3,
     "type": "line",
-    "grouping": "transportation"
+    "grouping": "logistics"
   },
   "transformer_station": {
     "name": "Power Transformer",
@@ -374,7 +277,7 @@
     "color": "#e38964",
     "opacity": 0.8,
     "type": "circle",
-    "grouping": "power"
+    "grouping": "utilities"
   },
   "transmission_line": {
     "name": "BC Hydro Transmission Lines",
@@ -382,7 +285,7 @@
     "color": "#ec7c67",
     "opacity": 0.6,
     "type": "line",
-    "grouping": "power"
+    "grouping": "utilities"
   },
   "agricultural_land_reserve": {
     "name": "Agricultural Land Reserve",
@@ -390,7 +293,7 @@
     "color": "#cdb79e",
     "opacity": 0.3,
     "type": "fill",
-    "grouping": "anthropocentric"
+    "grouping": "land_uses"
   },
   "waste": {
     "name": "Waste Site",
@@ -406,6 +309,6 @@
     "color": "#6dbfb8",
     "opacity": 0.9,
     "type": "fill",
-    "grouping": "sensitive_ecosystem"
+    "grouping": "sensitive_ecosystems"
   }
 }
