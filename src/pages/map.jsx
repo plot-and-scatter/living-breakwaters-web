@@ -125,15 +125,15 @@ class Map extends React.Component {
         >
           Map
         </BannerRow> */}
-        <div className="row">
+        <div className="row mt-3">
           <div className="col">
             <button
-              className="btn btn-primary"
+              className="btn btn-outline-primary"
               type="button"
               data-toggle="collapse"
               data-target="#LayerSelect"
             >
-              <i className="fas fa-layer-group" />
+              <i className="fas fa-layer-group mr-1" /> Layers
             </button>
           </div>
         </div>
