@@ -125,14 +125,18 @@ class Map extends React.Component {
         >
           Map
         </BannerRow> */}
-        <button
-          className="btn btn-primary"
-          type="button"
-          data-toggle="collapse"
-          data-target="#LayerSelect"
-        >
-          Show all layer options
-        </button>
+        <div className="row">
+          <div className="col">
+            <button
+              className="btn btn-primary"
+              type="button"
+              data-toggle="collapse"
+              data-target="#LayerSelect"
+            >
+              <i className="fas fa-layer-group" />
+            </button>
+          </div>
+        </div>
         <div className="row collapse" id="LayerSelect">
           <div className="col-12">
             {/* <form>{checkboxes}</form> */}
