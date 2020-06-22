@@ -19,7 +19,7 @@ export default function HTML(props) {
 
         {/* Font Awesome */}
         <script
-          src="https://kit.fontawesome.com/6ff3b35f82.js"
+          src="https://kit.fontawesome.com/ba797ea550.js"
           crossOrigin="anonymous"
         ></script>
 

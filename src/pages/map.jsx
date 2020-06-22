@@ -21,6 +21,28 @@ const BASE_URL =
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
 
+// export type FilterMapAction = {
+//   type: 'setFilter' | 'reset'
+//   filter?: IFilter
+// }
+
+// type FilterMap = { [key: string]: IFilter }
+
+// function reducer(state, action) {
+//   const { type, filter } = action
+//   const filterMapClone = { ...state }
+//   switch (type) {
+//     case "setFilter":
+//       //eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+//       filterMapClone[filter.fieldName] = filter
+//       return filterMapClone
+//     case "reset":
+//       return {}
+//   }
+// }
+
+export const FilterDispatch = React.createContext({})
+
 class Map extends React.Component {
   constructor(props) {
     super(props)
@@ -103,12 +125,14 @@ class Map extends React.Component {
         >
           Map
         </BannerRow> */}
-        <div className="row mt-3">
-          <div className="col-3">
+        <div className="row">
+          <div className="col-12">
             {/* <form>{checkboxes}</form> */}
             <LayerSelect toggleIdCallback={this.toggleIdCallback} />
           </div>
-          <div className="col-9">
+        </div>
+        <div className="row mt-3">
+          <div className="col">
             <div className="Map" id="Map" ref={this.mapRef} />
           </div>
         </div>

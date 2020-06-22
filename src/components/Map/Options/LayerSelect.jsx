@@ -25,9 +25,9 @@ class LayerSelect extends React.Component {
       })
 
     return (
-      <div className="LayerSelect">
+      <div className="LayerSelect p-2">
         <h5>Layer Select</h5>
-        {layerGroups}
+        <div className="row">{layerGroups}</div>
       </div>
     )
   }
