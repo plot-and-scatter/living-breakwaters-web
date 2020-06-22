@@ -125,7 +125,15 @@ class Map extends React.Component {
         >
           Map
         </BannerRow> */}
-        <div className="row">
+        <button
+          className="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#LayerSelect"
+        >
+          Show all layer options
+        </button>
+        <div className="row collapse" id="LayerSelect">
           <div className="col-12">
             {/* <form>{checkboxes}</form> */}
             <LayerSelect toggleIdCallback={this.toggleIdCallback} />

@@ -5,6 +5,8 @@ import LayerGroup from "./LayerGroup"
 import LAYERS from "../../../static/layers.json"
 import LAYER_GROUPS from "../../../static/layer_groups.json"
 
+import "./LayerSelect.scss"
+
 class LayerSelect extends React.Component {
   render() {
     const layerGroups = Object.keys(LAYER_GROUPS)
