@@ -240,7 +240,7 @@
     "grouping": "flood_scenarios"
   },
   "scenario_c": {
-    "name": "Riverine: Fraser River 1984 Flood Record + Peak Flow",
+    "name": "Riverine: Fraser River 1894 Flood Record + Peak Flow",
     "id": "scenario_c",
     "color": "#9cbad3",
     "opacity": 0.4,
@@ -309,6 +309,7 @@
     "color": "#6dbfb8",
     "opacity": 0.9,
     "type": "fill",
-    "grouping": "sensitive_ecosystems"
+    "grouping": "sensitive_ecosystems",
+    "image": "Wetlands.svg"
   }
 }
