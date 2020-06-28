@@ -149,6 +149,7 @@
     "color": "#D0500C",
     "opacity": 0.9,
     "type": "line",
+    "line-weight": 4,
     "grouping": "utilities"
   },
   "port_of_vancouver_terminals": {
@@ -186,7 +187,7 @@
   "roadways": {
     "name": "Roadways",
     "id": "roadways",
-    "color": "#36393c",
+    "color": "#66696c",
     "opacity": 0.9,
     "type": "line",
     "grouping": "logistics",
@@ -194,33 +195,37 @@
       {
         "name": "Arterial Corridors",
         "id": "roads_arterial",
-        "color": "#36393c",
+        "color": "#66696c",
         "opacity": 0.9,
         "type": "line",
+        "line-weight": 2,
         "grouping": "logistics"
       },
       {
         "name": "Expressway",
         "id": "roads_expressway",
-        "color": "#36393c",
+        "color": "#66696c",
         "opacity": 0.9,
         "type": "line",
+        "line-weight": 4,
         "grouping": "logistics"
       },
       {
         "name": "Freeway",
         "id": "roads_freeway",
-        "color": "#36393c",
+        "color": "#66696c",
         "opacity": 0.9,
         "type": "line",
+        "line-weight": 4,
         "grouping": "logistics"
       },
       {
-        "name": " Exit Ramps",
+        "name": "Exit Ramps",
         "id": "roads_ramp",
-        "color": "#36393c",
+        "color": "#66696c",
         "opacity": 0.9,
         "type": "line",
+        "line-weight": 4,
         "grouping": "logistics"
       }
     ]
@@ -279,6 +284,8 @@
     "color": "#112233",
     "opacity": 0.9,
     "type": "line",
+    "line-weight": 1,
+    "line-dasharray": [3, 1],
     "grouping": "logistics"
   },
   "transformer_station": {
@@ -295,6 +302,7 @@
     "color": "#FADC20",
     "opacity": 0.6,
     "type": "line",
+    "line-weight": 3,
     "grouping": "utilities"
   },
   "agricultural_land_reserve": {

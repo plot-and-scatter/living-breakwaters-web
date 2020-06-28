@@ -73,15 +73,25 @@ class Map extends React.Component {
           type: "geojson",
           data: `${BASE_URL}/${layerToAdd.id}.geojson`,
         })
+        const paint = {
+          [`${type}-color`]: layerToAdd.color,
+          [`${type}-opacity`]: layerToAdd.opacity,
+        }
+        if (type === "line") {
+          paint[`line-width`] = layerToAdd[`line-weight`] || 1
+          if (layerToAdd[`line-dasharray`]) {
+            paint[`line-dasharray`] = layerToAdd[`line-dasharray`]
+          }
+          if (layerToAdd[`line-gap-width`]) {
+            paint[`line-gap-width`] = layerToAdd[`line-gap-width`]
+          }
+        }
         this.map.addLayer({
           id: layerToAdd.id,
           type: type,
           source: `${layerToAdd.id}`,
           layout: { visibility: "visible" },
-          paint: {
-            [`${type}-color`]: layerToAdd.color,
-            [`${type}-opacity`]: layerToAdd.opacity,
-          },
+          paint,
         })
       })
     }
