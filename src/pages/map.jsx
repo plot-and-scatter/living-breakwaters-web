@@ -90,7 +90,6 @@ class Map extends React.Component {
   toggleIdCallback(toggleTuple) {
     const [id, checked] = toggleTuple
 
-    console.log("id, checked", id, checked)
     const layerIdsToToggle = LAYERS[id].layers
       ? LAYERS[id].layers
       : [LAYERS[id]]
