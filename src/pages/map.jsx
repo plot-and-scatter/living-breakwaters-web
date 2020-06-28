@@ -53,6 +53,7 @@ class Map extends React.Component {
           type: "geojson",
           data: `${BASE_URL}/${layer.id}.geojson`,
         })
+
         this.map.addLayer({
           id: layer.id,
           type: type,
@@ -65,36 +66,48 @@ class Map extends React.Component {
         })
       })
     } else {
-      this.map.addSource(`${layer.id}`, {
-        type: "geojson",
-        data: `${BASE_URL}/${layer.id}.geojson`,
-      })
-      this.map.addLayer({
-        id: layer.id,
-        type: type,
-        source: `${layer.id}`,
-        layout: { visibility: "visible" },
-        paint: {
-          [`${type}-color`]: layer.color,
-          [`${type}-opacity`]: layer.opacity,
-        },
+      const layersToAdd = layer.layers ? layer.layers : [layer]
+
+      layersToAdd.forEach(layerToAdd => {
+        this.map.addSource(`${layerToAdd.id}`, {
+          type: "geojson",
+          data: `${BASE_URL}/${layerToAdd.id}.geojson`,
+        })
+        this.map.addLayer({
+          id: layerToAdd.id,
+          type: type,
+          source: `${layerToAdd.id}`,
+          layout: { visibility: "visible" },
+          paint: {
+            [`${type}-color`]: layerToAdd.color,
+            [`${type}-opacity`]: layerToAdd.opacity,
+          },
+        })
       })
     }
   }
 
   toggleIdCallback(toggleTuple) {
     const [id, checked] = toggleTuple
-    if (this.addedLayers && this.addedLayers[id]) {
-      // The layer is already on the map; toggle its visibility
-      const visibility = checked ? "visible" : "none"
-      // const layer = this.map.getLayer(id)
-      this.map.setLayoutProperty(id, "visibility", visibility)
-    } else {
-      // This can only ever happen when the layer is first added, so we don't
-      // need to test for whether the box has been checked or not
-      this.addLayer(LAYERS[id])
-      this.addedLayers[id] = true
-    }
+
+    console.log("id, checked", id, checked)
+    const layerIdsToToggle = LAYERS[id].layers
+      ? LAYERS[id].layers
+      : [LAYERS[id]]
+    layerIdsToToggle.forEach(layer => {
+      const layerId = layer.id
+      if (this.addedLayers && this.addedLayers[layerId]) {
+        // The layer is already on the map; toggle its visibility
+        const visibility = checked ? "visible" : "none"
+        // const layer = this.map.getLayer(id)
+        this.map.setLayoutProperty(layerId, "visibility", visibility)
+      } else {
+        // This can only ever happen when the layer is first added, so we don't
+        // need to test for whether the box has been checked or not
+        this.addLayer(layer)
+        this.addedLayers[layerId] = true
+      }
+    })
   }
 
   componentDidMount() {
