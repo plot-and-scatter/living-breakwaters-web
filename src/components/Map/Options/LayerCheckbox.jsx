@@ -41,8 +41,8 @@ class LayerCheckbox extends React.Component {
     return (
       <div
         key={layer.id}
-        className="LayerCheckbox p-1"
-        style={{ backgroundColor: layer.color, color }}
+        className="LayerCheckbox"
+        style={{ backgroundColor: layer.color, color, padding: "2px" }}
       >
         <small>
           <div className="form-check">
