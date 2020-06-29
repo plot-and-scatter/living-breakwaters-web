@@ -32,12 +32,16 @@
     font-size: 0.85rem;
     line-height: 1.4;
   }
-  &:hover {
+  &:hover,
+  &.active {
     .card-header {
       background: rgba($color-brand-background, 0.2) !important;
     }
     .card-img-top {
       filter: none;
     }
+  }
+  &.active {
+    border-width: 3px;
   }
 }

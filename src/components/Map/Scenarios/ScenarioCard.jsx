@@ -20,6 +20,7 @@ class ScenarioCard extends React.Component {
           whiteSpace: "normal",
           verticalAlign: "top",
         }}
+        onClick={() => this.props.scenarioClickCallback(scenario.layerIds)}
       >
         <img src={this.props.image} className="card-img-top" alt="" />
         <div className="card-header">
@@ -36,6 +37,7 @@ class ScenarioCard extends React.Component {
 ScenarioCard.propTypes = {
   scenario: PropTypes.object,
   image: PropTypes.string,
+  scenarioClickCallback: PropTypes.func,
 }
 
 export default ScenarioCard

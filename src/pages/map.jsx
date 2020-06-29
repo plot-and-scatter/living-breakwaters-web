@@ -35,6 +35,7 @@ class Map extends React.Component {
     this.mapRef = React.createRef()
     this.addLayer = this.addLayer.bind(this)
     this.toggleIdCallback = this.toggleIdCallback.bind(this)
+    this.scenarioClickCallback = this.scenarioClickCallback.bind(this)
   }
 
   addLayer(layer) {
@@ -101,10 +102,8 @@ class Map extends React.Component {
   toggleIdCallback(toggleTuple) {
     const [id, checked] = toggleTuple
 
-    const layerIdsToToggle = LAYERS[id].layers
-      ? LAYERS[id].layers
-      : [LAYERS[id]]
-    layerIdsToToggle.forEach(layer => {
+    const layersToToggle = LAYERS[id].layers ? LAYERS[id].layers : [LAYERS[id]]
+    layersToToggle.forEach(layer => {
       const layerId = layer.id
       if (this.addedLayers && this.addedLayers[layerId]) {
         // The layer is already on the map; toggle its visibility
@@ -117,6 +116,33 @@ class Map extends React.Component {
         this.addLayer(layer)
         this.addedLayers[layerId] = true
       }
+    })
+  }
+
+  scenarioClickCallback(ids) {
+    console.log("ids", ids)
+    // Hide all existing layers
+    Object.keys(this.addedLayers).forEach(addedLayerId => {
+      console.log("addedLayerId", addedLayerId)
+      this.map.setLayoutProperty(addedLayerId, "visibility", "none")
+    })
+    // Add new ones
+    ids.forEach(id => {
+      const layer = LAYERS[id]
+      const layerIds = layer.layers ? layer.layers : [layer.id]
+      layerIds.forEach(layerId => {
+        if (this.addedLayers && this.addedLayers[layerId]) {
+          // The layer is already on the map; toggle its visibility
+          const visibility = "visible"
+          // const layer = this.map.getLayer(id)
+          this.map.setLayoutProperty(layerId, "visibility", visibility)
+        } else {
+          // This can only ever happen when the layer is first added, so we don't
+          // need to test for whether the box has been checked or not
+          this.addLayer(layer)
+          this.addedLayers[layerId] = true
+        }
+      })
     })
   }
 
@@ -185,7 +211,11 @@ class Map extends React.Component {
                 i === 0 ? image1 : i === 1 ? image2 : i === 2 ? image3 : image4
               return (
                 <div className="col" key={s.id}>
-                  <ScenarioCard scenario={s} image={image} />
+                  <ScenarioCard
+                    scenario={s}
+                    image={image}
+                    scenarioClickCallback={this.scenarioClickCallback}
+                  />
                 </div>
               )
             })}
