@@ -159,8 +159,8 @@ class Map extends React.Component {
           Map
         </BannerRow> */}
         <LayerModal toggleIdCallback={this.toggleIdCallback} />
-        <div className="row">
-          <div className="col-12 mt-3">
+        <div className="MapRow row">
+          <div className="col-12">
             <button
               className="btn btn-outline-dark LayerToggle"
               type="button"
