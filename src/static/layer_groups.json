@@ -9,15 +9,15 @@
     "id": "emergency_preparedness",
     "name": "Emergency Preparedness"
   },
-  "land_uses": {
-    "index": 3,
-    "id": "land_uses",
-    "name": "Land Uses"
-  },
   "logistics": {
-    "index": 4,
+    "index": 3,
     "id": "logistics",
     "name": "Logistics"
+  },
+  "land_uses": {
+    "index": 4,
+    "id": "land_uses",
+    "name": "Land Uses"
   },
   "utilities": {
     "index": 5,

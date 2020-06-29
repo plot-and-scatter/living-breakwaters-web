@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { graphql } from "gatsby"
+import mapboxgl from "mapbox-gl"
 
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO"
@@ -13,8 +14,6 @@ import "./Map.scss"
 import LAYERS from "../static/layers.json"
 import SCENARIOS from "../static/scenarios.json"
 
-import mapboxgl from "mapbox-gl"
-import LayerSelect from "../components/Map/Options/LayerSelect"
 import ScenarioCard from "../components/Map/Scenarios/ScenarioCard"
 
 const BASE_URL =
@@ -27,6 +26,7 @@ import image1 from "../../content/assets/images/jared-murray-NSuufgf-BME-unsplas
 import image2 from "../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg"
 import image3 from "../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg"
 import image4 from "../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg"
+import LayerModal from "../components/Map/Modals/LayerModal"
 
 class Map extends React.Component {
   constructor(props) {
@@ -158,30 +158,7 @@ class Map extends React.Component {
         >
           Map
         </BannerRow> */}
-        <div className="modal left fade" id="LayerSelect">
-          <div className="modal-dialog modal-lg" role="document">
-            <div className="modal-content">
-              <div className="modal-header d-flex align-items-center">
-                <h5 className="modal-title" id="exampleModalLabel">
-                  Layer select
-                </h5>
-                <button
-                  type="button"
-                  className="btn btn-light"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">
-                    <i className="fas fa-times" />
-                  </span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <LayerSelect toggleIdCallback={this.toggleIdCallback} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <LayerModal toggleIdCallback={this.toggleIdCallback} />
         <div className="row">
           <div className="col-12 mt-3">
             <button
