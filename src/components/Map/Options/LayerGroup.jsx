@@ -52,7 +52,7 @@ class LayerGroup extends React.Component {
     const expanded = this.state.expanded
 
     return (
-      <div className="LayerGroup col-3 pb-2">
+      <div className="LayerGroup col-6 pb-2">
         <div className="d-flex align-items-baseline justify-content-between">
           <h6 onClick={this.toggleExpanded} style={{ cursor: "pointer" }}>
             {this.props.layerGroup.name}

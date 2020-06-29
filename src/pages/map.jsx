@@ -123,26 +123,23 @@ class Map extends React.Component {
     // mapbox://styles/mapbox/...
     // Styles: streets-v11, light-v10, outdoors-v11, satellite-v9
     // Custom outdoors: mapbox://styles/hangler/ck9d26xev0g6l1ipb2qhrwy3y
-    this.map = new mapboxgl.Map({
-      container: "Map",
-      style: "mapbox://styles/mapbox/light-v10",
-      center: [-123.1, 49.2], // Vancouver,
-      bounds: [
-        [-123.5, 48.9],
-        [-122.25, 49.4],
-      ],
-      zoom: 9,
-      minZoom: 2,
-      maxZoom: 15,
-    })
-    this.map.addControl(new mapboxgl.NavigationControl())
-
-    // Load patterns
-    // this.map.addImage("pattern", wetlands)
+    // this.map = new mapboxgl.Map({
+    //   container: "Map",
+    //   style: "mapbox://styles/mapbox/light-v10",
+    //   center: [-123.1, 49.2], // Vancouver,
+    //   bounds: [
+    //     [-123.5, 48.9],
+    //     [-122.25, 49.4],
+    //   ],
+    //   zoom: 9,
+    //   minZoom: 2,
+    //   maxZoom: 15,
+    // })
+    // this.map.addControl(new mapboxgl.NavigationControl())
 
     this.addedLayers = {}
 
-    this.map.on("load", () => {})
+    // this.map.on("load", () => {})
   }
 
   render() {
@@ -163,23 +160,42 @@ class Map extends React.Component {
         <div className="row mt-3">
           <div className="col-1">
             <button
-              className="btn btn-outline-primary"
+              className="btn btn-outline-primary LayerToggle"
               type="button"
-              data-toggle="collapse"
+              data-toggle="modal"
               data-target="#LayerSelect"
             >
               <i className="fas fa-layer-group mr-1" /> Layers
             </button>
           </div>
-        </div>
-        <div className="row collapse" id="LayerSelect">
-          <div className="col-12">
-            {/* <form>{checkboxes}</form> */}
-            <LayerSelect toggleIdCallback={this.toggleIdCallback} />
+          <div className="modal fade" id="LayerSelect">
+            <div
+              className="modal-dialog modal-lg modal-dialog-centered"
+              role="document"
+            >
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLabel">
+                    Layer select
+                  </h5>
+                  <button
+                    type="button"
+                    className="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div className="modal-body">
+                  <LayerSelect toggleIdCallback={this.toggleIdCallback} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="row mt-3">
-          <div className="col">
+        <div className="row">
+          <div className="col-12">
             <div className="Map" id="Map" ref={this.mapRef} />
           </div>
         </div>
