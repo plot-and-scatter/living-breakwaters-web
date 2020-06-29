@@ -25,7 +25,8 @@ mapboxgl.accessToken =
 
 import image1 from "../../content/assets/images/jared-murray-NSuufgf-BME-unsplash-clipped.jpg"
 import image2 from "../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg"
-import image3 from "../../content/assets/images/maria-cantu-9biF7RhGVjo-unsplash-clipped.jpg"
+import image3 from "../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg"
+import image4 from "../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg"
 
 class Map extends React.Component {
   constructor(props) {
@@ -166,11 +167,13 @@ class Map extends React.Component {
                 </h5>
                 <button
                   type="button"
-                  className="btn btn-outline-primary"
+                  className="btn btn-light"
                   data-dismiss="modal"
                   aria-label="Close"
                 >
-                  <span aria-hidden="true">&times;</span>
+                  <span aria-hidden="true">
+                    <i className="fas fa-times" />
+                  </span>
                 </button>
               </div>
               <div className="modal-body">
@@ -196,17 +199,19 @@ class Map extends React.Component {
           <div className="col-12">
             <h2>Scenarios</h2>
           </div>
-          <div
-            className="col-12"
-            style={{ overflowX: "scroll", whiteSpace: "nowrap" }}
-          >
-            {Object.values(SCENARIOS)
-              .sort((a, b) => a.index - b.index)
-              .map((s, i) => {
-                const image = i === 0 ? image1 : i === 1 ? image2 : image3
-                return <ScenarioCard key={s.id} scenario={s} image={image} />
-              })}
-          </div>
+        </div>
+        <div className="row">
+          {Object.values(SCENARIOS)
+            .sort((a, b) => a.index - b.index)
+            .map((s, i) => {
+              const image =
+                i === 0 ? image1 : i === 1 ? image2 : i === 2 ? image3 : image4
+              return (
+                <div className="col" key={s.id}>
+                  <ScenarioCard scenario={s} image={image} />
+                </div>
+              )
+            })}
         </div>
       </Layout>
     )

@@ -15,10 +15,8 @@ class ScenarioCard extends React.Component {
 
     return (
       <div
-        className="ScenarioCard card mr-3 mb-3"
+        className="ScenarioCard card"
         style={{
-          width: "400px",
-          display: "inline-block",
           whiteSpace: "normal",
           verticalAlign: "top",
         }}
