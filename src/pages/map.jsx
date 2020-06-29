@@ -168,11 +168,8 @@ class Map extends React.Component {
               <i className="fas fa-layer-group mr-1" /> Layers
             </button>
           </div>
-          <div className="modal fade" id="LayerSelect">
-            <div
-              className="modal-dialog modal-lg modal-dialog-centered"
-              role="document"
-            >
+          <div className="modal left fade" id="LayerSelect">
+            <div className="modal-dialog modal-lg" role="document">
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="exampleModalLabel">
@@ -180,7 +177,7 @@ class Map extends React.Component {
                   </h5>
                   <button
                     type="button"
-                    className="close"
+                    className="btn btn-primary"
                     data-dismiss="modal"
                     aria-label="Close"
                   >

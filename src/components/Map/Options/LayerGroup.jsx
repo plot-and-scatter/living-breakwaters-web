@@ -36,7 +36,7 @@ class LayerGroup extends React.Component {
 
   render() {
     const layers = Object.values(this.props.layers)
-      .sort((a, b) => a.name.localeCompare(b.name))
+      // .sort((a, b) => a.name.localeCompare(b.name))
       .map(layer => {
         return (
           <LayerCheckbox
@@ -52,14 +52,14 @@ class LayerGroup extends React.Component {
     const expanded = this.state.expanded
 
     return (
-      <div className="LayerGroup col-6 pb-2">
+      <div className="LayerGroup pb-2">
         <div className="d-flex align-items-baseline justify-content-between">
           <h6 onClick={this.toggleExpanded} style={{ cursor: "pointer" }}>
             {this.props.layerGroup.name}
           </h6>
           <p>
             <button
-              className="btn btn-sm btn-xs btn-outline-primary ml-2"
+              className="btn btn-sm btn-xs btn-primary ml-2"
               onClick={this.toggleCheckAll}
             >
               {this.state.allChecked ? (

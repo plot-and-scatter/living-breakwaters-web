@@ -4,11 +4,6 @@
     "id": "flood_scenarios",
     "name": "Flood Scenarios"
   },
-  "flood_control_infrastructure": {
-    "index": 1,
-    "id": "flood_control_infrastructure",
-    "name": "Flood Control Infrastructure"
-  },  
   "emergency_preparedness": {
     "index": 2,
     "id": "emergency_preparedness",

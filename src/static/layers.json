@@ -69,7 +69,7 @@
     "color": "#0f9490",
     "opacity": 0.6,
     "type": "line",
-    "grouping": "flood_control_infrastructure"
+    "grouping": "flood_scenarios"
   },
   "first_responder": {
     "name": "First Responder",
