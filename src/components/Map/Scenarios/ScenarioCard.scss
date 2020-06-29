@@ -1,9 +1,43 @@
+@import "../../../scss/common.module";
+
 .ScenarioCard {
-  h5 {
-    font-size: 1.1rem;
+  cursor: pointer !important;
+  border: solid $color-brand-background 1px;
+  border-radius: 0 !important;
+  z-index: 120;
+  .card-header {
+    cursor: pointer !important;
+    background: rgba($color-brand-background, 0.4) !important;
+    margin-top: -145px;
+    height: 145px;
+    color: white;
+    padding: 1rem !important;
+    z-index: 110;
+    h4 {
+      text-shadow: 0 1px 0 #000;
+    }
+  }
+  .card-body {
+    cursor: pointer !important;
+    border-top: solid $color-brand-background 1px !important;
+    padding: 1rem !important;
+    height: 245px;
+    overflow-y: scroll;
+  }
+  .card-img-top {
+    filter: grayscale(100%);
+    z-index: 100;
   }
   .Intro {
     font-size: 0.85rem;
     line-height: 1.4;
+  }
+  &:hover {
+    .card-header {
+      background: rgba($color-brand-background, 0.2) !important;
+    }
+    .card-img-top {
+      filter: none;
+    }
   }
 }
