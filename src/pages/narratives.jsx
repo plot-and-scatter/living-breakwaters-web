@@ -7,6 +7,7 @@ import SEO from "../components/SEO"
 
 import NarrativeSelect from "../components/Narratives/NarrativeSelect"
 import { NarrativeProvider } from "../components/Narratives/NarrativeContext"
+import NarrativeFrame from "../components/Narratives/NarrativeFrame"
 
 class Narratives extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Narratives extends React.Component {
         <SEO title="Narratives" />
         <NarrativeProvider>
           <NarrativeSelect />
+          <NarrativeFrame />
         </NarrativeProvider>
       </Layout>
     )

@@ -20,6 +20,8 @@ const NarrativeSelect = () => {
         type="number"
         value={narrativeStage}
         onChange={setNarrativeStageCallback}
+        min={0}
+        max={3}
       />
     </div>
   )
