@@ -27,3 +27,10 @@
   stroke-width: 0.1;
 }
 
+.Reeds:hover {
+  cursor: pointer;
+  background-color: #eee;
+  .reeds {
+    stroke-width: 0.5;
+  }
+}
