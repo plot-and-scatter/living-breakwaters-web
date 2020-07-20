@@ -5,7 +5,7 @@ import "./Water.scss"
 const TOTAL_HEIGHT = 400
 
 const Water = ({ narrativeStage }) => {
-  const waterHeight = 100 + narrativeStage * 25
+  const waterHeight = 10 + Math.pow(narrativeStage, 2) * 15
   const yAdjustment = TOTAL_HEIGHT - waterHeight
 
   return (
@@ -15,7 +15,7 @@ const Water = ({ narrativeStage }) => {
       style={{ width: "100%" }}
       height="400"
     >
-      <rect width="100%" height={300} y={yAdjustment} />
+      <rect width="100%" height="100%" y={yAdjustment} />
     </svg>
   )
 }
