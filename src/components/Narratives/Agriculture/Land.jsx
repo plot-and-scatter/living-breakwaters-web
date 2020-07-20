@@ -11,6 +11,13 @@ const Land = ({ narrativeStage }) => {
       height="400"
     >
       <rect width="100%" height="50px" y="350px" x="200px" />
+      <rect
+        className="Groundwater"
+        width="100%"
+        height="50px"
+        y="350px"
+        x="200px"
+      />
     </svg>
   )
 }
