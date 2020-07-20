@@ -25,7 +25,7 @@ const AgricultureTableau = () => {
       <g className="Foreground">
         <g
           style={{
-            marginLeft: "100px",
+            marginLeft: "200px",
             transform: "scale(0.8)",
           }}
           className="d-flex align-items-end"

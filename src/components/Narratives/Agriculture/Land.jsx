@@ -10,7 +10,7 @@ const Land = ({ narrativeStage }) => {
       style={{ width: "100%" }}
       height="400"
     >
-      <rect width="100%" height="50px" y="350px" x="100px" />
+      <rect width="100%" height="50px" y="350px" x="200px" />
     </svg>
   )
 }

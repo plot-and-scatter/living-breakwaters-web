@@ -5,7 +5,7 @@ import "./Water.scss"
 const TOTAL_HEIGHT = 400
 
 const Water = ({ narrativeStage }) => {
-  const waterHeight = 10 + Math.pow(narrativeStage, 2) * 15
+  const waterHeight = 10 + Math.pow(narrativeStage, 1.5) * 20
   const yAdjustment = TOTAL_HEIGHT - waterHeight
 
   return (
