@@ -1,6 +1,7 @@
 import React from "react"
 import Reeds from "./Reeds"
 import { useNarrative } from "./NarrativeContext"
+import Farmhouse from "./Farmhouse"
 
 const Tableau = () => {
   const { narrativeStage } = useNarrative()
@@ -11,7 +12,12 @@ const Tableau = () => {
     reeds.push(<Reeds key={i} narrativeStage={narrativeStage} />)
   }
 
-  return <div className="Tableau">{reeds}</div>
+  return (
+    <div className="Tableau d-flex align-items-end">
+      <Farmhouse />
+      {reeds}
+    </div>
+  )
 }
 
 export default Tableau

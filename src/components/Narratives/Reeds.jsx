@@ -4,16 +4,17 @@ import "./Reeds.scss"
 
 const Reeds = ({ narrativeStage }) => {
   const reedsClassName = `reeds reeds-st${narrativeStage}`
+  const rotation = narrativeStage == 3 ? -30 : 0
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 33 21"
-      width="200"
-      height="200"
+      width={200}
+      height={150}
       className="Reeds"
     >
       <switch>
-        <g>
+        <g transform={`rotate(${rotation}, 16, 11)`}>
           <g id="Section_1">
             <path
               className={reedsClassName}
