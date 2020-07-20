@@ -17,8 +17,8 @@ class Narratives extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Narratives" />
         <NarrativeProvider>
-          <NarrativeSelect />
           <NarrativeFrame />
+          <NarrativeSelect />
         </NarrativeProvider>
       </Layout>
     )
