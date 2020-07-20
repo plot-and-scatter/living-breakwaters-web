@@ -1,0 +1,8 @@
+.Land {
+  fill: rgba(lighten(#654321, 50%), 1);
+  stroke: rgba(#654321, 1);
+  stroke-width: 2px;
+  rect {
+    transition: y 0.5s;
+  }
+}
