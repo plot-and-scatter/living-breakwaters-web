@@ -104,4 +104,26 @@
   .cls-12 {
     stroke-width: 2px;
   }
+  .cls-1a,
+  .cls-6 {
+    fill: none;
+  }
+  .cls-2a {
+    fill: #231f20;
+  }
+  .cls-5a {
+    fill: #264b70;
+  }
+  .cls-6a {
+    stroke: #264b70;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    stroke-dasharray: 4;
+    animation: dash 1s linear infinite;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 40;
+    }
+  }
 }
