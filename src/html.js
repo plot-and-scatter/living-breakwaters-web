@@ -45,6 +45,9 @@ export default function HTML(props) {
           href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css"
           rel="stylesheet"
         />
+
+        {/* GSAP */}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
