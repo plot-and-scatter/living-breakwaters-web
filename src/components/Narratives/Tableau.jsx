@@ -1,12 +1,12 @@
 import React from "react"
 
 import "./Tableau.scss"
-import AgricultureTableau from "./Agriculture/AgricultureTableau"
+import FoodSecurityTableau from "./Agriculture/FoodSecurityTableau"
 
 const Tableau = () => {
   return (
     <div className="Tableau">
-      <AgricultureTableau />
+      <FoodSecurityTableau />
     </div>
   )
 }
