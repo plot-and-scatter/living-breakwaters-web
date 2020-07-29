@@ -1,4 +1,40 @@
 .FoodSecurityTableau {
+  svg {
+    margin-top: 240px;
+  }
+  .groundwater {
+    path {
+      opacity: 0.5;
+    }
+    .saltwater-wedge {
+      fill: #436689;
+    }
+    .fresh-water {
+      fill: #6f90c1;
+    }
+    .mean-sea-level {
+      fill: #264b70;
+    }
+    #groundwater-1,
+    #groundwater-2 {
+      path {
+        visibility: hidden;
+      }
+    }
+  }
+
+  #present {
+    opacity: 0.2;
+  }
+  #near-future {
+    opacity: 0.2;
+  }
+  #future {
+    opacity: 0.2;
+  }
+  .invisible {
+    visibility: hidden;
+  }
   .cls-1,
   .cls-14,
   .cls-17,
