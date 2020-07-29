@@ -1,6 +1,6 @@
 .FoodSecurityTableau {
   svg {
-    margin-top: 240px;
+    margin-top: 50px;
   }
   .groundwater {
     .saltwater-wedge {
@@ -13,7 +13,7 @@
       fill: #264b70;
     }
     .ground {
-      fill: #565656
+      fill: #565656;
     }
     .sea-surge {
       fill: #083860;
@@ -38,69 +38,70 @@
   .invisible {
     visibility: hidden;
   }
+  .cls-1 {
+    fill: #7f7f7f;
+  }
   .cls-1,
-  .cls-14,
-  .cls-17,
-  .cls-18,
-  .cls-6,
+  .cls-10,
+  .cls-11,
+  .cls-12,
+  .cls-13,
+  .cls-3,
+  .cls-8 {
+    stroke: #000;
+  }
+  .cls-1,
+  .cls-13 {
+    stroke-miterlimit: 10;
+  }
+  .cls-10,
+  .cls-11,
+  .cls-12,
+  .cls-3,
   .cls-9 {
     fill: none;
   }
-  .cls-2 {
-    fill: #231f20;
-  }
-  .cls-6 {
-    stroke: #fff;
-    stroke-width: 3px;
-  }
+  .cls-10,
+  .cls-11,
   .cls-12,
-  .cls-13,
-  .cls-17,
-  .cls-18,
-  .cls-6 {
-    stroke-miterlimit: 10;
-  }
-  .cls-17,
-  .cls-6 {
-    stroke-dasharray: 4;
-  }
-  .cls-7 {
-    fill: #264b70;
-  }
-  .cls-12,
-  .cls-13,
-  .cls-14,
-  .cls-18,
-  .cls-9 {
-    stroke: #000;
-  }
-  .cls-14,
+  .cls-3,
+  .cls-8,
   .cls-9 {
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-  .cls-9 {
-    stroke-width: 0.58px;
+  .cls-3 {
+    stroke-width: 0.25px;
   }
-  .cls-10,
-  .cls-12 {
-    fill: #704242;
-  }
-  .cls-11 {
+  .cls-4 {
     fill: #b3b3b3;
   }
-  .cls-13 {
-    fill: #7f7f7f;
+  .cls-13,
+  .cls-5 {
+    fill: #704242;
   }
-  .cls-14,
-  .cls-18 {
-    stroke-width: 2px;
+  .cls-6 {
+    opacity: 0.5;
   }
-  .cls-17 {
-    stroke: #264b70;
+  .cls-7 {
+    fill: #c9dcd8;
+  }
+  .cls-8 {
+    fill: #c3cc8d;
+    stroke-width: 0.2px;
+    opacity: 0.9;
+  }
+  .cls-9 {
+    stroke: #060808;
+  }
+  .cls-10,
+  .cls-9 {
     stroke-width: 0.5px;
   }
-  .cls-18 {
-    stroke-dasharray: 4 4;
+  .cls-11 {
+    stroke-width: 0.58px;
+  }
+  .cls-12 {
+    stroke-width: 2px;
   }
 }
