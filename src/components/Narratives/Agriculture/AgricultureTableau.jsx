@@ -3,7 +3,8 @@ import Reeds from "./Reeds"
 import { useNarrative } from "../NarrativeContext"
 import Farmhouse from "./Farmhouse"
 import Water from "./Water"
-import Land from "./Land"
+import Ground from "../Elements/Ground/Ground"
+// import Land from "./Land"
 
 const AgricultureTableau = () => {
   const { narrativeStage } = useNarrative()
@@ -16,14 +17,15 @@ const AgricultureTableau = () => {
 
   return (
     <div className="AgricultureTableau Tableau">
-      <g className="Background">
-        <Water narrativeStage={narrativeStage} />
-      </g>
-      <g className="Background">
-        <Land narrativeStage={narrativeStage} />
-      </g>
-      <g className="Foreground">
-        <g
+      {/* <div className="Background"> */}
+      {/* <Water narrativeStage={narrativeStage} /> */}
+      {/* </div> */}
+      <div className="Background">
+        {/* <Land narrativeStage={narrativeStage} /> */}
+        <Ground />
+      </div>
+      <div className="Foreground">
+        <div
           style={{
             marginLeft: "200px",
             transform: "scale(0.8)",
@@ -31,9 +33,9 @@ const AgricultureTableau = () => {
           className="d-flex align-items-end"
         >
           <Farmhouse />
-          <g className="ReedsHolder">{reeds}</g>
-        </g>
-      </g>
+          {/* <div className="ReedsHolder">{reeds}</div> */}
+        </div>
+      </div>
     </div>
   )
 }
