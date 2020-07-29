@@ -33,12 +33,20 @@ const toggleRainStorm = (id, toggleVar) => {
   if (el) {
     if (toggleVar) {
       new TimelineLite()
-        .to(".Tableau", { backgroundImage: "linear-gradient(#ccc, #fff)" })
-        .to(".rainfall", { opacity: 1 })
+        .to(".Tableau", {
+          backgroundImage: "linear-gradient(#ccc, #fff)",
+          duration: 2,
+        })
+        .to(".rainfall", { opacity: 1, duration: 1 })
+        .to(".saturated-ground", { opacity: 1, duration: 3 })
     } else {
       new TimelineLite()
-        .to(".Tableau", { backgroundImage: "linear-gradient(#bbddff, #fff)" })
-        .to(".rainfall", { opacity: 0 })
+        .to(".Tableau", {
+          backgroundImage: "linear-gradient(#bbddff, #fff)",
+          duration: 0.5,
+        })
+        .to(".rainfall", { opacity: 0, duration: 0.5 })
+        .to(".saturated-ground", { opacity: 0, duration: 0.5 })
     }
   }
 }
@@ -113,6 +121,24 @@ const FoodSecurityTableau = () => {
 
   return (
     <div className="FoodSecurityTableau">
+      <div className="mb-2 p-2">
+        <button
+          className={`btn btn-sm ${
+            !rainVisible ? "btn-outline-secondary" : "btn-primary"
+          }`}
+          onClick={toggleRain}
+        >
+          Toggle rain
+        </button>
+        <button
+          className={`btn btn-sm ${
+            !stormSurgeVisible ? "btn-outline-secondary" : "btn-primary"
+          } ml-2`}
+          onClick={toggleStormSurge}
+        >
+          Toggle storm surge
+        </button>
+      </div>
       <svg
         id="present_day"
         data-name="present day"
@@ -438,17 +464,6 @@ const FoodSecurityTableau = () => {
           </g>
         </g>
       </svg>
-      <div className="mt-2">
-        <button className="btn btn-sm btn-primary" onClick={toggleRain}>
-          Toggle rain
-        </button>
-        <button
-          className="btn btn-sm btn-primary ml-2"
-          onClick={toggleStormSurge}
-        >
-          Toggle storm surge
-        </button>
-      </div>
     </div>
   )
 }
