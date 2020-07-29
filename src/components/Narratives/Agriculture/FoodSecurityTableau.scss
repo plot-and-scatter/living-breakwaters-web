@@ -3,9 +3,6 @@
     margin-top: 240px;
   }
   .groundwater {
-    path {
-      opacity: 0.5;
-    }
     .saltwater-wedge {
       fill: #436689;
     }
@@ -14,6 +11,12 @@
     }
     .mean-sea-level {
       fill: #264b70;
+    }
+    .ground {
+      fill: #565656
+    }
+    .sea-surge {
+      fill: #083860;
     }
     #groundwater-1,
     #groundwater-2 {
