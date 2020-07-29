@@ -30,8 +30,8 @@ const Ground = ({ narrativeStage }) => {
       })
       .to(
         document.body,
-        1,
         {
+          duration: 1,
           backgroundColor: "#1d1d1d",
           ease: Power2.easeInOut,
         },
@@ -63,7 +63,7 @@ const Ground = ({ narrativeStage }) => {
         viewBox={`0 0 ${W} ${H}`}
         preserveAspectRatio="none"
       >
-        <path
+        {/* <path
           id="GroundBase"
           ref={groundBaseRef}
           fill="none"
@@ -86,6 +86,33 @@ const Ground = ({ narrativeStage }) => {
             Q ${(W * 2) / 4} ${H - 5}, ${(W * 2) / 4} ${H / 2}
             Q ${(W * 3) / 4} ${H - 5}, ${(W * 3) / 4} ${H / 2}
             Q ${(W * 4) / 4} ${H - 5}, ${(W * 4) / 4} ${H / 2}
+            `}
+        /> */}
+        <path
+          id="GroundBase"
+          ref={groundBaseRef}
+          fill="none"
+          stroke="#333333"
+          strokeWidth="2"
+          d={`M 0 ${H - 50}
+            l 200 -10
+            l 100 -50 
+            h 100
+            l 100 60
+            h 750
+            `}
+        />
+        <path
+          fill="none"
+          stroke="none"
+          id="GroundAlt"
+          ref={groundAltRef}
+          d={`M 0 ${H - 50}
+            l 200 -10
+            l 100 -50 
+            h 100
+            l 100 60
+            h 760
             `}
         />
       </svg>

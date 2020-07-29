@@ -32,7 +32,7 @@ const AgricultureTableau = () => {
           }}
           className="d-flex align-items-end"
         >
-          <Farmhouse />
+          {/* <Farmhouse /> */}
           {/* <div className="ReedsHolder">{reeds}</div> */}
         </div>
       </div>
