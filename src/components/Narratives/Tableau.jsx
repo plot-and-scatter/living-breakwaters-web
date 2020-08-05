@@ -1,7 +1,7 @@
 import React from "react"
 
 import "./Tableau.scss"
-import FoodSecurityTableau from "./Agriculture/FoodSecurityTableau"
+import FoodSecurityTableau from "./Agriculture/FoodSecurityTableau2"
 
 const Tableau = () => {
   return (
