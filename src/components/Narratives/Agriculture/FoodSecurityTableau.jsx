@@ -17,11 +17,9 @@ const toggleSeaLevel = (className, toggleVar) => {
     console.log("el", el, toggleVar)
     if (el) {
       if (toggleVar) {
-        console.log("out there")
-        gsap.to(el, { y: 0 })
+        gsap.to(el, { y: 0, duration: 3 })
       } else {
-        console.log("in here")
-        gsap.to(el, { y: 50 })
+        gsap.to(el, { y: 50, duration: 3 })
       }
     }
   }
