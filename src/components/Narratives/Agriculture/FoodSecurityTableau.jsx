@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import { gsap, TimelineMax, TimelineLite, Power2 } from "gsap"
+import { gsap, TimelineMax, Power2 } from "gsap"
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
 
 import "./FoodSecurityTableau.scss"
@@ -10,32 +10,9 @@ import { useNarrative } from "../NarrativeContext"
 import SVGLinearGradient from "../Elements/Helpers/SVGLinearGradient"
 import BaseLayerStage from "./BaseLayers/BaseLayerStage"
 import { toggleSeaSurge } from "./BaseLayers/SeaSurge"
-import HeavyRain from "./BaseLayers/HeavyRain"
+import HeavyRain, { toggleRainStorm } from "./BaseLayers/HeavyRain"
 
 gsap.registerPlugin(MorphSVGPlugin)
-
-const toggleRainStorm = (id, toggleVar) => {
-  const el = document.getElementById(id)
-  if (el) {
-    if (toggleVar) {
-      new TimelineLite()
-        .to(".Tableau", {
-          backgroundImage: "linear-gradient(#ccc, #fff)",
-          duration: 2,
-        })
-        .to(".rainfall", { opacity: 1, duration: 1 })
-        .to(".saturated-ground", { opacity: 1, duration: 3 })
-    } else {
-      new TimelineLite()
-        .to(".Tableau", {
-          backgroundImage: "linear-gradient(#bbddff, #fff)",
-          duration: 0.5,
-        })
-        .to(".rainfall", { opacity: 0, duration: 0.5 })
-        .to(".saturated-ground", { opacity: 0, duration: 0.5 })
-    }
-  }
-}
 
 const itemHelper = (objClass, id, index) => {
   return gsap.to(
@@ -92,7 +69,7 @@ const FoodSecurityTableau = () => {
   }, [stormSurgeVisible])
 
   useEffect(() => {
-    toggleRainStorm("heavy_rain_event", rainVisible)
+    toggleRainStorm("HeavyRain", rainVisible)
   }, [rainVisible])
 
   useEffect(() => {
@@ -143,27 +120,13 @@ const FoodSecurityTableau = () => {
             data-name="10 dpi 20%"
             width="28.8"
             height="28.8"
-            patternTransform="matrix(.75 0 0 .75 -574.31 -173.65)"
+            patternTransform="matrix(.75 0 0 .75 1.2 -41.7)"
             patternUnits="userSpaceOnUse"
           >
-            <path className="cls-1a" d="M0 0h28.8v28.8H0z" />
+            <path fill="none" d="M0 0h28.8v28.8H0z" />
             <path
-              className="cls-2a"
-              d="M28.8 30.24a1.44 1.44 0 10-1.44-1.44 1.44 1.44 0 001.44 1.44zM14.4 30.24A1.44 1.44 0 1013 28.8a1.44 1.44 0 001.4 1.44zM28.8 15.84a1.44 1.44 0 10-1.44-1.44 1.44 1.44 0 001.44 1.44zM14.4 15.84A1.44 1.44 0 1013 14.4a1.44 1.44 0 001.4 1.44zM7.2 23a1.44 1.44 0 10-1.44-1.4A1.44 1.44 0 007.2 23zM21.6 23a1.44 1.44 0 10-1.44-1.44A1.44 1.44 0 0021.6 23zM7.2 8.64A1.44 1.44 0 105.76 7.2 1.44 1.44 0 007.2 8.64zM21.6 8.64a1.44 1.44 0 10-1.44-1.44 1.44 1.44 0 001.44 1.44zM0 30.24a1.44 1.44 0 001.44-1.44A1.45 1.45 0 000 27.36a1.44 1.44 0 00-1.44 1.44A1.43 1.43 0 000 30.24zM0 15.84a1.44 1.44 0 001.44-1.44A1.45 1.45 0 000 13a1.44 1.44 0 00-1.44 1.4A1.43 1.43 0 000 15.84zM28.8 1.44A1.45 1.45 0 0030.24 0a1.44 1.44 0 00-1.44-1.44A1.43 1.43 0 0027.36 0a1.44 1.44 0 001.44 1.44zM14.4 1.44A1.45 1.45 0 0015.84 0a1.44 1.44 0 00-1.44-1.44A1.43 1.43 0 0013 0a1.44 1.44 0 001.4 1.44zM0 1.44A1.45 1.45 0 001.44 0 1.44 1.44 0 000-1.44 1.43 1.43 0 00-1.44 0 1.44 1.44 0 000 1.44z"
-            />
-          </pattern>
-          <pattern
-            id="_10_dpi_20_3"
-            data-name="10 dpi 20%"
-            width="28.8"
-            height="28.8"
-            patternTransform="translate(-5.64 -6.14)"
-            patternUnits="userSpaceOnUse"
-          >
-            <path className="cls-1a" d="M0 0h28.8v28.8H0z" />
-            <path
-              className="cls-2a"
-              d="M28.8 30.24a1.44 1.44 0 10-1.44-1.44 1.44 1.44 0 001.44 1.44zM14.4 30.24A1.44 1.44 0 1013 28.8a1.44 1.44 0 001.4 1.44zM28.8 15.84a1.44 1.44 0 10-1.44-1.44 1.44 1.44 0 001.44 1.44zM14.4 15.84A1.44 1.44 0 1013 14.4a1.44 1.44 0 001.4 1.44zM7.2 23a1.44 1.44 0 10-1.44-1.4A1.44 1.44 0 007.2 23zM21.6 23a1.44 1.44 0 10-1.44-1.44A1.44 1.44 0 0021.6 23zM7.2 8.64A1.44 1.44 0 105.76 7.2 1.44 1.44 0 007.2 8.64zM21.6 8.64a1.44 1.44 0 10-1.44-1.44 1.44 1.44 0 001.44 1.44zM0 30.24a1.44 1.44 0 001.44-1.44A1.45 1.45 0 000 27.36a1.44 1.44 0 00-1.44 1.44A1.43 1.43 0 000 30.24zM0 15.84a1.44 1.44 0 001.44-1.44A1.45 1.45 0 000 13a1.44 1.44 0 00-1.44 1.4A1.43 1.43 0 000 15.84zM28.8 1.44A1.45 1.45 0 0030.24 0a1.44 1.44 0 00-1.44-1.44A1.43 1.43 0 0027.36 0a1.44 1.44 0 001.44 1.44zM14.4 1.44A1.45 1.45 0 0015.84 0a1.44 1.44 0 00-1.44-1.44A1.43 1.43 0 0013 0a1.44 1.44 0 001.4 1.44zM0 1.44A1.45 1.45 0 001.44 0 1.44 1.44 0 000-1.44 1.43 1.43 0 00-1.44 0 1.44 1.44 0 000 1.44z"
+              className="cls-2"
+              d="M28.8 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM28.8 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 23a1.4 1.4 0 10-1.4-1.4A1.4 1.4 0 007.2 23zM21.6 23a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM21.6 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM0 30.2a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 27.4a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 30.2zM0 15.8a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 13a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 15.8zM28.8 1.4A1.4 1.4 0 0030.2 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0027.4 0a1.4 1.4 0 001.4 1.4zM14.4 1.4A1.4 1.4 0 0015.8 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0013 0a1.4 1.4 0 001.4 1.4zM0 1.4A1.4 1.4 0 001.4 0 1.4 1.4 0 000-1.4 1.4 1.4 0 00-1.4 0 1.4 1.4 0 000 1.4z"
             />
           </pattern>
         </defs>
@@ -172,6 +135,13 @@ const FoodSecurityTableau = () => {
           <BaseLayerStage stage={0} />
           <BaseLayerStage stage={1} />
           <BaseLayerStage stage={2} />
+          <g className="SaturatedGround" opacity={0}>
+            <path
+              id="Saturation"
+              fill="url(#_10_dpi_20_)"
+              d="M852.9 317.5H1963v-25.7l-560.5.5-36.2-.2-12.7-.9-12.8-4.2-26.7-.3-147.2 1.8-148 3.4-76.1 1.7L909 295l-14.1.7-8.9 1.7-13.4-1.6-15.6 10-4.1 11.7z"
+            />
+          </g>
         </g>
       </svg>
     </div>
