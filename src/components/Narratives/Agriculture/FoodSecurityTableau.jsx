@@ -9,23 +9,9 @@ import { useEffect } from "react"
 import { useNarrative } from "../NarrativeContext"
 import SVGLinearGradient from "../Elements/Helpers/SVGLinearGradient"
 import BaseLayerStage from "./BaseLayers/BaseLayerStage"
+import { toggleSeaSurge } from "./BaseLayers/SeaSurge"
 
 gsap.registerPlugin(MorphSVGPlugin)
-
-const toggleSeaLevel = (className, toggleVar) => {
-  const elements = document.getElementsByClassName(className)
-  const elementArray = Array.from(elements)
-  for (let el of elementArray) {
-    console.log("el", el, toggleVar)
-    if (el) {
-      if (toggleVar) {
-        gsap.to(el, { y: -30, duration: 3 })
-      } else {
-        gsap.to(el, { y: 0, duration: 3 })
-      }
-    }
-  }
-}
 
 const toggleRainStorm = (id, toggleVar) => {
   const el = document.getElementById(id)
@@ -101,7 +87,7 @@ const FoodSecurityTableau = () => {
   }, [])
 
   useEffect(() => {
-    toggleSeaLevel("sea-surge", stormSurgeVisible)
+    toggleSeaSurge("sea-surge", stormSurgeVisible)
   }, [stormSurgeVisible])
 
   useEffect(() => {
