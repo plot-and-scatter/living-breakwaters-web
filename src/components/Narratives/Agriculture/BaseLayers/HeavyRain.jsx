@@ -5,12 +5,14 @@ import { TimelineLite } from "gsap"
 
 import "./HeavyRain.scss"
 
+let heavyRainTimeline
+
 export const toggleRainStorm = (id, toggleVar) => {
   const el = document.getElementById(id)
-  console.log("el", el)
   if (el) {
+    if (heavyRainTimeline) heavyRainTimeline.clear()
     if (toggleVar) {
-      new TimelineLite()
+      heavyRainTimeline = new TimelineLite()
         .to(".FoodSecurityTableau svg", {
           backgroundImage: "linear-gradient(#ccc, #fff)",
           duration: 1,
@@ -18,7 +20,7 @@ export const toggleRainStorm = (id, toggleVar) => {
         .to(".Rainfall", { opacity: 1, duration: 3 })
         .to(".SaturatedGround", { opacity: 1, duration: 3 })
     } else {
-      new TimelineLite()
+      heavyRainTimeline = new TimelineLite()
         .to(".Rainfall", { opacity: 0, duration: 0.5 })
         .to(".SaturatedGround", { opacity: 0, duration: 0.5 })
         .to(".FoodSecurityTableau svg", {
