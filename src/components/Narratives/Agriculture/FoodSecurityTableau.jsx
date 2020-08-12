@@ -7,6 +7,7 @@ import { useState } from "react"
 import { useCallback } from "react"
 import { useEffect } from "react"
 import { useNarrative } from "../NarrativeContext"
+import SVGLinearGradient from "../Elements/Helpers/SVGLinearGradient"
 
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -146,20 +147,9 @@ const FoodSecurityTableau = () => {
         viewBox="0 0 1963 519"
       >
         <defs>
-          <linearGradient
-            id="saltwater-wedge-gradient"
-            gradientTransform="rotate(90)"
-          >
-            <stop offset="0%" stopColor="var(--color-start)" />
-            <stop offset="100%" stopColor="var(--color-stop)" />
-          </linearGradient>
-          <linearGradient
-            id="fresh-water-gradient"
-            gradientTransform="rotate(90)"
-          >
-            <stop offset="0%" stopColor="var(--color-start)" />
-            <stop offset="100%" stopColor="var(--color-stop)" />
-          </linearGradient>
+          <SVGLinearGradient idPrefix={"saltwater-wedge"} />
+          <SVGLinearGradient idPrefix={"fresh-water"} />
+          <SVGLinearGradient idPrefix={"mean-sea-level"} />
           <pattern
             id="_10_dpi_20_"
             data-name="10 dpi 20%"
