@@ -2,7 +2,7 @@ import React from "react"
 
 const RainOverflow = () => {
   return (
-    <g id="Overflow">
+    <g id="RainOverflow" opacity={0}>
       <path
         id="Pool"
         className="cls-33"
