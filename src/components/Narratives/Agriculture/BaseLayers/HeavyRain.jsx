@@ -6,7 +6,11 @@ import "./HeavyRain.scss"
 const RAIN_WIDTH = 150
 
 const rain = xOffset => (
-  <path className={`RainLine`} d={`M${xOffset} 320 l${RAIN_WIDTH} -400`} />
+  <path
+    key={xOffset}
+    className={`RainLine`}
+    d={`M${xOffset} 320 l${RAIN_WIDTH} -400`}
+  />
 )
 
 const HeavyRain = ({ stage }) => {
