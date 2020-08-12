@@ -12,6 +12,7 @@ import BaseLayerStage from "./BaseLayers/BaseLayerStage"
 import { toggleSeaSurge } from "./BaseLayers/SeaSurge"
 import HeavyRain, { toggleRainStorm } from "./BaseLayers/HeavyRain"
 import SaturatedGround from "./BaseLayers/SaturatedGround"
+import Oak from "../Elements/Trees/Oak"
 
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -132,11 +133,16 @@ const FoodSecurityTableau = () => {
           </pattern>
         </defs>
         <HeavyRain />
-        <g id="Base_Layers" data-name="Base Layers" opacity=".9">
+        <g id="BaseLayers" data-name="Base Layers" opacity=".9">
           <BaseLayerStage stage={0} />
           <BaseLayerStage stage={1} />
           <BaseLayerStage stage={2} />
           <SaturatedGround />
+        </g>
+        <g id="Trees">
+          <Oak xOffset={900} yOffset={150} />
+          <Oak xOffset={1540} yOffset={145} />
+          <Oak xOffset={1600} yOffset={150} />
         </g>
       </svg>
     </div>
