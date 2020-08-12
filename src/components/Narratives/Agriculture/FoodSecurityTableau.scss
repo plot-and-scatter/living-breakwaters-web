@@ -1,11 +1,42 @@
+$saltwaterWedge: #3a6393;
+$freshWater: #6f90c1;
+
+#saltwater-wedge-gradient {
+  --color-start: #{$saltwaterWedge};
+  --color-stop: #{darken($saltwaterWedge, 20%)};
+}
+
+#fresh-water-gradient {
+  --color-start: #{$freshWater};
+  --color-stop: #{darken($freshWater, 20%)};
+}
+
 .FoodSecurityTableau {
   svg {
     background-image: linear-gradient(#bbddff, #fff);
     border: solid #666 1px;
+    path {
+      &.sea-surge {
+        fill: #112233;
+      }
+      &.mean-sea-level {
+        fill: #334455;
+      }
+      &.saltwater-wedge {
+        fill: url(#saltwater-wedge-gradient) $saltwaterWedge;
+      }
+      &.fresh-water {
+        fill: url(#fresh-water-gradient) $freshWater;
+      }
+      &.ground {
+        fill: lighten(#59452c, 40%);
+      }
+    }
     #groundwater-1,
     #groundwater-2 {
       path {
         visibility: hidden;
+        
       }
     }
   }
@@ -25,11 +56,8 @@
 .cls-24 {
   opacity: 0.9;
 }
-.cls-7 {
-  fill: #3a6393;
-}
 .cls-8 {
-  fill: #6f90c1;
+  
 }
 .cls-17,
 .cls-9 {
