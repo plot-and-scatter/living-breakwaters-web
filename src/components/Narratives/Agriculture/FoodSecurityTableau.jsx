@@ -10,6 +10,7 @@ import { useNarrative } from "../NarrativeContext"
 import SVGLinearGradient from "../Elements/Helpers/SVGLinearGradient"
 import BaseLayerStage from "./BaseLayers/BaseLayerStage"
 import { toggleSeaSurge } from "./BaseLayers/SeaSurge"
+import HeavyRain from "./BaseLayers/HeavyRain"
 
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -166,6 +167,7 @@ const FoodSecurityTableau = () => {
             />
           </pattern>
         </defs>
+        <HeavyRain />
         <g id="Base_Layers" data-name="Base Layers" opacity=".9">
           <BaseLayerStage stage={0} />
           <BaseLayerStage stage={1} />
