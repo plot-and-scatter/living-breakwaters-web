@@ -17,11 +17,11 @@ export const toggleRainStorm = (id, toggleVar) => {
           backgroundImage: "linear-gradient(#ccc, #fff)",
           duration: 1,
         })
-        .to(".Rainfall", { opacity: 1, duration: 3 })
+        .to(".Rainfall", { visibility: "visible", opacity: 1, duration: 3 })
         .to(".SaturatedGround", { opacity: 1, duration: 3 })
     } else {
       heavyRainTimeline = new TimelineLite()
-        .to(".Rainfall", { opacity: 0, duration: 0.5 })
+        .to(".Rainfall", { visibility: "hidden", opacity: 0, duration: 0.5 })
         .to(".SaturatedGround", { opacity: 0, duration: 0.5 })
         .to(".FoodSecurityTableau svg", {
           backgroundImage: "linear-gradient(#bbddff, #fff)",
@@ -53,7 +53,7 @@ const HeavyRain = ({ stage }) => {
 
   return (
     <g id="HeavyRain" className="HeavyRain">
-      <g className="Rainfall" opacity={0}>
+      <g className="Rainfall" visibility="hidden" opacity={0}>
         {rainLines}
       </g>
     </g>
