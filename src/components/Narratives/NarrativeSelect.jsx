@@ -4,9 +4,9 @@ import { useCallback } from "react"
 
 import "./NarrativeSelect.scss"
 
-const MAX_NARRATIVE_STAGE = 3
+const MAX_NARRATIVE_STAGE = 2
 
-const STAGE_NAMES = ["Present", "Near Future", "Future", "Distant Future"]
+const STAGE_NAMES = ["Present", "Near Future", "Future"]
 
 const NarrativeSelect = () => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
