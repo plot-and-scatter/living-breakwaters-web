@@ -17,9 +17,9 @@ const toggleSeaLevel = (className, toggleVar) => {
     console.log("el", el, toggleVar)
     if (el) {
       if (toggleVar) {
-        gsap.to(el, { y: 0, duration: 3 })
+        gsap.to(el, { y: -30, duration: 3 })
       } else {
-        gsap.to(el, { y: 50, duration: 3 })
+        gsap.to(el, { y: 0, duration: 3 })
       }
     }
   }
@@ -67,7 +67,7 @@ const chainHelper = id => {
   return [
     itemHelper("saltwater-wedge", id, id - 1),
     itemHelper("fresh-water", id, id - 1),
-    // itemHelper("mean-sea-level", id, id - 1),
+    itemHelper("mean-sea-level", id, id - 1),
     itemHelper("ground", id, id - 1),
     // itemHelper("sea-surge", id, id - 1),
   ]
@@ -178,6 +178,17 @@ const FoodSecurityTableau = () => {
         <g id="Base_Layers" data-name="Base Layers" opacity=".9">
           <g id="groundwater-0">
             <path
+              className="sea-surge"
+              d="M0 315.5 H700 v40 H-700"
+              fill="#123"
+            />
+            <path
+              className="mean-sea-level"
+              d="M0 700 H700 V315.5 H-700"
+              fill="#345"
+            />
+
+            <path
               className="ground"
               id="Ground"
               d="M1466 315c-37 0-74 1.4-111-.4-3-.2-5.3-1.4-7.7-2.5-5.2-2.5-10.3-2.1-15.7-2.2-37.7-.4-75.3 1.4-113 2.3q-124.2 3-248.4 4.8c-24.2.3-48.3-.5-72.4 2a125.3 125.3 0 01-20 0c-6.6-.3-10.1 3.2-14.4 7a64.4 64.4 0 00-7.3 7.9 41.6 41.6 0 01-3.6 4.5 5.3 5.3 0 01-3.6 1.4c-8.4.6-8.8-6.8-13.1-10.5a12.3 12.3 0 00-5.9-2.9c1.4 0-80.4-30.5-80.4-30.5h-51.9l-66.3 44.3a60.7 60.7 0 00-6.1 1.8c-12.9 4.5-25.4 4-38.5 3.8-9.5-.2-19.1.3-28.7.3-22.3 0-44.3 3-66.4 4.6-24.4 1.9-48.7 1-73 .8-39.6-.2-79 .7-118.6 3.8-8.7.6-17.3.2-25.8 3.8-10.1 4.2-19.8 3-30 2.7-12.4-.4-24.8.8-37.1 1.5-17.2 1-34 4-50.8 7.6-52 11.3-103.5 24.2-156.3 32.5v139.8h1963V315z"
@@ -198,6 +209,11 @@ const FoodSecurityTableau = () => {
             />
           </g>
           <g id="groundwater-1">
+            <path
+              className="mean-sea-level"
+              d="M0 700 H700 V310 H-700"
+              fill="#345"
+            />
             <path
               className="ground"
               id="Subsided_Ground_Near_Future"
@@ -220,6 +236,11 @@ const FoodSecurityTableau = () => {
             />
           </g>
           <g id="groundwater-2">
+            <path
+              className="mean-sea-level"
+              d="M0 700 H700 V295 H-700"
+              fill="#345"
+            />
             <path
               className="ground"
               id="Subsided_Ground_Future"
