@@ -13,6 +13,23 @@ import { toggleSeaSurge } from "./BaseLayers/SeaSurge"
 import HeavyRain, { toggleRainStorm } from "./BaseLayers/HeavyRain"
 import SaturatedGround from "./BaseLayers/SaturatedGround"
 import Oak from "../Elements/Trees/Oak"
+import Farmhouse from "../Elements/Buildings/Farmhouse"
+import Truck from "../Elements/Vehicles/Truck"
+import Pump from "../Elements/Buildings/Pump"
+import Wheat from "../Elements/Plants/Wheat"
+import Reeds from "../Elements/Plants/Reeds"
+import Seaweed from "../Elements/Plants/Seaweed"
+import Grass from "../Elements/Plants/Grass"
+import Eelgrass from "../Elements/Plants/Eelgrass"
+import Deadwood from "../Elements/Trees/Deadwood"
+import Bush2 from "../Elements/Plants/Bush2"
+import Roots from "../Elements/Trees/Roots"
+import Cypress from "../Elements/Trees/Cypress"
+import Birds from "../Elements/Fauna/Birds"
+import Well from "../Elements/Buildings/Well"
+import Irrigation from "../Elements/Objects/Irrigation"
+import Bush1 from "../Elements/Plants/Bush1"
+import RainOverflow from "./BaseLayers/RainOverflow"
 
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -140,9 +157,30 @@ const FoodSecurityTableau = () => {
           <SaturatedGround />
         </g>
         <g id="Trees">
-          <Oak xOffset={900} yOffset={150} />
-          <Oak xOffset={1540} yOffset={145} />
+          <Oak xOffset={680} yOffset={120} />
+          <Oak xOffset={1519} yOffset={136} />
           <Oak xOffset={1600} yOffset={150} />
+          <Deadwood />
+          <Bush1 />
+          <Bush2 />
+          <Roots />
+          <Cypress />
+        </g>
+        <g id="Farm">
+          <Farmhouse />
+          <Truck />
+          <Pump />
+          <Wheat />
+          <Well />
+          <Irrigation />
+          <RainOverflow />
+        </g>
+        <g id="OceanLife">
+          <Reeds />
+          <Seaweed />
+          <Grass />
+          <Eelgrass />
+          <Birds />
         </g>
       </svg>
     </div>
