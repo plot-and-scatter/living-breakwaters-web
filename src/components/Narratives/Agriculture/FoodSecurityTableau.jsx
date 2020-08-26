@@ -201,7 +201,7 @@ const FoodSecurityTableau = () => {
                 <Bush1 />
                 <Bush2 />
                 <Roots />
-                <Cypress />
+                {/* <Cypress /> */}
               </g>
               <g id="Farm">
                 <Farmhouse />
