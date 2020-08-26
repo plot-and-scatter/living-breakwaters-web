@@ -31,7 +31,7 @@ import Well from "../Elements/Buildings/Well"
 import Irrigation from "../Elements/Objects/Irrigation"
 import Bush1 from "../Elements/Plants/Bush1"
 import RainOverflow from "./BaseLayers/RainOverflow"
-import Hotspot from "../Hotspot"
+import Hotspot from "../Hotspot/Hotspot"
 // import { useLayoutEffect } from "react"
 
 gsap.registerPlugin(MorphSVGPlugin)

@@ -1,4 +1,5 @@
 import React from "react"
+import ReactDOM from "react-dom"
 import PropTypes from "prop-types"
 import { gsap, TimelineMax } from "gsap"
 import { CSSPlugin } from "gsap/CSSPlugin"
@@ -9,6 +10,7 @@ import { useCallback } from "react"
 import { useState } from "react"
 import { useEffect } from "react"
 import { useRef } from "react"
+import HotspotElement from "./HotspotElement"
 
 gsap.registerPlugin(CSSPlugin)
 
@@ -31,12 +33,10 @@ const Hotspot = ({ xOffset, yOffset, title, text }) => {
   )
 
   const hotspotMouseEnter = useCallback(() => {
-    console.log("Hover")
     setIsHovered(true)
   }, [])
 
   const hotspotMouseLeave = useCallback(() => {
-    console.log("Hide")
     setIsHovered(false)
   })
 
@@ -62,13 +62,22 @@ const Hotspot = ({ xOffset, yOffset, title, text }) => {
   useEffect(() => {
     const el = document.getElementById("HotspotText")
     if (showHotspot) {
-      el.innerHTML = `<h1>${title}</h1>`
-      el.innerHTML += text
+      ReactDOM.render(
+        <HotspotElement
+          title={title}
+          text={text}
+          onClick={() => {
+            console.log("click!!!")
+            setShowHotspot(false)
+          }}
+        />,
+        el
+      )
       el.style.left = `${clientX - 15}px`
       el.style.top = `${clientY - 45}px`
       el.style.visibility = "visible"
     } else {
-      el.innerHTML = ""
+      ReactDOM.unmountComponentAtNode(el)
       el.style.visibility = "hidden"
     }
   }, [showHotspot])
@@ -101,7 +110,7 @@ Hotspot.propTypes = {
   xOffset: PropTypes.number,
   yOffset: PropTypes.number,
   title: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.any,
 }
 
 export default Hotspot
