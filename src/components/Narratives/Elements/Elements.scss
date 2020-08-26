@@ -32,7 +32,9 @@ $color-oak-trunk: #654321;
 
 }
 
-#Wheat {
-  // transform: scale(1);
-  // transform-origin: top left;
+#Bush1 path {
+  fill: lighten($color-oak-leaves, 20%);
+  stroke: $color-oak-trunk;
+  stroke-width: 0.5px;
+  transform: scale(1.5);
 }
