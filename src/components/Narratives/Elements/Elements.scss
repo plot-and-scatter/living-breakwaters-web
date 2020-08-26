@@ -1,3 +1,6 @@
+$color-oak-leaves: #339933;
+$color-oak-trunk: #654321;
+
 @mixin bird {
   fill: white;
   transform: scale(4);
@@ -8,3 +11,15 @@
 #FlyingGull1 path { @include bird; }
 #FlyingGull2 path { @include bird; }
 #FlyingGull3 path { @include bird; }
+.Oak {
+  g.OakCrown path {
+    fill: lighten( $color-oak-leaves, 10%);
+    stroke: $color-oak-leaves;
+    stroke-width: 0.5px;
+  }
+  g.OakTrunk path {
+    fill: lighten($color-oak-trunk, 30%);
+    stroke: $color-oak-trunk;
+    stroke-width: 0.5px;
+  }
+}
