@@ -23,7 +23,7 @@ const SeaSurge = ({ stage }) => {
       ? "M0 315.5 h760 l50 50 h1400 v80 h-2410 v-130"
       : stage === 1
       ? "M0 310 h760 l50 50 h1400 v80 h-2410 v-130"
-      : "M0 295 h760 l50 30 h1400 v80 h-2410 v-110"
+      : "M0 295 h795 l50 30 h1400 v80 h-2410 v-110"
 
   return <path className="sea-surge" d={d} />
 }
