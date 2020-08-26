@@ -93,6 +93,7 @@ const FoodSecurityTableau = () => {
   )
 
   const timeline = useRef()
+  const groundLevelRef = useRef()
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
@@ -109,16 +110,27 @@ const FoodSecurityTableau = () => {
   }, [rainVisible])
 
   useEffect(() => {
-    // console.log(
-    //   "narrativeStage",
-    //   narrativeStage,
-    //   "prev",
-    //   prevNarrativeStage.current
-    // )
-
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
     // console.log(timeline.current)
     prevNarrativeStage.current = narrativeStage
+
+    narrativeStage === 0
+      ? gsap.to(groundLevelRef.current, {
+          y: 0,
+          duration: 1,
+          ease: Power2.easeInOut,
+        })
+      : narrativeStage === 1
+      ? gsap.to(groundLevelRef.current, {
+          y: 4,
+          duration: 1,
+          ease: Power2.easeInOut,
+        })
+      : gsap.to(groundLevelRef.current, {
+          y: 12,
+          duration: 1,
+          ease: Power2.easeInOut,
+        })
   }, [narrativeStage])
 
   return (
@@ -176,24 +188,26 @@ const FoodSecurityTableau = () => {
               <BaseLayerStage stage={2} />
               <SaturatedGround />
             </g>
-            <g id="Trees">
-              <Oak xOffset={680} yOffset={120} />
-              <Oak xOffset={1519} yOffset={136} />
-              <Oak xOffset={1600} yOffset={150} />
-              <Deadwood />
-              <Bush1 />
-              <Bush2 />
-              <Roots />
-              <Cypress />
-            </g>
-            <g id="Farm">
-              <Farmhouse />
-              <Truck />
-              <Pump />
-              <Wheat />
-              <Well />
-              <Irrigation />
-              <RainOverflow />
+            <g id="GroundLevel" ref={groundLevelRef}>
+              <g id="Trees">
+                <Oak xOffset={680} yOffset={120} />
+                <Oak xOffset={1519} yOffset={136} />
+                <Oak xOffset={1600} yOffset={150} />
+                <Deadwood />
+                <Bush1 />
+                <Bush2 />
+                <Roots />
+                <Cypress />
+              </g>
+              <g id="Farm">
+                <Farmhouse />
+                <Truck />
+                <Pump />
+                <Wheat />
+                <Well />
+                <Irrigation />
+                <RainOverflow />
+              </g>
             </g>
             <g id="OceanLife">
               <Reeds />
