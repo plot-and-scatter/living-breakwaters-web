@@ -1,8 +1,14 @@
 import React from "react"
 
-const Wheat = () => {
+const Wheat = ({ xOffset, yOffset }) => {
+  const baseXTransform = -885
+  const baseYTransform = -275
+
+  const xTransform = baseXTransform + (xOffset || 0)
+  const yTransform = baseYTransform + (yOffset || 0)
+
   return (
-    <g id="Wheat">
+    <g transform={`translate(${xTransform}, ${yTransform})`} id="Wheat">
       <path
         className="cls-23"
         d="M902.5 306.7a23.2 23.2 0 00-.4 3.1 55.1 55.1 0 00.3 9.4M903.1 301.3a2.5 2.5 0 00.5-1c0-.7-.3-.2-.3-.2l-.1.6v.6z"

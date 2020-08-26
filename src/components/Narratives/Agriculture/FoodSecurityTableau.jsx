@@ -207,7 +207,16 @@ const FoodSecurityTableau = () => {
                 <Farmhouse />
                 <Truck />
                 <Pump />
-                <Wheat />
+                <Pump />
+                <Wheat xOffset={890 + 0} yOffset={273} />
+                <Wheat xOffset={890 + 40} yOffset={272} />
+                <Wheat xOffset={890 + 80} yOffset={271} />
+                <Wheat xOffset={890 + 130} yOffset={270} />
+                <Wheat xOffset={890 + 167} yOffset={269} />
+                <Wheat xOffset={890 + 208} yOffset={269} />
+                <Wheat xOffset={890 + 255} yOffset={268} />
+                <Wheat xOffset={890 + 296} yOffset={268} />
+                <Wheat xOffset={890 + 335} yOffset={267} />
                 <Well />
                 <Irrigation />
                 <RainOverflow />
