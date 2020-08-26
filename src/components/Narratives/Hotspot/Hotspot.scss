@@ -1,6 +1,6 @@
 @import "../../../scss/common.module";
 
-$hotspotFill: #f30;
+$hotspotFill: rgba(255, 60, 0, 0.7);
 
 .Hotspot {
   circle {
@@ -18,7 +18,8 @@ $hotspotFill: #f30;
 
 #HotspotText {
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba($color-brand-background, 0.8);
   position: absolute;
   border: solid rgba(0, 0, 0, 0.5) 1px;
   width: 200px;
@@ -26,11 +27,11 @@ $hotspotFill: #f30;
   visibility: hidden;
   h1 {
     font-size: 1rem;
-    color: $brand;
+    color: $color-brand-light;
   }
   p {
     font-size: 0.85rem;
-
+    color: #fff;
   }
   border-radius: $border-radius;
 }

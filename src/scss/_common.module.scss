@@ -2,5 +2,6 @@
 @import "./bootstrap/variables";
 
 $color-brand-background: rgb(20, 35, 40);
+$color-brand-light: lighten($brand, 20%);
 
 :export { brandBackground: $color-brand-background }

@@ -67,6 +67,7 @@ $colors: map-merge(
 );
 
 $brand:         rgb(80, 140, 130);
+$brand-light:   lighten($brand, 20%);
 $primary:       $brand !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -81,6 +82,8 @@ $theme-colors: () !default;
 $theme-colors: map-merge(
   (
     "primary":    $primary,
+    "brand":      $brand,
+    "brand-light": $brand-light,
     "secondary":  $secondary,
     "success":    $success,
     "info":       $info,

@@ -5,7 +5,7 @@ const HotspotElement = ({ text, title, onClick }) => {
     <div className="HotspotElement">
       <h1>{title}</h1>
       <p>{text}</p>
-      <button className="btn btn-sm btn-outline-primary" onClick={onClick}>
+      <button className="btn btn-sm btn-outline-brand-light" onClick={onClick}>
         <i className="fas fa-times mr-2" />
         Close
       </button>
