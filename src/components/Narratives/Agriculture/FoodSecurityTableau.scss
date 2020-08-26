@@ -17,7 +17,18 @@ $meanSeaLevel: #334455;
   --color-stop: #{darken($freshWater, 20%)};
 }
 
+#HotspotText {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  border: solid rgba(0, 0, 0, 0.5) 1px;
+  width: 200px;
+  height: 200px;
+  visibility: hidden;
+}
+
 .FoodSecurityTableau {
+  position: relative;
   svg {
     background-image: linear-gradient(#bbddff, #fff);
     border: solid #666 1px;

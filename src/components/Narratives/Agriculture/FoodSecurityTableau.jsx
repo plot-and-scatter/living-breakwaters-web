@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import { gsap, TimelineMax, Power2 } from "gsap"
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
+// import * as d3 from "d3"
 
 import "./FoodSecurityTableau.scss"
 import { useState } from "react"
@@ -30,6 +31,8 @@ import Well from "../Elements/Buildings/Well"
 import Irrigation from "../Elements/Objects/Irrigation"
 import Bush1 from "../Elements/Plants/Bush1"
 import RainOverflow from "./BaseLayers/RainOverflow"
+import Hotspot from "../Hotspot"
+// import { useLayoutEffect } from "react"
 
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -64,6 +67,20 @@ const FoodSecurityTableau = () => {
 
   const [rainVisible, setRainVisible] = useState(false)
   const [stormSurgeVisible, setStormSurgeVisible] = useState(false)
+  const [zoomXY, setZoomXY] = useState([1963, 519])
+
+  const svgRef = useRef(null)
+
+  const zoomCallback = useCallback(() => {
+    console.log("Zooming!")
+    // d3.select(svgRef.current).attr("transform", d3.event.transform)
+  })
+
+  // useLayoutEffect(() => {
+  //   console.log(svgRef, svgRef.current, d3.select(svgRef.current))
+  //   const foo = d3.zoom().on("zoom")
+  //   d3.select(svgRef.current).call(foo, zoomCallback)
+  // }, [])
 
   const toggleRain = useCallback(() => setRainVisible(!rainVisible), [
     rainVisible,
@@ -124,65 +141,80 @@ const FoodSecurityTableau = () => {
           Toggle storm surge
         </button>
       </div>
-      <svg
-        id="present_day"
-        data-name="present day"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1963 519"
-      >
-        <defs>
-          <SVGLinearGradient idPrefix={"saltwater-wedge"} />
-          <SVGLinearGradient idPrefix={"fresh-water"} />
-          <SVGLinearGradient idPrefix={"mean-sea-level"} />
-          <pattern
-            id="_10_dpi_20_"
-            data-name="10 dpi 20%"
-            width="28.8"
-            height="28.8"
-            patternTransform="matrix(.75 0 0 .75 1.2 -41.7)"
-            patternUnits="userSpaceOnUse"
-          >
-            <path fill="none" d="M0 0h28.8v28.8H0z" />
-            <path
-              className="cls-2"
-              d="M28.8 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM28.8 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 23a1.4 1.4 0 10-1.4-1.4A1.4 1.4 0 007.2 23zM21.6 23a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM21.6 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM0 30.2a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 27.4a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 30.2zM0 15.8a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 13a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 15.8zM28.8 1.4A1.4 1.4 0 0030.2 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0027.4 0a1.4 1.4 0 001.4 1.4zM14.4 1.4A1.4 1.4 0 0015.8 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0013 0a1.4 1.4 0 001.4 1.4zM0 1.4A1.4 1.4 0 001.4 0 1.4 1.4 0 000-1.4 1.4 1.4 0 00-1.4 0 1.4 1.4 0 000 1.4z"
-            />
-          </pattern>
-        </defs>
-        <HeavyRain />
-        <g id="BaseLayers" data-name="Base Layers" opacity=".9">
-          <BaseLayerStage stage={0} />
-          <BaseLayerStage stage={1} />
-          <BaseLayerStage stage={2} />
-          <SaturatedGround />
-        </g>
-        <g id="Trees">
-          <Oak xOffset={680} yOffset={120} />
-          <Oak xOffset={1519} yOffset={136} />
-          <Oak xOffset={1600} yOffset={150} />
-          <Deadwood />
-          <Bush1 />
-          <Bush2 />
-          <Roots />
-          <Cypress />
-        </g>
-        <g id="Farm">
-          <Farmhouse />
-          <Truck />
-          <Pump />
-          <Wheat />
-          <Well />
-          <Irrigation />
-          <RainOverflow />
-        </g>
-        <g id="OceanLife">
-          <Reeds />
-          <Seaweed />
-          <Grass />
-          <Eelgrass />
-          <Birds />
-        </g>
-      </svg>
+      <div>
+        <svg
+          id="FoodSecurityTableauSVG"
+          data-name="present day"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox={`0 0 ${zoomXY[0]} ${zoomXY[1]}`}
+          ref={svgRef}
+        >
+          <g className="Wrapper" transform={`scale(1)`}>
+            <defs>
+              <SVGLinearGradient idPrefix={"saltwater-wedge"} />
+              <SVGLinearGradient idPrefix={"fresh-water"} />
+              <SVGLinearGradient idPrefix={"mean-sea-level"} />
+              <pattern
+                id="_10_dpi_20_"
+                data-name="10 dpi 20%"
+                width="28.8"
+                height="28.8"
+                patternTransform="matrix(.75 0 0 .75 1.2 -41.7)"
+                patternUnits="userSpaceOnUse"
+              >
+                <path fill="none" d="M0 0h28.8v28.8H0z" />
+                <path
+                  className="cls-2"
+                  d="M28.8 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM28.8 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 23a1.4 1.4 0 10-1.4-1.4A1.4 1.4 0 007.2 23zM21.6 23a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM21.6 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM0 30.2a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 27.4a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 30.2zM0 15.8a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 13a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 15.8zM28.8 1.4A1.4 1.4 0 0030.2 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0027.4 0a1.4 1.4 0 001.4 1.4zM14.4 1.4A1.4 1.4 0 0015.8 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0013 0a1.4 1.4 0 001.4 1.4zM0 1.4A1.4 1.4 0 001.4 0 1.4 1.4 0 000-1.4 1.4 1.4 0 00-1.4 0 1.4 1.4 0 000 1.4z"
+                />
+              </pattern>
+            </defs>
+
+            <HeavyRain />
+            <g id="BaseLayers" data-name="Base Layers" opacity=".9">
+              <BaseLayerStage stage={0} />
+              <BaseLayerStage stage={1} />
+              <BaseLayerStage stage={2} />
+              <SaturatedGround />
+            </g>
+            <g id="Trees">
+              <Oak xOffset={680} yOffset={120} />
+              <Oak xOffset={1519} yOffset={136} />
+              <Oak xOffset={1600} yOffset={150} />
+              <Deadwood />
+              <Bush1 />
+              <Bush2 />
+              <Roots />
+              <Cypress />
+            </g>
+            <g id="Farm">
+              <Farmhouse />
+              <Truck />
+              <Pump />
+              <Wheat />
+              <Well />
+              <Irrigation />
+              <RainOverflow />
+            </g>
+            <g id="OceanLife">
+              <Reeds />
+              <Seaweed />
+              <Grass />
+              <Eelgrass />
+              <Birds />
+            </g>
+            <g id="Hotspots">
+              <Hotspot
+                xOffset={200}
+                yOffset={100}
+                title={"Test"}
+                text={"Testing text"}
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div id="HotspotText"></div>
     </div>
   )
 }

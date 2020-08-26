@@ -1,0 +1,15 @@
+$hotspotFill: #f30;
+
+.Hotspot {
+  circle {
+    fill: $hotspotFill;
+    stroke: $hotspotFill;
+    fill-opacity: 0.5;
+    stroke-width: 3;
+    cursor: pointer;
+    &:hover {
+      fill: lighten($hotspotFill, 20%);
+    }
+    transition: fill 1s;
+  }
+}

@@ -17,7 +17,7 @@ export const toggleSeaSurge = (className, toggleVar) => {
 }
 
 const SeaSurge = ({ stage }) => {
-  const d = "M0 315.5 H700 v40 H-700"
+  const d = stage === 2 ? "M0 315.5 H700 v40 H-700" : "M0 315.5 H700 v70 H-700"
 
   return <path className="sea-surge" d={d} />
 }
