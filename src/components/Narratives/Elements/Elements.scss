@@ -14,8 +14,8 @@ $color-oak-trunk: #654321;
 .Oak {
   g.OakCrown path {
     fill: lighten( $color-oak-leaves, 10%);
-    stroke: $color-oak-leaves;
-    stroke-width: 0.5px;
+    stroke: darken($color-oak-leaves, 30%);
+    stroke-width: 0.75px;
   }
   g.OakTrunk path {
     fill: lighten($color-oak-trunk, 30%);
@@ -28,13 +28,17 @@ $color-oak-trunk: #654321;
   stroke: $color-oak-trunk;
   stroke-width: 0.5px;
 }
-#Pump {
-
+#Well {
+  fill: #999;
+  stroke: #000;
+  stroke-width: 0.5px;
+  .Well {
+    fill: #666;
+  }
 }
-
 #Bush1 path {
   fill: lighten($color-oak-leaves, 20%);
-  stroke: $color-oak-trunk;
+  stroke: darken($color-oak-trunk, 20%);
   stroke-width: 0.5px;
   transform: scale(1.5);
 }
