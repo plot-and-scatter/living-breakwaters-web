@@ -1,8 +1,8 @@
 @import "../../../scss/common.module";
 
-$saltwaterWedge: #3a6393;
-$freshWater: #6f90c1;
-$meanSeaLevel: #334455;
+$saltwaterWedge: lighten(#3a6393, 10%);
+$freshWater: lighten(#6f90c1, 10%);
+$meanSeaLevel: lighten(#334455, 10%);
 
 #mean-sea-level-gradient {
   --color-start: #{$meanSeaLevel};
@@ -48,6 +48,17 @@ $meanSeaLevel: #334455;
         fill: lighten(#59452c, 40%);
         stroke: #59452c;
         stroke-width: 1px;
+      }
+    }
+    #Labels {
+      text {
+        font-size: 22px;
+        font-family: $font-family-sans-serif;
+        color: white;
+        fill: white;
+        stroke: black;
+        stroke-width: 0.2px;
+        text-anchor: middle;
       }
     }
     #groundwater-1,

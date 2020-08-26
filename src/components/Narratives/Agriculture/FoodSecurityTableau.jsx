@@ -98,6 +98,7 @@ const FoodSecurityTableau = () => {
 
   const timeline = useRef()
   const groundLevelRef = useRef()
+  const interfaceRef = useRef()
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
@@ -132,6 +133,30 @@ const FoodSecurityTableau = () => {
         })
       : gsap.to(groundLevelRef.current, {
           y: 12,
+          duration: 1,
+          ease: Power2.easeInOut,
+        })
+
+    narrativeStage === 0
+      ? gsap.to(interfaceRef.current, {
+          x: 15,
+          y: -17,
+          rotate: 30,
+          duration: 1,
+          ease: Power2.easeInOut,
+        })
+      : narrativeStage === 1
+      ? gsap.to(interfaceRef.current, {
+          x: 150,
+          y: -30,
+          rotate: 20,
+          duration: 1,
+          ease: Power2.easeInOut,
+        })
+      : gsap.to(interfaceRef.current, {
+          x: 250,
+          y: -50,
+          rotate: 10,
           duration: 1,
           ease: Power2.easeInOut,
         })
@@ -236,10 +261,41 @@ const FoodSecurityTableau = () => {
               <Seaweed />
               <Grass />
               <Eelgrass />
-              <BirdOnGround xOffset={200} yOffset={200} scaleX={1} scaleY={1} />
+              <BirdOnGround
+                xOffset={400}
+                yOffset={313}
+                scaleX={1.5}
+                scaleY={1.5}
+              />
               <FlyingGull1 xOffset={100} yOffset={100} scaleX={1} scaleY={1} />
-              <FlyingGull2 xOffset={250} yOffset={250} scaleX={1} scaleY={1} />
-              <FlyingGull3 xOffset={300} yOffset={300} scaleX={1} scaleY={1} />
+              <FlyingGull2 xOffset={300} yOffset={120} scaleX={1} scaleY={1} />
+              <FlyingGull3 xOffset={1300} yOffset={100} scaleX={1} scaleY={1} />
+            </g>
+            <g id="Labels">
+              <text x={1500} y={350}>
+                water table
+              </text>
+              <text x={400} y={450}>
+                saltwater wedge
+              </text>
+              <text
+                x={750}
+                y={465}
+                transform={`rotate(30, ${750}, 465)`}
+                id="#Interface"
+                ref={interfaceRef}
+              >
+                interface
+              </text>
+              <text x={1500} y={450}>
+                fresh water
+              </text>
+              <text x={1820} y={425} transform="rotate(-90, 1820, 425)">
+                pumping well
+              </text>
+              <text x={1290} y={425} transform="rotate(-90, 1290, 425)">
+                pumping well
+              </text>
             </g>
             <g id="Hotspots">
               <Hotspot
