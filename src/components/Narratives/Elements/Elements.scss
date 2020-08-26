@@ -1,0 +1,10 @@
+@mixin bird {
+  fill: white;
+  transform: scale(4);
+  transform-origin: top left;
+}
+
+#BirdOnGround path { @include bird; }
+#FlyingGull1 path { @include bird; }
+#FlyingGull2 path { @include bird; }
+#FlyingGull3 path { @include bird; }

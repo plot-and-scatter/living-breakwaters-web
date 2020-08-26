@@ -26,7 +26,7 @@ $meanSeaLevel: #334455;
   svg {
     border-radius: $border-radius-lg;
     background-image: linear-gradient(#bbddff, #fff);
-    border: solid #666 1px;
+    border: solid #666 0.1vw;
     path {
       &.sea-surge {
         fill: rgba(#112233, 0.5);

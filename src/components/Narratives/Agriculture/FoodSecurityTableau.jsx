@@ -4,6 +4,7 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
 // import * as d3 from "d3"
 
 import "./FoodSecurityTableau.scss"
+import "../Elements/Elements.scss"
 import { useState } from "react"
 import { useCallback } from "react"
 import { useEffect } from "react"
@@ -26,7 +27,10 @@ import Deadwood from "../Elements/Trees/Deadwood"
 import Bush2 from "../Elements/Plants/Bush2"
 import Roots from "../Elements/Trees/Roots"
 import Cypress from "../Elements/Trees/Cypress"
-import Birds from "../Elements/Fauna/Birds"
+import BirdOnGround from "../Elements/Fauna/BirdOnGround"
+import FlyingGull1 from "../Elements/Fauna/FlyingGull1"
+import FlyingGull2 from "../Elements/Fauna/FlyingGull2"
+import FlyingGull3 from "../Elements/Fauna/FlyingGull3"
 import Well from "../Elements/Buildings/Well"
 import Irrigation from "../Elements/Objects/Irrigation"
 import Bush1 from "../Elements/Plants/Bush1"
@@ -214,7 +218,10 @@ const FoodSecurityTableau = () => {
               <Seaweed />
               <Grass />
               <Eelgrass />
-              <Birds />
+              <BirdOnGround xOffset={200} yOffset={200} scaleX={1} scaleY={1} />
+              <FlyingGull1 xOffset={100} yOffset={100} scaleX={1} scaleY={1} />
+              <FlyingGull2 xOffset={250} yOffset={250} scaleX={1} scaleY={1} />
+              <FlyingGull3 xOffset={300} yOffset={300} scaleX={1} scaleY={1} />
             </g>
             <g id="Hotspots">
               <Hotspot
