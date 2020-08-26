@@ -64,8 +64,8 @@ const Hotspot = ({ xOffset, yOffset, title, text }) => {
     if (showHotspot) {
       el.innerHTML = `<h1>${title}</h1>`
       el.innerHTML += text
-      el.style.left = `${clientX - 20}px`
-      el.style.top = `${clientY - 50}px`
+      el.style.left = `${clientX - 15}px`
+      el.style.top = `${clientY - 45}px`
       el.style.visibility = "visible"
     } else {
       el.innerHTML = ""
