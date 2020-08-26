@@ -9,7 +9,7 @@ export const toggleSeaSurge = (className, toggleVar) => {
   for (let el of elementArray) {
     if (el) {
       if (toggleVar) {
-        gsap.to(el, { y: -35, duration: 1 })
+        gsap.to(el, { y: -32, duration: 1 })
       } else {
         gsap.to(el, { y: 0, duration: 1 })
       }
