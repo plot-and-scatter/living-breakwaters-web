@@ -60,12 +60,18 @@ $meanSeaLevel: lighten(#334455, 10%);
         stroke-width: 0.2px;
         text-anchor: middle;
       }
+      #Subsidence {
+        fill: red;
+      }
     }
     #groundwater-1,
     #groundwater-2 {
       path {
         visibility: hidden;
-        
+      }
+      path.ground {
+        visibility: visible;
+        fill: red;
       }
     }
   }

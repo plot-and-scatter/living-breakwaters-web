@@ -36,6 +36,7 @@ import Irrigation from "../Elements/Objects/Irrigation"
 import Bush1 from "../Elements/Plants/Bush1"
 import RainOverflow from "./BaseLayers/RainOverflow"
 import Hotspot from "../Hotspot/Hotspot"
+import AgricultureGround from "./BaseLayers/AgricultureGround"
 // import { useLayoutEffect } from "react"
 
 gsap.registerPlugin(MorphSVGPlugin)
@@ -212,9 +213,9 @@ const FoodSecurityTableau = () => {
             </defs>
             <HeavyRain />
             <g id="BaseLayers" data-name="Base Layers" opacity=".9">
-              <BaseLayerStage stage={0} />
-              <BaseLayerStage stage={1} />
               <BaseLayerStage stage={2} />
+              <BaseLayerStage stage={1} />
+              <BaseLayerStage stage={0} />
               <SaturatedGround />
             </g>
             <g id="GroundLevel" ref={groundLevelRef}>
@@ -282,7 +283,7 @@ const FoodSecurityTableau = () => {
                 x={750}
                 y={465}
                 transform={`rotate(30, ${750}, 465)`}
-                id="#Interface"
+                id="Interface"
                 ref={interfaceRef}
               >
                 interface
@@ -295,6 +296,14 @@ const FoodSecurityTableau = () => {
               </text>
               <text x={1290} y={425} transform="rotate(-90, 1290, 425)">
                 pumping well
+              </text>
+              <text
+                x={1900}
+                y={325}
+                id="Subsidence"
+                visibility={narrativeStage === 2 ? "visible" : "hidden"}
+              >
+                subsidence
               </text>
             </g>
             <g id="Hotspots">
