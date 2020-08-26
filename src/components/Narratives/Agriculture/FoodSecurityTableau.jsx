@@ -123,7 +123,7 @@ const FoodSecurityTableau = () => {
 
   return (
     <div className="FoodSecurityTableau">
-      <div className="mb-2 p-2">
+      <div className="mb-2 py-2">
         <button
           className={`btn btn-sm ${
             !rainVisible ? "btn-outline-secondary" : "btn-primary"
