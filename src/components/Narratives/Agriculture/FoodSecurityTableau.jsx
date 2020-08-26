@@ -195,12 +195,14 @@ const FoodSecurityTableau = () => {
             <g id="GroundLevel" ref={groundLevelRef}>
               <g id="Trees">
                 <Oak xOffset={680} yOffset={120} />
-                <Oak xOffset={1519} yOffset={136} />
+                <Oak xOffset={1280} yOffset={136} />
+                <Oak xOffset={1500} yOffset={136} />
                 {/* <Oak xOffset={1600} yOffset={150} />  */}
                 <Deadwood />
                 <Bush2 />
                 <Roots />
-                {/* <Cypress /> */}
+                <Cypress xOffset={1605} yOffset={155} />
+                <Cypress xOffset={1625} yOffset={155} />
               </g>
               <g id="Farm">
                 <Farmhouse />
@@ -215,16 +217,16 @@ const FoodSecurityTableau = () => {
                 <Wheat xOffset={890 + 255} yOffset={268} />
                 <Wheat xOffset={890 + 296} yOffset={268} />
                 <Wheat xOffset={890 + 335} yOffset={267} />
-                <Bush1 xOffset={1600 + 0} yOffset={253} />
-                <Bush1 xOffset={1600 + 40} yOffset={253} />
-                <Bush1 xOffset={1600 + 80} yOffset={253} />
-                <Bush1 xOffset={1600 + 120} yOffset={253} />
-                <Bush1 xOffset={1600 + 200} yOffset={253} />
-                <Bush1 xOffset={1600 + 240} yOffset={253} />
-                <Bush1 xOffset={1600 + 280} yOffset={253} />
-                <Bush1 xOffset={1600 + 320} yOffset={253} />
+                <Bush1 xOffset={1650 + 0} yOffset={253} />
+                <Bush1 xOffset={1650 + 40} yOffset={253} />
+                <Bush1 xOffset={1650 + 80} yOffset={253} />
+                <Bush1 xOffset={1650 + 120} yOffset={253} />
+                <Bush1 xOffset={1650 + 200} yOffset={253} />
+                <Bush1 xOffset={1650 + 240} yOffset={253} />
+                <Bush1 xOffset={1650 + 280} yOffset={253} />
+                <Bush1 xOffset={1650 + 320} yOffset={253} />
                 <Well xOffset={10} />
-                <Well xOffset={488} yOffset={4} />
+                <Well xOffset={540} yOffset={2} />
                 <Irrigation />
                 <RainOverflow />
               </g>
