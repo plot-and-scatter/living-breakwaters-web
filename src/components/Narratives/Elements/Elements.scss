@@ -23,3 +23,8 @@ $color-oak-trunk: #654321;
     stroke-width: 0.5px;
   }
 }
+#Roots {
+  fill: lighten($color-oak-trunk, 30%);
+  stroke: $color-oak-trunk;
+  stroke-width: 0.5px;
+}
