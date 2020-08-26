@@ -57,7 +57,7 @@ const chainHelper = id => {
     itemHelper("fresh-water", id, id - 1),
     itemHelper("mean-sea-level", id, id - 1),
     itemHelper("ground", id, id - 1),
-    // itemHelper("sea-surge", id, id - 1),
+    itemHelper("sea-surge", id, id - 1),
   ]
 }
 
@@ -109,15 +109,15 @@ const FoodSecurityTableau = () => {
   }, [rainVisible])
 
   useEffect(() => {
-    console.log(
-      "narrativeStage",
-      narrativeStage,
-      "prev",
-      prevNarrativeStage.current
-    )
+    // console.log(
+    //   "narrativeStage",
+    //   narrativeStage,
+    //   "prev",
+    //   prevNarrativeStage.current
+    // )
 
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
-    console.log(timeline.current)
+    // console.log(timeline.current)
     prevNarrativeStage.current = narrativeStage
   }, [narrativeStage])
 
@@ -169,7 +169,6 @@ const FoodSecurityTableau = () => {
                 />
               </pattern>
             </defs>
-
             <HeavyRain />
             <g id="BaseLayers" data-name="Base Layers" opacity=".9">
               <BaseLayerStage stage={0} />

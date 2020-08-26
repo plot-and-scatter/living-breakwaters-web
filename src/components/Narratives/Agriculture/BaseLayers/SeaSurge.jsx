@@ -4,20 +4,26 @@ import { gsap } from "gsap"
 
 export const toggleSeaSurge = (className, toggleVar) => {
   const elements = document.getElementsByClassName(className)
+  console.log("elements", elements)
   const elementArray = Array.from(elements)
   for (let el of elementArray) {
     if (el) {
       if (toggleVar) {
-        gsap.to(el, { y: -30, duration: 3 })
+        gsap.to(el, { y: -35, duration: 1 })
       } else {
-        gsap.to(el, { y: 0, duration: 3 })
+        gsap.to(el, { y: 0, duration: 1 })
       }
     }
   }
 }
 
 const SeaSurge = ({ stage }) => {
-  const d = stage === 2 ? "M0 315.5 H700 v40 H-700" : "M0 315.5 H700 v70 H-700"
+  const d =
+    stage === 0
+      ? "M0 315.5 h760 l50 50 h1400 v80 h-2410 v-130"
+      : stage === 1
+      ? "M0 310 h760 l50 50 h1400 v80 h-2410 v-130"
+      : "M0 295 h760 l50 30 h1400 v80 h-2410 v-110"
 
   return <path className="sea-surge" d={d} />
 }

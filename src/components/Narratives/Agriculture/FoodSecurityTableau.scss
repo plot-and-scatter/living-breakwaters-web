@@ -29,7 +29,7 @@ $meanSeaLevel: #334455;
     border: solid #666 1px;
     path {
       &.sea-surge {
-        fill: #112233;
+        fill: rgba(#112233, 0.5);
       }
       &.mean-sea-level {
         fill: url(#mean-sea-level-gradient) $meanSeaLevel;
