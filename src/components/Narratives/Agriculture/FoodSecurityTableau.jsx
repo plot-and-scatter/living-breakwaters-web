@@ -197,12 +197,12 @@ const FoodSecurityTableau = () => {
                 <Oak xOffset={680} yOffset={120} />
                 <Oak xOffset={1280} yOffset={136} />
                 <Oak xOffset={1500} yOffset={136} />
+                <Roots xOffset={1529} yOffset={300} />
                 {/* <Oak xOffset={1600} yOffset={150} />  */}
                 <Deadwood />
                 <Bush2 />
-                <Roots />
-                <Cypress xOffset={1605} yOffset={155} />
-                <Cypress xOffset={1625} yOffset={155} />
+                <Cypress xOffset={1605} yOffset={160} />
+                <Cypress xOffset={1625} yOffset={160} />
               </g>
               <g id="Farm">
                 <Farmhouse />
@@ -225,7 +225,7 @@ const FoodSecurityTableau = () => {
                 <Bush1 xOffset={1650 + 240} yOffset={253} />
                 <Bush1 xOffset={1650 + 280} yOffset={253} />
                 <Bush1 xOffset={1650 + 320} yOffset={253} />
-                <Well xOffset={10} />
+                <Well xOffset={10} yOffset={-4} />
                 <Well xOffset={540} yOffset={2} />
                 <Irrigation />
                 <RainOverflow />
