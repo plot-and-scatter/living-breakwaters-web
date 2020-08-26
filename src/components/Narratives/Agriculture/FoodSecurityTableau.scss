@@ -30,18 +30,24 @@ $meanSeaLevel: #334455;
     path {
       &.sea-surge {
         fill: rgba(#112233, 0.5);
+        stroke: #123;
       }
       &.mean-sea-level {
         fill: url(#mean-sea-level-gradient) $meanSeaLevel;
+        stroke: darken($meanSeaLevel, 10%);
       }
       &.saltwater-wedge {
         fill: url(#saltwater-wedge-gradient) $saltwaterWedge;
+        stroke: darken($saltwaterWedge, 10%);
       }
       &.fresh-water {
         fill: url(#fresh-water-gradient) $freshWater;
+        stroke: darken($freshWater, 10%);
       }
       &.ground {
         fill: lighten(#59452c, 40%);
+        stroke: #59452c;
+        stroke-width: 1px;
       }
     }
     #groundwater-1,
