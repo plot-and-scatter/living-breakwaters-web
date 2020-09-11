@@ -9,12 +9,14 @@ $image-height: 135px;
 .ScenarioCard {
   cursor: pointer !important;
   height: 300px;
+  
   border: none !important;
 
   .card-header {
     cursor: pointer !important;
     background: rgba($color-brand-background, 0.4) !important;
     margin-top: -$image-height;
+    min-height: $image-height - 1;
     height: $image-height - 1;
     color: white;
     padding: 1rem !important;
@@ -34,7 +36,8 @@ $image-height: 135px;
     cursor: pointer !important;
     border-top: solid $color-brand-background 1px !important;
     padding: 1rem !important;
-    height: 100px;
+    // height: 100px;
+    // margin-top: 50px;
     overflow-y: scroll;
   }
   .Intro {
