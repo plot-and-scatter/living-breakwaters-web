@@ -4,16 +4,16 @@ $toggle-button-width: 130px;
 
 .Scenarios {
   position: absolute;
-  z-index: 1100;
   height: 100%;
   bottom: 0;
+  z-index: 2500;
 }
 
 .btn.ScenarioToggle {
   position: absolute;
   bottom: 0;
   left: $padding-size;
-  z-index: 1150;
+  z-index: 950;
   opacity: 1;
   width: $toggle-button-width !important;
   box-sizing: border-box;
@@ -33,24 +33,35 @@ $toggle-button-width: 130px;
 }
 
 .ScenarioInteraction {
+  display: flex;
   position: absolute;
   bottom: 0;
   left: $toggle-button-width + $padding-size - 2;
-  width: 50vw;
-  z-index: 1000;
+  width: calc(100vw - #{$padding-size * 2} - #{$toggle-button-width});
+  z-index: 2500;
   background-color: rgba(#fff, 0.8);
   border: solid $gray-800 1px;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius;
   border-bottom-left-radius: 0px;
-  padding: $padding-size;
-  .LayerSelect {
-    h6 {
-      font-size: 0.9rem;
-    }
-    .LayerGroup {
-      &:last-child {
-        padding-bottom: 0px !important;
-      }
-    }
+  // padding: $padding-size;
+
+}
+
+.ScenarioCardWrapper {
+  height: 300px;
+  overflow-y: hidden;
+  // min-width: calc(100% / 4 - #{$padding-size * 4} / 3);
+  min-width: 25%;
+  position: relative;
+  bottom: 0;
+  // margin-right: $padding-size;
+  
+  // border-radius: $border-radius;
+  z-index: 800;
+  border: none;
+  border-right: solid $gray-800 1px;
+  &:last-child {
+    margin-right: 0;
+    border-right: 0;
   }
 }

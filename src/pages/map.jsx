@@ -269,12 +269,30 @@ class Map extends React.Component {
               <div
                 className="ScenarioInteraction"
                 style={{
-                  display: this.state.showScenarioInteraction
-                    ? "block"
-                    : "none",
+                  display: this.state.showScenarioInteraction ? "flex" : "none",
                 }}
               >
-                Scenarios
+                {Object.values(SCENARIOS)
+                  .sort((a, b) => a.index - b.index)
+                  .map((s, i) => {
+                    const image =
+                      i === 0
+                        ? image1
+                        : i === 1
+                        ? image2
+                        : i === 2
+                        ? image3
+                        : image4
+                    return (
+                      <div key={s.id} className="ScenarioCardWrapper">
+                        <ScenarioCard
+                          scenario={s}
+                          image={image}
+                          scenarioClickCallback={this.scenarioClickCallback}
+                        />
+                      </div>
+                    )
+                  })}
               </div>
             </div>
             <div className="Map" id="Map" ref={this.mapRef} />
