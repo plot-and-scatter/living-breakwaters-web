@@ -10,10 +10,10 @@ import SEO from "../components/SEO"
 // import image from "../../content/assets/images/alistair-mackenzie-EEgtTQPQ81Q-unsplash.jpg"
 
 import "./Map.scss"
-import "../components/Map/Options/Layers.scss"
+import "../components/Map/Layers/Layers.scss"
 import "../components/Map/Scenarios/Scenarios.scss"
 
-import LAYERS from "../static/layers.json"
+
 import SCENARIOS from "../static/scenarios.json"
 
 import ScenarioCard from "../components/Map/Scenarios/ScenarioCard"
@@ -24,18 +24,12 @@ const BASE_URL =
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
 
-import image1 from "../../content/assets/images/jared-murray-NSuufgf-BME-unsplash-clipped.jpg"
-import image2 from "../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg"
-import image3 from "../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg"
-import image4 from "../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg"
 import LayerModal from "../components/Map/Modals/LayerModal"
-import LayerSelect from "../components/Map/Options/LayerSelect"
-import LayerCheckbox from "../components/Map/Options/LayerCheckbox"
-import LayerLabel from "../components/Map/Options/LayerLabel"
+import LayerSelect from "../components/Map/Layers/LayerSelect"
+import LayerCheckbox from "../components/Map/Layers/LayerCheckbox"
+import LayerLabel from "../components/Map/Layers/LayerLabel"
 
-class Map extends React.Component {
-  constructor(props) {
-    super(props)
+const Map = () => {
 
     this.state = {
       showLayerInteraction: false,
@@ -131,33 +125,6 @@ class Map extends React.Component {
     })
   }
 
-  scenarioClickCallback(ids) {
-    console.log("ids", ids)
-    // Hide all existing layers
-    Object.keys(this.addedLayers).forEach(addedLayerId => {
-      console.log("addedLayerId", addedLayerId)
-      this.map.setLayoutProperty(addedLayerId, "visibility", "none")
-    })
-    // Add new ones
-    ids.forEach(id => {
-      const layer = LAYERS[id]
-      const layerIds = layer.layers ? layer.layers : [layer.id]
-      layerIds.forEach(layerId => {
-        if (this.addedLayers && this.addedLayers[layerId]) {
-          // The layer is already on the map; toggle its visibility
-          const visibility = "visible"
-          // const layer = this.map.getLayer(id)
-          this.map.setLayoutProperty(layerId, "visibility", visibility)
-        } else {
-          // This can only ever happen when the layer is first added, so we don't
-          // need to test for whether the box has been checked or not
-          this.addLayer(layer)
-          this.addedLayers[layerId] = true
-        }
-      })
-    })
-  }
-
   componentDidMount() {
     // mapbox://styles/mapbox/...
     // Styles: streets-v11, light-v10, outdoors-v11, satellite-v9
@@ -183,119 +150,16 @@ class Map extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
 
-    const visibleLayerKeys = Object.keys(this.addedLayers).filter(k => {
-      if (!this.map) return false
-      return this.map.getLayoutProperty(k, "visibility") === "visible"
-    })
+
 
     console.log("visibleLayerKeys", visibleLayerKeys)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Map" />
-        {/* <LayerModal toggleIdCallback={this.toggleIdCallback} /> */}
         <div className="MapRow row">
           <div className="col-12">
-            <div className="Layers">
-              <div>
-                <button
-                  className={`btn btn-outline-dark LayerToggle
-                  ${this.state.showLayerInteraction ? "Active" : ""}
-                  ${visibleLayerKeys.length > 0 ? "HasLayers" : ""}`}
-                  type="button"
-                  onClick={() =>
-                    this.setState(
-                      {
-                        showLayerInteraction: !this.state.showLayerInteraction,
-                      },
-                      () => {
-                        console.log(
-                          "currentShowLayerInteraction",
-                          this.state.showLayerInteraction
-                        )
-                      }
-                    )
-                  }
-                >
-                  <i className="fas fa-layer-group mr-1" /> Layers
-                </button>
-                {Object.keys(this.addedLayers).length > 0 &&
-                  !this.state.showLayerInteraction && (
-                    <div className="ActiveLayers">
-                      {Object.values(LAYERS)
-                        .filter(l => {
-                          return visibleLayerKeys.includes(l.id)
-                        })
-                        .map(l => (
-                          <LayerLabel key={l.id} layer={l}>
-                            {l.name}
-                          </LayerLabel>
-                        ))}
-                    </div>
-                  )}
-              </div>
-              <div
-                className="LayerInteraction"
-                style={{
-                  display: this.state.showLayerInteraction ? "block" : "none",
-                }}
-              >
-                <LayerSelect toggleIdCallback={this.toggleIdCallback} />
-              </div>
-            </div>
-            <div className="Scenarios">
-              <div>
-                <button
-                  className={`btn btn-outline-dark ScenarioToggle
-                  ${this.state.showScenarioInteraction ? "Active" : ""}`}
-                  onClick={() =>
-                    this.setState(
-                      {
-                        showScenarioInteraction: !this.state
-                          .showScenarioInteraction,
-                      },
-                      () => {
-                        console.log(
-                          "currentShowScenarioInteraction",
-                          this.state.showScenarioInteraction
-                        )
-                      }
-                    )
-                  }
-                >
-                  <i className="fas fa-layer-group mr-1" /> Scenarios
-                </button>
-              </div>
-              <div
-                className="ScenarioInteraction"
-                style={{
-                  display: this.state.showScenarioInteraction ? "flex" : "none",
-                }}
-              >
-                {Object.values(SCENARIOS)
-                  .sort((a, b) => a.index - b.index)
-                  .map((s, i) => {
-                    const image =
-                      i === 0
-                        ? image1
-                        : i === 1
-                        ? image2
-                        : i === 2
-                        ? image3
-                        : image4
-                    return (
-                      <div key={s.id} className="ScenarioCardWrapper">
-                        <ScenarioCard
-                          scenario={s}
-                          image={image}
-                          scenarioClickCallback={this.scenarioClickCallback}
-                        />
-                      </div>
-                    )
-                  })}
-              </div>
-            </div>
-            <div className="Map" id="Map" ref={this.mapRef} />
+            <Map />
           </div>
         </div>
       </Layout>
