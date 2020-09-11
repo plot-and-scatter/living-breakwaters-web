@@ -8,14 +8,13 @@ class Footer extends React.Component {
     const { title } = this.props
 
     return (
-      <footer className="Footer container-fluid pt-5 text-muted">
+      <footer className="Footer container-fluid py-2 text-muted">
         <div className="row">
           <div className="col">
-            <hr />
             <h5>{title}</h5>
           </div>
         </div>
-        <div className="row py-3">
+        <div className="row pt-0">
           <div className="col">
             UBC SALA
             <br />

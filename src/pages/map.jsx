@@ -198,28 +198,6 @@ class Map extends React.Component {
             <div className="Map" id="Map" ref={this.mapRef} />
           </div>
         </div>
-        <div className="row mt-3">
-          <div className="col-12">
-            <h2>Scenarios</h2>
-          </div>
-        </div>
-        <div className="row">
-          {Object.values(SCENARIOS)
-            .sort((a, b) => a.index - b.index)
-            .map((s, i) => {
-              const image =
-                i === 0 ? image1 : i === 1 ? image2 : i === 2 ? image3 : image4
-              return (
-                <div className="col" key={s.id}>
-                  <ScenarioCard
-                    scenario={s}
-                    image={image}
-                    scenarioClickCallback={this.scenarioClickCallback}
-                  />
-                </div>
-              )
-            })}
-        </div>
       </Layout>
     )
   }
