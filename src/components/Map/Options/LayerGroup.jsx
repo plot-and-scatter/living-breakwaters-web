@@ -63,7 +63,7 @@ class LayerGroup extends React.Component {
           </h6>
           <p className="mb-1">
             <button
-              className="btn btn-sm btn-xs btn-light ml-2"
+              className="btn btn-sm btn-xs btn-outline-secondary ml-2"
               onClick={this.toggleCheckAll}
             >
               {this.state.allChecked ? (

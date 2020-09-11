@@ -5,7 +5,7 @@ import LayerGroup from "./LayerGroup"
 import LAYERS from "../../../static/layers.json"
 import LAYER_GROUPS from "../../../static/layer_groups.json"
 
-import "./LayerSelect.scss"
+import "./Layers.scss"
 
 class LayerSelect extends React.Component {
   render() {
@@ -38,7 +38,7 @@ class LayerSelect extends React.Component {
       .map(function(rowContent, index) {
         // surround every group with 'col'
         return (
-          <div className="col-6 mt-1" key={index}>
+          <div className="col-6" key={index}>
             {rowContent}
           </div>
         )

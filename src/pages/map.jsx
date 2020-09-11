@@ -10,6 +10,7 @@ import SEO from "../components/SEO"
 // import image from "../../content/assets/images/alistair-mackenzie-EEgtTQPQ81Q-unsplash.jpg"
 
 import "./Map.scss"
+import "../components/Map/Options/Layers.scss"
 
 import LAYERS from "../static/layers.json"
 import SCENARIOS from "../static/scenarios.json"
@@ -27,15 +28,24 @@ import image2 from "../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-c
 import image3 from "../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg"
 import image4 from "../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg"
 import LayerModal from "../components/Map/Modals/LayerModal"
+import LayerSelect from "../components/Map/Options/LayerSelect"
+import LayerCheckbox from "../components/Map/Options/LayerCheckbox"
+import LayerLabel from "../components/Map/Options/LayerLabel"
 
 class Map extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      showLayerInteraction: false,
+    }
+
     this.mapRef = React.createRef()
     this.addLayer = this.addLayer.bind(this)
     this.toggleIdCallback = this.toggleIdCallback.bind(this)
     this.scenarioClickCallback = this.scenarioClickCallback.bind(this)
+
+    this.addedLayers = {}
   }
 
   addLayer(layer) {
@@ -164,8 +174,6 @@ class Map extends React.Component {
     })
     this.map.addControl(new mapboxgl.NavigationControl())
 
-    this.addedLayers = {}
-
     this.map.on("load", () => {})
   }
 
@@ -173,28 +181,66 @@ class Map extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
 
+    const visibleLayerKeys = Object.keys(this.addedLayers).filter(k => {
+      if (!this.map) return false
+      return this.map.getLayoutProperty(k, "visibility") === "visible"
+    })
+
+    console.log("visibleLayerKeys", visibleLayerKeys)
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Map" />
-        {/* <BannerRow
-          bgColorRGB={"rgb(255, 255, 255)"}
-          bgOpacity={0.0}
-          bgImage={image}
-          textDark
-        >
-          Map
-        </BannerRow> */}
-        <LayerModal toggleIdCallback={this.toggleIdCallback} />
+        {/* <LayerModal toggleIdCallback={this.toggleIdCallback} /> */}
         <div className="MapRow row">
           <div className="col-12">
-            <button
-              className="btn btn-outline-dark LayerToggle"
-              type="button"
-              data-toggle="modal"
-              data-target="#LayerSelect"
-            >
-              <i className="fas fa-layer-group mr-1" /> Layers
-            </button>
+            <div className="Layers">
+              <div>
+                <button
+                  className={`btn btn-outline-dark LayerToggle
+                  ${this.state.showLayerInteraction ? "Active" : ""}
+                  ${visibleLayerKeys.length > 0 ? "HasLayers" : ""}`}
+                  type="button"
+                  onClick={() =>
+                    this.setState(
+                      {
+                        showLayerInteraction: !this.state.showLayerInteraction,
+                      },
+                      () => {
+                        console.log(
+                          "currentShowLayerInteraction",
+                          this.state.showLayerInteraction
+                        )
+                      }
+                    )
+                  }
+                >
+                  <i className="fas fa-layer-group mr-1" /> Layers
+                </button>
+                {Object.keys(this.addedLayers).length > 0 &&
+                  !this.state.showLayerInteraction && (
+                    <div className="ActiveLayers">
+                      {Object.values(LAYERS)
+                        .filter(l => {
+                          return visibleLayerKeys.includes(l.id)
+                        })
+                        .map(l => (
+                          <LayerLabel key={l.id} layer={l}>
+                            {l.name}
+                          </LayerLabel>
+                        ))}
+                    </div>
+                  )}
+              </div>
+              <div
+                className="LayerInteraction"
+                style={{
+                  display: this.state.showLayerInteraction ? "block" : "none",
+                }}
+              >
+                <LayerSelect toggleIdCallback={this.toggleIdCallback} />
+              </div>
+            </div>
             <div className="Map" id="Map" ref={this.mapRef} />
           </div>
         </div>

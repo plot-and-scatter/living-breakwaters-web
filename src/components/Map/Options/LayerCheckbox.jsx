@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import LayerLabel from "./LayerLabel"
 
 class LayerCheckbox extends React.Component {
   constructor(props) {
@@ -23,27 +24,9 @@ class LayerCheckbox extends React.Component {
 
   render() {
     const { layer } = this.props
-    const splitColorR = parseInt(layer.color.substring(1, 3), 16)
-    const splitColorG = parseInt(layer.color.substring(3, 5), 16)
-    const splitColorB = parseInt(layer.color.substring(5), 16)
-
-    // console.log(splitColorR, splitColorG, splitColorB)
-
-    const threshold = 80
-
-    const color =
-      splitColorR > threshold &&
-      splitColorG > threshold &&
-      splitColorB > threshold
-        ? "black"
-        : "white"
 
     return (
-      <div
-        key={layer.id}
-        className="LayerCheckbox"
-        style={{ backgroundColor: layer.color, color, padding: "2px" }}
-      >
+      <LayerLabel layer={layer}>
         <small>
           <div className="form-check">
             <input
@@ -60,7 +43,7 @@ class LayerCheckbox extends React.Component {
             </label>
           </div>
         </small>
-      </div>
+      </LayerLabel>
     )
   }
 }
