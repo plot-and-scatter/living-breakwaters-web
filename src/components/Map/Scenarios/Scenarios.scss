@@ -1,0 +1,56 @@
+@import "../../../scss/common.module";
+
+$toggle-button-width: 130px;
+
+.Scenarios {
+  position: absolute;
+  z-index: 1100;
+  height: 100%;
+  bottom: 0;
+}
+
+.btn.ScenarioToggle {
+  position: absolute;
+  bottom: 0;
+  left: $padding-size;
+  z-index: 1150;
+  opacity: 1;
+  width: $toggle-button-width !important;
+  box-sizing: border-box;
+  background-color: rgba(#fff, 0.8) !important;
+  &:hover {
+    background-color: #eee !important;
+    color: #000 !important;
+  }
+  &.Active {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    // border-right-color: #fff !important;
+    border-right: 0px !important;
+    z-index: 1200;
+    width: $toggle-button-width - 1 !important;
+  }
+}
+
+.ScenarioInteraction {
+  position: absolute;
+  bottom: 0;
+  left: $toggle-button-width + $padding-size - 2;
+  width: 50vw;
+  z-index: 1000;
+  background-color: rgba(#fff, 0.8);
+  border: solid $gray-800 1px;
+  border-radius: $border-radius-lg;
+  border-bottom-left-radius: 0px;
+  padding: $padding-size;
+  .LayerSelect {
+    h6 {
+      font-size: 0.9rem;
+    }
+    .LayerGroup {
+      &:last-child {
+        padding-bottom: 0px !important;
+      }
+    }
+  }
+}

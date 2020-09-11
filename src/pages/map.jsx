@@ -11,6 +11,7 @@ import SEO from "../components/SEO"
 
 import "./Map.scss"
 import "../components/Map/Options/Layers.scss"
+import "../components/Map/Scenarios/Scenarios.scss"
 
 import LAYERS from "../static/layers.json"
 import SCENARIOS from "../static/scenarios.json"
@@ -38,6 +39,7 @@ class Map extends React.Component {
 
     this.state = {
       showLayerInteraction: false,
+      showScenarioInteraction: false,
     }
 
     this.mapRef = React.createRef()
@@ -239,6 +241,40 @@ class Map extends React.Component {
                 }}
               >
                 <LayerSelect toggleIdCallback={this.toggleIdCallback} />
+              </div>
+            </div>
+            <div className="Scenarios">
+              <div>
+                <button
+                  className={`btn btn-outline-dark ScenarioToggle
+                  ${this.state.showScenarioInteraction ? "Active" : ""}`}
+                  onClick={() =>
+                    this.setState(
+                      {
+                        showScenarioInteraction: !this.state
+                          .showScenarioInteraction,
+                      },
+                      () => {
+                        console.log(
+                          "currentShowScenarioInteraction",
+                          this.state.showScenarioInteraction
+                        )
+                      }
+                    )
+                  }
+                >
+                  <i className="fas fa-layer-group mr-1" /> Scenarios
+                </button>
+              </div>
+              <div
+                className="ScenarioInteraction"
+                style={{
+                  display: this.state.showScenarioInteraction
+                    ? "block"
+                    : "none",
+                }}
+              >
+                Scenarios
               </div>
             </div>
             <div className="Map" id="Map" ref={this.mapRef} />
