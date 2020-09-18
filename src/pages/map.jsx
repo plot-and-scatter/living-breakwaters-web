@@ -19,7 +19,7 @@ import SCENARIOS from "../static/scenarios.json"
 import ScenarioCard from "../components/Map/Scenarios/ScenarioCard"
 
 const BASE_URL =
-  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/wgs84"
+  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/simplified"
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
@@ -54,61 +54,34 @@ class Map extends React.Component {
     // console.log("layer", layer)
     const type = layer.type
 
-    if (layer.id === "wetlands") {
-      this.map.loadImage("/icons/WetlandsTiny.png", (err, image) => {
-        // Throw an error if something went wrong
-        if (err) throw err
+    const layersToAdd = layer.layers ? layer.layers : [layer]
 
-        console.log("in here too", this)
-        // Declare the image
-        this.map.addImage("pattern", image)
-
-        this.map.addSource(`${layer.id}`, {
-          type: "geojson",
-          data: `${BASE_URL}/${layer.id}.geojson`,
-        })
-
-        this.map.addLayer({
-          id: layer.id,
-          type: type,
-          source: `${layer.id}`,
-          layout: { visibility: "visible" },
-          paint: {
-            "fill-color": "green",
-            "fill-pattern": "pattern",
-          },
-        })
+    layersToAdd.forEach(layerToAdd => {
+      this.map.addSource(`${layerToAdd.id}`, {
+        type: "geojson",
+        data: `${BASE_URL}/${layerToAdd.id}.geojson`,
       })
-    } else {
-      const layersToAdd = layer.layers ? layer.layers : [layer]
-
-      layersToAdd.forEach(layerToAdd => {
-        this.map.addSource(`${layerToAdd.id}`, {
-          type: "geojson",
-          data: `${BASE_URL}/${layerToAdd.id}.geojson`,
-        })
-        const paint = {
-          [`${type}-color`]: layerToAdd.color,
-          [`${type}-opacity`]: layerToAdd.opacity,
+      const paint = {
+        [`${type}-color`]: layerToAdd.color,
+        [`${type}-opacity`]: layerToAdd.opacity,
+      }
+      if (type === "line") {
+        paint[`line-width`] = layerToAdd[`line-weight`] || 1
+        if (layerToAdd[`line-dasharray`]) {
+          paint[`line-dasharray`] = layerToAdd[`line-dasharray`]
         }
-        if (type === "line") {
-          paint[`line-width`] = layerToAdd[`line-weight`] || 1
-          if (layerToAdd[`line-dasharray`]) {
-            paint[`line-dasharray`] = layerToAdd[`line-dasharray`]
-          }
-          if (layerToAdd[`line-gap-width`]) {
-            paint[`line-gap-width`] = layerToAdd[`line-gap-width`]
-          }
+        if (layerToAdd[`line-gap-width`]) {
+          paint[`line-gap-width`] = layerToAdd[`line-gap-width`]
         }
-        this.map.addLayer({
-          id: layerToAdd.id,
-          type: type,
-          source: `${layerToAdd.id}`,
-          layout: { visibility: "visible" },
-          paint,
-        })
+      }
+      this.map.addLayer({
+        id: layerToAdd.id,
+        type: type,
+        source: `${layerToAdd.id}`,
+        layout: { visibility: "visible" },
+        paint,
       })
-    }
+    })
   }
 
   toggleIdCallback(toggleTuple) {
