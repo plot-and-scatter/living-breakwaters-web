@@ -97,6 +97,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 // Temporary workaround for mapbox-gl import error described in
 // https://github.com/mapbox/mapbox-gl-js/issues/4593
+// Same for gsap. See also https://www.gatsbyjs.com/docs/debugging-html-builds/
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
@@ -104,6 +105,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         rules: [
           {
             test: /mapbox-gl/,
+            use: loaders.null(),
+          },
+          {
+            test: /gsap/,
             use: loaders.null(),
           },
         ],
