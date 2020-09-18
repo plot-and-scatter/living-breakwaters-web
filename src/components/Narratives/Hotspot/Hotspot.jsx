@@ -12,7 +12,7 @@ import { useEffect } from "react"
 import { useRef } from "react"
 import HotspotElement from "./HotspotElement"
 
-gsap.registerPlugin(CSSPlugin)
+if (gsap) gsap.registerPlugin(CSSPlugin)
 
 const BASE_RADIUS = 40
 const EXPANDED_RADIUS = BASE_RADIUS + 5

@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
 import { useRef } from "react"
 
-gsap.registerPlugin(MorphSVGPlugin)
+if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 const H = 400
 const W = 1250
