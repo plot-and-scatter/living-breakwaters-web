@@ -1,4 +1,4 @@
-@import "../scss/common.module";
+@import "../../scss/common.module";
 
 #Map {
   height: calc(100vh - #{$header-height} - #{$footer-height} + #{$padding-size});
