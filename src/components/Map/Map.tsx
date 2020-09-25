@@ -7,6 +7,7 @@ import { Map as MapType } from "mapbox-gl"
 import "./Map.scss"
 import { setupBaseMap } from "./mapHelper"
 import { useMapLayerManager } from "../Data/MapLayerManager"
+import Layers from "./Layers/Layer"
 
 interface IProps {}
 
@@ -18,28 +19,11 @@ const Map = (props: IProps): JSX.Element => {
     setupBaseMap(setMap, mapRef)
   }, []) // Intentionally leave empty; only set up once, on instantiation
 
-  useEffect(() => {
-    console.log("MAP UPDATED", map)
-  }, [map])
-
-  useEffect(() => {
-    console.log("activeLayers -->", activeLayers)
-  }, [activeLayers])
-
-  const addLayerCallback = useCallback(() => {
-    showLayer('roadways')
-  }, [showLayer])
-
-  const hideLayerCallback = useCallback(() => {
-    hideLayer('roadways')
-  }, [hideLayer])
-
   return (
     <div className="MapRow row">
       <div className="col-12">
-        <button onClick={addLayerCallback}>Add roads</button>
-        <button onClick={hideLayerCallback}>Hide roads</button>
         <div className="Map" id="Map" ref={mapRef} />
+        <Layers />
       </div>
     </div>
   )
