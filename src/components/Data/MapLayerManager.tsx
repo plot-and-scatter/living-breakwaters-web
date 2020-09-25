@@ -4,6 +4,7 @@ import { FixTypeLater } from "../Types/FixTypeLater"
 import LAYERS from "../../static/layers.json"
 import { Map } from "mapbox-gl"
 import { addInitialLayerToMap } from "../Map/mapHelper"
+import { copyAndSet, layersToToggle } from "./MapLayerHelpers"
 
 type MapLayerManagerContextType = {
   loadedLayers: FixTypeLater
@@ -37,42 +38,37 @@ function useMapLayerManager() {
 
   const showLayer = useCallback(
     (id?: string) => {
-      const layersToToggle = LAYERS[id].layers
-        ? LAYERS[id].layers
-        : [LAYERS[id]]
+      const layers = layersToToggle(id)
 
-      console.log("-----------")
-      console.log("layersToToggle", layersToToggle)
-      console.log("loadedLayers", loadedLayers)
-
-      layersToToggle.forEach(layer => {
-        const layerId = layer.id
-
-        if (loadedLayers[layerId]) {
-          // The layer has already been loaded; toggle its visibility
-          map.setLayoutProperty(layerId, "visibility", "visible")
-        } else {
-          // The layer has not been loaded; add it
-          addInitialLayerToMap(map, layer)
-        }
+      layers.forEach(l => {
+        // If the layer is loaded, set to visible; otherwise add to map
+        loadedLayers[l.id]
+          ? map.setLayoutProperty(l.id, "visibility", "visible")
+          : addInitialLayerToMap(map, l)
       })
 
-      // Update loaded layers
-      const newLoadedLayers = Object.assign({}, loadedLayers)
-      layersToToggle.forEach(l => (newLoadedLayers[l.id] = true))
-      setLoadedLayers(newLoadedLayers)
-
-      // Update the active layers
-      const newActiveLayers = Object.assign({}, activeLayers)
-      layersToToggle.forEach(l => (newActiveLayers[l.id] = true))
-      setActiveLayers(newActiveLayers)
+      copyAndSet(loadedLayers, layers, true, setLoadedLayers) // Update loaded
+      copyAndSet(activeLayers, layers, true, setActiveLayers) // Update active
     },
     [activeLayers, setActiveLayers, loadedLayers, setLoadedLayers, map]
+  )
+
+  const hideLayer = useCallback(
+    (id?: string) => {
+      const layers = layersToToggle(id)
+
+      // Set visibility to "none"
+      layers.forEach(l => map.setLayoutProperty(l.id, "visibility", "none"))
+      
+      copyAndSet(activeLayers, layers, true, setActiveLayers) // Update active
+    },
+    [activeLayers, setActiveLayers, map]
   )
 
   return {
     activeLayers,
     showLayer,
+    hideLayer,
     map,
     setMap,
   }

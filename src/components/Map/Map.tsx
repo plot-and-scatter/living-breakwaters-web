@@ -12,7 +12,7 @@ interface IProps {}
 
 const Map = (props: IProps): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
-  const { showLayer, activeLayers, map, setMap } = useMapLayerManager()
+  const { showLayer, hideLayer, activeLayers, map, setMap } = useMapLayerManager()
 
   useEffect(() => {
     setupBaseMap(setMap, mapRef)
@@ -27,14 +27,18 @@ const Map = (props: IProps): JSX.Element => {
   }, [activeLayers])
 
   const addLayerCallback = useCallback(() => {
-    console.log("Clicked!")
     showLayer('roadways')
   }, [showLayer])
+
+  const hideLayerCallback = useCallback(() => {
+    hideLayer('roadways')
+  }, [hideLayer])
 
   return (
     <div className="MapRow row">
       <div className="col-12">
-        <button onClick={addLayerCallback}>Layers</button>
+        <button onClick={addLayerCallback}>Add roads</button>
+        <button onClick={hideLayerCallback}>Hide roads</button>
         <div className="Map" id="Map" ref={mapRef} />
       </div>
     </div>
