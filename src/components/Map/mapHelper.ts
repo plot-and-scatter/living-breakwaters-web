@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import mapboxgl from 'mapbox-gl'
-import { FixTypeLater } from '../../Types/FixTypeLater'
-import { LngLatCoordinate } from '../../Types/LngLatCoordinate'
+import { LngLatCoordinate } from '../Types/LngLatCoordinate'
+import { MapLayer } from '../Types/MapLayer'
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
 
+  
 type MapType = mapboxgl.Map | undefined
 type SetMapType = React.Dispatch<React.SetStateAction<MapType>>
 type MapRefType = React.RefObject<HTMLDivElement>
@@ -15,6 +16,9 @@ export const MAP_STYLE = 'mapbox://styles/mapbox/light-v10'
 export const MIN_ZOOM = 8
 export const MAX_ZOOM = 20
 export const START_ZOOM = 9
+
+export const BASE_LAYER_URL =
+  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/simplified"
 
 const buildMapOptions = (mapRef: MapRefType) => {
   const options = {
@@ -38,9 +42,7 @@ const addAttributionControl = (map: mapboxgl.Map) => {
 }
 
 export const setupBaseMap = (
-  map: MapType,
   setMap: SetMapType,
-  setMapLoaded: FixTypeLater,
   mapRef: MapRefType,
 ): void => {
   const initializeMap = (setMap: SetMapType, mapRef: MapRefType) => {
@@ -49,9 +51,42 @@ export const setupBaseMap = (
     addAttributionControl(map)
     map.on('load', () => {
       setMap(map)
-      setMapLoaded(true)
       map.resize()
     })
   }
-  if (!map) initializeMap(setMap, mapRef)
+  initializeMap(setMap, mapRef)
+}
+
+export const addInitialLayerToMap = (map: MapType, layer: MapLayer) => {
+  // console.log("layer", layer)
+  const type = layer.type
+
+  const layersToAdd = layer.layers ? layer.layers : [layer]
+
+  layersToAdd.forEach(layerToAdd => {
+    map.addSource(`${layerToAdd.id}`, {
+      type: "geojson",
+      data: `${BASE_LAYER_URL}/${layerToAdd.id}.geojson`,
+    })
+    const paint = {
+      [`${type}-color`]: layerToAdd.color,
+      [`${type}-opacity`]: layerToAdd.opacity,
+    }
+    if (type === "line") {
+      paint[`line-width`] = layerToAdd[`line-weight`] || 1
+      if (layerToAdd[`line-dasharray`]) {
+        paint[`line-dasharray`] = `${layerToAdd[`line-dasharray`]}`
+      }
+      if (layerToAdd[`line-gap-width`]) {
+        paint[`line-gap-width`] = layerToAdd[`line-gap-width`]
+      }
+    }
+    map.addLayer({
+      id: layerToAdd.id,
+      type: type,
+      source: `${layerToAdd.id}`,
+      layout: { visibility: "visible" },
+      paint,
+    })
+  })
 }

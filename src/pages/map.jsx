@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO"
 import MapComponent from "../components/Map/Map.tsx"
+import { MapLayerManagerProvider } from "../components/Data/MapLayerManager"
 
 const Map = props => {
   const { data } = props
@@ -13,7 +14,9 @@ const Map = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Map" />
-      <MapComponent />
+      <MapLayerManagerProvider>
+        <MapComponent />
+      </MapLayerManagerProvider>
     </Layout>
   )
 }
