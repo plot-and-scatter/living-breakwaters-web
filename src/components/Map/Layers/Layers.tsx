@@ -11,8 +11,6 @@ const Layers = () => {
 
   const { activeLayers } = useMapLayerManager()
 
-  console.log("activeLayers.length", activeLayers.length)
-
   const toggleShowLayersCallback = useCallback(() => {
     setShowLayers(!showLayers)
   }, [showLayers, setShowLayers])
@@ -48,8 +46,7 @@ const Layers = () => {
           display: showLayers ? "block" : "none",
         }}
       >
-        Interaction
-        {/* <LayerSelect /> */}
+        <LayerSelect />
       </div>
     </div>
   )
