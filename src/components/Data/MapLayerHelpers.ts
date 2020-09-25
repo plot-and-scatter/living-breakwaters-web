@@ -1,10 +1,16 @@
 import LAYERS from "../../static/layers.json"
 import { FixTypeLater } from "../Types/FixTypeLater"
 
-export const layersToToggle = (id: string) => {
-  return LAYERS[id].layers
-    ? LAYERS[id].layers
-    : [LAYERS[id]]
+export const layersToToggle = (idToToggle: string | string[]) => {
+  if (Array.isArray(idToToggle)) {
+    const ids = idToToggle
+    return ids.map(id => LAYERS[id])
+  } else {
+
+  return LAYERS[idToToggle].layers
+    ? LAYERS[idToToggle].layers
+    : [LAYERS[idToToggle]]
+  }
 }
 
 export const copyAndSet = (

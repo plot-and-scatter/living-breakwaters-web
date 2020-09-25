@@ -58,7 +58,6 @@ export const setupBaseMap = (
 }
 
 export const addInitialLayerToMap = (map: MapType, layer: MapLayer) => {
-  // console.log("layer", layer)
   const type = layer.type
 
   const layersToAdd = layer.layers ? layer.layers : [layer]
@@ -75,7 +74,7 @@ export const addInitialLayerToMap = (map: MapType, layer: MapLayer) => {
     if (type === "line") {
       paint[`line-width`] = layerToAdd[`line-weight`] || 1
       if (layerToAdd[`line-dasharray`]) {
-        paint[`line-dasharray`] = `${layerToAdd[`line-dasharray`]}`
+        paint[`line-dasharray`] = layerToAdd[`line-dasharray`] as any
       }
       if (layerToAdd[`line-gap-width`]) {
         paint[`line-gap-width`] = layerToAdd[`line-gap-width`]

@@ -30,7 +30,7 @@ const Layers = () => {
         >
           <i className="fas fa-layer-group mr-1" /> Layers
         </button>
-        {Object.keys(activeLayers).length > 0 && !showLayers && (
+        {/* {Object.keys(activeLayers).length > 0 && !showLayers && (
           <div className="ActiveLayers">
             {Object.values(activeLayers).map((l: FixTypeLater) => (
               <LayerLabel key={l.id} layer={l}>
@@ -38,7 +38,7 @@ const Layers = () => {
               </LayerLabel>
             ))}
           </div>
-        )}
+        )} */}
       </div>
       <div
         className="LayerInteraction"

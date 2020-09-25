@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react"
 
-import ScenarioCard from "./ScenarioCard.jsx"
+import ScenarioCard from "./ScenarioCard"
 
 import SCENARIOS from "../../../static/scenarios.json"
 import "./Scenarios.scss"
