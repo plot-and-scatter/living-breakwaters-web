@@ -7,13 +7,15 @@ import { Map as MapType } from "mapbox-gl"
 import "./Map.scss"
 import { setupBaseMap } from "./mapHelper"
 import { useMapLayerManager } from "../Data/MapLayerManager"
-import Layers from "./Layers/Layer"
+import Layers from "./Layers/Layers"
 
 interface IProps {}
 
 const Map = (props: IProps): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
-  const { showLayer, hideLayer, activeLayers, map, setMap } = useMapLayerManager()
+  const {
+    setMap,
+  } = useMapLayerManager()
 
   useEffect(() => {
     setupBaseMap(setMap, mapRef)
@@ -22,8 +24,8 @@ const Map = (props: IProps): JSX.Element => {
   return (
     <div className="MapRow row">
       <div className="col-12">
-        <div className="Map" id="Map" ref={mapRef} />
         <Layers />
+        <div className="Map" id="Map" ref={mapRef} />
       </div>
     </div>
   )

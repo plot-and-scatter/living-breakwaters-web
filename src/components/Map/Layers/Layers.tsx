@@ -1,54 +1,57 @@
-import React from 'react'
+import React, { useCallback, useState } from "react"
+import { useMapLayerManager } from "../../Data/MapLayerManager"
+import { FixTypeLater } from "../../Types/FixTypeLater"
+import LayerLabel from "./LayerLabel.jsx"
+import LayerSelect from "./LayerSelect.jsx"
+
+import "./Layers.scss"
 
 const Layers = () => {
+  const [showLayers, setShowLayers] = useState<boolean>(false)
+
+  const { activeLayers } = useMapLayerManager()
+
+  console.log("activeLayers.length", activeLayers.length)
+
+  const toggleShowLayersCallback = useCallback(() => {
+    setShowLayers(!showLayers)
+  }, [showLayers, setShowLayers])
+
+  const classes =
+    `btn btn-outline-dark LayerToggle ` +
+    (showLayers ? "Active" : "") +
+    (activeLayers.length > 0 ? "HasLayers" : "")
+
   return (
     <div className="Layers">
-              <div>
-                <button
-                  className={`btn btn-outline-dark LayerToggle
-                  ${this.state.showLayerInteraction ? "Active" : ""}
-                  ${visibleLayerKeys.length > 0 ? "HasLayers" : ""}`}
-                  type="button"
-                  onClick={() =>
-                    this.setState(
-                      {
-                        showLayerInteraction: !this.state.showLayerInteraction,
-                      },
-                      () => {
-                        console.log(
-                          "currentShowLayerInteraction",
-                          this.state.showLayerInteraction
-                        )
-                      }
-                    )
-                  }
-                >
-                  <i className="fas fa-layer-group mr-1" /> Layers
-                </button>
-                {Object.keys(this.addedLayers).length > 0 &&
-                  !this.state.showLayerInteraction && (
-                    <div className="ActiveLayers">
-                      {Object.values(LAYERS)
-                        .filter(l => {
-                          return visibleLayerKeys.includes(l.id)
-                        })
-                        .map(l => (
-                          <LayerLabel key={l.id} layer={l}>
-                            {l.name}
-                          </LayerLabel>
-                        ))}
-                    </div>
-                  )}
-              </div>
-              <div
-                className="LayerInteraction"
-                style={{
-                  display: this.state.showLayerInteraction ? "block" : "none",
-                }}
-              >
-                <LayerSelect toggleIdCallback={this.toggleIdCallback} />
-              </div>
-            </div>
+      <div>
+        <button
+          className={classes}
+          type="button"
+          onClick={toggleShowLayersCallback}
+        >
+          <i className="fas fa-layer-group mr-1" /> Layers
+        </button>
+        {Object.keys(activeLayers).length > 0 && !showLayers && (
+          <div className="ActiveLayers">
+            {Object.values(activeLayers).map((l: FixTypeLater) => (
+              <LayerLabel key={l.id} layer={l}>
+                {l.name}
+              </LayerLabel>
+            ))}
+          </div>
+        )}
+      </div>
+      <div
+        className="LayerInteraction"
+        style={{
+          display: showLayers ? "block" : "none",
+        }}
+      >
+        Interaction
+        {/* <LayerSelect /> */}
+      </div>
+    </div>
   )
 }
 

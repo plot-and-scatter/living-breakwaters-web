@@ -42,14 +42,11 @@ class LayerGroup extends React.Component {
           <LayerCheckbox
             key={layer.id}
             layer={layer}
-            toggleIdCallback={this.props.toggleIdCallback}
             checked={this.state.allChecked}
             checkedTs={this.state.checkedTs}
           />
         )
       })
-
-    const expanded = this.state.expanded
 
     return (
       <div className="LayerGroup pb-2">

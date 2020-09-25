@@ -21,7 +21,6 @@ class LayerSelect extends React.Component {
             key={layerGroup.id}
             layerGroup={layerGroup}
             layers={layers}
-            toggleIdCallback={this.props.toggleIdCallback}
           />
         )
       })
