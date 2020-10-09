@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import LayerLabel from "./LayerLabel"
 
@@ -11,7 +11,11 @@ interface IProps {
 const LayerCheckbox = ({ layer }: IProps) => {
   const { showLayer, hideLayer, activeLayers } = useMapLayerManager()
 
-  const isChecked = activeLayers[layer.id]
+  const [checked, setIsChecked] = useState(activeLayers[layer.id])
+
+  useEffect(() => {
+    setIsChecked(activeLayers[layer.id])
+  }, [activeLayers])
 
   const onCheckboxChange = useCallback(event => {
     event.target.checked
@@ -30,7 +34,7 @@ const LayerCheckbox = ({ layer }: IProps) => {
             value={layer.id}
             className="form-check-input"
             onChange={onCheckboxChange}
-            checked={isChecked}
+            checked={checked}
           />
           <label htmlFor={layer.id} className="form-check-label">
             {layer.name}

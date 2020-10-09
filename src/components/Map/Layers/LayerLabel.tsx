@@ -2,14 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import LAYERS from '../../../static/layers.json'
+import { MapLayer } from "../../Types/MapLayer"
 
 interface IProps {
-  layerId: string
+  layer?: MapLayer
+  layerId?: string
   children?: React.ReactNode
 }
 
-const LayerLabel = ({ children, layerId }: IProps) => {
-  const layer = LAYERS[layerId]
+const LayerLabel = ({ children, layer: layerProp, layerId }: IProps) => {
+  const layer = layerProp || LAYERS[layerId]
 
   if (!layer) {
     return <div>Loading...</div>
