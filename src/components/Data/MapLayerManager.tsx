@@ -60,7 +60,7 @@ function useMapLayerManager() {
       // Set visibility to "none"
       layers.forEach(l => map.setLayoutProperty(l.id, "visibility", "none"))
       
-      copyAndSet(activeLayers, layers, true, setActiveLayers) // Update active
+      copyAndSet(activeLayers, layers, false, setActiveLayers) // Update active
     },
     [activeLayers, setActiveLayers, map]
   )

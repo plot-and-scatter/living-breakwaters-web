@@ -19,7 +19,8 @@ const Layers = () => {
     (showLayers ? "Active" : "") +
     (activeLayers.length > 0 ? "HasLayers" : "")
 
-  console.log('activeLayers', activeLayers)
+  const activeLayerKeys = Object.keys(activeLayers)
+    .filter(layerKey => activeLayers[layerKey] === true)
 
   return (
     <div className="Layers">
@@ -31,9 +32,9 @@ const Layers = () => {
         >
           <i className="fas fa-layer-group mr-1" /> Layers
         </button>
-        {Object.keys(activeLayers).length > 0 && !showLayers && (
+        {activeLayerKeys.length > 0 && !showLayers && (
           <div className="ActiveLayers">
-            {Object.keys(activeLayers).map((layerKey: string) => (
+            {activeLayerKeys.map((layerKey: string) => (
               <LayerLabel key={layerKey} layerId={layerKey} />
             ))}
           </div>
