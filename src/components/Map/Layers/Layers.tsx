@@ -1,8 +1,7 @@
 import React, { useCallback, useState } from "react"
 import { useMapLayerManager } from "../../Data/MapLayerManager"
-import { FixTypeLater } from "../../Types/FixTypeLater"
-import LayerLabel from "./LayerLabel.jsx"
-import LayerSelect from "./LayerSelect.jsx"
+import LayerLabel from "./LayerLabel"
+import LayerSelect from "./LayerSelect"
 
 import "./Layers.scss"
 
@@ -20,6 +19,8 @@ const Layers = () => {
     (showLayers ? "Active" : "") +
     (activeLayers.length > 0 ? "HasLayers" : "")
 
+  console.log('activeLayers', activeLayers)
+
   return (
     <div className="Layers">
       <div>
@@ -30,15 +31,13 @@ const Layers = () => {
         >
           <i className="fas fa-layer-group mr-1" /> Layers
         </button>
-        {/* {Object.keys(activeLayers).length > 0 && !showLayers && (
+        {Object.keys(activeLayers).length > 0 && !showLayers && (
           <div className="ActiveLayers">
-            {Object.values(activeLayers).map((l: FixTypeLater) => (
-              <LayerLabel key={l.id} layer={l}>
-                {l.name}
-              </LayerLabel>
+            {Object.keys(activeLayers).map((layerKey: string) => (
+              <LayerLabel key={layerKey} layerId={layerKey} />
             ))}
           </div>
-        )} */}
+        )}
       </div>
       <div
         className="LayerInteraction"

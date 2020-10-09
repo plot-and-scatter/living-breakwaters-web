@@ -41,7 +41,6 @@ function useMapLayerManager() {
       const layers = layersToToggle(id)
 
       layers.forEach(l => {
-        console.log('l', l)
         // If the layer is loaded, set to visible; otherwise add to map
         loadedLayers[l.id]
           ? map.setLayoutProperty(l.id, "visibility", "visible")
