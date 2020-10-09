@@ -17,16 +17,6 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
     setExpanded(!expanded)
   }, [expanded, setExpanded])
 
-  const checkAll = useCallback(() => {
-    setAllChecked(true)
-    setCheckedTs(+new Date())
-  }, [setAllChecked, setCheckedTs])
-
-  const uncheckAll = useCallback(() => {
-    setAllChecked(false)
-    setCheckedTs(+new Date())
-  }, [setAllChecked, setCheckedTs])
-
   const toggleCheckAll = useCallback(() => {
     setAllChecked(!allChecked)
     setCheckedTs(+new Date())
@@ -49,11 +39,7 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
   return (
     <div className="LayerGroup pb-2">
       <div className="d-flex align-items-baseline justify-content-between">
-        <h6
-          onClick={toggleExpanded}
-          style={{ cursor: "pointer" }}
-          className="mb-1"
-        >
+        <h6 className="mb-1">
           {layerGroup.name}
         </h6>
         <p className="mb-1">
@@ -67,16 +53,16 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
                   Uncheck all
               </>
             ) : (
-              <>
-                <i className="fas fa-check mr-1" />
+                <>
+                  <i className="fas fa-check mr-1" />
                 Check all
               </>
-            )}
+              )}
           </button>
         </p>
       </div>
       <div>{layers}</div>
-    </div>
+    </div >
   )
 }
 

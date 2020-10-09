@@ -1,7 +1,13 @@
 {
   "eslint.validate": [
     "javascript",
-    "javascriptreact"
+    "javascriptreact",
+    {
+      "language": "typescript",
+    },
+    {
+      "language": "typescriptreact",
+    }
   ],
   "files.exclude": {
     "**/*.css": true

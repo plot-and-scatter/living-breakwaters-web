@@ -1,6 +1,6 @@
 ---
 title: Scenario 1
-subtitle: The first scenario.
+subtitle: The first mitigation scenario.
 author: U. N. Owen
 tags: scenario, temp, 1
 date: "2015-07-01T16:00:00.000Z"

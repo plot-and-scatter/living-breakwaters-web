@@ -11,15 +11,21 @@ class StrategyTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
+    console.log(this.props.data)
+    console.log(post)
+
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1
+        <div className='row'>
+          <div className='col-8 offset-2'>
+          <h1
           style={{
-            marginTop: "1rem",
+            marginTop: "2rem",
             marginBottom: 0,
           }}
         >
@@ -31,8 +37,9 @@ class StrategyTemplate extends React.Component {
             marginBottom: "1rem",
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.date} • {post.frontmatter.tags && post.frontmatter.tags.split(' ').map((t, i) => <span key={i} className={'badge badge-primary mr-2'}>{t}</span>)}
         </p>
+        <img style={{ border: 'solid 1px #ccc'}} src={post.frontmatter.image} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -63,6 +70,9 @@ class StrategyTemplate extends React.Component {
             )}
           </li>
         </ul>
+          </div>
+        </div>
+        
       </Layout>
     )
   }
@@ -92,6 +102,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

@@ -14,8 +14,7 @@ const Layers = () => {
     setShowLayers(!showLayers)
   }, [showLayers, setShowLayers])
 
-  const classes =
-    `btn btn-outline-dark LayerToggle ` +
+  const classes = `btn btn-outline-dark LayerToggle ` +
     (showLayers ? "Active" : "") +
     (activeLayers.length > 0 ? "HasLayers" : "")
 
@@ -24,7 +23,7 @@ const Layers = () => {
 
   return (
     <div className="Layers">
-      <div>
+          <div>
         <button
           className={classes}
           type="button"
