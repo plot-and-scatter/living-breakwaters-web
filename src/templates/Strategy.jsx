@@ -33,16 +33,19 @@ class StrategyTemplate extends React.Component {
         >
           {post.frontmatter.title}
         </h1>
-        <p
+        <h2>
+          <span className='badge badge-primary'>{post.frontmatter.strategyTypes}</span>
+        </h2>
+        {/* <p
           style={{
             display: `block`,
             marginBottom: "1rem",
           }}
         >
           {post.frontmatter.date} • {post.frontmatter.tags && post.frontmatter.tags.split(' ').map((t, i) => <span key={i} className={'badge badge-primary mr-2'}>{t}</span>)}
-        </p>
-        <img style={{ border: 'solid 1px #ccc'}} src={post.frontmatter.image} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </p> */}
+        {/* <img style={{ border: 'solid 1px #ccc'}} src={post.frontmatter.image} /> */}
+        <div className='Post' dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: "1rem",
@@ -102,6 +105,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        strategyTypes
         date(formatString: "MMMM DD, YYYY")
         description
         tags

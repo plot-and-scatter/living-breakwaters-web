@@ -1,14 +1,16 @@
 ---
 title: Barrier Islands
 date: "2020-10-23T00:00:00.000Z"
-description: "Located offshore, barrier islands are dynamic landforms that are formed from offshore bars and, spits. Barrier islands undergo continuous migration through a process of erosion and accretion. Given the migratory process through which they derive their structure, hard approaches to coastal protection tend to disrupt the formation of barrier islands. Barrier islands have been protected for decades in some areas, e.g., Miami. However, impending SLR could lead to the abandonment of barrier islands as a retreat strategy. Barrier islands can be both inhabited or uninhabited. They evolve over time with coastal processes, to form several unique ecosystems, including subaerial beaches, dune fields, interior wetlands, and back-barrier bays or wetlands. These ecosystems provide habitat for a wide range of plants and marine species."
+description: ""
 contentType: "strategy"
 strategyTypes: "Protect"
+image: ""
 ---
 
-## Overview
-
 Located offshore, barrier islands are dynamic landforms that are formed from offshore bars and, spits. Barrier islands undergo continuous migration through a process of erosion and accretion.[^1] [^2] Given the migratory process through which they derive their structure, hard approaches to coastal protection tend to disrupt the formation of barrier islands. Barrier islands have been protected for decades in some areas, e.g., Miami. However, impending SLR could lead to the abandonment of barrier islands as a retreat strategy.[^2] Barrier islands can be both inhabited or uninhabited. They evolve over time with coastal processes, to form several unique ecosystems, including subaerial beaches, dune fields, interior wetlands, and back-barrier bays or wetlands. These ecosystems provide habitat for a wide range of plants and marine species.
+
+![image](./5d15447027b67.image.jpg)
+_Whiskey Island, Louisiana_
 
 ## Types of barrier islands
 
@@ -32,6 +34,8 @@ Located offshore, barrier islands are dynamic landforms that are formed from off
 - Erosion of barriers leads to changes in sheltered wetlands including changes in salinity, tidal range, and sediment load[^11]
 - Preservation becomes increasingly difficult where there exist high levels of shoreline and bathymetric changes[^11]
 
+<div class='Examples'>
+
 <div class='Example'>
 
 ### Blue Dunes
@@ -47,6 +51,8 @@ The Blue Dunes Project is a proposal for a series of offshore barrier islands al
 #### MS, USA
 
 The Mississippi Coastal Improvements Program is a large-scale barrier island restoration project intended to restore and protect the Gulf Islands National Seashore barrier islands.[^5] The project began in 2007 with the assistance of the US Army Corps of Engineers (USACE) and other agencies. The project focuses on the re-nourishment of several islands and the restoration of natural sediment transport.[^6] The dredging and nourishment cost is estimated to be approximately \$368 million and requires about 14.5 million cubic meters of sediment.[^7] Ongoing monitoring by the National Park Service keeps track of the success of the project focusing on sand accretion, restoration of natural transport processes, and protection of cultural resources.[^8]
+
+</div>
 
 </div>
 
