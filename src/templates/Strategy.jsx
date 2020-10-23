@@ -5,6 +5,8 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO"
 
+import './Strategies.scss'
+
 class StrategyTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -21,8 +23,8 @@ class StrategyTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <div className='row'>
-          <div className='col-8 offset-2'>
+        <div className='Strategies row'>
+          <div className='col col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'>
           <h1
           style={{
             marginTop: "2rem",
