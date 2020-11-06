@@ -2,34 +2,23 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "prettier/@typescript-eslint"
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "env": {
     "browser": true,
     "jasmine": true,
     "jest": true,
     "node": true,
     "es6": true
-  },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier"
-  ],
-  "globals": {
-    "document": false,
-    "navigator": false,
-    "window": false
   },
   "rules": {
     "sort-imports": [
@@ -39,12 +28,9 @@
       }
     ],
     "react/display-name": "off",
-    "@typescript-eslint/ban-ts-ignore": "warn",
-    "@typescript-eslint/interface-name-prefix": [
-      "error",
-      "always"
-    ],
     "@typescript-eslint/no-empty-interface": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
     "space-before-function-paren": [
       "error",
       {
