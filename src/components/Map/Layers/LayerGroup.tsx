@@ -1,8 +1,8 @@
-import React, { useCallback, useState } from "react"
-import LayerCheckbox from "./LayerCheckbox"
-import { MapLayerGroup } from "../../Types/MapLayerGroup"
+import React, { useCallback, useState } from 'react'
+import LayerCheckbox from './LayerCheckbox'
+import { MapLayerGroup } from '../../Types/MapLayerGroup'
 
-import LAYERS from "../../../static/layers.json"
+import LAYERS from '../../../static/layers.json'
 
 interface IProps {
   layerGroup: MapLayerGroup
@@ -23,9 +23,9 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
   }, [setAllChecked, setCheckedTs])
 
   const layers = Object.values(LAYERS)
-    .filter(layer => layer.grouping === layerGroup.id)
+    .filter((layer) => layer.grouping === layerGroup.id)
     .sort((a, b) => a.name.localeCompare(b.name))
-    .map(layer => {
+    .map((layer) => {
       return (
         <LayerCheckbox
           key={layer.id}
@@ -39,9 +39,7 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
   return (
     <div className="LayerGroup pb-2">
       <div className="d-flex align-items-baseline justify-content-between">
-        <h6 className="mb-1">
-          {layerGroup.name}
-        </h6>
+        <h6 className="mb-1">{layerGroup.name}</h6>
         <p className="mb-1">
           <button
             className="btn btn-sm btn-xs btn-outline-secondary ml-2"
@@ -50,19 +48,19 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
             {allChecked ? (
               <>
                 <i className="fas fa-times mr-1" />
-                  Uncheck all
+                Uncheck all
               </>
             ) : (
-                <>
-                  <i className="fas fa-check mr-1" />
+              <>
+                <i className="fas fa-check mr-1" />
                 Check all
               </>
-              )}
+            )}
           </button>
         </p>
       </div>
       <div>{layers}</div>
-    </div >
+    </div>
   )
 }
 

@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import LAYERS from '../../../static/layers.json'
-import { MapLayer } from "../../Types/MapLayer"
+import { MapLayer } from '../../Types/MapLayer'
 
 interface IProps {
   layer?: MapLayer
@@ -25,16 +25,16 @@ const LayerLabel = ({ children, layer: layerProp, layerId }: IProps) => {
 
   const color =
     splitColorR > threshold &&
-      splitColorG > threshold &&
-      splitColorB > threshold
-      ? "black"
-      : "white"
+    splitColorG > threshold &&
+    splitColorB > threshold
+      ? 'black'
+      : 'white'
 
   return (
     <div
       key={layer.id}
       className="LayerLabel"
-      style={{ backgroundColor: layer.color, color, padding: "2px 4px" }}
+      style={{ backgroundColor: layer.color, color, padding: '2px 4px' }}
     >
       {children || layer.name}
     </div>
@@ -45,5 +45,5 @@ export default LayerLabel
 
 LayerLabel.propTypes = {
   layer: PropTypes.object,
-  children: PropTypes.node,
+  children: PropTypes.node
 }

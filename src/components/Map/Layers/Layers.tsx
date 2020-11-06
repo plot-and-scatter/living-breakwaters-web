@@ -1,9 +1,9 @@
-import React, { useCallback, useState } from "react"
-import { useMapLayerManager } from "../../Data/MapLayerManager"
-import LayerLabel from "./LayerLabel"
-import LayerSelect from "./LayerSelect"
+import React, { useCallback, useState } from 'react'
+import { useMapLayerManager } from '../../Data/MapLayerManager'
+import LayerLabel from './LayerLabel'
+import LayerSelect from './LayerSelect'
 
-import "./Layers.scss"
+import './Layers.scss'
 
 const Layers = () => {
   const [showLayers, setShowLayers] = useState<boolean>(false)
@@ -14,16 +14,18 @@ const Layers = () => {
     setShowLayers(!showLayers)
   }, [showLayers, setShowLayers])
 
-  const classes = `btn btn-outline-dark LayerToggle ` +
-    (showLayers ? "Active" : "") +
-    (activeLayers.length > 0 ? "HasLayers" : "")
+  const classes =
+    `btn btn-outline-dark LayerToggle ` +
+    (showLayers ? 'Active' : '') +
+    (activeLayers.length > 0 ? 'HasLayers' : '')
 
-  const activeLayerKeys = Object.keys(activeLayers)
-    .filter(layerKey => activeLayers[layerKey] === true)
+  const activeLayerKeys = Object.keys(activeLayers).filter(
+    (layerKey) => activeLayers[layerKey] === true
+  )
 
   return (
     <div className="Layers">
-          <div>
+      <div>
         <button
           className={classes}
           type="button"
@@ -42,7 +44,7 @@ const Layers = () => {
       <div
         className="LayerInteraction"
         style={{
-          display: showLayers ? "block" : "none",
+          display: showLayers ? 'block' : 'none'
         }}
       >
         <LayerSelect />

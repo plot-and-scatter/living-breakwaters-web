@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import mapboxgl from 'mapbox-gl'
+import { FixTypeLater } from '../Types/FixTypeLater'
 import { LngLatCoordinate } from '../Types/LngLatCoordinate'
 import { MapLayer } from '../Types/MapLayer'
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng"
+  'pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng'
 
-  
 type MapType = mapboxgl.Map | undefined
 type SetMapType = React.Dispatch<React.SetStateAction<MapType>>
 type MapRefType = React.RefObject<HTMLDivElement>
@@ -18,7 +18,7 @@ export const MAX_ZOOM = 20
 export const START_ZOOM = 9
 
 export const BASE_LAYER_URL =
-  "https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/simplified"
+  'https://plotandscatter.s3-us-west-2.amazonaws.com/living-breakwaters/simplified'
 
 const buildMapOptions = (mapRef: MapRefType) => {
   const options = {
@@ -41,10 +41,7 @@ const addAttributionControl = (map: mapboxgl.Map) => {
   map.addControl(new mapboxgl.AttributionControl())
 }
 
-export const setupBaseMap = (
-  setMap: SetMapType,
-  mapRef: MapRefType,
-): void => {
+export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
   const initializeMap = (setMap: SetMapType, mapRef: MapRefType) => {
     const map = new mapboxgl.Map(buildMapOptions(mapRef))
     addNavControl(map)
@@ -57,24 +54,24 @@ export const setupBaseMap = (
   initializeMap(setMap, mapRef)
 }
 
-export const addInitialLayerToMap = (map: MapType, layer: MapLayer) => {
+export const addInitialLayerToMap = (map: MapType, layer: MapLayer): void => {
   const type = layer.type
 
   const layersToAdd = layer.layers ? layer.layers : [layer]
 
-  layersToAdd.forEach(layerToAdd => {
+  layersToAdd.forEach((layerToAdd) => {
     map.addSource(`${layerToAdd.id}`, {
-      type: "geojson",
-      data: `${BASE_LAYER_URL}/${layerToAdd.id}.geojson`,
+      type: 'geojson',
+      data: `${BASE_LAYER_URL}/${layerToAdd.id}.geojson`
     })
     const paint = {
       [`${type}-color`]: layerToAdd.color,
-      [`${type}-opacity`]: layerToAdd.opacity,
+      [`${type}-opacity`]: layerToAdd.opacity
     }
-    if (type === "line") {
+    if (type === 'line') {
       paint[`line-width`] = layerToAdd[`line-weight`] || 1
       if (layerToAdd[`line-dasharray`]) {
-        paint[`line-dasharray`] = layerToAdd[`line-dasharray`] as any
+        paint[`line-dasharray`] = layerToAdd[`line-dasharray`] as FixTypeLater
       }
       if (layerToAdd[`line-gap-width`]) {
         paint[`line-gap-width`] = layerToAdd[`line-gap-width`]
@@ -84,8 +81,8 @@ export const addInitialLayerToMap = (map: MapType, layer: MapLayer) => {
       id: layerToAdd.id,
       type: type,
       source: `${layerToAdd.id}`,
-      layout: { visibility: "visible" },
-      paint,
+      layout: { visibility: 'visible' },
+      paint
     })
   })
 }

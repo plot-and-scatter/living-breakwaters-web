@@ -1,15 +1,15 @@
-import React, { useCallback } from "react"
-import PropTypes from "prop-types"
-import { useMapLayerManager } from "../../Data/MapLayerManager"
+import React, { useCallback } from 'react'
+import { useMapLayerManager } from '../../Data/MapLayerManager'
+import { FixTypeLater } from '../../Types/FixTypeLater'
 
-import "./ScenarioCard.scss"
+import './ScenarioCard.scss'
 
 interface IProps {
-  scenario: any
-  image: any
+  scenario: FixTypeLater
+  image: FixTypeLater
 }
 
-const ScenarioCard = ({ scenario, image }: IProps) => {
+const ScenarioCard = ({ scenario, image }: IProps): JSX.Element => {
   const { showLayer } = useMapLayerManager()
 
   const title = scenario.title
@@ -23,8 +23,8 @@ const ScenarioCard = ({ scenario, image }: IProps) => {
     <div
       className="ScenarioCard card"
       style={{
-        whiteSpace: "normal",
-        verticalAlign: "top",
+        whiteSpace: 'normal',
+        verticalAlign: 'top'
       }}
       onClick={scenarioClickCallback}
     >
@@ -37,12 +37,6 @@ const ScenarioCard = ({ scenario, image }: IProps) => {
       </div>
     </div>
   )
-}
-
-ScenarioCard.propTypes = {
-  scenario: PropTypes.object,
-  image: PropTypes.string,
-  scenarioClickCallback: PropTypes.func,
 }
 
 export default ScenarioCard

@@ -1,13 +1,13 @@
-import React, { useCallback, useState } from "react"
+import React, { useCallback, useState } from 'react'
 
-import ScenarioCard from "./ScenarioCard"
+import ScenarioCard from './ScenarioCard'
 
-import SCENARIOS from "../../../static/scenarios.json"
-import "./Scenarios.scss"
-import image1 from "../../../../content/assets/images/jared-murray-NSuufgf-BME-unsplash-clipped.jpg"
-import image2 from "../../../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg"
-import image3 from "../../../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg"
-import image4 from "../../../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg"
+import SCENARIOS from '../../../static/scenarios.json'
+import './Scenarios.scss'
+import image1 from '../../../../content/assets/images/jared-murray-NSuufgf-BME-unsplash-clipped.jpg'
+import image2 from '../../../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg'
+import image3 from '../../../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg'
+import image4 from '../../../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg'
 
 const Scenarios = (): JSX.Element => {
   const [showScenarios, setShowScenarios] = useState<boolean>(false)
@@ -17,7 +17,7 @@ const Scenarios = (): JSX.Element => {
   }, [showScenarios, setShowScenarios])
 
   const classes = `btn btn-outline-dark ScenarioToggle ${
-    showScenarios ? "Active" : ""
+    showScenarios ? 'Active' : ''
   }`
 
   return (
@@ -30,7 +30,7 @@ const Scenarios = (): JSX.Element => {
       <div
         className="ScenarioInteraction"
         style={{
-          display: showScenarios ? "flex" : "none",
+          display: showScenarios ? 'flex' : 'none'
         }}
       >
         {Object.values(SCENARIOS)

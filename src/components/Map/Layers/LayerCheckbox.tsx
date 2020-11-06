@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from "react"
-import PropTypes from "prop-types"
-import LayerLabel from "./LayerLabel"
+import React, { useCallback, useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
+import LayerLabel from './LayerLabel'
 
-import { useMapLayerManager } from "../../Data/MapLayerManager"
+import { useMapLayerManager } from '../../Data/MapLayerManager'
 
 interface IProps {
   layer: any
@@ -17,11 +17,14 @@ const LayerCheckbox = ({ layer }: IProps) => {
     setIsChecked(activeLayers[layer.id])
   }, [activeLayers])
 
-  const onCheckboxChange = useCallback(event => {
-    event.target.checked
-      ? showLayer(event.target.id)
-      : hideLayer(event.target.id)
-  }, [showLayer, hideLayer])
+  const onCheckboxChange = useCallback(
+    (event) => {
+      event.target.checked
+        ? showLayer(event.target.id)
+        : hideLayer(event.target.id)
+    },
+    [showLayer, hideLayer]
+  )
 
   return (
     <LayerLabel layer={layer}>
@@ -51,5 +54,5 @@ LayerCheckbox.propTypes = {
   checked: PropTypes.bool,
   checkedTs: PropTypes.number,
   layer: PropTypes.object,
-  toggleIdCallback: PropTypes.func,
+  toggleIdCallback: PropTypes.func
 }

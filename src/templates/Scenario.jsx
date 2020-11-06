@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { graphql, Link } from "gatsby"
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/SEO"
+import Layout from '../components/Layout/Layout'
+import SEO from '../components/SEO'
 
 // import common from "../scss/_common.module.scss"
 // import { hexToRgb } from "../helpers"
@@ -24,8 +24,8 @@ class ScenarioTemplate extends React.Component {
         />
         <h1
           style={{
-            marginTop: "1rem",
-            marginBottom: 0,
+            marginTop: '1rem',
+            marginBottom: 0
           }}
         >
           {post.frontmatter.title}
@@ -34,7 +34,7 @@ class ScenarioTemplate extends React.Component {
         <p
           style={{
             display: `block`,
-            marginBottom: "1rem",
+            marginBottom: '1rem'
           }}
         >
           {post.frontmatter.date}
@@ -42,7 +42,7 @@ class ScenarioTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: "1rem",
+            marginBottom: '1rem'
           }}
         />
         <ul
@@ -51,7 +51,7 @@ class ScenarioTemplate extends React.Component {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
@@ -79,7 +79,7 @@ export default ScenarioTemplate
 ScenarioTemplate.propTypes = {
   data: PropTypes.object,
   pageContext: PropTypes.object,
-  location: PropTypes.object,
+  location: PropTypes.object
 }
 
 export const pageQuery = graphql`

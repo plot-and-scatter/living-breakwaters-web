@@ -1,28 +1,28 @@
-import React from "react"
+import React from 'react'
 
-import image1 from "../../content/assets/images/jared-murray-NSuufgf-BME-unsplash-clipped.jpg"
-import image2 from "../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg"
-import image3 from "../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg"
-import image4 from "../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg"
+import image1 from '../../content/assets/images/jared-murray-NSuufgf-BME-unsplash-clipped.jpg'
+import image2 from '../../content/assets/images/bre-smith-A_-piDJKVsY-unsplash-clipped.jpg'
+import image3 from '../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg'
+import image4 from '../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg'
 
 const ScenarioSelector = () => {
-  const scenarioClickCallback = useCallback(ids => {
-    console.log("ids", ids)
+  const scenarioClickCallback = useCallback((ids) => {
+    console.log('ids', ids)
     // Hide all existing layers
-    Object.keys(this.addedLayers).forEach(addedLayerId => {
-      console.log("addedLayerId", addedLayerId)
-      this.map.setLayoutProperty(addedLayerId, "visibility", "none")
+    Object.keys(this.addedLayers).forEach((addedLayerId) => {
+      console.log('addedLayerId', addedLayerId)
+      this.map.setLayoutProperty(addedLayerId, 'visibility', 'none')
     })
     // Add new ones
-    ids.forEach(id => {
+    ids.forEach((id) => {
       const layer = LAYERS[id]
       const layerIds = layer.layers ? layer.layers : [layer.id]
-      layerIds.forEach(layerId => {
+      layerIds.forEach((layerId) => {
         if (this.addedLayers && this.addedLayers[layerId]) {
           // The layer is already on the map; toggle its visibility
-          const visibility = "visible"
+          const visibility = 'visible'
           // const layer = this.map.getLayer(id)
-          this.map.setLayoutProperty(layerId, "visibility", visibility)
+          this.map.setLayoutProperty(layerId, 'visibility', visibility)
         } else {
           // This can only ever happen when the layer is first added, so we don't
           // need to test for whether the box has been checked or not
@@ -39,15 +39,15 @@ const ScenarioSelector = () => {
         <div>
           <button
             className={`btn btn-outline-dark ScenarioToggle
-        ${this.state.showScenarioInteraction ? "Active" : ""}`}
+        ${this.state.showScenarioInteraction ? 'Active' : ''}`}
             onClick={() =>
               this.setState(
                 {
-                  showScenarioInteraction: !this.state.showScenarioInteraction,
+                  showScenarioInteraction: !this.state.showScenarioInteraction
                 },
                 () => {
                   console.log(
-                    "currentShowScenarioInteraction",
+                    'currentShowScenarioInteraction',
                     this.state.showScenarioInteraction
                   )
                 }
@@ -60,7 +60,7 @@ const ScenarioSelector = () => {
         <div
           className="ScenarioInteraction"
           style={{
-            display: this.state.showScenarioInteraction ? "flex" : "none",
+            display: this.state.showScenarioInteraction ? 'flex' : 'none'
           }}
         >
           {Object.values(SCENARIOS)

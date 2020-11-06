@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import LAYERS from "../static/layers.json"
+import LAYERS from '../static/layers.json'
 
 const LayerSelector = () => {
   return (
@@ -8,17 +8,17 @@ const LayerSelector = () => {
       <div>
         <button
           className={`btn btn-outline-dark LayerToggle
-                  ${this.state.showLayerInteraction ? "Active" : ""}
-                  ${visibleLayerKeys.length > 0 ? "HasLayers" : ""}`}
+                  ${this.state.showLayerInteraction ? 'Active' : ''}
+                  ${visibleLayerKeys.length > 0 ? 'HasLayers' : ''}`}
           type="button"
           onClick={() =>
             this.setState(
               {
-                showLayerInteraction: !this.state.showLayerInteraction,
+                showLayerInteraction: !this.state.showLayerInteraction
               },
               () => {
                 console.log(
-                  "currentShowLayerInteraction",
+                  'currentShowLayerInteraction',
                   this.state.showLayerInteraction
                 )
               }
@@ -31,10 +31,10 @@ const LayerSelector = () => {
           !this.state.showLayerInteraction && (
             <div className="ActiveLayers">
               {Object.values(LAYERS)
-                .filter(l => {
+                .filter((l) => {
                   return visibleLayerKeys.includes(l.id)
                 })
-                .map(l => (
+                .map((l) => (
                   <LayerLabel key={l.id} layer={l}>
                     {l.name}
                   </LayerLabel>
@@ -45,7 +45,7 @@ const LayerSelector = () => {
       <div
         className="LayerInteraction"
         style={{
-          display: this.state.showLayerInteraction ? "block" : "none",
+          display: this.state.showLayerInteraction ? 'block' : 'none'
         }}
       >
         <LayerSelect toggleIdCallback={this.toggleIdCallback} />

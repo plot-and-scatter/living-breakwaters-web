@@ -1,15 +1,13 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef } from 'react'
 
-import { setupBaseMap } from "./mapHelper"
-import { useMapLayerManager } from "../Data/MapLayerManager"
-import Layers from "./Layers/Layers"
-import Scenarios from "./Scenarios/Scenarios"
+import { setupBaseMap } from './mapHelper'
+import { useMapLayerManager } from '../Data/MapLayerManager'
+import Layers from './Layers/Layers'
+import Scenarios from './Scenarios/Scenarios'
 
-import "./Map.scss"
+import './Map.scss'
 
-interface IProps {}
-
-const Map = (props: IProps): JSX.Element => {
+const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
   const { setMap } = useMapLayerManager()
 
