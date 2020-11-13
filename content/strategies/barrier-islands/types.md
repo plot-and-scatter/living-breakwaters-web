@@ -1,0 +1,4 @@
+- **Bay barriers** enclose a pond, marsh, or other marine ecosystems that are connected by two headlands. They are sometimes referred to as bay mount bar or bay bar.
+- **Tombolos** are sand and gravel beaches that connect one or more offshore islands or that connect one or more islands to the mainland. They are sometimes referred to as connecting bars, tie bars, and tying bars.
+- **Barrier spits** are barriers that extend into open water and that are attached to a mainland at only one end. Where they extend across a bay or other coastal habitat, barrier spits develop to form bay barriers. Where an inlet is created, a bay barrier can develop into a barrier spit.
+- **Dunes or beach barriers** are created when winds that protect landward aquatic habitats form wide sand barrier beaches with hills and ridges.[^10]

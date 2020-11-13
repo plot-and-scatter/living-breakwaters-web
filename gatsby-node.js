@@ -3,7 +3,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const TEMPLATES_DIR = `./src/templates/`
 
-const BASE_QUERY = contentTypeFilter => `
+const BASE_QUERY = (contentTypeFilter) => `
   {
     allMarkdownRemark(
       filter: { frontmatter: { contentType: { ${contentTypeFilter} } } }
@@ -15,6 +15,7 @@ const BASE_QUERY = contentTypeFilter => `
           fields {
             slug
           }
+          html
           frontmatter {
             title
           }
@@ -36,29 +37,90 @@ const pagesFromNodes = async (
   graphql,
   createPageMethod
 ) => {
-  const markdownNodes = await graphql(query)
+  const gqlMarkdownNodes = await graphql(query)
 
-  if (markdownNodes.errors) {
-    throw markdownNodes.errors
+  if (gqlMarkdownNodes.errors) {
+    throw gqlMarkdownNodes.errors
   }
 
+  const subpageMap = {}
+
   // Create pages.
-  const pages = markdownNodes.data.allMarkdownRemark.edges
+  const pages = gqlMarkdownNodes.data.allMarkdownRemark.edges
 
-  pages.forEach((page, index) => {
-    const previous = index === pages.length - 1 ? null : pages[index + 1].node
-    const next = index === 0 ? null : pages[index - 1].node
+  const subpageTypes = {
+    summary: { path: '/summary/', multi: false },
+    types: { path: '/types/', multi: false },
+    benefits: { path: '/benefits/', multi: false },
+    challenges: { path: '/challenges/', multi: false },
+    examples: { path: '/example', multi: true },
+    images: { path: '/image', multi: true }
+  }
 
-    createPageMethod({
-      path: page.node.fields.slug,
-      component: path.resolve(templatePath),
-      context: {
-        slug: page.node.fields.slug,
-        previous,
-        next,
-      },
+  // Find the children
+  pages
+    .filter((page) => page.node.frontmatter.title.length === 0)
+    .forEach((page, index) => {
+      const slug = `${page.node.fields.slug}`
+      console.log('\r\n--> slug', slug)
+      const splitSlug = slug.split('/')
+      const parentSlug = splitSlug
+        .slice(0, splitSlug.length - 2)
+        .join('/')
+        .concat('/')
+      console.log('parentSlug', parentSlug)
+
+      // Link up the subpages
+      Object.keys(subpageTypes).forEach((subpageTypeKey) => {
+        const value = subpageTypes[subpageTypeKey]
+        const subpageTypeSlug = value.path
+        if (slug.indexOf(subpageTypeSlug) > -1) {
+          console.log('  key', subpageTypeKey, 'value', value)
+          subpageMap[parentSlug] = subpageMap[parentSlug] || {}
+          if (value.multi) {
+            subpageMap[parentSlug][subpageTypeKey] =
+              subpageMap[parentSlug][subpageTypeKey] || []
+            subpageMap[parentSlug][subpageTypeKey].push(page.node.html)
+          } else {
+            subpageMap[parentSlug][subpageTypeKey] = page.node.html
+          }
+        }
+      })
     })
-  })
+
+  console.log('#################')
+  console.log(subpageMap)
+  console.log('#################')
+
+  console.log('--------------')
+
+  // Filter out the non-children
+  pages
+    .filter((page) => page.node.frontmatter.title.length > 0)
+    .forEach((page, index) => {
+      // console.log(page)
+
+      const previous = index === pages.length - 1 ? null : pages[index + 1].node
+      const next = index === 0 ? null : pages[index - 1].node
+
+      console.log('* * *')
+      console.log(page.node.fields.slug)
+
+      console.log(subpageMap[page.node.fields.slug])
+
+      createPageMethod({
+        path: page.node.fields.slug,
+        component: path.resolve(templatePath),
+        context: {
+          animationSlug: `/${page.node.fields.slug}animation.*png/`,
+          slug: page.node.fields.slug,
+          foo: 'bar',
+          subpages: subpageMap[page.node.fields.slug],
+          previous,
+          next
+        }
+      })
+    })
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -82,7 +144,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const urlPrefix =
-      node.frontmatter.contentType === "scenario"
+      node.frontmatter.contentType === 'scenario'
         ? SCENARIO_URL_PREFIX
         : STRATEGY_URL_PREFIX
     const value = `${urlPrefix}${createFilePath({ node, getNode })}`
@@ -90,7 +152,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }
@@ -99,20 +161,20 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 // https://github.com/mapbox/mapbox-gl-js/issues/4593
 // Same for gsap. See also https://www.gatsbyjs.com/docs/debugging-html-builds/
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
+  if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /mapbox-gl/,
-            use: loaders.null(),
+            use: loaders.null()
           },
           {
             test: /gsap/,
-            use: loaders.null(),
-          },
-        ],
-      },
+            use: loaders.null()
+          }
+        ]
+      }
     })
   }
 }

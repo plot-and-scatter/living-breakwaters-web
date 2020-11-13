@@ -1,0 +1,4 @@
+- Provides important support for marine and terrestrial habitats
+- Helps to maintain salinity gradients which contribute to supporting a sustainable coastal wetland ecosystem[^12]
+- Shelters estuaries and protects aquatic ecosystems that exist between the barrier and a mainland.
+- Offers storm surge protection through wave attenuation. For example, barrier beaches that front embaymemts absorb wave energy[^10]
