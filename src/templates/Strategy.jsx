@@ -194,6 +194,11 @@ const StrategyTemplate = (props) => {
           </div>
         </div>
         <hr style={{ marginBottom: '1rem' }} />
+        <div
+          className="Citations"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <hr style={{ marginBottom: '1rem' }} />
         <ul
           style={{
             display: `flex`,

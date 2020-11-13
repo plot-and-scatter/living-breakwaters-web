@@ -60,22 +60,19 @@ const pagesFromNodes = async (
   // Find the children
   pages
     .filter((page) => page.node.frontmatter.title.length === 0)
-    .forEach((page, index) => {
+    .forEach((page) => {
       const slug = `${page.node.fields.slug}`
-      console.log('\r\n--> slug', slug)
       const splitSlug = slug.split('/')
       const parentSlug = splitSlug
         .slice(0, splitSlug.length - 2)
         .join('/')
         .concat('/')
-      console.log('parentSlug', parentSlug)
 
       // Link up the subpages
       Object.keys(subpageTypes).forEach((subpageTypeKey) => {
         const value = subpageTypes[subpageTypeKey]
         const subpageTypeSlug = value.path
         if (slug.indexOf(subpageTypeSlug) > -1) {
-          console.log('  key', subpageTypeKey, 'value', value)
           subpageMap[parentSlug] = subpageMap[parentSlug] || {}
           if (value.multi) {
             subpageMap[parentSlug][subpageTypeKey] =
@@ -88,25 +85,12 @@ const pagesFromNodes = async (
       })
     })
 
-  console.log('#################')
-  console.log(subpageMap)
-  console.log('#################')
-
-  console.log('--------------')
-
   // Filter out the non-children
   pages
     .filter((page) => page.node.frontmatter.title.length > 0)
     .forEach((page, index) => {
-      // console.log(page)
-
       const previous = index === pages.length - 1 ? null : pages[index + 1].node
       const next = index === 0 ? null : pages[index - 1].node
-
-      console.log('* * *')
-      console.log(page.node.fields.slug)
-
-      console.log(subpageMap[page.node.fields.slug])
 
       createPageMethod({
         path: page.node.fields.slug,
