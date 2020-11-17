@@ -1,6 +1,6 @@
 ---
 title: Scenario 2
-subtitle: The second scenario.
+subtitle: The second mitigation scenario.
 author: U. N. Owen
 tags: scenario, temp, 2
 date: "2016-08-01T16:00:00.000Z"

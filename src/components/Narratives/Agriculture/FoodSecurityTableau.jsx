@@ -39,7 +39,7 @@ import Hotspot from "../Hotspot/Hotspot"
 import AgricultureGround from "./BaseLayers/AgricultureGround"
 // import { useLayoutEffect } from "react"
 
-gsap.registerPlugin(MorphSVGPlugin)
+if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 const itemHelper = (objClass, id, index) => {
   return gsap.to(

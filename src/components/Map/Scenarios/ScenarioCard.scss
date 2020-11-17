@@ -1,32 +1,44 @@
 @import "../../../scss/common.module";
 
+$image-height: 135px;
+
+.card {
+  border: none !important;
+}
+
 .ScenarioCard {
   cursor: pointer !important;
-  border: solid $color-brand-background 1px;
-  border-radius: 0 !important;
-  z-index: 120;
+  height: 300px;
+  
+  border: none !important;
+
   .card-header {
     cursor: pointer !important;
     background: rgba($color-brand-background, 0.4) !important;
-    margin-top: -145px;
-    height: 145px;
+    margin-top: -$image-height;
+    min-height: $image-height - 1;
+    height: $image-height - 1;
     color: white;
     padding: 1rem !important;
     z-index: 110;
     h4 {
+      font-size: 1.3rem;
       text-shadow: 0 1px 0 #000;
     }
+  }
+  .card-img-top {
+    filter: grayscale(100%);
+    z-index: 100;
+    border-radius: 0px;
+    max-height: $image-height;
   }
   .card-body {
     cursor: pointer !important;
     border-top: solid $color-brand-background 1px !important;
     padding: 1rem !important;
-    height: 245px;
+    // height: 100px;
+    // margin-top: 50px;
     overflow-y: scroll;
-  }
-  .card-img-top {
-    filter: grayscale(100%);
-    z-index: 100;
   }
   .Intro {
     font-size: 0.85rem;
