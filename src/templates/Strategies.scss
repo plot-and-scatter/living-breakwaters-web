@@ -2,6 +2,13 @@
 
 $example-color-background: $gray-800;
 
+.ProtectBG {
+  background-color: darken(rgb(80, 140, 130), 10%);
+}
+.AccommodateBG {
+  background-color: darken(#ffc107, 10%);
+}
+
 .Strategies {
   color: $gray-700;
 
@@ -35,7 +42,7 @@ $example-color-background: $gray-800;
   .Post {
     .Summary {
       // background-color: lighten($color-brand-background, 20%);
-      background-color: darken(rgb(80, 140, 130), 10%);
+      // background-color: darken(rgb(80, 140, 130), 10%);
       color: white !important;
       // background-color: $gray-100;
       margin-left: -1.6rem;

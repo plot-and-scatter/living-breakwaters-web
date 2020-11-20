@@ -1,0 +1,4 @@
+### Blue Dunes
+#### NJ and NY, USA
+
+The Blue Dunes Project is a proposal for a series of offshore barrier islands along the New Jersey and New York harbor.[^2] The proposal investigates how design can be integrated into the future of coastal protection strategies. The project requires coordination between multiple stakeholders (scientists, engineers, planners, economists, and maritime stakeholders) to address key issues such as water quality, habitat protection, recreation, navigation, construction, and funding.[^3] Led by the design team WXY/West 8, the design of the barrier island considers both the large scale coastal protection and the potential of offshore renewable energy to address the future of coastal life, economy, and property.[^4]

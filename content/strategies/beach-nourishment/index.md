@@ -3,6 +3,7 @@ title: Beach Nourishment
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Beach nourishment (beach renourishment, beach replenishment, or sand replenishment) involves a process of replacing material (usually sand) to a beach that might have been lost by longshore drift or erosion."
 ---
 
 <!-- Regular citations -->
