@@ -1,0 +1,5 @@
+- Climate change, e.g., rising sea surface temperature reduces reef vitality and reef cover
+- Loss of coral reef cover increases wave action and erosion onshore
+- Erosion due to construction, mining and farming increases sedimentation of rivers and oceans and eventually coral reefs
+- Pollution from industrial waste, sewage discharge, oil spills, and agrochemicals lead to eutrophication and algal growth in coral reefs. 
+- Rising sea surface temperatures and acidification slows reef growth and reduces reef resilience [^12] [^13]

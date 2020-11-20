@@ -1,0 +1,5 @@
+- Reduces erosive impacts of wave currents offshore and onshore
+- Serve as important nurseries for the spawning and breeding of pelagic fisheries
+- Has the highest level of biodiversity of any shallow-water marine ecosystem, e.g., coral reefs support greater than 800 hard species of coral and over 4000 fish species
+- Decreases the effect of storm surges and king tides onshore due to wave attenuation 
+- Possess high recreational and economic value estimated at approximately $9.6 billion of the total benefit of coral reefs.[^12]
