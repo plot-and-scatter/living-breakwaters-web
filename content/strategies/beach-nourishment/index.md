@@ -33,7 +33,6 @@ strategyTypes: "Protect"
 [^13]:
   Finkl C.W., Walker H.J. (2005) Beach Nourishment. In: Schwartz M.L. (eds) Encyclopedia of Coastal Science. Encyclopedia of Earth Science Series. Springer, Dordrecht. https://doi.org/10.1007/1-4020-3880-1_35
 
-
 <!-- Images -->
 
 [^i1]:

@@ -1,0 +1,5 @@
+- Protect upland areas from sea level rise, and storm surges by buffering wave action. 
+- Reduces the frequency and intensity of floods by buffering and storing a significant amount of floodwater. 
+- Provides habitat for threatened and endangered species. 
+- Serves as a water filter for chemicals and sediments before they enter coastal waters.
+- Sequesters carbon in salt marshes and mangroves. [^11]

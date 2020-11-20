@@ -1,0 +1,4 @@
+### New Brighton Park Shoreline Restoration 
+#### Vancouver BC, Canada
+
+The New Brighton Park Shoreline Restoration is a collaborative project between the Vancouver Fraser Port Authority, Vancouver Board of Parks and Recreation, and first nation groups to implement a design that supports the Park Board’s Strategic Plan, Rewilding Action Plan, and the Biodiversity Strategy.[^6] The project features a constructed tidal wetland that provides habitat for juvenile salmon as they migrate along the Burrard Inlet. The wetland also enhances the ecological function of the site by providing a resting and feeding habitat for shorebirds.[^7] The project is an excellent example of how a small-scale project can be a positive benefit to the overall ecological function of a site.

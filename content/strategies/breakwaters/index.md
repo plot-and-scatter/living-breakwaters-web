@@ -1,5 +1,5 @@
 ---
-title: B
+title: Breakwaters
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
@@ -37,7 +37,6 @@ strategyTypes: "Protect"
 [^15]:
   Hauer, M., Op den Velde, W., Vrijling, J. K., & d'Angremond, K. (1995). Comparison construction costs conventional rubblemound breakwaters/bermbreakwater.
 
-
 <!-- Images -->
 
 [^i1]:
@@ -51,4 +50,4 @@ strategyTypes: "Protect"
 [^i5]:
   Figure 2. Rebuild by design. Living breakwater south shore Staten Island. http://www.rebuildbydesign.org/our-work/all-proposals/winning-projects/ny-living-breakwaters
 [^i6]:
-  Figure 3. Wageningen University and Research. (2018). Oyster reefs used to counter large waves. https://www.wur.nl/en/Research-Results/Research-Institutes/marine-research/show-marine/Oyster-reefs-used-to-counter-large-waves.htm
+  Figure 3. Wageningen University and Research. (2018). Oyster reefs used to counter large waves. https://www.wur.nl/en/Research-Results/Research-Institutes/marine-research/show-marine/Oyster-reefs-used-to-counter-large-waves.htm -->
