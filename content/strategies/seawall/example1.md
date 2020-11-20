@@ -1,0 +1,3 @@
+### The Seattle Seawall
+
+The Seattle Seawall was originally built in 1920 and 1936, however, in 2001 and 2004, concerns about the structural integrity of the wall arose. The City of Seattle put forth the Central Seawall Project to replace the 3,700 ft of the seawall with a new seismic-resistant seawall. In addition to the state-of-the-art seawall, the project was also intended to create an unprecedented salmon migration corridor, an enhanced shoreline ecology, and an aesthetically pleasing promenade.[^3] The seawall features light penetrable surfaces that allow sunlight under the cantilevered where textured concrete panels and habitat benches provide habitat for juvenile salmon. 

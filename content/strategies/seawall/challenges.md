@@ -1,0 +1,4 @@
+- Wave impact exerts a significant load on sea walls which tends to increases water dept at the front of the wall
+- Reflects wave energy seawards creating turbulence and nearshore erosion 
+- Causes sediment starvation where erosion in front of the seawall occurs at a faster rate than sediment is deposited through the erosion of the hinterland. This can lower the profile of the beach. 
+- Prevents the natural inland migration of coastal systems thereby causing coastal squeeze. This leads to a reduction in intertidal habitats such as sandy beaches and saltmarshes [^6]
