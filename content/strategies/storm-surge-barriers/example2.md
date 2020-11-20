@@ -1,0 +1,4 @@
+### La Planche River Aboiteau 
+#### Amherst NS, Canada
+
+In 2015, the province of Nova Scotia awarded $5 million in the replacement of the old aboiteau on the La Planche River.[^8] An aboiteau is a one-way storm barrier that controls the flow of water through a dike.[^9] It is typically used to protect valuable assets such as marshland and agricultural land by reducing the amount of flooding during high tides or storm surges. The design and location of the new aboiteau were intended to reduce the maintenance of existing dikes and to increase the crest elevation to accommodate a rise in sea level.[^10] The new aboiteau is part of the 241 km of dikes and 260 aboiteau that are operated by the Agriculture Department, under the Marshlands Conservation Act. The act is intended to protect over 43,000 acres of Nova Scotia marshlands.[^11]

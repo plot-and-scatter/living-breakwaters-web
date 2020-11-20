@@ -1,0 +1,4 @@
+- High construction and maintenance cost 
+- Affects nearby environments and transfers risk onto nearby properties and communities
+- May negatively affect water quality in the bay area 
+- Mostly suitable for locations where inlets and narrow river mouths can be closed [^13] [^14]

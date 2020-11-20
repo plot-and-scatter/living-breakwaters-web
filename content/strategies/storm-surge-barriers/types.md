@@ -1,0 +1,4 @@
+- **Sector gates** are radial structures comprising two gates with lateral support. Both the gates and arms create a section of a circle that turns around a vertical axis. The gates move based on the water pressure exerted against them. 
+- **Mitre gates** are flat gates that are comprised of two units. When the two units are closed, they lean against each other forming a wedge in the direction where the water level is highest. 
+- **Swinging gates or barge gates** are flat and rotate around a vertical axis at one side of a waterway. Swinging gates are designed to prevent tidal intrusions only in low water flow. 
+- **Rotary segment gates** are cylindrical segments that rotate around a horizontal axis. When a rotary gate is open, the barrier rests on a sill made from concrete that is embedded in the waterway. [^12] 
