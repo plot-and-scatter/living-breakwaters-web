@@ -1,0 +1,3 @@
+- Requires careful long-term management due to constant change
+- Can be overwhelmed by invasive plant species, e.g., grass which can prevent the natural migration of sand 
+- Invasive plant species on dunes displace native plants that help to stabilize dunes against rapid erosion. This could lead to the encroachment of forest species.
