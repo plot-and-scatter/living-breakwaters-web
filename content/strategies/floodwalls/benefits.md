@@ -1,0 +1,5 @@
+- Mitigates against flood damage in areas with high biodiversity and economic and recreational value
+- Provides protection from flooding and hence reduces potential physical and economic impacts on infrastructure and livelihoods
+- Reduces the need for alternative flood risk management strategies, e.g., community resettlement. 
+- Complements other flood risk strategies, e.g., wetland restoration 
+- Possess the capacity to withstand significant flood loads

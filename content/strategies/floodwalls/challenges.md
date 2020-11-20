@@ -1,0 +1,4 @@
+- Can lead to unintended consequences on local ecosystems and water flows. For example, flood walls may increase water flow in other areas. 
+- Might be breached or toppled during an extreme flood event; increasing the damage from floodwaters. 
+- Overtopping can cause scouring and loss of structural support on the passive side 
+- During a flood event, a flood side gap may be formed resulting in a fully hydrostatic head along the wall face to the depth of the crack [^11] [^12]

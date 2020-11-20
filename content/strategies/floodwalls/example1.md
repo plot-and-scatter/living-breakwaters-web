@@ -1,0 +1,3 @@
+### Kings Lynn Flood Gate
+
+The Kings Lynn Flood Gate was a response to the flooding of 1978 caused by a North Sea storm surge.[^3] Sixty flood gates and barriers were constructed. The wall proved to be effective in 2013 during a storm surge, however, upgrades were necessary for future storms.[^4] As part of the Environment Agency scheme, Flood Control International replaced over sixty gates and installed 30 new gates and barriers that were more effective.[^5] One of the interesting features of the new flood gates is a seating area that emerges as the gates pivot downward when there is no flooding.
