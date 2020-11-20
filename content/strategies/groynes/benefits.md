@@ -1,0 +1,5 @@
+- Creates an opportunity for beach widening which is valuable to recreational tourism. 
+- Traps sediments and widens beach thereby reducing erosion and increasing wave energy dissipation.
+- Acts as a sturdy structure which can be used for long term stabilization of coastline
+- Can be used in tandem with other approaches, e.g., beach nourishment and hard engineering measures
+- Enjoys widespread global acceptance based on experience with design and construction. 

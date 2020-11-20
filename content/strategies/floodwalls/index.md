@@ -25,7 +25,7 @@ strategyTypes: "Protect"
 [^9]:
   Wood, Graeme. “Richmond's $300 Million Dyke Plan Forges Ahead.” Richmond News, 13 Apr. 2017, https://www.richmond-news.com/news/richmond-s-300-million-dyke-plan-forges-ahead-1.15299874.  
 [^10]:
-  FREIE UNIVERSITÄT BERLIN. Department of Earth Sciences. Floodwalls. INTEGRATED WATER RESOURCE MANAGEMENT - FROM TRADITIONAL KNOWLEDGE TO MODERN TECHNIQUES: https://www.geo.fu-berlin.de/en/v/iwrm/Implementation/technical_measures/Flood-protection-measures/structural_measures/Floodwalls/index.html Benefits:
+  FREIE UNIVERSITÄT BERLIN. Department of Earth Sciences. Floodwalls. INTEGRATED WATER RESOURCE MANAGEMENT - FROM TRADITIONAL KNOWLEDGE TO MODERN TECHNIQUES: https://www.geo.fu-berlin.de/en/v/iwrm/Implementation/technical_measures/Flood-protection-measures/structural_measures/Floodwalls/index.html
 [^11]:
   Bureau of Reclamation. (2020). Risk Management. Best Practices and Risk Methodology. https://www.usbr.gov/ssle/damsafety/risk/methodology.html
 [^12]:
