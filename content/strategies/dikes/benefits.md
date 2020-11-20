@@ -1,0 +1,5 @@
+- Prevents flooding in low lying coastal areas
+- The sloped seaward edge of the dike reduces wave loading and improves wave energy dissipation 
+- Protects of value development against coastal flooding 
+- Reduces the effects of coastal erosion by reducing wave energy. 
+- Reduced toe scour given that the down rush of the wave is directed away from the structure. This reduces the risks associated with undermining.

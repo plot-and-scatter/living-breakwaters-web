@@ -1,0 +1,5 @@
+- Expensive to construct and requires high maintenance
+- Structural integrity decreases over time due to storm damage
+- Require large volumes of building materials. 
+- Requires a large area of land to facilitate the shallow slopes that are needed to aid in wave dissipation. 
+- Results in fixing the position of the coastline thereby disrupting natural geomorphological processes [^14]
