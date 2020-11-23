@@ -1,0 +1,4 @@
+### BC Flood Emergency Plan 
+#### BC, Canada
+
+The British Columbia Flood Emergency Plan outlines the framework for the province to coordinate flood-related activities.[^7] The roles and responsibilities of provincial ministries, first nations, and local authorities are clarified within the emergency plan. The plan also outlines the concept of operations that fosters collaboration between these groups.[^8] The Flood Emergency Plan defines emergency management as a ‘continuous process’ consisting of four phases: mitigation, preparedness, response, and recovery.[^9] Within these phases are general actions that are undertaken by first nation groups, ministries, and local authorities.

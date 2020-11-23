@@ -1,0 +1,4 @@
+- Enables agencies to develop operational reliability based on experience and operational knowledge from past experiences. 
+- Allows multiple agencies to collaborate during a disaster event. This serves to reduce communication time.
+- Enables external system connectivity which allows agencies to interface with external systems such as road networks and cameras to reduce response time.
+- Enables post-operation analysis which helps to identify key activities and facilitates the assessment of lessons learned that can inform planning for future disaster events. [^12]
