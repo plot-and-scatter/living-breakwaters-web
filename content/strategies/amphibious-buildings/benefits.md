@@ -1,4 +1,4 @@
-- Provides important support for marine and terrestrial habitats
-- Helps to maintain salinity gradients which contribute to supporting a sustainable coastal wetland ecosystem[^12]
-- Shelters estuaries and protects aquatic ecosystems that exist between the barrier and a mainland.
-- Offers storm surge protection through wave attenuation. For example, barrier beaches that front embaymemts absorb wave energy[^10]
+- Increases the value of real estate because of flood adaptation design
+- Adaptable to variation in flood water levels [^5]
+- Reduces the level of damage due to flooding       
+- Amenable to soil subsistence and changes in sea level rise [^6]

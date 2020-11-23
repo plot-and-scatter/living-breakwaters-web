@@ -1,4 +1,4 @@
-### Mississippi Coastal Improvements Program
-#### MS, USA
+### Floating Houses 
+#### BC, Canada
 
-The Mississippi Coastal Improvements Program is a large-scale barrier island restoration project intended to restore and protect the Gulf Islands National Seashore barrier islands.[^5] The project began in 2007 with the assistance of the US Army Corps of Engineers (USACE) and other agencies. The project focuses on the re-nourishment of several islands and the restoration of natural sediment transport.[^6] The dredging and nourishment cost is estimated to be approximately \$368 million and requires about 14.5 million cubic meters of sediment.[^7] Ongoing monitoring by the National Park Service keeps track of the success of the project focusing on sand accretion, restoration of natural transport processes, and protection of cultural resources.[^8]
+Examples of floating houses or houseboats can be found in British Columbia along False Creek on Granville Island. These float houses are a landmark. Each house exhibits its own unique character. In the south of Richmond along the Fraser River, floating homes can also be found near Ladner and Queensborough. These little neighborhoods are examples of resiliency through water-based urbanism and embracing water as a culture. It should be noted, however, that because of planning regulations, it might be difficult to implement floating houses as an adaptation strategy at larger scales.

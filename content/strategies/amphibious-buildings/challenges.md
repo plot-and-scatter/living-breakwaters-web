@@ -1,5 +1,4 @@
-- Barriers erode naturally over time due to longshore redistribution of sediments[^11]
-- Large volumes of sand are required to renourish eroding barriers
-- Barriers develop from unconsolidated sediments and are therefore highly unstable and unsuitable for built development
-- Erosion of barriers leads to changes in sheltered wetlands including changes in salinity, tidal range, and sediment load[^11]
-- Preservation becomes increasingly difficult where there exist high levels of shoreline and bathymetric changes[^11]
+- Increases the cost for access to services such as sewage disposal, water supply, power, and gas, when compared to non-amphibious buildings [^5]
+- Static elevated buildings are more vulnerable to the wind because elevation increases the effects of high wind speed on the building.
+- Insurance companies may be reluctant to provide adequate coverage due to the increased risk of flood damage. 
+- Municipalities may be hesitant to issue permission for development approval

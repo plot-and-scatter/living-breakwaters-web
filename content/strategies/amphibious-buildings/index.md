@@ -7,37 +7,28 @@ strategyTypes: "Accommodate"
 
 <!-- Regular citations -->
 [^1]:
-  “Barrier Island.” Wikipedia, Wikimedia Foundation, 2 July 2019, https://en.wikipedia.org/wiki/Barrier_island.
+  “FLOAT House.” Morphopedia, https://www.morphosis.com/architecture/126/.
 [^2]:
-  https://www.weforum.org/agenda/2018/09/barrier-islands-protect-coastlines-but-they-are-also-vulnerable/
+  Ibid.
 [^3]:
-  “Blue Dunes– The Future of Coastal Protection.” Rebuild by Design, http://www.rebuildbydesign.org/our-work/all-proposals/finalist/blue-dunes--the-future-of-coastal-protection.
+  English, E., Klink, N., & Turner, S. (2016). Thriving with water: Developments in amphibious architecture in North America. In E3S Web of Conferences (Vol. 7, p. 13009). EDP Sciences. Retrieved from, https://buoyantfoundation.org/wp-content/uploads/2017/04/FloodRisk_2016_ECEnglish_finalpaper.pdf
 [^4]:
-  Ibid.
+  English, E. (2009, November). Amphibious foundations and the buoyant foundation project: Innovative strategies for flood-resilient housing. In International Conference on Urban Flood Management sponsored by UNESCO-IHP and COST Action C (Vol. 22, pp. 25-27). https://www.researchgate.net/figure/The-FLOAT-House-New-Orleans-Elevation-interior-guide-post-and-sleeve-detail_fig6_322675610     
 [^5]:
-  Ibid.
+  Climate Adapt. Floating and amphibious housing (2015).https://climate-adapt.eea.europa.eu/metadata/adaptation-options/floating-and-amphibious-housing/#ao_category
 [^6]:
-  Schupp, Courtney A., et al. Coastal Adaptation Strategies: Case Studies 2015. pp. 35. https://home.nps.gov/subjects/climatechange/upload/2015-11-25-FINAL-CAS-Case-Studies-LoRes.pdf.https://www.nps.gov/subjects/climatechange/upload/2015-11-25-FINAL-CAS-Case-Studies-LoRes.pdf
+  Land8: Landscape Architects Network (2015). What is Amphibious Architecture and How Will it Help Cities Adapt to Climate Change? https://land8.com/what-is-amphibious-architecture-and-how-will-it-help-cities-adapt-to-climate-change/
 [^7]:
-  Ibid, 35.
-[^8]:
-  Ibid, 35.
-[^9]:
-  Ibid, 35.
-[^10]:
-  US Fish and Wildlife Service. (2018). What are Coastal Barrier Landforms? https://www.fws.gov/cbra/Coastal-Barriers.html
-[^11]:
-  USGS. Science for a changing world. Coastal and Marine Geology program. Louisiana Barrier Islands: A Vanishing Resource, https://pubs.usgs.gov/fs/barrier-islands/
-[^12]:
-  Knotts, C. P., Grandy, G. M., & Khalil, S. M. (2007). RESTORATION OF LOUISIANA'S BARRIER ISLANDS–EVALUATION AND ANALYSIS. In Coastal Engineering 2006: (In 5 Volumes) (pp. 1977-1988). 1
+  Nilubon, P., Veerbeek, W., & Zevenbergen, C. (2016). Amphibious architecture and design: a catalyst of opportunistic adaptation? –case study Bangkok. Procedia-Social and Behavioral Sciences, 216, 470-480.
 
 <!-- Images -->
 
 [^i1]:
-  GEOLOGY AND GEOGRAPHY OF THE NEW YORK BIGHT geo.hunter.cuny.edu
+  Figure 1. English et al. (2016). Thriving with water: Developments in amphibious architecture in north America. https://www.e3s-conferences.org/articles/e3sconf/pdf/2016/02/e3sconf_flood2016_13009.pdf
 [^i2]:
-  WYX/West 8. Blue Dunes Rendering. http://www.rebuildbydesign.org/data/images/724/ap-10-6-13-1-.png.
+  Figure 2. Brears. R. (n.d). A Floating House to Resist the Floods of Climate Change
+  .https://youngwaterleaders.thewaternetwork.com/article-FfV/a-floating-house-to-resist-the-floods-of-climate-change-zY8sRnPTmd2aqpyJrvinig
 [^i3]:
-  NPS. Barrier Islands Provide Protection for Wildlife, Plants, and Humans. https://www.nps.gov/guis/learn/nature/images/WildernessLandingPage.jpg?maxwidth=1200&autorotate=false.
+  Figure 3. Morphosis Team. (2009). FLOAT House. https://www.morphosis.com/architecture/126/.
 [^i4]:
-  Figure 1. Baurick, T. (2020). Building barriers: Inside the race to save Louisiana's first line of storm defense. https://www.nola.com/news/environment/article_df61c669-14cc-5ba7-821d-2ee7c57becd9.html -->
+  Figure 4. Mangione, K. (2019). Figure 4. Noticed the blue cabin floating in False Creek? Here's what it is. https://bc.ctvnews.ca/noticed-the-blue-cabin-floating-in-false-creek-here-s-what-it-is-1.4565356 -->

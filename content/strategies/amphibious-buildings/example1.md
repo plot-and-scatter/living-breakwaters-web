@@ -1,4 +1,4 @@
-### Blue Dunes
-#### NJ and NY, USA
+### FLOAT House 
+#### New Orleans LA, USA
 
-The Blue Dunes Project is a proposal for a series of offshore barrier islands along the New Jersey and New York harbor.[^2] The proposal investigates how design can be integrated into the future of coastal protection strategies. The project requires coordination between multiple stakeholders (scientists, engineers, planners, economists, and maritime stakeholders) to address key issues such as water quality, habitat protection, recreation, navigation, construction, and funding.[^3] Led by the design team WXY/West 8, the design of the barrier island considers both the large scale coastal protection and the potential of offshore renewable energy to address the future of coastal life, economy, and property.[^4]
+The Float House is a prototype for housing that adapts to coastal flooding. It is used in coastal areas that are susceptible to flooding. The design features an adaptable frame that acts as a raft. Guided steel masts allow the house to float up to as high as 12 feet.[^1] Not only does the float boat adapt to floods it also produces its own energy.[^2] The float boat project is a great example of sea-level rise adaptation through research and design. 
