@@ -1,0 +1,4 @@
+- **Pre-emptive evacuations** are undertaken where it is obvious that a delay may impede evacuation efforts. 
+- **No-notice evacuations** are undertaken where a threat is affecting a community, where decisions must be taken with limited information, and when waiting for additional information may increase the impact of a disaster event on a community. 
+- **Partial evacuations** are contained within localized areas within a municipality. 
+- **Widespread evacuations** are undertaken where a disaster, e.g., a flood event affects an entire district, city, or region. Widespread evacuations involve the movement of large amounts of evacuees. Large-scale evacuations are more likely to place a higher demand on transportation networks and therefore as a short-term measure, some evacuees may be required to shelter in place. [^8]

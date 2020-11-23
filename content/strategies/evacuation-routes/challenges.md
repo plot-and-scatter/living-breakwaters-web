@@ -1,0 +1,4 @@
+- Can be expensive depending on the scale of the infrastructure required
+- Evacuation rates may exceed the capacity of the evacuation route 
+- Effective use during a disaster requires coordination with the wider road network system
+- Extreme events may lead to the excessive build-up of traffic that could create adverse effects on the transportation network. [^10] [^11]

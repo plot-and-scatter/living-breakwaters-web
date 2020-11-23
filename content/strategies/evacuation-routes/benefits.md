@@ -1,0 +1,4 @@
+- Allow coastal communities to quickly move out of harm's way before or when a disaster event occurs
+- Can be integrated into a wider resilient road network
+- Roadways that are elevated above flood plains could serve as temporary evacuation centers [^9]
+- Provides easy access to emergency shelters before and during a disaster event [^9]
