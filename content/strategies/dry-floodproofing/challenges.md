@@ -1,0 +1,4 @@
+- Will not minimize the impacts of high-velocity water flow and wave action on a building or structure [^11]
+- May be difficult to apply to existing buildings and infrastructure
+- May not always lead to an improvement in flood mitigation that aligns with existing floodplain management bylaws [^11]
+- May fail, if flooding exceeds the level of flood protection intervention 

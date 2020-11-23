@@ -1,0 +1,5 @@
+- Builds resilience by providing a secondary means of protection to dikes
+- Improves flood protection when other measures are difficult to implement due to space constraints 
+- Less costly when compared to other methods of flood retrofitting
+- The implementation does not require additional land space [^11]
+- Can be used to bring non-residential structures into compliance with floodplain management regulations and codes [^12]
