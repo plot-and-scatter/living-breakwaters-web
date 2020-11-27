@@ -3,6 +3,7 @@ title: Floodwalls
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Floodwalls are typically vertical structural barriers that are used in locations where space is limited due to buildings or other land uses."
 ---
 
 <!-- Regular citations -->

@@ -3,6 +3,7 @@ title: Reef Systems
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Reefs are under and near water ecosystems that provide protection against flooding and erosion."
 ---
 
 <!-- Regular citations -->

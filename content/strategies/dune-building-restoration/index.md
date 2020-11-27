@@ -3,6 +3,7 @@ title: Dune Building / Restoration
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Dunes develop from sand deposits that represent a store of sediment in the zone just landward of normal high tides."
 ---
 
 <!-- Regular citations -->

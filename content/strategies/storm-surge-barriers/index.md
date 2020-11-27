@@ -3,6 +3,7 @@ title: Storm Surge Barriers
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Storm surge barriers are heavily engineered movable or fixed barriers/gates that are closed to prevent flooding during bad weather forecasts."
 ---
 
 <!-- Regular citations -->

@@ -3,6 +3,7 @@ title: Evacuation Routes
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Evacuation routes are accessways that are constructed above flood levels and that connect flood risk areas to mainland areas that are safely above flood plains."
 ---
 
 <!-- Regular citations -->

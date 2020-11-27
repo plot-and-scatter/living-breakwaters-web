@@ -3,6 +3,7 @@ title: Dikes
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Dikes are linear compacted earth structures implemented to protect coastal areas from flooding."
 ---
 
 <!-- Regular citations -->

@@ -5,6 +5,9 @@ import React from 'react'
 // import BannerRow from '../components/Rows/BannerRow'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
+import StrategyCard from '../components/Strategies/StrategyCard'
+
+import './Strategies.scss'
 
 // import image from '../../content/assets/images/uta-scholl-pUD1P96NB9c-unsplash.jpg'
 
@@ -40,37 +43,10 @@ const Strategies = (props): JSX.Element => {
       </BannerRow> */}
       <h1>Strategies</h1>
 
-      <div className="card-columns">
+      <div className="StrategyCards card-columns">
         {strategies.map((strategyNode, index) => {
           const strategy = strategyNode.node
-          const strategyType = strategy.frontmatter.strategyTypes
-          const color = colorForStrategy(strategyType)
-          return (
-            <div key={index} className={`card border-${color}`}>
-              {/* <div className="card-header">
-                <span className={`badge badge-${color}`}>{strategyType}</span>
-              </div> */}
-              <div className={`d-flex card-header bg-${color}`}>
-                <Link to={strategy.fields.slug} style={{ color: 'white' }}>
-                  <h4 className="mb-0">{strategy.frontmatter.title}</h4>
-                  <h5 className="mb-0">
-                    <small>{strategyType}</small>
-                  </h5>
-                </Link>
-              </div>
-              <div className="card-body">
-                <p>{strategy.frontmatter.excerpt}</p>
-                <p className="mb-0 text-right">
-                  <Link
-                    to={strategy.fields.slug}
-                    className={`btn btn-sm btn-outline-${color}`}
-                  >
-                    Learn more &rarr;
-                  </Link>
-                </p>
-              </div>
-            </div>
-          )
+          return <StrategyCard key={index} strategy={strategy} />
         })}
       </div>
     </Layout>

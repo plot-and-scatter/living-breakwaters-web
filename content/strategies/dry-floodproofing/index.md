@@ -3,6 +3,7 @@ title: Dry Floodproofing
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Dry floodproofing is a practice of utilizing waterproof membranes and other types of sealants to prevent floodwater from entering a building."
 ---
 
 <!-- Regular citations -->

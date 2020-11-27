@@ -3,6 +3,7 @@ title: Secondary Dikes
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Secondary dikes work in conjunction with primary dikes to reduce the impact of a flood if the primary dike is breached."
 ---
 
 <!-- Regular citations -->

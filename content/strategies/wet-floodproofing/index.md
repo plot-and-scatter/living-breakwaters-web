@@ -3,6 +3,7 @@ title: Wet Floodproofing
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Wet floodproofing is the measure of allowing water to enter and exit a structure with minimal or no damage."
 ---
 
 <!-- Regular citations -->

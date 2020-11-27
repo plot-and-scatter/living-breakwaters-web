@@ -3,6 +3,7 @@ title: Breakwaters
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Breakwaters are linear, offshore, or onshore structures built to protect the coast from the effects of both storm surges and longshore drift."
 ---
 
 <!-- Regular citations -->

@@ -3,6 +3,7 @@ title: Seawall
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Seawalls are hard engineered structures built parallel to the shoreline."
 ---
 
 <!-- Regular citations -->

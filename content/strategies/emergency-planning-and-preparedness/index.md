@@ -3,6 +3,7 @@ title: Emergency Planning Preparedness
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Emergency planning and preparedness is a coordinated process that involves assessing the likely impacts of a disaster event and coordinating a set of responses to reduce or prevent property damage."
 ---
 
 <!-- Regular citations -->

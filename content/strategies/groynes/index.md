@@ -3,6 +3,7 @@ title: Groynes
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Groynes are rigid structures, typically constructed using heavy materials extending from the upper shore to the water."
 ---
 
 <!-- Regular citations -->

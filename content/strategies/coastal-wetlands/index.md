@@ -3,6 +3,7 @@ title: Coastal Wetlands
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Coastal wetlands represent ecosystems that are permanently or seasonally inundated with either fresh, brackish, or saline water that is usually less than 6 feet in depth at low tide."
 ---
 
 <!-- Regular citations -->

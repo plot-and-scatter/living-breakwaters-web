@@ -3,6 +3,7 @@ title: Amphibious Buildings
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Amphibious architecture is an adaptation strategy where structures are designed to adapt to flooding."
 ---
 
 <!-- Regular citations -->

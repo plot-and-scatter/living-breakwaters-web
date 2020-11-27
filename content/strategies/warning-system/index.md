@@ -3,6 +3,7 @@ title: Warning System
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Accommodate"
+excerpt: "Early warning systems form an important element of disaster risk management."
 ---
 
 <!-- Regular citations -->
