@@ -4,9 +4,11 @@ $example-color-background: $gray-800;
 
 .ProtectBG {
   background-color: darken(rgb(80, 140, 130), 10%);
+  color: white !important;
 }
 .AccommodateBG {
-  background-color: darken(#ffc107, 10%);
+  background-color: #ffc107;
+  color: #333 !important;
 }
 
 .Strategies {
@@ -43,7 +45,7 @@ $example-color-background: $gray-800;
     .Summary {
       // background-color: lighten($color-brand-background, 20%);
       // background-color: darken(rgb(80, 140, 130), 10%);
-      color: white !important;
+      color: white;
       // background-color: $gray-100;
       margin-left: -1.6rem;
       margin-right: -1.5rem;
