@@ -3,7 +3,7 @@ import { Power2, TimelineMax, gsap } from 'gsap'
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 // import * as d3 from "d3"
 
-import './FoodSecurityTableau.scss'
+import './CriticalInfrastructureTableau.scss'
 import '../Elements/Elements.scss'
 import { useState } from 'react'
 import { useCallback } from 'react'
@@ -36,7 +36,7 @@ import Irrigation from '../Elements/Objects/Irrigation'
 import Bush1 from '../Elements/Plants/Bush1'
 import RainOverflow from './BaseLayers/RainOverflow'
 import Hotspot from '../Hotspot/Hotspot'
-import AgricultureGround from './BaseLayers/AgricultureGround'
+// import Ground from './BaseLayers/Ground'
 // import { useLayoutEffect } from "react"
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
@@ -230,82 +230,9 @@ const FoodSecurityTableau = () => {
                 <Cypress xOffset={1605} yOffset={160} />
                 <Cypress xOffset={1625} yOffset={160} />
               </g>
-              <g id="Farm">
-                <Farmhouse />
-                <Truck />
-                <Pump xOffset={0} yOffset={0} />
-                <Wheat xOffset={890 + 0} yOffset={273} />
-                <Wheat xOffset={890 + 40} yOffset={272} />
-                <Wheat xOffset={890 + 80} yOffset={271} />
-                <Wheat xOffset={890 + 130} yOffset={270} />
-                <Wheat xOffset={890 + 167} yOffset={269} />
-                <Wheat xOffset={890 + 208} yOffset={269} />
-                <Wheat xOffset={890 + 255} yOffset={268} />
-                <Wheat xOffset={890 + 296} yOffset={268} />
-                <Wheat xOffset={890 + 335} yOffset={267} />
-                <Bush1 xOffset={1650 + 0} yOffset={253} />
-                <Bush1 xOffset={1650 + 40} yOffset={253} />
-                <Bush1 xOffset={1650 + 80} yOffset={253} />
-                <Bush1 xOffset={1650 + 120} yOffset={253} />
-                <Bush1 xOffset={1650 + 200} yOffset={253} />
-                <Bush1 xOffset={1650 + 240} yOffset={253} />
-                <Bush1 xOffset={1650 + 280} yOffset={253} />
-                <Bush1 xOffset={1650 + 320} yOffset={253} />
-                <Well xOffset={10} yOffset={-4} />
-                <Well xOffset={540} yOffset={2} />
-                <Irrigation />
-                <RainOverflow />
-              </g>
+              <g id="Farm"></g>
             </g>
-            <g id="OceanLife">
-              <Reeds />
-              <Seaweed />
-              <Grass />
-              <Eelgrass />
-              <BirdOnGround
-                xOffset={400}
-                yOffset={313}
-                scaleX={1.5}
-                scaleY={1.5}
-              />
-              <FlyingGull1 xOffset={100} yOffset={100} scaleX={1} scaleY={1} />
-              <FlyingGull2 xOffset={300} yOffset={120} scaleX={1} scaleY={1} />
-              <FlyingGull3 xOffset={1300} yOffset={100} scaleX={1} scaleY={1} />
-            </g>
-            <g id="Labels">
-              <text x={1500} y={350}>
-                water table
-              </text>
-              <text x={400} y={450}>
-                saltwater wedge
-              </text>
-              <text
-                x={750}
-                y={465}
-                transform={`rotate(30, ${750}, 465)`}
-                id="Interface"
-                ref={interfaceRef}
-              >
-                interface
-              </text>
-              <text x={1500} y={450}>
-                fresh water
-              </text>
-              <text x={1820} y={425} transform="rotate(-90, 1820, 425)">
-                pumping well
-              </text>
-              <text x={1290} y={425} transform="rotate(-90, 1290, 425)">
-                pumping well
-              </text>
-              <text
-                x={1900}
-                y={325}
-                id="Subsidence"
-                visibility={narrativeStage === 2 ? 'visible' : 'hidden'}
-              >
-                subsidence
-              </text>
-            </g>
+            <g id="Labels"></g>
             <g id="Hotspots">
               <Hotspot
                 xOffset={200}

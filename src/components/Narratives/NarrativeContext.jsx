@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const NarrativeContext = React.createContext()
 
@@ -12,14 +12,14 @@ function useNarrative() {
 
   return {
     narrativeStage,
-    setNarrativeStage,
+    setNarrativeStage
   }
 }
 
 function NarrativeProvider(props) {
   const [narrativeStage, setNarrativeStage] = React.useState(0)
   const value = React.useMemo(() => [narrativeStage, setNarrativeStage], [
-    narrativeStage,
+    narrativeStage
   ])
 
   return <NarrativeContext.Provider value={value} {...props} />

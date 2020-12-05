@@ -1,0 +1,171 @@
+@import "../../../scss/common.module";
+
+$saltwaterWedge: lighten(#3a6393, 10%);
+$freshWater: lighten(#6f90c1, 10%);
+$meanSeaLevel: lighten(#334455, 10%);
+
+#mean-sea-level-gradient {
+  --color-start: #{$meanSeaLevel};
+  --color-stop: #{darken($meanSeaLevel, 20%)};
+}
+
+#saltwater-wedge-gradient {
+  --color-start: #{$saltwaterWedge};
+  --color-stop: #{darken($saltwaterWedge, 20%)};
+}
+
+#fresh-water-gradient {
+  --color-start: #{$freshWater};
+  --color-stop: #{darken($freshWater, 20%)};
+}
+
+
+
+.FoodSecurityTableau {
+  position: relative;
+  svg {
+    border-radius: $border-radius-lg;
+    background-image: linear-gradient(#bbddff, #fff);
+    border: solid #666 0.1vw;
+    path {
+      &.sea-surge {
+        fill: rgba(#112233, 0.5);
+        stroke: #123;
+      }
+      &.mean-sea-level {
+        fill: url(#mean-sea-level-gradient) $meanSeaLevel;
+        stroke: darken($meanSeaLevel, 10%);
+      }
+      &.saltwater-wedge {
+        fill: url(#saltwater-wedge-gradient) $saltwaterWedge;
+        stroke: darken($saltwaterWedge, 10%);
+      }
+      &.fresh-water {
+        fill: url(#fresh-water-gradient) $freshWater;
+        stroke: darken($freshWater, 10%);
+      }
+      &.ground {
+        fill: lighten(#59452c, 40%);
+        stroke: #59452c;
+        stroke-width: 1px;
+      }
+    }
+    #Labels {
+      text {
+        font-size: 22px;
+        font-family: $font-family-sans-serif;
+        color: white;
+        fill: white;
+        stroke: black;
+        stroke-width: 0.2px;
+        text-anchor: middle;
+      }
+      #Subsidence {
+        fill: red;
+      }
+    }
+    #groundwater-1,
+    #groundwater-2 {
+      path {
+        visibility: hidden;
+      }
+      path.ground {
+        visibility: visible;
+        fill: red;
+      }
+    }
+  }
+}
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-18,
+.cls-23,
+.cls-29,
+.cls-30 {
+  fill: none;
+}
+.cls-2 {
+  fill: #231f20;
+}
+.cls-24 {
+  opacity: 0.9;
+}
+.cls-8 {
+  
+}
+.cls-17,
+.cls-9 {
+  fill: #7e8561;
+}
+.cls-9 {
+  opacity: 0.5;
+}
+.cls-10 {
+  fill: #7f7f7f;
+}
+.cls-11 {
+  stroke: #7f7f7f;
+}
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-23,
+.cls-24,
+.cls-29,
+.cls-30 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cls-11,
+.cls-13,
+.cls-18 {
+  stroke-width: 0.25px;
+}
+.cls-12,
+.cls-13,
+.cls-24,
+.cls-26,
+.cls-29 {
+  stroke: #000;
+}
+.cls-12,
+.cls-30 {
+  stroke-width: 0.5px;
+}
+.cls-18,
+.cls-26 {
+  stroke-miterlimit: 10;
+}
+.cls-19 {
+  fill: #fff;
+}
+.cls-18,
+.cls-23 {
+  stroke: #7e8561;
+}
+.cls-24 {
+  stroke-width: 0.2px;
+}
+.cls-23 {
+  stroke-width: 0.23px;
+}
+.cls-24 {
+  fill: #c3cc8d;
+}
+.cls-26,
+.cls-28 {
+  fill: #704242;
+}
+.cls-27 {
+  fill: #b3b3b3;
+}
+.cls-29 {
+  stroke-width: 0.58px;
+}
+.cls-30 {
+  stroke: #060808;
+}
+.cls-33 {
+  fill: #264b70;
+}
