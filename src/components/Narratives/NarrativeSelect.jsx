@@ -1,18 +1,18 @@
-import React from "react"
-import { useNarrative } from "./NarrativeContext"
-import { useCallback } from "react"
+import React from 'react'
+import { useNarrative } from './NarrativeContext'
+import { useCallback } from 'react'
 
-import "./NarrativeSelect.scss"
+import './NarrativeSelect.scss'
 
 const MAX_NARRATIVE_STAGE = 2
 
-const STAGE_NAMES = ["Present", "Near Future", "Future"]
+const STAGE_NAMES = ['Present', 'Near Future', 'Future']
 
 const NarrativeSelect = () => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
 
   const setNarrativeStageCallback = useCallback(
-    stage => setNarrativeStage(stage),
+    (stage) => setNarrativeStage(stage),
     [setNarrativeStage]
   )
 
@@ -22,7 +22,7 @@ const NarrativeSelect = () => {
       <button
         key={i}
         className={`Stage btn p-3 mr-2 ${
-          narrativeStage === i ? "btn-primary" : "btn-primary-outline"
+          narrativeStage === i ? 'btn-primary' : 'btn-primary-outline'
         }`}
         onClick={() => setNarrativeStageCallback(i)}
       >
@@ -32,7 +32,7 @@ const NarrativeSelect = () => {
   }
 
   return (
-    <div className="NarrativeSelect mt-3">
+    <div className="NarrativeSelect">
       <h4>Select a narrative stage</h4>
       {/* <p>Current narrative stage: {narrativeStage + 1}</p> */}
       {/* <input

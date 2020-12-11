@@ -9,12 +9,14 @@ import Tableau from './Tableau'
 const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
   return (
     <div className="NarrativeFrame row">
-      <div className="col-3">
-        <p style={{ fontSize: '0.9rem' }}>{props.text}</p>
+      <div className="col-8">
+        <p>{props.text}</p>
       </div>
-      <div className="col-9">
-        <Tableau activeNarrative={props.activeNarrative} />
+      <div className="col-4">
         <NarrativeSelect />
+      </div>
+      <div className="col-12">
+        <Tableau activeNarrative={props.activeNarrative} />
       </div>
     </div>
   )

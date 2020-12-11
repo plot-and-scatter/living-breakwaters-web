@@ -124,7 +124,7 @@ const FoodSecurityTableau = () => {
 
   return (
     <div className="FoodSecurityTableau">
-      <div className="my-2 py-2">
+      <div className="mb-2 py-2">
         <button
           className={`btn btn-sm ${
             !rainVisible ? 'btn-outline-secondary' : 'btn-primary'
@@ -205,7 +205,7 @@ const FoodSecurityTableau = () => {
               <Hotspot
                 xOffset={250}
                 yOffset={350}
-                xPopupOffest={10}
+                xPopupOffset={-80}
                 yPopupOffset={-200}
                 width={500}
                 title={'Shipping'}

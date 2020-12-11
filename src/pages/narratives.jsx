@@ -42,7 +42,10 @@ const Narratives = (props) => {
           <div className="row">
             <div className="col"></div>
           </div>
-          <NarrativeFrame text={SCENARIOS[activeNarrative].intro} />
+          <NarrativeFrame
+            activeNarrative={activeNarrative}
+            text={SCENARIOS[activeNarrative].intro}
+          />
         </div>
       </NarrativeProvider>
     </Layout>
