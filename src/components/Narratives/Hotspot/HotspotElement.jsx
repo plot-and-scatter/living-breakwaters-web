@@ -2,7 +2,7 @@ import React from 'react'
 
 import './HotspotElement.scss'
 
-const HotspotElement = ({ childElement, title, onClick, width, height }) => {
+const HotspotElement = ({ children, title, onClick, width, height }) => {
   const _width = width || 300
 
   console.log('_width', _width, width)
@@ -10,7 +10,7 @@ const HotspotElement = ({ childElement, title, onClick, width, height }) => {
   return (
     <div className="HotspotElement" style={{ width: _width }}>
       <h1>{title}</h1>
-      {childElement}
+      {children}
       <button
         className="btn btn-sm btn-outline-brand-light mt-2"
         onClick={onClick}

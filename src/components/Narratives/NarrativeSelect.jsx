@@ -35,6 +35,7 @@ const NarrativeSelect = () => {
         {stages}
       </div>
       <input
+        defaultValue={0}
         type="range"
         min="0"
         max="2"

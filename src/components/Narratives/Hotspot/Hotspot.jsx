@@ -76,12 +76,13 @@ const Hotspot = ({
           title={title}
           height={height}
           width={width}
-          childElement={childElement}
           onClick={() => {
             console.log('click!!!')
             setShowHotspot(false)
           }}
-        />,
+        >
+          {childElement}
+        </HotspotElement>,
         el
       )
       el.style.left = `${clientX - 15 + (xPopupOffset || 0)}px`
@@ -91,7 +92,7 @@ const Hotspot = ({
       ReactDOM.unmountComponentAtNode(el)
       el.style.visibility = 'hidden'
     }
-  }, [showHotspot])
+  }, [showHotspot, childElement])
 
   useEffect(() => {
     if (isHovered) {

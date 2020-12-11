@@ -122,6 +122,8 @@ const FoodSecurityTableau = () => {
         })
   }, [narrativeStage])
 
+  console.log('narrativeStage', narrativeStage)
+
   return (
     <div className="FoodSecurityTableau">
       <div className="mb-2 py-2">
@@ -207,9 +209,15 @@ const FoodSecurityTableau = () => {
                 yOffset={350}
                 xPopupOffset={40}
                 yPopupOffset={-500}
-                width={500}
-                title={'Shipping'}
-                childElement={<ShippingPopover />}
+                width={700}
+                title={`Shipping ${narrativeStage}`}
+                childElement={
+                  <ShippingPopover
+                    key={narrativeStage}
+                    narrativeStage={narrativeStage}
+                  />
+                }
+                narrativeStage={narrativeStage}
               />
             </g>
           </g>
