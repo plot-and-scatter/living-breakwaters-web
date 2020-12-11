@@ -35,6 +35,11 @@ class Nav extends React.Component {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/strategies">
+                Strategies
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/case-study">
                 Case study
               </Link>
