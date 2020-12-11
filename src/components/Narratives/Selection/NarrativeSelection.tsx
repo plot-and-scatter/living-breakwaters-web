@@ -23,7 +23,7 @@ const NarrativeSelection = ({
         aria-expanded="false"
         style={{ color: 'white' }}
       >
-        {SCENARIOS[activeNarrative].title}
+        Select a narrative
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
         {Object.values(SCENARIOS).map((narrative, index) => {
