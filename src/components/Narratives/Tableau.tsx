@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+import { ScenarioType } from '../../@types/Scenario'
+import CriticalInfrastructureTableau from './CriticalInfrastructure/CriticalInfrastructureTableau'
+import FoodSecurityTableau from './Agriculture/FoodSecurityTableau'
 
 import './Tableau.scss'
-import FoodSecurityTableau from './Agriculture/FoodSecurityTableau'
-import CriticalInfrastructureTableau from './CriticalInfrastructure/CriticalInfrastructureTableau'
-import { ScenarioType } from '../../@types/Scenario'
 
-const Tableau = (): JSX.Element => {
-  const [activeNarrative, setActiveNarrative] = useState<ScenarioType>(
-    ScenarioType.FoodSecurity
-  )
+interface Props {
+  activeNarrative: ScenarioType
+}
 
+const Tableau = ({ activeNarrative }: Props): JSX.Element => {
   let tableau = <FoodSecurityTableau />
 
   switch (activeNarrative) {
