@@ -1,13 +1,13 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { graphql } from "gatsby"
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/SEO"
+import Layout from '../components/Layout/Layout'
+import SEO from '../components/SEO'
 
-import NarrativeSelect from "../components/Narratives/NarrativeSelect"
-import { NarrativeProvider } from "../components/Narratives/NarrativeContext"
-import NarrativeFrame from "../components/Narratives/NarrativeFrame"
+import NarrativeSelect from '../components/Narratives/NarrativeSelect'
+import { NarrativeProvider } from '../components/Narratives/NarrativeContext'
+import NarrativeFrame from '../components/Narratives/NarrativeFrame'
 
 class Narratives extends React.Component {
   render() {
@@ -29,7 +29,7 @@ export default Narratives
 
 Narratives.propTypes = {
   data: PropTypes.object,
-  location: PropTypes.object,
+  location: PropTypes.object
 }
 
 export const pageQuery = graphql`

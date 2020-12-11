@@ -1,8 +1,8 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { Link } from "gatsby"
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Link } from 'gatsby'
 
-import "./Nav.scss"
+import './Nav.scss'
 
 class Nav extends React.Component {
   render() {
@@ -35,6 +35,11 @@ class Nav extends React.Component {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/case-study">
+                Case study
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/about">
                 About
               </Link>
@@ -54,5 +59,5 @@ class Nav extends React.Component {
 export default Nav
 
 Nav.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string
 }
