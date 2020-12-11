@@ -205,8 +205,8 @@ const FoodSecurityTableau = () => {
               <Hotspot
                 xOffset={250}
                 yOffset={350}
-                xPopupOffset={-80}
-                yPopupOffset={-200}
+                xPopupOffset={40}
+                yPopupOffset={-500}
                 width={500}
                 title={'Shipping'}
                 childElement={<ShippingPopover />}
