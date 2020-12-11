@@ -1,11 +1,20 @@
-import React from "react"
+import React from 'react'
 
-const HotspotElement = ({ text, title, onClick }) => {
+import './HotspotElement.scss'
+
+const HotspotElement = ({ childElement, title, onClick, width, height }) => {
+  const _width = width || 300
+
+  console.log('_width', _width, width)
+
   return (
-    <div className="HotspotElement">
+    <div className="HotspotElement" style={{ width: _width }}>
       <h1>{title}</h1>
-      <p>{text}</p>
-      <button className="btn btn-sm btn-outline-brand-light" onClick={onClick}>
+      {childElement}
+      <button
+        className="btn btn-sm btn-outline-brand-light mt-2"
+        onClick={onClick}
+      >
         <i className="fas fa-times mr-2" />
         Close
       </button>

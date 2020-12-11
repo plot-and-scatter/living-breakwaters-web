@@ -311,7 +311,7 @@ const FoodSecurityTableau = () => {
                 xOffset={200}
                 yOffset={100}
                 title={'Test'}
-                text={'Testing text'}
+                childElement={<p>Testing text</p>}
               />
             </g>
           </g>

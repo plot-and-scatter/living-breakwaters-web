@@ -22,6 +22,7 @@ import Harbor from '../Elements/Maritime/Harbor'
 import House1 from '../Elements/Buildings/House1'
 import Building1 from '../Elements/Buildings/Building1'
 import AntennaTower from '../Elements/Buildings/AntennaTower'
+import ShippingPopover from './Popovers/ShippingPopover'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -200,6 +201,17 @@ const FoodSecurityTableau = () => {
               </g>
             </g>
             <g id="Labels"></g>
+            <g id="Hotspots">
+              <Hotspot
+                xOffset={250}
+                yOffset={350}
+                xPopupOffest={10}
+                yPopupOffset={-200}
+                width={500}
+                title={'Shipping'}
+                childElement={<ShippingPopover />}
+              />
+            </g>
           </g>
         </svg>
       </div>
