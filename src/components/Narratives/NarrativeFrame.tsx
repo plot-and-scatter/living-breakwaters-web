@@ -6,7 +6,7 @@ import Tableau from './Tableau'
 
 const NarrativeFrame = (): JSX.Element => {
   const [activeNarrative, setActiveNarrative] = useState<ScenarioType>(
-    ScenarioType.FoodSecurity
+    ScenarioType.CriticalInfrastructures
   )
 
   return (

@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 
 const Bush1 = ({ xOffset, yOffset }) => {
-  const baseXTransform = -1655 * 1.5
-  const baseYTransform = -290 * 1.5
+  const baseXTransform = -1655
+  const baseYTransform = -290
 
   const xTransform = baseXTransform + (xOffset || 0)
   const yTransform = baseYTransform + (yOffset || 0)

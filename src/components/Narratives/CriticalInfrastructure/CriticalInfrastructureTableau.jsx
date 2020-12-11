@@ -11,33 +11,17 @@ import { useEffect } from 'react'
 import { useNarrative } from '../NarrativeContext'
 import SVGLinearGradient from '../Elements/Helpers/SVGLinearGradient'
 import BaseLayerStage from './BaseLayers/BaseLayerStage'
-import { toggleSeaSurge } from './BaseLayers/SeaSurge'
-import HeavyRain, { toggleRainStorm } from './BaseLayers/HeavyRain'
-import SaturatedGround from './BaseLayers/SaturatedGround'
 import Oak from '../Elements/Trees/Oak'
-import Farmhouse from '../Elements/Buildings/Farmhouse'
-import Truck from '../Elements/Vehicles/Truck'
-import Pump from '../Elements/Buildings/Pump'
-import Wheat from '../Elements/Plants/Wheat'
-import Reeds from '../Elements/Plants/Reeds'
-import Seaweed from '../Elements/Plants/Seaweed'
-import Grass from '../Elements/Plants/Grass'
-import Eelgrass from '../Elements/Plants/Eelgrass'
 import Deadwood from '../Elements/Trees/Deadwood'
 import Bush2 from '../Elements/Plants/Bush2'
 import Roots from '../Elements/Trees/Roots'
 import Cypress from '../Elements/Trees/Cypress'
-import BirdOnGround from '../Elements/Fauna/BirdOnGround'
-import FlyingGull1 from '../Elements/Fauna/FlyingGull1'
-import FlyingGull2 from '../Elements/Fauna/FlyingGull2'
-import FlyingGull3 from '../Elements/Fauna/FlyingGull3'
-import Well from '../Elements/Buildings/Well'
-import Irrigation from '../Elements/Objects/Irrigation'
-import Bush1 from '../Elements/Plants/Bush1'
-import RainOverflow from './BaseLayers/RainOverflow'
 import Hotspot from '../Hotspot/Hotspot'
-// import Ground from './BaseLayers/Ground'
-// import { useLayoutEffect } from "react"
+import RedShip from '../Elements/Maritime/RedShip'
+import Harbor from '../Elements/Maritime/Harbor'
+import House1 from '../Elements/Buildings/House1'
+import Building1 from '../Elements/Buildings/Building1'
+import AntennaTower from '../Elements/Buildings/AntennaTower'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -108,35 +92,9 @@ const FoodSecurityTableau = () => {
   }, [])
 
   useEffect(() => {
-    toggleSeaSurge('sea-surge', stormSurgeVisible)
-  }, [stormSurgeVisible])
-
-  useEffect(() => {
-    toggleRainStorm('HeavyRain', rainVisible)
-  }, [rainVisible])
-
-  useEffect(() => {
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
     // console.log(timeline.current)
     prevNarrativeStage.current = narrativeStage
-
-    narrativeStage === 0
-      ? gsap.to(groundLevelRef.current, {
-          y: 0,
-          duration: 1,
-          ease: Power2.easeInOut
-        })
-      : narrativeStage === 1
-      ? gsap.to(groundLevelRef.current, {
-          y: 4,
-          duration: 1,
-          ease: Power2.easeInOut
-        })
-      : gsap.to(groundLevelRef.current, {
-          y: 12,
-          duration: 1,
-          ease: Power2.easeInOut
-        })
 
     narrativeStage === 0
       ? gsap.to(interfaceRef.current, {
@@ -193,8 +151,6 @@ const FoodSecurityTableau = () => {
         >
           <g className="Wrapper" transform={`scale(1)`}>
             <defs>
-              <SVGLinearGradient idPrefix={'saltwater-wedge'} />
-              <SVGLinearGradient idPrefix={'fresh-water'} />
               <SVGLinearGradient idPrefix={'mean-sea-level'} />
               <pattern
                 id="_10_dpi_20_"
@@ -210,37 +166,40 @@ const FoodSecurityTableau = () => {
                   d="M28.8 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM28.8 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 23a1.4 1.4 0 10-1.4-1.4A1.4 1.4 0 007.2 23zM21.6 23a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM21.6 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM0 30.2a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 27.4a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 30.2zM0 15.8a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 13a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 15.8zM28.8 1.4A1.4 1.4 0 0030.2 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0027.4 0a1.4 1.4 0 001.4 1.4zM14.4 1.4A1.4 1.4 0 0015.8 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0013 0a1.4 1.4 0 001.4 1.4zM0 1.4A1.4 1.4 0 001.4 0 1.4 1.4 0 000-1.4 1.4 1.4 0 00-1.4 0 1.4 1.4 0 000 1.4z"
                 />
               </pattern>
+              <path id="SVGID_1_" d="M0 0h1962.7v542.9H0z" />
+              <path id="SVGID_5_" d="M0 0h1962.7v542.9H0z" />
+              <path id="SVGID_7_" d="M845.1 415.3h4.3v5.5H845z" />
+              <path id="SVGID_9_" d="M740.1 412.3h27.3v4.6H740z" />
+              <path id="SVGID_11_" d="M760.7 412.3h13.1v4.6h-13z" />
+              <path id="SVGID_13_" d="M785.7 413.5h13.1v4.6h-13z" />
+              <path id="SVGID_15_" d="M772.3 412.9h8v4.6h-8z" />
+              <path id="SVGID_17_" d="M815.3 415.4h8v4.6h-8z" />
             </defs>
-            <HeavyRain />
             <g id="BaseLayers" data-name="Base Layers" opacity=".9">
               <BaseLayerStage stage={2} />
               <BaseLayerStage stage={1} />
               <BaseLayerStage stage={0} />
-              <SaturatedGround />
+            </g>
+            <g id="Maritime">
+              <Harbor />
+              <RedShip />
             </g>
             <g id="GroundLevel" ref={groundLevelRef}>
               <g id="Trees">
-                <Oak xOffset={680} yOffset={120} />
-                <Oak xOffset={1280} yOffset={136} />
-                <Oak xOffset={1500} yOffset={136} />
-                <Roots xOffset={1529} yOffset={300} />
-                {/* <Oak xOffset={1600} yOffset={150} />  */}
-                <Deadwood />
+                <Oak xOffset={1200} yOffset={230} />
+                <Oak xOffset={1280} yOffset={210} />
+                <Oak xOffset={1400} yOffset={190} />
                 <Bush2 />
-                <Cypress xOffset={1605} yOffset={160} />
-                <Cypress xOffset={1625} yOffset={160} />
+                <Cypress xOffset={1350} yOffset={230} />
+                <Cypress xOffset={1375} yOffset={215} />
               </g>
-              <g id="Farm"></g>
+              <g id="Buildings">
+                <AntennaTower />
+                <House1 />
+                <Building1 />
+              </g>
             </g>
             <g id="Labels"></g>
-            <g id="Hotspots">
-              <Hotspot
-                xOffset={200}
-                yOffset={100}
-                title={'Test'}
-                text={'Testing text'}
-              />
-            </g>
           </g>
         </svg>
       </div>

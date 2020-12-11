@@ -1,11 +1,11 @@
-import React from "react"
-import { gsap, TimelineMax, Power2, Elastic } from "gsap"
+import React from 'react'
+import { Elastic, Power2, TimelineMax, gsap } from 'gsap'
 
-import "./Ground.scss"
-import { useCallback } from "react"
-import { useEffect } from "react"
-import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
-import { useRef } from "react"
+import './Ground.scss'
+import { useCallback } from 'react'
+import { useEffect } from 'react'
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
+import { useRef } from 'react'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -14,7 +14,7 @@ const W = 1250
 
 const Ground = ({ narrativeStage }) => {
   useEffect(() => {
-    console.log("here")
+    console.log('here')
   }, [])
 
   const groundBaseRef = useRef(null)
@@ -24,29 +24,29 @@ const Ground = ({ narrativeStage }) => {
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
-      .to("#GroundBase", 1, {
-        morphSVG: { shape: "#GroundAlt" },
-        ease: Power2.easeInOut,
+      .to('#GroundBase', 1, {
+        morphSVG: { shape: '#GroundAlt' },
+        ease: Power2.easeInOut
       })
       .to(
         document.body,
         {
           duration: 1,
-          backgroundColor: "#1d1d1d",
-          ease: Power2.easeInOut,
+          backgroundColor: '#1d1d1d',
+          ease: Power2.easeInOut
         },
-        "-=1"
+        '-=1'
       )
   }, [])
 
   const btnClick = useCallback(() => {
-    console.log("Click!")
+    console.log('Click!')
     // console.log("timelineRef", timelineRef.current, timelineRef.current.time())
     if (timeline.current.time() > 0) {
-      console.log("out there")
+      console.log('out there')
       timeline.current.reverse()
     } else {
-      console.log("in here")
+      console.log('in here')
       timeline.current.play(0)
     }
   }, [])

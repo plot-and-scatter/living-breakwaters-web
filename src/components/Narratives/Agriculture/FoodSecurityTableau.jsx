@@ -226,7 +226,7 @@ const FoodSecurityTableau = () => {
                 <Roots xOffset={1529} yOffset={300} />
                 {/* <Oak xOffset={1600} yOffset={150} />  */}
                 <Deadwood />
-                <Bush2 />
+                <Bush2 xOffset={1070} yOffset={375} />
                 <Cypress xOffset={1605} yOffset={160} />
                 <Cypress xOffset={1625} yOffset={160} />
               </g>
