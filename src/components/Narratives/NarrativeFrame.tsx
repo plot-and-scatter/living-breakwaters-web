@@ -11,7 +11,10 @@ const NarrativeFrame = (): JSX.Element => {
 
   return (
     <div className="NarrativeFrame">
-      <NarrativeSelection activeNarrative={activeNarrative} />
+      <NarrativeSelection
+        activeNarrative={activeNarrative}
+        setActiveNarrative={setActiveNarrative}
+      />
       <Tableau activeNarrative={activeNarrative} />
     </div>
   )
