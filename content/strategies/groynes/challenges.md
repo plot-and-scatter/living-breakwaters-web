@@ -1,0 +1,7 @@
+- Provides limited protection against extreme storm events
+- Reduces transport of sediments down the coastline
+- Causes downdrift erosion
+- Complementary to artificial nourishment, e.g., could reduce positive impacts on coastlines down-drift
+- Rip currents may occur adjacent to groynes presenting hazards to bathers and other users
+- May lead to sediment loss during storm events 
+- May negatively impact coastline appearance, given its unnatural, shore perpendicular structure [^14]

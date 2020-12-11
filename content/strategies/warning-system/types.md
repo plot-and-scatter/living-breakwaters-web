@@ -1,0 +1,3 @@
+- **Sensor Networks for Flood Detection** are used for flood detection in areas that are affected by heavy rainfall and hurricanes. 
+- In a **Based and GIS-Based Flood, Warning data** is collected in real-time from hydrological observation stations. The data is then processed  by a centralized computer system and results are sent to a client computer in a  control room via remote access.
+- **Flood Warning based on Radio, SMS, TVs, and Phones** use a microcontroller from the “ARM family, a Marvell 88F6281 and the Unix FreeBSD interface and integrated database.” Hydrological data is then sent in real-time for decision making via radio communication. [^11]

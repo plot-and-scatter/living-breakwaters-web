@@ -1,0 +1,4 @@
+- **Flood vents** allow water into a building to enable the equalization of the interior and exterior hydrostatic pressures. This significantly reduces the likelihood of wall failures and structural damage.     
+- **Protection of service equipment** involves moving utilities and appliances to areas in a building that are higher than the level of flood protection. Equipment and appliances may be moved to areas such as attics or utility rooms.
+- **Anchoring** involves securing foundations, fuel tanks, equipment, and other components that are located below the level of flood protection. This helps to prevent flotation, collapse, and lateral movement of equipment during a flood.
+- **Flood resistant materials** refer to replacing building materials in flood-prone parts of a structure with materials that are resistant to flood damage. For example, carpet and paneling, and gypsum wallboard can be replaced with materials that require cleaning rather than replacing. [^9]

@@ -1,0 +1,5 @@
+- There might be hidden costs that are not included during the planning process
+- The magnitude of an event might exceed the response capacity of existing plans. 
+- Response processes may require fluid adaptation during an actual event. This could make it difficult to estimate the requirement for personnel support. 
+- Estimating logistical and administrative support might be difficult because support systems might be overwhelmed by the magnitude of an event. [^13] 
+- Effectiveness depends on the level of commitment and resource allocation.

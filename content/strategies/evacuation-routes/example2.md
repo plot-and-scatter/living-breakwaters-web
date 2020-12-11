@@ -1,0 +1,4 @@
+### City of Richmond Evacuation Plan 
+#### Richmond BC, Canada
+
+The City of Richmond provides an evacuation plan that outlines the basic protocols and responsibilities and the coordination of resources that are required for evacuation.[^5] The evacuation plan covers the organization of transportation and the availability of evacuation routes, in the event of an emergency. In the event of an emergency, evacuation routes are activated by the City’s EOC or Site Incident Commander, to quickly move the public to areas of safety.[^6] Existing evacuation routes provide access from Richmond into Vancouver, New Westminster, Surrey, North Delta, Delta, Mitchell Island, and Lulu Island.[^7]

@@ -1,0 +1,2 @@
+- A **berm** is a ridge that is constructed from compacted soil. The dike could be made from composted material, gravel, crushed rock, sandbags, gravel bag barriers, or straw bales
+- A **temporary dike** is designed to intercept and prevent runoff from entering a disturbed area It diverts or directs the water to a controlled or stabilized drainage outlet. [^7]

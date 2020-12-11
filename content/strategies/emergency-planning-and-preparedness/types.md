@@ -1,0 +1,4 @@
+- **Evacuation routes** are designated pathways for egress to a place that is safe before or during an emergency event  
+- **Municipal emergency plans** govern the provision of important emergency services and the procedures that regulate emergency response. These plans specify the procedures that guide the safe evacuation of persons in the face of an emergency. [^14]
+- **Emergency management plans** serve to guide the process of disaster response. They are designed to help planning agencies meet or exceed their responsibilities for disaster preparedness [^10]
+- **Tsunami response plans** are activated when a tsunami warning is received. The plan triggers a sequence of actions in response to a tsunami event. [^11]

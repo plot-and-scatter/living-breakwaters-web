@@ -1,0 +1,4 @@
+- **Continuous impermeable walls** include sealing the exterior walls of a building, utilizing waterproof membranes that are impermeable and that have the potential to strengthen the walls.  
+- **Flood resistant interior core areas** include important components and areas of a building that are made flood-resistant instead of dry proofing the entire footprint of the building.  
+- **Flood shields** are watertight structures that close any opening in a building’s exterior walls to prevent the entry of floodwater. [^12]
+- **Internal drainage systems** are used to remove water that might seep into a building through fissures or other openings that comprise a flood protection system.

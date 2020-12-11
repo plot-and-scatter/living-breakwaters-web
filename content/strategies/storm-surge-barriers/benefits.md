@@ -1,0 +1,5 @@
+- Protects tidal inlets and estuaries from extreme wave events
+- Reduces cost and maintenance of coastal flood defenses on the landward side
+- Protects an entire bay area including ports. 
+- Can be utilized as a bridge or railroad link
+- Provides infrastructure support for the development of derelict areas. 

@@ -1,0 +1,4 @@
+### Farm Building FCL’s and Setbacks 
+#### BC, Canada
+
+Dry floodproofing can also be in the form of defining flood construction levels (FCLs) and setbacks for new development. The government of British Columbia and the Ministry of Agriculture provide guidelines on the application of flood construction levels and floodplain setbacks.[^7] In British Columbia, FCLs are used to protect living spaces, electrical and mechanical services from the impact of floodwaters above.[^8] FCLs and setbacks are generally established in some locations but in some cases, they are defined by the elevation above a natural boundary such as a water source.[^9] Additionally, FCLs and setbacks can also be associated with land use, specifically for the location of farm buildings based on building type and size.[^10]

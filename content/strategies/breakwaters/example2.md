@@ -1,0 +1,4 @@
+### Concrete Oyster Reef Rings 
+#### Bengal Islands of Kutubdia, Bangladesh [^6]
+
+The Bangladesh coast has been severely impacted by both land erosion and accretion and has become an active location for innovative coastal eco-engineering practices.[^6] Since 1966, soft eco-engineering practices have become increasingly popular as a coastal defense against storm surges and sea-level rise.[^7] One of the successful examples of soft eco-engineering is the construction of 123 concrete oyster reef rings along the coast of Kutubdia. Each concrete unit has thick perforated walls; 0.8 meters high. The diameter of each unit is 0.5 meters. The cost of each unit is about $50.[^8] The units are combined to form 3 breakwaters each 20m long that function to reduce coastal erosion, encourage salt marsh development, provide sustainable fisheries and attenuate wave action.[^9]

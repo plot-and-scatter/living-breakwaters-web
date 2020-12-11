@@ -1,0 +1,2 @@
+- Must be designed and constructed to mitigate erosion caused by water diversion and concentrated runoff flow. 
+- For construction, topographical features such as space, degree of slope, and access can be limiting or prohibitive factors [^7]

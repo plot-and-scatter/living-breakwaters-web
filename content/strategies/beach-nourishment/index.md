@@ -3,6 +3,7 @@ title: Beach Nourishment
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Beach nourishment (beach renourishment, beach replenishment, or sand replenishment) involves a process of replacing material (usually sand) to a beach that might have been lost by longshore drift or erosion."
 ---
 
 <!-- Regular citations -->
@@ -32,7 +33,6 @@ strategyTypes: "Protect"
   Citation: Mangor, Karsten (2020): Shore nourishment. Available from http://www.coastalwiki.org/wiki/Shore_nourishment [accessed on 8-10-2020] 
 [^13]:
   Finkl C.W., Walker H.J. (2005) Beach Nourishment. In: Schwartz M.L. (eds) Encyclopedia of Coastal Science. Encyclopedia of Earth Science Series. Springer, Dordrecht. https://doi.org/10.1007/1-4020-3880-1_35
-
 
 <!-- Images -->
 

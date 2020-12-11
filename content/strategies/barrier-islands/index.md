@@ -3,6 +3,7 @@ title: Barrier Islands
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
 strategyTypes: "Protect"
+excerpt: "Located offshore, barrier islands are dynamic landforms that are formed from offshore bars and, spits."
 ---
 
 <!-- Regular citations -->

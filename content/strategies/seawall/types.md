@@ -1,0 +1,4 @@
+- **Steel sheet pile walls** comprise interlocking steel sheets anchored deep beneath the surface of the ground. They are ideally suited for areas with less intense wave and storm surge activity. 
+- **Gravity walls** depend on the weight of its constituent materials to stabilize the wall in the ground. Therefore, they require stable soil conditions and reinforcement around the base to buffer the effects of **shearing**. 
+- **Curved walls** are designed with a sweeping curve that helps to dissipate wave impact deflecting it upwards from the base of the wall. Curved walls are designed to reduce the effects of scouring, i.e., removal of sediments from the base of the wall. 
+- **Brick or block walls** or gabions (wire baskets filled with rocks) comprise of walls constructed from concrete blocks and rocks installed on a man-made slope. The slope shape helps to dissipate the force of the wave [^6]

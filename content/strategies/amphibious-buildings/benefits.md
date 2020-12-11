@@ -1,0 +1,4 @@
+- Increases the value of real estate because of flood adaptation design
+- Adaptable to variation in flood water levels [^5]
+- Reduces the level of damage due to flooding       
+- Amenable to soil subsistence and changes in sea level rise [^6]

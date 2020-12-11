@@ -1,0 +1,4 @@
+### Shubenacadie River
+#### Shubenacadie NS, Canada
+
+During the 1980s and 1990s, the Nova Scotia Department of Agriculture and the Nova Scotia Department of Environment implemented several stream bank protection projects along the Shubenacadie River to mitigate the impacts of erosion on water quality and marine habitat.[^7] Gabion baskets and mats were used in the stabilization of the river bank to protect the adjacent road.[^8] Other transportation infrastructures such as the Cheticamp Bridge that spans across the Shubenacadie River are also protected using similar gabion mats to protect the foundations of the bridge from erosion.[^9]

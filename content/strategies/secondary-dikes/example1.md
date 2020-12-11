@@ -1,0 +1,4 @@
+### Hondsbossche Zeewering Sleeper Dike 
+#### Holland, The Netherlands
+
+In 1526, a secondary dike was constructed behind the Hondsbossche Zeewering Dike because of concerns related to the weakness of the sea wall.[^3] In 1570, the main dike was breached, and the secondary dike prevented North Holland from being flooded. Secondary dikes or sleeper dikes were commonly used all over the Netherlands as part of the Delta Plan (Dutch dike system).[^4] However, most of these dikes no longer have a function in flood protection after the improvement of the Delta Plan but remain protected today for their cultural and historical value.[^5]

@@ -1,0 +1,4 @@
+- Lack of integrated understanding of coastal ecosystems. Wetlands represent complex ecosystem interactions and understanding the interactions between these subsystems is still evolving. 
+- Transference of knowledge to practice is stymied by conflicts between coastal interests. [^12]
+- Development pressures for residential and commercial space could lead to the loss of wetlands endangered species. 
+- Habitat degradation from chemicals and sediments due to land-use change inland. [^13]

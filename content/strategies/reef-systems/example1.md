@@ -1,0 +1,4 @@
+### Chesapeake Bay Oyster Recovery Program 
+#### Maryland VA, USA
+
+Since the 1800’s oyster population in the Chesapeake Bay have been declining to a point where recent oyster population levels and biomass are less than 1 percent of historic levels.[^3] The decline has been attributed to overharvesting, diseases, and loss of habitat.[^4] The project began in 1996 and since then the U.S Army Corps of Engineers has been actively involved in implementing the Oyster Restoration Master Plan.[^5] The masterplan provides different scenarios in the restoration program which can range from a target of 14,400 – 35,000 acres of restored oyster reefs at an estimated cost between $1.56 – $6.50 billion.[^6] The masterplan serves as a foundation for working towards the restoration of oyster habitats and populations in 20 tributaries by 2025 which was established by the Chesapeake Bay Protection and Restoration Executive Order.[^7] 

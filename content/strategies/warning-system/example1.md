@@ -1,0 +1,4 @@
+### Cyclone Warning System
+#### Bangladesh
+
+Historically, Bangladesh has been an active area for tropical cyclones. Unfortunately, a lack of protective measures has resulted in high death and casualty rates.[^4] As an adaptation response, Bangladesh implemented the Cyclone Preparedness Programme (CPP) which focuses on infrastructure development, an early warning system, and cyclone shelters.[^5] The warning system consists of three components: monitoring, evaluation, and response and draws data from multiple sources.[^6] The warning system has proven to be successful during the 1970, 1991 and 2007 cyclones which resulted in fewer deaths.[^7]

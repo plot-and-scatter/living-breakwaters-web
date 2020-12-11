@@ -1,0 +1,4 @@
+- Longitudinal stone toe protection only provides toe protection. It does not directly protect the mid and upper banks. Some erosion of the mid and upper bank areas may occur during long-duration, high energy flows, particularly, before these areas stabilize and become vegetated. [^14]
+- Local scours may be destabilized by a moderate flood before vegetation is re-established. [^15]
+- Spur dikes can lead to the contraction of the flow path which subsequently increases flow velocity in the contracted section. [^16]
+- Check dams can lead to a reduction in channel conveyance capacity thereby increasing the probability of overtopping. [^17]

@@ -1,0 +1,4 @@
+- **Wooden groynes** usually consist of one or two-row palisade structures that are usually permeable. Wood groynes are cheap but have low durability. 
+- **Rock groynes** are simple to construct and have long durability. They can also be dismantled and reinstalled
+- **Concrete groynes** are usually constructed from prefabricated boxes or reinforced concrete hence they are very durable and long-lasting. However, they require a foundation with a high load-bearing capacity
+- **Rubble-mound groynes** can be built using loose mounds of stones or other materials, e.g., tetrapods [^13]

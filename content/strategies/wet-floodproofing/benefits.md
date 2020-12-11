@@ -1,0 +1,4 @@
+- Leads to a reduction in clean-up time and cost.      
+- Often less costly than other flood mitigation or adaptation measures.
+- Installation of flood vents, allow for the equalization of internal and external hydrostatic pressures thereby decreasing loads on the walls and floors of a building. [^10]
+- Except for basement contents, relocating or storing costs after a flood warning are normally covered by flood insurance. [^9]

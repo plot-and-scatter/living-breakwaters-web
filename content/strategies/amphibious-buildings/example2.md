@@ -1,0 +1,4 @@
+### Floating Houses 
+#### BC, Canada
+
+Examples of floating houses or houseboats can be found in British Columbia along False Creek on Granville Island. These float houses are a landmark. Each house exhibits its own unique character. In the south of Richmond along the Fraser River, floating homes can also be found near Ladner and Queensborough. These little neighborhoods are examples of resiliency through water-based urbanism and embracing water as a culture. It should be noted, however, that because of planning regulations, it might be difficult to implement floating houses as an adaptation strategy at larger scales.

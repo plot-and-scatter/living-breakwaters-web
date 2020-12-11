@@ -1,0 +1,4 @@
+- Increases erosion on the lee side (north side) of the breakwater which counters the positive effect of accretion behind the breakwater. 
+- Offshore breakwaters may hinder onshore sediment transport and thereby prevent the rehabilitation of an eroded beach [^14]
+- Depending on the type of system and design requirements, the cost of construction and maintenance may be high [^15]
+- May lead to habitat fragmentation thereby interrupting the migration of marine species

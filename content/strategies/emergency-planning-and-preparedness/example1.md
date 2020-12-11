@@ -1,0 +1,4 @@
+### Tokyo Rinkai Disaster Prevention Park
+#### Koto City, Japan
+
+In Metropolitan Tokyo, parks have become designated locations and central bases of operations for disaster prevention. The Tokyo Rinkai Disaster Prevention Park is one of the many designated bases of operations that houses emergency response facilities.[^4] During standard hours of operation, the park promotes disaster preparedness programs (simulations, training, knowledge-sharing) that attracts a variety of interests from organizations, the general public, and tourists.[^5] Additionally, the park connects with the adjacent municipal parks to create a 132000 m2 urban landscape that brings people to the waterfront.[^6]

@@ -6,14 +6,17 @@ import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 
 import './Strategies.scss'
+import StrategySelect from './StrategySelect'
+import { colorForStrategy } from '../pages/strategies'
 
 const StrategyTemplate = (props) => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
 
-  console.log('props', props)
+  // console.log('props', props)
 
-  console.log('props.pageContext', props.pageContext)
+  // console.log('props.pageContext', props.pageContext)
+  console.log('post.frontmatter.strategyTypes', post.frontmatter.strategyTypes)
 
   const { previous, next } = props.pageContext
 
@@ -25,6 +28,8 @@ const StrategyTemplate = (props) => {
   useEffect(() => {
     carouselRef.current.click()
   }, [])
+
+  const strategyTypes = post.frontmatter.strategyTypes
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -38,11 +43,10 @@ const StrategyTemplate = (props) => {
             <h1>{post.frontmatter.title}</h1>
           </div>
           <div className="col-8">
-            <h2>
-              <span className="badge badge-primary">
-                {post.frontmatter.strategyTypes}
-              </span>
-            </h2>
+            <StrategySelect
+              currentPost={post}
+              strategies={props.data.allMarkdownRemark.edges}
+            />
           </div>
         </div>
         <div className="Post">
@@ -51,7 +55,7 @@ const StrategyTemplate = (props) => {
               <div className="row MoreInfo">
                 <div className="Annotation col col-4">
                   <div
-                    className="Summary"
+                    className={`Summary ${strategyTypes}BG`}
                     dangerouslySetInnerHTML={{
                       __html: props.pageContext.subpages.summary
                     }}
@@ -265,6 +269,23 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { contentType: { eq: "strategy" } } }
+      sort: { fields: [frontmatter___title], order: ASC }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            strategyTypes
+            title
+          }
+        }
       }
     }
   }

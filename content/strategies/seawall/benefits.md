@@ -1,0 +1,4 @@
+- Provides protection against coastal flooding and erosion.
+- Unlike other sea defense systems, sea walls can be constructed in smaller spaces. 
+- Possess higher amenity value when compared to other defense structures such as dykes
+- Has long shelf life in excess of 100 years compared to soft sea defense approaches, e.g., beach nourishment. 

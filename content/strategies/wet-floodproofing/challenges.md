@@ -1,0 +1,4 @@
+- A building may be uninhabitable during a flood event, hence, alternative accommodation must be sought
+- If the inside of a structure becomes contaminated by sewage and other substances in floodwater, extensive cleanup may be necessary 
+- Does not reduce possible damage from high-velocity floodwater flow or wave action 
+- May not result in a reduction in premiums for flood insurance [^9]

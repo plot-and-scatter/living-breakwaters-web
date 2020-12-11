@@ -1,0 +1,4 @@
+### Aberdeen Beach Groynes
+#### Aberdeen SCT, UK
+
+Historically, Aberdeen Beach has had significant problems with coastal erosion and has experienced a substantial loss of beach sediment. This is based on the inspections that were done in 2001 and 2004.[^4] Beach elevation in front of the seawall has decreased to the point where sheet piling was exposed, causing the seawall to be exposed to failure.[^5] In response, in 2006, the Aberdeen City Council decided to implement a major beach nourishment and groyne construction program.[^6] Across a 600m stretch of the Aberdeen Beach, 750 m of dredging pipeline was used to pump 70 000 m3 of dredged sand along the beach and 1800 tons of granite blocks were used in the construction of 5 groynes.[^7] This represented a reactive response to the coastal erosion along the seawall. However, with climate change and sea-level rise, there are still concerns about the long-term durability and consequences of the groynes. 
