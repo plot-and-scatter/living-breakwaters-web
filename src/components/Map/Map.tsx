@@ -1,27 +1,25 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef } from 'react'
 
-// import LAYERS from "../static/layers.json"
-// import SCENARIOS from "../static/scenarios.json"
+import { setupBaseMap } from './mapHelper'
+import { useMapLayerManager } from '../Data/MapLayerManager'
+import Layers from './Layers/Layers'
+import Scenarios from './Scenarios/Scenarios'
 
-import { Map as MapType } from "mapbox-gl"
+import './Map.scss'
 
-import "./Map.scss"
-import { setupBaseMap } from "./Scenarios/mapHelper"
-
-interface IProps {}
-
-const Map = (props: IProps): JSX.Element => {
-  const [map, setMap] = useState<MapType>()
-  const [mapLoaded, setMapLoaded] = useState<boolean>(false)
+const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
+  const { setMap } = useMapLayerManager()
 
   useEffect(() => {
-    setupBaseMap(map, setMap, setMapLoaded, mapRef)
+    setupBaseMap(setMap, mapRef)
   }, []) // Intentionally leave empty; only set up once, on instantiation
 
   return (
     <div className="MapRow row">
       <div className="col-12">
+        <Layers />
+        <Scenarios />
         <div className="Map" id="Map" ref={mapRef} />
       </div>
     </div>

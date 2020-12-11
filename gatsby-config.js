@@ -1,13 +1,13 @@
 module.exports = {
-  pathPrefix: "/living-breakwaters-web",
+  pathPrefix: '/living-breakwaters-web',
   siteMetadata: {
     title: `Living Breakwaters`,
     author: `Frank Hangler`,
     description: `Living Breakwaters online platform.`,
     siteUrl: `https://plotandscatter.com/living-breakwaters-web`,
     social: {
-      twitter: `livingbreakwaters`,
-    },
+      twitter: `livingbreakwaters`
+    }
   },
   plugins: [
     `gatsby-plugin-catch-links`,
@@ -16,22 +16,22 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/strategies`,
-        name: `strategies`,
-      },
+        name: `strategies`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/scenarios`,
-        name: `scenarios`,
-      },
+        name: `scenarios`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
+        name: `assets`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -40,20 +40,21 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
+          `gatsby-remark-numbered-footnotes`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
+          `gatsby-remark-smartypants`
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -61,12 +62,12 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+      }
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-typescript`,
-  ],
+    `gatsby-plugin-typescript`
+  ]
 }

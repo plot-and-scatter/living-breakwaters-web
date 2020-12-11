@@ -1,6 +1,6 @@
 ---
 title: Scenario 3
-subtitle: The third scenario.
+subtitle: The third mitigation scenario.
 author: U. N. Owen
 tags: scenario, temp, 3
 date: "2017-09-01T16:00:00.000Z"

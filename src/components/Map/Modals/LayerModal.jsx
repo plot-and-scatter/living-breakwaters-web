@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import LayerSelect from "../Options/LayerSelect"
+import LayerSelect from "../Layers/LayerSelect"
 
 const LayerModal = props => {
   return (

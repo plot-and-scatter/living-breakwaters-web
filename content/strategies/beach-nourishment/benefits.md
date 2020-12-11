@@ -1,0 +1,7 @@
+- Reduces the negative impacts of coastal erosion
+- Serves as an adaptive measure against sediment erosion
+- Allows for integration with hard solutions, e.g., sea walls
+- Provides or restores habitat and supports recreational tourism 
+- Can help to complement other grey protection strategies, e.g., seawalls or groynes, and green strategies such as dune reinforcement. Beach nourishment can also be improved by contracting dunes that can function as sand reservoirs.
+- Is relatively inexpensive and adaptable to changing conditions. Where the beach profile changes the beach can be renourished.
+- Materials extracted for other purposes can be utilized for beach nourishment, e.g., material extraction for dredging. 
