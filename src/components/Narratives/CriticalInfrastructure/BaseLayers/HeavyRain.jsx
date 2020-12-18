@@ -39,7 +39,7 @@ const rain = (xOffset) => (
   <path
     key={xOffset}
     className={`RainLine`}
-    d={`M${xOffset} 320 l${RAIN_WIDTH} -400`}
+    d={`M${xOffset} 395 l${RAIN_WIDTH} -400`}
   />
 )
 

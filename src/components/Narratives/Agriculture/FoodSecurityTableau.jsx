@@ -66,12 +66,12 @@ const chainHelper = (id) => {
   ]
 }
 
-const FoodSecurityTableau = () => {
+const FoodSecurityTableau = ({ showRain, showStorm }) => {
   const { narrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
-  const [rainVisible, setRainVisible] = useState(false)
-  const [stormSurgeVisible, setStormSurgeVisible] = useState(false)
+  const [rainVisible, setRainVisible] = useState(showRain)
+  const [stormSurgeVisible, setStormSurgeVisible] = useState(showStorm)
   const [zoomXY, setZoomXY] = useState([1963, 519])
 
   const svgRef = useRef(null)
@@ -80,22 +80,6 @@ const FoodSecurityTableau = () => {
     console.log('Zooming!')
     // d3.select(svgRef.current).attr("transform", d3.event.transform)
   })
-
-  // useLayoutEffect(() => {
-  //   console.log(svgRef, svgRef.current, d3.select(svgRef.current))
-  //   const foo = d3.zoom().on("zoom")
-  //   d3.select(svgRef.current).call(foo, zoomCallback)
-  // }, [])
-
-  const toggleRain = useCallback(() => setRainVisible(!rainVisible), [
-    rainVisible,
-    setRainVisible
-  ])
-
-  const toggleStormSurge = useCallback(
-    () => setStormSurgeVisible(!stormSurgeVisible),
-    [stormSurgeVisible, setStormSurgeVisible]
-  )
 
   const timeline = useRef()
   const groundLevelRef = useRef()
@@ -109,11 +93,11 @@ const FoodSecurityTableau = () => {
 
   useEffect(() => {
     toggleSeaSurge('sea-surge', stormSurgeVisible)
-  }, [stormSurgeVisible])
+  }, [showRain])
 
   useEffect(() => {
     toggleRainStorm('HeavyRain', rainVisible)
-  }, [rainVisible])
+  }, [showStorm])
 
   useEffect(() => {
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
@@ -165,24 +149,6 @@ const FoodSecurityTableau = () => {
 
   return (
     <div className="FoodSecurityTableau">
-      <div className="mb-2 py-2">
-        <button
-          className={`btn btn-sm ${
-            !rainVisible ? 'btn-outline-secondary' : 'btn-primary'
-          }`}
-          onClick={toggleRain}
-        >
-          Toggle rain
-        </button>
-        <button
-          className={`btn btn-sm ${
-            !stormSurgeVisible ? 'btn-outline-secondary' : 'btn-primary'
-          } ml-2`}
-          onClick={toggleStormSurge}
-        >
-          Toggle storm surge
-        </button>
-      </div>
       <div>
         <svg
           id="FoodSecurityTableauSVG"

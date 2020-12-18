@@ -12,12 +12,16 @@ const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
   return (
     <div className="NarrativeFrame row">
       <div className="col-12">
-        <Tableau activeNarrative={props.activeNarrative} />
+        <Tableau
+          activeNarrative={props.activeNarrative}
+          showRain={true}
+          showStorm={true}
+        />
       </div>
       <div className="col-4 mt-4">
         <NarrativeSelect />
       </div>
-      <div className="col-8 mt-4">
+      <div className="col-6 offset-1 mt-4">
         <p className="p-1" style={{ marginTop: '-1rem' }}>
           Coastal habitats adapt to environmental and climate change, e.g.,
           sea-level rise by migrating inland to retain their relative function

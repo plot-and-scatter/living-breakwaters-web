@@ -29,10 +29,10 @@ const Narratives = (props) => {
         <div className="Narratives">
           <SEO title="Narratives" />
           <div className="row my-4 align-items-center Title">
-            <div className="col-6">
+            <div className="col-8">
               <h1 className="mb-0">{SCENARIOS[activeNarrative].title}</h1>
             </div>
-            <div className="col-6 text-right">
+            <div className="col-4 text-right">
               <NarrativeSelection
                 activeNarrative={activeNarrative}
                 setActiveNarrative={setActiveNarrative}

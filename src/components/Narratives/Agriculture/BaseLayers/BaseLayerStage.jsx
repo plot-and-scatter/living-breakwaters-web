@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import AgricultureGround from "./AgricultureGround"
-import FreshWater from "./FreshWater"
-import MeanSeaLevel from "./MeanSeaLevel"
-import SaltwaterWedge from "./SaltwaterWedge"
-import SeaSurge from "./SeaSurge"
+import AgricultureGround from './AgricultureGround'
+import FreshWater from './FreshWater'
+import MeanSeaLevel from './MeanSeaLevel'
+import SaltwaterWedge from './SaltwaterWedge'
+import SeaSurge from './SeaSurge'
 
 const BaseLayerStage = ({ stage }) => {
   return (
@@ -19,7 +19,7 @@ const BaseLayerStage = ({ stage }) => {
   )
 }
 BaseLayerStage.propTypes = {
-  stage: PropTypes.number,
+  stage: PropTypes.number
 }
 
 export default BaseLayerStage

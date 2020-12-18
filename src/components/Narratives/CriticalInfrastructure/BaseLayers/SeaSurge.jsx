@@ -17,13 +17,15 @@ export const toggleSeaSurge = (className, toggleVar) => {
   }
 }
 
+const BASE_SURGE_LEVEL = 415.5
+
 const SeaSurge = ({ stage }) => {
   const d =
     stage === 0
-      ? 'M0 315.5 h760 l50 50 h1400 v80 h-2410 v-130'
+      ? `M0 ${BASE_SURGE_LEVEL} h2410 v130 h-2410 v-130`
       : stage === 1
-      ? 'M0 310 h760 l50 50 h1400 v80 h-2410 v-130'
-      : 'M0 295 h795 l50 30 h1400 v80 h-2410 v-110'
+      ? `M0 ${BASE_SURGE_LEVEL - 5.5} h2410 v130 h-2410 v-130`
+      : `M0 ${BASE_SURGE_LEVEL - 20.5} h2410 v130 h-2410 v-130`
 
   return <path className="sea-surge" d={d} />
 }

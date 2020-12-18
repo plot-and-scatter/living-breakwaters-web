@@ -8,14 +8,27 @@ import './Tableau.scss'
 
 interface Props {
   activeNarrative: ScenarioType
+  showRain?: boolean
+  showStorm?: boolean
 }
 
-const Tableau = ({ activeNarrative }: Props): JSX.Element => {
-  let tableau = <FoodSecurityTableau />
+const Tableau = ({
+  activeNarrative,
+  showRain,
+  showStorm
+}: Props): JSX.Element => {
+  let tableau = (
+    <FoodSecurityTableau showRain={showRain} showStorm={showStorm} />
+  )
 
   switch (activeNarrative) {
     case ScenarioType.CriticalInfrastructures:
-      tableau = <CriticalInfrastructureTableau />
+      tableau = (
+        <CriticalInfrastructureTableau
+          showRain={showRain}
+          showStorm={showStorm}
+        />
+      )
       break
   }
 
