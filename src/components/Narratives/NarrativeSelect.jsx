@@ -43,17 +43,21 @@ const NarrativeSelect = () => {
         id="myRange"
         onChange={(event) => setNarrativeStageCallback(event.target.value)}
       />
-      <p className="mt-3">
-        Mauris elementum congue faucibus. Proin fringilla, velit eu iaculis
-        fermentum, lectus orci tempus magna, sed feugiat erat ipsum quis diam.
-        Mauris quis diam vel urna scelerisque aliquet nec at nisi. Duis ex
-        massa, elementum fermentum eleifend quis, pellentesque sed nunc. Aenean
-        sit amet est ut nunc malesuada pellentesque vel ac urna. Donec
-        vestibulum ut orci nec volutpat. Fusce at sodales diam. Proin tortor ex,
-        porta at ante sit amet, gravida rutrum elit. Maecenas est purus,
-        porttitor ut condimentum ac, tristique et dui. Sed eget mollis orci.
-        Etiam ultrices aliquet ante sit amet feugiat.
-      </p>
+      <div className="mt-3 d-flex align-items-center justify-content-between">
+        {stages.map((s, i) => {
+          return (
+            <div key={i}>
+              <button className="btn btn-sm btn-primary">Rain</button>
+              <br />
+              <button className="btn btn-sm btn-primary mt-1">Storm</button>
+            </div>
+          )
+        })}
+      </div>
+      {/* <p className="mt-3">
+        Coastal squeeze has led to the loss of the intertidal zone. Hence, a
+        flood wall was constructed to protect the remaining farmlands in zone 2.
+      </p> */}
     </div>
   )
 }
