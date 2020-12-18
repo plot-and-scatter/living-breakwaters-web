@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 
 const NarrativeContext = React.createContext()
 
@@ -8,19 +8,50 @@ function useNarrative() {
     throw new Error(`useNarrative must be used within a NarrativeProvider`)
   }
 
-  const [narrativeStage, setNarrativeStage] = context
+  const [
+    narrativeStage,
+    setNarrativeStage,
+    showRain,
+    setShowRain,
+    showSurge,
+    setShowSurge
+  ] = context
+
+  const toggleRain = useCallback(() => {
+    setShowRain(!showRain)
+  }, [showRain])
+
+  const toggleSurge = useCallback(() => {
+    setShowSurge(!showSurge)
+  }, [showSurge])
 
   return {
     narrativeStage,
-    setNarrativeStage
+    setNarrativeStage,
+    showRain,
+    setShowRain,
+    toggleRain,
+    showSurge,
+    setShowSurge,
+    toggleSurge
   }
 }
 
 function NarrativeProvider(props) {
   const [narrativeStage, setNarrativeStage] = React.useState(0)
-  const value = React.useMemo(() => [narrativeStage, setNarrativeStage], [
-    narrativeStage
-  ])
+  const [showRain, setShowRain] = React.useState(false)
+  const [showSurge, setShowSurge] = React.useState(false)
+  const value = React.useMemo(
+    () => [
+      narrativeStage,
+      setNarrativeStage,
+      showRain,
+      setShowRain,
+      showSurge,
+      setShowSurge
+    ],
+    [narrativeStage, showRain, showSurge]
+  )
 
   return <NarrativeContext.Provider value={value} {...props} />
 }

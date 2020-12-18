@@ -9,12 +9,27 @@ const MAX_NARRATIVE_STAGE = 2
 const STAGE_NAMES = ['Present', 'Near Future', 'Future']
 
 const NarrativeSelect = () => {
-  const { narrativeStage, setNarrativeStage } = useNarrative()
+  const {
+    narrativeStage,
+    setNarrativeStage,
+    showRain,
+    toggleRain,
+    showSurge,
+    toggleSurge
+  } = useNarrative()
 
   const setNarrativeStageCallback = useCallback(
     (stage) => setNarrativeStage(stage),
     [setNarrativeStage]
   )
+
+  const toggleShowRainCallback = useCallback(() => {
+    toggleRain()
+  }, [toggleRain])
+
+  const toggleShowSurgeCallback = useCallback(() => {
+    toggleSurge()
+  }, [toggleSurge])
 
   const stages = []
   for (let i = 0; i <= MAX_NARRATIVE_STAGE; i++) {
@@ -45,19 +60,38 @@ const NarrativeSelect = () => {
       />
       <div className="mt-3 d-flex align-items-center justify-content-between">
         {stages.map((s, i) => {
+          console.log(narrativeStage, i)
           return (
             <div key={i}>
-              <button className="btn btn-sm btn-primary">Rain</button>
-              <br />
-              <button className="btn btn-sm btn-primary mt-1">Storm</button>
+              {+narrativeStage === i ? (
+                <div>
+                  <button
+                    className={`btn btn-sm ${
+                      showRain ? 'btn-primary' : 'btn-outline-primary'
+                    }`}
+                    onClick={() => toggleShowRainCallback()}
+                  >
+                    <i className="fas fa-cloud-showers-heavy mr-2" />
+                    {showRain ? 'Stop rain' : 'Start rain'}
+                  </button>
+                  <br />
+                  <button
+                    className={`btn btn-sm ${
+                      showSurge ? 'btn-primary' : 'btn-outline-primary'
+                    } mt-1`}
+                    onClick={() => toggleShowSurgeCallback()}
+                  >
+                    <i className="fas fa-wind mr-2" />
+                    {showSurge ? 'Stop storm' : 'Start storm'}
+                  </button>
+                </div>
+              ) : (
+                <div />
+              )}
             </div>
           )
         })}
       </div>
-      {/* <p className="mt-3">
-        Coastal squeeze has led to the loss of the intertidal zone. Hence, a
-        flood wall was constructed to protect the remaining farmlands in zone 2.
-      </p> */}
     </div>
   )
 }
