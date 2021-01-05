@@ -1,0 +1,3 @@
+- Could enable a local government to undertake a broader range of shoreline management and adaptation measures in response to coastal hazards. 
+- Could enable environmental enhancement to occur with less reliance on structural protection, such as beach nourishment, artificial reefs, or the creation of off-shore islands and sand dunes. 
+- Can be used to support the objectives of zoning bylaws 
