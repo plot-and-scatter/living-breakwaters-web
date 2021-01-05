@@ -1,0 +1,4 @@
+### Halifax Regional Municipality development agreements 
+#### Halifax Nova Scotia
+
+In Halifax Nova Scotia, the Regional Municipality has included in the 2006 regional plan a provision for developments to be constructed with a minimum height that is above the ordinary high watermark. One of the other provisions of the plan is the inclusion of development agreements where areas are designated as zones require negotiations before development projects proceed. The terms and conditions for such negotiations are specified in local bylaws including consideration for a range of issues related to environmental protection. The process of negotiating a development agreement allows planners and developers to share information on wave activity and storm surges to inform resilient project designs. [^5]

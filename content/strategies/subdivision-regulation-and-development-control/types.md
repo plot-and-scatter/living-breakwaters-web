@@ -1,0 +1,4 @@
+- **Cooperative association/shared interests** derive authority from the Real Estate Development Marketing Act. It allows developers to sell shares in a landowning company
+- **Fee simple subdivision** relates to a land estate where the owner is entitled to the whole property including unconditional powers of disposition except where a limitation is outlined in another grant or disposition from the crown
+- **Air space parcels** relate to the ownership of the space below and above a parcel of land. Although the limits have not been clearly established in law, in BC, it is generally accepted by the courts that the rights to air space below and above land exist insofar as it is necessary for a landowner to ordinarily use and enjoy his or her property. 
+- **Strata** apply where fee simple land is then subdivided into multiple units and where all unitholders have the right to use common elements. There are three types of strata, **Bare land, Building, and Phased.** [^4]

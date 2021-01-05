@@ -1,0 +1,3 @@
+- Could lead to less development because of the potential loss of value to developers. Hence, should be supported by guiding policy or strategies.
+- If coastal hazard areas are not clearly established, it may result in difficulty for an approving authority to decline a subdivision in coastal areas based on safety concerns. 
+- The effectiveness of subdivision approval is contingent on the ability of those appointed to manage the process. This is because the approval process could be quite discretionary and subject to the prescribed scope of authority. [^6]
