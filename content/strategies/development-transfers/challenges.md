@@ -1,0 +1,4 @@
+- It is possible that there are not enough credits, and/or the credits are too restrictive, as they often can only be used in the jurisdiction in which they were created. 
+- TDRs are technically complicated and require a significant investment of time and staff resources to administer, especially during the development stages of a program. 
+- Requires an extensive public education campaign that may not appropriately balance benefits to cost.
+- Depends upon a properly functioning real estate market, which if depressed, will cause few rights to be sold. [^11]

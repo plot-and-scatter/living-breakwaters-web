@@ -1,0 +1,4 @@
+- Provides significant protection of open space, farmland, and environmentally sensitive areas.
+- Promotes private financing of land protection rather than public financing.
+- Ties private land conservation to growth management, downtown revitalization, and infrastructure efficiency by directing growth to appropriate areas.
+- Provides incentives that encourage growth in receiving areas and disincentives for the development of sending areas.
