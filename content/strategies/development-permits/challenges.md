@@ -1,0 +1,4 @@
+- Preparing background studies of hazards and environmentally sensitive areas to justify the development permit areas is resource-intensive
+- May lead to **upzoning**, i.e., a development that departs from what conforms to the wishes of the community
+- May lead to the removal of third-party rights to consult and appeal but retention of the applicant’s rights to appeal. 
+- May remove final authority for approval from public representatives and repose such authority in the hands of planning staff [^14]

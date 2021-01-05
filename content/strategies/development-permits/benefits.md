@@ -1,0 +1,4 @@
+- Enables the assessment of impacts of a proposed development to identify mitigation or conservation strategies to determine if a discretionary use should be permitted
+- Enables municipalities to impose development permit conditions that promote environmentally sustainable development
+- Allows the imposition of ongoing conditions, e.g., periodic monitoring requirements that are considered necessary for the protection of the natural environment, public health, and safety. [^13]
+- Replaces site-specific planning with a more regional and visionary approach [^14]
