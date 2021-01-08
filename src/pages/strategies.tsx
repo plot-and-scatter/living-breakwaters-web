@@ -12,7 +12,7 @@ import './Strategies.scss'
 
 // import image from '../../content/assets/images/uta-scholl-pUD1P96NB9c-unsplash.jpg'
 
-export const strategyTypes = ['Protect', 'Accommodate']
+export const strategyTypes = ['Protect', 'Accommodate', 'Retreat']
 
 export const colorForStrategy = (labelName: string): string => {
   switch (labelName) {
@@ -20,6 +20,8 @@ export const colorForStrategy = (labelName: string): string => {
       return 'primary'
     case 'Accommodate':
       return 'warning'
+    case 'Retreat':
+      return 'danger'
     default:
       return 'secondary'
   }
