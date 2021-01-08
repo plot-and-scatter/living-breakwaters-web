@@ -1,16 +1,13 @@
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
 
-// import BannerRow from '../components/Rows/BannerRow'
+import { FixTypeLater } from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import StrategyCard from '../components/Strategies/StrategyCard'
-import { FixTypeLater } from '../components/Types/FixTypeLater'
 
 import './Strategies.scss'
-
-// import image from '../../content/assets/images/uta-scholl-pUD1P96NB9c-unsplash.jpg'
 
 export const strategyTypes = ['Protect', 'Accommodate', 'Retreat']
 
