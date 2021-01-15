@@ -1,21 +1,18 @@
-import PropTypes from 'prop-types'
-import React, { useState } from 'react'
 import { graphql } from 'gatsby'
+import React, { useState } from 'react'
 
+import { FixTypeLater } from '../components/Types/FixTypeLater'
+import { NarrativeProvider } from '../components/Narratives/NarrativeContext'
+import { ScenarioType } from '../@types/Scenario'
 import Layout from '../components/Layout/Layout'
+import NarrativeFrame from '../components/Narratives/NarrativeFrame'
+import NarrativeSelection from '../components/Narratives/Selection/NarrativeSelection'
 import SEO from '../components/SEO'
 
-import NarrativeSelect from '../components/Narratives/NarrativeSelect'
-import { NarrativeProvider } from '../components/Narratives/NarrativeContext'
-import NarrativeFrame from '../components/Narratives/NarrativeFrame'
-import { ScenarioType } from '../@types/Scenario'
-import NarrativeSelection from '../components/Narratives/Selection/NarrativeSelection'
-
+import './Narratives.scss'
 import SCENARIOS from '../static/scenarios.json'
 
-import './Narratives.scss'
-
-const Narratives = (props) => {
+const Narratives = (props: FixTypeLater): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
@@ -53,11 +50,6 @@ const Narratives = (props) => {
 }
 
 export default Narratives
-
-Narratives.propTypes = {
-  data: PropTypes.object,
-  location: PropTypes.object
-}
 
 export const pageQuery = graphql`
   query {

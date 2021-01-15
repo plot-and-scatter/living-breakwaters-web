@@ -24,7 +24,7 @@ export const colorForStrategy = (labelName: string): string => {
   }
 }
 
-const Strategies = (props): JSX.Element => {
+const Strategies = (props: FixTypeLater): JSX.Element => {
   const { data } = props
 
   const strategies = data.allMarkdownRemark.edges

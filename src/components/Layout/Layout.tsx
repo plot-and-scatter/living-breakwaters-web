@@ -6,14 +6,16 @@ import Footer from './Footer'
 import '../../../content/assets/fonts/fonts.css'
 import '../../scss/app.scss'
 import '../../scss/bootstrap/bootstrap.scss'
+import { FixTypeLater } from '../Types/FixTypeLater'
 
 interface Props {
   children: React.ReactNode
-  excludeNav: boolean
+  excludeNav?: boolean
+  location: FixTypeLater
   title: string
 }
 
-const Layout = ({ excludeNav, title, children }: Props): JSX.Element => {
+const Layout = ({ children, excludeNav, title }: Props): JSX.Element => {
   return (
     <div>
       {!excludeNav && <Nav />}
