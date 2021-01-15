@@ -1,11 +1,16 @@
 import React from 'react'
 
+import FixTypeLater from '../../Types/FixTypeLater'
+import NarrativeInput from '../NarrativeInput'
+
 import './HotspotElement.scss'
 
 interface Props {
   children: React.ReactNode
   height: number
+  narrativeStage: FixTypeLater
   onClick: () => void
+  setNarrativeStage: FixTypeLater
   title: string
   width: number
 }
@@ -13,16 +18,14 @@ interface Props {
 const HotspotElement = ({
   children,
   height,
+  narrativeStage,
   onClick,
+  setNarrativeStage,
   title,
   width
 }: Props): JSX.Element => {
-  const _width = width || 300
-
-  console.log('_width', _width, width, height)
-
   return (
-    <div className="HotspotElement" style={{ width: _width }}>
+    <div className="HotspotElement" style={{ height, width }}>
       <h1>{title}</h1>
       {children}
       <button
@@ -32,6 +35,10 @@ const HotspotElement = ({
         <i className="fas fa-times mr-2" />
         Close
       </button>
+      <NarrativeInput
+        narrativeStage={narrativeStage}
+        setNarrativeStage={setNarrativeStage}
+      />
     </div>
   )
 }

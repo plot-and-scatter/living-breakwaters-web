@@ -54,7 +54,7 @@ const chainHelper = (id) => {
 }
 
 const FoodSecurityTableau = ({ showRain, showStorm }) => {
-  const { narrativeStage } = useNarrative()
+  const { narrativeStage, setNarrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
   const [zoomXY, setZoomXY] = useState([1963, 519])
@@ -191,6 +191,7 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
                   />
                 }
                 narrativeStage={narrativeStage}
+                setNarrativeStage={setNarrativeStage}
               />
             </g>
           </g>

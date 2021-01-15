@@ -22,29 +22,27 @@ const Narratives = (props: FixTypeLater): JSX.Element => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <NarrativeProvider>
-        <div className="Narratives">
-          <SEO title="Narratives" />
-          <div className="row my-4 align-items-center Title">
-            <div className="col-8">
-              <h1 className="mb-0">{SCENARIOS[activeNarrative].title}</h1>
-            </div>
-            <div className="col-4 text-right">
-              <NarrativeSelection
-                activeNarrative={activeNarrative}
-                setActiveNarrative={setActiveNarrative}
-              />
-            </div>
+      <div className="Narratives">
+        <SEO title="Narratives" />
+        <div className="row my-4 align-items-center Title">
+          <div className="col-8">
+            <h1 className="mb-0">{SCENARIOS[activeNarrative].title}</h1>
           </div>
-          <div className="row">
-            <div className="col"></div>
+          <div className="col-4 text-right">
+            <NarrativeSelection
+              activeNarrative={activeNarrative}
+              setActiveNarrative={setActiveNarrative}
+            />
           </div>
-          <NarrativeFrame
-            activeNarrative={activeNarrative}
-            text={SCENARIOS[activeNarrative].intro}
-          />
         </div>
-      </NarrativeProvider>
+        <div className="row">
+          <div className="col"></div>
+        </div>
+        <NarrativeFrame
+          activeNarrative={activeNarrative}
+          text={SCENARIOS[activeNarrative].intro}
+        />
+      </div>
     </Layout>
   )
 }

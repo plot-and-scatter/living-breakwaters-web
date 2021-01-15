@@ -1,14 +1,18 @@
 import React from 'react'
-import { useNarrative } from './NarrativeContext'
 import { useCallback } from 'react'
+
+import { useNarrative } from './NarrativeContext'
+import NarrativeInput from './NarrativeInput'
 
 import './NarrativeSelect.scss'
 
-const MAX_NARRATIVE_STAGE = 2
+export const STAGE_NAMES = ['Present', 'Near Future', 'Future']
 
-const STAGE_NAMES = ['Present', 'Near Future', 'Future']
+interface Props {
+  isCompact?: boolean
+}
 
-const NarrativeSelect = () => {
+const NarrativeSelect = ({ isCompact }: Props): JSX.Element => {
   const {
     narrativeStage,
     setNarrativeStage,
@@ -18,11 +22,6 @@ const NarrativeSelect = () => {
     toggleSurge
   } = useNarrative()
 
-  const setNarrativeStageCallback = useCallback(
-    (stage) => setNarrativeStage(stage),
-    [setNarrativeStage]
-  )
-
   const toggleShowRainCallback = useCallback(() => {
     toggleRain()
   }, [toggleRain])
@@ -31,35 +30,16 @@ const NarrativeSelect = () => {
     toggleSurge()
   }, [toggleSurge])
 
-  const stages = []
-  for (let i = 0; i <= MAX_NARRATIVE_STAGE; i++) {
-    stages.push(
-      <div
-        key={i}
-        className={`Stage ${+narrativeStage === +i ? 'ActiveStage' : ''}`}
-      >
-        {STAGE_NAMES[i]}
-      </div>
-    )
-  }
-
   return (
     <div className="NarrativeSelect">
-      <h4>Show what happens in the...</h4>
+      {!isCompact && (
+        <>
+          <h4>Show what happens in the...</h4>
+        </>
+      )}
+      <NarrativeInput setNarrativeStage={setNarrativeStage} />
       <div className="mt-3 d-flex align-items-center justify-content-between">
-        {stages}
-      </div>
-      <input
-        defaultValue={0}
-        type="range"
-        min="0"
-        max="2"
-        className="slider"
-        id="myRange"
-        onChange={(event) => setNarrativeStageCallback(event.target.value)}
-      />
-      <div className="mt-3 d-flex align-items-center justify-content-between">
-        {stages.map((s, i) => {
+        {STAGE_NAMES.map((s, i) => {
           return (
             <div key={i}>
               {+narrativeStage === i ? (

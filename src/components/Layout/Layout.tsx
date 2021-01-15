@@ -7,6 +7,7 @@ import '../../../content/assets/fonts/fonts.css'
 import '../../scss/app.scss'
 import '../../scss/bootstrap/bootstrap.scss'
 import FixTypeLater from '../Types/FixTypeLater'
+import { NarrativeProvider } from '../Narratives/NarrativeContext'
 
 interface Props {
   children: React.ReactNode
@@ -17,13 +18,15 @@ interface Props {
 
 const Layout = ({ children, excludeNav, title }: Props): JSX.Element => {
   return (
-    <div>
-      {!excludeNav && <Nav />}
-      <div className="container-fluid bg-white">
-        <main>{children}</main>
+    <NarrativeProvider>
+      <div>
+        {!excludeNav && <Nav />}
+        <div className="container-fluid bg-white">
+          <main>{children}</main>
+        </div>
+        <Footer title={title} />
       </div>
-      <Footer title={title} />
-    </div>
+    </NarrativeProvider>
   )
 }
 
