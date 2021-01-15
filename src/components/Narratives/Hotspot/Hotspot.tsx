@@ -40,6 +40,8 @@ const Hotspot = ({
   const [clientX, setClientX] = useState(0)
   const [clientY, setClientY] = useState(0)
 
+  const _width = width || 300
+
   console.log('clientX', clientX, 'clientY', clientY)
 
   const hotspotClick = useCallback(
@@ -99,7 +101,7 @@ const Hotspot = ({
       el.style.left = `${0}px`
       el.style.top = `${0}px`
       // el.style.marginRight = `50%`
-      el.style.width = `${width + 20}px`
+      el.style.width = `${_width + 20}px`
       el.style.height = `${height + 20}px`
       el.style.visibility = 'visible'
     } else {
