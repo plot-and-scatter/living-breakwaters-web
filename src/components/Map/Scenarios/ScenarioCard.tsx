@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { useMapLayerManager } from '../../Data/MapLayerManager'
-import { FixTypeLater } from '../../Types/FixTypeLater'
+import FixTypeLater from '../../Types/FixTypeLater'
 
 import './ScenarioCard.scss'
 

@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import { FixTypeLater } from '../components/Types/FixTypeLater'
+import FixTypeLater from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 

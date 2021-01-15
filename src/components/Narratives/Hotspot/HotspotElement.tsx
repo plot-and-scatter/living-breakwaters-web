@@ -2,10 +2,24 @@ import React from 'react'
 
 import './HotspotElement.scss'
 
-const HotspotElement = ({ children, title, onClick, width, height }) => {
+interface Props {
+  children: React.ReactNode
+  height: number
+  onClick: () => void
+  title: string
+  width: number
+}
+
+const HotspotElement = ({
+  children,
+  height,
+  onClick,
+  title,
+  width
+}: Props): JSX.Element => {
   const _width = width || 300
 
-  console.log('_width', _width, width)
+  console.log('_width', _width, width, height)
 
   return (
     <div className="HotspotElement" style={{ width: _width }}>

@@ -1,32 +1,44 @@
+import { CSSPlugin } from 'gsap/CSSPlugin'
+import { TimelineMax, gsap } from 'gsap'
+import PropTypes from 'prop-types'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-import { TimelineMax, gsap } from 'gsap'
-import { CSSPlugin } from 'gsap/CSSPlugin'
-// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
 
-import './Hotspot.scss'
 import { useCallback } from 'react'
-import { useState } from 'react'
 import { useEffect } from 'react'
 import { useRef } from 'react'
+import { useState } from 'react'
+import FixTypeLater from '../../Types/FixTypeLater'
 import HotspotElement from './HotspotElement'
+
+import './Hotspot.scss'
 
 if (gsap) gsap.registerPlugin(CSSPlugin)
 
 const BASE_RADIUS = 40
 const EXPANDED_RADIUS = BASE_RADIUS + 5
 
+interface Props {
+  childElement: React.ReactNode
+  height: number
+  title: string
+  width: number
+  xOffset: number
+  xPopupOffset: number
+  yOffset: number
+  yPopupOffset: number
+}
+
 const Hotspot = ({
-  xOffset,
-  yOffset,
-  title,
   childElement,
   height,
+  title,
   width,
+  xOffset,
   xPopupOffset,
+  yOffset,
   yPopupOffset
-}) => {
+}: Props): JSX.Element => {
   const [showHotspot, setShowHotspot] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [clientX, setClientX] = useState(0)
@@ -47,14 +59,15 @@ const Hotspot = ({
 
   const hotspotMouseLeave = useCallback(() => {
     setIsHovered(false)
-  })
+  }, [])
 
-  const timeline = useRef()
+  const timeline = useRef<FixTypeLater>()
   const circleRef = useRef()
 
   useEffect(() => {
     // Set up timeline
-    timeline.current = new TimelineMax({ repeat: -1, repeatDelay: 0.2 })
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    timeline!.current = new TimelineMax({ repeat: -1, repeatDelay: 0.2 })
       .to(circleRef.current, {
         r: EXPANDED_RADIUS,
         autoRound: false,
@@ -95,11 +108,7 @@ const Hotspot = ({
   }, [showHotspot, childElement])
 
   useEffect(() => {
-    if (isHovered) {
-      timeline.current.resume()
-    } else {
-      timeline.current.pause()
-    }
+    isHovered ? timeline.current.resume() : timeline.current.pause()
   }, [isHovered])
 
   return (

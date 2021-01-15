@@ -1,5 +1,5 @@
 import LAYERS from '../../static/layers.json'
-import { FixTypeLater } from '../Types/FixTypeLater'
+import FixTypeLater from '../Types/FixTypeLater'
 
 export const layersToToggle = (idToToggle: string | string[]) => {
   if (Array.isArray(idToToggle)) {

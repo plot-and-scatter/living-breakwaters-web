@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 import BannerRow from '../components/Rows/BannerRow'
 
 import image from '../../content/assets/images/james-wheeler-nP0ILzCrmAc-unsplash.jpg'
-import { FixTypeLater } from '../components/Types/FixTypeLater'
+import FixTypeLater from '../components/Types/FixTypeLater'
 
 const About = (props: FixTypeLater): JSX.Element => {
   const { data } = props

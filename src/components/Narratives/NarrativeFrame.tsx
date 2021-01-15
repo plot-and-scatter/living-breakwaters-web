@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { FixTypeLater } from '../Types/FixTypeLater'
+import FixTypeLater from '../Types/FixTypeLater'
 import NarrativeSelect from './NarrativeSelect'
 import Tableau from './Tableau'
 

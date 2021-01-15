@@ -2,7 +2,7 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
 
-import { FixTypeLater } from '../components/Types/FixTypeLater'
+import FixTypeLater from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import StrategyCard from '../components/Strategies/StrategyCard'
