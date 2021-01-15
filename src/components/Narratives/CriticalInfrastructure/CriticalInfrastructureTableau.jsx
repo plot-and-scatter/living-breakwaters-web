@@ -180,10 +180,8 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
             <g id="Labels"></g>
             <g id="Hotspots">
               <Hotspot
-                xOffset={250}
+                xOffset={350}
                 yOffset={350}
-                xPopupOffset={40}
-                yPopupOffset={-500}
                 width={700}
                 title={`Shipping ${narrativeStage}`}
                 childElement={

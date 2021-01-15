@@ -24,9 +24,7 @@ interface Props {
   title: string
   width: number
   xOffset: number
-  xPopupOffset: number
   yOffset: number
-  yPopupOffset: number
 }
 
 const Hotspot = ({
@@ -35,14 +33,14 @@ const Hotspot = ({
   title,
   width,
   xOffset,
-  xPopupOffset,
-  yOffset,
-  yPopupOffset
+  yOffset
 }: Props): JSX.Element => {
   const [showHotspot, setShowHotspot] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [clientX, setClientX] = useState(0)
   const [clientY, setClientY] = useState(0)
+
+  console.log('clientX', clientX, 'clientY', clientY)
 
   const hotspotClick = useCallback(
     (e) => {
@@ -98,8 +96,11 @@ const Hotspot = ({
         </HotspotElement>,
         el
       )
-      el.style.left = `${clientX - 15 + (xPopupOffset || 0)}px`
-      el.style.top = `${clientY - 100 + (yPopupOffset || 0)}px`
+      el.style.left = `${0}px`
+      el.style.top = `${0}px`
+      // el.style.marginRight = `50%`
+      el.style.width = `${width + 20}px`
+      el.style.height = `${height + 20}px`
       el.style.visibility = 'visible'
     } else {
       ReactDOM.unmountComponentAtNode(el)

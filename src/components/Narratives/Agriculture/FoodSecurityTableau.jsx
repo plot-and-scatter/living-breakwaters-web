@@ -278,8 +278,6 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
                 yOffset={300}
                 title={'Test'}
                 childElement={<p>Testing text</p>}
-                xPopupOffset={-20}
-                yPopupOffset={-10}
               />
             </g>
           </g>

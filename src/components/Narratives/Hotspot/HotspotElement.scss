@@ -1,3 +1,20 @@
+@import "../../../scss/common.module";
+
 .HotspotElement {
-  
+  padding: 10px;
+  background-color: rgba($color-brand-background, 0.95);
+  // position: relative;
+  border: solid rgba(0, 0, 0, 0.5) 1px;
+  z-index: 10000;
+  // visibility: hidden;
+  h1 {
+    font-size: 1rem;
+    color: $color-brand-light;
+  }
+  p {
+    font-size: 0.85rem;
+    color: #fff;
+  }
+  border-radius: $border-radius;
+  // margin-left: -50%;
 }

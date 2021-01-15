@@ -60,7 +60,6 @@ const NarrativeSelect = () => {
       />
       <div className="mt-3 d-flex align-items-center justify-content-between">
         {stages.map((s, i) => {
-          console.log(narrativeStage, i)
           return (
             <div key={i}>
               {+narrativeStage === i ? (
