@@ -1,13 +1,12 @@
 import React, { useCallback } from 'react'
 
-import FixTypeLater from '../Types/FixTypeLater'
 import { STAGE_NAMES } from './NarrativeSelect'
 
 const MAX_NARRATIVE_STAGE = 2
 
 interface Props {
-  narrativeStage: FixTypeLater
-  setNarrativeStage: FixTypeLater
+  narrativeStage: number
+  setNarrativeStage: (stage: number) => void
 }
 
 const NarrativeInput = ({
@@ -19,7 +18,7 @@ const NarrativeInput = ({
     stages.push(
       <div
         key={i}
-        className={`Stage ${+narrativeStage === +i ? 'ActiveStage' : ''}`}
+        className={`Stage ${narrativeStage === +i ? 'ActiveStage' : ''}`}
       >
         {STAGE_NAMES[i]}
       </div>
@@ -31,7 +30,7 @@ const NarrativeInput = ({
     [setNarrativeStage]
   )
 
-  console.log('narrativeStage', narrativeStage, +narrativeStage)
+  console.log('narrativeStage', narrativeStage)
 
   return (
     <div className="NarrativeInput">
@@ -45,6 +44,7 @@ const NarrativeInput = ({
         max="2"
         className="slider"
         id="myRange"
+        value={narrativeStage}
         onChange={(event) => setNarrativeStageCallback(event.target.value)}
       />
     </div>

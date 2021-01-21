@@ -1,6 +1,5 @@
 import React from 'react'
 
-import FixTypeLater from '../../Types/FixTypeLater'
 import NarrativeInput from '../NarrativeInput'
 
 import './HotspotElement.scss'
@@ -8,9 +7,9 @@ import './HotspotElement.scss'
 interface Props {
   children: React.ReactNode
   height: number
-  narrativeStage: FixTypeLater
+  narrativeStage: number
   onClick: () => void
-  setNarrativeStage: FixTypeLater
+  setNarrativeStage: (narrativeStage: number) => void
   title: string
   width: number
 }

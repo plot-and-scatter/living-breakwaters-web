@@ -276,8 +276,38 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
               <Hotspot
                 xOffset={730}
                 yOffset={300}
-                title={'Test'}
-                childElement={<p>Testing text</p>}
+                title={'Flood wall'}
+                childElement={
+                  <p>
+                    Coastal squeeze has led to the loss of the intertidal zone.
+                    Hence, a flood wall was constructed to protect the remaining
+                    farmlands in zone 2.
+                  </p>
+                }
+              />
+              <Hotspot
+                xOffset={1200}
+                yOffset={320}
+                title={'Saltwater intrusion'}
+                childElement={
+                  <p>
+                    Over time, higher rates of the removal of ground water from
+                    aquifers (for farming) compared to natural rates of recharge
+                    leads to saltwater intrusion into the underground aquifer.
+                  </p>
+                }
+              />
+              <Hotspot
+                xOffset={1700}
+                yOffset={290}
+                title={'Subsidence'}
+                childElement={
+                  <p>
+                    Further removal of ground water exacerbates the process of
+                    saltwater intrusion and leading ultimately to subsidence,
+                    i.e., slumping of the soil surface.
+                  </p>
+                }
               />
             </g>
           </g>

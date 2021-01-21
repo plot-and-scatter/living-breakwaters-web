@@ -21,8 +21,8 @@ const EXPANDED_RADIUS = BASE_RADIUS + 5
 interface Props {
   childElement: React.ReactNode
   height: number
-  narrativeStage: FixTypeLater
-  setNarrativeStage: FixTypeLater
+  narrativeStage: number
+  setNarrativeStage: (narrativeStage: number) => void
   title: string
   width: number
   xOffset: number
@@ -51,7 +51,10 @@ const Hotspot = ({
 
   const hotspotClick = useCallback(
     (e) => {
-      setClientX(e.clientX)
+      let _clientX = e.clientX - 10
+      if (_clientX + _width + 100 > window.innerWidth)
+        _clientX = window.innerWidth - _width - 100
+      setClientX(_clientX)
       setClientY(e.clientY)
       setShowHotspot(!showHotspot)
     },
@@ -104,8 +107,8 @@ const Hotspot = ({
         </HotspotElement>,
         el
       )
-      el.style.left = `${0}px`
-      el.style.top = `${0}px`
+      el.style.left = `${clientX}px`
+      el.style.top = `${10}px`
       // el.style.marginRight = `50%`
       el.style.width = `${_width + 20}px`
       el.style.height = `${_height + 20}px`
