@@ -41,10 +41,12 @@ $hotspotFill: rgba(255, 60, 0, 0.7);
   }
   border-radius: $border-radius;
   button {
-    align-self: center;
+    align-self: flex-end;
+    margin-bottom: 3px;
   }
   .NarrativeInput {
     flex-grow: 1;
+    align-self: flex-end;
     .Stage {
       // border: solid 1px #999;
       color: #ccc;
@@ -59,6 +61,7 @@ $hotspotFill: rgba(255, 60, 0, 0.7);
       background-color: #666;
       border-radius: 12px;
       padding: 3px;
+      margin-bottom: 0;
     }
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;

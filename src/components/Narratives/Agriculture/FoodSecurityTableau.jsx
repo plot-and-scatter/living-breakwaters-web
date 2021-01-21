@@ -67,7 +67,7 @@ const chainHelper = (id) => {
 }
 
 const FoodSecurityTableau = ({ showRain, showStorm }) => {
-  const { narrativeStage } = useNarrative()
+  const { narrativeStage, setNarrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
   const [rainVisible, setRainVisible] = useState(showRain)
@@ -277,6 +277,7 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
                 xOffset={730}
                 yOffset={300}
                 title={'Flood wall'}
+                narrativeStage={narrativeStage}
                 childElement={
                   <p>
                     Coastal squeeze has led to the loss of the intertidal zone.
@@ -289,6 +290,7 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
                 xOffset={1200}
                 yOffset={320}
                 title={'Saltwater intrusion'}
+                narrativeStage={narrativeStage}
                 childElement={
                   <p>
                     Over time, higher rates of the removal of ground water from
@@ -301,6 +303,7 @@ const FoodSecurityTableau = ({ showRain, showStorm }) => {
                 xOffset={1700}
                 yOffset={290}
                 title={'Subsidence'}
+                narrativeStage={narrativeStage}
                 childElement={
                   <p>
                     Further removal of ground water exacerbates the process of
