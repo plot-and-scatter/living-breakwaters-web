@@ -47,8 +47,6 @@ const Hotspot = ({
   const _width = width || 300
   const _height = height || 200
 
-  console.log('clientX', clientX, 'clientY', clientY)
-
   const hotspotClick = useCallback(
     (e) => {
       let _clientX = e.clientX - 10

@@ -2,7 +2,11 @@ import React from 'react'
 
 import './ShippingPopover.scss'
 
-const ShippingPopover = (props) => {
+type Props = {
+  narrativeStage: number
+}
+
+const ShippingPopover = (props: Props): JSX.Element => {
   const { narrativeStage } = props
   const waterOffset =
     +narrativeStage === 0 ? 0 : +narrativeStage === 1 ? -10 : -20

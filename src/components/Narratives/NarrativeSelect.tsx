@@ -37,7 +37,10 @@ const NarrativeSelect = ({ isCompact }: Props): JSX.Element => {
           <h4>Show what happens in the...</h4>
         </>
       )}
-      <NarrativeInput setNarrativeStage={setNarrativeStage} />
+      <NarrativeInput
+        setNarrativeStage={setNarrativeStage}
+        narrativeStage={narrativeStage}
+      />
       <div className="mt-3 d-flex align-items-center justify-content-between">
         {STAGE_NAMES.map((s, i) => {
           return (

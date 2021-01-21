@@ -27,17 +27,19 @@ const HotspotElement = ({
     <div className="HotspotElement" style={{ height, width }}>
       <h1>{title}</h1>
       {children}
-      <button
-        className="btn btn-sm btn-outline-brand-light mt-2"
-        onClick={onClick}
-      >
-        <i className="fas fa-times mr-2" />
-        Close
-      </button>
-      <NarrativeInput
-        narrativeStage={narrativeStage}
-        setNarrativeStage={setNarrativeStage}
-      />
+      <div className="d-flex w-100 justify-content-between">
+        <button
+          className="btn btn-sm btn-outline-brand-light mt-2 mr-3"
+          onClick={onClick}
+        >
+          <i className="fas fa-times mr-2" />
+          Close
+        </button>
+        <NarrativeInput
+          narrativeStage={narrativeStage}
+          setNarrativeStage={setNarrativeStage}
+        />
+      </div>
     </div>
   )
 }
