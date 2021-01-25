@@ -1,0 +1,3 @@
+- Maybe stymied because of a lack of political will, community support, and financial resources 
+- Acquisition of land may require coordinating and resolving regulatory and administrative procedures and processes. This requirement for coordination could slow down the process. 
+- An acquisition may be subject to easements that stipulate how the land is to be utilized and maintained including requirements that allow specific mitigation activity to be undertaken on the land in areas prone to natural hazard [^11] 

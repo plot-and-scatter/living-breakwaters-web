@@ -1,0 +1,4 @@
+- **Acquisition by donation** occurs where land or interest in land is acquired by donation. The procedures through which land is acquired by donation are similar to those for acquisition by purchase with some exceptions. 
+- **Acquisition by exchange** transfers title of two separate parcels through a combination of acquisition and disposal action. 
+- **Acquisition by transfer** occurs where the jurisdiction over land is transferred from one jurisdiction to another. Both receiving and granting agencies must document the transfer of management authority in addition to adjusting the land inventory and financial records [^9]
+- **Expropriation** refers to the legal process through which a government or agency operating in the public interest acquires land for the benefit of the public. 

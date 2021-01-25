@@ -1,0 +1,4 @@
+- Promotes the protection of natural resources through hazard mitigation
+- Complements strategies found in existing community plans related to land use, open space preservation, hazard mitigation, and floodplain management. 
+- Serves as a long-term protection strategy compared to strategies that offer shorter-term protection or that may be changed over time.
+- Removes sensitive land from the pressure of built development. [^10]
