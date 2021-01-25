@@ -1,0 +1,6 @@
+- Uncertainty with the designation of some conventions within a protected area management regime, e.g., it is still not clear when RAMSAR sites are protected areas 
+- May create a false sense of security and may not achieve conservation goals where protected area systems do not achieve what they were established to do and exist solely as “paper parks”
+- Increasing propensity of some governments to downsize, downgrade, and degazette protected area legislation without significant consequence. 
+- Existing and growing antipathy among different interests regarding the idea of protected area. For example, tensions between academics and human rights groups regarding conversation and community access to protected area resources. 
+- Ignorance at different levels of government and private interests regarding the role of protected area management. This ignorance manifest in the lack of legislative, and policy support and financing
+- Existing legislation might lag behind globally acceptable best practices related to social and conservation outcomes. [^7]

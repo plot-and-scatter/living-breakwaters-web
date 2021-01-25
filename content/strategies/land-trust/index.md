@@ -43,6 +43,7 @@ excerpt: "A land trust is a non-profit private organization created for the purp
   Myhr, R. O. (1987). Private Coastline Conservation Management: The Land Trust in the San Juan Islands, Washington. In Coastal Zone'87 (pp. 3266-3273). ASCE.
 [^18]:
   Rissman, A. R., & Butsic, V. (2011). Land trust defense and enforcement of conserved areas. Conservation Letters, 4(1), 31-37.
+  
 <!-- Images -->
 
 [^i1]:
