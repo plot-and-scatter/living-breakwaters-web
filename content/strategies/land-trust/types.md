@@ -1,0 +1,3 @@
+- **Community land trusts** (CLT) are not-for-profit organizations where membership is open to any resident of the geographical region or bioregion where the trust is located. The purpose of a CLT is to create a democratic institution to hold land and to retain the use-value of the land for the benefit of the community.
+- **Conservation land trusts** are created to protect property from future development. This might involve protecting greenfield sites or reclaiming and restoring brownfield sites [^14]
+- **Coastal land trusts** help to conserve coastal shorelines and landscapes and cultural values. Some coastal land trusts have been established to combat the effects of climate change. [^15], [^16]

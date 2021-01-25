@@ -1,0 +1,4 @@
+### Hawaiian Island Land Trust 
+#### Hawaii, USA
+
+The Hawaiian Island Land Trust (HILT) was established to protect ecologically sensitive landscapes. In 2004, HILT acquired the ownership of the 277 acres Waihe’e Coastal Dunes and Wetland Refuge.[^4] The program was established to restore and enhance critical ecosystems while preserving historical and cultural resources.[^5], [^6] These ecosystems will be inundated in the future by sea-level rise. Thus, the program aims to restore the landscape to what it was in the past.[^7] With the help of volunteers, over 70% of native species have returned to the landscape.[^8] 
