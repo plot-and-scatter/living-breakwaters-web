@@ -1,13 +1,20 @@
 import React from 'react'
 
-const BirdOnGround = ({ xOffset, yOffset, scaleX, scaleY }): JSX.Element => {
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
+
+const BirdOnGround = ({
+  xOffset,
+  yOffset,
+  xScale,
+  yScale
+}: PlaceableSVGProps): JSX.Element => {
   const baseXTransform = 10
   const baseYTransform = 10
 
   const xTransform = baseXTransform + (xOffset || 0)
   const yTransform = baseYTransform + (yOffset || 0)
 
-  const translate = `translate(${xTransform}, ${yTransform}) scale(${scaleX}, ${scaleY})`
+  const translate = `translate(${xTransform}, ${yTransform}) scale(${xScale}, ${yScale})`
 
   return (
     <g transform={translate} id="BirdOnGround">

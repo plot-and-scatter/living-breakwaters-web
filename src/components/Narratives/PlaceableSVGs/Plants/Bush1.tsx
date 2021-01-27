@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Bush1 = ({ xOffset, yOffset }): JSX.Element => {
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
+
+const Bush1 = ({ xOffset, yOffset }: PlaceableSVGProps): JSX.Element => {
   const baseXTransform = -1655
   const baseYTransform = -290
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ScenarioType } from '../../@types/Scenario'
 import CriticalInfrastructureTableau from './CriticalInfrastructure/CriticalInfrastructureTableau'
-import FoodSecurityTableau from './Agriculture/FoodSecurityTableau'
+import FoodSecurityTableau from './FoodSecurity/FoodSecurityTableau'
 
 import './Tableau.scss'
 

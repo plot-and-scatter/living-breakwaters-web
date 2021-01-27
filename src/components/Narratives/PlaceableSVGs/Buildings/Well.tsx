@@ -1,4 +1,5 @@
 import React from 'react'
+
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 const Well = ({ xOffset, yOffset }: PlaceableSVGProps): JSX.Element => {

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 const Building1 = ({ xOffset, yOffset }: PlaceableSVGProps): JSX.Element => {
