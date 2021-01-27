@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-const RainOverflow = () => {
+const RainOverflow = (): JSX.Element => {
   return (
     <g id="RainOverflow" opacity={0}>
       <path

@@ -1,29 +1,29 @@
-import PropTypes from 'prop-types'
-import React, { useEffect, useRef } from 'react'
 import { Link, graphql } from 'gatsby'
+import React, { useEffect, useRef } from 'react'
 
+import FixTypeLater from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
+import StrategySelect from './StrategySelect'
 
 import './Strategies.scss'
-import StrategySelect from './StrategySelect'
-import { colorForStrategy } from '../pages/strategies'
 
-const StrategyTemplate = (props) => {
+interface Props {
+  data: FixTypeLater
+  location: FixTypeLater
+  pageContext: FixTypeLater
+}
+
+const StrategyTemplate = (props: Props): JSX.Element => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
-
-  // console.log('props', props)
-
-  // console.log('props.pageContext', props.pageContext)
-  console.log('post.frontmatter.strategyTypes', post.frontmatter.strategyTypes)
 
   const { previous, next } = props.pageContext
 
   console.log(props.data)
   console.log(post)
 
-  const carouselRef = useRef()
+  const carouselRef = useRef<HTMLDivElement>()
 
   useEffect(() => {
     carouselRef.current.click()
@@ -233,12 +233,6 @@ const StrategyTemplate = (props) => {
 }
 
 export default StrategyTemplate
-
-StrategyTemplate.propTypes = {
-  data: PropTypes.object,
-  pageContext: PropTypes.object,
-  location: PropTypes.object
-}
 
 export const pageQuery = graphql`
   query StrategyBySlug($slug: String!, $animationSlug: String!) {

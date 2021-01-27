@@ -26,14 +26,7 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
     .filter((layer) => layer.grouping === layerGroup.id)
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((layer) => {
-      return (
-        <LayerCheckbox
-          key={layer.id}
-          layer={layer}
-          checked={allChecked}
-          checkedTs={checkedTs}
-        />
-      )
+      return <LayerCheckbox key={layer.id} layer={layer} />
     })
 
   return (

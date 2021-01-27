@@ -1,11 +1,12 @@
 import React, { useCallback, useState } from 'react'
+
 import { useMapLayerManager } from '../../Data/MapLayerManager'
 import LayerLabel from './LayerLabel'
 import LayerSelect from './LayerSelect'
 
 import './Layers.scss'
 
-const Layers = () => {
+const Layers = (): JSX.Element => {
   const [showLayers, setShowLayers] = useState<boolean>(false)
 
   const { activeLayers } = useMapLayerManager()

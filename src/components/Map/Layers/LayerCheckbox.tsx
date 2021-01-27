@@ -1,14 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import LayerLabel from './LayerLabel'
 
 import { useMapLayerManager } from '../../Data/MapLayerManager'
+import FixTypeLater from '../../Types/FixTypeLater'
+import LayerLabel from './LayerLabel'
 
-interface IProps {
-  layer: any
+interface Props {
+  layer: FixTypeLater
 }
 
-const LayerCheckbox = ({ layer }: IProps) => {
+const LayerCheckbox = ({ layer }: Props): JSX.Element => {
   const { showLayer, hideLayer, activeLayers } = useMapLayerManager()
 
   const [checked, setIsChecked] = useState(activeLayers[layer.id])
@@ -49,10 +49,3 @@ const LayerCheckbox = ({ layer }: IProps) => {
 }
 
 export default LayerCheckbox
-
-LayerCheckbox.propTypes = {
-  checked: PropTypes.bool,
-  checkedTs: PropTypes.number,
-  layer: PropTypes.object,
-  toggleIdCallback: PropTypes.func
-}

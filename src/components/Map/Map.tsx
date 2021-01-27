@@ -11,7 +11,7 @@ const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
   const { setMap } = useMapLayerManager()
 
-  useEffect(() => {
+  useEffect((): void => {
     setupBaseMap(setMap, mapRef)
   }, []) // Intentionally leave empty; only set up once, on instantiation
 
