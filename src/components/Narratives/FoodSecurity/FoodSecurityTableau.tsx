@@ -228,12 +228,12 @@ const FoodSecurityTableau = ({
               <BirdOnGround
                 xOffset={400}
                 yOffset={313}
-                scaleX={1.5}
-                scaleY={1.5}
+                xScale={1.5}
+                yScale={1.5}
               />
-              <FlyingGull1 xOffset={100} yOffset={100} scaleX={1} scaleY={1} />
-              <FlyingGull2 xOffset={300} yOffset={120} scaleX={1} scaleY={1} />
-              <FlyingGull3 xOffset={1300} yOffset={100} scaleX={1} scaleY={1} />
+              <FlyingGull1 xOffset={100} yOffset={100} xScale={1} yScale={1} />
+              <FlyingGull2 xOffset={300} yOffset={120} xScale={1} yScale={1} />
+              <FlyingGull3 xOffset={1300} yOffset={100} xScale={1} yScale={1} />
             </g>
             <g id="Labels">
               <text x={1500} y={350}>
