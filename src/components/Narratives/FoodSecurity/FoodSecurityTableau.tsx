@@ -1,10 +1,8 @@
-import React, { useRef } from 'react'
-import { Power2, TimelineMax, gsap } from 'gsap'
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
-// import * as d3 from "d3"
+import { Power2, TimelineMax, gsap } from 'gsap'
+import React, { useRef } from 'react'
 
 import { toggleSeaSurge } from './BaseLayers/SeaSurge'
-import { useCallback } from 'react'
 import { useEffect } from 'react'
 import { useNarrative } from '../NarrativeContext'
 import { useState } from 'react'
@@ -16,6 +14,7 @@ import Cypress from '../PlaceableSVGs/Trees/Cypress'
 import Deadwood from '../PlaceableSVGs/Trees/Deadwood'
 import Eelgrass from '../PlaceableSVGs/Plants/Eelgrass'
 import Farmhouse from '../PlaceableSVGs/Buildings/Farmhouse'
+import FixTypeLater from '../../Types/FixTypeLater'
 import FlyingGull1 from '../PlaceableSVGs/Fauna/FlyingGull1'
 import FlyingGull2 from '../PlaceableSVGs/Fauna/FlyingGull2'
 import FlyingGull3 from '../PlaceableSVGs/Fauna/FlyingGull3'
@@ -31,14 +30,13 @@ import Roots from '../PlaceableSVGs/Trees/Roots'
 import SaturatedGround from './BaseLayers/SaturatedGround'
 import Seaweed from '../PlaceableSVGs/Plants/Seaweed'
 import SVGLinearGradient from '../PlaceableSVGs/Helpers/SVGLinearGradient'
+import TableauProps from '../../../@types/TableauProps'
 import Truck from '../PlaceableSVGs/Vehicles/Truck'
 import Well from '../PlaceableSVGs/Buildings/Well'
 import Wheat from '../PlaceableSVGs/Plants/Wheat'
 
 import './FoodSecurityTableau.scss'
 import '../PlaceableSVGs/Elements.scss'
-import FixTypeLater from '../../Types/FixTypeLater'
-import TableauProps from '../../../@types/TableauProps'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -79,11 +77,6 @@ const FoodSecurityTableau = ({
   const [zoomXY] = useState([1963, 519])
 
   const svgRef = useRef(null)
-
-  const zoomCallback = useCallback(() => {
-    console.log('Zooming!')
-    // d3.select(svgRef.current).attr("transform", d3.event.transform)
-  }, [])
 
   const timeline = useRef<TimelineMax>()
   const groundLevelRef = useRef()

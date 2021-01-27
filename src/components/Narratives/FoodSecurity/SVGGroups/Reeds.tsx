@@ -1,5 +1,5 @@
 import React from 'react'
-import SVGFrameProps from '../../../@types/SVGGroupProps'
+import SVGFrameProps from '../../../../@types/SVGGroupProps'
 
 import './Reeds.scss'
 
