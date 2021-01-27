@@ -28,7 +28,7 @@ $example-color-background: $gray-800;
     height: 26px;
     border-radius: 13px;
   }
-  input[type=range]:focus {
+  input[type="range"]:focus {
     // outline: solid 1px $brand;
     outline: none;
   }

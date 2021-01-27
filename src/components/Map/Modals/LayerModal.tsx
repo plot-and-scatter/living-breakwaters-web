@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import LayerSelect from "../Layers/LayerSelect"
+import React from 'react'
 
-const LayerModal = props => {
+import LayerSelect from '../Layers/LayerSelect'
+
+const LayerModal = (): JSX.Element => {
   return (
     <div className="LayerModal modal left fade" id="LayerSelect">
       <div className="modal-dialog modal-lg" role="document">
@@ -23,16 +23,12 @@ const LayerModal = props => {
             </button>
           </div>
           <div className="modal-body">
-            <LayerSelect toggleIdCallback={props.toggleIdCallback} />
+            <LayerSelect />
           </div>
         </div>
       </div>
     </div>
   )
-}
-
-LayerModal.propTypes = {
-  toggleIdCallback: PropTypes.func,
 }
 
 export default LayerModal
