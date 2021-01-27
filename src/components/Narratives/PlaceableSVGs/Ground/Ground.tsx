@@ -6,13 +6,14 @@ import { useCallback } from 'react'
 import { useEffect } from 'react'
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { useRef } from 'react'
+import FixTypeLater from '../../../Types/FixTypeLater'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 const H = 400
 const W = 1250
 
-const Ground = ({ narrativeStage }) => {
+const Ground = (): JSX.Element => {
   useEffect(() => {
     console.log('here')
   }, [])
@@ -20,14 +21,14 @@ const Ground = ({ narrativeStage }) => {
   const groundBaseRef = useRef(null)
   const groundAltRef = useRef(null)
 
-  const timeline = useRef()
+  const timeline = useRef<TimelineMax>()
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
       .to('#GroundBase', 1, {
         morphSVG: { shape: '#GroundAlt' },
         ease: Power2.easeInOut
-      })
+      } as FixTypeLater) // NB: the morphSVG argument is not in the GSAP typings
       .to(
         document.body,
         {

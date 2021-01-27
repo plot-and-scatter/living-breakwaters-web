@@ -52,7 +52,7 @@ const itemHelper = (objClass, id, index) => {
       },
       ease: Power2.easeInOut,
       duration: 1
-    } as FixTypeLater, // NB: the morphSVG argument is not in the GSAP typings,
+    } as FixTypeLater, // NB: the morphSVG argument is not in the GSAP typings
     index
   )
 }
