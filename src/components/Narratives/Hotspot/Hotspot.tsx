@@ -20,11 +20,11 @@ const EXPANDED_RADIUS = BASE_RADIUS + 5
 
 interface Props {
   childElement: React.ReactNode
-  height: number
+  height?: number
   narrativeStage: number
   setNarrativeStage: (narrativeStage: number) => void
   title: string
-  width: number
+  width?: number
   xOffset: number
   yOffset: number
 }

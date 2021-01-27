@@ -111,13 +111,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   await pagesFromNodes(
     STRATEGY_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}Strategy.jsx`,
+    `${TEMPLATES_DIR}Strategy.tsx`,
     graphql,
     createPage
   )
   await pagesFromNodes(
     SCENARIO_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}Scenario.jsx`,
+    `${TEMPLATES_DIR}Scenario.tsx`,
     graphql,
     createPage
   )
