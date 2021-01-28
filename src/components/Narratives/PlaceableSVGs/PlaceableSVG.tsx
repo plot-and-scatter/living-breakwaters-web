@@ -5,23 +5,29 @@ import { attributesForPlacedItem } from './PlaceableSVGHelper'
 
 interface Props {
   children: React.ReactNode
+  defaultScale?: number
+  scale?: number
   viewBox: ViewBox
-  scale: number
-  xOffset: number
-  yOffset: number
+  xOffset?: number
+  yOffset?: number
 }
 
 const PlaceableSVG = ({
   children,
-  viewBox,
+  defaultScale,
   scale,
+  viewBox,
   xOffset,
   yOffset
 }: Props): JSX.Element => {
   return (
     <svg
       viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`}
-      {...attributesForPlacedItem(scale, xOffset, yOffset)}
+      {...attributesForPlacedItem(
+        scale || defaultScale || 0.5,
+        xOffset,
+        yOffset
+      )}
     >
       <rect
         x={viewBox.x}
@@ -29,7 +35,7 @@ const PlaceableSVG = ({
         width={viewBox.width}
         height={viewBox.height}
         fill={`green`}
-        fillOpacity={0.2}
+        fillOpacity={0.4}
       />
       {children}
     </svg>

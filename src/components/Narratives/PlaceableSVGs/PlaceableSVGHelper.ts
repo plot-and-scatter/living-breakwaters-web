@@ -2,9 +2,9 @@ import { SVG_FRAME_X } from '../SVGFrame'
 import { ViewBox } from '../../../@types/ViewBox'
 
 export const attributesForPlacedItem = (
-  widthPc = 0.1,
-  xPc = 0,
-  yPc = 0
+  widthPc = 0.5,
+  xPc = 0.5,
+  yPc = 0.5
 ): { width: number; x: number; y: string } => {
   const scale = widthPc
   const placedItemWidth = scale * SVG_FRAME_X

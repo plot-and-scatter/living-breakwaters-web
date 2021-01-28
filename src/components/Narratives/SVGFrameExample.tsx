@@ -7,7 +7,7 @@ const SVGFrameExample = (): JSX.Element => {
   return (
     <div className="SVGFrameExample">
       <SVGFrame id="Example">
-        <BirdOnGround xOffset={0.5} yOffset={0.5} />
+        <BirdOnGround xOffset={0.3} yOffset={0.3} scale={0.02} />
       </SVGFrame>
     </div>
   )
