@@ -2,14 +2,14 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
 
-import FixTypeLater from '../components/Types/FixTypeLater'
+import FixTypeLater from '../@types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import StrategyCard from '../components/Strategies/StrategyCard'
 
 import './Strategies.scss'
 
-export const strategyTypes = ['Protect', 'Accommodate', 'Retreat']
+export const strategyTypes = ['Protect', 'Accommodate', 'Retreat', 'Avoid']
 
 export const colorForStrategy = (labelName: string): string => {
   switch (labelName) {
@@ -19,6 +19,8 @@ export const colorForStrategy = (labelName: string): string => {
       return 'warning'
     case 'Retreat':
       return 'danger'
+    case 'Avoid':
+      return 'info'
     default:
       return 'secondary'
   }

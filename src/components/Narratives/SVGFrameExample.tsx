@@ -1,5 +1,5 @@
 import React from 'react'
-import BirdOnGround from './PlaceableSVGs/Fauna/BirdOnGround'
+import RedShip from './PlaceableSVGs/Maritime/RedShip'
 
 import SVGFrame from './SVGFrame'
 
@@ -7,7 +7,7 @@ const SVGFrameExample = (): JSX.Element => {
   return (
     <div className="SVGFrameExample">
       <SVGFrame id="Example">
-        <BirdOnGround xOffset={0.3} yOffset={0.3} scale={0.02} />
+        <RedShip />
       </SVGFrame>
     </div>
   )
