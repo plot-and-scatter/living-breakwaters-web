@@ -1,0 +1,5 @@
+- Provides a haven for the sustenance of wild flora and fauna in coastal marine and terrestrial areas
+- Sustains and strengthens indigenous values and knowledge, particularly, their application to the conservation of landscapes and cultural practices. 
+- Helps to mitigate against the effects of extreme weather conditions, acts as a sink for and source of carbon 
+- Serves as an environmental benchmark that can be used for monitoring the health of natural ecological systems and for understanding the effects of climate change, pollution, and the extraction of natural resources on ecological and biological systems. [^4], [^5] 
+- Fosters inclusive environmental stewardship and transboundary decision making among diverse groups and community interests, e.g., indigenous peoples, local communities, and private actors. [^6]

@@ -1,0 +1,4 @@
+### Englishman River Estuary 
+#### Parksville BC, Canada
+
+In 1992, the Nature Trust of B.C purchased 76.7-hectare Englishman River Estuary with a five-year plan to improve the habitat for fish and wildlife.[^9] Estuaries are ecologically sensitive landscapes that are important for the stabilization of coastal areas. Estuaries also act as natural buffers in the event of a storm surge. Since the 1930s, the construction of dikes, roads, and residential development have dramatically impacted natural tidal and river processes.[^10] However, a plan to remove man-made structures such as the abandoned roadway helped to restore natural ecological processes.[^11] Having a healthy estuary helps to reduce the severity of inland flooding and the impact of tidal waves. 
