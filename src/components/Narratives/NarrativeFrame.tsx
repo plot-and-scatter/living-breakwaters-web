@@ -6,6 +6,8 @@ import Tableau from './Tableau'
 
 import './NarrativeFrame.scss'
 import { useNarrative } from './NarrativeContext'
+import SVGFrame from './SVGFrame'
+import SVGFrameExample from './SVGFrameExample'
 
 const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
   const { showRain, showSurge } = useNarrative()
@@ -13,11 +15,12 @@ const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
   return (
     <div className="NarrativeFrame row">
       <div className="col-12">
-        <Tableau
+        {/* <Tableau
           activeNarrative={props.activeNarrative}
           showRain={showRain}
           showStorm={showSurge}
-        />
+        /> */}
+        <SVGFrameExample />
       </div>
       <div className="col-4 mt-4">
         <NarrativeSelect />
