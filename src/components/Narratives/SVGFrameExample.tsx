@@ -1,4 +1,5 @@
 import React from 'react'
+import BirdOnGround from './PlaceableSVGs/Fauna/BirdOnGround'
 
 import SampleFauna from './PlaceableSVGs/Fauna/SampleFauna'
 import SVGFrame, { SVG_FRAME_X, SVG_FRAME_Y } from './SVGFrame'
@@ -15,6 +16,7 @@ const SVGFrameExample = (): JSX.Element => {
       <SVGFrame id="Example">
         <SampleFauna />
         <circle r="20" cx={cx} cy={cy}></circle>
+        <BirdOnGround />
       </SVGFrame>
     </div>
   )

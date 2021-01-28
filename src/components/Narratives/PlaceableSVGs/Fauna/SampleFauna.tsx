@@ -49,10 +49,10 @@ const SampleFauna = ({
         // height={height}
         x={purpleBoxX}
         y={`${purpleBoxYPC}%`}
-        viewBox={`0 0 50 100`}
+        viewBox={`0 0 30 50`}
       >
-        <rect width={50} height={100} fill={`purple`} />
-        <circle r={1} cx={25} cy={50} />
+        <rect width={30} height={50} fill={`purple`} />
+        <circle r={1} cx={15} cy={25} />
       </svg>
       <svg
         viewBox={`0 0 150 150`}

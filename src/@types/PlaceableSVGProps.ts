@@ -4,6 +4,7 @@ type PlaceableSVGProps = {
   yOffset?: number
   xScale?: number
   yScale?: number
+  scale?: number
 }
 
 export default PlaceableSVGProps
