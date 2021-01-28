@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 import { colorForStrategy } from '../../pages/strategies'
-import FixTypeLater from '../Types/FixTypeLater'
+import FixTypeLater from '../../@types/FixTypeLater'
 
 import './StrategyCard.scss'
 

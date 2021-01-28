@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import mapboxgl from 'mapbox-gl'
-import FixTypeLater from '../Types/FixTypeLater'
+import FixTypeLater from '../../@types/FixTypeLater'
 import { LngLatCoordinate } from '../Types/LngLatCoordinate'
 import { MapLayer } from '../Types/MapLayer'
 

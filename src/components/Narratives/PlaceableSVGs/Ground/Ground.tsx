@@ -6,7 +6,7 @@ import { useCallback } from 'react'
 import { useEffect } from 'react'
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { useRef } from 'react'
-import FixTypeLater from '../../../Types/FixTypeLater'
+import FixTypeLater from '../../../../@types/FixTypeLater'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 

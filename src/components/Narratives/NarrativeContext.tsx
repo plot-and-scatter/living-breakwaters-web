@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 
-import FixTypeLater from '../Types/FixTypeLater'
+import FixTypeLater from '../../@types/FixTypeLater'
 
 type NarrativeContextInputType = {
   narrativeStage: number

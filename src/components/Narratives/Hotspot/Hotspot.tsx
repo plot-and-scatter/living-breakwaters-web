@@ -3,7 +3,7 @@ import { TimelineMax, gsap } from 'gsap'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 
-import FixTypeLater from '../../Types/FixTypeLater'
+import FixTypeLater from '../../../@types/FixTypeLater'
 import HotspotElement from './HotspotElement'
 
 import './Hotspot.scss'

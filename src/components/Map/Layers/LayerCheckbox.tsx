@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
 import { useMapLayerManager } from '../../Data/MapLayerManager'
-import FixTypeLater from '../../Types/FixTypeLater'
+import FixTypeLater from '../../../@types/FixTypeLater'
 import LayerLabel from './LayerLabel'
 
 interface Props {
