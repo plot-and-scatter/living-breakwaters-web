@@ -1,9 +1,8 @@
 import { graphql } from 'gatsby'
 import React, { useState } from 'react'
 
-import FixTypeLater from '../components/Types/FixTypeLater'
-import { NarrativeProvider } from '../components/Narratives/NarrativeContext'
 import { ScenarioType } from '../@types/Scenario'
+import FixTypeLater from '../@types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import NarrativeFrame from '../components/Narratives/NarrativeFrame'
 import NarrativeSelection from '../components/Narratives/Selection/NarrativeSelection'

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 const Wheat = ({ xOffset, yOffset }: PlaceableSVGProps): JSX.Element => {

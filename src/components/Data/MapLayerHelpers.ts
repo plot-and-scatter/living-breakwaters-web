@@ -1,7 +1,8 @@
-import LAYERS from '../../static/layers.json'
-import FixTypeLater from '../Types/FixTypeLater'
+import FixTypeLater from '../../@types/FixTypeLater'
 
-export const layersToToggle = (idToToggle: string | string[]) => {
+import LAYERS from '../../static/layers.json'
+
+export const layersToToggle = (idToToggle: string | string[]): FixTypeLater => {
   if (Array.isArray(idToToggle)) {
     const ids = idToToggle
     return ids.map((id) => LAYERS[id])
@@ -17,7 +18,7 @@ export const copyAndSet = (
   layersToToggle: FixTypeLater[],
   toggleTo: boolean,
   setLayers: FixTypeLater
-) => {
+): void => {
   const newLayers = Object.assign({}, layerObject)
   layersToToggle.forEach((l) => (newLayers[l.id] = toggleTo))
   setLayers(newLayers)

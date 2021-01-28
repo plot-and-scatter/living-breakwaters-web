@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Helmet from 'react-helmet'
 import React from 'react'
 
-import FixTypeLater from '../components/Types/FixTypeLater'
+import FixTypeLater from '../@types/FixTypeLater'
 
 interface Props {
   description: string
