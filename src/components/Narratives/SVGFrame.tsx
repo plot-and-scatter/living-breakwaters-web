@@ -7,13 +7,22 @@ interface Props {
   children: React.ReactNode
 }
 
-const SVGFrame = ({ id, children }: Props): JSX.Element => {
-  const width = '50%'
-  const height = '150px'
+export const SVG_FRAME_X = 800
+export const SVG_FRAME_Y = 400
 
+const SVGFrame = ({ id, children }: Props): JSX.Element => {
+  // const width = '300px'
+  // const height = '150px'
+
+  // {(width, height)}
   return (
-    <div className="SVGFrame" style={{ width, height }}>
-      <svg id={id} xmlns="http://www.w3.org/2000/svg" viewBox={'0 0 100 50'}>
+    <div className="SVGFrame" style={{}}>
+      <svg
+        id={id}
+        // width={SVG_FRAME_X}
+        // height={SVG_FRAME_Y}
+        viewBox={`0 0 ${SVG_FRAME_X} ${SVG_FRAME_Y}`}
+      >
         {children}
       </svg>
     </div>

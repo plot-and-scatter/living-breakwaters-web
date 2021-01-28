@@ -1,9 +1,13 @@
 .SVGFrame {
   background-color: #eee;
+  width: 100%;
   > svg {
-    width: 100%;
-    height: 100%;
-    background-color: #def;
+    // width: 100%;
+    // height: 100%;
+    background-color: rgba(210, 220, 230, 0.8);
     border: solid 1px #579;
+  }
+  svg.Example1 {
+    background-color: rgba(150, 160, 170, 0.8);
   }
 }
