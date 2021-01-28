@@ -1,0 +1,4 @@
+### Jersey TDR 
+#### NJ, USA
+
+In 2010, New Jersey put together a 40-member Transfer of Development Rights Task Force which produced a report recommending changes to facilitate the use of transfer of development rights (TDR), clustering, and non-contiguous clustering.[^3] The development of TDR tools allow New Jersey Municipalities such as Chesterfield, Lumberton, Burlington, and Pinelands regions to have access to planning tools that help to preserve and protect environmentally sensitive land without relying on public funding.[^4] In the report of the TDR Task Force, TDR is defined as the process in which the landowners of the ‘sending areas’ sell their development rights to developers of the ‘receiving site’ with the intent of preserving and protecting the ‘sending site’ and for accommodating higher building density in the ‘receiving site’.[^5] 

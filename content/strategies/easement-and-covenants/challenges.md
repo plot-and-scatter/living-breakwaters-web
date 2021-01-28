@@ -1,0 +1,5 @@
+- Once established, an easement cannot be used in a manner that is contrary to the purpose for which it was created. 
+- An easement may not be removed easily. Even if the dominant user is not using the easement this does not constitute sufficient grounds to release the easement.
+- Hydro easements may limit the use of a landowner’s property. Hydro companies have the right to enter a property to lay cables, or erect poles [^13]
+- The establishment of an easement is likely to lead to a decrease in future property value [^15]
+- An annual compensation or a lump sum payment may be required to secure the easement or statutory right of way process or servitude. [^17] 

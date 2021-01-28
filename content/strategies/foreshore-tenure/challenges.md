@@ -1,0 +1,5 @@
+- Individuals cannot build on or develop aquatic Crown land, including Crown foreshore, without the Province's authorization, even if they own the adjacent property or "upland."
+- The upland owner's consent is required if the tenure will affect access to deep water from his or her property.
+- The tenure holder will be required to meet all applicable regulations imposed by government agencies, federal, provincial, and local.
+- Limited suitability due to environmental, bathymetric, and other constraints
+- Administrative procedures may be complex and time consuming [^12]

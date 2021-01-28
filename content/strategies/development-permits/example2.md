@@ -1,0 +1,4 @@
+### Sidney’s Interim FCL Policy
+#### Sidney BC, Canada
+
+In 2018, the incorporation of sea-level rise into the determination of building setbacks and flood construction levels (FCL) in coastal areas was adopted in the Province of British Columbia Flood Hazard Area Land Use Management Guidelines.[^9] The Sidney Interim Flood Construction Level Policy was implemented to ensure that all new development is built to address sea-level rise and to ensure that all building and development permit applicants include a report and Flood Assurance Statement from a qualified engineer.[^10] The report should be submitted to the Town and accepted before the acquisition of a permit. This process serves to inform future owners of the property’s susceptibility to flooding and to remove culpability from the Town of Sidney.[^11]

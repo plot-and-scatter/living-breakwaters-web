@@ -1,0 +1,4 @@
+- Empowers local governments with a legal mandate to enact bylaws to establish the conditions for the subdivision of land
+- Enables the protection of the public interest by separating political influence from the approval process. For example, an approving officer has the authority to refuse approval. 
+- Enables the establishment of conditions for the regulation of future development. [^1]
+- Ensures the conformity of proposals for development to official plans and zoning regulations within a prescribed area. It also enables conformity with provincial regulations and policies [^1]

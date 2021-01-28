@@ -1,0 +1,4 @@
+### California Coastal Commission SLR Policy 
+#### CA, USA
+
+In 2015, the California Coastal Commission in its Sea Level Rise Policy decided that all development in coastal areas should obtain a Coastal Development Permit (CDP).[^5] Generally, land use applications in locations that are susceptible to inundation, flooding, wave impacts, erosion, or saltwater intrusion require a review to determine the effects of sea-level rise.[^6] The policy lists general conditions where sea level rise should be considered in the analysis of an application including; location in a floodplain, exposure to flooding or erosion, existing flood protection, proximity to sensitive ecosystems, and water supply requirements.[^7] Also, an application for a proposed project is required to identify design alternatives that avoid or minimizes the effects of sea-level rise before the submission of a final project design and the CDP application itself.[^8]

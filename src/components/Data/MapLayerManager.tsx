@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from "react"
-import { FixTypeLater } from "../Types/FixTypeLater"
+import React, { useCallback, useState } from 'react'
 
-import LAYERS from "../../static/layers.json"
-import { Map } from "mapbox-gl"
-import { addInitialLayerToMap } from "../Map/mapHelper"
-import { copyAndSet, layersToToggle } from "./MapLayerHelpers"
+import { addInitialLayerToMap } from '../Map/mapHelper'
+import { copyAndSet, layersToToggle } from './MapLayerHelpers'
+import { FixTypeLater } from '../Types/FixTypeLater'
+import { Map } from 'mapbox-gl'
+
+import LAYERS from '../../static/layers.json'
 
 type MapLayerManagerContextType = {
   loadedLayers: FixTypeLater
@@ -33,17 +34,17 @@ function useMapLayerManager() {
     activeLayers,
     setActiveLayers,
     map,
-    setMap,
+    setMap
   } = context
 
   const showLayer = useCallback(
     (id?: string | string[]) => {
       const layers = layersToToggle(id)
 
-      layers.forEach(l => {
+      layers.forEach((l) => {
         // If the layer is loaded, set to visible; otherwise add to map
         loadedLayers[l.id]
-          ? map.setLayoutProperty(l.id, "visibility", "visible")
+          ? map.setLayoutProperty(l.id, 'visibility', 'visible')
           : addInitialLayerToMap(map, l)
       })
 
@@ -58,8 +59,8 @@ function useMapLayerManager() {
       const layers = layersToToggle(id)
 
       // Set visibility to "none"
-      layers.forEach(l => map.setLayoutProperty(l.id, "visibility", "none"))
-      
+      layers.forEach((l) => map.setLayoutProperty(l.id, 'visibility', 'none'))
+
       copyAndSet(activeLayers, layers, false, setActiveLayers) // Update active
     },
     [activeLayers, setActiveLayers, map]
@@ -70,7 +71,7 @@ function useMapLayerManager() {
     showLayer,
     hideLayer,
     map,
-    setMap,
+    setMap
   }
 }
 
@@ -91,7 +92,7 @@ function MapLayerManagerProvider({ children }: IMapLayerManagerProviderProps) {
       activeLayers,
       setActiveLayers,
       map,
-      setMap,
+      setMap
     }),
     [activeLayers, setActiveLayers, map, setMap]
   )

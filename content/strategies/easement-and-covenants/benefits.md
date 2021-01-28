@@ -1,0 +1,6 @@
+- An easement or other restriction can be limited to a particular part of a site, a particular purpose, or a specific period. 
+- The owner can retain ownership of the property and may be able to use areas, not at risk. 
+- The cost for a covenant or statutory right-of-way is typically much less than a fee simple acquisition. 
+- A covenant may be used in conjunction with other tools such as a subdivision, building, or land use regulation. 
+- A conservation easement may be considered a charitable gift by the Canada Revenue Agency. 
+- A covenant may be negotiated as part of the development approval process with no direct cost to the local government.
