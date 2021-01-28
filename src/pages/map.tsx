@@ -1,13 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout/Layout'
-import SEO from '../components/SEO'
-import MapComponent from '../components/Map/Map'
 import { MapLayerManagerProvider } from '../components/Data/MapLayerManager'
+import Layout from '../components/Layout/Layout'
+import MapComponent from '../components/Map/Map'
+import SEO from '../components/SEO'
+import SitePageProps from '../@types/SitePageProps'
 
-const Map = (props) => {
+const Map = (props: SitePageProps): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
@@ -22,11 +22,6 @@ const Map = (props) => {
 }
 
 export default Map
-
-Map.propTypes = {
-  data: PropTypes.object,
-  location: PropTypes.object
-}
 
 export const pageQuery = graphql`
   query {

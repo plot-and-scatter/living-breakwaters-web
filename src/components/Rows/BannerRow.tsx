@@ -39,5 +39,3 @@ const BannerRow = (props: Props): JSX.Element => {
 }
 
 export default BannerRow
-
-BannerRow.propTypes = {}

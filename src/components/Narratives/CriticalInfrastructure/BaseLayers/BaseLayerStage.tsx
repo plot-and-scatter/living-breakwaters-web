@@ -1,21 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import CriticalInfrastructureGround from './CriticalInfrastructureGround'
 import CriticalInfrastructureSeaLevel from './CriticalInfrastructureSeaLevel'
-import SeaSurge from './SeaSurge'
+import CriticalInfrastructureSeaSurge from './CriticalInfrastructureSeaSurge'
 
-const BaseLayerStage = ({ stage }) => {
+interface Props {
+  stage: number
+}
+
+const BaseLayerStage = ({ stage }: Props): JSX.Element => {
   return (
     <g id={`groundwater-${stage}`}>
-      <SeaSurge stage={stage} />
+      <CriticalInfrastructureSeaSurge stage={stage} />
       <CriticalInfrastructureSeaLevel stage={stage} />
-      <CriticalInfrastructureGround stage={stage} />
+      <CriticalInfrastructureGround />
     </g>
   )
-}
-BaseLayerStage.propTypes = {
-  stage: PropTypes.number
 }
 
 export default BaseLayerStage

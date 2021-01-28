@@ -30,15 +30,12 @@ const NarrativeInput = ({
     [setNarrativeStage]
   )
 
-  console.log('narrativeStage', narrativeStage)
-
   return (
     <div className="NarrativeInput">
       <div className="mt-3 d-flex align-items-center justify-content-between">
         {stages}
       </div>
       <input
-        defaultValue={0}
         type="range"
         min="0"
         max="2"

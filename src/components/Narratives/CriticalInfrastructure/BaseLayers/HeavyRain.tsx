@@ -1,13 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
 import { TimelineLite } from 'gsap'
+import React from 'react'
 
 import './HeavyRain.scss'
 
 let heavyRainTimeline
 
-export const toggleRainStorm = (id, toggleVar) => {
+export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
   const el = document.getElementById(id)
   if (el) {
     if (heavyRainTimeline) heavyRainTimeline.clear()
@@ -43,7 +41,7 @@ const rain = (xOffset) => (
   />
 )
 
-const HeavyRain = ({ stage }) => {
+const HeavyRain = (): JSX.Element => {
   const totalWidth = 1963
   const rainLineSpacing = 20
 
@@ -63,7 +61,3 @@ const HeavyRain = ({ stage }) => {
 }
 
 export default HeavyRain
-
-HeavyRain.propTypes = {
-  stage: PropTypes.number
-}

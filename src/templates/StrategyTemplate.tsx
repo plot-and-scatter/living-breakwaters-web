@@ -1,20 +1,14 @@
 import { Link, graphql } from 'gatsby'
 import React, { useEffect, useRef } from 'react'
 
-import FixTypeLater from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
+import SitePageProps from '../@types/SitePageProps'
 import StrategySelect from './StrategySelect'
 
 import './Strategies.scss'
 
-interface Props {
-  data: FixTypeLater
-  location: FixTypeLater
-  pageContext: FixTypeLater
-}
-
-const StrategyTemplate = (props: Props): JSX.Element => {
+const StrategyTemplate = (props: SitePageProps): JSX.Element => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
 

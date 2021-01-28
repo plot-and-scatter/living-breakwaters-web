@@ -77,7 +77,7 @@ function useMapLayerManager() {
 
 interface IMapLayerManagerProviderProps {
   children: React.ReactNode
-  baseLayers: FixTypeLater[]
+  baseLayers?: FixTypeLater[]
 }
 
 function MapLayerManagerProvider({ children }: IMapLayerManagerProviderProps) {

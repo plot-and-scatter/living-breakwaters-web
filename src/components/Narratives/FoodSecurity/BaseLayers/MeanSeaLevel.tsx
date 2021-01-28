@@ -1,9 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 
 const WIDTH = 700
 
-const MeanSeaLevel = ({ stage }) => {
+const MeanSeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
   const d =
     stage === 0
       ? `M0 ${WIDTH} H${WIDTH} V315.5 H-${WIDTH}`
@@ -15,7 +16,3 @@ const MeanSeaLevel = ({ stage }) => {
 }
 
 export default MeanSeaLevel
-
-MeanSeaLevel.propTypes = {
-  stage: PropTypes.number
-}

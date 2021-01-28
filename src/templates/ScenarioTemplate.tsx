@@ -1,17 +1,14 @@
 import { Link, graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
 
-import FixTypeLater from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
+import SitePageProps from '../@types/SitePageProps'
 
-interface Props {
-  data: FixTypeLater
-  pageContext: FixTypeLater
-}
-
-const ScenarioTemplate = ({ data, pageContext }: Props): JSX.Element => {
+const ScenarioTemplate = ({
+  data,
+  pageContext
+}: SitePageProps): JSX.Element => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
@@ -75,11 +72,7 @@ const ScenarioTemplate = ({ data, pageContext }: Props): JSX.Element => {
 
 export default ScenarioTemplate
 
-ScenarioTemplate.propTypes = {
-  data: PropTypes.object,
-  pageContext: PropTypes.object,
-  location: PropTypes.object
-}
+ScenarioTemplate.propTypes = {}
 
 export const pageQuery = graphql`
   query ScenarioBySlug($slug: String!) {

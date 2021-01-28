@@ -1,13 +1,8 @@
 import { CSSPlugin } from 'gsap/CSSPlugin'
 import { TimelineMax, gsap } from 'gsap'
-import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 
-import { useCallback } from 'react'
-import { useEffect } from 'react'
-import { useRef } from 'react'
-import { useState } from 'react'
 import FixTypeLater from '../../Types/FixTypeLater'
 import HotspotElement from './HotspotElement'
 
@@ -135,13 +130,6 @@ const Hotspot = ({
       />
     </g>
   )
-}
-
-Hotspot.propTypes = {
-  xOffset: PropTypes.number,
-  yOffset: PropTypes.number,
-  title: PropTypes.string,
-  text: PropTypes.any
 }
 
 export default Hotspot

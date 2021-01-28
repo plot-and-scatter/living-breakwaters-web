@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import SitePageProps from '../@types/SitePageProps'
 
-import FixTypeLater from '../components/Types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 
-const NotFoundPage = (props: FixTypeLater): JSX.Element => {
+const NotFoundPage = (props: SitePageProps): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 

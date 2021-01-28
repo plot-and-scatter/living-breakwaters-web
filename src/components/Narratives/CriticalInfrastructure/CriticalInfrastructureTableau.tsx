@@ -1,17 +1,15 @@
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { Power2, TimelineMax, gsap } from 'gsap'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
-import { toggleSeaSurge } from './BaseLayers/SeaSurge'
-import { useCallback } from 'react'
-import { useEffect } from 'react'
+import { toggleSeaSurge } from './BaseLayers/CriticalInfrastructureSeaSurge'
 import { useNarrative } from '../NarrativeContext'
-import { useState } from 'react'
 import AntennaTower from '../PlaceableSVGs/Buildings/AntennaTower'
 import BaseLayerStage from './BaseLayers/BaseLayerStage'
 import Building1 from '../PlaceableSVGs/Buildings/Building1'
 import Bush2 from '../PlaceableSVGs/Plants/Bush2'
 import Cypress from '../PlaceableSVGs/Trees/Cypress'
+import FixTypeLater from '../../Types/FixTypeLater'
 import Harbor from '../PlaceableSVGs/Maritime/Harbor'
 import HeavyRain, { toggleRainStorm } from './BaseLayers/HeavyRain'
 import Hotspot from '../Hotspot/Hotspot'
@@ -22,9 +20,8 @@ import ShippingPopover from './Popovers/ShippingPopover'
 import SVGLinearGradient from '../PlaceableSVGs/Helpers/SVGLinearGradient'
 import TableauProps from '../../../@types/TableauProps'
 
-import './CriticalInfrastructureTableau.scss'
 import '../PlaceableSVGs/Elements.scss'
-import FixTypeLater from '../../Types/FixTypeLater'
+import './CriticalInfrastructureTableau.scss'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -63,11 +60,6 @@ const CriticalInfrastructureTableau = ({
   const [zoomXY] = useState([1963, 519])
 
   const svgRef = useRef(null)
-
-  const zoomCallback = useCallback(() => {
-    console.log('Zooming!')
-    // d3.select(svgRef.current).attr("transform", d3.event.transform)
-  }, [zoomXY])
 
   const timeline = useRef<TimelineMax>()
   const groundLevelRef = useRef()
@@ -116,8 +108,6 @@ const CriticalInfrastructureTableau = ({
           ease: Power2.easeInOut
         })
   }, [narrativeStage])
-
-  console.log('narrativeStage', narrativeStage)
 
   return (
     <div className="CriticalInfrastructureTableau">

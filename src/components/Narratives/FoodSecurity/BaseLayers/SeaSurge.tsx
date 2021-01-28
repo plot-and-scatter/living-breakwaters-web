@@ -1,12 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { gsap } from 'gsap'
+import React from 'react'
 
-export const toggleSeaSurge = (className, toggleVar) => {
+import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+
+export const toggleSeaSurge = (className: string, toggleVar: boolean): void => {
   const elements = document.getElementsByClassName(className)
   console.log('elements', elements)
   const elementArray = Array.from(elements)
-  for (let el of elementArray) {
+  for (const el of elementArray) {
     if (el) {
       if (toggleVar) {
         gsap.to(el, { y: -32, duration: 1 })
@@ -17,7 +18,7 @@ export const toggleSeaSurge = (className, toggleVar) => {
   }
 }
 
-const SeaSurge = ({ stage }) => {
+const SeaSurge = ({ stage }: NarrativeStageProps): JSX.Element => {
   const d =
     stage === 0
       ? 'M0 315.5 h760 l50 50 h1400 v80 h-2410 v-130'
@@ -29,7 +30,3 @@ const SeaSurge = ({ stage }) => {
 }
 
 export default SeaSurge
-
-SeaSurge.propTypes = {
-  stage: PropTypes.number
-}

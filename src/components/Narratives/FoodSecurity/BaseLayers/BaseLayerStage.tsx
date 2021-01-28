@@ -1,13 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import AgricultureGround from './AgricultureGround'
 import FreshWater from './FreshWater'
 import MeanSeaLevel from './MeanSeaLevel'
+import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 import SaltwaterWedge from './SaltwaterWedge'
 import SeaSurge from './SeaSurge'
 
-const BaseLayerStage = ({ stage }) => {
+const BaseLayerStage = ({ stage }: NarrativeStageProps): JSX.Element => {
   return (
     <g id={`groundwater-${stage}`}>
       <SeaSurge stage={stage} />
@@ -17,9 +17,6 @@ const BaseLayerStage = ({ stage }) => {
       <FreshWater stage={stage} />
     </g>
   )
-}
-BaseLayerStage.propTypes = {
-  stage: PropTypes.number
 }
 
 export default BaseLayerStage
