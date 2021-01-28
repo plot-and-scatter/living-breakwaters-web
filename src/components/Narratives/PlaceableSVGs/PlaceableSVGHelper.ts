@@ -1,4 +1,5 @@
 import { SVG_FRAME_X } from '../SVGFrame'
+import { ViewBox } from '../../../@types/ViewBox'
 
 export const attributesForPlacedItem = (
   widthPc = 0.1,
@@ -18,4 +19,13 @@ export const attributesForPlacedItem = (
     x: placedItemX,
     y: `${placedItemYPC}%`
   }
+}
+
+export const viewBox = (
+  x: number,
+  y: number,
+  width: number,
+  height: number
+): ViewBox => {
+  return { x, y, width, height }
 }
