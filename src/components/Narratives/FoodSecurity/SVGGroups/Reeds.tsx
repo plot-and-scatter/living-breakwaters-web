@@ -3,7 +3,7 @@ import SVGFrameProps from '../../../../@types/SVGGroupProps'
 
 import './Reeds.scss'
 
-const Reeds = ({ narrativeStage }: SVGFrameProps) => {
+const Reeds = ({ narrativeStage }: SVGFrameProps): JSX.Element => {
   const reedsClassName = `reeds reeds-st${narrativeStage}`
   const rotation = narrativeStage == 3 ? -30 : 0
   return (
