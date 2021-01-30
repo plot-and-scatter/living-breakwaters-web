@@ -1,5 +1,5 @@
 import React from 'react'
-import Roots from './PlaceableSVGs/Trees/Roots'
+import Roots from '../PlaceableSVGs/Trees/Roots'
 
 import SVGFrame from './SVGFrame'
 

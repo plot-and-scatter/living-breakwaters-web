@@ -1,11 +1,11 @@
 import React from 'react'
 
-import FixTypeLater from '../../@types/FixTypeLater'
-import NarrativeSelect from './NarrativeSelect'
-import Tableau from './Tableau'
+import FixTypeLater from '../../../@types/FixTypeLater'
+import NarrativeSelect from '../NarrativeSelect'
+import Tableau from '../Tableau'
 
 import './NarrativeFrame.scss'
-import { useNarrative } from './NarrativeContext'
+import { useNarrative } from '../NarrativeContext'
 import SVGFrame from './SVGFrame'
 import SVGFrameExample from './SVGFrameExample'
 

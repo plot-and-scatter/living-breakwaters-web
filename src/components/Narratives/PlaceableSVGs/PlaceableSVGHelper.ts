@@ -1,4 +1,4 @@
-import { SVG_FRAME_X } from '../SVGFrame'
+import { SVG_FRAME_X } from '../Frames/SVGFrame'
 import { ViewBox } from '../../../@types/ViewBox'
 
 export const attributesForPlacedItem = (
