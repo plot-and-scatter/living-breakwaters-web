@@ -1,19 +1,15 @@
 import React from 'react'
 
+import { viewBox } from '../PlaceableSVGHelper'
+import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
-const House1 = ({ xOffset, yOffset }: PlaceableSVGProps): JSX.Element => {
-  const baseXTransform = 0 * 1
-  const baseYTransform = -30 * 1
-
-  const xTransform = baseXTransform + (xOffset || 0)
-  const yTransform = baseYTransform + (yOffset || 0)
-
+const House1 = (props: PlaceableSVGProps): JSX.Element => {
   return (
-    <g
-      transform={`translate(${xTransform}, ${yTransform})`}
-      id="House1"
-      className="st322"
+    <PlaceableSVG
+      viewBox={viewBox(962, 374, 64, 51)}
+      defaultScale={0.5}
+      {...props}
     >
       <path
         className="st325"
@@ -31,7 +27,7 @@ const House1 = ({ xOffset, yOffset }: PlaceableSVGProps): JSX.Element => {
         className="st325"
         d="M1000.2 383.5c.1-.7 0-1.1-.9-1h-5.6c-1-.1-.9.5-1 1m0 18.1h7.2c1 0 1.4.3 1.2 1.8h-9.4c-.3-1.1 0-1.6 1-1.8m0-18l7 .2h1l.6.6-.8.5h-8c-.3 0-.6-.4-.8-.6l.9-.6m9.1 31.5c.1-1 0-1.4-1.2-1.4h-8.2c-1 0-1.3.5-1 1.4m16.5-15.7l-2.3-.2v8.5h8.6v-8.3h-6.1m-26.4 0h6v8.2H979v-8.4l2.5.2m18.4-14.3v6.2h-6.8v-6.2m14.9 14.4v8m-22.9-8.1v8m-3.9-8v8m30.4-7.9v8M998 385.2v6m-12.4 12.3l2 .1m-8.3 0h2m32.7 0h-2m-16.7-18.4l-.1 6m12.6 12.3l-2 .1m-33.6 10.7V393m49.1 21.2V393"
       />
-    </g>
+    </PlaceableSVG>
   )
 }
 
