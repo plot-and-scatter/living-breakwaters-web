@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './SVGFrame.scss'
+import './SVGOuterFrame.scss'
 
 interface Props {
   id: string
@@ -10,7 +10,7 @@ interface Props {
 export const SVG_FRAME_X = 800
 export const SVG_FRAME_Y = 350
 
-const SVGFrame = ({ id, children }: Props): JSX.Element => {
+const SVGOuterFrame = ({ id, children }: Props): JSX.Element => {
   return (
     <div className="SVGFrame">
       <svg id={id} viewBox={`0 0 ${SVG_FRAME_X} ${SVG_FRAME_Y}`}>
@@ -20,4 +20,4 @@ const SVGFrame = ({ id, children }: Props): JSX.Element => {
   )
 }
 
-export default SVGFrame
+export default SVGOuterFrame
