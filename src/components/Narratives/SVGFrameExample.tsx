@@ -1,5 +1,5 @@
 import React from 'react'
-import Seaweed from './PlaceableSVGs/Plants/Seaweed'
+import Roots from './PlaceableSVGs/Trees/Roots'
 
 import SVGFrame from './SVGFrame'
 
@@ -7,7 +7,7 @@ const SVGFrameExample = (): JSX.Element => {
   return (
     <div className="SVGFrameExample">
       <SVGFrame id="Example">
-        <Seaweed />
+        <Roots />
       </SVGFrame>
     </div>
   )
