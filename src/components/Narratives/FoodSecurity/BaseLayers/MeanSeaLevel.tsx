@@ -1,14 +1,21 @@
 import React from 'react'
 
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
+import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
+import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
 const WIDTH = 700
 
-const MeanSeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
+interface Props {
+  stage: number
+}
+
+const MeanSeaLevel = (props: Props): JSX.Element => {
   const d =
-    stage === 0
+    props.stage === 0
       ? `M0 ${WIDTH} H${WIDTH} V315.5 H-${WIDTH}`
-      : stage === 1
+      : props.stage === 1
       ? `M0 ${WIDTH} H${WIDTH} V310 H-${WIDTH}`
       : `M0 ${WIDTH} H${WIDTH} V295 H-${WIDTH}`
 

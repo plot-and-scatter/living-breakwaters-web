@@ -37,6 +37,7 @@ import Wheat from '../PlaceableSVGs/Plants/Wheat'
 
 import './FoodSecurityTableau.scss'
 import '../PlaceableSVGs/Elements.scss'
+import SVGFrame from '../Frames/SVGFrame'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -147,174 +148,26 @@ const FoodSecurityTableau = ({
   return (
     <div className="FoodSecurityTableau">
       <div>
-        <svg
-          id="FoodSecurityTableauSVG"
-          data-name="present day"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox={`0 0 ${zoomXY[0]} ${zoomXY[1]}`}
-          ref={svgRef}
-        >
-          <g className="Wrapper" transform={`scale(1)`}>
-            <defs>
-              <SVGLinearGradient idPrefix={'saltwater-wedge'} />
-              <SVGLinearGradient idPrefix={'fresh-water'} />
-              <SVGLinearGradient idPrefix={'mean-sea-level'} />
-              <pattern
-                id="_10_dpi_20_"
-                data-name="10 dpi 20%"
-                width="28.8"
-                height="28.8"
-                patternTransform="matrix(.75 0 0 .75 1.2 -41.7)"
-                patternUnits="userSpaceOnUse"
-              >
-                <path fill="none" d="M0 0h28.8v28.8H0z" />
-                <path
-                  className="cls-2"
-                  d="M28.8 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 30.2a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM28.8 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM14.4 15.8a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 23a1.4 1.4 0 10-1.4-1.4A1.4 1.4 0 007.2 23zM21.6 23a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM7.2 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM21.6 8.6a1.4 1.4 0 10-1.4-1.4 1.4 1.4 0 001.4 1.4zM0 30.2a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 27.4a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 30.2zM0 15.8a1.4 1.4 0 001.4-1.4A1.4 1.4 0 000 13a1.4 1.4 0 00-1.4 1.4A1.4 1.4 0 000 15.8zM28.8 1.4A1.4 1.4 0 0030.2 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0027.4 0a1.4 1.4 0 001.4 1.4zM14.4 1.4A1.4 1.4 0 0015.8 0a1.4 1.4 0 00-1.4-1.4A1.4 1.4 0 0013 0a1.4 1.4 0 001.4 1.4zM0 1.4A1.4 1.4 0 001.4 0 1.4 1.4 0 000-1.4 1.4 1.4 0 00-1.4 0 1.4 1.4 0 000 1.4z"
-                />
-              </pattern>
-            </defs>
-            <HeavyRain />
-            <g id="BaseLayers" data-name="Base Layers" opacity=".9">
-              <BaseLayerStage stage={2} />
-              <BaseLayerStage stage={1} />
-              <BaseLayerStage stage={0} />
-              <SaturatedGround />
-            </g>
-            <g id="GroundLevel" ref={groundLevelRef}>
-              <g id="Trees">
-                <Oak xOffset={680} yOffset={120} />
-                <Oak xOffset={1280} yOffset={136} />
-                <Oak xOffset={1500} yOffset={136} />
-                <Roots xOffset={1529} yOffset={300} />
-                {/* <Oak xOffset={1600} yOffset={150} />  */}
-                <Deadwood />
-                <Bush2 xOffset={1070} yOffset={375} />
-                <Cypress xOffset={1605} yOffset={160} />
-                <Cypress xOffset={1625} yOffset={160} />
-              </g>
-              <g id="Farm">
-                <Farmhouse />
-                <Truck />
-                <Pump xOffset={0} yOffset={0} />
-                <Wheat xOffset={890 + 0} yOffset={273} />
-                <Wheat xOffset={890 + 40} yOffset={272} />
-                <Wheat xOffset={890 + 80} yOffset={271} />
-                <Wheat xOffset={890 + 130} yOffset={270} />
-                <Wheat xOffset={890 + 167} yOffset={269} />
-                <Wheat xOffset={890 + 208} yOffset={269} />
-                <Wheat xOffset={890 + 255} yOffset={268} />
-                <Wheat xOffset={890 + 296} yOffset={268} />
-                <Wheat xOffset={890 + 335} yOffset={267} />
-                <Bush1 xOffset={1650 + 0} yOffset={253} />
-                <Bush1 xOffset={1650 + 40} yOffset={253} />
-                <Bush1 xOffset={1650 + 80} yOffset={253} />
-                <Bush1 xOffset={1650 + 120} yOffset={253} />
-                <Bush1 xOffset={1650 + 200} yOffset={253} />
-                <Bush1 xOffset={1650 + 240} yOffset={253} />
-                <Bush1 xOffset={1650 + 280} yOffset={253} />
-                <Bush1 xOffset={1650 + 320} yOffset={253} />
-                <Well xOffset={10} yOffset={-4} />
-                <Well xOffset={540} yOffset={2} />
-                <Irrigation />
-                <RainOverflow />
-              </g>
-            </g>
-            <g id="OceanLife">
-              <Reeds />
-              <Seaweed />
-              <Grass />
-              <Eelgrass />
-              <BirdOnGround
-                xOffset={400}
-                yOffset={313}
-                xScale={1.5}
-                yScale={1.5}
-              />
-              <FlyingGull1 xOffset={100} yOffset={100} xScale={1} yScale={1} />
-              <FlyingGull2 xOffset={300} yOffset={120} xScale={1} yScale={1} />
-              <FlyingGull3 xOffset={1300} yOffset={100} xScale={1} yScale={1} />
-            </g>
-            <g id="Labels">
-              <text x={1500} y={350}>
-                water table
-              </text>
-              <text x={400} y={450}>
-                saltwater wedge
-              </text>
-              <text
-                x={750}
-                y={465}
-                transform={`rotate(30, ${750}, 465)`}
-                id="Interface"
-                ref={interfaceRef}
-              >
-                interface
-              </text>
-              <text x={1500} y={450}>
-                fresh water
-              </text>
-              <text x={1820} y={425} transform="rotate(-90, 1820, 425)">
-                pumping well
-              </text>
-              <text x={1290} y={425} transform="rotate(-90, 1290, 425)">
-                pumping well
-              </text>
-              <text
-                x={1900}
-                y={325}
-                id="Subsidence"
-                visibility={narrativeStage === 2 ? 'visible' : 'hidden'}
-              >
-                subsidence
-              </text>
-            </g>
-            <g id="Hotspots">
-              <Hotspot
-                xOffset={730}
-                yOffset={300}
-                title={'Flood wall'}
-                narrativeStage={narrativeStage}
-                setNarrativeStage={setNarrativeStage}
-                childElement={
-                  <p>
-                    Coastal squeeze has led to the loss of the intertidal zone.
-                    Hence, a flood wall was constructed to protect the remaining
-                    farmlands in zone 2.
-                  </p>
-                }
-              />
-              <Hotspot
-                xOffset={1200}
-                yOffset={320}
-                title={'Saltwater intrusion'}
-                narrativeStage={narrativeStage}
-                setNarrativeStage={setNarrativeStage}
-                childElement={
-                  <p>
-                    Over time, higher rates of the removal of ground water from
-                    aquifers (for farming) compared to natural rates of recharge
-                    leads to saltwater intrusion into the underground aquifer.
-                  </p>
-                }
-              />
-              <Hotspot
-                xOffset={1700}
-                yOffset={290}
-                title={'Subsidence'}
-                narrativeStage={narrativeStage}
-                setNarrativeStage={setNarrativeStage}
-                childElement={
-                  <p>
-                    Further removal of ground water exacerbates the process of
-                    saltwater intrusion and leading ultimately to subsidence,
-                    i.e., slumping of the soil surface.
-                  </p>
-                }
-              />
-            </g>
+        <SVGFrame id="FoodSecurityTableau">
+          <g id="BaseLayers" data-name="Base Layers" opacity=".9">
+            <BaseLayerStage stage={2} xOffset={0} yOffset={0.7} scale={1} />
+            <BaseLayerStage stage={1} xOffset={0} yOffset={0.7} scale={1} />
+            <BaseLayerStage stage={0} xOffset={0} yOffset={0.7} scale={1} />
+            <SaturatedGround />
           </g>
-        </svg>
+          {/* <g id="GroundLevel" ref={groundLevelRef}>
+            <g id="Trees">
+              <Oak xOffset={680 / 2000} yOffset={120 / 400} />
+              <Oak xOffset={1280 / 2000} yOffset={136 / 400} />
+              <Oak xOffset={1500 / 2000} yOffset={136 / 400} />
+              <Roots xOffset={1529 / 2000} yOffset={300 / 400} />
+              <Deadwood xOffset={0.3} yOffset={0.3 / 400} />
+              <Bush2 xOffset={1070 / 2000} yOffset={375 / 400} />
+              <Cypress xOffset={1605 / 2000} yOffset={160 / 400} />
+              <Cypress xOffset={1625 / 2000} yOffset={160 / 400} />
+            </g>
+          </g> */}
+        </SVGFrame>
       </div>
       <div id="HotspotText"></div>
     </div>

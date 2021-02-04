@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const SVG_FRAME_X = 800
-export const SVG_FRAME_Y = 350
+export const SVG_FRAME_Y = 240
 
 const SVGFrame = ({ id, children }: Props): JSX.Element => {
   return (
