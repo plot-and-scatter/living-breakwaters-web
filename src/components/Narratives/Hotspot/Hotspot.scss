@@ -2,18 +2,16 @@
 
 $hotspotFill: rgba(255, 60, 0, 0.7);
 
-.Hotspot {
-  circle {
-    fill: $hotspotFill;
-    stroke: $hotspotFill;
-    fill-opacity: 0.5;
-    stroke-width: 5;
-    cursor: pointer;
-    &:hover {
-      fill: lighten($hotspotFill, 20%);
-    }
-    transition: fill 1s;
+circle.Hotspot {
+  fill: $hotspotFill;
+  stroke: $hotspotFill;
+  fill-opacity: 0.5;
+  stroke-width: 5;
+  cursor: pointer;
+  &:hover {
+    fill: lighten($hotspotFill, 20%);
   }
+  transition: fill 1s;
 }
 
 #HotspotText {

@@ -124,6 +124,23 @@ const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
             <Farmhouse xOffset={0.68} yOffset={0.495} scale={0.07} />
             <Truck xOffset={0.755} yOffset={0.57} scale={0.04} />
           </g>
+          <g id="Hotspots">
+            <Hotspot
+              xOffset={0.9}
+              yOffset={0.6}
+              scale={0.05}
+              title={'Flood wall'}
+              narrativeStage={narrativeStage}
+              setNarrativeStage={setNarrativeStage}
+              childElement={
+                <p>
+                  Coastal squeeze has led to the loss of the intertidal zone.
+                  Hence, a flood wall was constructed to protect the remaining
+                  farmlands in zone 2.
+                </p>
+              }
+            />
+          </g>
         </SVGFrame>
       </div>
       <div id="HotspotText"></div>

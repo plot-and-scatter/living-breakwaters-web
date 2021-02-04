@@ -7,40 +7,32 @@ import FixTypeLater from '../../../@types/FixTypeLater'
 import HotspotElement from './HotspotElement'
 
 import './Hotspot.scss'
+import PlaceableSVG from '../PlaceableSVGs/PlaceableSVG'
+import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
+import { viewBox } from '../PlaceableSVGs/PlaceableSVGHelper'
 
 if (gsap) gsap.registerPlugin(CSSPlugin)
 
 const BASE_RADIUS = 40
 const EXPANDED_RADIUS = BASE_RADIUS + 5
 
-interface Props {
+interface Props extends PlaceableSVGProps {
   childElement: React.ReactNode
+  width?: number
   height?: number
   narrativeStage: number
   setNarrativeStage: (narrativeStage: number) => void
   title: string
-  width?: number
-  xOffset: number
-  yOffset: number
 }
 
-const Hotspot = ({
-  childElement,
-  height,
-  narrativeStage,
-  setNarrativeStage,
-  title,
-  width,
-  xOffset,
-  yOffset
-}: Props): JSX.Element => {
+const Hotspot = (props: Props): JSX.Element => {
   const [showHotspot, setShowHotspot] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [clientX, setClientX] = useState(0)
   const [clientY, setClientY] = useState(0)
 
-  const _width = width || 300
-  const _height = height || 200
+  const _width = props.width || 300
+  const _height = props.height || 200
 
   const hotspotClick = useCallback(
     (e) => {
@@ -87,16 +79,16 @@ const Hotspot = ({
     if (showHotspot) {
       ReactDOM.render(
         <HotspotElement
-          title={title}
-          height={height}
-          width={width}
+          title={props.title}
+          height={props.height}
+          width={props.width}
           onClick={() => {
             setShowHotspot(false)
           }}
-          narrativeStage={narrativeStage}
-          setNarrativeStage={setNarrativeStage}
+          narrativeStage={props.narrativeStage}
+          setNarrativeStage={props.setNarrativeStage}
         >
-          {childElement}
+          {props.childElement}
         </HotspotElement>,
         el
       )
@@ -110,25 +102,32 @@ const Hotspot = ({
       ReactDOM.unmountComponentAtNode(el)
       el.style.visibility = 'hidden'
     }
-  }, [showHotspot, childElement])
+  }, [showHotspot, props.childElement])
 
   useEffect(() => {
     isHovered ? timeline.current.resume() : timeline.current.pause()
   }, [isHovered])
 
   return (
-    <g className="Hotspot">
+    <PlaceableSVG
+      viewBox={viewBox(
+        -EXPANDED_RADIUS - 2.5,
+        -EXPANDED_RADIUS - 2.5,
+        EXPANDED_RADIUS * 2 + 5,
+        EXPANDED_RADIUS * 2 + 5
+      )}
+      defaultScale={0.25}
+      {...props}
+    >
       <circle
         ref={circleRef}
-        className="animate"
+        className="Hotspot animate"
         r={BASE_RADIUS}
-        cx={xOffset || 0}
-        cy={yOffset || 0}
         onClick={hotspotClick}
         onMouseEnter={hotspotMouseEnter}
         onMouseLeave={hotspotMouseLeave}
       />
-    </g>
+    </PlaceableSVG>
   )
 }
 
