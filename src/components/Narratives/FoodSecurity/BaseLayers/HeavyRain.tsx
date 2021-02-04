@@ -1,5 +1,9 @@
 import { TimelineLite } from 'gsap'
-import React from 'react'
+import React, { useEffect } from 'react'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
+import { useNarrative } from '../../NarrativeContext'
+import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
+import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
 import './HeavyRain.scss'
 
@@ -41,9 +45,15 @@ const rain = (xOffset) => (
   />
 )
 
-const HeavyRain = (): JSX.Element => {
+const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
+  const { showRain } = useNarrative()
+
   const totalWidth = 1963
   const rainLineSpacing = 20
+
+  useEffect(() => {
+    toggleRainStorm('HeavyRain', showRain)
+  }, [showRain])
 
   const rainLines = []
 
@@ -52,11 +62,17 @@ const HeavyRain = (): JSX.Element => {
   }
 
   return (
-    <g id="HeavyRain" className="HeavyRain">
-      <g className="Rainfall" visibility="hidden" opacity={0}>
-        {rainLines}
+    <PlaceableSVG
+      viewBox={viewBox(0, -80, totalWidth, 400)}
+      defaultScale={1}
+      {...props}
+    >
+      <g id="HeavyRain" className="HeavyRain">
+        <g className="Rainfall" visibility="visible" opacity={1}>
+          {rainLines}
+        </g>
       </g>
-    </g>
+    </PlaceableSVG>
   )
 }
 

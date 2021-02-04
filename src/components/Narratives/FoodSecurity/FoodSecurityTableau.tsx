@@ -42,20 +42,9 @@ import Land from './SVGGroups/Land'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
-const FoodSecurityTableau = ({
-  showRain,
-  showStorm
-}: TableauProps): JSX.Element => {
+const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
-
-  console.log('narrativeStage', narrativeStage)
-
-  const [rainVisible] = useState(showRain)
-  const [stormSurgeVisible] = useState(showStorm)
-  const [zoomXY] = useState([1963, 519])
-
-  const svgRef = useRef(null)
 
   const timeline = useRef<TimelineMax>()
   const groundLevelRef = useRef()
@@ -64,14 +53,6 @@ const FoodSecurityTableau = ({
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
   }, [])
-
-  useEffect(() => {
-    toggleSeaSurge('sea-surge', stormSurgeVisible)
-  }, [showRain])
-
-  useEffect(() => {
-    toggleRainStorm('HeavyRain', rainVisible)
-  }, [showStorm])
 
   useEffect(() => {
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
@@ -125,7 +106,8 @@ const FoodSecurityTableau = ({
     <div className="FoodSecurityTableau">
       <div>
         <SVGFrame id="FoodSecurityTableau">
-          <Land />
+          <HeavyRain xOffset={0} yOffset={0.34} />
+          {/* <Land /> */}
           {/* <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={680 / 2000} yOffset={120 / 400} />
