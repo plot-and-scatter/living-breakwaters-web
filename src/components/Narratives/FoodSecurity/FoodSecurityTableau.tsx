@@ -111,14 +111,18 @@ const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
           <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={0.33} yOffset={0.4} scale={0.08} />
-              <Oak xOffset={0.64} yOffset={0.435} scale={0.07} />
-              <Oak xOffset={0.75} yOffset={0.44} scale={0.08} />
-              <Roots xOffset={0.773} yOffset={0.68} scale={0.03} />
               <Deadwood xOffset={0.335} yOffset={0.565} scale={0.015} />
               <Bush2 xOffset={0.35} yOffset={0.545} scale={0.015} />
+              <Oak xOffset={0.635} yOffset={0.435} scale={0.07} />
+              <Roots xOffset={0.783} yOffset={0.685} scale={0.03} />
+              <Oak xOffset={0.76} yOffset={0.43} scale={0.08} />
               <Cypress xOffset={0.855} yOffset={0.42} scale={0.02} />
               <Cypress xOffset={0.84} yOffset={0.42} scale={0.02} />
             </g>
+          </g>
+          <g id="Farm">
+            <Farmhouse xOffset={0.68} yOffset={0.495} scale={0.07} />
+            <Truck xOffset={0.755} yOffset={0.57} scale={0.04} />
           </g>
         </SVGFrame>
       </div>
