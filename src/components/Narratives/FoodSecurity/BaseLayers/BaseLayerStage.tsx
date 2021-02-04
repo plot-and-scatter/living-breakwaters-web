@@ -1,19 +1,20 @@
 import React from 'react'
 
+import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 import AgricultureGround from './AgricultureGround'
 import FreshWater from './FreshWater'
 import MeanSeaLevel from './MeanSeaLevel'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import SaltwaterWedge from './SaltwaterWedge'
 import SeaSurge from './SeaSurge'
-import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
-import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
-import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 
 const BaseLayerStage = (props: Props): JSX.Element => {
   const { stage } = props
+
   return (
     <PlaceableSVG
       viewBox={viewBox(0, 38, 1962, 520)}

@@ -38,33 +38,9 @@ import Wheat from '../PlaceableSVGs/Plants/Wheat'
 import './FoodSecurityTableau.scss'
 import '../PlaceableSVGs/Elements.scss'
 import SVGFrame from '../Frames/SVGFrame'
+import Land from './SVGGroups/Land'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
-
-const itemHelper = (objClass, id, index) => {
-  return gsap.to(
-    `#groundwater-0 .${objClass}`,
-    {
-      morphSVG: {
-        shape: `#groundwater-${id} .${objClass}`,
-        shapeIndex: 0
-      },
-      ease: Power2.easeInOut,
-      duration: 1
-    } as FixTypeLater, // NB: the morphSVG argument is not in the GSAP typings
-    index
-  )
-}
-
-const chainHelper = (id) => {
-  return [
-    itemHelper('saltwater-wedge', id, id - 1),
-    itemHelper('fresh-water', id, id - 1),
-    itemHelper('mean-sea-level', id, id - 1),
-    itemHelper('ground', id, id - 1),
-    itemHelper('sea-surge', id, id - 1)
-  ]
-}
 
 const FoodSecurityTableau = ({
   showRain,
@@ -72,6 +48,8 @@ const FoodSecurityTableau = ({
 }: TableauProps): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
+
+  console.log('narrativeStage', narrativeStage)
 
   const [rainVisible] = useState(showRain)
   const [stormSurgeVisible] = useState(showStorm)
@@ -85,8 +63,6 @@ const FoodSecurityTableau = ({
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
-    timeline.current.add(chainHelper(1))
-    timeline.current.add(chainHelper(2))
   }, [])
 
   useEffect(() => {
@@ -149,12 +125,7 @@ const FoodSecurityTableau = ({
     <div className="FoodSecurityTableau">
       <div>
         <SVGFrame id="FoodSecurityTableau">
-          <g id="BaseLayers" data-name="Base Layers" opacity=".9">
-            <BaseLayerStage stage={2} xOffset={0} yOffset={0.7} scale={1} />
-            <BaseLayerStage stage={1} xOffset={0} yOffset={0.7} scale={1} />
-            <BaseLayerStage stage={0} xOffset={0} yOffset={0.7} scale={1} />
-            <SaturatedGround />
-          </g>
+          <Land />
           {/* <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={680 / 2000} yOffset={120 / 400} />
