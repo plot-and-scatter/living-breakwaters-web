@@ -5,18 +5,17 @@ export const attributesForPlacedItem = (
   widthPc = 0.5,
   xPc = 0.5,
   yPc = 0.5
-): { width: number; x: number; y: string } => {
+): { width: string; x: string; y: string } => {
   const scale = widthPc
-  const placedItemWidth = scale * SVG_FRAME_X
-  const placedItemCenterXPercent = xPc
+  const placedItemWidth = scale * 100 // * SVG_FRAME_X
+  const placedItemLeftXPercent = xPc
   const placedItemCenterYPercent = yPc
-  const placedItemX =
-    placedItemCenterXPercent * SVG_FRAME_X - placedItemWidth / 2
+  const placedItemXPC = placedItemLeftXPercent * 100 // * SVG_FRAME_X - placedItemWidth / 2
   const placedItemYPC = placedItemCenterYPercent * 100 - 50
 
   return {
-    width: placedItemWidth,
-    x: placedItemX,
+    width: `${placedItemWidth}%`,
+    x: `${placedItemXPC}%`,
     y: `${placedItemYPC}%`
   }
 }

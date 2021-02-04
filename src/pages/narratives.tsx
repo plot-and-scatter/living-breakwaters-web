@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { ScenarioType } from '../@types/Scenario'
 import FixTypeLater from '../@types/FixTypeLater'
 import Layout from '../components/Layout/Layout'
-import NarrativeFrame from '../components/Narratives/NarrativeFrame'
+import NarrativeFrame from '../components/Narratives/Frames/NarrativeFrame'
 import NarrativeSelection from '../components/Narratives/Selection/NarrativeSelection'
 import SEO from '../components/SEO'
 
