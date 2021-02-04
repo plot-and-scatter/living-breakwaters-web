@@ -108,18 +108,18 @@ const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
         <SVGFrame id="FoodSecurityTableau">
           <HeavyRain xOffset={0} yOffset={0.35} />
           <Land />
-          {/* <g id="GroundLevel" ref={groundLevelRef}>
+          <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
-              <Oak xOffset={680 / 2000} yOffset={120 / 400} />
-              <Oak xOffset={1280 / 2000} yOffset={136 / 400} />
-              <Oak xOffset={1500 / 2000} yOffset={136 / 400} />
-              <Roots xOffset={1529 / 2000} yOffset={300 / 400} />
-              <Deadwood xOffset={0.3} yOffset={0.3 / 400} />
-              <Bush2 xOffset={1070 / 2000} yOffset={375 / 400} />
-              <Cypress xOffset={1605 / 2000} yOffset={160 / 400} />
-              <Cypress xOffset={1625 / 2000} yOffset={160 / 400} />
+              <Oak xOffset={0.33} yOffset={0.47} scale={0.08} />
+              <Oak xOffset={0.64} yOffset={0.52} scale={0.07} />
+              <Oak xOffset={0.75} yOffset={0.505} scale={0.08} />
+              <Roots xOffset={0.773} yOffset={0.758} scale={0.03} />
+              <Deadwood xOffset={0.335} yOffset={0.635} scale={0.015} />
+              <Bush2 xOffset={0.35} yOffset={0.62} scale={0.015} />
+              <Cypress xOffset={0.855} yOffset={0.5} scale={0.02} />
+              <Cypress xOffset={0.84} yOffset={0.5} scale={0.02} />
             </g>
-          </g> */}
+          </g>
         </SVGFrame>
       </div>
       <div id="HotspotText"></div>
