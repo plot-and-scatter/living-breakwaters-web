@@ -35,7 +35,7 @@ const PlaceableSVG = ({
         width={viewBox.width}
         height={viewBox.height}
         fill={`green`}
-        fillOpacity={0.05}
+        fillOpacity={0}
       />
       {children}
     </svg>

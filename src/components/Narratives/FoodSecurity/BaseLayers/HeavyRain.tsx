@@ -41,7 +41,7 @@ const rain = (xOffset) => (
   <path
     key={xOffset}
     className={`RainLine`}
-    d={`M${xOffset} 320 l${RAIN_WIDTH} -400`}
+    d={`M${xOffset} 500 l${RAIN_WIDTH} -500`}
   />
 )
 
@@ -63,12 +63,12 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <PlaceableSVG
-      viewBox={viewBox(0, -80, totalWidth, 400)}
+      viewBox={viewBox(0, -80, totalWidth, 580)}
       defaultScale={1}
       {...props}
     >
       <g id="HeavyRain" className="HeavyRain">
-        <g className="Rainfall" visibility="visible" opacity={1}>
+        <g className="Rainfall" visibility="hidden" opacity={0}>
           {rainLines}
         </g>
       </g>

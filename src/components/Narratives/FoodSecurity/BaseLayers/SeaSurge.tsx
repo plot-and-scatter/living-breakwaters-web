@@ -1,7 +1,8 @@
 import { gsap } from 'gsap'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import { useNarrative } from '../../NarrativeContext'
 
 export const toggleSeaSurge = (className: string, toggleVar: boolean): void => {
   const elements = document.getElementsByClassName(className)
@@ -19,6 +20,12 @@ export const toggleSeaSurge = (className: string, toggleVar: boolean): void => {
 }
 
 const SeaSurge = ({ stage }: NarrativeStageProps): JSX.Element => {
+  const { showSurge } = useNarrative()
+
+  useEffect(() => {
+    toggleSeaSurge('sea-surge', showSurge)
+  }, [showSurge])
+
   const d =
     stage === 0
       ? 'M0 315.5 h760 l50 50 h1400 v80 h-2410 v-130'

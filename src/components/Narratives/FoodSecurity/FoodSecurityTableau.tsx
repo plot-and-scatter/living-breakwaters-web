@@ -106,8 +106,8 @@ const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
     <div className="FoodSecurityTableau">
       <div>
         <SVGFrame id="FoodSecurityTableau">
-          <HeavyRain xOffset={0} yOffset={0.34} />
-          {/* <Land /> */}
+          <HeavyRain xOffset={0} yOffset={0.35} />
+          <Land />
           {/* <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={680 / 2000} yOffset={120 / 400} />
