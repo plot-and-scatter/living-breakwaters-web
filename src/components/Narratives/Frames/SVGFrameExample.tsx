@@ -9,7 +9,14 @@ const SVGFrameExample = (): JSX.Element => {
     <div className="SVGFrameExample">
       <SVGFrame id="Example">
         <Roots xOffset={0.4} yOffset={0.01} scale={0.1} />
-        <SVGInnerFrame id="Foo" width={2} height={1} xOffset={0.01} scale={0.4}>
+        <SVGInnerFrame
+          id="Foo"
+          width={5}
+          height={1}
+          xOffset={0.0}
+          yOffset={0.11}
+          scale={0.5}
+        >
           <Roots scale={0.3} />
         </SVGInnerFrame>
       </SVGFrame>

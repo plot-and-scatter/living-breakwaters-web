@@ -20,7 +20,7 @@ const SVGInnerFrame = (props: Props): JSX.Element => {
         x: 0,
         y: 0,
         width: props.width * SVG_FRAME_X,
-        height: props.width * SVG_FRAME_Y
+        height: props.height * SVG_FRAME_X
       }}
       defaultScale={1}
       {...props}
