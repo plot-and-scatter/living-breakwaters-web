@@ -39,6 +39,7 @@ import './FoodSecurityTableau.scss'
 import '../PlaceableSVGs/Elements.scss'
 import SVGFrame from '../Frames/SVGFrame'
 import Land from './SVGGroups/Land'
+import DikePopover from './Popovers/DikePopover'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -111,6 +112,7 @@ const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
           <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={0.33} yOffset={0.4} scale={0.08} />
+              <Oak xOffset={0.36} yOffset={0.41} scale={0.08} />
               <Deadwood xOffset={0.335} yOffset={0.565} scale={0.015} />
               <Bush2 xOffset={0.35} yOffset={0.545} scale={0.015} />
               <Oak xOffset={0.635} yOffset={0.435} scale={0.07} />
@@ -126,19 +128,13 @@ const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
           </g>
           <g id="Hotspots">
             <Hotspot
-              xOffset={0.9}
+              xOffset={0.38}
               yOffset={0.6}
               scale={0.05}
               title={'Flood wall'}
               narrativeStage={narrativeStage}
               setNarrativeStage={setNarrativeStage}
-              childElement={
-                <p>
-                  Coastal squeeze has led to the loss of the intertidal zone.
-                  Hence, a flood wall was constructed to protect the remaining
-                  farmlands in zone 2.
-                </p>
-              }
+              childElement={<DikePopover narrativeStage={narrativeStage} />}
             />
           </g>
         </SVGFrame>

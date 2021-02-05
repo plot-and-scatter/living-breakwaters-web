@@ -15,12 +15,12 @@ const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
   return (
     <div className="NarrativeFrame row">
       <div className="col-12">
-        <Tableau
+        {/* <Tableau
           activeNarrative={props.activeNarrative}
           showRain={showRain}
           showStorm={showSurge}
-        />
-        {/* <SVGFrameExample /> */}
+        /> */}
+        <SVGFrameExample />
       </div>
       <div className="col-4 mt-4">
         <NarrativeSelect />
