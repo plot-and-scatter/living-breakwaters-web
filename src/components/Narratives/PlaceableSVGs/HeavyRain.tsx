@@ -1,9 +1,9 @@
 import { TimelineLite } from 'gsap'
 import React, { useEffect } from 'react'
-import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
-import { useNarrative } from '../../NarrativeContext'
-import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
-import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
+import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
+import { useNarrative } from '../NarrativeContext'
+import PlaceableSVG from './PlaceableSVG'
+import { viewBox } from './PlaceableSVGHelper'
 
 import './HeavyRain.scss'
 

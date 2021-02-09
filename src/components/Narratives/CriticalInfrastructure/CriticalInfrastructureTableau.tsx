@@ -10,7 +10,6 @@ import Building1 from '../PlaceableSVGs/Buildings/Building1'
 import Bush2 from '../PlaceableSVGs/Plants/Bush2'
 import Cypress from '../PlaceableSVGs/Trees/Cypress'
 import Harbor from '../PlaceableSVGs/Maritime/Harbor'
-import HeavyRain, { toggleRainStorm } from './BaseLayers/HeavyRain'
 import Hotspot from '../Hotspot/Hotspot'
 import House1 from '../PlaceableSVGs/Buildings/House1'
 import Oak from '../PlaceableSVGs/Trees/Oak'
@@ -21,44 +20,15 @@ import TableauProps from '../../../@types/TableauProps'
 
 import '../PlaceableSVGs/Elements.scss'
 import './CriticalInfrastructureTableau.scss'
+import SVGFrame from '../Frames/SVGFrame'
+import HeavyRain from '../PlaceableSVGs/HeavyRain'
+import Land from './SVGGroups/Land'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
-const itemHelper = (objClass, id, index) => {
-  return gsap.to(
-    `#groundwater-0 .${objClass}`,
-    {
-      morphSVG: {
-        shape: `#groundwater-${id} .${objClass}`,
-        shapeIndex: 0
-      },
-      ease: Power2.easeInOut,
-      duration: 1
-    } as FixTypeLater, // NB: the morphSVG argument is not in the GSAP typings
-    index
-  )
-}
-
-const chainHelper = (id) => {
-  return [
-    itemHelper('saltwater-wedge', id, id - 1),
-    itemHelper('fresh-water', id, id - 1),
-    itemHelper('mean-sea-level', id, id - 1),
-    itemHelper('ground', id, id - 1),
-    itemHelper('sea-surge', id, id - 1)
-  ]
-}
-
-const CriticalInfrastructureTableau = ({
-  showRain,
-  showStorm
-}: TableauProps): JSX.Element => {
+const CriticalInfrastructureTableau = (): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
-
-  const [zoomXY] = useState([1963, 519])
-
-  const svgRef = useRef(null)
 
   const timeline = useRef<TimelineMax>()
   const groundLevelRef = useRef()
@@ -66,21 +36,10 @@ const CriticalInfrastructureTableau = ({
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
-    timeline.current.add(chainHelper(1))
-    timeline.current.add(chainHelper(2))
   }, [])
 
   useEffect(() => {
-    toggleSeaSurge('sea-surge', showStorm)
-  }, [showStorm])
-
-  useEffect(() => {
-    toggleRainStorm('HeavyRain', showRain)
-  }, [showRain])
-
-  useEffect(() => {
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
-    // console.log(timeline.current)
     prevNarrativeStage.current = narrativeStage
 
     narrativeStage === 0
@@ -111,15 +70,10 @@ const CriticalInfrastructureTableau = ({
   return (
     <div className="CriticalInfrastructureTableau">
       <div>
-        <svg
-          id="CriticalInfrastructureTableauSVG"
-          data-name="present day"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox={`0 0 ${zoomXY[0]} ${zoomXY[1]}`}
-          ref={svgRef}
-        >
-          <g className="Wrapper" transform={`scale(1)`}>
-            <defs>
+        <SVGFrame id="CriticalInfrastructureTableau">
+          <HeavyRain xOffset={0} yOffset={0.35} />
+          <Land />
+          {/* <defs>
               <SVGLinearGradient idPrefix={'mean-sea-level'} />
               <pattern
                 id="_10_dpi_20_"
@@ -144,50 +98,40 @@ const CriticalInfrastructureTableau = ({
               <path id="SVGID_15_" d="M772.3 412.9h8v4.6h-8z" />
               <path id="SVGID_17_" d="M815.3 415.4h8v4.6h-8z" />
             </defs>
-            <HeavyRain />
             <g id="BaseLayers" data-name="Base Layers" opacity=".9">
               <BaseLayerStage stage={2} />
               <BaseLayerStage stage={1} />
               <BaseLayerStage stage={0} />
-            </g>
-            <g id="Maritime">
-              <Harbor />
-              <RedShip />
-            </g>
-            <g id="GroundLevel" ref={groundLevelRef}>
-              <g id="Trees">
-                <Oak xOffset={1200} yOffset={230} />
-                <Oak xOffset={1280} yOffset={210} />
-                <Oak xOffset={1400} yOffset={190} />
-                <Bush2 />
-                <Cypress xOffset={1350} yOffset={230} />
-                <Cypress xOffset={1375} yOffset={215} />
-              </g>
-              <g id="Buildings">
-                <AntennaTower />
-                <House1 />
-                <Building1 />
-              </g>
-            </g>
-            <g id="Labels"></g>
-            <g id="Hotspots">
-              <Hotspot
-                xOffset={350}
-                yOffset={350}
-                width={700}
-                title={`Shipping ${narrativeStage}`}
-                childElement={
-                  <ShippingPopover
-                    key={narrativeStage}
-                    narrativeStage={narrativeStage}
-                  />
-                }
-                narrativeStage={narrativeStage}
-                setNarrativeStage={setNarrativeStage}
-              />
+            </g> */}
+          <g id="Maritime">
+            {/* <Harbor /> */}
+            {/* <RedShip /> */}
+          </g>
+          <g id="GroundLevel" ref={groundLevelRef}>
+            <g id="Trees"></g>
+            <g id="Buildings">
+              <AntennaTower xOffset={0.41} yOffset={0.6} scale={0.03} />
+              {/* <House1 /> */}
+              {/* <Building1 /> */}
             </g>
           </g>
-        </svg>
+          <g id="Hotspots">
+            <Hotspot
+              xOffset={350}
+              yOffset={350}
+              width={700}
+              title={`Shipping ${narrativeStage}`}
+              childElement={
+                <ShippingPopover
+                  key={narrativeStage}
+                  narrativeStage={narrativeStage}
+                />
+              }
+              narrativeStage={narrativeStage}
+              setNarrativeStage={setNarrativeStage}
+            />
+          </g>
+        </SVGFrame>
       </div>
       <div id="HotspotText"></div>
     </div>

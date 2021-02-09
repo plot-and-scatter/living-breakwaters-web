@@ -17,20 +17,20 @@ const Tableau = ({
   showRain,
   showStorm
 }: Props): JSX.Element => {
-  const tableau = (
+  let tableau = (
     <FoodSecurityTableau showRain={showRain} showStorm={showStorm} />
   )
 
-  // switch (activeNarrative) {
-  //   case ScenarioType.CriticalInfrastructures:
-  //     tableau = (
-  //       <CriticalInfrastructureTableau
-  //         showRain={showRain}
-  //         showStorm={showStorm}
-  //       />
-  //     )
-  //     break
-  // }
+  switch (activeNarrative) {
+    case ScenarioType.CriticalInfrastructures:
+      tableau = (
+        <CriticalInfrastructureTableau
+          showRain={showRain}
+          showStorm={showStorm}
+        />
+      )
+      break
+  }
 
   return <div className="Tableau">{tableau}</div>
 }

@@ -19,7 +19,7 @@ import FlyingGull1 from '../PlaceableSVGs/Fauna/FlyingGull1'
 import FlyingGull2 from '../PlaceableSVGs/Fauna/FlyingGull2'
 import FlyingGull3 from '../PlaceableSVGs/Fauna/FlyingGull3'
 import Grass from '../PlaceableSVGs/Plants/Grass'
-import HeavyRain, { toggleRainStorm } from './BaseLayers/HeavyRain'
+import HeavyRain, { toggleRainStorm } from '../PlaceableSVGs/HeavyRain'
 import Hotspot from '../Hotspot/Hotspot'
 import Irrigation from '../PlaceableSVGs/Objects/Irrigation'
 import Oak from '../PlaceableSVGs/Trees/Oak'
@@ -43,7 +43,7 @@ import DikePopover from './Popovers/DikePopover'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
-const FoodSecurityTableau = (props: TableauProps): JSX.Element => {
+const FoodSecurityTableau = (): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
