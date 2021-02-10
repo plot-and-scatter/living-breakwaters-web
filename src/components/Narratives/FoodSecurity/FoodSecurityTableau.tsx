@@ -19,6 +19,7 @@ import Truck from '../PlaceableSVGs/Vehicles/Truck'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
+import Pump from '../PlaceableSVGs/Buildings/Pump'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -90,8 +91,8 @@ const FoodSecurityTableau = (): JSX.Element => {
           <Land />
           <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
-              <Oak xOffset={0.33} yOffset={0.4} scale={0.08} />
-              <Oak xOffset={0.36} yOffset={0.41} scale={0.08} />
+              <Oak xOffset={0.33} yOffset={0.46} scale={0.055} />
+              <Oak xOffset={0.36} yOffset={0.43} scale={0.065} />
               <Deadwood xOffset={0.335} yOffset={0.565} scale={0.015} />
               <Bush2 xOffset={0.35} yOffset={0.545} scale={0.015} />
               <Oak xOffset={0.635} yOffset={0.435} scale={0.07} />
@@ -100,6 +101,9 @@ const FoodSecurityTableau = (): JSX.Element => {
               <Cypress xOffset={0.855} yOffset={0.42} scale={0.02} />
               <Cypress xOffset={0.84} yOffset={0.42} scale={0.02} />
             </g>
+          </g>
+          <g id="Pump">
+            <Pump xOffset={0.32} yOffset={0.588} scale={0.105} />
           </g>
           <g id="Farm">
             <Farmhouse xOffset={0.68} yOffset={0.495} scale={0.07} />
