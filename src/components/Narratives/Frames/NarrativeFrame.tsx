@@ -1,26 +1,21 @@
 import React from 'react'
 
-import FixTypeLater from '../../../@types/FixTypeLater'
+import { ScenarioType } from '../../../@types/Scenario'
 import NarrativeSelect from '../NarrativeSelect'
 import Tableau from '../Tableau'
 
 import './NarrativeFrame.scss'
-import { useNarrative } from '../NarrativeContext'
-import SVGFrame from './SVGFrame'
-import SVGFrameExample from './SVGFrameExample'
 
-const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
-  const { showRain, showSurge } = useNarrative()
+interface Props {
+  activeNarrative: ScenarioType
+  text: string
+}
 
+const NarrativeFrame = (props: Props): JSX.Element => {
   return (
     <div className="NarrativeFrame row">
       <div className="col-12">
-        <Tableau
-          activeNarrative={props.activeNarrative}
-          showRain={showRain}
-          showStorm={showSurge}
-        />
-        {/* <SVGFrameExample /> */}
+        <Tableau activeNarrative={props.activeNarrative} />
       </div>
       <div className="col-4 mt-4">
         <NarrativeSelect />
@@ -36,7 +31,6 @@ const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
           zones. The rate at which the loss takes place is dependent on factors
           such as the geographical formation of the coast (Doody, 2004).
         </p>
-
         <p>
           Coastal armoring changes the natural dynamics of shoreline sediment
           transport. In coastal and riverine areas, sustained sediment supplies
@@ -47,7 +41,6 @@ const NarrativeFrame = (props: FixTypeLater): JSX.Element => {
           increasingly vulnerable to accelerated surface subsidence, erosion,
           and decline (Anthony et al., 2015).
         </p>
-
         <p>
           Subsidence may also occur due to different forms of underground
           failure (USGS, n.d).3,8 In many areas, large tracks of wetlands have
