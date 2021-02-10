@@ -51,15 +51,6 @@ $meanSeaLevel: lighten(#334455, 10%);
       }
     }
     #Labels {
-      text {
-        font-size: 22px;
-        font-family: $font-family-sans-serif;
-        color: white;
-        fill: white;
-        stroke: black;
-        stroke-width: 0.2px;
-        text-anchor: middle;
-      }
       #Subsidence {
         fill: red;
       }

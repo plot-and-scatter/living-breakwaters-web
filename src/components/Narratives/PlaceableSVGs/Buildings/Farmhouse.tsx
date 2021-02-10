@@ -9,7 +9,7 @@ import './Farmhouse.scss'
 const Farmhouse = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(1339, 158, 133, 136)}
+      viewBoxObj={viewBox(1339, 158, 133, 136)}
       defaultScale={0.5}
       {...props}
     >

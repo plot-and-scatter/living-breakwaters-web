@@ -17,7 +17,7 @@ const BASE_RADIUS = 40
 const EXPANDED_RADIUS = BASE_RADIUS + 5
 
 interface Props extends PlaceableSVGProps {
-  childElement: React.ReactNode
+  children: React.ReactNode
   width?: number
   height?: number
   narrativeStage: number
@@ -88,7 +88,7 @@ const Hotspot = (props: Props): JSX.Element => {
           narrativeStage={props.narrativeStage}
           setNarrativeStage={props.setNarrativeStage}
         >
-          {props.childElement}
+          {props.children}
         </HotspotElement>,
         el
       )
@@ -102,7 +102,7 @@ const Hotspot = (props: Props): JSX.Element => {
       ReactDOM.unmountComponentAtNode(el)
       el.style.visibility = 'hidden'
     }
-  }, [showHotspot, props.childElement])
+  }, [showHotspot, props.children])
 
   useEffect(() => {
     isHovered ? timeline.current.resume() : timeline.current.pause()
@@ -110,7 +110,7 @@ const Hotspot = (props: Props): JSX.Element => {
 
   return (
     <PlaceableSVG
-      viewBox={viewBox(
+      viewBoxObj={viewBox(
         -EXPANDED_RADIUS - 2.5,
         -EXPANDED_RADIUS - 2.5,
         EXPANDED_RADIUS * 2 + 5,

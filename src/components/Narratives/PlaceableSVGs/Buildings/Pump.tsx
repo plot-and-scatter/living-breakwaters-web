@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Pump = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(638, 250, 194, 54)}
+      viewBoxObj={viewBox(638, 250, 194, 54)}
       defaultScale={0.5}
       {...props}
     >

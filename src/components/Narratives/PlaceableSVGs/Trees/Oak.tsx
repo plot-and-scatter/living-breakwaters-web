@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Oak = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(1511, 140, 108, 154)}
+      viewBoxObj={viewBox(1511, 140, 108, 154)}
       defaultScale={0.25}
       {...props}
     >

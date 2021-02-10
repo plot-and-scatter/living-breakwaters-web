@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Truck = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(1476, 258.5, 51.4, 33.2)}
+      viewBoxObj={viewBox(1476, 258.5, 51.4, 33.2)}
       defaultScale={0.25}
       {...props}
     >

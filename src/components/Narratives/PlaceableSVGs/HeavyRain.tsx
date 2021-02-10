@@ -20,12 +20,12 @@ export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
           duration: 1
         })
         .to('.Rainfall', { visibility: 'visible', opacity: 1, duration: 3 })
-        .to('.SaturatedGround', { opacity: 1, duration: 1 })
-        .to('#RainOverflow', { opacity: 1, duration: 1 })
+      // .to('.SaturatedGround', { opacity: 1, duration: 1 })
+      // .to('#RainOverflow', { opacity: 1, duration: 1 })
     } else {
       heavyRainTimeline = new TimelineLite()
-        .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
-        .to('#RainOverflow', { opacity: 0, duration: 0.5 })
+        // .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
+        // .to('#RainOverflow', { opacity: 0, duration: 0.5 })
         .to('.SaturatedGround', { opacity: 0, duration: 0.5 })
         .to('.FoodSecurityTableau svg', {
           backgroundImage: 'linear-gradient(#bbddff, #fff)',
@@ -63,7 +63,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <PlaceableSVG
-      viewBox={viewBox(0, -80, totalWidth, 580)}
+      viewBoxObj={viewBox(0, -80, totalWidth, 580)}
       defaultScale={1}
       {...props}
     >

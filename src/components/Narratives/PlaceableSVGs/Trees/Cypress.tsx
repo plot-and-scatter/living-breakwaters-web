@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Cypress = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(1607, 165, 24, 148)}
+      viewBoxObj={viewBox(1607, 165, 24, 148)}
       defaultScale={0.03}
       {...props}
     >

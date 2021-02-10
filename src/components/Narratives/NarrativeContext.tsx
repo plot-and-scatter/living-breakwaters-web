@@ -44,7 +44,7 @@ function useNarrative(): NarrativeContextReturnType {
   }, [showSurge])
 
   return {
-    narrativeStage,
+    narrativeStage: +narrativeStage,
     setNarrativeStage,
     showRain,
     setShowRain,

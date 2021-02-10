@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Deadwood = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(670, 242, 18, 43)}
+      viewBoxObj={viewBox(670, 242, 18, 43)}
       defaultScale={0.1}
       {...props}
     >
