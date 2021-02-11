@@ -1,4 +1,5 @@
 type PlaceableSVGProps = {
+  extraClasses?: string
   narrativeStage?: number
   xOffset?: number
   yOffset?: number

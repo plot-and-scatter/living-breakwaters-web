@@ -1,6 +1,6 @@
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { Power2, TimelineMax, gsap } from 'gsap'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import { useEffect } from 'react'
 import { useNarrative } from '../NarrativeContext'
@@ -22,6 +22,7 @@ import Truck from '../PlaceableSVGs/Vehicles/Truck'
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
 import Well from '../PlaceableSVGs/Buildings/Well'
+import WellPopover from './Popovers/WellPopover'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -32,6 +33,11 @@ const FoodSecurityTableau = (): JSX.Element => {
   const timeline = useRef<TimelineMax>()
   const groundLevelRef = useRef()
   const interfaceRef = useRef()
+
+  const [isDikePopoverOpen, setIsDikePopoverOpen] = useState<boolean>(false)
+  const [isWellPopoverOpen, setIsWellPopoverOpen] = useState<boolean>(false)
+
+  console.log('isDikePopoverOpen', isDikePopoverOpen)
 
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
@@ -115,17 +121,33 @@ const FoodSecurityTableau = (): JSX.Element => {
               <Cypress xOffset={0.84} yOffset={0.42} scale={0.02} />
             </g>
             <g id="Pump">
-              <Pump xOffset={0.32} yOffset={0.588} scale={0.105} />
+              <Pump
+                xOffset={0.32}
+                yOffset={0.588}
+                scale={0.105}
+                extraClasses={isDikePopoverOpen ? 'Red' : ''}
+              />
             </g>
             <g id="Farm">
               <Farmhouse
                 xOffset={0.68}
-                yOffset={narrativeStage === 2 ? 0.52 : 0.495}
+                yOffset={
+                  narrativeStage === 0
+                    ? 0.495
+                    : narrativeStage === 1
+                    ? 0.5
+                    : 0.52
+                }
                 scale={0.07}
                 rotate={narrativeStage === 2 ? 5 : 0}
               />
               <Truck xOffset={0.755} yOffset={0.57} scale={0.04} />
-              <Well xOffset={0.64} yOffset={0.755} scale={0.008} />
+              <Well
+                extraClasses={isWellPopoverOpen ? 'Red' : ''}
+                xOffset={0.64}
+                yOffset={0.785}
+                scale={0.0095}
+              />
               <Well xOffset={0.9} yOffset={0.765} scale={0.008} />
             </g>
             <g id="Labels">
@@ -188,7 +210,7 @@ const FoodSecurityTableau = (): JSX.Element => {
                 subsidence
               </text> */}
             </g>
-            {/* <g id="Hotspots">
+            <g id="Hotspots">
               <Hotspot
                 xOffset={0.38}
                 yOffset={0.6}
@@ -196,10 +218,28 @@ const FoodSecurityTableau = (): JSX.Element => {
                 title={'Flood wall'}
                 narrativeStage={narrativeStage}
                 setNarrativeStage={setNarrativeStage}
+                onOpenCallback={(isOpen: boolean) =>
+                  setIsDikePopoverOpen(isOpen)
+                }
               >
                 <DikePopover narrativeStage={narrativeStage} />
               </Hotspot>
-            </g> */}
+            </g>
+            <g id="Hotspots">
+              <Hotspot
+                xOffset={0.62}
+                yOffset={0.59}
+                scale={0.05}
+                title={'Pumps'}
+                narrativeStage={narrativeStage}
+                setNarrativeStage={setNarrativeStage}
+                onOpenCallback={(isOpen: boolean) =>
+                  setIsWellPopoverOpen(isOpen)
+                }
+              >
+                <WellPopover narrativeStage={narrativeStage} />
+              </Hotspot>
+            </g>
           </g>
         </SVGFrame>
       </div>

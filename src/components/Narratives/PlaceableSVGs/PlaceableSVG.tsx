@@ -16,10 +16,12 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   yOffset?: number
   useGsap?: boolean
   rotate?: number
+  extraClasses?: string
 }
 
 const PlaceableSVG = (props: Props): JSX.Element => {
   const {
+    extraClasses,
     viewBoxObj: vb,
     children,
     xOffset,
@@ -52,7 +54,7 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       props.yOffset - yPc + 0.5
     )
 
-    console.log('attrs', attrs, gRef.current)
+    // console.log('attrs', attrs, gRef.current)
 
     gsap.to(gRef.current, {
       x: ((attrs.x / actualScale) * vb.width) / SVG_FRAME_X,
@@ -64,7 +66,7 @@ const PlaceableSVG = (props: Props): JSX.Element => {
 
   return (
     <svg
-      className="PlaceableSVG"
+      className={`PlaceableSVG ${extraClasses}`}
       ref={elementRef}
       viewBox={`${vb.x} ${vb.y} ${vb.width} ${vb.height}`}
       {...attributesForPlacedItem(actualScale, xPc, yPc)}

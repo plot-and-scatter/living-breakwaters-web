@@ -13,7 +13,7 @@ const DikePopover = (props: Props): JSX.Element => {
     case 2:
       return (
         <p>
-          The entire intertidal zones as lost as sea levels continue to rise.
+          The entire intertidal zones are lost as sea levels continue to rise.
         </p>
       )
     case 1:
@@ -28,7 +28,7 @@ const DikePopover = (props: Props): JSX.Element => {
       return (
         <p>
           A primary dike is constructed to support agricultural production in
-          the intertidal zone
+          the intertidal zone.
         </p>
       )
   }

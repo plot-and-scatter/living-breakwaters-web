@@ -23,6 +23,7 @@ interface Props extends PlaceableSVGProps {
   narrativeStage: number
   setNarrativeStage: (narrativeStage: number) => void
   title: string
+  onOpenCallback?: (isOpen: boolean) => void
 }
 
 const Hotspot = (props: Props): JSX.Element => {
@@ -42,6 +43,9 @@ const Hotspot = (props: Props): JSX.Element => {
       setClientX(_clientX)
       setClientY(e.clientY)
       setShowHotspot(!showHotspot)
+      if (props.onOpenCallback) {
+        props.onOpenCallback(!showHotspot)
+      }
     },
     [setClientX, setClientY, setShowHotspot, showHotspot]
   )
@@ -76,6 +80,7 @@ const Hotspot = (props: Props): JSX.Element => {
 
   useEffect(() => {
     const el = document.getElementById('HotspotText')
+    props.onOpenCallback(showHotspot)
     if (showHotspot) {
       ReactDOM.render(
         <HotspotElement
