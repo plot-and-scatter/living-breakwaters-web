@@ -37,8 +37,6 @@ const FoodSecurityTableau = (): JSX.Element => {
   const [isDikePopoverOpen, setIsDikePopoverOpen] = useState<boolean>(false)
   const [isWellPopoverOpen, setIsWellPopoverOpen] = useState<boolean>(false)
 
-  console.log('isDikePopoverOpen', isDikePopoverOpen)
-
   useEffect(() => {
     timeline.current = new TimelineMax({ paused: true })
   }, [])
@@ -212,6 +210,7 @@ const FoodSecurityTableau = (): JSX.Element => {
             </g>
             <g id="Hotspots">
               <Hotspot
+                index={0}
                 xOffset={0.38}
                 yOffset={0.6}
                 scale={0.05}
@@ -224,9 +223,8 @@ const FoodSecurityTableau = (): JSX.Element => {
               >
                 <DikePopover narrativeStage={narrativeStage} />
               </Hotspot>
-            </g>
-            <g id="Hotspots">
               <Hotspot
+                index={1}
                 xOffset={0.62}
                 yOffset={0.59}
                 scale={0.05}
@@ -243,7 +241,8 @@ const FoodSecurityTableau = (): JSX.Element => {
           </g>
         </SVGFrame>
       </div>
-      <div id="HotspotText"></div>
+      <div className="HotspotText" id="HotspotText0"></div>
+      <div className="HotspotText" id="HotspotText1"></div>
     </div>
   )
 }

@@ -17,6 +17,7 @@ const BASE_RADIUS = 40
 const EXPANDED_RADIUS = BASE_RADIUS + 5
 
 interface Props extends PlaceableSVGProps {
+  index?: number
   children: React.ReactNode
   width?: number
   height?: number
@@ -79,7 +80,7 @@ const Hotspot = (props: Props): JSX.Element => {
   }, [])
 
   useEffect(() => {
-    const el = document.getElementById('HotspotText')
+    const el = document.getElementById('HotspotText' + props.index)
     props.onOpenCallback(showHotspot)
     if (showHotspot) {
       ReactDOM.render(
@@ -97,7 +98,7 @@ const Hotspot = (props: Props): JSX.Element => {
         </HotspotElement>,
         el
       )
-      el.style.left = `${clientX}px`
+      el.style.left = `${clientX - _width / 2}px`
       el.style.top = `${10}px`
       // el.style.marginRight = `50%`
       el.style.width = `${_width + 20}px`
