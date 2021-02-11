@@ -14,9 +14,8 @@ const Text = (props: Props): JSX.Element => {
   return (
     <PlaceableSVG
       viewBoxObj={viewBox(0, 0, 20, 20)}
-      defaultScale={0.01}
+      defaultScale={0.015}
       {...props}
-      style={{ overflow: 'visible' }}
     >
       <g className="Text">
         <text x={10} y={10} dy={5}>

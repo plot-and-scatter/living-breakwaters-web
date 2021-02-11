@@ -5,15 +5,18 @@ import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 import './Farmhouse.scss'
+import { useNarrative } from '../../NarrativeContext'
 
 const Farmhouse = (props: PlaceableSVGProps): JSX.Element => {
+  const { narrativeStage } = useNarrative()
+
   return (
     <PlaceableSVG
       viewBoxObj={viewBox(1339, 158, 133, 136)}
       defaultScale={0.5}
       {...props}
     >
-      <g id="Farmhouse">
+      <g className={`Farmhouse narr-${narrativeStage}`}>
         <path
           className="cls-27"
           d="M1435.2 277.8v39l-15.5-19.5 15.5-19.5zM1403 318.3l15.6-19.7 15.7 19.7zM1402.5 278.2c5.3 6.6 10 12.7 15.2 19l-15.2 19.3zM1434.1 276.5l-15.4 19.6-15.5-19.6zM1366.3 278l15.4 19.3-15.4 19.5zM1398.2 318.1h-30.9l15.4-19.6 7.3 9.2 2.4 3 5.8 7.4zM1398.9 278.2v38.2l-15.2-19 15.2-19.2zM1398.2 276.5l-15.5 19.6-11.5-14.6-2-2.5-2-2.5z"

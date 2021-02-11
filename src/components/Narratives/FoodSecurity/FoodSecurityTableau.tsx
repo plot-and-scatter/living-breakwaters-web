@@ -21,6 +21,7 @@ import Truck from '../PlaceableSVGs/Vehicles/Truck'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
+import Well from '../PlaceableSVGs/Buildings/Well'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -117,30 +118,41 @@ const FoodSecurityTableau = (): JSX.Element => {
               <Pump xOffset={0.32} yOffset={0.588} scale={0.105} />
             </g>
             <g id="Farm">
-              <Farmhouse xOffset={0.68} yOffset={0.495} scale={0.07} />
+              <Farmhouse
+                xOffset={0.68}
+                yOffset={narrativeStage === 2 ? 0.52 : 0.495}
+                scale={0.07}
+                rotate={narrativeStage === 2 ? 5 : 0}
+              />
               <Truck xOffset={0.755} yOffset={0.57} scale={0.04} />
+              <Well xOffset={0.64} yOffset={0.755} scale={0.008} />
+              <Well xOffset={0.9} yOffset={0.765} scale={0.008} />
             </g>
             <g id="Labels">
-              {/* <text x="73%" y="73%">
-                water table
-              </text>
-              <text x="25%" y="80%">
+              <Text xOffset={0.2} yOffset={0.8}>
                 saltwater wedge
-              </text> */}
+              </Text>
               <Text
                 narrativeStage={narrativeStage}
                 rotate={
-                  narrativeStage === 0 ? 0 : narrativeStage === 1 ? 15 : -15
+                  narrativeStage === 0 ? 25 : narrativeStage === 1 ? 20 : 10
                 }
                 xOffset={
-                  narrativeStage === 0 ? 0.5 : narrativeStage === 1 ? 0 : 1
+                  narrativeStage === 0
+                    ? 0.43
+                    : narrativeStage === 1
+                    ? 0.53
+                    : 0.7
                 }
                 yOffset={
-                  narrativeStage === 0 ? 0.5 : narrativeStage === 1 ? 0 : 1
+                  narrativeStage === 0
+                    ? 0.9
+                    : narrativeStage === 1
+                    ? 0.87
+                    : 0.84
                 }
-                scale={0.02}
               >
-                saltwater wedge
+                interface
               </Text>
               {/* <Text
                 xOffset={0.42}

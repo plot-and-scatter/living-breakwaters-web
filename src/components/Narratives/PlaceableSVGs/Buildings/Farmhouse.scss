@@ -6,4 +6,9 @@
     stroke-linecap: round;
     stroke-linejoin: round;
   }
+  &.narr-2 {
+    path {
+      fill: red;
+    }
+  }
 }

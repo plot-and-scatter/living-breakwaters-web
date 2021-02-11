@@ -5,6 +5,8 @@ import { attributesForPlacedItem } from './PlaceableSVGHelper'
 import { SVG_FRAME_X } from '../Frames/SVGFrame'
 import { ViewBox } from '../../../@types/ViewBox'
 
+import './PlaceableSVG.scss'
+
 interface Props extends React.SVGProps<SVGSVGElement> {
   children: React.ReactNode
   defaultScale?: number
@@ -27,6 +29,8 @@ const PlaceableSVG = (props: Props): JSX.Element => {
     rotate
   } = props
 
+  const actualScale = scale || defaultScale || 0.5
+
   const [xPc] = useState<number>(xOffset)
   const [yPc] = useState<number>(yOffset)
 
@@ -43,14 +47,16 @@ const PlaceableSVG = (props: Props): JSX.Element => {
 
   useEffect(() => {
     const attrs = attributesForPlacedItem(
-      scale || defaultScale || 0.5,
+      actualScale,
       props.xOffset - xPc,
       props.yOffset - yPc + 0.5
     )
 
+    console.log('attrs', attrs, gRef.current)
+
     gsap.to(gRef.current, {
-      x: ((attrs.x / scale) * vb.width) / SVG_FRAME_X,
-      y: ((attrs.y / scale) * vb.height) / SVG_FRAME_X,
+      x: ((attrs.x / actualScale) * vb.width) / SVG_FRAME_X,
+      y: ((attrs.y / actualScale) * vb.width) / SVG_FRAME_X,
       duration: 1,
       ease: Power2.easeInOut
     })
@@ -58,9 +64,10 @@ const PlaceableSVG = (props: Props): JSX.Element => {
 
   return (
     <svg
+      className="PlaceableSVG"
       ref={elementRef}
       viewBox={`${vb.x} ${vb.y} ${vb.width} ${vb.height}`}
-      {...attributesForPlacedItem(scale || defaultScale || 0.5, xPc, yPc)}
+      {...attributesForPlacedItem(actualScale, xPc, yPc)}
       style={props.style}
     >
       <g ref={gRef} transform={`rotate(${rotation})`}>
