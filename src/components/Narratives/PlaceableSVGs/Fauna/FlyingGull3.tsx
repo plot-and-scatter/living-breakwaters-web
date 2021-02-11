@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const FlyingGull3 = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(-3.4, -3.5, 5.1, 4.5)}
+      viewBoxObj={viewBox(-3.4, -3.5, 5.1, 4.5)}
       defaultScale={0.05}
       {...props}
     >

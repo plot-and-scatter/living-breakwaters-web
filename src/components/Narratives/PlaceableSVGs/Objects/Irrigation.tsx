@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Irrigation = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(872, 258.5, 397, 36)}
+      viewBoxObj={viewBox(872, 258.5, 397, 36)}
       defaultScale={0.95}
       {...props}
     >

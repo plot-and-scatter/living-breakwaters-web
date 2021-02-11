@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const AntennaTower = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(854, 289, 34, 137)}
+      viewBoxObj={viewBox(854, 289, 34, 137)}
       defaultScale={0.2}
       {...props}
     >

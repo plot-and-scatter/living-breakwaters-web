@@ -6,7 +6,11 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 const TrafficLight = (props: PlaceableSVGProps): JSX.Element => {
   return (
-    <PlaceableSVG viewBox={viewBox(0, 0, 7, 27)} defaultScale={0.5} {...props}>
+    <PlaceableSVG
+      viewBoxObj={viewBox(0, 0, 7, 27)}
+      defaultScale={0.5}
+      {...props}
+    >
       <g className="cls-2">
         <g className="cls-2">
           <path

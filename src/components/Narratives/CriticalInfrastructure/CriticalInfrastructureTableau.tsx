@@ -149,7 +149,7 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
               <Cypress xOffset={0.83} yOffset={0.565} scale={0.0055} />
               <Cypress xOffset={0.886} yOffset={0.545} scale={0.007} />
               <Roots xOffset={0.885} yOffset={0.635} scale={0.008} />
-            </g>  
+            </g>
             <g id="Plants">
               <Grass xOffset={0.385} yOffset={0.78} scale={0.004} />
               <Grass xOffset={0.38} yOffset={0.78} scale={0.004} />
@@ -206,15 +206,14 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
               yOffset={350}
               width={700}
               title={`Shipping ${narrativeStage}`}
-              childElement={
-                <ShippingPopover
-                  key={narrativeStage}
-                  narrativeStage={narrativeStage}
-                />
-              }
               narrativeStage={narrativeStage}
               setNarrativeStage={setNarrativeStage}
-            />
+            >
+              <ShippingPopover
+                key={narrativeStage}
+                narrativeStage={narrativeStage}
+              />
+            </Hotspot>
           </g>
         </SVGFrame>
       </div>

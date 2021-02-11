@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Seaweed = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(12.3, 381.5, 9.7, 19)}
+      viewBoxObj={viewBox(12.3, 381.5, 9.7, 19)}
       defaultScale={0.3}
       {...props}
     >

@@ -6,7 +6,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 const LargeStormDrain = (props: PlaceableSVGProps): JSX.Element => {
   return (
-    <PlaceableSVG viewBox={viewBox(0, 0, 65, 14)} defaultScale={0.5} {...props}>
+    <PlaceableSVG viewBoxObj={viewBox(0, 0, 65, 14)} defaultScale={0.5} {...props}>
       <g clipPath="url(#clip-path)">
         <g clipPath="url(#clip-path-2)">
           <path

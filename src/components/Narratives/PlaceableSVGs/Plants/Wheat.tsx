@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const Wheat = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(884, 300, 33, 20)}
+      viewBoxObj={viewBox(884, 300, 33, 20)}
       defaultScale={0.5}
       {...props}
     >

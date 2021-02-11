@@ -7,7 +7,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 const RedShip = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBox={viewBox(106, 363.5, 335.5, 54)}
+      viewBoxObj={viewBox(106, 363.5, 335.5, 54)}
       defaultScale={0.4}
       {...props}
     >
