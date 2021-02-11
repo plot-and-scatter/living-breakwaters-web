@@ -1,22 +1,22 @@
-import { SVG_FRAME_X } from '../Frames/SVGFrame'
 import { ViewBox } from '../../../@types/ViewBox'
+import { SVG_FRAME_X, SVG_FRAME_Y } from '../Frames/SVGFrame'
 
 export const attributesForPlacedItem = (
   widthPc = 0.5,
   xPc = 0.5,
   yPc = 0.5
-): { width: string; x: string; y: string } => {
+): { width: number; x: number; y: number } => {
   const scale = widthPc
-  const placedItemWidth = scale * 100 // * SVG_FRAME_X
+  const placedItemWidth = scale * SVG_FRAME_X
   const placedItemLeftXPercent = xPc
   const placedItemCenterYPercent = yPc
-  const placedItemXPC = placedItemLeftXPercent * 100 // * SVG_FRAME_X - placedItemWidth / 2
-  const placedItemYPC = placedItemCenterYPercent * 100 - 50
+  const placedItemXPC = placedItemLeftXPercent * SVG_FRAME_X
+  const placedItemYPC = (placedItemCenterYPercent - 0.5) * SVG_FRAME_Y
 
   return {
-    width: `${placedItemWidth}%`,
-    x: `${placedItemXPC}%`,
-    y: `${placedItemYPC}%`
+    width: +`${placedItemWidth}`,
+    x: +`${placedItemXPC}`,
+    y: +`${placedItemYPC}`
   }
 }
 

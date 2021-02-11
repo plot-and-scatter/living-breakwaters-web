@@ -67,7 +67,7 @@ const FoodSecurityTableau = (): JSX.Element => {
         break
     }
 
-    gsap.to(groundLevelRef.current, baseGroundLevelTransition)
+    // gsap.to(groundLevelRef.current, baseGroundLevelTransition)
     // gsap.to(interfaceRef.current, baseInterfaceTransition)
 
     // narrativeStage === 0
@@ -121,23 +121,34 @@ const FoodSecurityTableau = (): JSX.Element => {
               <Truck xOffset={0.755} yOffset={0.57} scale={0.04} />
             </g>
             <g id="Labels">
-              <text x="73%" y="73%">
+              {/* <text x="73%" y="73%">
                 water table
               </text>
               <text x="25%" y="80%">
                 saltwater wedge
-              </text>
+              </text> */}
               <Text
                 narrativeStage={narrativeStage}
-                rotate={narrativeStage === 0 ? 30 : 15}
-                xOffset={0.12}
-                yOffset={0.9}
+                rotate={
+                  narrativeStage === 0 ? 0 : narrativeStage === 1 ? 15 : -15
+                }
+                xOffset={
+                  narrativeStage === 0 ? 0.5 : narrativeStage === 1 ? 0 : 1
+                }
+                yOffset={
+                  narrativeStage === 0 ? 0.5 : narrativeStage === 1 ? 0 : 1
+                }
+                scale={0.02}
               >
                 saltwater wedge
               </Text>
-              <Text xOffset={0.42} yOffset={0.9}>
+              {/* <Text
+                xOffset={0.42}
+                yOffset={0.9}
+                rotate={narrativeStage === 0 ? 30 : 15}
+              >
                 interface
-              </Text>
+              </Text> */}
               {/* <svg
                 x="42%"
                 y="90%"
@@ -147,7 +158,7 @@ const FoodSecurityTableau = (): JSX.Element => {
               >
                 <text transform={`rotate(27)`}></text>
               </svg> */}
-              <text x={1500} y={450}>
+              {/* <text x={1500} y={450}>
                 fresh water
               </text>
               <text x={1820} y={425} transform="rotate(-90, 1820, 425)">
@@ -155,17 +166,17 @@ const FoodSecurityTableau = (): JSX.Element => {
               </text>
               <text x={1290} y={425} transform="rotate(-90, 1290, 425)">
                 pumping well
-              </text>
-              <text
+              </text> */}
+              {/* <text
                 x={1900}
                 y={325}
                 id="Subsidence"
                 visibility={narrativeStage === 2 ? 'visible' : 'hidden'}
               >
                 subsidence
-              </text>
+              </text> */}
             </g>
-            <g id="Hotspots">
+            {/* <g id="Hotspots">
               <Hotspot
                 xOffset={0.38}
                 yOffset={0.6}
@@ -176,7 +187,7 @@ const FoodSecurityTableau = (): JSX.Element => {
               >
                 <DikePopover narrativeStage={narrativeStage} />
               </Hotspot>
-            </g>
+            </g> */}
           </g>
         </SVGFrame>
       </div>

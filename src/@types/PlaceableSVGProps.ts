@@ -4,6 +4,7 @@ type PlaceableSVGProps = {
   yOffset?: number
   scale?: number
   useGsap?: boolean
+  rotate?: number
   onNarrativeStageChange?: (narrativeStage: number) => void
 }
 

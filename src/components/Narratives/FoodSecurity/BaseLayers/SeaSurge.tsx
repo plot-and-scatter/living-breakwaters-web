@@ -6,7 +6,7 @@ import { useNarrative } from '../../NarrativeContext'
 
 export const toggleSeaSurge = (className: string, toggleVar: boolean): void => {
   const elements = document.getElementsByClassName(className)
-  console.log('elements', elements)
+  // console.log('elements', elements)
   const elementArray = Array.from(elements)
   for (const el of elementArray) {
     if (el) {
