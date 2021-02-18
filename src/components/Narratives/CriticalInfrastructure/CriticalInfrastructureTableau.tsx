@@ -202,6 +202,7 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
           </g>
           <g id="Hotspots">
             <Hotspot
+              index={0}
               xOffset={350}
               yOffset={350}
               width={700}
@@ -217,7 +218,7 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
           </g>
         </SVGFrame>
       </div>
-      <div id="HotspotText"></div>
+      <div id="HotspotText0"></div>
     </div>
   )
 }

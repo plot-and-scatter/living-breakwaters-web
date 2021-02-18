@@ -7,7 +7,8 @@ import SitePageProps from '../@types/SitePageProps'
 
 const ScenarioTemplate = ({
   data,
-  pageContext
+  pageContext,
+  location
 }: SitePageProps): JSX.Element => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title

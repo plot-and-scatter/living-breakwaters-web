@@ -81,7 +81,7 @@ const Hotspot = (props: Props): JSX.Element => {
 
   useEffect(() => {
     const el = document.getElementById('HotspotText' + props.index)
-    props.onOpenCallback(showHotspot)
+    if (props.onOpenCallback) props.onOpenCallback(showHotspot)
     if (showHotspot) {
       ReactDOM.render(
         <HotspotElement

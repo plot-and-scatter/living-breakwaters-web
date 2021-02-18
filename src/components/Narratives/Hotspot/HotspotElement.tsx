@@ -33,7 +33,7 @@ const HotspotElement = ({
           onClick={onClick}
         >
           <i className="fas fa-times mr-2" />
-          Close
+          &nbsp;Close
         </button>
         <NarrativeInput
           narrativeStage={narrativeStage}

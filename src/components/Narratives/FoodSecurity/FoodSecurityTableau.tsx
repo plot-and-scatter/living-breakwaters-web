@@ -138,6 +138,9 @@ const FoodSecurityTableau = (): JSX.Element => {
                 }
                 scale={0.07}
                 rotate={narrativeStage === 2 ? 5 : 0}
+                extraClasses={
+                  isWellPopoverOpen && narrativeStage === 2 ? 'Red' : ''
+                }
               />
               <Truck xOffset={0.755} yOffset={0.57} scale={0.04} />
               <Well
