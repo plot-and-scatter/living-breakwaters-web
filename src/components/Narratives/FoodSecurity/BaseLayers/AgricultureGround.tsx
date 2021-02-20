@@ -22,14 +22,6 @@ const AgricultureGround = (props: Props): JSX.Element => {
       {...props}
       extraClasses={'AgricultureGround'}
     >
-      <rect
-        x={0}
-        y={0}
-        width={1960}
-        height={520}
-        fill={`purple`}
-        fillOpacity={0.2}
-      />
       <path className="ground" d={d} />
     </PlaceableSVG>
   )

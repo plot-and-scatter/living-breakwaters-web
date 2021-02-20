@@ -14,16 +14,14 @@ interface Props {
 const MeanSeaLevel = (props: Props): JSX.Element => {
   const d =
     props.stage === 0
-      ? `M0 ${WIDTH} H${WIDTH} V315.5 H-${WIDTH}`
+      ? `M0 ${WIDTH} H${WIDTH} V315.5 H 0`
       : props.stage === 1
       ? `M0 ${WIDTH} H${WIDTH} V310 H-${WIDTH}`
       : `M0 ${WIDTH} H${WIDTH} V295 H-${WIDTH}`
 
-  console.log('d', d)
-
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(-700, 315.5, 1960, 386)}
+      viewBoxObj={viewBox(0, 0, 1960, 520)}
       extraClasses="MeanSeaLevel"
     >
       <path className="mean-sea-level" d={d} />
