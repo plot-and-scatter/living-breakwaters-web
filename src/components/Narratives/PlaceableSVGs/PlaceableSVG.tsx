@@ -10,13 +10,13 @@ import './PlaceableSVG.scss'
 interface Props extends React.SVGProps<SVGSVGElement> {
   children: React.ReactNode
   defaultScale?: number
+  extraClasses?: string
+  rotate?: number
   scale?: number
+  useGsap?: boolean
   viewBoxObj: ViewBox
   xOffset?: number
   yOffset?: number
-  useGsap?: boolean
-  rotate?: number
-  extraClasses: string
 }
 
 const PlaceableSVG = (props: Props): JSX.Element => {

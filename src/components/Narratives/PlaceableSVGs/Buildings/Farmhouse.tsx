@@ -14,6 +14,7 @@ const Farmhouse = (props: PlaceableSVGProps): JSX.Element => {
     <PlaceableSVG
       viewBoxObj={viewBox(1339, 158, 133, 136)}
       defaultScale={0.5}
+      extraClasses={'Farmhouse'}
       {...props}
     >
       <g className={`Farmhouse narr-${narrativeStage}`}>

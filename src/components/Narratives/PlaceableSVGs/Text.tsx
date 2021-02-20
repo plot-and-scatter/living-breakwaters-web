@@ -1,8 +1,8 @@
 import React from 'react'
 
-import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
-import PlaceableSVG from './PlaceableSVG'
 import { viewBox } from './PlaceableSVGHelper'
+import PlaceableSVG from './PlaceableSVG'
+import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
 
 import './Text.scss'
 
@@ -13,9 +13,9 @@ interface Props extends PlaceableSVGProps {
 const Text = (props: Props): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(0, 0, 20, 20)}
       defaultScale={0.015}
       extraClasses={'Text'}
+      viewBoxObj={viewBox(0, 0, 20, 20)}
       {...props}
     >
       <g className="Text">
