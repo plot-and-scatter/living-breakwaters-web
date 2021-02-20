@@ -21,6 +21,7 @@ import WellPopover from './Popovers/WellPopover'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
+import SubsidingGroup from './SVGGroups/SubsidingGroup'
 
 const FoodSecurityTableau = (): JSX.Element => {
   const { narrativeStage: stage, setNarrativeStage } = useNarrative()
@@ -38,11 +39,6 @@ const FoodSecurityTableau = (): JSX.Element => {
           <Oak xOffset={0.36} yOffset={0.43} scale={0.065} />
           <Deadwood xOffset={0.335} yOffset={0.565} scale={0.015} />
           <Bush2 xOffset={0.35} yOffset={0.545} scale={0.015} />
-          <Oak xOffset={0.635} yOffset={0.435} scale={0.07} />
-          <Roots xOffset={0.783} yOffset={0.685} scale={0.03} />
-          <Oak xOffset={0.76} yOffset={0.43} scale={0.08} />
-          <Cypress xOffset={0.855} yOffset={0.42} scale={0.02} />
-          <Cypress xOffset={0.84} yOffset={0.42} scale={0.02} />
         </g>
         <g id="Pump">
           <Pump
@@ -52,28 +48,11 @@ const FoodSecurityTableau = (): JSX.Element => {
             extraClasses={isDikePopoverOpen ? 'Red' : ''}
           />
         </g>
-        <g id="Farm">
-          <Farmhouse
-            xOffset={0.68}
-            yOffset={narrativeGenerator(stage, [0.495, 0.5, 0.52])}
-            scale={0.07}
-            rotate={stage === 2 ? 5 : 0}
-            extraClasses={isWellPopoverOpen && stage === 2 ? 'Red' : ''}
-          />
-          <Truck xOffset={0.755} yOffset={0.575} scale={0.04} />
-          <Well
-            extraClasses={isWellPopoverOpen ? 'Red' : ''}
-            xOffset={0.64}
-            yOffset={0.785}
-            scale={0.0095}
-          />
-          <Well
-            extraClasses={isWellPopoverOpen ? 'Red' : ''}
-            xOffset={0.9}
-            yOffset={0.785}
-            scale={0.0095}
-          />
-        </g>
+        <SubsidingGroup
+          stage={stage}
+          isWellPopoverOpen={isWellPopoverOpen}
+          yOffset={narrativeGenerator(stage, [0.503, 0.508, 0.52])}
+        />
         <g id="Labels">
           <Text xOffset={0.2} yOffset={0.8}>
             saltwater wedge

@@ -67,14 +67,6 @@ const Land = (props: Props): JSX.Element => {
       viewBoxObj={viewBox(0, 0, SVG_FRAME_X, SVG_FRAME_Y)}
       {...props}
     >
-      <rect
-        x={0}
-        y={0}
-        width={SVG_FRAME_X}
-        height={SVG_FRAME_Y}
-        fill={`white`}
-        fillOpacity={0.1}
-      />
       <g id="BaseLayers" data-name="Base Layers" opacity=".9">
         <BaseLayerStage stage={2} xOffset={0} yOffset={0.52} scale={1} />
         <BaseLayerStage stage={1} xOffset={0} scale={1} yOffset={0.52} />
