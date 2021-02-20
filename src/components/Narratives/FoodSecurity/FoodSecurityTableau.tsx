@@ -104,9 +104,9 @@ const FoodSecurityTableau = (): JSX.Element => {
     <div className="FoodSecurityTableau">
       <div>
         <SVGFrame id="FoodSecurityTableau">
-          {/* <HeavyRain xOffset={0} yOffset={0.35} /> */}
+          <HeavyRain xOffset={0} yOffset={0.35} />
           <Land scale={1} xOffset={0} />
-          {/* <g id="GroundLevel" ref={groundLevelRef}>
+          <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={0.33} yOffset={0.46} scale={0.055} />
               <Oak xOffset={0.36} yOffset={0.43} scale={0.065} />
@@ -177,13 +177,6 @@ const FoodSecurityTableau = (): JSX.Element => {
               >
                 interface
               </Text>
-              <Text
-                xOffset={0.42}
-                yOffset={0.9}
-                rotate={narrativeStage === 0 ? 30 : 15}
-              >
-                interface
-              </Text>
               <svg
                 x="42%"
                 y="90%"
@@ -241,7 +234,7 @@ const FoodSecurityTableau = (): JSX.Element => {
                 <WellPopover narrativeStage={narrativeStage} />
               </Hotspot>
             </g>
-          </g> */}
+          </g>
         </SVGFrame>
       </div>
       <div className="HotspotText" id="HotspotText0"></div>

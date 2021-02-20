@@ -22,8 +22,8 @@ $meanSeaLevel: lighten(#334455, 10%);
 .FoodSecurityTableau {
   position: relative;
   svg {
-    // border-radius: $border-radius-lg;
-    // background-image: linear-gradient(#bbddff, #fff);
+    border-radius: $border-radius-lg;
+    background-image: linear-gradient(#bbddff, #fff);
     border: solid #666 0.1vw;
     path {
       &.sea-surge {

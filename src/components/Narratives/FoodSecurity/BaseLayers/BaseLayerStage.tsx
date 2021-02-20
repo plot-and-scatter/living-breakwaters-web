@@ -9,7 +9,6 @@ import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import SaltwaterWedge from './SaltwaterWedge'
 import SeaSurge from './SeaSurge'
-import Text from '../../PlaceableSVGs/Text'
 import { SVG_FRAME_X, SVG_FRAME_Y } from '../../Frames/SVGFrame'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
@@ -24,11 +23,11 @@ const BaseLayerStage = (props: Props): JSX.Element => {
       {...props}
     >
       <g id={`groundwater-${stage}`}>
-        {/* <SeaSurge stage={stage} /> */}
-        <MeanSeaLevel stage={stage} />
+        <SeaSurge stage={stage} yOffset={0.54} />
+        <MeanSeaLevel stage={stage} yOffset={0.54} />
         <AgricultureGround stage={stage} />
-        {/* <SaltwaterWedge stage={stage} /> */}
-        {/* <FreshWater stage={stage} /> */}
+        <SaltwaterWedge stage={stage} yOffset={0.54} />
+        <FreshWater stage={stage} yOffset={0.54} />
       </g>
     </PlaceableSVG>
   )

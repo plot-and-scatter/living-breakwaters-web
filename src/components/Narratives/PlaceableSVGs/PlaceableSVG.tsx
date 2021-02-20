@@ -27,11 +27,13 @@ const PlaceableSVG = (props: Props): JSX.Element => {
     xOffset = 0,
     yOffset = 0.5,
     defaultScale = 1,
-    scale = 1,
+    scale,
     rotate
   } = props
 
   const actualScale = scale || defaultScale || 1
+
+  console.log('actualScale', actualScale)
 
   const [xPc] = useState<number>(xOffset)
   const [yPc] = useState<number>(yOffset)
@@ -74,14 +76,14 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       preserveAspectRatio={props.preserveAspectRatio || 'xMinYMid'}
     >
       <g ref={gRef} transform={`rotate(${rotation})`}>
-        {/* <rect
+        <rect
           x={vb.x}
           y={vb.y}
           width={vb.width}
           height={vb.height}
           fill={`green`}
           fillOpacity={0}
-        /> */}
+        />
         {children}
       </g>
     </svg>

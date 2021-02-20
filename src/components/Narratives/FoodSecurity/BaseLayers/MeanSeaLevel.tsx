@@ -5,24 +5,21 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
-const WIDTH = 700
-
-interface Props {
-  stage: number
-}
+interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 
 const MeanSeaLevel = (props: Props): JSX.Element => {
   const d =
     props.stage === 0
-      ? `M0 ${WIDTH} H${WIDTH} V315.5 H 0`
+      ? `M0 700 H700 V315.5 H 0`
       : props.stage === 1
-      ? `M0 ${WIDTH} H${WIDTH} V310 H-${WIDTH}`
-      : `M0 ${WIDTH} H${WIDTH} V295 H-${WIDTH}`
+      ? `M0 700 H700 V310 H-700`
+      : `M0 700 H700 V295 H-700`
 
   return (
     <PlaceableSVG
       viewBoxObj={viewBox(0, 0, 1960, 520)}
       extraClasses="MeanSeaLevel"
+      {...props}
     >
       <path className="mean-sea-level" d={d} />
     </PlaceableSVG>

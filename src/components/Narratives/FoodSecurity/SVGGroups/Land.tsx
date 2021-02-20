@@ -75,12 +75,12 @@ const Land = (props: Props): JSX.Element => {
         fill={`white`}
         fillOpacity={0.1}
       />
-      {/* <g id="BaseLayers" data-name="Base Layers" opacity=".9"> */}
-      <BaseLayerStage stage={2} xOffset={0} yOffset={0.52} scale={1} />
-      <BaseLayerStage stage={1} xOffset={0} scale={1} yOffset={0.52} />
-      <BaseLayerStage stage={0} xOffset={0} scale={1} yOffset={0.52} />
-      {/* <SaturatedGround /> */}
-      {/* </g> */}
+      <g id="BaseLayers" data-name="Base Layers" opacity=".9">
+        <BaseLayerStage stage={2} xOffset={0} yOffset={0.52} scale={1} />
+        <BaseLayerStage stage={1} xOffset={0} scale={1} yOffset={0.52} />
+        <BaseLayerStage stage={0} xOffset={0} scale={1} yOffset={0.52} />
+        <SaturatedGround />
+      </g>
     </PlaceableSVG>
   )
 }
