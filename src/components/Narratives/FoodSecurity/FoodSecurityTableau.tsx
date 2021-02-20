@@ -46,31 +46,31 @@ const FoodSecurityTableau = (): JSX.Element => {
     // console.log(timeline.current)
     prevNarrativeStage.current = narrativeStage
 
-    const baseGroundLevelTransition = {
-      y: 0,
-      duration: 1,
-      ease: Power2.easeInOut
-    }
+    // const baseGroundLevelTransition = {
+    //   y: 0,
+    //   duration: 1,
+    //   ease: Power2.easeInOut
+    // }
 
-    const baseInterfaceTransition = {
-      xPercent: '15%',
-      yPercent: '30%',
-      rotate: 30,
-      duration: 1,
-      ease: Power2.easeInOut
-    }
+    // const baseInterfaceTransition = {
+    //   xPercent: '15%',
+    //   yPercent: '30%',
+    //   rotate: 30,
+    //   duration: 1,
+    //   ease: Power2.easeInOut
+    // }
 
-    switch (narrativeStage) {
-      case 1:
-        baseGroundLevelTransition.y = 1
-        baseInterfaceTransition.xPercent = '50%'
-        baseInterfaceTransition.yPercent = '35%'
-        baseInterfaceTransition.rotate = 20
-        break
-      case 2:
-        baseGroundLevelTransition.y = 4
-        break
-    }
+    // switch (narrativeStage) {
+    //   case 1:
+    //     baseGroundLevelTransition.y = 1
+    //     baseInterfaceTransition.xPercent = '50%'
+    //     baseInterfaceTransition.yPercent = '35%'
+    //     baseInterfaceTransition.rotate = 20
+    //     break
+    //   case 2:
+    //     baseGroundLevelTransition.y = 4
+    //     break
+    // }
 
     // gsap.to(groundLevelRef.current, baseGroundLevelTransition)
     // gsap.to(interfaceRef.current, baseInterfaceTransition)
@@ -104,9 +104,9 @@ const FoodSecurityTableau = (): JSX.Element => {
     <div className="FoodSecurityTableau">
       <div>
         <SVGFrame id="FoodSecurityTableau">
-          <HeavyRain xOffset={0} yOffset={0.35} />
-          <Land />
-          <g id="GroundLevel" ref={groundLevelRef}>
+          {/* <HeavyRain xOffset={0} yOffset={0.35} /> */}
+          <Land scale={1} xOffset={0} />
+          {/* <g id="GroundLevel" ref={groundLevelRef}>
             <g id="Trees">
               <Oak xOffset={0.33} yOffset={0.46} scale={0.055} />
               <Oak xOffset={0.36} yOffset={0.43} scale={0.065} />
@@ -177,14 +177,14 @@ const FoodSecurityTableau = (): JSX.Element => {
               >
                 interface
               </Text>
-              {/* <Text
+              <Text
                 xOffset={0.42}
                 yOffset={0.9}
                 rotate={narrativeStage === 0 ? 30 : 15}
               >
                 interface
-              </Text> */}
-              {/* <svg
+              </Text>
+              <svg
                 x="42%"
                 y="90%"
                 id="Interface"
@@ -192,8 +192,8 @@ const FoodSecurityTableau = (): JSX.Element => {
                 style={{ overflow: 'visible' }}
               >
                 <text transform={`rotate(27)`}></text>
-              </svg> */}
-              {/* <text x={1500} y={450}>
+              </svg>
+              <text x={1500} y={450}>
                 fresh water
               </text>
               <text x={1820} y={425} transform="rotate(-90, 1820, 425)">
@@ -201,15 +201,15 @@ const FoodSecurityTableau = (): JSX.Element => {
               </text>
               <text x={1290} y={425} transform="rotate(-90, 1290, 425)">
                 pumping well
-              </text> */}
-              {/* <text
+              </text>
+              <text
                 x={1900}
                 y={325}
                 id="Subsidence"
                 visibility={narrativeStage === 2 ? 'visible' : 'hidden'}
               >
                 subsidence
-              </text> */}
+              </text>
             </g>
             <g id="Hotspots">
               <Hotspot
@@ -241,7 +241,7 @@ const FoodSecurityTableau = (): JSX.Element => {
                 <WellPopover narrativeStage={narrativeStage} />
               </Hotspot>
             </g>
-          </g>
+          </g> */}
         </SVGFrame>
       </div>
       <div className="HotspotText" id="HotspotText0"></div>

@@ -19,7 +19,16 @@ const MeanSeaLevel = (props: Props): JSX.Element => {
       ? `M0 ${WIDTH} H${WIDTH} V310 H-${WIDTH}`
       : `M0 ${WIDTH} H${WIDTH} V295 H-${WIDTH}`
 
-  return <path className="mean-sea-level" d={d} />
+  console.log('d', d)
+
+  return (
+    <PlaceableSVG
+      viewBoxObj={viewBox(-700, 315.5, 1960, 386)}
+      extraClasses="MeanSeaLevel"
+    >
+      <path className="mean-sea-level" d={d} />
+    </PlaceableSVG>
+  )
 }
 
 export default MeanSeaLevel

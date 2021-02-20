@@ -19,22 +19,16 @@ $meanSeaLevel: lighten(#334455, 10%);
   --color-stop: #{darken($freshWater, 20%)};
 }
 
-
-
 .FoodSecurityTableau {
   position: relative;
   svg {
-    border-radius: $border-radius-lg;
-    background-image: linear-gradient(#bbddff, #fff);
+    // border-radius: $border-radius-lg;
+    // background-image: linear-gradient(#bbddff, #fff);
     border: solid #666 0.1vw;
     path {
       &.sea-surge {
         fill: rgba(#112233, 0.5);
         stroke: #123;
-      }
-      &.mean-sea-level {
-        fill: url(#mean-sea-level-gradient) $meanSeaLevel;
-        stroke: darken($meanSeaLevel, 10%);
       }
       &.saltwater-wedge {
         fill: url(#saltwater-wedge-gradient) $saltwaterWedge;
@@ -44,10 +38,18 @@ $meanSeaLevel: lighten(#334455, 10%);
         fill: url(#fresh-water-gradient) $freshWater;
         stroke: darken($freshWater, 10%);
       }
-      &.ground {
+    }
+    svg.AgricultureGround {
+      path.ground {
         fill: lighten(#59452c, 40%);
         stroke: #59452c;
         stroke-width: 1px;
+      }
+    }
+    svg.MeanSeaLevel {
+      path.mean-sea-level {
+        fill: url(#mean-sea-level-gradient) $meanSeaLevel;
+        stroke: darken($meanSeaLevel, 10%);
       }
     }
     #Labels {
@@ -83,7 +85,6 @@ $meanSeaLevel: lighten(#334455, 10%);
   opacity: 0.9;
 }
 .cls-8 {
-  
 }
 .cls-17,
 .cls-9 {

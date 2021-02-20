@@ -16,7 +16,7 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   yOffset?: number
   useGsap?: boolean
   rotate?: number
-  extraClasses?: string
+  extraClasses: string
 }
 
 const PlaceableSVG = (props: Props): JSX.Element => {
@@ -24,14 +24,14 @@ const PlaceableSVG = (props: Props): JSX.Element => {
     extraClasses,
     viewBoxObj: vb,
     children,
-    xOffset,
-    yOffset,
-    defaultScale,
-    scale,
+    xOffset = 0,
+    yOffset = 0.5,
+    defaultScale = 1,
+    scale = 1,
     rotate
   } = props
 
-  const actualScale = scale || defaultScale || 0.5
+  const actualScale = scale || defaultScale || 1
 
   const [xPc] = useState<number>(xOffset)
   const [yPc] = useState<number>(yOffset)
@@ -71,16 +71,17 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       viewBox={`${vb.x} ${vb.y} ${vb.width} ${vb.height}`}
       {...attributesForPlacedItem(actualScale, xPc, yPc)}
       style={props.style}
+      preserveAspectRatio={props.preserveAspectRatio || 'xMinYMid'}
     >
       <g ref={gRef} transform={`rotate(${rotation})`}>
-        <rect
+        {/* <rect
           x={vb.x}
           y={vb.y}
           width={vb.width}
           height={vb.height}
           fill={`green`}
           fillOpacity={0}
-        />
+        /> */}
         {children}
       </g>
     </svg>
