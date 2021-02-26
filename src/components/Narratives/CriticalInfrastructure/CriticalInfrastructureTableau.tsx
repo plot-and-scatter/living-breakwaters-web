@@ -203,9 +203,9 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
           <g id="Hotspots">
             <Hotspot
               index={0}
-              xOffset={350}
-              yOffset={350}
-              width={700}
+              xOffset={0.2}
+              yOffset={0.75}
+              scale={0.05}
               title={`Shipping ${narrativeStage}`}
               narrativeStage={narrativeStage}
               setNarrativeStage={setNarrativeStage}
@@ -218,7 +218,7 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
           </g>
         </SVGFrame>
       </div>
-      <div id="HotspotText0"></div>
+      <div className="HotspotText" id="HotspotText0"></div>
     </div>
   )
 }
