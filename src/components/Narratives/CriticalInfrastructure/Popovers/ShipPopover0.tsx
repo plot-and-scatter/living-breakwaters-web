@@ -1,12 +1,12 @@
 import React from 'react'
 
-import './ShippingPopover.scss'
+// import './ShippingPopover.scss'
 
 type Props = {
   narrativeStage: number
 }
 
-const ShippingPopover = (props: Props): JSX.Element => {
+const ShipPopover0 = (props: Props): JSX.Element => {
   const { narrativeStage } = props
   const waterOffset =
     +narrativeStage === 0 ? 0 : +narrativeStage === 1 ? -10 : -20
@@ -17,7 +17,7 @@ const ShippingPopover = (props: Props): JSX.Element => {
   console.log('narrativeStage', +narrativeStage, 'yTransform', yTransform)
 
   return (
-    <div className="ShippingPopover">
+    <div className="ShipPopover0">
       <svg
         version="1.1"
         id="Layer_1"
@@ -431,4 +431,4 @@ const ShippingPopover = (props: Props): JSX.Element => {
   )
 }
 
-export default ShippingPopover
+export default ShipPopover0

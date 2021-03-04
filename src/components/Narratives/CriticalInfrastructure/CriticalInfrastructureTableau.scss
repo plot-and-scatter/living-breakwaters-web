@@ -21,7 +21,7 @@ $meanSeaLevel: lighten(#334455, 10%);
 
 .CriticalInfrastructureTableau {
   position: relative;
-  svg {
+  svg#CriticalInfrastructureTableau {
     border-radius: $border-radius-lg;
     background-image: linear-gradient(#bbddff, #fff);
     border: solid #666 0.1vw;

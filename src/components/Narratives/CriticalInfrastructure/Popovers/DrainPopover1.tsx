@@ -1,19 +1,26 @@
 import React from 'react'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
 import './DrainPopover1.scss'
 
-interface Props {}
+interface Props extends PlaceableSVGProps {
+  narrativeStage: number
+}
 
 const DrainPopover1 = (props: Props): JSX.Element => {
+  const { narrativeStage } = props
+
+  console.log('DrainPopover1 narrativeStage', narrativeStage)
+
   return (
     <PlaceableSVG
       viewBoxObj={viewBox(0, 0, 730.18, 246.66)}
-      defaultScale={0.25}
+      defaultScale={0.37}
+      extraClasses="DrainPopover1"
       {...props}
     >
-      <defs></defs>
       <g id="Layer_2" data-name="Layer 2">
         <g id="zooms">
           <rect
@@ -202,36 +209,6 @@ const DrainPopover1 = (props: Props): JSX.Element => {
             className="cls-19"
             d="M593.06 51.23c-.22.67-.79.34-1.14.28a40.46 40.46 0 00-5-.3q-4-.16-8-.26h-5.49a1.05 1.05 0 00-1.21 1.05 9 9 0 001.25 4.91 5.83 5.83 0 004.53 2.72c2.56.42 5.14.69 7.72 1 6.48.73 13 .71 19.49.92 2.9.09 5.81-.09 8.71-.23a45.93 45.93 0 005-.53c2.66-.41 4-2.27 4.76-4.63a6.79 6.79 0 00.44-2.33c0-.79-.33-1.2-1.09-1.25-5.1-.36-10.2-.59-15.31-.66-4.12 0-8.25-.06-12.36-.27a6.84 6.84 0 01-2.26-.13"
           />
-          <text className="cls-23" transform="translate(2.7 196.83)">
-            K
-            <tspan className="cls-24" x="3.18" y="0">
-              ing
-            </tspan>
-            <tspan className="cls-25" x="10.95" y="0">
-              {' '}
-            </tspan>
-            <tspan className="cls-26" x="11.93" y="0">
-              T
-            </tspan>
-            <tspan className="cls-24" x="14.73" y="0">
-              ide
-            </tspan>
-          </text>
-          <text className="cls-23" transform="translate(2.7 224.96)">
-            H
-            <tspan className="cls-24" x="3.81" y="0">
-              igh
-            </tspan>
-            <tspan className="cls-25" x="11.58" y="0">
-              {' '}
-            </tspan>
-            <tspan className="cls-26" x="12.57" y="0">
-              T
-            </tspan>
-            <tspan className="cls-24" x="15.36" y="0">
-              ide
-            </tspan>
-          </text>
         </g>
       </g>
     </PlaceableSVG>
