@@ -22,7 +22,7 @@ import LargeStormDrain from '../PlaceableSVGs/Objects/LargeStormDrain'
 import Oak from '../PlaceableSVGs/Trees/Oak'
 import Person1 from '../PlaceableSVGs/People/Person1'
 import Person2 from '../PlaceableSVGs/People/Person2'
-import RedShip from '../PlaceableSVGs/Maritime/RedShip'
+import Ship from '../PlaceableSVGs/Maritime/Ship'
 import Roots from '../PlaceableSVGs/Trees/Roots'
 import ShippingPopover from './SVGGroups/ShippingPopover'
 import SmallStormDrain from '../PlaceableSVGs/Objects/SmallStormDrain'
@@ -43,7 +43,7 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
         <Land />
         <g id="Maritime">
           <Harbor xOffset={-0.01} yOffset={0.73} scale={0.35} />
-          <RedShip xOffset={-0.005} yOffset={0.77} scale={0.2} />
+          <Ship xOffset={-0.005} yOffset={0.77} scale={0.2} />
         </g>
         <g id="GroundLevel">
           <g id="Trees">
