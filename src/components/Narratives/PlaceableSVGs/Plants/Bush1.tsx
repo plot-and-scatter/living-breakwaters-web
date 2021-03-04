@@ -9,6 +9,7 @@ const Bush1 = (props: PlaceableSVGProps): JSX.Element => {
     <PlaceableSVG
       viewBoxObj={viewBox(1657.3, 290.7, 20.6, 25)}
       defaultScale={0.5}
+      className={'Bush1'}
       {...props}
     >
       <path

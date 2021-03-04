@@ -9,6 +9,7 @@ const Wheat = (props: PlaceableSVGProps): JSX.Element => {
     <PlaceableSVG
       viewBoxObj={viewBox(884, 300, 33, 20)}
       defaultScale={0.5}
+      className="Wheat"
       {...props}
     >
       <path

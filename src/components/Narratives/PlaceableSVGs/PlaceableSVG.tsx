@@ -69,7 +69,9 @@ const PlaceableSVG = (props: Props): JSX.Element => {
 
   return (
     <svg
-      className={`PlaceableSVG ${extraClasses}`}
+      className={`PlaceableSVG ${props.className ? props.className : ''} ${
+        extraClasses ? extraClasses : ''
+      }`}
       ref={elementRef}
       viewBox={`${vb.x} ${vb.y} ${vb.width} ${vb.height}`}
       {...attributesForPlacedItem(actualScale, xPc, yPc)}
