@@ -47,7 +47,6 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
         </g>
         <g id="GroundLevel">
           <g id="Trees">
-            <Roots xOffset={0.379} yOffset={0.81} scale={0.01} />
             <Oak xOffset={0.37} yOffset={0.72} scale={0.03} />
             <Deadwood xOffset={0.39} yOffset={0.73} scale={0.015} />
             <Cypress xOffset={0.61} yOffset={0.66} scale={0.011} />
@@ -61,18 +60,8 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
             <Oak xOffset={0.7} yOffset={0.555} scale={0.045} />
             <Oak xOffset={0.67} yOffset={0.592} scale={0.047} />
             <Oak xOffset={0.69} yOffset={0.586} scale={0.04} />
-            <Roots xOffset={0.396} yOffset={0.8} scale={0.005} />
-            <Roots xOffset={0.402} yOffset={0.802} scale={0.006} />
-            <Roots xOffset={0.609} yOffset={0.79} scale={0.006} />
-            <Roots xOffset={0.633} yOffset={0.758} scale={0.013} />
-            <Roots xOffset={0.675} yOffset={0.73} scale={0.009} />
-            <Roots xOffset={0.687} yOffset={0.73} scale={0.012} />
-            <Roots xOffset={0.703} yOffset={0.71} scale={0.012} />
-            <Roots xOffset={0.716} yOffset={0.685} scale={0.011} />
-            <Roots xOffset={0.74} yOffset={0.655} scale={0.009} />
             <Cypress xOffset={0.83} yOffset={0.565} scale={0.0055} />
             <Cypress xOffset={0.886} yOffset={0.545} scale={0.007} />
-            <Roots xOffset={0.885} yOffset={0.635} scale={0.008} />
           </g>
           <g id="Plants">
             <Grass xOffset={0.385} yOffset={0.78} scale={0.004} />
@@ -119,7 +108,7 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
             <AntennaTower xOffset={0.41} yOffset={0.675} scale={0.018} />
             <Building1 xOffset={0.52} yOffset={0.71} scale={0.09} />
             <House1 xOffset={0.47} yOffset={0.745} scale={0.04} />
-            <House2 xOffset={0.76} yOffset={0.566} scale={0.07} />
+            <House2 xOffset={0.76} yOffset={0.57} scale={0.07} />
             <House1 xOffset={0.846} yOffset={0.565} scale={0.04} />
             <House3 xOffset={0.894} yOffset={0.542} scale={0.05} />
           </g>

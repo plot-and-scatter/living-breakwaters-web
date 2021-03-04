@@ -4,11 +4,14 @@ import { viewBox } from '../PlaceableSVGHelper'
 import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
+import './SmallStormDrain.scss'
+
 const SmallStormDrain = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
       viewBoxObj={viewBox(0, 0, 35, 11)}
       defaultScale={0.5}
+      extraClasses="SmallStormDrain"
       {...props}
     >
       <g className="cls-2">
