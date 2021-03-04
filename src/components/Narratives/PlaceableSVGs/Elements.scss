@@ -9,18 +9,7 @@ $color-oak-trunk: #654321;
 .FlyingGull1 path { @include bird; }
 .FlyingGull2 path { @include bird; }
 .FlyingGull3 path { @include bird; }
-.Oak {
-  .OakCrown path {
-    fill: lighten( $color-oak-leaves, 10%);
-    stroke: darken($color-oak-leaves, 30%);
-    stroke-width: 0.75px;
-  }
-  .OakTrunk path {
-    fill: lighten($color-oak-trunk, 30%);
-    stroke: $color-oak-trunk;
-    stroke-width: 0.5px;
-  }
-}
+
 .Roots {
   fill: lighten($color-oak-trunk, 30%);
   stroke: $color-oak-trunk;
@@ -44,3 +33,4 @@ $color-oak-trunk: #654321;
     fill: $color-oak-leaves;
   }
 }
+

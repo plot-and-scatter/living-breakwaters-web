@@ -4,6 +4,8 @@ import { viewBox } from '../PlaceableSVGHelper'
 import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
+import './Oak.scss'
+
 const Oak = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
@@ -11,6 +13,18 @@ const Oak = (props: PlaceableSVGProps): JSX.Element => {
       defaultScale={0.25}
       {...props}
     >
+      <linearGradient
+        id="MyGradient"
+        direction="vertical"
+        x1="0%"
+        y1="0%"
+        x2="0%"
+        y2="100%"
+      >
+        {/* <stop offset="0%" stopColor="#F90" /> */}
+        <stop offset="50%" stopColor="#f33" />
+        <stop offset="100%" stopColor="#900" />
+      </linearGradient>
       <g className="Oak">
         <g opacity="0.8" className="OakCrown">
           <path d="M1601.3 238.9l-6.7-3.9 6.5-4-.1.4-1 .7.7 1.2.4 1.6-.2.7 1.1.5-1.1 1.1 1 1-.6.7zM1601.4 230.2l-8.3 4.8-5.1-1.5 3.2-2.6 4.6-4.4.1.2.2 1.5 1-.9v1.7l.9-1.5 1 1.2-.2 1.1 2.1-1.1-.9 1.6 1.6-.3-.1.2h-.1zM1584.6 219.6l-.3 1.9-1.2-1-.5 1.3-.8-1.6-1.1 1.2 1.1.8-1.2.5.7 1.2-2.3-1.1-.1 1.7-.9.2.7 1.1h-1.2l-.5 1.3 2.1.2.7.2.4-.6h.1l-.3 1.9-.8 6.1-2.3 2.6-3.2 3.3-1.7 3.1.2-6.2.2-10.4 7.6-11.3.3-.1.1.4-.1.5.4.7 1.2-.5.1.8h1.3l.4 1.5.9.3z" />
