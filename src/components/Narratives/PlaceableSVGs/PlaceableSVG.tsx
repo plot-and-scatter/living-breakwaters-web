@@ -62,7 +62,8 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       x: ((attrs.x / actualScale) * vb.width) / SVG_FRAME_X,
       y: ((attrs.y / actualScale) * vb.width) / SVG_FRAME_X,
       duration: 1,
-      ease: Power2.easeInOut
+      ease: Power2.easeInOut,
+      transformOrigin: 'center'
     })
   }, [props.xOffset, props.yOffset])
 
