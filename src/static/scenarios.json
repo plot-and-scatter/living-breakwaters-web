@@ -16,7 +16,13 @@
       "transformer_station",
       "transmission_line",
       "waste"
-    ]
+    ],
+    "flyTo": {
+      "center": [-123.094847, 49.298140],
+      "zoom": 13,
+      "pitch": 60,
+      "bearing": 90
+    }
   },
   "coastalHabitat": {
     "index": 1,
@@ -35,7 +41,13 @@
       "sandflats",
       "scenario_a",
       "wetlands"
-    ]
+    ],
+    "flyTo": {
+      "center": [-123.083958, 49.118110],
+      "zoom": 11,
+      "pitch": 75,
+      "bearing": -90
+    }
   },
   "emergencyPreparedness": {
     "index": 2,
@@ -54,7 +66,13 @@
       "transmission_line",
       "transformer_station",
       "waste"
-    ]
+    ],
+    "flyTo": {
+      "center": [-122.944758, 49.174135],
+      "zoom": 13,
+      "pitch": 45,
+      "bearing": 60
+    }
   },
   "foodSecurity": {
     "index": 3,
@@ -71,6 +89,12 @@
       "roadways",
       "train_track",
       "flood_protection_infrastructure"
-    ]
+    ],
+    "flyTo": {
+      "center": [-123.070688, 49.025446],
+      "zoom": 12,
+      "pitch": 60,
+      "bearing": 0
+    }
   }
 }

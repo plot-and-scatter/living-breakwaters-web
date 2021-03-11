@@ -10,14 +10,16 @@ interface IProps {
 }
 
 const ScenarioCard = ({ scenario, image }: IProps): JSX.Element => {
-  const { showLayer } = useMapLayerManager()
+  const { hideAllLayers, showLayer, flyTo } = useMapLayerManager()
 
   const title = scenario.title
   const intro = scenario.intro
 
   const scenarioClickCallback = useCallback(() => {
+    hideAllLayers()
     showLayer(scenario.layerIds)
-  }, [showLayer])
+    flyTo(scenario.flyTo)
+  }, [showLayer, flyTo])
 
   return (
     <div

@@ -14,13 +14,14 @@ type MapLayerManagerContextType = {
   setActiveLayers: FixTypeLater
   map: Map
   setMap: React.Dispatch<React.SetStateAction<Map>>
+  flyTo: FixTypeLater
 }
 
 const MapLayerManagerContext = React.createContext<
   MapLayerManagerContextType | undefined
 >(undefined)
 
-function useMapLayerManager() {
+function useMapLayerManager(): FixTypeLater {
   const context = React.useContext(MapLayerManagerContext)
   if (!context) {
     throw new Error(
@@ -66,12 +67,37 @@ function useMapLayerManager() {
     [activeLayers, setActiveLayers, map]
   )
 
+  const hideAllLayers = useCallback(() => {
+    console.log('activeLayers', activeLayers)
+
+    Object.keys(activeLayers).forEach((layerId) =>
+      map.setLayoutProperty(layerId, 'visibility', 'none')
+    )
+
+    // copyAndSet(
+    //   activeLayers,
+    //   Object.values(activeLayers),
+    //   false,
+    //   setActiveLayers
+    // ) // Update active
+  }, [activeLayers, setActiveLayers, map])
+
+  const flyTo = useCallback(
+    (flyTo: FixTypeLater): void => {
+      console.log('Flying to', flyTo)
+      map.flyTo(flyTo)
+    },
+    [map]
+  )
+
   return {
     activeLayers,
     showLayer,
     hideLayer,
     map,
-    setMap
+    setMap,
+    flyTo,
+    hideAllLayers
   }
 }
 
