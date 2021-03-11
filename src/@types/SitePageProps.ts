@@ -1,4 +1,4 @@
-import FixTypeLater from '../components/Types/FixTypeLater'
+import FixTypeLater from './FixTypeLater'
 
 interface SitePageProps {
   data: FixTypeLater

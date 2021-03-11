@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Nav from './Nav'
+import { NarrativeProvider } from '../Narratives/NarrativeContext'
+import FixTypeLater from '../../@types/FixTypeLater'
 import Footer from './Footer'
+import Nav from './Nav'
 
 import '../../../content/assets/fonts/fonts.css'
 import '../../scss/app.scss'
 import '../../scss/bootstrap/bootstrap.scss'
-import FixTypeLater from '../../@types/FixTypeLater'
-import { NarrativeProvider } from '../Narratives/NarrativeContext'
 
 interface Props {
   children: React.ReactNode

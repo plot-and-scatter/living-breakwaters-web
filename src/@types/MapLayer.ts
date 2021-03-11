@@ -1,9 +1,10 @@
 export type MapLayer = {
-  "name": string,
-  "id": string
-  "color": string
-  "opacity": number
-  "type": 'fill'
+  name: string
+  id: string
+  color: string
+  opacity: number
+  type:
+    | 'fill'
     | 'line'
     | 'symbol'
     | 'circle'
@@ -12,8 +13,8 @@ export type MapLayer = {
     | 'background'
     | 'heatmap'
     | 'hillshade'
-  "grouping": string
-  "layers"?: MapLayer[]
-  "line-weight"?: number
-  "line-dasharray"?: number[],
+  grouping: string
+  layers?: MapLayer[]
+  'line-weight'?: number
+  'line-dasharray'?: number[]
 }
