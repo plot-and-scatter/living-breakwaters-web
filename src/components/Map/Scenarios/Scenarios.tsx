@@ -22,11 +22,9 @@ const Scenarios = (): JSX.Element => {
 
   return (
     <div className="Scenarios">
-      <div>
-        <button className={classes} onClick={toggleShowScenariosCallback}>
-          <i className="fas fa-layer-group mr-1" /> Scenarios
-        </button>
-      </div>
+      <button className={classes} onClick={toggleShowScenariosCallback}>
+        <i className="fas fa-layer-group mr-1" /> Scenarios
+      </button>
       <div
         className="ScenarioInteraction"
         style={{

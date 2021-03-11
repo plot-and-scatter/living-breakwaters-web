@@ -33,7 +33,7 @@ const buildMapOptions = (mapRef: MapRefType) => {
 }
 
 const addNavControl = (map: mapboxgl.Map) => {
-  map.addControl(new mapboxgl.NavigationControl())
+  map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
 }
 
 const addAttributionControl = (map: mapboxgl.Map) => {

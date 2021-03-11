@@ -3,19 +3,20 @@
 $toggle-button-width: 100px;
 
 .Layers {
-  position: absolute;
-  z-index: 1100;
+  // position: absolute;
+  // z-index: 1100;
+  // width: 100vw;
 }
 
 .ActiveLayers {
-  padding: $padding-size / 2;
-  min-width: calc(#{$toggle-button-width} + #{$border-radius});
   background-color: rgba(#fff, 0.8);
-  border: solid $gray-800 1px;
   border-radius: $border-radius-lg;
   border-top-left-radius: 0px;
-  position: relative;
+  border: solid $gray-800 1px;
   left: $padding-size + 1px;
+  min-width: calc(#{$toggle-button-width} + #{$border-radius});
+  padding: $padding-size / 2;
+  position: relative;
   top: 52px;
   z-index: 1050;
   .LayerLabel {
@@ -24,31 +25,39 @@ $toggle-button-width: 100px;
   }
 }
 
+
 .btn.LayerToggle {
-  z-index: 1150;
-  opacity: 1;
-  width: $toggle-button-width !important;
-  box-sizing: border-box;
   background-color: rgba(#fff, 0.8) !important;
+  box-sizing: border-box;
+  left: 1rem;
+  opacity: 1;
+  position: absolute;
+  top: 1rem;
+  width: $toggle-button-width !important;
+  z-index: 1150;
+  &:hover {
+    background-color: #eee !important;
+    color: #000 !important;
+  }
   &.HasLayers {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-width: 0px;
   }
   &.Active {
-    border-top-right-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
     // border-right-color: #fff !important;
+    border-bottom-right-radius: 0px !important;
     border-right: 0px !important;
-    z-index: 1200;
+    border-top-right-radius: 0px !important;
     width: $toggle-button-width - 1 !important;
+    z-index: 1200;
   }
 }
 
 .btn.LayerToggle.HasLayers.Active {
-  border-bottom-width: 1px !important;
   border-bottom-color: $gray-800;
   border-bottom-left-radius: $border-radius;
+  border-bottom-width: 1px !important;
 }
 
 .LayerInteraction {

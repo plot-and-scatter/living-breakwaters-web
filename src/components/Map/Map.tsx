@@ -17,7 +17,7 @@ const Map = (): JSX.Element => {
 
   return (
     <div className="MapRow row">
-      <div className="col-12">
+      <div className="col-12" style={{ position: 'relative' }}>
         <Layers />
         <Scenarios />
         <div className="Map" id="Map" ref={mapRef} />
