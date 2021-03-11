@@ -14,14 +14,14 @@ export const attributesForPlacedItem = (
   const placedItemXPC = placedItemLeftXPercent * SVG_FRAME_X
   const placedItemYPC = (placedItemCenterYPercent - 0.5) * SVG_FRAME_Y
 
-  console.log(
-    'scale',
-    scale,
-    'placedItemWidth',
-    placedItemWidth,
-    'placedItemXPC',
-    placedItemXPC
-  )
+  // console.log(
+  //   'scale',
+  //   scale,
+  //   'placedItemWidth',
+  //   placedItemWidth,
+  //   'placedItemXPC',
+  //   placedItemXPC
+  // )
 
   return {
     width: +`${placedItemWidth}`,

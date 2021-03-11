@@ -2,58 +2,64 @@
 
 $image-height: 135px;
 
+.ScenarioCard {
+  cursor: pointer !important;
+  padding: 0.25rem 0.5rem;
+  border-bottom: solid 1px #ddd;
+}
+
 // .card {
 //   border: none !important;
 // }
 
-.ScenarioCard {
-  cursor: pointer !important;
-  height: 300px;
+// .ScenarioCard {
+//   cursor: pointer !important;
+//   height: 300px;
   
-  border: none !important;
+//   border: none !important;
 
-  .card-header {
-    cursor: pointer !important;
-    background: rgba($color-brand-background, 0.4) !important;
-    margin-top: -$image-height;
-    min-height: $image-height - 1;
-    height: $image-height - 1;
-    color: white;
-    padding: 1rem !important;
-    z-index: 110;
-    h4 {
-      font-size: 1.3rem;
-      text-shadow: 0 1px 0 #000;
-    }
-  }
-  .card-img-top {
-    filter: grayscale(100%);
-    z-index: 100;
-    border-radius: 0px;
-    max-height: $image-height;
-  }
-  .card-body {
-    cursor: pointer !important;
-    border-top: solid $color-brand-background 1px !important;
-    padding: 1rem !important;
-    // height: 100px;
-    // margin-top: 50px;
-    overflow-y: scroll;
-  }
-  .Intro {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-  &:hover,
-  &.active {
-    .card-header {
-      background: rgba($color-brand-background, 0.2) !important;
-    }
-    .card-img-top {
-      filter: none;
-    }
-  }
-  &.active {
-    border-width: 3px;
-  }
-}
+//   .card-header {
+//     cursor: pointer !important;
+//     background: rgba($color-brand-background, 0.4) !important;
+//     margin-top: -$image-height;
+//     min-height: $image-height - 1;
+//     height: $image-height - 1;
+//     color: white;
+//     padding: 1rem !important;
+//     z-index: 110;
+//     h4 {
+//       font-size: 1.3rem;
+//       text-shadow: 0 1px 0 #000;
+//     }
+//   }
+//   .card-img-top {
+//     filter: grayscale(100%);
+//     z-index: 100;
+//     border-radius: 0px;
+//     max-height: $image-height;
+//   }
+//   .card-body {
+//     cursor: pointer !important;
+//     border-top: solid $color-brand-background 1px !important;
+//     padding: 1rem !important;
+//     // height: 100px;
+//     // margin-top: 50px;
+//     overflow-y: scroll;
+//   }
+//   .Intro {
+//     font-size: 0.85rem;
+//     line-height: 1.4;
+//   }
+//   &:hover,
+//   &.active {
+//     .card-header {
+//       background: rgba($color-brand-background, 0.2) !important;
+//     }
+//     .card-img-top {
+//       filter: none;
+//     }
+//   }
+//   &.active {
+//     border-width: 3px;
+//   }
+// }

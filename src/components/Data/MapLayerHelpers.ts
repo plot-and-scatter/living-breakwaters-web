@@ -22,9 +22,9 @@ export const copyAndSet = (
 ): void => {
   const newLayerKeyDictionary = Object.assign({}, layerKeyDictionary)
   layersToToggle.forEach((l) => {
-    console.log('l.id', l.id, toggleTo)
+    // console.log('l.id', l.id, toggleTo)
     newLayerKeyDictionary[l.id] = toggleTo
   })
-  console.log('newLayerKeyDictionary', newLayerKeyDictionary)
+  // console.log('newLayerKeyDictionary', newLayerKeyDictionary)
   setLayers(newLayerKeyDictionary)
 }

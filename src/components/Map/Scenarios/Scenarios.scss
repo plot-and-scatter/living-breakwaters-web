@@ -27,8 +27,8 @@ $toggle-button-width: 130px;
   &.Active {
     // border-right-color: #fff !important;
     border-bottom-right-radius: 0px !important;
-    border-right: 0px !important;
-    border-top-right-radius: 0px !important;
+    // border-right: 0px !important;
+    border-bottom-left-radius: 0px !important;
     width: $toggle-button-width - 1 !important;
     z-index: 1200;
   }
@@ -36,35 +36,61 @@ $toggle-button-width: 130px;
 
 .ScenarioInteraction {
   display: flex;
+  flex-direction: column;
   position: absolute;
-  bottom: 0;
-  left: $toggle-button-width + $padding-size - 2;
+  top: 52px;
+  width: 25vw;
+  right: $padding-size + 1px;
+  // left: $toggle-button-width + $padding-size - 2;
   // width: calc(100vw - #{$padding-size * 2} - #{$toggle-button-width});
   z-index: 2500;
   background-color: rgba(#fff, 0.8);
   border: solid $gray-800 1px;
   border-radius: $border-radius;
   border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: $border-radius;
   // padding: $padding-size;
-
+  
 }
 
-.ScenarioCardWrapper {
-  height: 300px;
-  overflow-y: hidden;
-  width: calc(100vw / 5);
-  // min-width: 25%;
-  max-width: 300px;
-  position: relative;
-  bottom: 0;
-  // margin-right: $padding-size;
+// .ScenarioCardWrapper {
+//   height: 300px;
+//   overflow-y: hidden;
+//   width: calc(100vw / 5);
+//   // min-width: 25%;
+//   max-width: 300px;
+//   position: relative;
+//   bottom: 0;
+//   // margin-right: $padding-size;
   
-  // border-radius: $border-radius;
-  z-index: 800;
-  border: none;
-  border-right: solid $gray-800 1px;
-  &:last-child {
+//   // border-radius: $border-radius;
+//   z-index: 800;
+//   border: none;
+//   border-right: solid $gray-800 1px;
+//   &:last-child {
+//     margin-right: 0;
+//     border-right: 0;
+//   }
+// }
+
+.ScenarioCardWrapper {
+  // height: 300px;
+  // overflow-y: hidden;
+  // width: calc(100vw / 5);
+  // // min-width: 25%;
+  // max-width: 300px;
+  // position: relative;
+  // bottom: 0;
+  // // margin-right: $padding-size;
+  
+  // // border-radius: $border-radius;
+  // z-index: 800;
+  // border: none;
+  // border-right: solid $gray-800 1px;
+  &:last-child .ScenarioCard {
     margin-right: 0;
     border-right: 0;
+    border-bottom: 0;
   }
 }

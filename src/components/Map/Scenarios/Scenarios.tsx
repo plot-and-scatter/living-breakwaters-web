@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 
 import ScenarioCard from './ScenarioCard'
+import ScenarioInfo from './ScenarioInfo'
 
 import SCENARIOS from '../../../static/scenarios.json'
 import './Scenarios.scss'
@@ -10,6 +11,7 @@ import image3 from '../../../../content/assets/images/camilo-jimenez-vGu08RYjO-s
 import image4 from '../../../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg'
 
 const Scenarios = (): JSX.Element => {
+  const [scenario, setScenario] = useState<string>('')
   const [showScenarios, setShowScenarios] = useState<boolean>(false)
 
   const toggleShowScenariosCallback = useCallback(() => {
@@ -19,6 +21,16 @@ const Scenarios = (): JSX.Element => {
   const classes = `btn btn-outline-dark ScenarioToggle ${
     showScenarios ? 'Active' : ''
   }`
+
+  const setScenarioCallback = useCallback(
+    (id: string) => {
+      setScenario(id)
+      setShowScenarios(false)
+    },
+    [scenario]
+  )
+
+  console.log('scenario', scenario)
 
   return (
     <div className="Scenarios">
@@ -38,11 +50,16 @@ const Scenarios = (): JSX.Element => {
               i === 0 ? image1 : i === 1 ? image2 : i === 2 ? image3 : image4
             return (
               <div key={s.id} className="ScenarioCardWrapper">
-                <ScenarioCard scenario={s} image={image} />
+                <ScenarioCard
+                  scenario={s}
+                  image={image}
+                  setScenarioCallback={setScenarioCallback}
+                />
               </div>
             )
           })}
       </div>
+      <ScenarioInfo scenarioKey={scenario} />
     </div>
   )
 }

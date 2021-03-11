@@ -33,7 +33,7 @@ const PlaceableSVG = (props: Props): JSX.Element => {
 
   const actualScale = scale || defaultScale || 1
 
-  console.log('actualScale', actualScale)
+  // console.log('actualScale', actualScale)
 
   const [xPc] = useState<number>(xOffset)
   const [yPc] = useState<number>(yOffset)

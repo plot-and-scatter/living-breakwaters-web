@@ -34,7 +34,7 @@ const MapControls = (): JSX.Element => {
         <i className="fas fa-minus" />
       </button>
       <button className="btn btn-outline-dark" onClick={onResetClick}>
-        <i className="fas fa-compass mr-2" />
+        <i className="far fa-compass mr-2" />
         Reset
       </button>
     </div>

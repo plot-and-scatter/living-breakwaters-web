@@ -1,0 +1,17 @@
+@import "../../../scss/common.module";
+
+
+.ScenarioInfo {
+  position: absolute;
+  bottom: 0;
+  z-index: 1500;
+  background-color: rgba(#fff, 0.8);
+  border-radius: $border-radius;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  border: solid 1px #333;
+}

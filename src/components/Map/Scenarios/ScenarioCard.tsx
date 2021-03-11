@@ -7,9 +7,14 @@ import './ScenarioCard.scss'
 interface IProps {
   scenario: FixTypeLater
   image: FixTypeLater
+  setScenarioCallback: FixTypeLater
 }
 
-const ScenarioCard = ({ scenario, image }: IProps): JSX.Element => {
+const ScenarioCard = ({
+  scenario,
+  image,
+  setScenarioCallback
+}: IProps): JSX.Element => {
   const { hideAllLayers, showLayer, flyTo } = useMapLayerManager()
 
   const [time, setTime] = useState<number>(0)
@@ -18,6 +23,7 @@ const ScenarioCard = ({ scenario, image }: IProps): JSX.Element => {
   const intro = scenario.intro
 
   const scenarioClickCallback = useCallback(() => {
+    setScenarioCallback(scenario.id)
     hideAllLayers()
     // showLayer(scenario.layerIds)
     // flyTo(scenario.flyTo)
@@ -34,22 +40,39 @@ const ScenarioCard = ({ scenario, image }: IProps): JSX.Element => {
     }
   }, [time])
 
+  // return (
+  //   <div
+  //     className="ScenarioCard card"
+  //     style={{
+  //       whiteSpace: 'normal',
+  //       verticalAlign: 'top'
+  //     }}
+  //     onClick={scenarioClickCallback}
+  //   >
+  //     <img src={image} className="card-img-top" alt="" />
+  //     <div className="card-header">
+  //       <h4 className="card-title">{title}</h4>
+  //     </div>
+  //     <div className="card-body">
+  //       <p className="card-text Intro">{intro}</p>
+  //     </div>
+  //   </div>
+  // )
+
   return (
     <div
-      className="ScenarioCard card"
+      className="ScenarioCard"
       style={{
         whiteSpace: 'normal',
         verticalAlign: 'top'
       }}
       onClick={scenarioClickCallback}
     >
-      <img src={image} className="card-img-top" alt="" />
-      <div className="card-header">
-        <h4 className="card-title">{title}</h4>
-      </div>
-      <div className="card-body">
-        <p className="card-text Intro">{intro}</p>
-      </div>
+      {/* <img src={image} className="card-img-top" alt="" /> */}
+      {title}
+      {/* <div className="card-body"> */}
+      {/* <p className="card-text Intro">{intro}</p> */}
+      {/* </div> */}
     </div>
   )
 }
