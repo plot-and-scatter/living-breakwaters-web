@@ -94,5 +94,51 @@
     "opacity": 0.4,
     "type": "circle",
     "grouping": "logistics"
+  },
+  "roadways": {
+    "name": "Roadways",
+    "id": "roadways",
+    "color": "#66696c",
+    "opacity": 0.9,
+    "type": "line",
+    "grouping": "logistics",
+    "layers": [
+      {
+        "name": "Arterial Corridors",
+        "id": "roads_arterial",
+        "color": "#66696c",
+        "opacity": 0.9,
+        "type": "line",
+        "line-weight": 2,
+        "grouping": "logistics"
+      },
+      {
+        "name": "Expressway",
+        "id": "roads_expressway",
+        "color": "#66696c",
+        "opacity": 0.9,
+        "type": "line",
+        "line-weight": 4,
+        "grouping": "logistics"
+      },
+      {
+        "name": "Freeway",
+        "id": "roads_freeway",
+        "color": "#66696c",
+        "opacity": 0.9,
+        "type": "line",
+        "line-weight": 4,
+        "grouping": "logistics"
+      },
+      {
+        "name": "Exit Ramps",
+        "id": "roads_ramp",
+        "color": "#66696c",
+        "opacity": 0.9,
+        "type": "line",
+        "line-weight": 4,
+        "grouping": "logistics"
+      }
+    ]
   }
 }

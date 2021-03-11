@@ -1,8 +1,9 @@
-import FixTypeLater from '../../@types/FixTypeLater'
+import { Dictionary } from '../../@types/Dictionary'
+import { MapLayer } from '../../@types/MapLayer'
 
 import LAYERS from '../../static/layers.json'
 
-export const layersToToggle = (idToToggle: string | string[]): FixTypeLater => {
+export const layersToToggle = (idToToggle: string | string[]): MapLayer[] => {
   if (Array.isArray(idToToggle)) {
     const ids = idToToggle
     return ids.map((id) => LAYERS[id])
@@ -14,12 +15,16 @@ export const layersToToggle = (idToToggle: string | string[]): FixTypeLater => {
 }
 
 export const copyAndSet = (
-  layerObject: FixTypeLater,
-  layersToToggle: FixTypeLater[],
+  layerKeyDictionary: Dictionary<boolean>,
+  layersToToggle: MapLayer[],
   toggleTo: boolean,
-  setLayers: FixTypeLater
+  setLayers: React.Dispatch<React.SetStateAction<Dictionary<boolean>>>
 ): void => {
-  const newLayers = Object.assign({}, layerObject)
-  layersToToggle.forEach((l) => (newLayers[l.id] = toggleTo))
-  setLayers(newLayers)
+  const newLayerKeyDictionary = Object.assign({}, layerKeyDictionary)
+  layersToToggle.forEach((l) => {
+    console.log('l.id', l.id, toggleTo)
+    newLayerKeyDictionary[l.id] = toggleTo
+  })
+  console.log('newLayerKeyDictionary', newLayerKeyDictionary)
+  setLayers(newLayerKeyDictionary)
 }

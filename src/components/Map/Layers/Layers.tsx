@@ -11,6 +11,10 @@ const Layers = (): JSX.Element => {
 
   const { activeLayers } = useMapLayerManager()
 
+  const activeLayerKeys = Object.keys(activeLayers).filter(
+    (layerKey) => activeLayers[layerKey] === true
+  )
+
   const toggleShowLayersCallback = useCallback(() => {
     setShowLayers(!showLayers)
   }, [showLayers, setShowLayers])
@@ -18,11 +22,7 @@ const Layers = (): JSX.Element => {
   const classes =
     `btn btn-outline-dark LayerToggle ` +
     (showLayers ? 'Active' : '') +
-    (activeLayers.length > 0 ? 'HasLayers' : '')
-
-  const activeLayerKeys = Object.keys(activeLayers).filter(
-    (layerKey) => activeLayers[layerKey] === true
-  )
+    (activeLayerKeys.length > 0 ? 'HasLayers' : '')
 
   return (
     <div className="Layers">

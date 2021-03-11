@@ -6,6 +6,7 @@ import Layers from './Layers/Layers'
 import Scenarios from './Scenarios/Scenarios'
 
 import './Map.scss'
+import MapControls from './MapControls'
 
 const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
@@ -20,6 +21,7 @@ const Map = (): JSX.Element => {
       <div className="col-12" style={{ position: 'relative' }}>
         <Layers />
         <Scenarios />
+        <MapControls />
         <div className="Map" id="Map" ref={mapRef} />
       </div>
     </div>

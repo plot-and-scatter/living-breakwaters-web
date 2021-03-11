@@ -7,9 +7,9 @@ import FixTypeLater from '../../@types/FixTypeLater'
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
 
-type MapType = mapboxgl.Map | undefined
-type SetMapType = React.Dispatch<React.SetStateAction<MapType>>
-type MapRefType = React.RefObject<HTMLDivElement>
+export type MapType = mapboxgl.Map | undefined
+export type SetMapType = React.Dispatch<React.SetStateAction<MapType>>
+export type MapRefType = React.RefObject<HTMLDivElement>
 
 export const MAP_CENTRE: LngLatCoordinate = [-122.75, 49.25]
 export const MAP_STYLE = 'mapbox://styles/mapbox/light-v10'
@@ -32,9 +32,9 @@ const buildMapOptions = (mapRef: MapRefType) => {
   return options
 }
 
-const addNavControl = (map: mapboxgl.Map) => {
-  map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
-}
+// const addNavControl = (map: mapboxgl.Map) => {
+//   map.addControl(new mapboxgl.NavigationControl(), 'bottom-left')
+// }
 
 const addAttributionControl = (map: mapboxgl.Map) => {
   map.addControl(new mapboxgl.AttributionControl())
@@ -43,7 +43,7 @@ const addAttributionControl = (map: mapboxgl.Map) => {
 export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
   const initializeMap = (setMap: SetMapType, mapRef: MapRefType) => {
     const map = new mapboxgl.Map(buildMapOptions(mapRef))
-    addNavControl(map)
+    // addNavControl(map)
     addAttributionControl(map)
     map.on('load', () => {
       setMap(map)

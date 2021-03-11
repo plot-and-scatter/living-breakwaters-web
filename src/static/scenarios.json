@@ -10,7 +10,6 @@
       "industrial",
       "pipeline",
       "port_of_vancouver_terminals",
-      "roadways",
       "scenario_a",
       "train_track",
       "transformer_station",
@@ -86,7 +85,6 @@
       "airport",
       "industrial",
       "port_of_vancouver_terminals",
-      "roadways",
       "train_track",
       "flood_protection_infrastructure"
     ],

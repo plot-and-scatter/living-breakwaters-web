@@ -1,27 +1,44 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import { addInitialLayerToMap } from '../Map/mapHelper'
 import { copyAndSet, layersToToggle } from './MapLayerHelpers'
 import FixTypeLater from '../../@types/FixTypeLater'
 import { Map } from 'mapbox-gl'
 
-import LAYERS from '../../static/layers.json'
+import { Dictionary } from '../../@types/Dictionary'
+import RAW_LAYERS from '../../static/layers.json'
+import { MapLayer } from '../../@types/MapLayer'
+
+// const LAYERS: Dictionary<MapLayer> = (RAW_LAYERS as unknown) as Dictionary<
+//   MapLayer
+// >
+
+// console.log(LAYERS)
 
 type MapLayerManagerContextType = {
-  loadedLayers: FixTypeLater
-  setLoadedLayers: FixTypeLater
-  activeLayers: FixTypeLater
-  setActiveLayers: FixTypeLater
+  activeLayers: Dictionary<boolean>
+  setActiveLayers: React.Dispatch<React.SetStateAction<Dictionary<boolean>>>
+  loadedLayers: Dictionary<boolean>
+  setLoadedLayers: React.Dispatch<React.SetStateAction<Dictionary<boolean>>>
   map: Map
   setMap: React.Dispatch<React.SetStateAction<Map>>
-  flyTo: FixTypeLater
+}
+
+type MapLayerManagerType = {
+  activeLayers: Dictionary<boolean>
+  flyTo: (flyTo: FixTypeLater) => void
+  hideAllLayers: () => void
+  hideLayer: (id: string) => void
+  map: Map
+  setMap: React.Dispatch<React.SetStateAction<Map>>
+  showLayer: (id?: string | string[]) => void
 }
 
 const MapLayerManagerContext = React.createContext<
   MapLayerManagerContextType | undefined
 >(undefined)
 
-function useMapLayerManager(): FixTypeLater {
+function useMapLayerManager(): MapLayerManagerType {
   const context = React.useContext(MapLayerManagerContext)
   if (!context) {
     throw new Error(
@@ -60,7 +77,9 @@ function useMapLayerManager(): FixTypeLater {
       const layers = layersToToggle(id)
 
       // Set visibility to "none"
-      layers.forEach((l) => map.setLayoutProperty(l.id, 'visibility', 'none'))
+      layers.forEach((l) => {
+        map.setLayoutProperty(l.id, 'visibility', 'none')
+      })
 
       copyAndSet(activeLayers, layers, false, setActiveLayers) // Update active
     },
@@ -68,23 +87,21 @@ function useMapLayerManager(): FixTypeLater {
   )
 
   const hideAllLayers = useCallback(() => {
-    console.log('activeLayers', activeLayers)
-
-    Object.keys(activeLayers).forEach((layerId) =>
-      map.setLayoutProperty(layerId, 'visibility', 'none')
+    const layers = layersToToggle(
+      Object.keys(activeLayers).filter((k) => activeLayers[k] === true)
     )
 
-    // copyAndSet(
-    //   activeLayers,
-    //   Object.values(activeLayers),
-    //   false,
-    //   setActiveLayers
-    // ) // Update active
+    layers.forEach((l) => {
+      if (l) {
+        map.setLayoutProperty(l.id, 'visibility', 'none')
+      }
+    })
+
+    copyAndSet(activeLayers, layers, false, setActiveLayers) // Update active
   }, [activeLayers, setActiveLayers, map])
 
   const flyTo = useCallback(
     (flyTo: FixTypeLater): void => {
-      console.log('Flying to', flyTo)
       map.flyTo(flyTo)
     },
     [map]
@@ -106,9 +123,11 @@ interface IMapLayerManagerProviderProps {
   baseLayers?: FixTypeLater[]
 }
 
-function MapLayerManagerProvider({ children }: IMapLayerManagerProviderProps) {
-  const [loadedLayers, setLoadedLayers] = useState<FixTypeLater>({})
-  const [activeLayers, setActiveLayers] = useState<string[]>([])
+function MapLayerManagerProvider({
+  children
+}: IMapLayerManagerProviderProps): JSX.Element {
+  const [loadedLayers, setLoadedLayers] = useState<Dictionary<boolean>>({})
+  const [activeLayers, setActiveLayers] = useState<Dictionary<boolean>>({})
   const [map, setMap] = useState<Map>()
 
   const value = React.useMemo(
@@ -120,7 +139,7 @@ function MapLayerManagerProvider({ children }: IMapLayerManagerProviderProps) {
       map,
       setMap
     }),
-    [activeLayers, setActiveLayers, map, setMap]
+    [activeLayers, setActiveLayers, loadedLayers, setLoadedLayers, map, setMap]
   )
 
   return (

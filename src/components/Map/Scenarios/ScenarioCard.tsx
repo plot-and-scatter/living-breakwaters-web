@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useMapLayerManager } from '../../Data/MapLayerManager'
 import FixTypeLater from '../../../@types/FixTypeLater'
 
@@ -12,14 +12,27 @@ interface IProps {
 const ScenarioCard = ({ scenario, image }: IProps): JSX.Element => {
   const { hideAllLayers, showLayer, flyTo } = useMapLayerManager()
 
+  const [time, setTime] = useState<number>(0)
+
   const title = scenario.title
   const intro = scenario.intro
 
   const scenarioClickCallback = useCallback(() => {
     hideAllLayers()
-    showLayer(scenario.layerIds)
-    flyTo(scenario.flyTo)
-  }, [showLayer, flyTo])
+    // showLayer(scenario.layerIds)
+    // flyTo(scenario.flyTo)
+    // TODO: Bunching up all these calls at once means the first call (to
+    // hideAllLayers) gets clobbered by the later one (showLayer). Need to
+    // investigate this.
+    setTime(Date.now())
+  }, [hideAllLayers, showLayer, flyTo])
+
+  useEffect(() => {
+    if (time) {
+      showLayer(scenario.layerIds)
+      flyTo(scenario.flyTo)
+    }
+  }, [time])
 
   return (
     <div
