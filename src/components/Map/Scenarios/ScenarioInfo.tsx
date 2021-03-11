@@ -33,8 +33,8 @@ const ScenarioInfo = ({ scenarioKey }: Props): JSX.Element => {
       <hr className="my-2" />
       <p className="mb-0" style={{ lineHeight: 1.3 }}>
         <small>{scenario.intro}</small>
-        <button className="btn btn-sm btn-primary">
-          See narrative <i className="fas ml-2 fa-arrow-right" />
+        <button className="btn btn-sm btn-primary ml-2">
+          See narrative <i className="fas ml-1 fa-arrow-right" />
         </button>
       </p>
     </div>
