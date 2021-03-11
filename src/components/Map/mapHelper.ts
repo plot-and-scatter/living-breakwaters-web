@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import mapboxgl from 'mapbox-gl'
-import FixTypeLater from '../../@types/FixTypeLater'
-import { LngLatCoordinate } from '../Types/LngLatCoordinate'
-import { MapLayer } from '../Types/MapLayer'
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoiaGFuZ2xlciIsImEiOiJjazc2cHF1c2gwMGMwM2RteGcxenlnczYwIn0.XpPcoTossLBlfGYEfk8sng'
+import { LngLatCoordinate } from '../../@types/LngLatCoordinate'
+import { MapLayer } from '../../@types/MapLayer'
+import FixTypeLater from '../../@types/FixTypeLater'
+
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
 
 type MapType = mapboxgl.Map | undefined
 type SetMapType = React.Dispatch<React.SetStateAction<MapType>>
