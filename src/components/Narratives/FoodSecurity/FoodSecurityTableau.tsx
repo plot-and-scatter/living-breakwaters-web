@@ -20,6 +20,8 @@ import Church from '../PlaceableSVGs/Buildings/Church'
 import Factory from '../PlaceableSVGs/Buildings/Factory'
 import PersonWithKid from '../PlaceableSVGs/People/PersonWithKid'
 import Hospital from '../PlaceableSVGs/Buildings/Hospital'
+import LongPowerCable from '../PlaceableSVGs/Objects/LongPowerCable'
+import ShortPowerCable from '../PlaceableSVGs/Objects/ShortPowerCable'
 
 
 
