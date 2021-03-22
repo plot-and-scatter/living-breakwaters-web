@@ -30,6 +30,7 @@ import SVGFrame from '../Frames/SVGFrame'
 import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
 import TrafficLight2 from '../PlaceableSVGs/Objects/TrafficLight2'
 
+
 import '../PlaceableSVGs/Elements.scss'
 import './CriticalInfrastructureTableau.scss'
 

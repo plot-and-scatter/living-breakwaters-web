@@ -4,7 +4,7 @@ import { viewBox } from '../PlaceableSVGHelper'
 import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
-// import './Factory.scss'
+import './Factory.scss'
 
 const Factory = (props: PlaceableSVGProps): JSX.Element => {
   return (

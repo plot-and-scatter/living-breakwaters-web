@@ -18,6 +18,9 @@ import Text from '../PlaceableSVGs/Text'
 import Truck from '../PlaceableSVGs/Vehicles/Truck'
 import Church from '../PlaceableSVGs/Buildings/Church'
 import Factory from '../PlaceableSVGs/Buildings/Factory'
+import PersonWithKid from '../PlaceableSVGs/People/PersonWithKid'
+import Hospital from '../PlaceableSVGs/Buildings/Hospital'
+
 
 
 import Well from '../PlaceableSVGs/Buildings/Well'

@@ -8,6 +8,9 @@ import Car from './PlaceableSVGs/Vehicles/Car'
 import Truck from './PlaceableSVGs/Vehicles/Truck'
 import Church from './PlaceableSVGs/Buildings/Church'
 import Factory from './PlaceableSVGs/Buildings/Factory'
+import Hospital from './PlaceableSVGs/Buildings/Hospital'
+import PersonWithKid from './PlaceableSVGs/People/PersonWithKid'
+
 
 
 
@@ -29,7 +32,9 @@ const Tableau = ({ activeNarrative }: Props): JSX.Element => {
 
   tableau = (
     <SVGFrame id="FoodSecurityTableau">
-      <Factory xOffset={0.3} /> 
+      <Hospital xOffset={0.3} />
+      {/* <PersonWithKid xOffset={0.3} />  */}
+      {/* <Factory xOffset={0.3} />  */}
       {/* <Church xOffset={0.3} */}
 
     </SVGFrame>
