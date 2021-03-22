@@ -16,12 +16,17 @@ import Roots from '../PlaceableSVGs/Trees/Roots'
 import SVGFrame from '../Frames/SVGFrame'
 import Text from '../PlaceableSVGs/Text'
 import Truck from '../PlaceableSVGs/Vehicles/Truck'
+import Church from '../PlaceableSVGs/Buildings/Church'
+import Factory from '../PlaceableSVGs/Buildings/Factory'
+
+
 import Well from '../PlaceableSVGs/Buildings/Well'
 import WellPopover from './Popovers/WellPopover'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
 import SubsidingGroup from './SVGGroups/SubsidingGroup'
+import PlaceableSVG from '../PlaceableSVGs/PlaceableSVG'
 
 const FoodSecurityTableau = (): JSX.Element => {
   const { narrativeStage: stage, setNarrativeStage } = useNarrative()
