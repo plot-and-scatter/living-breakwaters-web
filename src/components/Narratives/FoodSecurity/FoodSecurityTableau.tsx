@@ -24,6 +24,10 @@ import LongPowerCable from '../PlaceableSVGs/Objects/LongPowerCable'
 import ShortPowerCable from '../PlaceableSVGs/Objects/ShortPowerCable'
 import ModernBuilding from '../PlaceableSVGs/Buildings/ModernBuilding'
 import PowerCable from '../PlaceableSVGs/Objects/PowerCable'
+import PowerGenerator from '../PlaceableSVGs/Objects/PowerGenerator'
+import RoundBuilding from '../PlaceableSVGs/Buildings/RoundBuilding'
+
+
 
 
 
