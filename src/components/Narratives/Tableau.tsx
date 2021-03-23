@@ -12,6 +12,8 @@ import Hospital from './PlaceableSVGs/Buildings/Hospital'
 import PersonWithKid from './PlaceableSVGs/People/PersonWithKid'
 import LongPowerCable from './PlaceableSVGs/Objects/LongPowerCable'
 import ShortPowerCable from './PlaceableSVGs/Objects/ShortPowerCable'
+import ModernBuilding from './PlaceableSVGs/Buildings/ModernBuilding'
+import PowerCable from './PlaceableSVGs/Objects/PowerCable'
 
 
 
@@ -34,7 +36,9 @@ const Tableau = ({ activeNarrative }: Props): JSX.Element => {
 
   tableau = (
     <SVGFrame id="FoodSecurityTableau">
-      <ShortPowerCable xOffset={0.3} />
+      <PowerCable xOffset={0.3} />
+      {/* <ModernBuilding xOffset={0.3} /> */}
+      {/* <ShortPowerCable xOffset={0.3} /> */}
       {/* <LongPowerCable xOffset={0.3} /> */}
       {/* <Hospital xOffset={0.3} /> */}
       {/* <PersonWithKid xOffset={0.3} />  */}

@@ -22,6 +22,10 @@ import PersonWithKid from '../PlaceableSVGs/People/PersonWithKid'
 import Hospital from '../PlaceableSVGs/Buildings/Hospital'
 import LongPowerCable from '../PlaceableSVGs/Objects/LongPowerCable'
 import ShortPowerCable from '../PlaceableSVGs/Objects/ShortPowerCable'
+import ModernBuilding from '../PlaceableSVGs/Buildings/ModernBuilding'
+import PowerCable from '../PlaceableSVGs/Objects/PowerCable'
+
+
 
 
 
