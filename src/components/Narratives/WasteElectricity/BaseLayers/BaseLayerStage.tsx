@@ -14,7 +14,7 @@ const BaseLayerStage = (props: Props): JSX.Element => {
 
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(-9, 76, 2035, 520)}
+      viewBoxObj={viewBox(0, 0, 2368, 613)}
       defaultScale={1}
       {...props}
     >

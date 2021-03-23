@@ -15,7 +15,7 @@ const Narratives = (props: FixTypeLater): JSX.Element => {
   const siteTitle = data.site.siteMetadata.title
 
   const [activeNarrative, setActiveNarrative] = useState(
-    NarrativeType.CriticalInfrastructures
+    NarrativeType.WasteElectricity
   )
 
   return (

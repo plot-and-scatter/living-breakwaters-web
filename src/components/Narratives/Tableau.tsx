@@ -29,7 +29,7 @@ const Tableau = ({ activeNarrative }: Props): JSX.Element => {
       tableau = <FoodSecurityTableau />
       break
     default:
-      tableau = <FoodSecurityTableau />
+      tableau = <WasteElectricityTableau />
   }
 
   return <div className="Tableau">{tableau}</div>
