@@ -1,14 +1,13 @@
 import React from 'react'
+import { NarrativeType } from '../../../@types/NarrativeType'
 
-import { ScenarioType } from '../../../@types/Scenario'
 import NarrativeSelect from '../NarrativeSelect'
 import Tableau from '../Tableau'
 
 import './NarrativeFrame.scss'
 
 interface Props {
-  activeNarrative: ScenarioType
-  text: string
+  activeNarrative: NarrativeType
 }
 
 const NarrativeFrame = (props: Props): JSX.Element => {
