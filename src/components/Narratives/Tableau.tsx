@@ -16,9 +16,8 @@ import ModernBuilding from './PlaceableSVGs/Buildings/ModernBuilding'
 import PowerCable from './PlaceableSVGs/Objects/PowerCable'
 import PowerGenerator from './PlaceableSVGs/Objects/PowerGenerator'
 import RoundBuilding from './PlaceableSVGs/Buildings/RoundBuilding'
-
-
-
+import Store from './PlaceableSVGs/Buildings/Store'
+import TransmissionTower from './PlaceableSVGs/Objects/TransmissionTower'
 
 
 import './Tableau.scss'
@@ -38,7 +37,9 @@ const Tableau = ({ activeNarrative }: Props): JSX.Element => {
 
   tableau = (
     <SVGFrame id="FoodSecurityTableau">
-      <RoundBuilding xOffset={0.3} />
+      <TransmissionTower xOffset={0.3} />
+      {/* <Store xOffset={0.3} /> */}
+      {/* <RoundBuilding xOffset={0.3} /> */}
       {/* <PowerGenerator xOffset={0.3} /> */}
       {/* <PowerCable xOffset={0.3} /> */}
       {/* <ModernBuilding xOffset={0.3} /> */}
