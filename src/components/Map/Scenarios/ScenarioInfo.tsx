@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SCENARIOS from '../../../static/scenarios.json'
-import { useMapLayerManager } from '../../Data/MapLayerManager'
+import { useMapManager } from '../../Data/MapLayerManager'
 
 interface Props {
   scenarioKey: string
@@ -10,7 +10,7 @@ interface Props {
 import './ScenarioInfo.scss'
 
 const ScenarioInfo = ({ scenarioKey }: Props): JSX.Element => {
-  const { flyTo } = useMapLayerManager()
+  const { flyTo } = useMapManager()
 
   if (!scenarioKey) return <></>
 

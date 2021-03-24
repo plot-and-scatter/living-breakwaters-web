@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { useMapLayerManager } from '../../Data/MapLayerManager'
+import { useMapManager } from '../../Data/MapLayerManager'
 import FixTypeLater from '../../../@types/FixTypeLater'
 
 import './ScenarioCard.scss'
@@ -15,7 +15,7 @@ const ScenarioCard = ({
   image,
   setScenarioCallback
 }: IProps): JSX.Element => {
-  const { hideAllLayers, showLayer, flyTo } = useMapLayerManager()
+  const { hideAllLayers, showLayer, flyTo } = useMapManager()
 
   const [time, setTime] = useState<number>(0)
 

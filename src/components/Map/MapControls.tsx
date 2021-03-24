@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react'
 
-import { useMapLayerManager } from '../Data/MapLayerManager'
+import { useMapManager } from '../Data/MapLayerManager'
 
 import './MapControls.scss'
 import { MAP_CENTRE, START_ZOOM } from './mapHelper'
 
 const MapControls = (): JSX.Element => {
-  const { map } = useMapLayerManager()
+  const { map } = useMapManager()
 
   const onZoomInClick = useCallback(() => {
     map.zoomIn()

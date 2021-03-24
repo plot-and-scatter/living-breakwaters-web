@@ -38,11 +38,11 @@ const MapLayerManagerContext = React.createContext<
   MapLayerManagerContextType | undefined
 >(undefined)
 
-function useMapLayerManager(): MapLayerManagerType {
+function useMapManager(): MapLayerManagerType {
   const context = React.useContext(MapLayerManagerContext)
   if (!context) {
     throw new Error(
-      `useMapLayerManager must be used within a MapLayerManagerProvider`
+      `useMapManager must be used within a MapLayerManagerProvider`
     )
   }
 
@@ -149,4 +149,4 @@ function MapLayerManagerProvider({
   )
 }
 
-export { MapLayerManagerProvider, useMapLayerManager }
+export { MapLayerManagerProvider, useMapManager }

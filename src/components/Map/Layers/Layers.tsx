@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 
-import { useMapLayerManager } from '../../Data/MapLayerManager'
+import { useMapManager } from '../../Data/MapLayerManager'
 import LayerLabel from './LayerLabel'
 import LayerSelect from './LayerSelect'
 
@@ -9,7 +9,7 @@ import './Layers.scss'
 const Layers = (): JSX.Element => {
   const [showLayers, setShowLayers] = useState<boolean>(false)
 
-  const { activeLayers } = useMapLayerManager()
+  const { activeLayers } = useMapManager()
 
   const activeLayerKeys = Object.keys(activeLayers).filter(
     (layerKey) => activeLayers[layerKey] === true

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 
 import { setupBaseMap } from './mapHelper'
-import { useMapLayerManager } from '../Data/MapLayerManager'
+import { useMapManager } from '../Data/MapLayerManager'
 import Layers from './Layers/Layers'
 import Scenarios from './Scenarios/Scenarios'
 
@@ -10,7 +10,7 @@ import MapControls from './MapControls'
 
 const Map = (): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
-  const { setMap } = useMapLayerManager()
+  const { setMap } = useMapManager()
 
   useEffect((): void => {
     setupBaseMap(setMap, mapRef)
