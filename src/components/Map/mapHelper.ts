@@ -69,11 +69,18 @@ export const addInitialLayerToMap = (map: MapType, layer: MapLayer): void => {
     }
     if (type === 'line') {
       paint[`line-width`] = layerToAdd[`line-weight`] || 1
+      // paint[`line-cap`] = 'round'
       if (layerToAdd[`line-dasharray`]) {
         paint[`line-dasharray`] = layerToAdd[`line-dasharray`] as FixTypeLater
       }
       if (layerToAdd[`line-gap-width`]) {
         paint[`line-gap-width`] = layerToAdd[`line-gap-width`]
+      }
+    }
+    if (type === 'fill') {
+      paint[`fill-outline-color`] = layerToAdd.color
+      if (layerToAdd[`fill-pattern`]) {
+        paint[`fill-pattern`] = layerToAdd[`fill-pattern`]
       }
     }
     map.addLayer({
