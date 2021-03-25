@@ -38,25 +38,25 @@ const WasteElectricityTableau = (): JSX.Element => {
           <Factory xOffset={0.422} yOffset={0.681} scale={0.08} />
         </g>
         <g id="Vehicles">
-        <Car xOffset={0.97} yOffset={0.489} scale={0.008} />
-        <Car xOffset={0.724} yOffset={0.716} scale={0.008} />
-        <Car xOffset={0.707} yOffset={0.717} scale={0.008} />
+          <Car xOffset={0.97} yOffset={0.489} scale={0.008} />
+          <Car xOffset={0.724} yOffset={0.716} scale={0.008} />
+          <Car xOffset={0.707} yOffset={0.717} scale={0.008} />
         </g>
         <g id="Objects">
           <PowerGenerator xOffset={0.812} yOffset={0.685} scale={0.01} />
           <TrafficLight xOffset={0.738} yOffset={0.7} scale={0.0035} />
           <TrafficLight2 xOffset={0.702} yOffset={0.695} scale={0.01} />
           <TransmissionTower xOffset={0.53} yOffset={0.685} scale={0.06} />
-          <PowerCable xOffset={0.57} yOffset={0.75} scale={0.42} />
-          <LongPowerCable xOffset={0.585} yOffset={0.82} scale={0.0035} />
-          <LongPowerCable xOffset={0.659} yOffset={0.795} scale={0.004} />
-          <LongPowerCable xOffset={0.68} yOffset={0.795} scale={0.004} />
-          <LongPowerCable xOffset={0.7} yOffset={0.795} scale={0.004} />
-          <LongPowerCable xOffset={0.737} yOffset={0.795} scale={0.0045} />
-          <LongPowerCable xOffset={0.754} yOffset={0.778} scale={0.004} />
-          <LongPowerCable xOffset={0.8} yOffset={0.778} scale={0.004} />
-          <LongPowerCable xOffset={0.95} yOffset={0.565} scale={0.004} />
-          <LongPowerCable xOffset={0.985} yOffset={0.565} scale={0.004} />
+          <PowerCable xOffset={0.5855} yOffset={0.75} scale={0.4017} />
+          <LongPowerCable xOffset={0.585} yOffset={0.82} scale={0.0037} />
+          <LongPowerCable xOffset={0.659} yOffset={0.795} scale={0.0049} />
+          <LongPowerCable xOffset={0.68} yOffset={0.794} scale={0.0046} />
+          <LongPowerCable xOffset={0.7} yOffset={0.794} scale={0.0046} />
+          <LongPowerCable xOffset={0.737} yOffset={0.792} scale={0.005} />
+          <LongPowerCable xOffset={0.754} yOffset={0.785} scale={0.0051} />
+          <LongPowerCable xOffset={0.8} yOffset={0.775} scale={0.0043} />
+          <LongPowerCable xOffset={0.95} yOffset={0.564} scale={0.0043} />
+          <LongPowerCable xOffset={0.985} yOffset={0.563} scale={0.0043} />
         </g>
         <g id="Trees">
           <Roots xOffset={0.4} yOffset={0.795} scale={0.007} />
@@ -111,7 +111,7 @@ const WasteElectricityTableau = (): JSX.Element => {
           <Grass xOffset={0.314} yOffset={0.785} scale={0.004} />
           <Grass xOffset={0.309} yOffset={0.782} scale={0.005} />
           <Grass xOffset={0.303} yOffset={0.779} scale={0.006} />
-          <Grass xOffset={0.30} yOffset={0.779} scale={0.005} />
+          <Grass xOffset={0.3} yOffset={0.779} scale={0.005} />
           <Grass xOffset={0.296} yOffset={0.783} scale={0.004} />
           <Grass xOffset={0.293} yOffset={0.785} scale={0.003} />
           <Grass xOffset={0.291} yOffset={0.785} scale={0.003} />

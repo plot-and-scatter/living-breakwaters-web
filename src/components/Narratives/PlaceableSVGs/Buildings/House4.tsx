@@ -4,11 +4,14 @@ import { viewBox } from '../PlaceableSVGHelper'
 import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
+import './House4.scss'
+
 const House4 = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
       viewBoxObj={viewBox(0, 0, 54, 52.5)}
       defaultScale={0.3}
+      extraClasses="House4"
       {...props}
     >
       <g className="cls-2">
