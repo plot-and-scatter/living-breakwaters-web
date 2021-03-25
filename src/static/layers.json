@@ -45,6 +45,7 @@
     "color": "#EC4E20",
     "opacity": 0.4,
     "type": "line",
+    "line-weight": 2,
     "grouping": "emergency_preparedness"
   },
   "eelgrasses": {
@@ -69,6 +70,7 @@
     "color": "#0f9490",
     "opacity": 0.6,
     "type": "line",
+    "line-weight": 5,
     "grouping": "flood_scenarios"
   },
   "first_responder": {
@@ -141,6 +143,7 @@
     "color": "#886699",
     "opacity": 0.4,
     "type": "line",
+    "line-weight": 8,
     "grouping": "logistics"
   },
   "pipeline": {

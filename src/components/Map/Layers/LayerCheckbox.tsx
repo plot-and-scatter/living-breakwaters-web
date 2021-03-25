@@ -39,7 +39,11 @@ const LayerCheckbox = ({ layer }: Props): JSX.Element => {
             onChange={onCheckboxChange}
             checked={checked ?? false}
           />
-          <label htmlFor={layer.id} className="form-check-label">
+          <label
+            htmlFor={layer.id}
+            className="form-check-label"
+            style={{ marginTop: '2px', cursor: 'pointer' }}
+          >
             {layer.name}
           </label>
         </div>

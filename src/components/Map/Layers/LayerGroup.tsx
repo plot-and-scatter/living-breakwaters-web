@@ -28,8 +28,12 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
 
   return (
     <div className="LayerGroup pb-2">
-      <div className="d-flex align-items-center justify-content-between">
+      <div
+        className="d-flex align-items-center justify-content-between"
+        style={{ borderBottom: 'solid 1px #333' }}
+      >
         <h6 className="mb-1" style={{ fontSize: '0.85rem' }}>
+          <i className={`fas fa-${layerGroup.icon} mr-2`} />
           {layerGroup.name}
         </h6>
         <p className="mb-1">

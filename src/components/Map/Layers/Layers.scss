@@ -21,7 +21,14 @@ $toggle-button-width: 100px;
   z-index: 1050;
   .LayerLabel {
     font-size: 75%;
-    margin-bottom: 2px;
+  }
+}
+
+.LayerLabel {
+  // margin-bottom: 2px;
+  border-bottom: solid 0.1px #ddd;
+  &:last-child {
+    border-bottom: none;
   }
 }
 

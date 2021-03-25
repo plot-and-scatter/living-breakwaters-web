@@ -1,8 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+import { MapLayer } from '../../../@types/MapLayer'
 
 import LAYERS from '../../../static/layers.json'
-import { MapLayer } from '../../Types/MapLayer'
 
 interface IProps {
   layer?: MapLayer
@@ -10,8 +10,10 @@ interface IProps {
   children?: React.ReactNode
 }
 
+const BASE_LEGEND_SIZE = 15
+
 const LayerLabel = ({ children, layer: layerProp, layerId }: IProps) => {
-  const layer = layerProp || LAYERS[layerId]
+  const layer: MapLayer = layerProp || LAYERS[layerId]
 
   if (!layer) {
     return <div>Loading...</div>
@@ -30,20 +32,87 @@ const LayerLabel = ({ children, layer: layerProp, layerId }: IProps) => {
       ? 'black'
       : 'white'
 
+  const opacity = Math.min(layer.opacity + 0.1, 1)
+
+  const labelShape = (
+    <div>
+      <svg
+        style={{ minWidth: `${BASE_LEGEND_SIZE}px` }}
+        width={BASE_LEGEND_SIZE * 1.5}
+        height={BASE_LEGEND_SIZE}
+        className="mr-2"
+      >
+        {layer.type === 'fill' && (
+          <rect
+            width={BASE_LEGEND_SIZE * 1.5}
+            height={BASE_LEGEND_SIZE}
+            fill={layer.color}
+            fillOpacity={opacity}
+            stroke={`#333`}
+            strokeWidth={`1px`}
+          />
+        )}
+        {layer.type === 'line' && (
+          <>
+            <line
+              y1={BASE_LEGEND_SIZE / 2}
+              y2={BASE_LEGEND_SIZE / 2}
+              x1={0}
+              x2={BASE_LEGEND_SIZE * 1.5}
+              stroke={`#333`}
+              strokeWidth={layer['line-weight'] + 2}
+              strokeOpacity={1}
+              strokeDasharray={
+                layer['line-dasharray'] ? layer['line-dasharray'].join(' ') : ''
+              }
+            />
+
+            <line
+              y1={BASE_LEGEND_SIZE / 2}
+              y2={BASE_LEGEND_SIZE / 2}
+              x1={0}
+              x2={BASE_LEGEND_SIZE * 1.5}
+              stroke={layer.color}
+              strokeWidth={layer['line-weight'] + 1}
+              strokeOpacity={opacity}
+              strokeDasharray={
+                layer['line-dasharray'] ? layer['line-dasharray'].join(' ') : ''
+              }
+            />
+          </>
+        )}
+        {layer.type === 'circle' && (
+          <circle
+            cx={(BASE_LEGEND_SIZE * 1.5) / 2}
+            cy={BASE_LEGEND_SIZE / 2}
+            r={BASE_LEGEND_SIZE / 2 - 0.5}
+            fill={layer.color}
+            fillOpacity={opacity}
+            stroke={`#333`}
+            strokeWidth={`0.5px`}
+          />
+        )}
+      </svg>
+    </div>
+  )
+
+  const bgColor = `rgba(${splitColorR}, ${splitColorG}, ${splitColorB}, 0.8)`
+
+  console.log(bgColor)
+
   return (
     <div
       key={layer.id}
-      className="LayerLabel"
-      style={{ backgroundColor: layer.color, color, padding: '2px 4px' }}
+      className="LayerLabel d-flex align-items-top"
+      style={{
+        padding: '2px 0px'
+      }}
+      // style={{ padding: '2px 4px' }}
     >
-      {children || layer.name}
+      {labelShape}
+      <div>{children || layer.name}</div>
     </div>
   )
 }
 
 export default LayerLabel
-
-LayerLabel.propTypes = {
-  layer: PropTypes.object,
-  children: PropTypes.node
-}
