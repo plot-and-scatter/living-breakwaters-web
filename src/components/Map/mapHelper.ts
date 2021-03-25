@@ -67,9 +67,11 @@ export const addInitialLayerToMap = (map: MapType, layer: MapLayer): void => {
       [`${type}-color`]: layerToAdd.color,
       [`${type}-opacity`]: layerToAdd.opacity
     }
+    const layout = { visibility: 'visible' }
     if (type === 'line') {
       paint[`line-width`] = layerToAdd[`line-weight`] || 1
-      // paint[`line-cap`] = 'round'
+      layout[`line-cap`] = 'round'
+      layout[`line-join`] = 'round'
       if (layerToAdd[`line-dasharray`]) {
         paint[`line-dasharray`] = layerToAdd[`line-dasharray`] as FixTypeLater
       }
@@ -87,7 +89,7 @@ export const addInitialLayerToMap = (map: MapType, layer: MapLayer): void => {
       id: layerToAdd.id,
       type: type,
       source: `${layerToAdd.id}`,
-      layout: { visibility: 'visible' },
+      layout,
       paint
     })
   })

@@ -6,7 +6,7 @@
   "author": "Frank Hangler <frank@plotandscatter.com>",
   "homepage": "https://plotandscatter.com/living-breakwaters-web",
   "dependencies": {
-    "@types/mapbox-gl": "^1.12.0",
+    "@types/mapbox-gl": "2.1.1",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",

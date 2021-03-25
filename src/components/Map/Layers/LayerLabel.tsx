@@ -44,29 +44,42 @@ const LayerLabel = ({ children, layer: layerProp, layerId }: IProps) => {
       >
         {layer.type === 'fill' && (
           <rect
-            width={BASE_LEGEND_SIZE * 1.5}
-            height={BASE_LEGEND_SIZE}
+            width={BASE_LEGEND_SIZE * 1.5 - 1}
+            height={BASE_LEGEND_SIZE - 1}
             fill={layer.color}
             fillOpacity={opacity}
             stroke={`#333`}
             strokeWidth={`1px`}
+            x={0.5}
+            y={0.5}
           />
         )}
         {layer.type === 'line' && (
           <>
             <line
-              y1={BASE_LEGEND_SIZE / 2}
-              y2={BASE_LEGEND_SIZE / 2}
+              y1={BASE_LEGEND_SIZE / 2 - layer['line-weight'] / 2 - 1}
+              y2={BASE_LEGEND_SIZE / 2 - layer['line-weight'] / 2 - 1}
               x1={0}
               x2={BASE_LEGEND_SIZE * 1.5}
               stroke={`#333`}
-              strokeWidth={layer['line-weight'] + 2}
+              strokeWidth={`1px`}
               strokeOpacity={1}
               strokeDasharray={
                 layer['line-dasharray'] ? layer['line-dasharray'].join(' ') : ''
               }
             />
-
+            <line
+              y1={BASE_LEGEND_SIZE / 2 + layer['line-weight'] / 2 + 1}
+              y2={BASE_LEGEND_SIZE / 2 + layer['line-weight'] / 2 + 1}
+              x1={0}
+              x2={BASE_LEGEND_SIZE * 1.5}
+              stroke={`#333`}
+              strokeWidth={`1px`}
+              strokeOpacity={1}
+              strokeDasharray={
+                layer['line-dasharray'] ? layer['line-dasharray'].join(' ') : ''
+              }
+            />
             <line
               y1={BASE_LEGEND_SIZE / 2}
               y2={BASE_LEGEND_SIZE / 2}
@@ -96,9 +109,7 @@ const LayerLabel = ({ children, layer: layerProp, layerId }: IProps) => {
     </div>
   )
 
-  const bgColor = `rgba(${splitColorR}, ${splitColorG}, ${splitColorB}, 0.8)`
-
-  console.log(bgColor)
+  // const bgColor = `rgba(${splitColorR}, ${splitColorG}, ${splitColorB}, 0.8)`
 
   return (
     <div
