@@ -59,7 +59,10 @@ const Scenarios = (): JSX.Element => {
             )
           })}
       </div>
-      <ScenarioInfo scenarioKey={scenario} />
+      <ScenarioInfo
+        scenarioKey={scenario}
+        setScenarioCallback={setScenarioCallback}
+      />
     </div>
   )
 }

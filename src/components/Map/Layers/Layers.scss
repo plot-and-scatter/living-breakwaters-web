@@ -47,9 +47,10 @@ $toggle-button-width: 100px;
   &.Active {
     // border-right-color: #fff !important;
     border-bottom-right-radius: 0px !important;
-    border-right: 0px !important;
-    border-top-right-radius: 0px !important;
-    width: $toggle-button-width - 1 !important;
+    border-bottom-left-radius: 0px !important;
+    // border-right: 0px !important;
+    // border-top-right-radius: 0px !important;
+    // width: $toggle-button-width - 1 !important;
     z-index: 1200;
   }
 }
@@ -62,8 +63,8 @@ $toggle-button-width: 100px;
 
 .LayerInteraction {
   position: absolute;
-  top: $padding-size + 1;
-  left: $toggle-button-width + $padding-size - 1;
+  top: 53px;
+  left: $padding-size + 1;
   width: 50vw;
   z-index: 1000;
   background-color: rgba(#fff, 0.8);
