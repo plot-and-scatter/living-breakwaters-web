@@ -40,8 +40,8 @@ $toggle-button-width: 100px;
     color: #000 !important;
   }
   &.HasLayers {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
     border-bottom-width: 0px;
   }
   &.Active {
@@ -57,8 +57,10 @@ $toggle-button-width: 100px;
 
 .btn.LayerToggle.HasLayers.Active {
   border-bottom-color: $gray-800;
-  border-bottom-left-radius: $border-radius;
+  // border-bottom-left-radius: $border-radius;
   border-bottom-width: 1px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
 }
 
 .LayerInteraction {

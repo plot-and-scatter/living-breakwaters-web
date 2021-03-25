@@ -21,17 +21,13 @@ const Layers = (): JSX.Element => {
 
   const classes =
     `btn btn-outline-dark LayerToggle ` +
-    (showLayers ? 'Active' : '') +
-    (activeLayerKeys.length > 0 ? 'HasLayers' : '')
+    (showLayers ? 'Active ' : '') +
+    (activeLayerKeys.length > 0 ? 'HasLayers ' : '')
 
   return (
     <div className="Layers">
-      <div>
-        <button
-          className={classes}
-          type="button"
-          onClick={toggleShowLayersCallback}
-        >
+      <div onClick={toggleShowLayersCallback} style={{ cursor: 'pointer' }}>
+        <button className={classes} type="button">
           <i className="fas fa-layer-group mr-1" /> Layers
         </button>
         {activeLayerKeys.length > 0 && !showLayers && (

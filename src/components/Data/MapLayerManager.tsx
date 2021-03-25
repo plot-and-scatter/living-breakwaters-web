@@ -28,7 +28,7 @@ type MapLayerManagerType = {
   activeLayers: Dictionary<boolean>
   flyTo: (flyTo: FixTypeLater) => void
   hideAllLayers: () => void
-  hideLayer: (id: string) => void
+  hideLayer: (id: string | string[]) => void
   map: Map
   setMap: React.Dispatch<React.SetStateAction<Map>>
   showLayer: (id?: string | string[]) => void
@@ -73,7 +73,7 @@ function useMapManager(): MapLayerManagerType {
   )
 
   const hideLayer = useCallback(
-    (id?: string) => {
+    (id?: string | string[]) => {
       const layers = layersToToggle(id)
 
       // Set visibility to "none"
