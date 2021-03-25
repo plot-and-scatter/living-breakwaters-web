@@ -67,7 +67,7 @@ $toggle-button-width: 100px;
   position: absolute;
   top: 53px;
   left: $padding-size + 1;
-  width: 50vw;
+  width: 60vw;
   z-index: 1000;
   background-color: rgba(#fff, 0.8);
   border: solid $gray-800 1px;
@@ -75,6 +75,12 @@ $toggle-button-width: 100px;
   border-top-left-radius: 0px;
   padding: $padding-size;
   .LayerSelect {
+    > .col-4 {
+      padding-left: 0px;
+      &:first-child {
+        padding-left: 1rem;
+      }
+    }
     h6 {
       font-size: 0.9rem;
     }
