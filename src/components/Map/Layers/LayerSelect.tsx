@@ -13,7 +13,7 @@ const LayerSelect = (): JSX.Element => {
       return <LayerGroup key={layerGroup.id} layerGroup={layerGroup} />
     })
 
-  const groupSize = 3
+  const groupSize = 2
   const cols = layerGroups
     .reduce(function (r, element, index) {
       // create element groups with size 3, result looks like:
@@ -25,7 +25,7 @@ const LayerSelect = (): JSX.Element => {
     .map(function (rowContent, index) {
       // surround every group with 'col'
       return (
-        <div className="col-6" key={index}>
+        <div className="col-4" key={index}>
           {rowContent}
         </div>
       )

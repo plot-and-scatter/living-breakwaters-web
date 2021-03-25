@@ -26,12 +26,16 @@ const Layers = (): JSX.Element => {
 
   return (
     <div className="Layers">
-      <div onClick={toggleShowLayersCallback} style={{ cursor: 'pointer' }}>
-        <button className={classes} type="button">
+      <div style={{ cursor: 'pointer' }}>
+        <button
+          className={classes}
+          type="button"
+          onClick={toggleShowLayersCallback}
+        >
           <i className="fas fa-layer-group mr-1" /> Layers
         </button>
         {activeLayerKeys.length > 0 && !showLayers && (
-          <div className="ActiveLayers">
+          <div className="ActiveLayers" onClick={toggleShowLayersCallback}>
             {activeLayerKeys.map((layerKey: string) => (
               <LayerLabel key={layerKey} layerId={layerKey} />
             ))}

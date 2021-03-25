@@ -38,12 +38,12 @@ const LayerGroupToggleButton = ({ layerGroup }: Props): JSX.Element => {
       {allChecked ? (
         <>
           <i className="fas fa-times mr-1" />
-          Uncheck all
+          None
         </>
       ) : (
         <>
           <i className="fas fa-check mr-1" />
-          Check all
+          All
         </>
       )}
     </button>

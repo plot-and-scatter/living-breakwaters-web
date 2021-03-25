@@ -28,8 +28,10 @@ const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
 
   return (
     <div className="LayerGroup pb-2">
-      <div className="d-flex align-items-baseline justify-content-between">
-        <h6 className="mb-1">{layerGroup.name}</h6>
+      <div className="d-flex align-items-center justify-content-between">
+        <h6 className="mb-1" style={{ fontSize: '0.85rem' }}>
+          {layerGroup.name}
+        </h6>
         <p className="mb-1">
           <LayerGroupToggleButton layerGroup={layerGroup} />
         </p>
