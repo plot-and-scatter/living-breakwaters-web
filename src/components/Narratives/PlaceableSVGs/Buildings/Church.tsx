@@ -4,7 +4,7 @@ import { viewBox } from '../PlaceableSVGHelper'
 import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
-import './Church.scss'
+// import './Church.scss'
 
 const Church = (props: PlaceableSVGProps): JSX.Element => {
   return (
