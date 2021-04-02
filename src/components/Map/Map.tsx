@@ -8,7 +8,11 @@ import Scenarios from './Scenarios/Scenarios'
 import './Map.scss'
 import MapControls from './MapControls'
 
-const Map = (): JSX.Element => {
+interface Props {
+  colWidth?: number
+}
+
+const Map = ({ colWidth = 12 }: Props): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
   const { setMap } = useMapManager()
 
@@ -18,7 +22,7 @@ const Map = (): JSX.Element => {
 
   return (
     <div className="MapRow row">
-      <div className="col-12" style={{ position: 'relative' }}>
+      <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
         <Layers />
         <Scenarios />
         <MapControls />

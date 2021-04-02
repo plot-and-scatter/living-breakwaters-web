@@ -1,13 +1,13 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { graphql } from "gatsby"
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/SEO"
-import BannerRow from "../components/Rows/BannerRow"
-import ContentRow from "../components/Rows/ContentRow"
+import Layout from '../components/Layout/Layout'
+import SEO from '../components/SEO'
+import BannerRow from '../components/Rows/BannerRow'
+import ContentRow from '../components/Rows/ContentRow'
 
-import image from "../../content/assets/images/annie-spratt-E5PDOC7mTvc-unsplash.jpg"
+import image from '../../content/assets/images/annie-spratt-E5PDOC7mTvc-unsplash.jpg'
 
 class Index extends React.Component {
   render() {
@@ -19,7 +19,9 @@ class Index extends React.Component {
         <SEO title="Home" />
 
         <BannerRow bgOpacity={0.2} bgImage={image}>
-          <span className="Cutout">Living Breakwaters</span>
+          <div className="col-12 text-center">
+            <span className="Cutout">Living Breakwaters</span>
+          </div>
         </BannerRow>
 
         <ContentRow rowClasses="p-5">
@@ -45,7 +47,7 @@ export default Index
 
 Index.propTypes = {
   data: PropTypes.object,
-  location: PropTypes.object,
+  location: PropTypes.object
 }
 
 export const pageQuery = graphql`

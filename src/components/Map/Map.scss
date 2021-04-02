@@ -4,6 +4,7 @@
   height: calc(100vh - #{$header-height} - #{$footer-height} + #{$padding-size});
   // border-bottom: solid $color-brand-background 1px;
   margin-bottom: -$padding-size;
+  min-height: 300px;
 }
 
 .MapRow {

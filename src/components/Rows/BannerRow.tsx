@@ -3,11 +3,12 @@ import React from 'react'
 import './BannerRow.scss'
 
 interface Props {
-  bgColorRGB: string
+  bgColorRGB?: string
   bgImage: string
-  bgOpacity: number
+  bgOpacity?: number
   children: React.ReactNode
   textDark: boolean
+  short?: boolean
 }
 
 const BannerRow = (props: Props): JSX.Element => {
@@ -18,6 +19,9 @@ const BannerRow = (props: Props): JSX.Element => {
   if (bgImage) {
     bannerStyle.backgroundImage = `url(${bgImage})`
   }
+  if (props.short) {
+    bannerStyle.minHeight = `100vh`
+  }
 
   const bgColorRGB = props.bgColorRGB || 'rgba(0, 0, 0)'
   const bgOpacity = props.bgOpacity || 0.5
@@ -25,13 +29,23 @@ const BannerRow = (props: Props): JSX.Element => {
 
   const textColor = props.textDark ? 'text-dark' : 'text-light'
 
+  const paddingSize = props.short ? 4 : 5
+  const padding = `py-${paddingSize}`
+
   return (
     <div className="BannerRow" style={bannerStyle}>
-      <div className={`row py-5 ${textColor}`} style={{ backgroundColor }}>
-        <div className="col-12 py-5">
-          <div className="py-5">
-            <p className="lead my-0 py-5 text-center">{children}</p>
-          </div>
+      <div
+        className={`row ${padding} ${textColor}`}
+        style={{
+          backgroundColor,
+          minHeight: props.short ? '100vh' : undefined
+        }}
+      >
+        <div
+          className={`col-12 ${padding}`}
+          style={{ marginTop: props.short ? '100px' : undefined }}
+        >
+          <div className={`my-0 ${padding} row`}>{children}</div>
         </div>
       </div>
     </div>
