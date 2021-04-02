@@ -12,7 +12,8 @@ export type SetMapType = React.Dispatch<React.SetStateAction<MapType>>
 export type MapRefType = React.RefObject<HTMLDivElement>
 
 export const MAP_CENTRE: LngLatCoordinate = [-122.75, 49.25]
-export const MAP_STYLE = 'mapbox://styles/mapbox/light-v10'
+// export const MAP_STYLE = 'mapbox://styles/mapbox/light-v10'
+export const MAP_STYLE = 'mapbox://styles/hangler/ckn0j0dkb15tn17p1hycbrlq3'
 export const MIN_ZOOM = 8
 export const MAX_ZOOM = 20
 export const START_ZOOM = 9
@@ -46,6 +47,23 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
     // addNavControl(map)
     addAttributionControl(map)
     map.on('load', () => {
+      // map.addSource('mapbox-dem', {
+      //   type: 'raster-dem',
+      //   url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+      //   tileSize: 512,
+      //   maxzoom: 14
+      // })
+      // map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
+      // // add a sky layer that will show when the map is highly pitched
+      map.addLayer({
+        id: 'sky',
+        type: 'sky',
+        paint: {
+          'sky-type': 'atmosphere',
+          'sky-atmosphere-sun': [0.0, 0.0],
+          'sky-atmosphere-sun-intensity': 15
+        }
+      })
       setMap(map)
       map.resize()
     })
