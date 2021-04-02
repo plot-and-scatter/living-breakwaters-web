@@ -68,9 +68,9 @@
     "name": "Flood Protection Infrastructure",
     "id": "flood_protection_infrastructure",
     "color": "#0f9490",
-    "opacity": 0.6,
+    "opacity": 1,
     "type": "line",
-    "line-weight": 5,
+    "line-weight": 6,
     "grouping": "flood_scenarios"
   },
   "first_responder": {
