@@ -9,7 +9,7 @@ import NarrativeSelection from '../components/Narratives/Selection/NarrativeSele
 import MapComponent from '../components/Map/Map'
 import SEO from '../components/SEO'
 
-import image from '../../content/assets/images/ben-den-engelsen-8aVLLbr1HxI-unsplash.jpg'
+import image from '../../content/assets/images/phil-reid-t80XviPFEEE-unsplash.jpg'
 
 import './Story.scss'
 import BannerRow from '../components/Rows/BannerRow'
