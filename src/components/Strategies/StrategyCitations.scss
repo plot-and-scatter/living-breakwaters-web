@@ -1,0 +1,14 @@
+.Citations {
+  .footnotes {
+    hr {
+      display: none;
+    }
+  }
+  ol {
+    columns: 3;
+    font-size: 0.9rem;
+    li {
+      break-inside: avoid-column;
+    }
+  }
+}

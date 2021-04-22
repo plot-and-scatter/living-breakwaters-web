@@ -3,12 +3,27 @@
 $example-color-background: $gray-800;
 
 .ProtectBG {
-  background-color: darken(rgb(80, 140, 130), 10%);
+  background-color: rgb(80, 140, 130);
   color: white !important;
 }
 .AccommodateBG {
   background-color: #ffc107;
   color: #333 !important;
+}
+
+.RetreatBG {
+  background-color: #dc3545;
+  color: white !important;
+}
+
+.AvoidBG {
+
+  background-color: #17a2b8;
+  color: white !important;
+}
+
+.Annotation {
+  border-left: 0 !important;
 }
 
 .Strategies, .Narratives {
@@ -42,29 +57,7 @@ $example-color-background: $gray-800;
   }
 
   .Post {
-    .Summary {
-      // background-color: lighten($color-brand-background, 20%);
-      // background-color: darken(rgb(80, 140, 130), 10%);
-      color: white;
-      // background-color: $gray-100;
-      margin-left: -1.6rem;
-      margin-right: -1.5rem;
-      margin-top: -1.5rem;
-      margin-bottom: -1.5rem;
-      padding: 1.5rem 2.5rem;
-      font-size: 90%;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-600;
-      letter-spacing: 0.00rem;
-      border-right: solid 1px $gray-400;
-      // text-align: justify;
-      p {
-        &:last-of-type {
-          margin-bottom: 0rem;
-        }
-      }
-    }
+    
     .Sidebar {
       border-left: solid 1px $gray-200;
       padding: 1.5rem;
@@ -97,7 +90,6 @@ $example-color-background: $gray-800;
   }
 
   .MoreInfo {
-    border-left: solid 1px $gray-400;
     .Benefits {
       // background-color: lighten($success, 56%);
       h2 {
@@ -135,7 +127,7 @@ $example-color-background: $gray-800;
     }
     .Annotation, .Illustration {
       border-bottom: solid 1px $gray-400;
-      
+      border-left: none;
     }
   }
 

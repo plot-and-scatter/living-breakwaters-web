@@ -1,9 +1,11 @@
-import { Link, graphql } from 'gatsby'
-import React, { useEffect, useRef } from 'react'
+import { graphql } from 'gatsby'
+import React from 'react'
 
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
+import StrategyCitations from '../components/Strategies/StrategyCitations'
+import StrategyDetail from '../components/Strategies/StrategyDetail'
 import StrategySelect from './StrategySelect'
 
 import './Strategies.scss'
@@ -11,19 +13,6 @@ import './Strategies.scss'
 const StrategyTemplate = (props: SitePageProps): JSX.Element => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
-
-  const { previous, next } = props.pageContext
-
-  console.log(props.data)
-  console.log(post)
-
-  const carouselRef = useRef<HTMLDivElement>()
-
-  useEffect(() => {
-    carouselRef.current.click()
-  }, [])
-
-  const strategyTypes = post.frontmatter.strategyTypes
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -43,160 +32,13 @@ const StrategyTemplate = (props: SitePageProps): JSX.Element => {
             />
           </div>
         </div>
-        <div className="Post">
-          <div className="row">
-            <div className="col">
-              <div className="row MoreInfo">
-                <div className="Annotation col col-4">
-                  <div
-                    className={`Summary ${strategyTypes}BG`}
-                    dangerouslySetInnerHTML={{
-                      __html: props.pageContext.subpages.summary
-                    }}
-                  />
-                </div>
-
-                <div className="Illustration col-8">
-                  <h2>How it works</h2>
-                  <div
-                    id="carouselExampleFade"
-                    className="carousel slide carousel-fade"
-                    data-ride="carousel"
-                    data-interval={2000}
-                    ref={carouselRef}
-                  >
-                    <div className="carousel-inner">
-                      {props.data.allFile.nodes.map((node, index) => {
-                        return (
-                          <div
-                            key={index}
-                            className={`carousel-item${
-                              index === 0 ? ' active' : ''
-                            }`}
-                          >
-                            <img
-                              className="d-block w-100"
-                              src={node.childImageSharp.fluid.src}
-                            />
-                          </div>
-                        )
-                      })}
-                    </div>
-                    <a
-                      className="carousel-control-prev"
-                      href="#carouselExampleFade"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <span
-                        className="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="sr-only">Previous</span>
-                    </a>
-                    <a
-                      className="carousel-control-next"
-                      href="#carouselExampleFade"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <span
-                        className="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="Types col col-4">
-                  <h2>Types of {post.frontmatter.title.toLowerCase()}</h2>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: props.pageContext.subpages.types
-                    }}
-                  />
-                </div>
-
-                <div className="Benefits col col-4">
-                  <h2>
-                    <i className="fas fa-check mr-2" />
-                    Benefits
-                  </h2>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: props.pageContext.subpages.benefits
-                    }}
-                  />
-                </div>
-
-                <div className="Challenges col col-4">
-                  <h2>
-                    <i className="fas fa-times mr-2" />
-                    Challenges
-                  </h2>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: props.pageContext.subpages.challenges
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row BottomBG">
-            <div className="col-8">
-              <div className="Examples row">
-                <div className="ExamplesTitle col-12">
-                  <h2>
-                    <i className="fas fa-tools mr-2"></i> Example projects
-                  </h2>
-                </div>
-
-                {props.pageContext.subpages.examples &&
-                  props.pageContext.subpages.examples.map(
-                    (exampleHtml, index) => {
-                      return (
-                        <div className="col" key={index}>
-                          <div
-                            className="Example"
-                            dangerouslySetInnerHTML={{ __html: exampleHtml }}
-                          />
-                        </div>
-                      )
-                    }
-                  )}
-              </div>
-            </div>
-
-            <div className="col Images">
-              <div className="row ImagesTitle">
-                <h2>
-                  <i className="fas fa-images mr-2"></i> Gallery
-                </h2>
-              </div>
-
-              {props.pageContext.subpages.images &&
-                props.pageContext.subpages.images.map((imageHtml, index) => {
-                  return (
-                    <div className="col-12" key={index}>
-                      <div
-                        className="Image"
-                        dangerouslySetInnerHTML={{ __html: imageHtml }}
-                      />
-                    </div>
-                  )
-                })}
-            </div>
-          </div>
-        </div>
-        <hr style={{ marginBottom: '1rem' }} />
-        <div
-          className="Citations"
-          dangerouslySetInnerHTML={{ __html: post.html }}
+        <StrategyDetail
+          data={props.data}
+          frontmatter={post.frontmatter}
+          pageContext={props.pageContext}
         />
-        <hr style={{ marginBottom: '1rem' }} />
+        <StrategyCitations citationHTML={post.html} />
+        {/* <hr style={{ marginBottom: '1rem' }} />
         <ul
           style={{
             display: `flex`,
@@ -220,7 +62,7 @@ const StrategyTemplate = (props: SitePageProps): JSX.Element => {
               </Link>
             )}
           </li>
-        </ul>
+        </ul> */}
       </div>
     </Layout>
   )
