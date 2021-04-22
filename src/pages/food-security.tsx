@@ -107,7 +107,7 @@ const Story = (props: FixTypeLater): JSX.Element => {
             }}
           >
             <MapLayerManagerProvider>
-              <MapComponent colWidth={12} />
+              <MapComponent colWidth={12} scenarioKey={'foodSecurity'} />
             </MapLayerManagerProvider>
           </div>
         </div>

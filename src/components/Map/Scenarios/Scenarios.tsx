@@ -10,8 +10,12 @@ import image2 from '../../../../content/assets/images/bre-smith-A_-piDJKVsY-unsp
 import image3 from '../../../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg'
 import image4 from '../../../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg'
 
-const Scenarios = (): JSX.Element => {
-  const [scenario, setScenario] = useState<string>('')
+interface Props {
+  defaultScenarioKey?: string
+}
+
+const Scenarios = ({ defaultScenarioKey }: Props): JSX.Element => {
+  const [scenario, setScenario] = useState<string>(defaultScenarioKey || '')
   const [showScenarios, setShowScenarios] = useState<boolean>(false)
 
   const toggleShowScenariosCallback = useCallback(() => {
