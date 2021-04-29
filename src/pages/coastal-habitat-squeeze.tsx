@@ -57,6 +57,7 @@ const CoastalHabitatSqueeze = (props: FixTypeLater): JSX.Element => {
         }
         scenarioKey={'coastalHabitat'}
         activeNarrative={NarrativeType.FoodSecurity}
+        path={'coastal-habitat-squeeze'}
       />
     </Layout>
   )

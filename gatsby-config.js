@@ -10,6 +10,7 @@ module.exports = {
     }
   },
   plugins: [
+    { resolve: `gatsby-plugin-anchor-links`, options: { offset: -100 } },
     `gatsby-plugin-catch-links`,
     `gatsby-remark-external-links`,
     {

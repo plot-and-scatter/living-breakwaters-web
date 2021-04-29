@@ -7,7 +7,10 @@ import NavLink from './NavLink'
 
 const Nav = (): JSX.Element => {
   return (
-    <nav className="Nav navbar navbar-expand-sm fixed-top navbar-dark bg-dark border-bottom border-dark">
+    <nav
+      className="Nav navbar navbar-expand-sm fixed-top navbar-dark bg-dark border-bottom border-dark"
+      style={{ zIndex: 3000 }}
+    >
       <Link className="navbar-brand" to="/">
         Living Breakwaters
       </Link>

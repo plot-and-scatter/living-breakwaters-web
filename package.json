@@ -14,6 +14,7 @@
     "d3": "^5.16.0",
     "gatsby": "^2.13.51",
     "gatsby-image": "^2.2.8",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-catch-links": "^2.1.24",
     "gatsby-plugin-feed": "^2.3.6",
     "gatsby-plugin-google-analytics": "^2.1.6",

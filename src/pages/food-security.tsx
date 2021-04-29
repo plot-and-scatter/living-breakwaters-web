@@ -16,7 +16,7 @@ const FoodSecurity = (props: FixTypeLater): JSX.Element => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <Story
-        title={'Coastal Habitat Squeeze'}
+        title={'Food Security'}
         imageSrc={image}
         lead={
           <>
@@ -46,6 +46,7 @@ const FoodSecurity = (props: FixTypeLater): JSX.Element => {
         }
         scenarioKey={'foodSecurity'}
         activeNarrative={NarrativeType.FoodSecurity}
+        path={'food-security'}
       />
     </Layout>
   )

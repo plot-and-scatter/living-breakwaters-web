@@ -50,6 +50,7 @@ const CriticalInfrastructures = (props: FixTypeLater): JSX.Element => {
         }
         scenarioKey={'criticalInfrastructures'}
         activeNarrative={NarrativeType.FoodSecurity}
+        path={'critical-infrastructures'}
       />
     </Layout>
   )
