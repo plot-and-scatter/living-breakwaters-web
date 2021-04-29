@@ -6,5 +6,6 @@ $color-brand-light: lighten($brand, 20%);
 $padding-size: $grid-gutter-width / 2;
 $header-height: 61px;
 $footer-height: 112px;
+$example-color-background: $gray-800;
 
 :export { brandBackground: $color-brand-background }

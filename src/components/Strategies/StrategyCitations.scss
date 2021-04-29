@@ -5,10 +5,13 @@
     }
   }
   ol {
-    columns: 3;
-    font-size: 0.9rem;
+    padding-left: 0;
+    columns: 4;
+    font-size: 0.75rem;
     li {
+      word-wrap: break-word;
       break-inside: avoid-column;
+      margin-left: 1.5rem;
     }
   }
 }

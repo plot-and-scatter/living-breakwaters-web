@@ -11,7 +11,7 @@ const NarrativeSelection = ({
   setActiveNarrative
 }: Props): JSX.Element => {
   return (
-    <div className="StrategyDropdown dropdown mt-3">
+    <div className="StrategyDropdown dropdown">
       <button
         className={`btn dropdown-toggle btn-primary`}
         type="button"

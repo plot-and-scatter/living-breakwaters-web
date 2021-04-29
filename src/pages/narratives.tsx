@@ -7,6 +7,8 @@ import Layout from '../components/Layout/Layout'
 import NarrativeFrame from '../components/Narratives/Frames/NarrativeFrame'
 import NarrativeSelection from '../components/Narratives/Selection/NarrativeSelection'
 import SEO from '../components/SEO'
+import Header from '../components/Layout/Header'
+import Title from '../components/Layout/Title'
 
 import './Narratives.scss'
 
@@ -20,22 +22,17 @@ const Narratives = (props: FixTypeLater): JSX.Element => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
+      <SEO title="Narratives" />
+      <Header>
+        <Title headingGroup="Narratives" title={activeNarrative} />
+        <div className="col-6 text-right">
+          <NarrativeSelection
+            activeNarrative={activeNarrative}
+            setActiveNarrative={setActiveNarrative}
+          />
+        </div>
+      </Header>
       <div className="Narratives">
-        <SEO title="Narratives" />
-        <div className="row my-4 align-items-center Title">
-          <div className="col-8">
-            <h1 className="mb-0">{activeNarrative}</h1>
-          </div>
-          <div className="col-4 text-right">
-            <NarrativeSelection
-              activeNarrative={activeNarrative}
-              setActiveNarrative={setActiveNarrative}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col"></div>
-        </div>
         <NarrativeFrame activeNarrative={activeNarrative} />
       </div>
     </Layout>

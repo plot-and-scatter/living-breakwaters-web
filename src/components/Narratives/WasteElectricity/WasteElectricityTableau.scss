@@ -22,7 +22,6 @@ $meanSeaLevel: lighten(#334455, 10%);
 .WasteElectricityTableau {
   position: relative;
   svg#WasteElectricityTableau {
-    border-radius: $border-radius-lg;
     background-image: linear-gradient(#bbddff, #fff);
     // border: solid #666 0.1vw;
     path {

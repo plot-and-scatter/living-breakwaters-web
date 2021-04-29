@@ -17,7 +17,6 @@ $example-color-background: $gray-800;
 }
 
 .AvoidBG {
-
   background-color: #17a2b8;
   color: white !important;
 }
@@ -26,29 +25,11 @@ $example-color-background: $gray-800;
   border-left: 0 !important;
 }
 
-.Strategies, .Narratives {
+.Strategies,
+.Narratives {
   color: $gray-700;
 
   font-size: 120%;
-
-  .Title {
-    border-bottom: solid 4px $example-color-background;
-    padding: 1.5rem 0rem;
-    background-color: lighten($color-brand-background, 10%);
-    color: white;
-
-    h1 {
-      margin: 0rem;
-      // padding-left: 1.5rem;
-      padding-left: 0rem;
-      font-weight: 600;
-      font-size: 150%;
-    }
-
-    h2 {
-      margin: 0rem;
-    }
-  }
 
   h2 {
     // font-size: 130%;
@@ -57,7 +38,6 @@ $example-color-background: $gray-800;
   }
 
   .Post {
-    
     .Sidebar {
       border-left: solid 1px $gray-200;
       padding: 1.5rem;
@@ -125,7 +105,8 @@ $example-color-background: $gray-800;
         font-weight: 600;
       }
     }
-    .Annotation, .Illustration {
+    .Annotation,
+    .Illustration {
       border-bottom: solid 1px $gray-400;
       border-left: none;
     }
@@ -136,7 +117,7 @@ $example-color-background: $gray-800;
     font-size: 90%;
     img {
       width: 100%;
-      max-width: 100%; 
+      max-width: 100%;
       // margin-top: -3rem;
       margin-bottom: -15rem;
     }
@@ -147,7 +128,8 @@ $example-color-background: $gray-800;
     border-right: 0px;
   }
 
-  .Types, .Illustration {
+  .Types,
+  .Illustration {
     // border-right: solid 1px $gray-400;
     &:last-child {
       border-right: 0px;
@@ -193,7 +175,7 @@ $example-color-background: $gray-800;
     background-color: lighten($example-color-background, 10%);
     border-top: solid $example-color-background 3px;
 
-    .ExamplesTitle {      
+    .ExamplesTitle {
       padding: 1.5rem;
       // text-align: center;
       h2 {

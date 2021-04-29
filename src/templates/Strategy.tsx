@@ -9,8 +9,10 @@ import StrategyDetail from '../components/Strategies/StrategyDetail'
 import StrategySelect from './StrategySelect'
 
 import './Strategies.scss'
+import Header from '../components/Layout/Header'
+import Title from '../components/Layout/Title'
 
-const StrategyTemplate = (props: SitePageProps): JSX.Element => {
+const Strategy = (props: SitePageProps): JSX.Element => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
 
@@ -20,18 +22,16 @@ const StrategyTemplate = (props: SitePageProps): JSX.Element => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div className="Strategies">
-        <div className="Title row align-items-center">
-          <div className="col-4">
-            <h1>{post.frontmatter.title}</h1>
-          </div>
-          <div className="col-8">
-            <StrategySelect
-              currentPost={post}
-              strategies={props.data.allMarkdownRemark.edges}
-            />
-          </div>
+      <Header>
+        <Title headingGroup={'Strategy'} title={post.frontmatter.title} />
+        <div className="col-6">
+          <StrategySelect
+            currentPost={post}
+            strategies={props.data.allMarkdownRemark.edges}
+          />
         </div>
+      </Header>
+      <div className="Strategies">
         <StrategyDetail
           data={props.data}
           frontmatter={post.frontmatter}
@@ -68,7 +68,7 @@ const StrategyTemplate = (props: SitePageProps): JSX.Element => {
   )
 }
 
-export default StrategyTemplate
+export default Strategy
 
 export const pageQuery = graphql`
   query StrategyBySlug($slug: String!, $animationSlug: String!) {

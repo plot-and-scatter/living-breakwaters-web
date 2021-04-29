@@ -3,9 +3,12 @@ import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
 
 import FixTypeLater from '../@types/FixTypeLater'
+import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
+import Title from '../components/Layout/Title'
 import SEO from '../components/SEO'
 import StrategyCard from '../components/Strategies/StrategyCard'
+import StrategyFilter from '../components/Strategies/StrategyFilter'
 
 import './Strategies.scss'
 
@@ -60,41 +63,11 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Strategies" />
-      <div className="row my-4 align-items-center">
-        <div className="col-6">
-          <h1 className="mb-0">Strategies</h1>
-        </div>
-        <div className="col-6 text-right">
-          <div className="d-flex justify-content-end align-items-center">
-            <h5 className="text-muted mr-3 mb-0">Show strategies:</h5>
-            {strategyTypes.map((strategyType) => {
-              const color = colorForStrategy(strategyType)
-              return (
-                <div
-                  key={strategyType}
-                  className={`py-1 px-2 form-check form-check-inline border border-${color} text-${color}`}
-                >
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id={`InlineCheckbox-${strategyType}`}
-                    value={strategyType}
-                    onChange={checkboxCallback}
-                    defaultChecked={filters.includes(strategyType)}
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor={`InlineCheckbox-${strategyType}`}
-                  >
-                    {strategyType}
-                  </label>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-      <div className="StrategyCards card-columns">
+      <Header>
+        <Title headingGroup="Strategies" />
+        <StrategyFilter checkboxCallback={checkboxCallback} filters={filters} />
+      </Header>
+      <div className="StrategyCards card-columns mt-3">
         {filteredStrategies.map((strategyNode, index) => {
           const strategy = strategyNode.node
           return <StrategyCard key={index} strategy={strategy} />
