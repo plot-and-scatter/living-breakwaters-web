@@ -7,7 +7,7 @@ interface Props {
   bgImage: string
   bgOpacity?: number
   children: React.ReactNode
-  textDark: boolean
+  textDark?: boolean
   short?: boolean
 }
 
