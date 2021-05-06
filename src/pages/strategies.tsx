@@ -66,7 +66,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
         {/* <StrategyFilter checkboxCallback={checkboxCallback} filters={filters} /> */}
       </Header>
       <div className="row mt-5">
-        <div className="col-4">
+        <div className="col-6 offset-3">
           <p>
             Coastal zones are some of the most ecologically sensitive and
             diverse habitats in the world. Currently, these areas are
@@ -85,22 +85,41 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             , this research groups adaptation strategies in four (4) different
             categories: protect, accommodate, retreat, and avoid.{' '}
           </p>
-          <p>
-            <strong>Protect</strong> is defined as a reactive strategy in
-            response to sea-level rise and storm surges. These strategies are
-            usually more conventional structural interventions, e.g., dikes,
-            seawalls, breakwaters, and groins. Such structures have proven to be
-            effective as a short-term solution. However, over time they are
-            likely to become less effective and will require maintenance and
-            reinforcement due to storm damage. Additionally, hard structures,
-            e.g., dikes and seawalls create negative effects and feedback on
-            ecosystem morphology and dynamics resulting in ecological
-            communities due to habitat modification. Alternatively, strategies
-            such as constructed coastal wetlands, dune systems, and barrier
-            islands are more cost-effective in the long term and can be more
-            beneficial because they provide coastal recreation and ecosystem
-            services.{' '}
-          </p>
+        </div>
+        <div className="col-8 offset-1">
+          <div className="row">
+            <div className="col-3">
+              <div className="ProtectBG p-1 mt-1">
+                <small>Link 1</small>
+              </div>
+              <div className="ProtectBG p-1 mt-1">
+                <small>Link 2</small>
+              </div>
+              <div className="ProtectBG p-1 mt-1">
+                <small>Link 3</small>
+              </div>
+            </div>
+            <div className="col-9">
+              <p>
+                <strong>Protect</strong> is defined as a reactive strategy in
+                response to sea-level rise and storm surges. These strategies
+                are usually more conventional structural interventions, e.g.,
+                dikes, seawalls, breakwaters, and groins. Such structures have
+                proven to be effective as a short-term solution. However, over
+                time they are likely to become less effective and will require
+                maintenance and reinforcement due to storm damage. Additionally,
+                hard structures, e.g., dikes and seawalls create negative
+                effects and feedback on ecosystem morphology and dynamics
+                resulting in ecological communities due to habitat modification.
+                Alternatively, strategies such as constructed coastal wetlands,
+                dune systems, and barrier islands are more cost-effective in the
+                long term and can be more beneficial because they provide
+                coastal recreation and ecosystem services.{' '}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 offset-3">
           <p>
             <strong>Accommodate</strong> refers to strategies that focus on
             adapting in place, i.e., using coastal adaptation measures that
@@ -228,7 +247,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             effective and equitable collaborative coastal management processes.{' '}
           </p>
         </div>
-        <div className="col-8">
+        <div className="col-8 offset-2 mt-3">
           <div className="mb-3">
             <StrategyFilter
               checkboxCallback={checkboxCallback}
@@ -236,6 +255,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             />
           </div>
           <div className="StrategyCards card-columns">
+            {/* Go alphabetical left-to-right */}
             {filteredStrategies.map((strategyNode, index) => {
               const strategy = strategyNode.node
               return <StrategyCard key={index} strategy={strategy} />

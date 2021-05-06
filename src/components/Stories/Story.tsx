@@ -115,15 +115,41 @@ const Story = ({
               scenarioKey={scenarioKey}
               lockScenario
             />
+            {/* TODO: hide layers list; use Legend button instead */}
+            {/* TODO: add link to full map */}
             {/* </div> */}
           </MapLayerManagerProvider>
         </div>
         <div className="col-4">{mapText}</div>
       </div>
+      <div className="row my-5" id="map">
+        <div
+          className="col-9 offset-1"
+          style={{
+            borderRadius: 0,
+            border: 'solid 1px #333',
+            height: '602px'
+          }}
+        >
+          <MapLayerManagerProvider>
+            {/* <div className="row"> */}
+            <MapComponent
+              colWidth={12}
+              scenarioKey={scenarioKey}
+              lockScenario
+            />
+            {/* TODO: hide layers list; use Legend button instead */}
+            {/* TODO: add link to full map */}
+            {/* </div> */}
+          </MapLayerManagerProvider>
+        </div>
+        <div className="col-1" style={{ backgroundColor: '#eee' }}></div>
+      </div>
       <div className="row my-5">
         <div className="col-4 offset-1">{narrativeText}</div>
         <div className="col-5" id="narrative">
           <Tableau activeNarrative={activeNarrative} />
+          {/* Make the image static and cover the width of the screen; as we scroll, we update the narrative image */}
         </div>
       </div>
       <div className="row my-5">

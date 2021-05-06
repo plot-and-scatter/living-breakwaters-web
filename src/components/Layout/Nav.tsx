@@ -31,10 +31,11 @@ const Nav = (): JSX.Element => {
           {/* <NavLink path="/narratives" title="Narratives" /> */}
           {/* <NavLink path="/strategies" title="Strategies" /> */}
           <NavLink path="/about" title="About" />
-          <NavLink path="/logistics-networks" title="Logistics Networks" />
           <NavLink path="/cultural-landscapes" title="Cultural Landscapes" />
-          <NavLink path="/utility-systems" title="Utility Systems" />
           <NavLink path="/food-security" title="Food Security" />
+          <NavLink path="/logistics-networks" title="Logistics Networks" />
+          <NavLink path="/utility-systems" title="Utility Systems" />
+          {/* Put stories into a dropdown called "Challenges" */}
           <div className="dropdown">
             <button
               className={`btn dropdown-toggle btn-primary}`}
