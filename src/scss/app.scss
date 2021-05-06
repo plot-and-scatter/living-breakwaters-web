@@ -10,6 +10,14 @@ body {
   background-color: $color-brand-background;
 }
 
+a {
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.6;
+}
+
 .btn-xs {
   font-size: 0.7rem !important;
   padding: 0.2rem 0.3rem !important;

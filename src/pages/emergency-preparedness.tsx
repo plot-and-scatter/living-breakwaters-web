@@ -16,7 +16,7 @@ const EmergencyPreparedness = (props: FixTypeLater): JSX.Element => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <Story
-        title={'Emergency Preparedness'}
+        title={'Utility Systems'}
         imageSrc={image}
         lead={
           <>

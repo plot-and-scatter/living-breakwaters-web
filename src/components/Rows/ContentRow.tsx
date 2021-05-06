@@ -14,9 +14,8 @@ const ContentRow = (props: Props): JSX.Element => {
 
   return (
     <div className={`row ${rowClasses}`}>
-      <div className="col-12 offset-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-        {children}
-      </div>
+      {/* <div className="col-12 offset-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2"> */}
+      <div className="col-6 offset-3">{children}</div>
     </div>
   )
 }

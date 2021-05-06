@@ -16,7 +16,7 @@ const CriticalInfrastructures = (props: FixTypeLater): JSX.Element => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <Story
-        title={'Critical Infrastructures'}
+        title={'Logistics Networks'}
         imageSrc={image}
         lead={
           <>

@@ -26,20 +26,23 @@
   "coastalHabitat": {
     "index": 1,
     "id": "coastalHabitat",
-    "title": "Coastal Habitat Squeeze",
+    "title": "Cultural Landscapes",
     "intro": "The Fraser River Estuary, the largest estuary along the Pacific Coast of North America, provides critical stopover habitat for millions of migratory birds along the Pacific Flyway. This estuary habitat and its food web also support important fishes, including for hundreds of millions of out-migrating juvenile salmon each year that come from throughout the vast Fraser River watershed. The region also provides key habitat for white sturgeon, one of the largest freshwater fish in the world, and Pacific herring, which are a foundational part of the coastal food web. Moreover, these fish are tied to both Indigenous food sovereignty and ways of life. With most of the existing coastline fixed behind hard infrastructures (e.g., dikes and seawalls), coastal ecosystems in the region cannot migrate with rising sea levels. A lack of sediment and other factors further exacerbate this problem. Over the course of the 20th century, dredging (for navigation) and the construction of many jetties and breakwaters have significantly altered sedimentation patterns. Without any adaptation, these expansive habitats will likely disappear in certain locations by the end of the century.",
     "layerIds": [
       "aboriginal_land",
-      "agricultural_land_reserve",
       "eelgrasses",
       "estuary",
       "flood_protection_infrastructure",
       "mudflats",
       "open_space_protected_areas",
-      "port_of_vancouver_terminals",
       "sandflats",
+      "wetlands",
       "scenario_a",
-      "wetlands"
+      "institutional",
+      "community_building",
+      "community_centre",
+      "religious_centre",
+      "schools"
     ],
     "flyTo": {
       "center": [-123.023958, 49.118110],
@@ -51,24 +54,18 @@
   "emergencyPreparedness": {
     "index": 2,
     "id": "emergencyPreparedness",
-    "title": "Emergency Preparedness",
+    "title": "Utility Systems",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu lectus, venenatis vel felis at, auctor dignissim neque. Nam ut turpis quis lorem faucibus placerat. Integer sed feugiat tellus, a tristique mi. Morbi mauris ligula, consectetur et felis quis, vehicula cursus nibh. In eget tellus nulla. Suspendisse nec ante orci. Nulla interdum nisi nec sem fermentum commodo. Curabitur accumsan ligula a leo facilisis volutpat. Sed vehicula gravida iaculis. Nulla fermentum placerat eros, non volutpat magna condimentum vel. Fusce fermentum imperdiet risus, id suscipit ante hendrerit in. Praesent dapibus volutpat dictum. Donec lobortis est et condimentum pellentesque. Suspendisse non placerat leo, quis pulvinar lorem.",
     "layerIds": [
-      "scenario_a",
-      "institutional",
-      "residential",
-      "aboriginal_land",
-      "community_building",
-      "community_centre",
-      "religious_centre",
-      "schools",
       "transmission_line",
+      "pipeline",
+      "industrial",
       "transformer_station",
       "waste"
     ],
     "flyTo": {
       "center": [-122.944758, 49.174135],
-      "zoom": 13,
+      "zoom": 10,
       "pitch": 45,
       "bearing": 60
     }

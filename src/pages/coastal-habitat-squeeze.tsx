@@ -16,7 +16,7 @@ const CoastalHabitatSqueeze = (props: FixTypeLater): JSX.Element => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <Story
-        title={'Coastal Habitat Squeeze'}
+        title={'Cultural Landscapes'}
         imageSrc={image}
         lead={
           <>

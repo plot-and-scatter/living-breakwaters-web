@@ -1,6 +1,7 @@
 @import "./bootstrap/functions";
 @import "./bootstrap/variables";
 
+$color-brand: $brand;
 $color-brand-background: rgb(20, 35, 40);
 $color-brand-light: lighten($brand, 20%);
 $padding-size: $grid-gutter-width / 2;
