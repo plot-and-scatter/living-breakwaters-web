@@ -5,7 +5,7 @@ import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 const WIDTH = 1500
 const BASE_HEIGHT = 375
 
-const WasteElectricitySeaLevel = ({
+const LogisticsNetworksSeaLevel = ({
   stage
 }: NarrativeStageProps): JSX.Element => {
   const d =
@@ -18,4 +18,4 @@ const WasteElectricitySeaLevel = ({
   return <path className="mean-sea-level" d={d} />
 }
 
-export default WasteElectricitySeaLevel
+export default LogisticsNetworksSeaLevel

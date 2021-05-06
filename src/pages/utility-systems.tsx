@@ -9,7 +9,7 @@ import Story from '../components/Stories/Story'
 import './Story.scss'
 import image from '../../content/assets/images/aditya-chinchure-2YRocbpCVeY-unsplash.jpg'
 
-const EmergencyPreparedness = (props: FixTypeLater): JSX.Element => {
+const UtilitySystems = (props: FixTypeLater): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
@@ -50,15 +50,15 @@ const EmergencyPreparedness = (props: FixTypeLater): JSX.Element => {
             pulvinar lorem.
           </>
         }
-        scenarioKey={'emergencyPreparedness'}
+        scenarioKey={'utilitySystems'}
         activeNarrative={NarrativeType.FoodSecurity}
-        path={'emergency-preparedness'}
+        path={'utility-systems'}
       />
     </Layout>
   )
 }
 
-export default EmergencyPreparedness
+export default UtilitySystems
 
 export const pageQuery = graphql`
   query {

@@ -21,7 +21,7 @@ interface Props {
   stage: number
 }
 
-const CriticalInfrastructureSeaSurge = ({ stage }: Props): JSX.Element => {
+const LogisticsNetworksSeaSurge = ({ stage }: Props): JSX.Element => {
   const d =
     stage === 0
       ? `M0 ${BASE_SURGE_LEVEL} h2410 v130 h-2410 v-130`
@@ -32,4 +32,4 @@ const CriticalInfrastructureSeaSurge = ({ stage }: Props): JSX.Element => {
   return <path className="sea-surge" d={d} />
 }
 
-export default CriticalInfrastructureSeaSurge
+export default LogisticsNetworksSeaSurge

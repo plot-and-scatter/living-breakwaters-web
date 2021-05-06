@@ -19,9 +19,9 @@ $meanSeaLevel: lighten(#334455, 10%);
   --color-stop: #{darken($freshWater, 20%)};
 }
 
-.CommunityVulnerabilityTableau {
+.CulturalLandscapesTableau {
   position: relative;
-  svg#CommunityVulnerabilityTableau {
+  svg#CulturalLandscapesTableau {
     background-image: linear-gradient(#bbddff, #fff);
     // border: solid #666 0.1vw;
     path {

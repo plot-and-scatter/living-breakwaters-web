@@ -30,18 +30,9 @@ const Nav = (): JSX.Element => {
           {/* <NavLink path="/map" title="Map" /> */}
           {/* <NavLink path="/narratives" title="Narratives" /> */}
           {/* <NavLink path="/strategies" title="Strategies" /> */}
-          <NavLink
-            path="/critical-infrastructures"
-            title="Critical Infrastructures"
-          />
-          <NavLink
-            path="/coastal-habitat-squeeze"
-            title="Coastal Habitat Squeeze"
-          />
-          <NavLink
-            path="/emergency-preparedness"
-            title="Emergency Preparedness"
-          />
+          <NavLink path="/logistics-networks" title="Logistics Networks" />
+          <NavLink path="/cultural-landscapes" title="Cultural Landscapes" />
+          <NavLink path="/utility-systems" title="Utility Systems" />
           <NavLink path="/food-security" title="Food Security" />
           <div className="dropdown">
             <button

@@ -9,7 +9,7 @@ import Story from '../components/Stories/Story'
 import './Story.scss'
 import image from '../../content/assets/images/phil-reid-t80XviPFEEE-unsplash.jpg'
 
-const CoastalHabitatSqueeze = (props: FixTypeLater): JSX.Element => {
+const CulturalLandscapes = (props: FixTypeLater): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
@@ -55,15 +55,15 @@ const CoastalHabitatSqueeze = (props: FixTypeLater): JSX.Element => {
             21 million people without electricity for several days.
           </>
         }
-        scenarioKey={'coastalHabitat'}
+        scenarioKey={'culturalLandscapes'}
         activeNarrative={NarrativeType.FoodSecurity}
-        path={'coastal-habitat-squeeze'}
+        path={'cultural-landscapes'}
       />
     </Layout>
   )
 }
 
-export default CoastalHabitatSqueeze
+export default CulturalLandscapes
 
 export const pageQuery = graphql`
   query {

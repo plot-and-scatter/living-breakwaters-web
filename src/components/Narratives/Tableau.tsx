@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { NarrativeType } from '../../@types/NarrativeType'
-import CommunityVulnerabilityTableau from './CommunityVulnerability/CommunityVulnerabilityTableau'
-import CriticalInfrastructureTableau from './CriticalInfrastructure/CriticalInfrastructureTableau'
+import CulturalLandscapesTableau from './CulturalLandscapes/CulturalLandscapesTableau'
+import LogisticsNetworksTableau from './LogisticsNetworks/LogisticsNetworksTableau'
 import FoodSecurityTableau from './FoodSecurity/FoodSecurityTableau'
-import WasteElectricityTableau from './WasteElectricity/WasteElectricityTableau'
+import UtilitySystemsTableau from './UtilitySystems/UtilitySystemsTableau'
 
 import './Tableau.scss'
 
@@ -16,20 +16,20 @@ const Tableau = ({ activeNarrative }: Props): JSX.Element => {
   let tableau
 
   switch (activeNarrative) {
-    case NarrativeType.CriticalInfrastructures:
-      tableau = <CriticalInfrastructureTableau />
+    case NarrativeType.LogisticsNetworks:
+      tableau = <LogisticsNetworksTableau />
       break
-    case NarrativeType.CommunityVulnerability:
-      tableau = <CommunityVulnerabilityTableau />
+    case NarrativeType.CulturalLandscapes:
+      tableau = <CulturalLandscapesTableau />
       break
-    case NarrativeType.WasteElectricity:
-      tableau = <WasteElectricityTableau />
+    case NarrativeType.UtilitySystems:
+      tableau = <UtilitySystemsTableau />
       break
     case NarrativeType.FoodSecurity:
       tableau = <FoodSecurityTableau />
       break
     default:
-      tableau = <WasteElectricityTableau />
+      tableau = <UtilitySystemsTableau />
   }
 
   return <div className="Tableau">{tableau}</div>

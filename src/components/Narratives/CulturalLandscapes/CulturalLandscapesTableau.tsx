@@ -25,12 +25,12 @@ import Wheat from '../PlaceableSVGs/Plants/Wheat'
 import Roots from '../PlaceableSVGs/Trees/Roots'
 
 import '../PlaceableSVGs/Elements.scss'
-import './CommunityVulnerabilityTableau.scss'
+import './CulturalLandscapesTableau.scss'
 
-const CommunityVulnerabilityTableau = (): JSX.Element => {
+const CulturalLandscapesTableau = (): JSX.Element => {
   return (
-    <div className="CommunityVulnerabilityTableau">
-      <SVGFrame id="CommunityVulnerabilityTableau">
+    <div className="CulturalLandscapesTableau">
+      <SVGFrame id="CulturalLandscapesTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
         <Land />
         <g id="Trees">
@@ -266,4 +266,4 @@ const CommunityVulnerabilityTableau = (): JSX.Element => {
   )
 }
 
-export default CommunityVulnerabilityTableau
+export default CulturalLandscapesTableau

@@ -20,12 +20,12 @@ import LongPowerCable from '../PlaceableSVGs/Objects/LongPowerCable'
 import SVGFrame from '../Frames/SVGFrame'
 
 import '../PlaceableSVGs/Elements.scss'
-import './WasteElectricityTableau.scss'
+import './UtilitySystemsTableau.scss'
 
-const WasteElectricityTableau = (): JSX.Element => {
+const UtilitySystemsTableau = (): JSX.Element => {
   return (
-    <div className="WasteElectricityTableau">
-      <SVGFrame id="WasteElectricityTableau">
+    <div className="UtilitySystemsTableau">
+      <SVGFrame id="UtilitySystemsTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
         <Land />
         <g id="Buildings">
@@ -142,4 +142,4 @@ const WasteElectricityTableau = (): JSX.Element => {
   )
 }
 
-export default WasteElectricityTableau
+export default UtilitySystemsTableau

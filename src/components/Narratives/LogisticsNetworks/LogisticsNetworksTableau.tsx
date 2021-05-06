@@ -32,14 +32,14 @@ import TrafficLight2 from '../PlaceableSVGs/Objects/TrafficLight2'
 
 
 import '../PlaceableSVGs/Elements.scss'
-import './CriticalInfrastructureTableau.scss'
+import './LogisticsNetworksTableau.scss'
 
-const CriticalInfrastructureTableau = (): JSX.Element => {
+const LogisticsNetworksTableau = (): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
 
   return (
-    <div className="CriticalInfrastructureTableau">
-      <SVGFrame id="CriticalInfrastructureTableau">
+    <div className="LogisticsNetworksTableau">
+      <SVGFrame id="LogisticsNetworksTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
         <Land />
         <g id="Maritime">
@@ -147,4 +147,4 @@ const CriticalInfrastructureTableau = (): JSX.Element => {
   )
 }
 
-export default CriticalInfrastructureTableau
+export default LogisticsNetworksTableau

@@ -1,6 +1,6 @@
 export enum NarrativeType {
-  CriticalInfrastructures = 'Critical Infrastructure',
-  WasteElectricity = 'Waste & Electricity',
-  CommunityVulnerability = 'Cultural Landscapes',
+  LogisticsNetworks = 'Logistics Networks',
+  UtilitySystems = 'Utility Systems',
+  CulturalLandscapes = 'Cultural Landscapes',
   FoodSecurity = 'Food Security'
 }

@@ -3,9 +3,9 @@ import React from 'react'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 
 const WIDTH = 1500
-const BASE_HEIGHT = 375
+const BASE_HEIGHT = 368
 
-const CriticalInfrastructureSeaLevel = ({
+const CulturalLandscapesSeaLevel = ({
   stage
 }: NarrativeStageProps): JSX.Element => {
   const d =
@@ -18,4 +18,4 @@ const CriticalInfrastructureSeaLevel = ({
   return <path className="mean-sea-level" d={d} />
 }
 
-export default CriticalInfrastructureSeaLevel
+export default CulturalLandscapesSeaLevel

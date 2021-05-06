@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CommunityVulnerabilityGround = (): JSX.Element => {
+const CulturalLandscapesGround = (): JSX.Element => {
   const d =
     'M0 87c55-14 103-2 138-5s85-12 121-12c27-1 58-7 64-13s9-10 19-11 66-9 80-6 135 3 148 0-3-9 44-13l100-3c20-1 38-11 50-12 43-1 213-6 231-4s196 19 228 17 52-2 146-4c78-2 162-2 220-6 26-1 77 5 122 3l145-8 179-10-2 203H0z'
 
   return <path className="ground" d={d} transform="translate(0 317)" />
 }
 
-export default CommunityVulnerabilityGround
+export default CulturalLandscapesGround

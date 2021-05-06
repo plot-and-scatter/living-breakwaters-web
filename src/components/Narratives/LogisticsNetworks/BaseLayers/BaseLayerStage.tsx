@@ -1,7 +1,8 @@
 import React from 'react'
 
-import CommunityVulnerabilityGround from './CommunityVulnerabilityGround'
-import CommunityVulnerabilitySeaLevel from './CommunityVulnerabilitySeaLevel'
+import LogisticsNetworksGround from './LogisticsNetworksGround'
+import LogisticsNetworksSeaLevel from './LogisticsNetworksSeaLevel'
+import LogisticsNetworksSeaSurge from './LogisticsNetworksSeaSurge'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
@@ -14,14 +15,14 @@ const BaseLayerStage = (props: Props): JSX.Element => {
 
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(1, 76, 2031, 520)}
+      viewBoxObj={viewBox(-9, 76, 2035, 520)}
       defaultScale={1}
       {...props}
     >
       <g id={`groundwater-${stage}`}>
-        {/* <CommunityVulnerabilitySeaSurge stage={stage} /> */}
-        <CommunityVulnerabilitySeaLevel stage={stage} />
-        <CommunityVulnerabilityGround />
+        {/* <LogisticsNetworksSeaSurge stage={stage} /> */}
+        <LogisticsNetworksSeaLevel stage={stage} />
+        <LogisticsNetworksGround />
       </g>
     </PlaceableSVG>
   )

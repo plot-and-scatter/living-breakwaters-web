@@ -1,7 +1,7 @@
 import React from 'react'
 
-import WasteElectricityGround from './WasteElectricityGround'
-import WasteElectricitySeaLevel from './WasteElectricitySeaLevel'
+import UtilitySystemsGround from './UtilitySystemsGround'
+import UtilitySystemsSeaLevel from './UtilitySystemsSeaLevel'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
@@ -19,9 +19,9 @@ const BaseLayerStage = (props: Props): JSX.Element => {
       {...props}
     >
       <g id={`groundwater-${stage}`}>
-        {/* <WasteElectricitySeaSurge stage={stage} /> */}
-        <WasteElectricitySeaLevel stage={stage} />
-        <WasteElectricityGround />
+        {/* <UtilitySystemsSeaSurge stage={stage} /> */}
+        <UtilitySystemsSeaLevel stage={stage} />
+        <UtilitySystemsGround />
       </g>
     </PlaceableSVG>
   )

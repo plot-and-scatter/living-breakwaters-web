@@ -9,7 +9,7 @@ import Story from '../components/Stories/Story'
 import './Story.scss'
 import image from '../../content/assets/images/zan-baldwin-5Q_-dz0hsNo-unsplash.jpg'
 
-const CriticalInfrastructures = (props: FixTypeLater): JSX.Element => {
+const LogisticsNetworkss = (props: FixTypeLater): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
@@ -48,15 +48,15 @@ const CriticalInfrastructures = (props: FixTypeLater): JSX.Element => {
             21 million people without electricity for several days.
           </>
         }
-        scenarioKey={'criticalInfrastructures'}
-        activeNarrative={NarrativeType.FoodSecurity}
-        path={'critical-infrastructures'}
+        scenarioKey={'logisticsNetworks'}
+        activeNarrative={NarrativeType.LogisticsNetworks}
+        path={'logistics-networks'}
       />
     </Layout>
   )
 }
 
-export default CriticalInfrastructures
+export default LogisticsNetworkss
 
 export const pageQuery = graphql`
   query {
