@@ -11,6 +11,7 @@ interface Props {
 }
 
 const StrategyCard = ({ strategy }: Props): JSX.Element => {
+  console.log('strategy', strategy)
   const strategyType = strategy.frontmatter.strategyTypes
   const color = colorForStrategy(strategyType)
   return (

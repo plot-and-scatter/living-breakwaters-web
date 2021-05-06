@@ -15,8 +15,12 @@ a {
 }
 
 p {
-  line-height: 1.6;
-  font-size: 1.2rem;
+  line-height: 1.55;
+  font-size: 1.1rem;
+}
+
+.card-columns {
+  column-count: 3 !important;
 }
 
 .btn-xs {

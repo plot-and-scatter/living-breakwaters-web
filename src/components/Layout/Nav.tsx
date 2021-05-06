@@ -30,6 +30,7 @@ const Nav = (): JSX.Element => {
           {/* <NavLink path="/map" title="Map" /> */}
           {/* <NavLink path="/narratives" title="Narratives" /> */}
           {/* <NavLink path="/strategies" title="Strategies" /> */}
+          <NavLink path="/about" title="About" />
           <NavLink path="/logistics-networks" title="Logistics Networks" />
           <NavLink path="/cultural-landscapes" title="Cultural Landscapes" />
           <NavLink path="/utility-systems" title="Utility Systems" />
@@ -46,7 +47,10 @@ const Nav = (): JSX.Element => {
             >
               Explore
             </button>
-            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div
+              className="dropdown-menu dropdown-menu-right"
+              aria-labelledby="dropdownMenuButton"
+            >
               <Link className="dropdown-item" to="/map">
                 Map
               </Link>
@@ -54,14 +58,14 @@ const Nav = (): JSX.Element => {
                 Narratives
               </Link>
               <Link className="dropdown-item" to="/strategies">
-                Strategies
+                Adaptation Strategies
               </Link>
               <Link className="dropdown-item" to="/case-study">
                 Case study
               </Link>
             </div>
           </div>
-          <NavLink path="/about" title="About" />
+
           {/* <NavLink path="/contact" title="Contact" /> */}
         </ul>
       </div>

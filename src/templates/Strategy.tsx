@@ -23,7 +23,10 @@ const Strategy = (props: SitePageProps): JSX.Element => {
         description={post.frontmatter.description || post.excerpt}
       />
       <Header>
-        <Title headingGroup={'Strategy'} title={post.frontmatter.title} />
+        <Title
+          headingGroup={'Adaptation Strategy'}
+          title={post.frontmatter.title}
+        />
         <div className="col-6">
           <StrategySelect
             currentPost={post}
