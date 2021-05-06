@@ -7,6 +7,7 @@ import BannerRow from '../Rows/BannerRow'
 import MapComponent from '../Map/Map'
 import SEO from '../SEO'
 import Tableau from '../Narratives/Tableau'
+import Subhead from '../Layout/Subhead'
 
 interface Props {
   activeNarrative: NarrativeType
@@ -16,6 +17,8 @@ interface Props {
   scenarioKey: string
   title: string
   path: string
+  mapText?: React.ReactNode
+  narrativeText?: React.ReactNode
 }
 
 const Story = ({
@@ -25,7 +28,9 @@ const Story = ({
   lead,
   scenarioKey,
   title,
-  path
+  path,
+  mapText,
+  narrativeText
 }: Props): JSX.Element => {
   return (
     <div className="Story">
@@ -90,41 +95,45 @@ const Story = ({
         </div>
       </BannerRow>
       <div className="row mt-5">
-        <div className="col-6 offset-2">{intro}</div>
-      </div>
-      <div className="row my-5">
-        <div className="col-8 offset-2">
-          <h1 id="map">Map</h1>
+        <div className="col-6 offset-2">
+          <p>{intro}</p>
         </div>
+      </div>
+      <div className="row my-5" id="map">
         <div
-          className="col-10 offset-1"
+          className="col-5 offset-1"
           style={{
-            borderRadius: '0.5rem',
+            borderRadius: 0,
             border: 'solid 1px #333',
             height: '602px'
           }}
         >
           <MapLayerManagerProvider>
-            <MapComponent colWidth={12} scenarioKey={scenarioKey} />
+            {/* <div className="row"> */}
+            <MapComponent
+              colWidth={12}
+              scenarioKey={scenarioKey}
+              lockScenario
+            />
+            {/* </div> */}
           </MapLayerManagerProvider>
         </div>
+        <div className="col-4">{mapText}</div>
       </div>
       <div className="row my-5">
-        <div className="col-8 offset-2">
-          <h1 id="narrative">Narrative</h1>
-        </div>
-        <div className="col-10 offset-1">
+        <div className="col-4 offset-1">{narrativeText}</div>
+        <div className="col-5" id="narrative">
           <Tableau activeNarrative={activeNarrative} />
         </div>
       </div>
       <div className="row my-5">
-        <div className="col-8 offset-2">
-          <h1 id="strategies">Strategies</h1>
+        <div className="col-8 offset-2" id="strategies">
+          <Subhead>Strategies</Subhead>
         </div>
       </div>
       <div className="row my-5">
-        <div className="col-8 offset-2">
-          <h1 id="resources">Resources</h1>
+        <div className="col-8 offset-2" id="resources">
+          <Subhead>Resources</Subhead>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import { useMapManager } from '../../Data/MapLayerManager'
 interface Props {
   scenarioKey: string
   setScenarioCallback: FixTypeLater
+  hide?: boolean
 }
 
 import './ScenarioInfo.scss'

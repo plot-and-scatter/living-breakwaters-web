@@ -12,9 +12,13 @@ import image4 from '../../../../content/assets/images/dan-meyers-IQVFVH0ajag-uns
 
 interface Props {
   defaultScenarioKey?: string
+  lockScenario?: boolean
 }
 
-const Scenarios = ({ defaultScenarioKey }: Props): JSX.Element => {
+const Scenarios = ({
+  defaultScenarioKey,
+  lockScenario
+}: Props): JSX.Element => {
   const [scenario, setScenario] = useState<string>(defaultScenarioKey || '')
   const [showScenarios, setShowScenarios] = useState<boolean>(false)
 
@@ -63,10 +67,12 @@ const Scenarios = ({ defaultScenarioKey }: Props): JSX.Element => {
             )
           })}
       </div>
-      <ScenarioInfo
-        scenarioKey={scenario}
-        setScenarioCallback={setScenarioCallback}
-      />
+      {!lockScenario && (
+        <ScenarioInfo
+          scenarioKey={scenario}
+          setScenarioCallback={setScenarioCallback}
+        />
+      )}
     </div>
   )
 }

@@ -14,9 +14,14 @@ import FixTypeLater from '../../@types/FixTypeLater'
 interface Props {
   colWidth?: number
   scenarioKey?: FixTypeLater
+  lockScenario?: boolean
 }
 
-const Map = ({ colWidth = 12, scenarioKey }: Props): JSX.Element => {
+const Map = ({
+  colWidth = 12,
+  scenarioKey,
+  lockScenario
+}: Props): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
 
   const { hideAllLayers, showLayer, flyTo, setMap, map } = useMapManager()
@@ -53,7 +58,7 @@ const Map = ({ colWidth = 12, scenarioKey }: Props): JSX.Element => {
     <div className="MapRow row">
       <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
         <Layers />
-        <Scenarios defaultScenarioKey={scenarioKey} />
+        {!lockScenario && <Scenarios defaultScenarioKey={scenarioKey} />}
         <MapControls />
         <div className="Map" id="Map" ref={mapRef} />
       </div>
