@@ -24,9 +24,9 @@ export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
       // .to('#RainOverflow', { opacity: 1, duration: 1 })
     } else {
       heavyRainTimeline = new TimelineLite()
-        // .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
         // .to('#RainOverflow', { opacity: 0, duration: 0.5 })
         .to('.SaturatedGround', { opacity: 0, duration: 0.5 })
+        .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
         .to('.FoodSecurityTableau svg', {
           backgroundImage: 'linear-gradient(#bbddff, #fff)',
           duration: 0.5
