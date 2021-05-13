@@ -72,7 +72,8 @@ const Story = ({
         autoAlpha: 1,
         scrollTrigger: {
           trigger: element.querySelector('.NarrText'),
-          start: 'top center', // element, viewport
+          endTrigger: element.querySelector('.NarrText'),
+          start: 'top 30%', // element, viewport
           end: 'bottom center',
           // scrub: true,
           markers: true,
@@ -155,7 +156,7 @@ const Story = ({
         {/* Make the image static and cover the width of the screen; as we scroll, we update the narrative image */}
         <div className="col-4 NarrText">{narrativeText}</div>
       </div>
-      <div className="row my-5" style={{ height: '500px' }}>
+      <div className="row my-5 Strategies" style={{ height: '500px' }}>
         <div className="col-8 offset-2" id="strategies">
           <Subhead>Strategies</Subhead>
         </div>
