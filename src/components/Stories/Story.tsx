@@ -79,15 +79,14 @@ const Story = ({
           start: 'top 30%', // element, viewport
           end: 'bottom center',
           // scrub: true,
-          markers: true,
+          // markers: true,
           pin: element.querySelector('.NarrTableau'),
           // pinReparent: true,
           onUpdate: (scrollTrigger): void => {
             const progress = scrollTrigger.progress
-            // console.log('hi there', progress)
-            if (progress < 0.3) {
+            if (progress < 0.33) {
               setNarrativeStage(0)
-            } else if (progress < 0.6) {
+            } else if (progress < 0.67) {
               setNarrativeStage(1)
             } else {
               setNarrativeStage(2)
@@ -98,9 +97,9 @@ const Story = ({
     )
   }, [])
 
-  useEffect(() => {
-    console.log(narrativeStage)
-  }, [narrativeStage])
+  // useEffect(() => {
+  //   console.log(narrativeStage)
+  // }, [narrativeStage])
 
   return (
     <div className="Story" ref={storyRef}>
@@ -165,7 +164,7 @@ const Story = ({
         <div className="col-1" style={{ backgroundColor: '#eee' }}></div>
       </div> */}
 
-      <div className="row">
+      <div className="row my-5">
         <div className="col-8">
           <div className="NarrTableau">
             <Tableau activeNarrative={activeNarrative} />
