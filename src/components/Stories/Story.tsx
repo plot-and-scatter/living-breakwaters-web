@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import { MapLayerManagerProvider } from '../Data/MapLayerManager'
 import { NarrativeType } from '../../@types/NarrativeType'
@@ -14,6 +14,7 @@ import Tableau from '../Narratives/Tableau'
 
 import './Story.scss'
 import { useNarrative } from '../Narratives/NarrativeContext'
+import LayerLegend from './LayerLegend'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -64,7 +65,14 @@ const Story = ({
   //   )
   // }, [])
 
-  const { narrativeStage, setNarrativeStage } = useNarrative()
+  const {
+    narrativeStage,
+    setNarrativeStage,
+    showRain,
+    toggleRain,
+    showSurge,
+    toggleSurge
+  } = useNarrative()
 
   const [mapScenarioKey, setMapScenarioKey] = useState<string>()
 
@@ -112,7 +120,7 @@ const Story = ({
           start: 'top 80px', // element, viewport
           end: 'bottom center',
           // scrub: true,
-          markers: true,
+          // markers: true,
           pin: element.querySelector('.MapTableau'),
           // pinReparent: true,
 
@@ -184,6 +192,14 @@ const Story = ({
   //   console.log(narrativeStage)
   // }, [narrativeStage])
 
+  const toggleShowRainCallback = useCallback(() => {
+    toggleRain()
+  }, [toggleRain])
+
+  const toggleShowSurgeCallback = useCallback(() => {
+    toggleSurge()
+  }, [toggleSurge])
+
   return (
     <div className="Story" ref={storyRef}>
       <SEO title="Story" />
@@ -209,36 +225,40 @@ const Story = ({
       <div className="row my-5" id="map">
         <div className="col-12">
           <div className="MapTableau">
-            <div
-              style={{
-                borderRadius: 0,
-                border: 'solid 1px #333',
-                height: `${MAP_HEIGHT + 2}px`,
-                pointerEvents: 'none'
-              }}
-            >
-              <MapLayerManagerProvider>
+            <MapLayerManagerProvider>
+              <div
+                style={{
+                  borderRadius: 0,
+                  border: 'solid 1px #333',
+                  height: `${MAP_HEIGHT + 2}px`
+                }}
+              >
                 <MapComponent
                   colWidth={12}
                   scenarioKey={mapScenarioKey}
                   lockScenario
                   mapHeightOverride={MAP_HEIGHT}
                 />
-              </MapLayerManagerProvider>
-            </div>
-            <div
-              ref={mapRef}
-              className="MapText mt-3"
-              style={{
-                backgroundColor: '#fff',
-                width: '50vw',
-                marginLeft: '25vw',
-                height: '30vw',
-                overflowY: 'hidden'
-              }}
-            >
-              {mapText}
-            </div>
+              </div>
+              <div className="row mt-3">
+                <div className="col-2 offset-1">
+                  <LayerLegend />
+                </div>
+                <div
+                  ref={mapRef}
+                  className="MapText col-6 offset-1"
+                  style={{
+                    backgroundColor: '#fff',
+                    // width: '50vw',
+                    // marginLeft: '25vw',
+                    height: '30vw',
+                    overflowY: 'hidden'
+                  }}
+                >
+                  {mapText}
+                </div>
+              </div>
+            </MapLayerManagerProvider>
           </div>
         </div>
       </div>
@@ -247,18 +267,52 @@ const Story = ({
         <div className="col-12">
           <div className="NarrTableau" style={{ backgroundColor: '#fff' }}>
             <Tableau activeNarrative={activeNarrative} />
-            <div
-              ref={narrRef}
-              className="NarrText mt-3"
-              style={{
-                backgroundColor: '#fff',
-                width: '50vw',
-                marginLeft: '25vw',
-                height: '30vw',
-                overflowY: 'hidden'
-              }}
-            >
-              {narrativeText}
+            <div className="row mt-3">
+              <div className="col-2 offset-1">
+                <div
+                  className="LayerLegend"
+                  style={{
+                    border: 'solid 1px #eee',
+                    fontSize: '0.8rem',
+                    padding: '0.5rem'
+                  }}
+                >
+                  <div>
+                    <button
+                      className={`btn btn-sm ${
+                        showRain ? 'btn-primary' : 'btn-outline-primary'
+                      } w-100`}
+                      onClick={() => toggleShowRainCallback()}
+                    >
+                      <i className="fas fa-cloud-showers-heavy mr-2" />
+                      {showRain ? 'Stop rain' : 'Start rain'}
+                    </button>
+                    <br />
+                    <button
+                      className={`btn btn-sm ${
+                        showSurge ? 'btn-primary' : 'btn-outline-primary'
+                      } mt-1 w-100`}
+                      onClick={() => toggleShowSurgeCallback()}
+                    >
+                      <i className="fas fa-wind mr-2" />
+                      {showSurge ? 'Stop storm' : 'Start storm'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                ref={narrRef}
+                className="NarrText col-6 offset-1"
+                style={{
+                  backgroundColor: '#fff',
+                  // width: '50vw',
+                  // marginLeft: '25vw',
+                  height: '30vw',
+                  overflowY: 'hidden'
+                }}
+              >
+                {narrativeText}
+              </div>
             </div>
           </div>
         </div>

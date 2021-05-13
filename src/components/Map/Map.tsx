@@ -59,7 +59,7 @@ const Map = ({
   return (
     <div className="MapRow row">
       <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
-        <Layers />
+        {!lockScenario && <Layers />}
         {!lockScenario && <Scenarios defaultScenarioKey={scenarioKey} />}
         <MapControls />
         <div
