@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { MapLayerManagerProvider } from '../Data/MapLayerManager'
 import { NarrativeType } from '../../@types/NarrativeType'
@@ -13,6 +13,7 @@ import Subhead from '../Layout/Subhead'
 import Tableau from '../Narratives/Tableau'
 
 import './Story.scss'
+import { useNarrative } from '../Narratives/NarrativeContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -61,6 +62,8 @@ const Story = ({
   //   )
   // }, [])
 
+  const { narrativeStage, setNarrativeStage } = useNarrative()
+
   useEffect(() => {
     const element = storyRef.current
     gsap.fromTo(
@@ -77,12 +80,27 @@ const Story = ({
           end: 'bottom center',
           // scrub: true,
           markers: true,
-          pin: element.querySelector('.NarrTableau')
-          // pinReparent: true
+          pin: element.querySelector('.NarrTableau'),
+          // pinReparent: true,
+          onUpdate: (scrollTrigger): void => {
+            const progress = scrollTrigger.progress
+            // console.log('hi there', progress)
+            if (progress < 0.3) {
+              setNarrativeStage(0)
+            } else if (progress < 0.6) {
+              setNarrativeStage(1)
+            } else {
+              setNarrativeStage(2)
+            }
+          }
         }
       }
     )
   }, [])
+
+  useEffect(() => {
+    console.log(narrativeStage)
+  }, [narrativeStage])
 
   return (
     <div className="Story" ref={storyRef}>
@@ -147,7 +165,7 @@ const Story = ({
         <div className="col-1" style={{ backgroundColor: '#eee' }}></div>
       </div> */}
 
-      <div className="row" style={{ backgroundColor: '#fed' }}>
+      <div className="row">
         <div className="col-8">
           <div className="NarrTableau">
             <Tableau activeNarrative={activeNarrative} />
