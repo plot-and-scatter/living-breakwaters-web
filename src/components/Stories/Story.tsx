@@ -41,70 +41,52 @@ const Story = ({
 }: Props): JSX.Element => {
   const storyRef = useRef(null)
 
+  // useEffect(() => {
+  //   const element = storyRef.current
+  //   gsap.fromTo(
+  //     element.querySelector('.NarrativeText'),
+  //     {
+  //       autoAlpha: 0
+  //     },
+  //     {
+  //       autoAlpha: 1,
+  //       scrollTrigger: {
+  //         trigger: element.querySelector('.NarrativeText'),
+  //         start: 'top bottom',
+  //         end: 'bottom top',
+  //         scrub: true,
+  //         markers: true
+  //       }
+  //     }
+  //   )
+  // }, [])
+
   useEffect(() => {
     const element = storyRef.current
     gsap.fromTo(
-      element.querySelector('.first-paragraph'),
+      element.querySelector('.NarrText'),
       {
-        autoAlpha: 0,
-        y: -20
+        autoAlpha: 1
       },
       {
         autoAlpha: 1,
-        y: 0,
         scrollTrigger: {
-          trigger: element.querySelector('.first'),
-          start: 'top top',
+          trigger: element.querySelector('.NarrText'),
+          start: 'top center', // element, viewport
           end: 'bottom center',
-          scrub: true
+          // scrub: true,
+          markers: true,
+          pin: element.querySelector('.NarrTableau')
+          // pinReparent: true
         }
       }
     )
-  }, [])
-
-  useEffect(() => {
-    const element = storyRef.current
-    gsap.fromTo(
-      element.querySelector('#gsap-logo'),
-      {
-        opacity: 0,
-        scale: 0.2,
-        y: -20
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: element.querySelector('.first'),
-          start: 'top center',
-          end: 'bottom top',
-          scrub: true
-        }
-      }
-    )
-  }, [])
-
-  useEffect(() => {
-    const element = storyRef.current
-    gsap.from(element!.querySelector('.line'), {
-      scale: 0,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: element.querySelector('.third'),
-        scrub: true,
-        start: 'top bottom',
-        end: 'top top'
-      }
-    })
   }, [])
 
   return (
     <div className="Story" ref={storyRef}>
       <SEO title="Story" />
-      <JumpTo path={path} />
+      {/* <JumpTo path={path} /> */}
       <BannerRow bgOpacity={0.3} bgImage={imageSrc} short>
         <a id="intro" />
         <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -118,12 +100,12 @@ const Story = ({
           {lead}
         </div>
       </BannerRow>
-      <div className="row mt-5">
+      <div className="Intro row mt-5">
         <div className="col-12 col-md-9 col-lg-6 offset-md-1 offset-lg-2">
           <p>{intro}</p>
         </div>
       </div>
-      <div className="row my-5" id="map">
+      {/* <div className="row my-5" id="map">
         <div
           className="col-6 col-md-5 offset-md-1"
           style={{
@@ -133,20 +115,16 @@ const Story = ({
           }}
         >
           <MapLayerManagerProvider>
-            {/* <div className="row"> */}
             <MapComponent
               colWidth={12}
               scenarioKey={scenarioKey}
               lockScenario
             />
-            {/* TODO: hide layers list; use Legend button instead */}
-            {/* TODO: add link to full map */}
-            {/* </div> */}
           </MapLayerManagerProvider>
         </div>
         <div className="col-6 col-md-4">{mapText}</div>
-      </div>
-      <div className="row my-5" id="map">
+      </div> */}
+      {/* <div className="row my-5" id="map">
         <div
           className="col-9 offset-1"
           style={{
@@ -156,32 +134,33 @@ const Story = ({
           }}
         >
           <MapLayerManagerProvider>
-            {/* <div className="row"> */}
             <MapComponent
               colWidth={12}
               scenarioKey={scenarioKey}
               lockScenario
             />
-            {/* TODO: hide layers list; use Legend button instead */}
-            {/* TODO: add link to full map */}
-            {/* </div> */}
+            {/* TODO: hide layers list; use Legend button instead 
+            {/* TODO: add link to full map 
           </MapLayerManagerProvider>
         </div>
         <div className="col-1" style={{ backgroundColor: '#eee' }}></div>
-      </div>
-      <div className="row my-5">
-        <div className="col-6 col-md-4 offset-md-1">{narrativeText}</div>
-        <div className="col-6 col-md-5" id="narrative">
-          <Tableau activeNarrative={activeNarrative} />
-          {/* Make the image static and cover the width of the screen; as we scroll, we update the narrative image */}
+      </div> */}
+
+      <div className="row" style={{ backgroundColor: '#fed' }}>
+        <div className="col-8">
+          <div className="NarrTableau">
+            <Tableau activeNarrative={activeNarrative} />
+          </div>
         </div>
+        {/* Make the image static and cover the width of the screen; as we scroll, we update the narrative image */}
+        <div className="col-4 NarrText">{narrativeText}</div>
       </div>
-      <div className="row my-5">
+      <div className="row my-5" style={{ height: '500px' }}>
         <div className="col-8 offset-2" id="strategies">
           <Subhead>Strategies</Subhead>
         </div>
       </div>
-      <div className="row my-5">
+      <div className="row my-5" style={{ height: '500px' }}>
         <div className="col-8 offset-2" id="resources">
           <Subhead>Resources</Subhead>
         </div>
