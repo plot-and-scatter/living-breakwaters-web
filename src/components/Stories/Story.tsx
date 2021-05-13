@@ -29,6 +29,8 @@ interface Props {
   narrativeText?: React.ReactNode
 }
 
+const MAP_HEIGHT = 400
+
 const Story = ({
   activeNarrative,
   imageSrc,
@@ -64,7 +66,77 @@ const Story = ({
 
   const { narrativeStage, setNarrativeStage } = useNarrative()
 
+  const [mapScenarioKey, setMapScenarioKey] = useState<string>()
+
+  const mapRef = useRef(null)
+
   useEffect(() => {
+    // MAP EFFECT scrollspy
+    const element = storyRef.current
+    gsap.fromTo(
+      element.querySelector('.MapText'),
+      {
+        autoAlpha: 1
+      },
+      {
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: element.querySelector('.MapTableau'),
+
+          start: 'top center', // element, viewport
+          end: 'bottom center',
+          // scrub: true,
+          // markers: true,
+
+          onEnter: (scrollTrigger): void => {
+            setMapScenarioKey(scenarioKey)
+          }
+        }
+      }
+    )
+  }, [])
+
+  useEffect(() => {
+    // MAP EFFECT scrollspy
+    const element = storyRef.current
+    gsap.fromTo(
+      element.querySelector('.MapText'),
+      {
+        autoAlpha: 1
+      },
+      {
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: element.querySelector('.MapTableau'),
+          endTrigger: element.querySelector('.MapText'),
+          start: 'top 80px', // element, viewport
+          end: 'bottom center',
+          // scrub: true,
+          markers: true,
+          pin: element.querySelector('.MapTableau'),
+          // pinReparent: true,
+
+          onUpdate: (scrollTrigger): void => {
+            const progress = scrollTrigger.progress
+            console.log(scrollTrigger)
+            console.log(
+              '-->',
+              mapRef.current.offsetHeight,
+              mapRef.current.scrollHeight
+            )
+            mapRef.current.scrollTop =
+              progress *
+              (mapRef.current.scrollHeight - mapRef.current.offsetHeight)
+          }
+        }
+      }
+    )
+  }, [])
+
+  const narrRef = useRef(null)
+
+  useEffect(() => {
+    // NARRATIVE TEXT scrollspy
     const element = storyRef.current
     gsap.fromTo(
       element.querySelector('.NarrText'),
@@ -74,16 +146,27 @@ const Story = ({
       {
         autoAlpha: 1,
         scrollTrigger: {
-          trigger: element.querySelector('.NarrText'),
+          trigger: element.querySelector('.NarrTableau'),
           endTrigger: element.querySelector('.NarrText'),
-          start: 'top 30%', // element, viewport
+          start: 'top 80px', // element, viewport
           end: 'bottom center',
           // scrub: true,
           // markers: true,
           pin: element.querySelector('.NarrTableau'),
           // pinReparent: true,
+
           onUpdate: (scrollTrigger): void => {
             const progress = scrollTrigger.progress
+            console.log(scrollTrigger)
+            console.log(
+              '-->',
+              narrRef.current.offsetHeight,
+              narrRef.current.scrollHeight
+            )
+            narrRef.current.scrollTop =
+              progress *
+              (narrRef.current.scrollHeight - narrRef.current.offsetHeight)
+
             if (progress < 0.33) {
               setNarrativeStage(0)
             } else if (progress < 0.67) {
@@ -123,55 +206,63 @@ const Story = ({
           <p>{intro}</p>
         </div>
       </div>
-      {/* <div className="row my-5" id="map">
-        <div
-          className="col-6 col-md-5 offset-md-1"
-          style={{
-            borderRadius: 0,
-            border: 'solid 1px #333',
-            height: '602px'
-          }}
-        >
-          <MapLayerManagerProvider>
-            <MapComponent
-              colWidth={12}
-              scenarioKey={scenarioKey}
-              lockScenario
-            />
-          </MapLayerManagerProvider>
+      <div className="row my-5" id="map">
+        <div className="col-12">
+          <div className="MapTableau">
+            <div
+              style={{
+                borderRadius: 0,
+                border: 'solid 1px #333',
+                height: `${MAP_HEIGHT + 2}px`,
+                pointerEvents: 'none'
+              }}
+            >
+              <MapLayerManagerProvider>
+                <MapComponent
+                  colWidth={12}
+                  scenarioKey={mapScenarioKey}
+                  lockScenario
+                  mapHeightOverride={MAP_HEIGHT}
+                />
+              </MapLayerManagerProvider>
+            </div>
+            <div
+              ref={mapRef}
+              className="MapText mt-3"
+              style={{
+                backgroundColor: '#fff',
+                width: '50vw',
+                marginLeft: '25vw',
+                height: '30vw',
+                overflowY: 'hidden'
+              }}
+            >
+              {mapText}
+            </div>
+          </div>
         </div>
-        <div className="col-6 col-md-4">{mapText}</div>
-      </div> */}
-      {/* <div className="row my-5" id="map">
-        <div
-          className="col-9 offset-1"
-          style={{
-            borderRadius: 0,
-            border: 'solid 1px #333',
-            height: '602px'
-          }}
-        >
-          <MapLayerManagerProvider>
-            <MapComponent
-              colWidth={12}
-              scenarioKey={scenarioKey}
-              lockScenario
-            />
-            {/* TODO: hide layers list; use Legend button instead 
-            {/* TODO: add link to full map 
-          </MapLayerManagerProvider>
-        </div>
-        <div className="col-1" style={{ backgroundColor: '#eee' }}></div>
-      </div> */}
+      </div>
 
       <div className="row my-5">
-        <div className="col-8">
-          <div className="NarrTableau">
+        <div className="col-12">
+          <div className="NarrTableau" style={{ backgroundColor: '#fff' }}>
             <Tableau activeNarrative={activeNarrative} />
+            <div
+              ref={narrRef}
+              className="NarrText mt-3"
+              style={{
+                backgroundColor: '#fff',
+                width: '50vw',
+                marginLeft: '25vw',
+                height: '30vw',
+                overflowY: 'hidden'
+              }}
+            >
+              {narrativeText}
+            </div>
           </div>
         </div>
         {/* Make the image static and cover the width of the screen; as we scroll, we update the narrative image */}
-        <div className="col-4 NarrText">{narrativeText}</div>
       </div>
       <div className="row my-5 Strategies" style={{ height: '500px' }}>
         <div className="col-8 offset-2" id="strategies">

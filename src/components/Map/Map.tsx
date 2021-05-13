@@ -15,12 +15,14 @@ interface Props {
   colWidth?: number
   scenarioKey?: FixTypeLater
   lockScenario?: boolean
+  mapHeightOverride?: number
 }
 
 const Map = ({
   colWidth = 12,
   scenarioKey,
-  lockScenario
+  lockScenario,
+  mapHeightOverride
 }: Props): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
 
@@ -60,7 +62,12 @@ const Map = ({
         <Layers />
         {!lockScenario && <Scenarios defaultScenarioKey={scenarioKey} />}
         <MapControls />
-        <div className="Map" id="Map" ref={mapRef} />
+        <div
+          className="Map"
+          id="Map"
+          ref={mapRef}
+          style={mapHeightOverride ? { height: `${mapHeightOverride}px` } : {}}
+        />
       </div>
     </div>
   )
