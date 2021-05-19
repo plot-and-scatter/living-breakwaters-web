@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-import { colorForStrategy } from '../../pages/strategies'
-import { StrategyGQLEdge } from '../../@types/StrategyGQL'
+import { colorForStrategy } from '../../../pages/strategies'
+import { StrategyGQLEdge } from '../../../@types/StrategyGQL'
 
 import './StrategyCard.scss'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StrategyGQLEdge } from '../../@types/StrategyGQL'
+import { StrategyGQLEdge } from '../../../@types/StrategyGQL'
 
 interface Props {
   strategy: StrategyGQLEdge

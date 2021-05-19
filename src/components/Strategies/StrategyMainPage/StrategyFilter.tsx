@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { colorForStrategy } from '../../pages/strategies'
-import { StrategyType } from '../../@types/StrategyType'
+import { colorForStrategy } from '../../../pages/strategies'
+import { StrategyType } from '../../../@types/StrategyType'
 
 interface Props {
   checkboxCallback: React.ChangeEventHandler<HTMLInputElement>

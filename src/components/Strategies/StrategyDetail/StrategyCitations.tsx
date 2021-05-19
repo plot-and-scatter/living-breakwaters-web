@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FixTypeLater from '../../@types/FixTypeLater'
+import FixTypeLater from '../../../@types/FixTypeLater'
 
 import './StrategyCitations.scss'
 

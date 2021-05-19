@@ -1,7 +1,7 @@
 import React from 'react'
 
-import FixTypeLater from '../../@types/FixTypeLater'
-import HowItWorks from './HowItWorks'
+import FixTypeLater from '../../../@types/FixTypeLater'
+import HowItWorks from './StrategyHowItWorks'
 import StrategyGallery from './StrategyGallery'
 import StrategyItemList from './StrategyItemList'
 import StrategyProjects from './StrategyProjects'

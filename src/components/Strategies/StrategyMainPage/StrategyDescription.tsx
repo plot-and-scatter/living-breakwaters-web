@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 
-import { StrategyGQLEdge } from '../../@types/StrategyGQL'
-import { StrategyType } from '../../@types/StrategyType'
+import { StrategyGQLEdge } from '../../../@types/StrategyGQL'
+import { StrategyType } from '../../../@types/StrategyType'
 import StrategyListItem from './StrategyListItem'
 
 interface Props {

@@ -8,13 +8,13 @@ import FixTypeLater from '../@types/FixTypeLater'
 import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
-import StrategyCard from '../components/Strategies/StrategyCard'
+import StrategyCard from '../components/Strategies/StrategyMainPage/StrategyCard'
 import StrategyFilter from '../components/Strategies/StrategyFilter'
 import Subhead from '../components/Layout/Subhead'
 import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
-import StrategyDescription from '../components/Strategies/StrategyDescription'
+import StrategyDescription from '../components/Strategies/StrategyMainPage/StrategyDescription'
 import { StrategyGQLEdge } from '../@types/StrategyGQL'
 
 export const colorForStrategy = (strategy: StrategyType): string => {
