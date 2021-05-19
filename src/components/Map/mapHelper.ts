@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import mapboxgl from 'mapbox-gl'
+import mapboxgl from '!mapbox-gl'
 
 import { LngLatCoordinate } from '../../@types/LngLatCoordinate'
 import { MapLayer } from '../../@types/MapLayer'

@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { addInitialLayerToMap } from '../Map/mapHelper'
 import { copyAndSet, layersToToggle } from './MapLayerHelpers'
 import FixTypeLater from '../../@types/FixTypeLater'
-import { Map } from 'mapbox-gl'
+import { Map } from '!mapbox-gl'
 
 import { Dictionary } from '../../@types/Dictionary'
 import RAW_LAYERS from '../../static/layers.json'

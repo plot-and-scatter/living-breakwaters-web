@@ -47,24 +47,24 @@ const StrategyDropdown = ({
 
 export default StrategyDropdown
 
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { frontmatter: { contentType: { eq: "strategy" } } }
-      sort: { fields: [frontmatter___title], order: ASC }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            strategyTypes
-            title
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query {
+//     allMarkdownRemark(
+//       filter: { frontmatter: { contentType: { eq: "strategy" } } }
+//       sort: { fields: [frontmatter___title], order: ASC }
+//       limit: 1000
+//     ) {
+//       edges {
+//         node {
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             strategyTypes
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

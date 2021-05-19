@@ -56,18 +56,18 @@ const Map = ({
     setupBaseMap(setMap, mapRef)
   }, []) // Intentionally leave empty; only set up once, on instantiation
 
+  const style: React.CSSProperties = {}
+
+  if (mapHeightOverride) style.height = `${mapHeightOverride}px`
+  if (lockScenario) style.pointerEvents = `none`
+
   return (
     <div className="MapRow row">
       <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
         {!lockScenario && <Layers />}
         {!lockScenario && <Scenarios defaultScenarioKey={scenarioKey} />}
         <MapControls />
-        <div
-          className="Map"
-          id="Map"
-          ref={mapRef}
-          style={mapHeightOverride ? { height: `${mapHeightOverride}px` } : {}}
-        />
+        <div className="Map" id="Map" ref={mapRef} style={style} />
       </div>
     </div>
   )
