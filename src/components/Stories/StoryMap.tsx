@@ -26,8 +26,6 @@ const StoryMap = ({
   const mapRef = useRef(null)
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    // MAP EFFECT scrollspy
     // TODO: make the map zoom slower; show layers first, then zoom
     const element = mapRef.current
     gsap.fromTo(
@@ -45,7 +43,7 @@ const StoryMap = ({
           // scrub: true,
           // markers: true,
 
-          onEnter: (scrollTrigger): void => {
+          onEnter: (): void => {
             setMapScenarioKey(scenarioKey)
           }
         }

@@ -1,3 +1,5 @@
+/* globals gsap, ScrollTrigger */
+
 import React, { useEffect, useRef } from 'react'
 
 import { NarrativeType } from '../../@types/NarrativeType'
@@ -18,19 +20,11 @@ const StoryNarrative = ({
 }: StoryNarrativeProps): JSX.Element => {
   useEffect(() => gsap.registerPlugin(ScrollTrigger), [])
 
-  const {
-    setNarrativeStage,
-    showRain,
-    showSurge,
-    toggleRain,
-    toggleSurge
-  } = useNarrative()
+  const { setNarrativeStage } = useNarrative()
 
   const narrativeRef = useRef(null)
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    // NARRATIVE TEXT scrollspy
     const element = storyRef.current
     gsap.fromTo(
       element.querySelector('.NarrText'),
@@ -52,7 +46,6 @@ const StoryNarrative = ({
           onUpdate: (scrollTrigger): void => {
             if (narrativeRef.current) {
               const progress = scrollTrigger.progress
-              console.log(scrollTrigger)
               console.log(
                 '-->',
                 narrativeRef.current.offsetHeight,
@@ -63,9 +56,9 @@ const StoryNarrative = ({
                 (narrativeRef.current.scrollHeight -
                   narrativeRef.current.offsetHeight)
 
-              if (progress < 0.33) {
+              if (progress < 1 / 3) {
                 setNarrativeStage(0)
-              } else if (progress < 0.67) {
+              } else if (progress < 2 / 3) {
                 setNarrativeStage(1)
               } else {
                 setNarrativeStage(2)
