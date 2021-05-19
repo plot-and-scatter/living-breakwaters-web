@@ -10,6 +10,9 @@ import Tableau from '../Narratives/Tableau'
 export interface StoryNarrativeProps {
   activeNarrative: NarrativeType
   narrativeText?: React.ReactNode
+}
+
+interface Props extends StoryNarrativeProps {
   storyRef: React.MutableRefObject<HTMLDivElement>
 }
 
@@ -17,7 +20,7 @@ const StoryNarrative = ({
   activeNarrative,
   narrativeText,
   storyRef
-}: StoryNarrativeProps): JSX.Element => {
+}: Props): JSX.Element => {
   useEffect(() => gsap.registerPlugin(ScrollTrigger), [])
 
   const { setNarrativeStage } = useNarrative()

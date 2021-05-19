@@ -10,7 +10,9 @@ import StoryResources from './StoryResources'
 
 import './Story.scss'
 
-interface Props extends StoryHeaderProps, StoryMapProps, StoryNarrativeProps {}
+interface Props extends StoryHeaderProps, StoryMapProps, StoryNarrativeProps {
+  path: string
+}
 
 const Story = (props: Props): JSX.Element => {
   const storyRef = useRef<HTMLDivElement>(null)

@@ -40,6 +40,7 @@ const CulturalLandscapes = (props: FixTypeLater): JSX.Element => {
             likely disappear in certain locations by the end of the century.
           </>
         }
+        mapText={''}
         intro={
           <>
             As an interface between human and natural systems, infrastructures

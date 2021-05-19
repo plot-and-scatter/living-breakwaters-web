@@ -11,14 +11,13 @@ const MAP_HEIGHT = 500
 export interface StoryMapProps {
   mapText: React.ReactNode
   scenarioKey: string
+}
+
+interface Props extends StoryMapProps {
   storyRef: React.MutableRefObject<HTMLDivElement>
 }
 
-const StoryMap = ({
-  mapText,
-  scenarioKey,
-  storyRef
-}: StoryMapProps): JSX.Element => {
+const StoryMap = ({ mapText, scenarioKey, storyRef }: Props): JSX.Element => {
   useEffect(() => gsap.registerPlugin(ScrollTrigger), [])
 
   const [mapScenarioKey, setMapScenarioKey] = useState<string>()

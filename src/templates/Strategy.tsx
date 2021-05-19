@@ -1,16 +1,16 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
+import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
 import StrategyCitations from '../components/Strategies/StrategyCitations'
 import StrategyDetail from '../components/Strategies/StrategyDetail'
 import StrategySelect from './StrategySelect'
+import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
-import Header from '../components/Layout/Header'
-import Title from '../components/Layout/Title'
 
 const Strategy = (props: SitePageProps): JSX.Element => {
   const post = props.data.markdownRemark

@@ -1,21 +1,19 @@
-import { colorForStrategy, strategyTypes } from '../../pages/strategies'
 import React from 'react'
 
-import FixTypeLater from '../../@types/FixTypeLater'
-import Subhead from '../Layout/Subhead'
+import { colorForStrategy } from '../../pages/strategies'
+import { StrategyType } from '../../@types/StrategyType'
 
 interface Props {
-  checkboxCallback: (event: FixTypeLater) => void
-  filters: FixTypeLater[]
+  checkboxCallback: React.ChangeEventHandler<HTMLInputElement>
+  filters: StrategyType[]
 }
 
 const StrategyFilter = ({ checkboxCallback, filters }: Props): JSX.Element => {
   return (
-    <div className="StrategyFilter">
-      {/* <Subhead>Strategies</Subhead> */}
-      <div className="d-flex justify-content-end align-items-center">
+    <div className="StrategyFilter my-3">
+      <div className="d-flex justify-content-center align-items-center">
         <h5 className="text-muted mr-3 mb-0">Filter strategies:</h5>
-        {strategyTypes.map((strategyType) => {
+        {Object.values(StrategyType).map((strategyType) => {
           const color = colorForStrategy(strategyType)
           return (
             <div

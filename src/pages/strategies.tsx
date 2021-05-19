@@ -1,30 +1,31 @@
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
+import { StrategyType } from '../@types/StrategyType'
+import ALink from '../components/Layout/ALink'
 import FixTypeLater from '../@types/FixTypeLater'
 import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
-import Title from '../components/Layout/Title'
 import SEO from '../components/SEO'
 import StrategyCard from '../components/Strategies/StrategyCard'
 import StrategyFilter from '../components/Strategies/StrategyFilter'
 import Subhead from '../components/Layout/Subhead'
-import ALink from '../components/Layout/ALink'
+import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
+import StrategyDescription from '../components/Strategies/StrategyDescription'
+import { StrategyGQLEdge } from '../@types/StrategyGQL'
 
-export const strategyTypes = ['Protect', 'Accommodate', 'Retreat', 'Avoid']
-
-export const colorForStrategy = (labelName: string): string => {
-  switch (labelName) {
-    case 'Protect':
+export const colorForStrategy = (strategy: StrategyType): string => {
+  switch (strategy) {
+    case StrategyType.Protect:
       return 'primary'
-    case 'Accommodate':
+    case StrategyType.Accommodate:
       return 'warning'
-    case 'Retreat':
+    case StrategyType.Retreat:
       return 'danger'
-    case 'Avoid':
+    case StrategyType.Avoid:
       return 'info'
     default:
       return 'secondary'
@@ -34,9 +35,11 @@ export const colorForStrategy = (labelName: string): string => {
 const Strategies = (props: FixTypeLater): JSX.Element => {
   const { data } = props
 
-  const strategies = data.allMarkdownRemark.edges
+  const strategies: StrategyGQLEdge[] = data.allMarkdownRemark.edges
 
-  const [filters, setFilters] = useState<FixTypeLater[]>([...strategyTypes])
+  const [filters, setFilters] = useState<StrategyType[]>(
+    Object.values(StrategyType)
+  )
 
   const filteredStrategies = strategies.filter((strategyNode) =>
     filters.includes(strategyNode.node.frontmatter.strategyTypes)
@@ -86,40 +89,31 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             categories: protect, accommodate, retreat, and avoid.{' '}
           </p>
         </div>
-        <div className="col-8 offset-1">
-          <div className="row">
-            <div className="col-3">
-              <div className="ProtectBG p-1 mt-1">
-                <small>Link 1</small>
-              </div>
-              <div className="ProtectBG p-1 mt-1">
-                <small>Link 2</small>
-              </div>
-              <div className="ProtectBG p-1 mt-1">
-                <small>Link 3</small>
-              </div>
-            </div>
-            <div className="col-9">
-              <p>
-                <strong>Protect</strong> is defined as a reactive strategy in
-                response to sea-level rise and storm surges. These strategies
-                are usually more conventional structural interventions, e.g.,
-                dikes, seawalls, breakwaters, and groins. Such structures have
-                proven to be effective as a short-term solution. However, over
-                time they are likely to become less effective and will require
-                maintenance and reinforcement due to storm damage. Additionally,
-                hard structures, e.g., dikes and seawalls create negative
-                effects and feedback on ecosystem morphology and dynamics
-                resulting in ecological communities due to habitat modification.
-                Alternatively, strategies such as constructed coastal wetlands,
-                dune systems, and barrier islands are more cost-effective in the
-                long term and can be more beneficial because they provide
-                coastal recreation and ecosystem services.{' '}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-6 offset-3">
+        <StrategyDescription
+          strategies={strategies}
+          strategyType={StrategyType.Protect}
+        >
+          <p>
+            <strong>Protect</strong> is defined as a reactive strategy in
+            response to sea-level rise and storm surges. These strategies are
+            usually more conventional structural interventions, e.g., dikes,
+            seawalls, breakwaters, and groins. Such structures have proven to be
+            effective as a short-term solution. However, over time they are
+            likely to become less effective and will require maintenance and
+            reinforcement due to storm damage. Additionally, hard structures,
+            e.g., dikes and seawalls create negative effects and feedback on
+            ecosystem morphology and dynamics resulting in ecological
+            communities due to habitat modification. Alternatively, strategies
+            such as constructed coastal wetlands, dune systems, and barrier
+            islands are more cost-effective in the long term and can be more
+            beneficial because they provide coastal recreation and ecosystem
+            services.
+          </p>
+        </StrategyDescription>
+        <StrategyDescription
+          strategies={strategies}
+          strategyType={StrategyType.Accommodate}
+        >
           <p>
             <strong>Accommodate</strong> refers to strategies that focus on
             adapting in place, i.e., using coastal adaptation measures that
@@ -135,6 +129,11 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             these programs flood insurance is guaranteed for communities that
             regulate floodplain development.{' '}
           </p>
+        </StrategyDescription>
+        <StrategyDescription
+          strategies={strategies}
+          strategyType={StrategyType.Retreat}
+        >
           <p>
             <strong>Retreat</strong> refers to strategies that limit development
             in areas that are affected by sea-level rise. These strategies
@@ -145,6 +144,11 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             become intertidal or natural buffer zones to accommodate future
             sea-level rise.
           </p>
+        </StrategyDescription>
+        <StrategyDescription
+          strategies={strategies}
+          strategyType={StrategyType.Avoid}
+        >
           <p>
             <strong>Avoid</strong> refers to the actions that ensure no new
             development occurs in areas that are identified as potential flood
@@ -156,6 +160,8 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             designate expropriated lands as flood zones and hence avoid future
             development on these lands.{' '}
           </p>
+        </StrategyDescription>
+        <div className="col-6 offset-3 mt-3">
           <Subhead>Adaptation Considerations</Subhead>
           <p>
             Many urban delta regions have high variability in flood exposure,
@@ -191,7 +197,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             cultural significance of a community. Therefore, it is important to
             consider how a proposed adaptation strategy will potentially affect
             community livelihoods and biodiversity in existing ecological
-            systems.{' '}
+            systems.
           </p>
           <p>
             Adaptation strategies for SLR should fundamentally include consider
@@ -204,7 +210,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             implementation of adaptation strategies. Furthermore, land value can
             also impact the acquisition of available space as implementing
             large-scale flood protection requires significant space and the cost
-            and funding of acquiring land can be expensive.{' '}
+            and funding of acquiring land can be expensive.
           </p>
           <p>
             At the same time, it is also important to consider how proposed
@@ -223,7 +229,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             spatial integration of adaptation solutions within the broader
             landscape context. This can serve to foster the integration of both
             recreational functions and the provisioning of food and energy
-            production alongside flood protection.{' '}
+            production alongside flood protection.
           </p>
           <Subhead>A Values-Based Approach</Subhead>
           <p>
@@ -244,11 +250,12 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             community cultural values, equitable social relations and engagement
             that focus on joint learning, and the generation of trust and
             commitment. These serve as underlying forces that contribute to
-            effective and equitable collaborative coastal management processes.{' '}
+            effective and equitable collaborative coastal management processes.
           </p>
+          <Subhead>Browse Strategies</Subhead>
         </div>
-        <div className="col-8 offset-2 mt-3">
-          <div className="mb-3">
+        <div className="col-10 offset-1">
+          <div className="my-3 mb-4">
             <StrategyFilter
               checkboxCallback={checkboxCallback}
               filters={filters}
@@ -256,10 +263,9 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
           </div>
           <div className="StrategyCards card-columns">
             {/* Go alphabetical left-to-right */}
-            {filteredStrategies.map((strategyNode, index) => {
-              const strategy = strategyNode.node
-              return <StrategyCard key={index} strategy={strategy} />
-            })}
+            {filteredStrategies.map((strategy, index) => (
+              <StrategyCard key={index} strategy={strategy} />
+            ))}
           </div>
         </div>
       </div>
