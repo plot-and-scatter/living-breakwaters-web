@@ -5,19 +5,23 @@ import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
-import StrategyCitations from '../components/Strategies/StrategyCitations'
-import StrategyDetail from '../components/Strategies/StrategyDetail'
+import StrategyCitations from '../components/Strategies/StrategyDetail/StrategyCitations'
+import StrategyDetail from '../components/Strategies/StrategyDetail/StrategyDetail'
 import StrategySelect from './StrategySelect'
 import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
+import { StrategyMainPageGQL } from '../@types/StrategyGQL'
 
-const Strategy = (props: SitePageProps): JSX.Element => {
-  const post = props.data.markdownRemark
-  const siteTitle = props.data.site.siteMetadata.title
+const Strategy = ({
+  data,
+  pageContext
+}: SitePageProps<StrategyMainPageGQL>): JSX.Element => {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -30,15 +34,15 @@ const Strategy = (props: SitePageProps): JSX.Element => {
         <div className="col-6">
           <StrategySelect
             currentPost={post}
-            strategies={props.data.allMarkdownRemark.edges}
+            strategies={data.allMarkdownRemark.edges}
           />
         </div>
       </Header>
       <div className="Strategies">
         <StrategyDetail
-          data={props.data}
+          data={data}
           frontmatter={post.frontmatter}
-          pageContext={props.pageContext}
+          pageContext={pageContext}
         />
         <StrategyCitations citationHTML={post.html} />
         {/* <hr style={{ marginBottom: '1rem' }} />
@@ -78,7 +82,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     allFile(filter: { absolutePath: { regex: $animationSlug } }) {
@@ -93,15 +96,14 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       excerpt(pruneLength: 160)
       html
+      id
       frontmatter {
-        title
-        strategyTypes
         date(formatString: "MMMM DD, YYYY")
         description
-        tags
+        strategyTypes
+        title
       }
     }
     allMarkdownRemark(

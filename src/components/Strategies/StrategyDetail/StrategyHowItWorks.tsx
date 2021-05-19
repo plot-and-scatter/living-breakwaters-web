@@ -3,7 +3,7 @@
 import React, { useLayoutEffect } from 'react'
 import FixTypeLater from '../../../@types/FixTypeLater'
 
-import './HowItWorks.scss'
+import './StrategyHowItWorks.scss'
 
 interface Props {
   images: FixTypeLater[]
@@ -25,7 +25,7 @@ const HowItWorks = ({ images }: Props): JSX.Element => {
         data-interval={2000}
       >
         <ol className="carousel-indicators">
-          {images.map((node, index) => {
+          {images.map((_, index) => {
             return (
               <li
                 key={index}

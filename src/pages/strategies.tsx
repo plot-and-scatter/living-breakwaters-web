@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { useCallback, useState } from 'react'
 
+import { StrategyGQLEdge } from '../@types/StrategyGQL'
 import { StrategyType } from '../@types/StrategyType'
 import ALink from '../components/Layout/ALink'
 import FixTypeLater from '../@types/FixTypeLater'
@@ -9,13 +10,12 @@ import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import StrategyCard from '../components/Strategies/StrategyMainPage/StrategyCard'
-import StrategyFilter from '../components/Strategies/StrategyFilter'
+import StrategyDescription from '../components/Strategies/StrategyMainPage/StrategyDescription'
+import StrategyFilter from '../components/Strategies/StrategyMainPage/StrategyFilter'
 import Subhead from '../components/Layout/Subhead'
 import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
-import StrategyDescription from '../components/Strategies/StrategyMainPage/StrategyDescription'
-import { StrategyGQLEdge } from '../@types/StrategyGQL'
 
 export const colorForStrategy = (strategy: StrategyType): string => {
   switch (strategy) {
@@ -62,7 +62,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
 
   const siteTitle = data.site.siteMetadata.title
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO title="Adaptation Strategies" />
       <Header>
         <Title headingGroup="Adaptation Strategies" />
@@ -86,7 +86,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
               British Columbia Sea Level Rise Primer
             </ALink>
             , this research groups adaptation strategies in four (4) different
-            categories: protect, accommodate, retreat, and avoid.{' '}
+            categories: protect, accommodate, retreat, and avoid.
           </p>
         </div>
         <StrategyDescription
@@ -127,7 +127,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             floodproofing requires the identification of a set of common
             criteria for the implementation of flood insurance programs. Using
             these programs flood insurance is guaranteed for communities that
-            regulate floodplain development.{' '}
+            regulate floodplain development.
           </p>
         </StrategyDescription>
         <StrategyDescription
@@ -158,7 +158,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             through measures such as land acquisitions using purchase or
             expropriation. Such strategies will allow municipalities to
             designate expropriated lands as flood zones and hence avoid future
-            development on these lands.{' '}
+            development on these lands.
           </p>
         </StrategyDescription>
         <div className="col-6 offset-3 mt-3">
@@ -185,7 +185,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             solutions are contingent on stringent approaches to risk assessment
             and the appropriate application the risk assessment results towards
             strategies that contribute to reducing risk but also producing
-            options for enhancing adaptation.{' '}
+            options for enhancing adaptation.
           </p>
           <Subhead>Spatial Integration</Subhead>
           <p>

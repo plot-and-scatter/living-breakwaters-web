@@ -26,7 +26,6 @@ const SEO = ({ description, lang, meta, title }: Props): JSX.Element => {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
@@ -62,10 +61,6 @@ const SEO = ({ description, lang, meta, title }: Props): JSX.Element => {
         {
           name: `twitter:card`,
           content: `summary`
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author
         },
         {
           name: `twitter:title`,

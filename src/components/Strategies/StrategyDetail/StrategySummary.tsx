@@ -1,11 +1,10 @@
 import React from 'react'
-import FixTypeLater from '../../@types/FixTypeLater'
 
 import './StrategySummary.scss'
 
 interface Props {
   strategyType: string
-  summaryHTML: FixTypeLater
+  summaryHTML: string
 }
 
 const StrategySummary = ({ strategyType, summaryHTML }: Props): JSX.Element => {

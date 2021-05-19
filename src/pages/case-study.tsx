@@ -8,11 +8,10 @@ import SitePageProps from '../@types/SitePageProps'
 
 import image from '../../content/assets/images/ben-wicks-g2ballCSr9g-unsplash.jpg'
 
-const CaseStudy = (props: SitePageProps): JSX.Element => {
-  const { data } = props
+const CaseStudy = ({ data }: SitePageProps): JSX.Element => {
   const siteTitle = data.site.siteMetadata.title
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO title="Case study" />
       <BannerRow
         bgColorRGB={'rgb(255, 255, 255)'}

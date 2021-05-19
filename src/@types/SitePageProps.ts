@@ -1,7 +1,7 @@
 import FixTypeLater from './FixTypeLater'
 
-interface SitePageProps {
-  data: FixTypeLater
+interface SitePageProps<DataType> {
+  data: DataType
   location: FixTypeLater
   pageContext: FixTypeLater
 }

@@ -9,12 +9,11 @@ import SitePageProps from '../@types/SitePageProps'
 import Header from '../components/Layout/Header'
 import Title from '../components/Layout/Title'
 
-const Map = (props: SitePageProps): JSX.Element => {
-  const { data } = props
+const Map = ({ data }: SitePageProps): JSX.Element => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO title="Map" />
       <Header>
         <Title headingGroup="Map" />

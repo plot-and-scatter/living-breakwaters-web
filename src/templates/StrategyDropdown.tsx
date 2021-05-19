@@ -1,11 +1,14 @@
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
+
 import { colorForStrategy } from '../pages/strategies'
+import { StrategyGQLEdge } from '../@types/StrategyGQL'
+import { StrategyType } from '../@types/StrategyType'
 
 interface Props {
   active?: boolean
-  label: string
-  strategies: any[]
+  label: StrategyType
+  strategies: StrategyGQLEdge[]
 }
 
 const StrategyDropdown = ({
@@ -46,25 +49,3 @@ const StrategyDropdown = ({
 }
 
 export default StrategyDropdown
-
-// export const pageQuery = graphql`
-//   query {
-//     allMarkdownRemark(
-//       filter: { frontmatter: { contentType: { eq: "strategy" } } }
-//       sort: { fields: [frontmatter___title], order: ASC }
-//       limit: 1000
-//     ) {
-//       edges {
-//         node {
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             strategyTypes
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

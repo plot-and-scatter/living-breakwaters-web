@@ -1,7 +1,7 @@
 import React from 'react'
 
 import FixTypeLater from '../../../@types/FixTypeLater'
-import HowItWorks from './StrategyHowItWorks'
+import StrategyHowItWorks from './StrategyHowItWorks'
 import StrategyGallery from './StrategyGallery'
 import StrategyItemList from './StrategyItemList'
 import StrategyProjects from './StrategyProjects'
@@ -27,7 +27,7 @@ const StrategyDetail = ({
           strategyType={strategyTypes}
           summaryHTML={pageContext.subpages.summary}
         />
-        <HowItWorks images={data.allFile.nodes} />
+        <StrategyHowItWorks images={data.allFile.nodes} />
         <StrategyItemList
           listHTML={pageContext.subpages.types}
           title={`Types of ${frontmatter.title.toLowerCase()}`}
