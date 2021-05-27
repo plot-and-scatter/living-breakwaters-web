@@ -1,8 +1,7 @@
 import React from 'react'
-import FixTypeLater from '../../../@types/FixTypeLater'
 
 interface Props {
-  images: FixTypeLater[]
+  images: string[]
 }
 
 const StrategyGallery = ({ images }: Props): JSX.Element => {

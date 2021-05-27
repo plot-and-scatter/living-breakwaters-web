@@ -5,20 +5,52 @@ $example-color-background: $gray-800;
 .ProtectBG {
   background-color: rgb(80, 140, 130);
   color: white !important;
+  .hidden {
+    color: rgb(80, 140, 130);
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }
 }
 .AccommodateBG {
   background-color: #ffc107;
   color: #333 !important;
+  .hidden {
+    color: #ffc107;
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }
 }
 
 .RetreatBG {
   background-color: #dc3545;
   color: white !important;
+  .hidden {
+    color: #dc3545;
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }  
 }
 
 .AvoidBG {
   background-color: #17a2b8;
   color: white !important;
+  .hidden {
+    color: #17a2b8;
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }  
 }
 
 .Annotation {

@@ -1,18 +1,21 @@
 /* globals $ */
 
 import React, { useLayoutEffect } from 'react'
-import FixTypeLater from '../../../@types/FixTypeLater'
+
+import { StrategyGQLImageNode } from '../../../@types/StrategyGQL'
+import IntentionalAny from '../../../@types/IntentionalAny'
 
 import './StrategyHowItWorks.scss'
 
 interface Props {
-  images: FixTypeLater[]
+  images: StrategyGQLImageNode[]
 }
 
 const HowItWorks = ({ images }: Props): JSX.Element => {
-  useLayoutEffect(() => {
-    ;($('#carouselExampleFade') as FixTypeLater).carousel()
-  }, [])
+  useLayoutEffect(
+    () => ($('#carouselExampleFade') as IntentionalAny).carousel(),
+    []
+  )
 
   return (
     <div className="Illustration HowItWorks col-8">

@@ -17,6 +17,7 @@
       "waste"
     ],
     "flyTo": {
+      "speed": 0.1,
       "center": [-123.094847, 49.298140],
       "zoom": 13,
       "pitch": 60,
@@ -45,6 +46,7 @@
       "schools"
     ],
     "flyTo": {
+      "speed": 0.1,
       "center": [-123.023958, 49.118110],
       "zoom": 11,
       "pitch": 75,
@@ -64,6 +66,7 @@
       "waste"
     ],
     "flyTo": {
+      "speed": 0.1,
       "center": [-122.944758, 49.174135],
       "zoom": 10,
       "pitch": 45,
@@ -86,6 +89,7 @@
       "flood_protection_infrastructure"
     ],
     "flyTo": {
+      "speed": 0.1,
       "center": [-123.070688, 49.025446],
       "zoom": 12,
       "pitch": 60,

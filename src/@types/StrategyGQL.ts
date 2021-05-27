@@ -20,17 +20,19 @@ export type StrategyGQLEdge = {
   node: StrategyGQLNode
 }
 
+export type StrategyGQLImageNode = {
+  absolutePath: string
+  relativePath: string
+  childImageSharp: {
+    fluid: {
+      src: string
+    }
+  }
+}
+
 export type StrategyMainPageGQLFiles = {
   allFile: {
-    nodes: {
-      absolutePath: string
-      relativePath: string
-      childImageSharp: {
-        fluid: {
-          src: string
-        }
-      }
-    }
+    nodes: StrategyGQLImageNode[]
   }
 }
 

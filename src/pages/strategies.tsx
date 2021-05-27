@@ -69,7 +69,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
         {/* <StrategyFilter checkboxCallback={checkboxCallback} filters={filters} /> */}
       </Header>
       <div className="row mt-5">
-        <div className="col-6 offset-3">
+        <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
           <p>
             Coastal zones are some of the most ecologically sensitive and
             diverse habitats in the world. Currently, these areas are
@@ -97,8 +97,8 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             <strong>Protect</strong> is defined as a reactive strategy in
             response to sea-level rise and storm surges. These strategies are
             usually more conventional structural interventions, e.g., dikes,
-            seawalls, breakwaters, and groins. Such structures have proven to be
-            effective as a short-term solution. However, over time they are
+            seawalls, breakwaters, and groynes. Such structures have proven to
+            be effective as a short-term solution. However, over time they are
             likely to become less effective and will require maintenance and
             reinforcement due to storm damage. Additionally, hard structures,
             e.g., dikes and seawalls create negative effects and feedback on
@@ -161,7 +161,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             development on these lands.
           </p>
         </StrategyDescription>
-        <div className="col-6 offset-3 mt-3">
+        <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-3">
           <Subhead>Adaptation Considerations</Subhead>
           <p>
             Many urban delta regions have high variability in flood exposure,
@@ -222,7 +222,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             related to the implementation of coastal adaptation projects, and
             provide multiple co-benefits, e.g., recreational activities and
             pollution abatement or by supporting coastal community livelihoods.
-            Flood defences, such as dikes, groins, and jetties can also be
+            Flood defences, such as dikes, groynes, and jetties can also be
             aesthetically and visually obstructive or displeasing. As such,
             adaptation strategies that utilize these approaches should include
             significant local stakeholder input to ensure that there is adequate
@@ -254,14 +254,14 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
           </p>
           <Subhead>Browse Strategies</Subhead>
         </div>
-        <div className="col-10 offset-1">
+        <div className="col-12 offset-0">
           <div className="my-3 mb-4">
             <StrategyFilter
               checkboxCallback={checkboxCallback}
               filters={filters}
             />
           </div>
-          <div className="StrategyCards card-columns">
+          <div className="StrategyCards row">
             {/* Go alphabetical left-to-right */}
             {filteredStrategies.map((strategy, index) => (
               <StrategyCard key={index} strategy={strategy} />

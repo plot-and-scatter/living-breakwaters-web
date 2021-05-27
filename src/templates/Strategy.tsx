@@ -1,6 +1,8 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
+import { StrategyMainPageGQL } from '../@types/StrategyGQL'
+import { StrategyPageContext } from '../@types/StrategyPageContext'
 import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
@@ -11,12 +13,11 @@ import StrategySelect from './StrategySelect'
 import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
-import { StrategyMainPageGQL } from '../@types/StrategyGQL'
 
 const Strategy = ({
   data,
   pageContext
-}: SitePageProps<StrategyMainPageGQL>): JSX.Element => {
+}: SitePageProps<StrategyMainPageGQL, StrategyPageContext>): JSX.Element => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
 
@@ -39,11 +40,7 @@ const Strategy = ({
         </div>
       </Header>
       <div className="Strategies">
-        <StrategyDetail
-          data={data}
-          frontmatter={post.frontmatter}
-          pageContext={pageContext}
-        />
+        <StrategyDetail data={data} pageContext={pageContext} />
         <StrategyCitations citationHTML={post.html} />
         {/* <hr style={{ marginBottom: '1rem' }} />
         <ul

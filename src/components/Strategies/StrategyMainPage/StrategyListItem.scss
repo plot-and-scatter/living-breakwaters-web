@@ -1,0 +1,16 @@
+.StrategyListItem {
+  a {
+    color: white !important;
+    &:hover {
+      text-decoration: none;
+      .hidden {
+        visibility: visible;
+      }
+    }
+    .hidden {
+      visibility: hidden;
+      transition: color 0.25s;
+
+    }
+  }
+}

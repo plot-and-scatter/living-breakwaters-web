@@ -1,24 +1,20 @@
 import React from 'react'
 
-import FixTypeLater from '../../../@types/FixTypeLater'
-import StrategyHowItWorks from './StrategyHowItWorks'
+import { StrategyMainPageGQL } from '../../../@types/StrategyGQL'
+import { StrategyPageContext } from '../../../@types/StrategyPageContext'
 import StrategyGallery from './StrategyGallery'
+import StrategyHowItWorks from './StrategyHowItWorks'
 import StrategyItemList from './StrategyItemList'
 import StrategyProjects from './StrategyProjects'
 import StrategySummary from './StrategySummary'
 
 interface Props {
-  data: FixTypeLater
-  frontmatter: FixTypeLater
-  pageContext: FixTypeLater
+  data: StrategyMainPageGQL
+  pageContext: StrategyPageContext
 }
 
-const StrategyDetail = ({
-  data,
-  frontmatter,
-  pageContext
-}: Props): JSX.Element => {
-  const strategyTypes = frontmatter.strategyTypes
+const StrategyDetail = ({ data, pageContext }: Props): JSX.Element => {
+  const strategyTypes = data.markdownRemark.frontmatter.strategyTypes
 
   return (
     <div className="Post">
@@ -30,7 +26,7 @@ const StrategyDetail = ({
         <StrategyHowItWorks images={data.allFile.nodes} />
         <StrategyItemList
           listHTML={pageContext.subpages.types}
-          title={`Types of ${frontmatter.title.toLowerCase()}`}
+          title={`Types of ${data.markdownRemark.frontmatter.title.toLowerCase()}`}
           type={'Types'}
         />
         <StrategyItemList

@@ -37,7 +37,7 @@ const StoryMap = ({ mapText, scenarioKey, storyRef }: Props): JSX.Element => {
         scrollTrigger: {
           trigger: element.querySelector('.MapTableau'),
 
-          start: 'top center', // element, viewport
+          start: 'top top', // element, viewport
           end: 'bottom center',
           // scrub: true,
           // markers: true,

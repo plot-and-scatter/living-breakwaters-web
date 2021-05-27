@@ -1,8 +1,7 @@
 import React from 'react'
-import FixTypeLater from '../../../@types/FixTypeLater'
 
 interface Props {
-  examples: FixTypeLater[]
+  examples: string[]
 }
 
 const StrategyProjects = ({ examples }: Props): JSX.Element => {

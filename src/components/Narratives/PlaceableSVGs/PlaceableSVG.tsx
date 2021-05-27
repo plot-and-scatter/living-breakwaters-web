@@ -86,6 +86,7 @@ const PlaceableSVG = (props: Props): JSX.Element => {
           height={vb.height}
           fill={`green`}
           fillOpacity={0}
+          // stroke={`blue`}
         />
         {children}
       </g>

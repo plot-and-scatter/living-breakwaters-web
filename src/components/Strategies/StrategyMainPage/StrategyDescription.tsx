@@ -24,14 +24,14 @@ const StrategyDescription = ({
   )
 
   return (
-    <div className="StrategyDescription col-8 offset-1">
+    <div className="StrategyDescription col-12 col-sm-11 offset-sm-0 col-md-10 col-lg-8 offset-lg-1">
       <div className="row">
-        <div className="col-3">
+        <div className="col-4 col-md-3">
           {relevantStrategies.map((strategy, i) => (
             <StrategyListItem strategy={strategy} key={i} />
           ))}
         </div>
-        <div className="col-9">{children}</div>
+        <div className="col-8 col-md-9">{children}</div>
       </div>
     </div>
   )
