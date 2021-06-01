@@ -12,10 +12,9 @@ interface Props {
 }
 
 const HowItWorks = ({ images }: Props): JSX.Element => {
-  useLayoutEffect(
-    () => ($('#carouselExampleFade') as IntentionalAny).carousel(),
-    []
-  )
+  useLayoutEffect(() => {
+    ;($('#carouselExampleFade') as IntentionalAny).carousel()
+  }, [])
 
   return (
     <div className="Illustration HowItWorks col-8">
@@ -28,15 +27,18 @@ const HowItWorks = ({ images }: Props): JSX.Element => {
         data-interval={2000}
       >
         <ol className="carousel-indicators">
-          {images.map((_, index) => {
-            return (
-              <li
-                key={index}
-                data-target="#carouselExampleFade"
-                data-slide-to={index}
-              ></li>
-            )
-          })}
+          {images
+            .sort((a, b) => a.relativePath.localeCompare(b.relativePath))
+            .map((_, index) => {
+              console.log('_', _)
+              return (
+                <li
+                  key={index}
+                  data-target="#carouselExampleFade"
+                  data-slide-to={index}
+                ></li>
+              )
+            })}
         </ol>
         <div className="carousel-inner">
           {images.map((node, index) => {
