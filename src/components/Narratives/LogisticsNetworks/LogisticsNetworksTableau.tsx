@@ -30,9 +30,22 @@ import SVGFrame from '../Frames/SVGFrame'
 import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
 import TrafficLight2 from '../PlaceableSVGs/Objects/TrafficLight2'
 
-
 import '../PlaceableSVGs/Elements.scss'
 import './LogisticsNetworksTableau.scss'
+import Warehouse from '../PlaceableSVGs/Buildings/Warehouse'
+import CargoShip from '../PlaceableSVGs/Maritime/CargoShip'
+import Gantry from '../PlaceableSVGs/Maritime/Gantry'
+import Crane from '../PlaceableSVGs/Maritime/Crane'
+import CargoContainers from '../PlaceableSVGs/Maritime/CargoContainers'
+import Tree from '../PlaceableSVGs/Trees/Tree'
+import Pier from '../PlaceableSVGs/Maritime/Pier'
+
+import Train from '../PlaceableSVGs/Vehicles/Train'
+import Truck3 from '../PlaceableSVGs/Vehicles/Truck3'
+
+import Office1 from '../PlaceableSVGs/Buildings/Office1'
+import Office2 from '../PlaceableSVGs/Buildings/Office2'
+import Retail from '../PlaceableSVGs/Buildings/Retail'
 
 const LogisticsNetworksTableau = (): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
@@ -42,107 +55,20 @@ const LogisticsNetworksTableau = (): JSX.Element => {
       <SVGFrame id="LogisticsNetworksTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
         <Land />
-        <g id="Maritime">
-          <Harbor xOffset={-0.01} yOffset={0.73} scale={0.35} />
-          <Ship xOffset={-0.005} yOffset={0.77} scale={0.2} />
-        </g>
-        <g id="GroundLevel">
-          <g id="Trees">
-            <Oak xOffset={0.37} yOffset={0.72} scale={0.03} />
-            <Deadwood xOffset={0.39} yOffset={0.73} scale={0.015} />
-            <Cypress xOffset={0.61} yOffset={0.66} scale={0.011} />
-            <Cypress xOffset={0.515} yOffset={0.76} scale={0.0045} />
-            <Cypress xOffset={0.514} yOffset={0.76} scale={0.004} />
-            <Oak xOffset={0.619} yOffset={0.71} scale={0.015} />
-            <Oak xOffset={0.62} yOffset={0.635} scale={0.04} />
-            <Cypress xOffset={0.66} yOffset={0.6} scale={0.011} />
-            <Cypress xOffset={0.665} yOffset={0.6} scale={0.011} />
-            <Cypress xOffset={0.653} yOffset={0.6} scale={0.011} />
-            <Oak xOffset={0.7} yOffset={0.555} scale={0.045} />
-            <Oak xOffset={0.67} yOffset={0.592} scale={0.047} />
-            <Oak xOffset={0.69} yOffset={0.586} scale={0.04} />
-            <Cypress xOffset={0.83} yOffset={0.565} scale={0.0055} />
-            <Cypress xOffset={0.886} yOffset={0.545} scale={0.007} />
-          </g>
-          <g id="Plants">
-            <Grass xOffset={0.385} yOffset={0.78} scale={0.004} />
-            <Grass xOffset={0.38} yOffset={0.78} scale={0.004} />
-            <Grass xOffset={0.376} yOffset={0.78} scale={0.004} />
-            <Grass xOffset={0.374} yOffset={0.78} scale={0.004} />
-            <Grass xOffset={0.37} yOffset={0.78} scale={0.004} />
-            <Grass xOffset={0.366} yOffset={0.78} scale={0.004} />
-            <Grass xOffset={0.363} yOffset={0.785} scale={0.004} />
-            <Grass xOffset={0.36} yOffset={0.785} scale={0.004} />
-            <Grass xOffset={0.356} yOffset={0.785} scale={0.004} />
-            <Bush2 xOffset={0.4} yOffset={0.77} scale={0.01} />
-            <Bush1 xOffset={0.394} yOffset={0.775} scale={0.008} />
-            <Bush1 xOffset={0.43} yOffset={0.78} scale={0.01} />
-            <Bush1 xOffset={0.615} yOffset={0.735} scale={0.01} />
-            <Bush2 xOffset={0.606} yOffset={0.76} scale={0.01} />
-            <Bush1 xOffset={0.64} yOffset={0.7} scale={0.012} />
-            <Bush2 xOffset={0.65} yOffset={0.7} scale={0.01} />
-            <Bush2 xOffset={0.66} yOffset={0.69} scale={0.01} />
-            <Bush2 xOffset={0.67} yOffset={0.665} scale={0.02} />
-            <Bush2 xOffset={0.73} yOffset={0.57} scale={0.03} />
-            <Bush2 xOffset={0.835} yOffset={0.585} scale={0.015} />
-            <Bush1 xOffset={0.94} yOffset={0.595} scale={0.01} />
-          </g>
-          <g id="Objects">
-            <TrafficLight xOffset={0.465} yOffset={0.77} scale={0.004} />
-            <LargeStormDrain xOffset={0.44} yOffset={0.81} scale={0.035} />
-            <TrafficLight2 xOffset={0.951} yOffset={0.55} scale={0.017} />
-            <TrafficLight xOffset={0.993} yOffset={0.579} scale={0.005} />
-            <LargeStormDrain xOffset={0.82} yOffset={0.63} scale={0.035} />
-            <SmallStormDrain xOffset={0.934} yOffset={0.625} scale={0.02} />
-          </g>
-          <g id="Vehicles">
-            <Car xOffset={0.454} yOffset={0.78} scale={0.012} />
-            <Car xOffset={0.956} yOffset={0.596} scale={0.012} />
-            <Car xOffset={0.98} yOffset={0.595} scale={0.012} />
-          </g>
-          <g id="People">
-            <Person1 xOffset={0.35} yOffset={0.785} scale={0.003} />
-            <Person2 xOffset={0.345} yOffset={0.787} scale={0.003} />
-            <Biker xOffset={0.33} yOffset={0.79} scale={0.006} />
-          </g>
-          <g id="Buildings">
-            <AntennaTower xOffset={0.41} yOffset={0.675} scale={0.018} />
-            <Building1 xOffset={0.52} yOffset={0.71} scale={0.09} />
-            <House1 xOffset={0.47} yOffset={0.745} scale={0.04} />
-            <House2 xOffset={0.76} yOffset={0.57} scale={0.07} />
-            <House1 xOffset={0.846} yOffset={0.565} scale={0.04} />
-            <House3 xOffset={0.894} yOffset={0.542} scale={0.05} />
-          </g>
-        </g>
-        <g id="Hotspots">
-          <Hotspot
-            index={0}
-            xOffset={0.2}
-            yOffset={0.75}
-            scale={0.05}
-            width={600}
-            title={`Shipping ${narrativeStage}`}
-            narrativeStage={narrativeStage}
-            setNarrativeStage={setNarrativeStage}
-          >
-            <ShippingPopover stage={narrativeStage} scale={0.81} />
-          </Hotspot>
-          <Hotspot
-            index={1}
-            xOffset={0.813}
-            yOffset={0.61}
-            scale={0.05}
-            width={600}
-            title={'Drainage'}
-            narrativeStage={narrativeStage}
-            setNarrativeStage={setNarrativeStage}
-          >
-            <DrainagePopover stage={narrativeStage} scale={0.8} />
-          </Hotspot>
-        </g>
+        <CargoShip xOffset={0.03} yOffset={0.75} />
+        <Pier xOffset={0.114} yOffset={0.858} />
+        <Crane xOffset={0.12} yOffset={0.661} />
+        <Gantry xOffset={0.27} yOffset={0.705} />
+        <CargoContainers xOffset={0.228} yOffset={0.779} />
+        <Warehouse xOffset={0.34} yOffset={0.77} />
+        <Tree xOffset={0.44} yOffset={0.75} />
+        <Train xOffset={0.488} yOffset={0.785} />
+        <Tree xOffset={0.52} yOffset={0.75} />
+        <Truck3 xOffset={0.57} yOffset={0.793} />
+        <Office1 xOffset={0.63} yOffset={0.7} />
+        <Office2 xOffset={0.7} yOffset={0.38} />
+        <Retail xOffset={0.88} yOffset={0.495} />
       </SVGFrame>
-      <div className="HotspotText" id="HotspotText0"></div>
-      <div className="HotspotText" id="HotspotText1"></div>
     </div>
   )
 }

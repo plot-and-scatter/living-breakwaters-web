@@ -1,0 +1,654 @@
+@import "../../../scss/common.module";
+
+$saltwaterWedge: lighten(#3a6393, 10%);
+$freshWater: lighten(#6f90c1, 10%);
+$meanSeaLevel: lighten(#334455, 10%);
+
+#mean-sea-level-gradient {
+  --color-start: #{$meanSeaLevel};
+  --color-stop: #{darken($meanSeaLevel, 20%)};
+}
+
+#saltwater-wedge-gradient {
+  --color-start: #{$saltwaterWedge};
+  --color-stop: #{darken($saltwaterWedge, 20%)};
+}
+
+#fresh-water-gradient {
+  --color-start: #{$freshWater};
+  --color-stop: #{darken($freshWater, 20%)};
+}
+
+.LogisticsNetworksTableau {
+  position: relative;
+  svg#LogisticsNetworksTableau {
+    background-image: linear-gradient(#bbddff, #fff);
+    // border: solid #666 0.1vw;
+    path {
+      &.sea-surge {
+        fill: rgba(#112233, 0.5);
+        stroke: #123;
+      }
+      &.mean-sea-level {
+        fill: url(#mean-sea-level-gradient) $meanSeaLevel;
+        stroke: darken($meanSeaLevel, 10%);
+      }
+      &.saltwater-wedge {
+        fill: url(#saltwater-wedge-gradient) $saltwaterWedge;
+        stroke: darken($saltwaterWedge, 10%);
+      }
+      &.fresh-water {
+        fill: url(#fresh-water-gradient) $freshWater;
+        stroke: darken($freshWater, 10%);
+      }
+      &.ground {
+        fill: lighten(#59452c, 40%);
+        stroke: #59452c;
+        stroke-width: 1px;
+      }
+    }
+    #Labels {
+      text {
+        font-size: 22px;
+        font-family: $font-family-sans-serif;
+        color: white;
+        fill: white;
+        stroke: black;
+        stroke-width: 0.2px;
+        text-anchor: middle;
+      }
+      #Subsidence {
+        fill: red;
+      }
+    }
+    #groundwater-1,
+    #groundwater-2 {
+      path {
+        visibility: hidden;
+      }
+      path.ground {
+        visibility: visible;
+        fill: red;
+      }
+    }
+  }
+}
+.st0 {
+  clip-path: url(#SVGID_2_);
+}
+.st2 {
+  opacity: 0.4;
+  clip-path: url(#SVGID_6_);
+}
+.st5,
+.st6 {
+  clip-path: url(#SVGID_10_);
+  fill: #7e8561;
+}
+.st6 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st7,
+.st8 {
+  clip-path: url(#SVGID_12_);
+  fill: #7e8561;
+}
+.st8 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st10,
+.st9 {
+  clip-path: url(#SVGID_14_);
+}
+.st9 {
+  fill: #7e8561;
+}
+.st10 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st11,
+.st12 {
+  clip-path: url(#SVGID_16_);
+  fill: #7e8561;
+}
+.st12 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st13,
+.st14 {
+  clip-path: url(#SVGID_18_);
+  fill: #7e8561;
+}
+.st14 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st19 {
+  clip-path: url(#SVGID_6_);
+  fill: #133960;
+}
+.st25,
+.st28 {
+  opacity: 0.5;
+  clip-path: url(#SVGID_24_);
+}
+.st28 {
+  opacity: 0.4;
+}
+.st29 {
+  clip-path: url(#SVGID_32_);
+  fill: #010101;
+}
+.st30 {
+  opacity: 0.7;
+  clip-path: url(#SVGID_24_);
+}
+.st33 {
+  clip-path: url(#SVGID_36_);
+}
+.st33,
+.st36,
+.st39 {
+  fill: #010101;
+}
+.st36 {
+  clip-path: url(#SVGID_40_);
+}
+.st39 {
+  clip-path: url(#SVGID_44_);
+}
+.st46 {
+  clip-path: url(#SVGID_52_);
+  fill: #7e8561;
+}
+.st47 {
+  clip-path: url(#SVGID_2_);
+  fill: none;
+  stroke: #7e8561;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10;
+}
+.st48 {
+  fill: #fff;
+}
+.st48,
+.st49,
+.st50 {
+  clip-path: url(#SVGID_54_);
+}
+.st49 {
+  fill: #fffef9;
+}
+.st50 {
+  opacity: 0.7;
+}
+.st53,
+.st68 {
+  opacity: 0.5;
+  clip-path: url(#SVGID_58_);
+}
+.st68 {
+  clip-path: url(#SVGID_74_);
+}
+.st83,
+.st98 {
+  opacity: 0.5;
+  clip-path: url(#SVGID_90_);
+}
+.st98 {
+  clip-path: url(#SVGID_54_);
+}
+.st99 {
+  opacity: 0.7;
+  clip-path: url(#SVGID_106_);
+}
+.st115 {
+  fill: none;
+  stroke: #7e8561;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10;
+}
+.st115,
+.st116,
+.st119 {
+  clip-path: url(#SVGID_54_);
+}
+.st116 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st119 {
+  opacity: 0.8;
+}
+.st120 {
+  clip-path: url(#SVGID_126_);
+  fill: #7e8561;
+}
+.st125 {
+  opacity: 0.6;
+  clip-path: url(#SVGID_54_);
+}
+.st126 {
+  clip-path: url(#SVGID_132_);
+  fill: #7e8561;
+}
+.st132,
+.st138 {
+  clip-path: url(#SVGID_54_);
+}
+.st132 {
+  opacity: 0.3;
+}
+.st138 {
+  fill: none;
+  stroke: #7e8561;
+  stroke-width: 0.15;
+  stroke-miterlimit: 10;
+}
+.st149 {
+  opacity: 0.9;
+  clip-path: url(#SVGID_54_);
+}
+.st154,
+.st155 {
+  clip-path: url(#SVGID_164_);
+  fill: #7e8561;
+}
+.st155 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st160,
+.st161 {
+  clip-path: url(#SVGID_170_);
+  fill: #7e8561;
+}
+.st161 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st162 {
+  opacity: 0.4;
+  clip-path: url(#SVGID_54_);
+}
+.st163,
+.st190 {
+  clip-path: url(#SVGID_172_);
+  fill: #010101;
+}
+.st190 {
+  clip-path: url(#SVGID_200_);
+}
+.st191,
+.st192 {
+  clip-path: url(#SVGID_202_);
+  fill: #010101;
+}
+.st192 {
+  clip-path: url(#SVGID_204_);
+}
+.st193,
+.st194 {
+  clip-path: url(#SVGID_206_);
+  fill: #010101;
+}
+.st194 {
+  clip-path: url(#SVGID_208_);
+}
+.st195,
+.st196 {
+  clip-path: url(#SVGID_210_);
+  fill: #010101;
+}
+.st196 {
+  clip-path: url(#SVGID_212_);
+}
+.st197,
+.st198 {
+  clip-path: url(#SVGID_214_);
+  fill: #010101;
+}
+.st198 {
+  clip-path: url(#SVGID_216_);
+}
+.st199,
+.st200 {
+  clip-path: url(#SVGID_218_);
+  fill: #010101;
+}
+.st200 {
+  clip-path: url(#SVGID_220_);
+}
+.st201,
+.st202 {
+  clip-path: url(#SVGID_222_);
+  fill: #010101;
+}
+.st202 {
+  clip-path: url(#SVGID_224_);
+}
+.st203,
+.st204 {
+  clip-path: url(#SVGID_226_);
+  fill: #010101;
+}
+.st204 {
+  clip-path: url(#SVGID_228_);
+}
+.st205,
+.st206 {
+  clip-path: url(#SVGID_230_);
+  fill: #010101;
+}
+.st206 {
+  clip-path: url(#SVGID_232_);
+}
+.st207,
+.st208 {
+  clip-path: url(#SVGID_234_);
+  fill: #010101;
+}
+.st208 {
+  clip-path: url(#SVGID_236_);
+}
+.st209,
+.st210 {
+  clip-path: url(#SVGID_238_);
+  fill: #010101;
+}
+.st210 {
+  clip-path: url(#SVGID_240_);
+}
+.st211,
+.st212 {
+  clip-path: url(#SVGID_242_);
+  fill: #010101;
+}
+.st212 {
+  clip-path: url(#SVGID_244_);
+}
+.st213,
+.st214 {
+  clip-path: url(#SVGID_246_);
+  fill: #010101;
+}
+.st214 {
+  clip-path: url(#SVGID_248_);
+}
+.st215,
+.st216 {
+  clip-path: url(#SVGID_250_);
+  fill: #010101;
+}
+.st216 {
+  clip-path: url(#SVGID_252_);
+}
+.st217 {
+  clip-path: url(#SVGID_54_);
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st222,
+.st223 {
+  clip-path: url(#SVGID_258_);
+  fill: #7e8561;
+}
+.st223 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st224 {
+  clip-path: url(#SVGID_260_);
+  fill: #010101;
+}
+.st228 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.5;
+  stroke-miterlimit: 10;
+}
+.st228,
+.st229 {
+  clip-path: url(#SVGID_54_);
+}
+.st231 {
+  fill: #fff;
+}
+.st232 {
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+.st232,
+.st233,
+.st234 {
+  fill: none;
+  stroke-width: 0.25;
+}
+.st233 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #010101;
+}
+.st234 {
+  clip-path: url(#SVGID_54_);
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+.st236 {
+  clip-path: url(#SVGID_268_);
+  fill: #fff;
+}
+.st237,
+.st238 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.15;
+  stroke-miterlimit: 10;
+}
+.st238 {
+  clip-path: url(#SVGID_54_);
+}
+.st241 {
+  clip-path: url(#SVGID_272_);
+  fill: #fff;
+}
+.st242 {
+  opacity: 0.2;
+  clip-path: url(#SVGID_54_);
+}
+.st245,
+.st248 {
+  clip-path: url(#SVGID_278_);
+  fill: #fff;
+}
+.st248 {
+  clip-path: url(#SVGID_284_);
+}
+.st250,
+.st251 {
+  clip-path: url(#SVGID_54_);
+  fill: none;
+}
+.st250 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #010101;
+  stroke-width: 0.15;
+}
+.st251 {
+  stroke: #000;
+  stroke-width: 0.05;
+  stroke-miterlimit: 10;
+}
+.st254 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st255 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.05;
+  stroke-miterlimit: 10;
+}
+.st259 {
+  clip-path: url(#SVGID_54_);
+}
+.st259,
+.st260 {
+  fill: #fafafa;
+}
+.st261 {
+  opacity: 0.7;
+  clip-path: url(#SVGID_292_);
+}
+.st294 {
+  clip-path: url(#SVGID_328_);
+  fill: #fff;
+}
+.st295 {
+  clip-path: url(#SVGID_324_);
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.15;
+  stroke-miterlimit: 10;
+}
+.st298 {
+  clip-path: url(#SVGID_334_);
+  fill: #fff;
+}
+.st299 {
+  clip-path: url(#SVGID_330_);
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.15;
+  stroke-miterlimit: 10;
+}
+.st300,
+.st301 {
+  clip-path: url(#SVGID_336_);
+  fill: #fff;
+}
+.st301 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.15;
+  stroke-miterlimit: 10;
+}
+.st320 {
+  clip-path: url(#SVGID_356_);
+  fill: #db1f26;
+}
+.st321 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st321,
+.st322 {
+  clip-path: url(#SVGID_356_);
+}
+.st323 {
+  fill: #db1f26;
+}
+.st325 {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st326 {
+  opacity: 0.4;
+  clip-path: url(#SVGID_356_);
+}
+.st327,
+.st328 {
+  clip-path: url(#SVGID_358_);
+  fill: #db1f26;
+}
+.st328 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st329 {
+  opacity: 0.7;
+  clip-path: url(#SVGID_356_);
+}
+.st335,
+.st336 {
+  clip-path: url(#SVGID_364_);
+  fill: #db1f26;
+}
+.st336 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st342,
+.st343 {
+  clip-path: url(#SVGID_370_);
+  fill: #db1f26;
+}
+.st343 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.st344,
+.st345 {
+  clip-path: url(#SVGID_372_);
+  fill: #db1f26;
+}
+.st345 {
+  fill: none;
+  stroke: #010101;
+  stroke-width: 0.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
