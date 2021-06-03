@@ -40,8 +40,12 @@ const Strategy = ({
         </div>
       </Header>
       <div className="Strategies">
-        <StrategyDetail data={data} pageContext={pageContext} />
-        <StrategyCitations citationHTML={post.html} />
+        <StrategyDetail
+          data={data}
+          pageContext={pageContext}
+          citationHTML={post.html}
+        />
+        {/* <StrategyCitations citationHTML={post.html} /> */}
         {/* <hr style={{ marginBottom: '1rem' }} />
         <ul
           style={{

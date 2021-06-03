@@ -20,7 +20,7 @@ const StrategyDropdown = ({
   return (
     <div className="StrategyDropdown dropdown mr-3">
       <button
-        className={`btn dropdown-toggle btn-${colorClass}`}
+        className={`btn btn-sm dropdown-toggle btn-${colorClass}`}
         type="button"
         id="dropdownMenuButton"
         data-toggle="dropdown"

@@ -129,7 +129,7 @@ $example-color-background: $gray-800;
         border-right: 0px;
       }
       padding: 1.5rem;
-      font-size: 75%;
+      font-size: 90%;
       ul {
         padding-left: 1.5rem;
       }
@@ -167,7 +167,7 @@ $example-color-background: $gray-800;
       border-right: 0px;
     }
     padding: 1.5rem;
-    font-size: 75%;
+    font-size: 90%;
     ul {
       padding-left: 1.5rem;
     }
@@ -181,8 +181,8 @@ $example-color-background: $gray-800;
   }
 
   .Images {
-    font-weight: 600;
-    font-size: 80%;
+    // font-weight: 600;
+    font-size: 70% !important;
     background-color: $gray-800;
     color: white;
     padding: 1.5rem;

@@ -1,7 +1,9 @@
 import React from 'react'
+import FixTypeLater from '../../../@types/FixTypeLater'
 
 import { StrategyMainPageGQL } from '../../../@types/StrategyGQL'
 import { StrategyPageContext } from '../../../@types/StrategyPageContext'
+import StrategyCitations from './StrategyCitations'
 import StrategyGallery from './StrategyGallery'
 import StrategyHowItWorks from './StrategyHowItWorks'
 import StrategyItemList from './StrategyItemList'
@@ -11,9 +13,14 @@ import StrategySummary from './StrategySummary'
 interface Props {
   data: StrategyMainPageGQL
   pageContext: StrategyPageContext
+  citationHTML: FixTypeLater
 }
 
-const StrategyDetail = ({ data, pageContext }: Props): JSX.Element => {
+const StrategyDetail = ({
+  citationHTML,
+  data,
+  pageContext
+}: Props): JSX.Element => {
   const strategyTypes = data.markdownRemark.frontmatter.strategyTypes
 
   return (
@@ -45,7 +52,11 @@ const StrategyDetail = ({ data, pageContext }: Props): JSX.Element => {
 
       <div className="row BottomBG">
         <StrategyProjects examples={pageContext.subpages.examples} />
-        <StrategyGallery images={pageContext.subpages.images} />
+        <StrategyGallery
+          images={pageContext.subpages.images}
+          citationHTML={citationHTML}
+        />
+        {/* <StrategyCitations citationHTML={citationHTML} /> */}
       </div>
     </div>
   )

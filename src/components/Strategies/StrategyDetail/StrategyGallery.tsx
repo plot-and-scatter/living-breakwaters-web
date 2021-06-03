@@ -1,19 +1,21 @@
 import React from 'react'
+import FixTypeLater from '../../../@types/FixTypeLater'
 
 interface Props {
   images: string[]
+  citationHTML: FixTypeLater
 }
 
-const StrategyGallery = ({ images }: Props): JSX.Element => {
+const StrategyGallery = ({ images, citationHTML }: Props): JSX.Element => {
   return (
-    <div className="col Images">
+    <div className="col-4 Images">
       <div className="row ImagesTitle">
         <h2>
-          <i className="fas fa-images mr-2"></i> Gallery
+          <i className="fas fa-book mr-2"></i> Citations
         </h2>
       </div>
 
-      {images &&
+      {/* {images &&
         images.map((imageHtml, index) => {
           return (
             <div className="col-12" key={index}>
@@ -23,7 +25,8 @@ const StrategyGallery = ({ images }: Props): JSX.Element => {
               />
             </div>
           )
-        })}
+        })} */}
+      <div dangerouslySetInnerHTML={{ __html: citationHTML }} />
     </div>
   )
 }

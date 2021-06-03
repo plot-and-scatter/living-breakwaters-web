@@ -1,2 +1,2 @@
-![image](./Figure1.png)
+![image](./Figure3.png)
 Living Breakwaters (Staten Island NY, USA) [^5]
