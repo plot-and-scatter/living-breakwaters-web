@@ -30,13 +30,13 @@ const NarrativeSelect = ({ isCompact }: Props): JSX.Element => {
         setNarrativeStage={setNarrativeStage}
         narrativeStage={narrativeStage}
       />
-      <div className="mt-3 d-flex align-items-center justify-content-between">
+      {/* <div className="mt-3 d-flex align-items-center justify-content-between">
         {STAGE_NAMES.map((_, index) => (
           <div key={index}>
             {+narrativeStage === index && <NarrativeToggleButtons />}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import CargoShippingPop from './Popovers/CargoShippingPop'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
@@ -18,12 +18,23 @@ import './LogisticsNetworksTableau.scss'
 import PortPop from './Popovers/PortPop'
 import RightOfWayPop from './Popovers/RightOfWayPop'
 import WarehousePop from './Popovers/WarehousePop'
+import { useNarrative } from '../NarrativeContext'
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void
 }
 
 const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
+  const { narrativeStage, setShowRain } = useNarrative()
+
+  useEffect(() => {
+    if (narrativeStage === 2) {
+      setShowRain(true)
+    } else {
+      setShowRain(false)
+    }
+  }, [narrativeStage])
+
   return (
     <div className="LogisticsNetworksTableau">
       <SVGFrame id="LogisticsNetworksTableau">
@@ -32,8 +43,8 @@ const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Pier xOffset={0.114} yOffset={0.858} />
         <Office1 xOffset={0.63} yOffset={0.7} />
         <Office2 xOffset={0.7} yOffset={0.38} />
-        <CargoShippingPop onClick={setFrameContent} />
         <PortPop onClick={setFrameContent} />
+        <CargoShippingPop onClick={setFrameContent} />
         <WarehousePop onClick={setFrameContent} />
         <RightOfWayPop onClick={setFrameContent} />
         <RetailPop onClick={setFrameContent} />
