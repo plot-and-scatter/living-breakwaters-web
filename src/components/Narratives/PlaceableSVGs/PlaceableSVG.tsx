@@ -77,6 +77,7 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       {...attributesForPlacedItem(actualScale, xPc, yPc)}
       style={props.style}
       preserveAspectRatio={props.preserveAspectRatio || 'xMinYMid'}
+      onClick={props.onClick}
     >
       <g ref={gRef} transform={`rotate(${rotation})`}>
         <rect
@@ -86,6 +87,7 @@ const PlaceableSVG = (props: Props): JSX.Element => {
           height={vb.height}
           fill={`green`}
           fillOpacity={0}
+          strokeOpacity={0}
           // stroke={`blue`}
         />
         {children}

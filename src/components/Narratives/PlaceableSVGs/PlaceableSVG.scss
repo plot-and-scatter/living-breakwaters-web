@@ -1,13 +1,14 @@
 .PlaceableSVG {
   overflow: visible;
+  transition: fill 0.5s ease;
   &.Red {
     path {
-      fill: red !important;
+      fill: red;
     }
   }
   &.RedOutline {
     path {
-      stroke: red !important;
+      stroke: red;
     }
   }
 }

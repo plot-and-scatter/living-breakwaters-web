@@ -6,7 +6,11 @@ import NarrativeToggleButtons from './NarrativeToggleButtons'
 
 import './NarrativeSelect.scss'
 
-export const STAGE_NAMES = ['Present', 'Near Future', 'Future']
+export const STAGE_NAMES = [
+  'Current state',
+  'Sea level rise (SLR)',
+  'SLR + storm'
+]
 
 interface Props {
   isCompact?: boolean
@@ -19,7 +23,7 @@ const NarrativeSelect = ({ isCompact }: Props): JSX.Element => {
     <div className="NarrativeSelect">
       {!isCompact && (
         <>
-          <h4>Show what happens in the...</h4>
+          <h4>Show what happens with...</h4>
         </>
       )}
       <NarrativeInput

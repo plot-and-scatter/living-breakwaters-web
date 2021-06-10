@@ -5,11 +5,12 @@ import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 import './Retail.scss'
+import Text from '../Text'
 
 const Retail = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      extraClasses={'Retail'}
+      className={'Retail'}
       viewBoxObj={viewBox(0, 0, 146.5, 318.57)}
       defaultScale={0.1}
       {...props}
@@ -43,6 +44,11 @@ const Retail = (props: PlaceableSVGProps): JSX.Element => {
           </g>
         </g>
       </g>
+      {props.narrativeStage > 0 && (
+        <Text {...props} xOffset={0.09} yOffset={1.1} scale={0.022}>
+          Retail
+        </Text>
+      )}
     </PlaceableSVG>
   )
 }

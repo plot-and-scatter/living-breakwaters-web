@@ -1,3 +1,6 @@
+import React from 'react'
+import FixTypeLater from './FixTypeLater'
+
 type PlaceableSVGProps = {
   extraClasses?: string
   narrativeStage?: number
@@ -7,6 +10,8 @@ type PlaceableSVGProps = {
   useGsap?: boolean
   rotate?: number
   onNarrativeStageChange?: (narrativeStage: number) => void
+  onClick?: (clickEvent: FixTypeLater) => void
+  children?: React.ReactNode
 }
 
 export default PlaceableSVGProps

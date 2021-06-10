@@ -10,14 +10,15 @@ import './Tableau.scss'
 
 interface Props {
   activeNarrative: NarrativeType
+  setFrameContent: (content: React.ReactNode) => void
 }
 
-const Tableau = ({ activeNarrative }: Props): JSX.Element => {
+const Tableau = ({ activeNarrative, setFrameContent }: Props): JSX.Element => {
   let tableau
 
   switch (activeNarrative) {
     case NarrativeType.LogisticsNetworks:
-      tableau = <LogisticsNetworksTableau />
+      tableau = <LogisticsNetworksTableau setFrameContent={setFrameContent} />
       break
     case NarrativeType.CulturalLandscapes:
       tableau = <CulturalLandscapesTableau />

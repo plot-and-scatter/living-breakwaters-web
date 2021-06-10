@@ -10,24 +10,24 @@ interface Props extends PlaceableSVGProps {
   children: string
 }
 
+const textBoxWidth = 150
+
 const Text = (props: Props): JSX.Element => {
   return (
     <PlaceableSVG
       defaultScale={0.015}
-      extraClasses={'Text'}
+      className={'Text'}
       viewBoxObj={viewBox(0, 0, 20, 20)}
       {...props}
     >
       <g className="Text">
-        {/* <rect
-          x={0}
-          y={0}
-          width={20}
-          height={20}
-          fill={`green`}
-          fillOpacity={0.3}
-        /> */}
-        <text x={10} y={10} dy={5}>
+        <rect
+          x={-(textBoxWidth * 0.5)}
+          y={-5}
+          width={textBoxWidth}
+          height={30}
+        />
+        <text x={10} y={10} dy={5} dx={-10}>
           {props.children}
         </text>
       </g>

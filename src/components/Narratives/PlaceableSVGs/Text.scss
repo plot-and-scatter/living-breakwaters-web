@@ -1,11 +1,13 @@
 @import "../../../scss/common.module";
 
-.Text text {
-  font-size: 1rem;
-  font-family: $font-family-sans-serif;
-  color: white;
-  fill: white;
-  stroke: black;
-  stroke-width: 0.1px;
-  text-anchor: middle;
+.Text {
+  text {
+    font-size: 1rem;
+    font-family: $font-family-sans-serif;
+    color: white;
+    fill: white;
+    stroke: black;
+    stroke-width: 0.1px;
+    text-anchor: middle;
+  }
 }

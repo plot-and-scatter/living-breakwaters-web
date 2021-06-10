@@ -5,4 +5,20 @@
     stroke-width: 0.5px;
     fill: url(#linear-gradient);
   }
+  &.Red {
+    cursor: pointer;
+    rect,
+    path,
+    polygon {
+      fill: #cc3333;
+      stroke: #990000;
+    }
+    &:hover {
+      rect,
+      path,
+      polygon {
+        fill: #f00;
+      }
+    }
+  }
 }

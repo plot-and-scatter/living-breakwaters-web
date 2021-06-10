@@ -5,11 +5,12 @@ import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 import './CargoShip.scss'
+import Text from '../Text'
 
 const CargoShip = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      extraClasses={'CargoShip'}
+      className={'CargoShip'}
       viewBoxObj={viewBox(0, 0, 77.49, 83.06)}
       defaultScale={0.08}
       {...props}
@@ -145,6 +146,11 @@ const CargoShip = (props: PlaceableSVGProps): JSX.Element => {
           </g>
         </g>
       </g>
+      {props.narrativeStage > 0 && (
+        <Text {...props} xOffset={0.047} yOffset={0.7}>
+          Cargo &amp; Shipping
+        </Text>
+      )}
     </PlaceableSVG>
   )
 }
