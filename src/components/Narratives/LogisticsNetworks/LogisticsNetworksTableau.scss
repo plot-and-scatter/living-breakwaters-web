@@ -31,9 +31,12 @@ $meanSeaLevel: lighten(#266, 10%);
         fill: rgba(#112233, 0.5);
         stroke: #123;
       }
-      &.mean-sea-level {
+      &.base-sea-level {
         fill: url(#mean-sea-level-gradient) $meanSeaLevel;
         stroke: darken($meanSeaLevel, 10%);
+      }
+      &.higher-sea-level {
+        fill: #cc3333;
       }
       &.saltwater-wedge {
         fill: url(#saltwater-wedge-gradient) $saltwaterWedge;

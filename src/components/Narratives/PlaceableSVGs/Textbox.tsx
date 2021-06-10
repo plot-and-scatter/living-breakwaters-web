@@ -4,27 +4,30 @@ import { viewBox } from './PlaceableSVGHelper'
 import PlaceableSVG from './PlaceableSVG'
 import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
 
-import './Text.scss'
+import './Textbox.scss'
 
 interface Props extends PlaceableSVGProps {
   children: string
+  textboxWidth?: number
 }
 
-const textBoxWidth = 150
+const DEFAULT_TEXTBOX_WIDTH = 150
 
-const Text = (props: Props): JSX.Element => {
+const Textbox = (props: Props): JSX.Element => {
+  const textboxWidth = props.textboxWidth || DEFAULT_TEXTBOX_WIDTH
+
   return (
     <PlaceableSVG
       defaultScale={0.015}
-      className={'Text'}
+      className={'Textbox'}
       viewBoxObj={viewBox(0, 0, 20, 20)}
       {...props}
     >
-      <g className="Text">
+      <g className="Textbox">
         <rect
-          x={-(textBoxWidth * 0.5)}
+          x={-(textboxWidth * 0.5)}
           y={-5}
-          width={textBoxWidth}
+          width={textboxWidth}
           height={30}
         />
         <text x={10} y={10} dy={5} dx={-10}>
@@ -35,4 +38,4 @@ const Text = (props: Props): JSX.Element => {
   )
 }
 
-export default Text
+export default Textbox

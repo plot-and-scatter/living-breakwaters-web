@@ -5,7 +5,7 @@ import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 import './CargoShip.scss'
-import Text from '../Text'
+import Textbox from '../Textbox'
 
 const CargoShip = (props: PlaceableSVGProps): JSX.Element => {
   return (
@@ -146,11 +146,6 @@ const CargoShip = (props: PlaceableSVGProps): JSX.Element => {
           </g>
         </g>
       </g>
-      {props.narrativeStage > 0 && (
-        <Text {...props} xOffset={0.047} yOffset={0.7}>
-          Cargo &amp; Shipping
-        </Text>
-      )}
     </PlaceableSVG>
   )
 }

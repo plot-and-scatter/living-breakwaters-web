@@ -10,7 +10,7 @@ import './Tableau.scss'
 
 interface Props {
   activeNarrative: NarrativeType
-  setFrameContent: (content: React.ReactNode) => void
+  setFrameContent?: (content: React.ReactNode) => void
 }
 
 const Tableau = ({ activeNarrative, setFrameContent }: Props): JSX.Element => {
@@ -24,13 +24,13 @@ const Tableau = ({ activeNarrative, setFrameContent }: Props): JSX.Element => {
       tableau = <CulturalLandscapesTableau />
       break
     case NarrativeType.UtilitySystems:
-      tableau = <UtilitySystemsTableau />
+      tableau = <LogisticsNetworksTableau setFrameContent={setFrameContent} />
       break
     case NarrativeType.FoodSecurity:
       tableau = <FoodSecurityTableau />
       break
     default:
-      tableau = <UtilitySystemsTableau />
+      tableau = <LogisticsNetworksTableau setFrameContent={setFrameContent} />
   }
 
   return <div className="Tableau">{tableau}</div>

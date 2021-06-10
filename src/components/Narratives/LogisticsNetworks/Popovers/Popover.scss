@@ -1,0 +1,19 @@
+.Popover.Red {
+  cursor: pointer;
+  // rect,
+  // path,
+  // polygon {
+    
+  // }
+  .Textbox rect {
+    fill: #cc3333;
+    stroke: #990000;
+  }
+  &:hover {
+    rect,
+    path,
+    polygon {
+      fill: #f00;
+    }
+  }
+}

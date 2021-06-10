@@ -14,7 +14,7 @@ import Oak from '../PlaceableSVGs/Trees/Oak'
 import Pump from '../PlaceableSVGs/Buildings/Pump'
 import Roots from '../PlaceableSVGs/Trees/Roots'
 import SVGFrame from '../Frames/SVGFrame'
-import Text from '../PlaceableSVGs/Text'
+import Textbox from '../PlaceableSVGs/Textbox'
 import Truck from '../PlaceableSVGs/Vehicles/Truck'
 import Church from '../PlaceableSVGs/Buildings/Church'
 import Factory from '../PlaceableSVGs/Buildings/Factory'
@@ -28,8 +28,6 @@ import PowerGenerator from '../PlaceableSVGs/Objects/PowerGenerator'
 import RoundBuilding from '../PlaceableSVGs/Buildings/RoundBuilding'
 import Store from '../PlaceableSVGs/Buildings/Store'
 import TransmissionTower from '../PlaceableSVGs/Objects/TransmissionTower'
-
-
 
 import Well from '../PlaceableSVGs/Buildings/Well'
 import WellPopover from './Popovers/WellPopover'
@@ -70,17 +68,17 @@ const FoodSecurityTableau = (): JSX.Element => {
           yOffset={narrativeGenerator(stage, [0.503, 0.508, 0.52])}
         />
         <g id="Labels">
-          <Text xOffset={0.2} yOffset={0.8}>
+          <Textbox xOffset={0.2} yOffset={0.8}>
             saltwater wedge
-          </Text>
-          <Text
+          </Textbox>
+          <Textbox
             narrativeStage={stage}
             rotate={narrativeGenerator(stage, [25, 20, 10])}
             xOffset={narrativeGenerator(stage, [0.43, 0.53, 0.7])}
             yOffset={narrativeGenerator(stage, [0.9, 0.87, 0.84])}
           >
             interface
-          </Text>
+          </Textbox>
           <text x={1500} y={450}>
             fresh water
           </text>

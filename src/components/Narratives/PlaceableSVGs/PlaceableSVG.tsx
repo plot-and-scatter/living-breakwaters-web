@@ -17,6 +17,7 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   viewBoxObj: ViewBox
   xOffset?: number
   yOffset?: number
+  enableBoundingBox?: boolean
 }
 
 const PlaceableSVG = (props: Props): JSX.Element => {
@@ -28,7 +29,8 @@ const PlaceableSVG = (props: Props): JSX.Element => {
     yOffset = 0.5,
     defaultScale = 1,
     scale,
-    rotate
+    rotate,
+    enableBoundingBox
   } = props
 
   const actualScale = scale || defaultScale || 1
@@ -80,16 +82,19 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       onClick={props.onClick}
     >
       <g ref={gRef} transform={`rotate(${rotation})`}>
+        {/* {enableBoundingBox && ( */}
         <rect
           x={vb.x}
           y={vb.y}
           width={vb.width}
           height={vb.height}
           fill={`green`}
-          fillOpacity={0}
-          strokeOpacity={0}
-          // stroke={`blue`}
+          fillOpacity={0.0}
+          strokeOpacity={0.0}
+          strokeWidth={2}
+          stroke={`red`}
         />
+        {/* )} */}
         {children}
       </g>
     </svg>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NarrativeType } from '../../../@types/NarrativeType'
 
 import NarrativeSelect from '../NarrativeSelect'
@@ -27,6 +27,10 @@ const NarrativeFrame = (props: Props): JSX.Element => {
   const [frameContent, setFrameContent] = useState<React.ReactNode>(
     DEFAULT_CONTENT
   )
+
+  useEffect(() => {
+    console.log('frameContent', frameContent)
+  }, [frameContent])
 
   return (
     <div className="NarrativeFrame row">

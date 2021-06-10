@@ -28,7 +28,7 @@ const itemHelper = (objClass: string, id: number, index: number) => {
 
 const chainHelper = (id: number) => {
   return [
-    itemHelper('mean-sea-level', id, id - 1),
+    itemHelper('higher-sea-level', id, id - 1),
     itemHelper('ground', id, id - 1),
     itemHelper('sea-surge', id, id - 1)
   ]

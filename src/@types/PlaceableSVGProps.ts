@@ -12,6 +12,7 @@ type PlaceableSVGProps = {
   onNarrativeStageChange?: (narrativeStage: number) => void
   onClick?: (clickEvent: FixTypeLater) => void
   children?: React.ReactNode
+  enableBoundingBox?: boolean
 }
 
 export default PlaceableSVGProps

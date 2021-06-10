@@ -15,9 +15,17 @@ const LogisticsNetworksSeaLevel = ({
       ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20.5} H-${WIDTH}`
       : stage === 1
       ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 15} H-${WIDTH}`
-      : `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT} H-${WIDTH}`
+      : `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 5} H-${WIDTH}`
 
-  return <path className="mean-sea-level" d={d} />
+  return (
+    <>
+      <path className="higher-sea-level" d={d} />
+      <path
+        className="base-sea-level"
+        d={`M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20.5} H-${WIDTH}`}
+      />
+    </>
+  )
 }
 
 export default LogisticsNetworksSeaLevel
