@@ -15,8 +15,8 @@ export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
     if (heavyRainTimeline) heavyRainTimeline.clear()
     if (toggleVar) {
       heavyRainTimeline = new TimelineLite()
-        .to('.FoodSecurityTableau svg', {
-          backgroundImage: 'linear-gradient(#ccc, #fff)',
+        .to('.LogisticsNetworksTableau svg', {
+          backgroundImage: 'linear-gradient(#666, #fff)',
           duration: 1
         })
         .to('.Rainfall', { visibility: 'visible', opacity: 1, duration: 3 })
@@ -27,15 +27,15 @@ export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
         // .to('#RainOverflow', { opacity: 0, duration: 0.5 })
         .to('.SaturatedGround', { opacity: 0, duration: 0.5 })
         .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
-        .to('.FoodSecurityTableau svg', {
-          backgroundImage: 'linear-gradient(#bbddff, #fff)',
-          duration: 0.5
+        .to('.LogisticsNetworksTableau svg', {
+          backgroundImage: 'linear-gradient(#fff, #fff)',
+          duration: 1
         })
     }
   }
 }
 
-const RAIN_WIDTH = 150
+const RAIN_WIDTH = -150
 
 const rain = (xOffset) => (
   <path
@@ -48,7 +48,7 @@ const rain = (xOffset) => (
 const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
   const { showRain } = useNarrative()
 
-  const totalWidth = 1963
+  const totalWidth = 2200
   const rainLineSpacing = 20
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
 
   const rainLines = []
 
-  for (let i = -RAIN_WIDTH; i < totalWidth; i += rainLineSpacing) {
+  for (let i = RAIN_WIDTH; i < totalWidth; i += rainLineSpacing) {
     rainLines.push(rain(i))
   }
 

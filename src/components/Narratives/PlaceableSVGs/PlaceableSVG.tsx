@@ -82,7 +82,6 @@ const PlaceableSVG = (props: Props): JSX.Element => {
       onClick={props.onClick}
     >
       <g ref={gRef} transform={`rotate(${rotation})`}>
-        {/* {enableBoundingBox && ( */}
         <rect
           x={vb.x}
           y={vb.y}
@@ -90,11 +89,23 @@ const PlaceableSVG = (props: Props): JSX.Element => {
           height={vb.height}
           fill={`green`}
           fillOpacity={0.0}
-          strokeOpacity={0.0}
-          strokeWidth={2}
+          strokeOpacity={0}
+          strokeWidth={0}
           stroke={`red`}
         />
-        {/* )} */}
+        {enableBoundingBox && (
+          <rect
+            x={vb.x}
+            y={vb.y}
+            width={vb.width}
+            height={vb.height}
+            fill={`green`}
+            fillOpacity={0.2}
+            strokeOpacity={0.9}
+            strokeWidth={2}
+            stroke={`red`}
+          />
+        )}
         {children}
       </g>
     </svg>

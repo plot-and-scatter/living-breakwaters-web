@@ -17,7 +17,7 @@ const PortPop = (props: PlaceableSVGProps): JSX.Element => {
   // const [showContamination, setShowContamination] = useState<boolean>(false)
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 0 && onClick) {
+    if (narrativeStage > 1 && onClick) {
       onClick('Lorem ipsum port')
       // setShowContamination(true)
     } else {
@@ -26,7 +26,7 @@ const PortPop = (props: PlaceableSVGProps): JSX.Element => {
     }
   }, [narrativeStage, onClick])
 
-  const extraClasses = narrativeStage > 0 ? 'Red' : ''
+  const extraClasses = narrativeStage > 1 ? 'Red' : ''
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>

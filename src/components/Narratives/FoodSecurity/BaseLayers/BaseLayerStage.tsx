@@ -23,11 +23,11 @@ const BaseLayerStage = (props: Props): JSX.Element => {
       {...props}
     >
       <g id={`groundwater-${stage}`}>
-        <SeaSurge stage={stage} yOffset={0.54} />
-        <MeanSeaLevel stage={stage} yOffset={0.54} />
-        <AgricultureGround stage={stage} />
-        <SaltwaterWedge stage={stage} yOffset={0.54} />
-        <FreshWater stage={stage} yOffset={0.54} />
+        {/* <SeaSurge stage={stage} yOffset={0.54} /> */}
+        <MeanSeaLevel stage={stage} yOffset={0.68} />
+        <AgricultureGround stage={stage} yOffset={0.846} />
+        {/* <SaltwaterWedge stage={stage} yOffset={0.54} /> */}
+        {/* <FreshWater stage={stage} yOffset={0.54} /> */}
       </g>
     </PlaceableSVG>
   )

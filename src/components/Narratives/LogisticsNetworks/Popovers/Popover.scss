@@ -1,10 +1,14 @@
 .Popover.Red {
   cursor: pointer;
-  // rect,
-  // path,
-  // polygon {
-
-  // }
+  svg:not(.DoNotHighlight) {
+    rect,
+    path,
+    polygon {
+      fill: #cc3333;
+      stroke: #990000;
+    }
+    transition: fill 0.5s;
+  }
   .Textbox rect {
     fill: #cc3333;
     stroke: #990000;

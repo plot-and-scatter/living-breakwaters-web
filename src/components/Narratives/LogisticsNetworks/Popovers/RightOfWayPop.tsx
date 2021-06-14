@@ -14,14 +14,14 @@ const RightOfWayPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 0 && onClick) {
+    if (narrativeStage > 1 && onClick) {
       onClick('Lorem ipsum right of way')
     } else {
       onClick(undefined)
     }
   }, [narrativeStage, onClick])
 
-  const extraClasses = narrativeStage > 0 ? 'Red' : ''
+  const extraClasses = narrativeStage > 1 ? 'Red' : ''
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
@@ -29,8 +29,8 @@ const RightOfWayPop = (props: PlaceableSVGProps): JSX.Element => {
       <Train xOffset={0.488} yOffset={0.785} />
       <Tree xOffset={0.52} yOffset={0.75} />
       <Truck3 xOffset={0.57} yOffset={0.793} />
-      <Textbox xOffset={0.5} yOffset={0.9} textboxWidth={120}>
-        Right of Way
+      <Textbox xOffset={0.53} yOffset={0.9} textboxWidth={150}>
+        Freight Transport
       </Textbox>
     </svg>
   )

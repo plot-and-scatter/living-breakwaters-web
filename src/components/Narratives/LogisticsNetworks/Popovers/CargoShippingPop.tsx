@@ -23,11 +23,11 @@ const CargoShippingPop = (props: PlaceableSVGProps): JSX.Element => {
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
       <CargoShip
         narrativeStage={narrativeStage}
-        xOffset={narrativeStage <= 1 ? 0.03 : 0.04}
+        xOffset={0.03}
         yOffset={
           narrativeStage === 0 ? 0.75 : narrativeStage === 1 ? 0.74 : 0.72
         }
-        rotate={narrativeStage <= 1 ? 0 : 4}
+        // rotate={narrativeStage <= 1 ? 0 : 4}
       />
       <Textbox xOffset={0.07} yOffset={0.9}>
         Cargo &amp; Shipping
