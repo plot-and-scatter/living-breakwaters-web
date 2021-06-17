@@ -13,7 +13,7 @@ const UnirrigatedPop = (props: PlaceableSVGProps): JSX.Element => {
 
   const onClickText = useCallback(() => {
     if (narrativeStage > 1 && onClick) {
-      onClick('Lorem ipsum right of way')
+      onClick('Lorem ipsum unirrigated')
     } else {
       onClick(undefined)
     }

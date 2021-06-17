@@ -13,7 +13,7 @@ const LogisticsPop = (props: PlaceableSVGProps): JSX.Element => {
 
   const onClickText = useCallback(() => {
     if (narrativeStage > 1 && onClick) {
-      onClick('Lorem ipsum right of way')
+      onClick('Lorem ipsum logistics')
     } else {
       onClick(undefined)
     }
