@@ -11,7 +11,7 @@ const NewPumpStation = (props: PlaceableSVGProps): JSX.Element => {
     <PlaceableSVG
       extraClasses={'NewPumpStation'}
       viewBoxObj={viewBox(0, 0, 139.65, 23.19)}
-      defaultScale={0.1}
+      defaultScale={0.11}
       {...props}
     >
       <g id="Layer_2" data-name="Layer 2">

@@ -1,14 +1,18 @@
 .Farmhouse {
-  .st0 {
-    fill: #fcb;
-    stroke: #c33;
-    stroke-width: 0.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  .cls-1,
+  .cls-2,
+  .cls-3 {
+    stroke: #215a58;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
   }
-  // &.narr-2 {
-  //   path {
-  //     fill: red;
-  //   }
-  // }
+  .cls-1 {
+    fill: url(#GRADIENT_BLUE);
+  }
+  .cls-2 {
+    fill: url(#GRADIENT_BLUE-2);
+  }
+  .cls-3 {
+    fill: none;
+  }
 }

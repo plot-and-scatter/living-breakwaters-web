@@ -1,38 +1,6 @@
-$color-oak-leaves: #559944;
-$color-oak-trunk: #654321;
 
-@mixin bird {
-  fill: white;
-}
 
-.BirdOnGround path { @include bird; }
-.FlyingGull1 path { @include bird; }
-.FlyingGull2 path { @include bird; }
-.FlyingGull3 path { @include bird; }
 
-.Roots {
-  fill: lighten($color-oak-trunk, 30%);
-  stroke: $color-oak-trunk;
-  stroke-width: 0.4px;
-}
-.Well {
-  fill: #999;
-  stroke: #000;
-  stroke-width: 0.5px;
-  .Well {
-    fill: #666;
-  }
-}
-.Bush1 path {
-  fill: lighten($color-oak-leaves, 20%);
-  stroke: darken($color-oak-trunk, 20%);
-  stroke-width: 0.3px;
-}
-.Cypress {
-  .cls-18 {
-    fill: $color-oak-leaves;
-  }
-}
 
 g, path {
   transform-origin: center;

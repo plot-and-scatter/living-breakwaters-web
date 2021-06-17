@@ -24,13 +24,13 @@ const Tableau = ({ activeNarrative, setFrameContent }: Props): JSX.Element => {
       tableau = <CulturalLandscapesTableau />
       break
     case NarrativeType.UtilitySystems:
-      tableau = <LogisticsNetworksTableau setFrameContent={setFrameContent} />
+      tableau = <FoodSecurityTableau setFrameContent={setFrameContent} />
       break
     case NarrativeType.FoodSecurity:
-      tableau = <FoodSecurityTableau />
+      tableau = <FoodSecurityTableau setFrameContent={setFrameContent} />
       break
     default:
-      tableau = <LogisticsNetworksTableau setFrameContent={setFrameContent} />
+      tableau = <FoodSecurityTableau setFrameContent={setFrameContent} />
   }
 
   return <div className="Tableau">{tableau}</div>
