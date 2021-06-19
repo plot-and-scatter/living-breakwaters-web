@@ -28,7 +28,7 @@ const itemHelper = (objClass: string, id: number, index: number) => {
 
 const chainHelper = (id: number) => {
   return [
-    itemHelper('mean-sea-level', id, id - 1),
+    itemHelper('higher-sea-level', id, id - 1),
     itemHelper('ground', id, id - 1),
     itemHelper('sea-surge', id, id - 1)
   ]
@@ -53,7 +53,7 @@ const Land = (): JSX.Element => {
   }, [narrativeStage])
 
   return (
-    <g id="BaseLayers" data-name="Base Layers" opacity=".9">
+    <g id="BaseLayers" data-name="Base Layers" opacity="1">
       <BaseLayerStage stage={2} xOffset={0} yOffset={0.7} scale={1} />
       <BaseLayerStage stage={1} xOffset={0} yOffset={0.7} scale={1} />
       <BaseLayerStage stage={0} xOffset={0} yOffset={0.7} scale={1} />
