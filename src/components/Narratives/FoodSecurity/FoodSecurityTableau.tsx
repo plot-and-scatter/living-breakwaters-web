@@ -1,30 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
-
-import Bicyclist from '../PlaceableSVGs/People/Bicyclist'
+import BikewayPop from './Popovers/BikewayPop'
 import Birds from '../PlaceableSVGs/Fauna/Birds'
-import Bush1 from '../PlaceableSVGs/Plants/Bush1'
-import Wheat from '../PlaceableSVGs/Plants/Wheat'
 import DouglasFir from '../PlaceableSVGs/Trees/DouglasFir'
-
-import FarmTruck from '../PlaceableSVGs/Vehicles/FarmTruck'
+import FarmhousePop from './Popovers/FarmhousePop'
 import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
-import Irrigation from '../PlaceableSVGs/Objects/Irrigation'
-import Land from './SVGGroups/Land'
-
-import SVGFrame from '../Frames/SVGFrame'
-import Tree from '../PlaceableSVGs/Trees/Tree'
-import Well from '../PlaceableSVGs/Buildings/Well'
-
-import BikewayPop from './Popovers/BikewayPop'
-import FarmhousePop from './Popovers/FarmhousePop'
 import IntertidalPop from './Popovers/IntertidalPop'
 import IrrigationPop from './Popovers/IrrigationPop'
+import Land from './SVGGroups/Land'
 import LogisticsPop from './Popovers/LogisticsPop'
 import PumpStationPop from './Popovers/PumpStationPop'
+import SVGFrame from '../Frames/SVGFrame'
+import Tree from '../PlaceableSVGs/Trees/Tree'
 import UnirrigatedPop from './Popovers/UnirrigatedPop'
+import Well from '../PlaceableSVGs/Buildings/Well'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
@@ -34,7 +25,15 @@ interface Props {
 }
 
 const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
-  const { narrativeStage: stage, setNarrativeStage } = useNarrative()
+  const { narrativeStage, setShowRain } = useNarrative()
+
+  useEffect(() => {
+    if (narrativeStage === 2) {
+      setShowRain(true)
+    } else {
+      setShowRain(false)
+    }
+  }, [narrativeStage])
 
   return (
     <div className="FoodSecurityTableau">

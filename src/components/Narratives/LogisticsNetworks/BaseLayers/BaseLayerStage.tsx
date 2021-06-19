@@ -2,7 +2,6 @@ import React from 'react'
 
 import LogisticsNetworksGround from './LogisticsNetworksGround'
 import LogisticsNetworksSeaLevel from './LogisticsNetworksSeaLevel'
-import LogisticsNetworksSeaSurge from './LogisticsNetworksSeaSurge'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'

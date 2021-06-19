@@ -1,25 +1,22 @@
 import React, { useEffect } from 'react'
 
+import { useNarrative } from '../NarrativeContext'
+import Car3 from '../PlaceableSVGs/Vehicles/Car3'
 import CargoShippingPop from './Popovers/CargoShippingPop'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
 import Land from './SVGGroups/Land'
 import Office1 from '../PlaceableSVGs/Buildings/Office1'
 import Office2 from '../PlaceableSVGs/Buildings/Office2'
 import Pier from '../PlaceableSVGs/Maritime/Pier'
+import PortPop from './Popovers/PortPop'
 import RetailPop from './Popovers/RetailPop'
+import RightOfWayPop from './Popovers/RightOfWayPop'
 import SVGFrame from '../Frames/SVGFrame'
-import Train from '../PlaceableSVGs/Vehicles/Train'
 import Tree from '../PlaceableSVGs/Trees/Tree'
-import Car3 from '../PlaceableSVGs/Vehicles/Car3'
-import Truck3 from '../PlaceableSVGs/Vehicles/Truck3'
-import Warehouse from '../PlaceableSVGs/Buildings/Warehouse'
+import WarehousePop from './Popovers/WarehousePop'
 
 import '../PlaceableSVGs/Elements.scss'
 import './LogisticsNetworksTableau.scss'
-import PortPop from './Popovers/PortPop'
-import RightOfWayPop from './Popovers/RightOfWayPop'
-import WarehousePop from './Popovers/WarehousePop'
-import { useNarrative } from '../NarrativeContext'
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void
