@@ -1,10 +1,34 @@
 import React from 'react'
 
-const UtilitySystemsGround = (): JSX.Element => {
-  const d =
-    'M0 305c70-15 103-38 135-53s67-8 87-11 423-35 490-32 195 2 212-1c17-2 61-21 80-22 69-1 115-4 146-1s53 14 135 12c198-6 183-34 218-34 98-1 181 2 226-2 9-1 42-8 67-9 148-2 191 4 251-42 35-27 60-32 87-52 32-25 65-56 97-57 75-2 138-1 138-1v355H0z'
+import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
+import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
-  return <path className="ground" d={d} transform="translate(0, 165)" />
+import './UtilitySystemsGround.scss'
+
+interface Props extends PlaceableSVGProps, NarrativeStageProps {}
+
+const UtilitySystemsGround = (props: Props): JSX.Element => {
+  return (
+    <PlaceableSVG
+      viewBoxObj={viewBox(0, 0, 1203.33, 141.64)}
+      {...props}
+      extraClasses={'UtilitySystemsGround'}
+      defaultScale={2.97}
+    >
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="EXISTING_SECTION">
+          <g id="section">
+            <polygon
+              className="cls-1"
+              points="0 65.1 125.83 51.45 283.48 35.26 283.48 35.26 311.33 26.32 341.3 26.68 352.04 28.11 393.62 27.93 565.13 27.93 718.05 18.41 871.9 17.94 909.56 17.83 936.15 17.37 1089.41 1.16 1203.33 0 1202.94 141.63 0 141.63 0 65.1"
+            />
+          </g>
+        </g>
+      </g>
+    </PlaceableSVG>
+  )
 }
 
 export default UtilitySystemsGround

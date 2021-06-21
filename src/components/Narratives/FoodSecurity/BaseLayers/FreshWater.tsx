@@ -19,7 +19,7 @@ const FreshWater = (props: Props): JSX.Element => {
     <PlaceableSVG
       viewBoxObj={viewBox(0, 0, 1960, 520)}
       {...props}
-      extraClasses={'AgricultureGround'}
+      extraClasses={'FoodSecurityGround'}
     >
       <path className="fresh-water" d={d} />
     </PlaceableSVG>

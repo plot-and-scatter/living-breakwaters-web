@@ -9,34 +9,109 @@ import './House1.scss'
 const House1 = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(962, 374, 64, 51)}
+      viewBoxObj={viewBox(0, 0, 68.19, 54.05)}
       defaultScale={0.5}
       extraClasses="House1"
       {...props}
     >
-      <rect fill="red" width={49} height={25} x={972} y={390} />
-      <path
-        className=""
-        fill="blue"
-        d="M961.8 418.4h64v6.2h-64zm28.8-36.9l-1.3-.1h-15.7c-.8 0-1.3 0-1.4 1l-2 10.8h52.5l-1.2-6.2-.7-4.6c-.1-.7-.4-1-1.1-1h-16.9l-.3.1"
-      />
-      <path
-        className=""
-        fill="green"
-        d="M991 414.3h-19l-.2.3c-.7 3.6-.6 3.8 3.2 3.8h12.7l15.1.2 15.7-.2c2.7 0 2.7 0 2.7-2.8v-1.4h-17.8l-1.5.2"
-      />
-      <path
-        className=""
-        fill="orange"
-        stroke="orange"
-        d="M989 418.2c.1-1 .7-1.2 1.8-1.2 3.8 0 7.7 0 11.6-.2 1 0 1.3.6 1.5 1.4m6.4-25.3c0-.2 0-.6-.2-.8l-13.6-17.5-2 2.4a2698 2698 0 00-11.3 14.6c-.3.4-.4.9-.6 1.4m17.6 8.5v-1.6H993l-.3 1.6m-2.3 15.2c0-1 .4-1.3 1.6-1.3 3 .2 6.2.2 9.2 0 1.3 0 1.5.4 1.6 1.3m-9.6-13v10m6.8-10.1v9.9"
-      />
-      <path
-        className=""
-        fill="pink"
-        stroke="grey"
-        d="M1000.2 383.5c.1-.7 0-1.1-.9-1h-5.6c-1-.1-.9.5-1 1m0 18.1h7.2c1 0 1.4.3 1.2 1.8h-9.4c-.3-1.1 0-1.6 1-1.8m0-18l7 .2h1l.6.6-.8.5h-8c-.3 0-.6-.4-.8-.6l.9-.6m9.1 31.5c.1-1 0-1.4-1.2-1.4h-8.2c-1 0-1.3.5-1 1.4m16.5-15.7l-2.3-.2v8.5h8.6v-8.3h-6.1m-26.4 0h6v8.2H979v-8.4l2.5.2m18.4-14.3v6.2h-6.8v-6.2m14.9 14.4v8m-22.9-8.1v8m-3.9-8v8m30.4-7.9v8M998 385.2v6m-12.4 12.3l2 .1m-8.3 0h2m32.7 0h-2m-16.7-18.4l-.1 6m12.6 12.3l-2 .1m-33.6 10.7V393m49.1 21.2V393"
-      />
+      <defs>
+        <linearGradient
+          id="GRADIENT_BLUE"
+          x1="0.96"
+          y1="27.05"
+          x2="67.31"
+          y2="27.05"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#fff" />
+          <stop offset="0.11" stopColor="#fafbfb" />
+          <stop offset="0.25" stopColor="#ebf0f0" />
+          <stop offset="0.39" stopColor="#d3dede" />
+          <stop offset="0.54" stopColor="#b1c5c4" />
+          <stop offset="0.7" stopColor="#86a5a4" />
+          <stop offset="0.87" stopColor="#517e7c" />
+          <stop offset="1" stopColor="#215a58" />
+        </linearGradient>
+        <linearGradient
+          id="GRADIENT_BLUE-2"
+          x1="11.68"
+          y1="45.62"
+          x2="25.18"
+          y2="45.62"
+          xlinkHref="#GRADIENT_BLUE"
+        />
+        <linearGradient
+          id="GRADIENT_BLUE-4"
+          x1="4.51"
+          y1="10.84"
+          x2="64.11"
+          y2="10.84"
+          xlinkHref="#GRADIENT_BLUE"
+        />
+      </defs>
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="EXISTING_OBJECTS">
+          <g id="power_line" data-name="power line">
+            <polygon
+              className="cls-1"
+              points="64.11 17.42 34.26 0.29 4.51 17.42 0.96 19.41 4.51 19.4 4.51 53.8 64.11 53.8 64.11 19.4 67.31 19.4 64.11 17.42"
+            />
+            <rect
+              className="cls-2"
+              x="11.68"
+              y="37.57"
+              width="13.5"
+              height="16.09"
+            />
+            <line
+              className="cls-3"
+              x1="11.68"
+              y1="37.57"
+              x2="25.18"
+              y2="53.67"
+            />
+            <line
+              className="cls-3"
+              x1="11.68"
+              y1="53.67"
+              x2="25.18"
+              y2="37.57"
+            />
+            <rect
+              className="cls-2"
+              x="49.3"
+              y="37.24"
+              width="10.25"
+              height="10.25"
+            />
+            <polyline
+              className="cls-4"
+              points="64.11 19.4 34.26 2.27 4.51 19.4"
+            />
+            <rect
+              className="cls-2"
+              x="32.4"
+              y="37.24"
+              width="10.25"
+              height="10.25"
+            />
+            <rect
+              className="cls-2"
+              x="18.43"
+              y="20.36"
+              width="13.5"
+              height="10.25"
+            />
+            <rect
+              className="cls-2"
+              x="37.52"
+              y="20.36"
+              width="13.5"
+              height="10.25"
+            />
+          </g>
+        </g>
+      </g>
     </PlaceableSVG>
   )
 }

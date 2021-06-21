@@ -1,7 +1,7 @@
 import React from 'react'
 
-import UtilitySystemsGround from './UtilitySystemsGround'
-import UtilitySystemsSeaLevel from './UtilitySystemsSeaLevel'
+import LogisticsNetworksGround from './LogisticsNetworksGround'
+import LogisticsNetworksSeaLevel from './LogisticsNetworksSeaLevel'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
@@ -9,22 +9,22 @@ import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 
-const BaseLayerStage = (props: Props): JSX.Element => {
+const LogisticsNetworksBaseLayers = (props: Props): JSX.Element => {
   const { stage } = props
 
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(0, 0, 2368, 613)}
+      viewBoxObj={viewBox(0, -81, 1203.37, 126.69)}
       defaultScale={1}
       {...props}
     >
       <g id={`groundwater-${stage}`}>
-        {/* <UtilitySystemsSeaSurge stage={stage} /> */}
-        <UtilitySystemsSeaLevel stage={stage} />
-        <UtilitySystemsGround />
+        {/* <LogisticsNetworksSeaSurge stage={stage} /> */}
+        <LogisticsNetworksSeaLevel stage={stage} />
+        <LogisticsNetworksGround />
       </g>
     </PlaceableSVG>
   )
 }
 
-export default BaseLayerStage
+export default LogisticsNetworksBaseLayers

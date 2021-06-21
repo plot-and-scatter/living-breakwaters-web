@@ -2,7 +2,7 @@ import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { Power2, TimelineMax, gsap } from 'gsap'
 
 import React, { useEffect, useRef } from 'react'
-import BaseLayerStage from '../BaseLayers/BaseLayerStage'
+import FoodSecurityBaseLayers from '../BaseLayers/FoodSecurityBaseLayers'
 import SaturatedGround from '../BaseLayers/SaturatedGround'
 
 import FixTypeLater from '../../../../@types/FixTypeLater'
@@ -10,7 +10,7 @@ import { useNarrative } from '../../NarrativeContext'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
-import './Land.scss'
+import './FoodSecurityLand.scss'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -44,7 +44,7 @@ const chainHelper = (id: number) => {
 
 interface Props extends PlaceableSVGProps {}
 
-const Land = (props: Props): JSX.Element => {
+const FoodSecurityLand = (props: Props): JSX.Element => {
   const { narrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
@@ -64,18 +64,33 @@ const Land = (props: Props): JSX.Element => {
 
   return (
     <PlaceableSVG
-      extraClasses="Land"
+      extraClasses="FoodSecurityLand"
       viewBoxObj={viewBox(0, 0, SVG_FRAME_X, SVG_FRAME_Y)}
       {...props}
     >
       <g id="BaseLayers" data-name="Base Layers" opacity=".9">
-        <BaseLayerStage stage={2} xOffset={0} yOffset={0.52} scale={1} />
-        <BaseLayerStage stage={1} xOffset={0} scale={1} yOffset={0.52} />
-        <BaseLayerStage stage={0} xOffset={0} scale={1} yOffset={0.52} />
+        <FoodSecurityBaseLayers
+          stage={2}
+          xOffset={0}
+          yOffset={0.52}
+          scale={1}
+        />
+        <FoodSecurityBaseLayers
+          stage={1}
+          xOffset={0}
+          scale={1}
+          yOffset={0.52}
+        />
+        <FoodSecurityBaseLayers
+          stage={0}
+          xOffset={0}
+          scale={1}
+          yOffset={0.52}
+        />
         <SaturatedGround />
       </g>
     </PlaceableSVG>
   )
 }
 
-export default Land
+export default FoodSecurityLand

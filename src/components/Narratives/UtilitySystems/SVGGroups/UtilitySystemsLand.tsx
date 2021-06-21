@@ -2,14 +2,14 @@ import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { Power2, TimelineMax, gsap } from 'gsap'
 
 import React, { useEffect, useRef } from 'react'
-import BaseLayerStage from '../BaseLayers/BaseLayerStage'
+import BaseLayerStage from '../BaseLayers/UtilitySystemsBaseLayers'
 
 import FixTypeLater from '../../../../@types/FixTypeLater'
 import { useNarrative } from '../../NarrativeContext'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
-import './Land.scss'
+import './UtilitySystemsLand.scss'
 
 const itemHelper = (objClass: string, id: number, index: number) => {
   return gsap.to(
@@ -34,7 +34,7 @@ const chainHelper = (id: number) => {
   ]
 }
 
-const Land = (): JSX.Element => {
+const UtilitySystemsLand = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
@@ -61,4 +61,4 @@ const Land = (): JSX.Element => {
   )
 }
 
-export default Land
+export default UtilitySystemsLand

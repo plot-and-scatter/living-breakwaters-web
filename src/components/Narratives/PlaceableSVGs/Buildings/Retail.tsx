@@ -5,7 +5,6 @@ import PlaceableSVG from '../PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 import './Retail.scss'
-import Textbox from '../Textbox'
 
 const Retail = (props: PlaceableSVGProps): JSX.Element => {
   return (

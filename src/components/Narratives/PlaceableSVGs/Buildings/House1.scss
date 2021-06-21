@@ -1,7 +1,22 @@
 .House1 {
-  path {
-    stroke-width: 0.75px;
-    stroke: #333;
-    stroke-linejoin: round;
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-4 {
+    stroke: #215a58;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+  }
+  .cls-1 {
+    fill: url(#GRADIENT_BLUE);
+  }
+  .cls-2 {
+    fill: none;
+  }
+  .cls-3 {
+    fill: url(#GRADIENT_BLUE-2);
+  }
+  .cls-4 {
+    fill: url(#GRADIENT_BLUE-4);
   }
 }

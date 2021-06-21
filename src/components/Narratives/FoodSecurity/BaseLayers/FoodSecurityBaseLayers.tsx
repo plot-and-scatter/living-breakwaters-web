@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
-import AgricultureGround from './AgricultureGround'
+import FoodSecurityGround from './FoodSecurityGround'
 import FreshWater from './FreshWater'
 import FoodSecuritySeaLevel from './FoodSecuritySeaLevel'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
@@ -12,7 +12,7 @@ import SeaSurge from './SeaSurge'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 
-const BaseLayerStage = (props: Props): JSX.Element => {
+const FoodSecurityBaseLayers = (props: Props): JSX.Element => {
   const { stage } = props
 
   return (
@@ -20,7 +20,7 @@ const BaseLayerStage = (props: Props): JSX.Element => {
       <g id={`groundwater-${stage}`}>
         {/* <SeaSurge stage={stage} yOffset={0.54} /> */}
         <FoodSecuritySeaLevel stage={stage} />
-        <AgricultureGround stage={stage} yOffset={0.64} />
+        <FoodSecurityGround stage={stage} yOffset={0.64} />
         {/* <SaltwaterWedge stage={stage} yOffset={0.7} /> */}
         {/* <FreshWater stage={stage} yOffset={0.54} /> */}
       </g>
@@ -28,4 +28,4 @@ const BaseLayerStage = (props: Props): JSX.Element => {
   )
 }
 
-export default BaseLayerStage
+export default FoodSecurityBaseLayers

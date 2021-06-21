@@ -9,7 +9,7 @@ import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
 import IntertidalPop from './Popovers/IntertidalPop'
 import IrrigationPop from './Popovers/IrrigationPop'
-import Land from './SVGGroups/Land'
+import FoodSecurityLand from './SVGGroups/FoodSecurityLand'
 import LogisticsPop from './Popovers/LogisticsPop'
 import PumpStationPop from './Popovers/PumpStationPop'
 import SVGFrame from '../Frames/SVGFrame'
@@ -39,7 +39,7 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
     <div className="FoodSecurityTableau">
       <SVGFrame id="FoodSecurityTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
-        <Land scale={1} xOffset={0} />
+        <FoodSecurityLand scale={1} xOffset={0} />
         <Fish xOffset={0.05} yOffset={0.79} />
         <Birds xOffset={0.2} yOffset={0.3} />
         <DouglasFir xOffset={0.79} yOffset={0.515} scale={0.1} />

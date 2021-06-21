@@ -4,7 +4,7 @@ import { useNarrative } from '../NarrativeContext'
 import Car3 from '../PlaceableSVGs/Vehicles/Car3'
 import CargoShippingPop from './Popovers/CargoShippingPop'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
-import Land from './SVGGroups/Land'
+import LogisticsNetworksLand from './SVGGroups/LogisticsNetworksLand'
 import Office1 from '../PlaceableSVGs/Buildings/Office1'
 import Office2 from '../PlaceableSVGs/Buildings/Office2'
 import Pier from '../PlaceableSVGs/Maritime/Pier'
@@ -37,7 +37,7 @@ const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
     <div className="LogisticsNetworksTableau">
       <SVGFrame id="LogisticsNetworksTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
-        <Land />
+        <LogisticsNetworksLand />
         <Pier xOffset={0.114} yOffset={0.858} />
         <Office1 xOffset={0.63} yOffset={0.7} />
         <Tree xOffset={0.6} yOffset={0.75} />

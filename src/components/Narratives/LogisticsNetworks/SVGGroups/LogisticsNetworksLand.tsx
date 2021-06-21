@@ -2,14 +2,14 @@ import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 import { Power2, TimelineMax, gsap } from 'gsap'
 
 import React, { useEffect, useRef } from 'react'
-import BaseLayerStage from '../BaseLayers/BaseLayerStage'
+import LogisticsNetworksBaseLayers from '../BaseLayers/LogisticNetworksBaseLayers'
 
 import FixTypeLater from '../../../../@types/FixTypeLater'
 import { useNarrative } from '../../NarrativeContext'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
-import './Land.scss'
+import './LogisticsNetworksLand.scss'
 
 const itemHelper = (objClass: string, id: number, index: number) => {
   return gsap.to(
@@ -34,7 +34,7 @@ const chainHelper = (id: number) => {
   ]
 }
 
-const Land = (): JSX.Element => {
+const LogisticsNetworksLand = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
   const prevNarrativeStage = useRef(narrativeStage)
 
@@ -54,11 +54,26 @@ const Land = (): JSX.Element => {
 
   return (
     <g id="BaseLayers" data-name="Base Layers" opacity="1">
-      <BaseLayerStage stage={2} xOffset={0} yOffset={0.7} scale={1} />
-      <BaseLayerStage stage={1} xOffset={0} yOffset={0.7} scale={1} />
-      <BaseLayerStage stage={0} xOffset={0} yOffset={0.7} scale={1} />
+      <LogisticsNetworksBaseLayers
+        stage={2}
+        xOffset={0}
+        yOffset={0.7}
+        scale={1}
+      />
+      <LogisticsNetworksBaseLayers
+        stage={1}
+        xOffset={0}
+        yOffset={0.7}
+        scale={1}
+      />
+      <LogisticsNetworksBaseLayers
+        stage={0}
+        xOffset={0}
+        yOffset={0.7}
+        scale={1}
+      />
     </g>
   )
 }
 
-export default Land
+export default LogisticsNetworksLand

@@ -5,7 +5,7 @@ import Birds from '../PlaceableSVGs/Fauna/Birds'
 import DouglasFir from '../PlaceableSVGs/Trees/DouglasFir'
 import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
-import Land from './SVGGroups/Land'
+import UtilitySystemsLand from './SVGGroups/UtilitySystemsLand'
 import SVGFrame from '../Frames/SVGFrame'
 import Tree from '../PlaceableSVGs/Trees/Tree'
 import Well from '../PlaceableSVGs/Buildings/Well'
@@ -32,7 +32,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
     <div className="UtilitySystemsTableau">
       <SVGFrame id="UtilitySystemsTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
-        <Land />
+        <UtilitySystemsLand />
         <Fish xOffset={0.05} yOffset={0.79} />
         <Birds xOffset={0.2} yOffset={0.3} />
         <DouglasFir xOffset={0.79} yOffset={0.515} scale={0.1} />
