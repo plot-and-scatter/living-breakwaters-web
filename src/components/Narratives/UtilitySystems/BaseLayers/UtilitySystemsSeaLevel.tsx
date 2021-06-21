@@ -11,7 +11,7 @@ const FoodSecuritySeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
       ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20} H-${WIDTH}`
       : stage === 1
       ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 15} H-${WIDTH}`
-      : `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 5} H-${WIDTH}`
+      : `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 0} H-${WIDTH}`
 
   return (
     <>

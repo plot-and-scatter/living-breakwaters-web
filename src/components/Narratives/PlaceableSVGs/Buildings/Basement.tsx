@@ -16,7 +16,7 @@ const Basement = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="BASEMENT_GRADIENT_BLUE"
           y1="11"
           x2="58.56"
           y2="11"

@@ -17,7 +17,7 @@ const CargoShip = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="linear-gradient"
+          id="cargoship_linear-gradient"
           x1="4.64"
           y1="47.84"
           x2="25.53"
@@ -34,60 +34,60 @@ const CargoShip = (props: PlaceableSVGProps): JSX.Element => {
           <stop offset="1" stopColor="#215a58" />
         </linearGradient>
         <linearGradient
-          id="linear-gradient-2"
+          id="cargoship_linear-gradient-2"
           x1="4.64"
           y1="31.2"
           x2="25.53"
           y2="31.2"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
         <linearGradient
-          id="linear-gradient-3"
+          id="cargoship_linear-gradient-3"
           x1="27.93"
           y1="47.84"
           x2="48.82"
           y2="47.84"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
         <linearGradient
-          id="linear-gradient-4"
+          id="cargoship_linear-gradient-4"
           x1="27.93"
           y1="31.2"
           x2="48.82"
           y2="31.2"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
         <linearGradient
-          id="linear-gradient-5"
+          id="cargoship_linear-gradient-5"
           x1="51.52"
           y1="47.84"
           x2="72.41"
           y2="47.84"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
         <linearGradient
-          id="linear-gradient-6"
+          id="cargoship_linear-gradient-6"
           x1="51.52"
           y1="31.2"
           x2="72.41"
           y2="31.2"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
         <linearGradient
-          id="linear-gradient-7"
+          id="cargoship_linear-gradient-7"
           x1="0.27"
           y1="62.18"
           x2="77.24"
           y2="62.18"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
         <linearGradient
-          id="linear-gradient-8"
+          id="cargoship_linear-gradient-8"
           x1="16.36"
           y1="10.89"
           x2="63.32"
           y2="10.89"
-          xlinkHref="#linear-gradient"
+          xlinkHref="#cargoship_linear-gradient"
         />
       </defs>
       <g id="Layer_2" data-name="Layer 2">

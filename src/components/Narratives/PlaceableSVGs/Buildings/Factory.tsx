@@ -16,7 +16,7 @@ const Factory = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="FACTORY_GRADIENT_BLUE"
           x1="144.39"
           y1="76.96"
           x2="185.44"
@@ -33,116 +33,116 @@ const Factory = (props: PlaceableSVGProps): JSX.Element => {
           <stop offset="1" stopColor="#215a58" />
         </linearGradient>
         <linearGradient
-          id="GRADIENT_BLUE-2"
+          id="FACTORY_GRADIENT_BLUE-2"
           x1="85.32"
           y1="35.11"
           x2="106.31"
           y2="35.11"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-3"
+          id="FACTORY_GRADIENT_BLUE-3"
           x1="51.48"
           y1="36.88"
           x2="72.47"
           y2="36.88"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-4"
+          id="FACTORY_GRADIENT_BLUE-4"
           x1="0.25"
           y1="90.83"
           x2="21.24"
           y2="90.83"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-5"
+          id="FACTORY_GRADIENT_BLUE-5"
           x1="4.66"
           y1="87.78"
           x2="18.32"
           y2="87.78"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-6"
+          id="FACTORY_GRADIENT_BLUE-6"
           x1="19.17"
           y1="49.21"
           x2="41.82"
           y2="49.21"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-7"
+          id="FACTORY_GRADIENT_BLUE-7"
           x1="59.17"
           y1="49.21"
           x2="81.82"
           y2="49.21"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-8"
+          id="FACTORY_GRADIENT_BLUE-8"
           x1="89.17"
           y1="49.21"
           x2="120.94"
           y2="49.21"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-9"
+          id="FACTORY_GRADIENT_BLUE-9"
           x1="24.26"
           y1="30.19"
           x2="34.69"
           y2="30.19"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-10"
+          id="FACTORY_GRADIENT_BLUE-10"
           x1="74.26"
           y1="30.19"
           x2="80.74"
           y2="30.19"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-11"
+          id="FACTORY_GRADIENT_BLUE-11"
           x1="11.75"
           y1="72.76"
           x2="140.19"
           y2="72.76"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-12"
+          id="FACTORY_GRADIENT_BLUE-12"
           x1="23.08"
           y1="2.71"
           x2="35.75"
           y2="2.71"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-13"
+          id="FACTORY_GRADIENT_BLUE-13"
           x1="65.84"
           y1="28.49"
           x2="74.34"
           y2="28.49"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-14"
+          id="FACTORY_GRADIENT_BLUE-14"
           x1="100.86"
           y1="28.24"
           x2="109.36"
           y2="28.24"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-15"
+          id="FACTORY_GRADIENT_BLUE-15"
           x1="73.17"
           y1="2.88"
           x2="81.71"
           y2="2.88"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FACTORY_GRADIENT_BLUE"
         />
       </defs>
       <g id="Layer_2" data-name="Layer 2">

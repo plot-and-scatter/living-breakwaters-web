@@ -16,7 +16,7 @@ const Farmhouse = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="FARMHOUSE_GRADIENT_BLUE"
           x1="83.23"
           y1="76.46"
           x2="118.68"
@@ -33,12 +33,12 @@ const Farmhouse = (props: PlaceableSVGProps): JSX.Element => {
           <stop offset="1" stopColor="#1f5957" />
         </linearGradient>
         <linearGradient
-          id="GRADIENT_BLUE-2"
+          id="FARMHOUSE_GRADIENT_BLUE-2"
           x1="0.96"
           y1="106.55"
           x2="103.51"
           y2="106.55"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#FARMHOUSE_GRADIENT_BLUE"
         />
       </defs>
       <g id="Layer_2" data-name="Layer 2">

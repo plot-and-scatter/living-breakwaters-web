@@ -16,7 +16,7 @@ const House1 = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="HOUSE1_GRADIENT_BLUE"
           x1="0.96"
           y1="27.05"
           x2="67.31"
@@ -33,20 +33,20 @@ const House1 = (props: PlaceableSVGProps): JSX.Element => {
           <stop offset="1" stopColor="#215a58" />
         </linearGradient>
         <linearGradient
-          id="GRADIENT_BLUE-2"
+          id="HOUSE1_GRADIENT_BLUE-2"
           x1="11.68"
           y1="45.62"
           x2="25.18"
           y2="45.62"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#HOUSE1_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-4"
+          id="HOUSE1_GRADIENT_BLUE-4"
           x1="4.51"
           y1="10.84"
           x2="64.11"
           y2="10.84"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#HOUSE1_GRADIENT_BLUE"
         />
       </defs>
       <g id="Layer_2" data-name="Layer 2">

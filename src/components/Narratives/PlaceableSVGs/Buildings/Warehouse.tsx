@@ -16,7 +16,7 @@ const Warehouse = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="WAREHOUSE_GRADIENT_BLUE"
           x1="0.25"
           y1="28.02"
           x2="133.25"

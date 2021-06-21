@@ -16,7 +16,7 @@ const PowerPlant = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="POWERPLANT_GRADIENT_BLUE"
           x1="74.6"
           y1="78.51"
           x2="75.79"
@@ -33,276 +33,276 @@ const PowerPlant = (props: PlaceableSVGProps): JSX.Element => {
           <stop offset="1" stopColor="#215a58" />
         </linearGradient>
         <linearGradient
-          id="GRADIENT_BLUE-2"
+          id="POWERPLANT_GRADIENT_BLUE-2"
           x1="72.11"
           y1="80.45"
           x2="78.28"
           y2="80.45"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-3"
+          id="POWERPLANT_GRADIENT_BLUE-3"
           x1="73.71"
           y1="103.02"
           x2="77.08"
           y2="103.02"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-4"
+          id="POWERPLANT_GRADIENT_BLUE-4"
           x1="60.61"
           y1="108.96"
           x2="111.27"
           y2="108.96"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-5"
+          id="POWERPLANT_GRADIENT_BLUE-5"
           x1="72.11"
           y1="65.38"
           x2="78.28"
           y2="65.38"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-6"
+          id="POWERPLANT_GRADIENT_BLUE-6"
           x1="74.6"
           y1="63.45"
           x2="75.79"
           y2="63.45"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-7"
+          id="POWERPLANT_GRADIENT_BLUE-7"
           x1="74.6"
           y1="56.06"
           x2="91.59"
           y2="56.06"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-8"
+          id="POWERPLANT_GRADIENT_BLUE-8"
           x1="90.41"
           y1="54.79"
           x2="91.59"
           y2="54.79"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-9"
+          id="POWERPLANT_GRADIENT_BLUE-9"
           x1="74.6"
           y1="54.79"
           x2="75.79"
           y2="54.79"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-10"
+          id="POWERPLANT_GRADIENT_BLUE-10"
           x1="90.53"
           y1="63.45"
           x2="91.72"
           y2="63.45"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-11"
+          id="POWERPLANT_GRADIENT_BLUE-11"
           x1="88.04"
           y1="65.38"
           x2="94.21"
           y2="65.38"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-12"
+          id="POWERPLANT_GRADIENT_BLUE-12"
           x1="75.95"
           y1="86.66"
           x2="80.61"
           y2="86.66"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-13"
+          id="POWERPLANT_GRADIENT_BLUE-13"
           x1="69.77"
           y1="86.66"
           x2="74.44"
           y2="86.66"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-14"
+          id="POWERPLANT_GRADIENT_BLUE-14"
           x1="69.77"
           y1="71.59"
           x2="74.44"
           y2="71.59"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-15"
+          id="POWERPLANT_GRADIENT_BLUE-15"
           x1="75.95"
           y1="71.59"
           x2="80.61"
           y2="71.59"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-16"
+          id="POWERPLANT_GRADIENT_BLUE-16"
           x1="91.88"
           y1="71.59"
           x2="96.54"
           y2="71.59"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-17"
+          id="POWERPLANT_GRADIENT_BLUE-17"
           x1="85.71"
           y1="71.59"
           x2="90.37"
           y2="71.59"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-18"
+          id="POWERPLANT_GRADIENT_BLUE-18"
           x1="85.71"
           y1="86.66"
           x2="90.37"
           y2="86.66"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-19"
+          id="POWERPLANT_GRADIENT_BLUE-19"
           x1="91.88"
           y1="86.66"
           x2="96.54"
           y2="86.66"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-20"
+          id="POWERPLANT_GRADIENT_BLUE-20"
           x1="88.04"
           y1="80.45"
           x2="94.21"
           y2="80.45"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-21"
+          id="POWERPLANT_GRADIENT_BLUE-21"
           x1="90.53"
           y1="78.51"
           x2="91.72"
           y2="78.51"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-22"
+          id="POWERPLANT_GRADIENT_BLUE-22"
           x1="89.33"
           y1="61.63"
           x2="92.86"
           y2="61.63"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-23"
+          id="POWERPLANT_GRADIENT_BLUE-23"
           x1="89.4"
           y1="60.45"
           x2="92.93"
           y2="60.45"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-24"
+          id="POWERPLANT_GRADIENT_BLUE-24"
           x1="89.4"
           y1="59.27"
           x2="92.93"
           y2="59.27"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-25"
+          id="POWERPLANT_GRADIENT_BLUE-25"
           x1="89.47"
           y1="58.09"
           x2="93"
           y2="58.09"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-26"
+          id="POWERPLANT_GRADIENT_BLUE-26"
           x1="89.4"
           y1="56.91"
           x2="92.93"
           y2="56.91"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-27"
+          id="POWERPLANT_GRADIENT_BLUE-27"
           x1="73.47"
           y1="56.91"
           x2="77"
           y2="56.91"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-28"
+          id="POWERPLANT_GRADIENT_BLUE-28"
           x1="73.54"
           y1="58.09"
           x2="77.07"
           y2="58.09"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-29"
+          id="POWERPLANT_GRADIENT_BLUE-29"
           x1="73.47"
           y1="59.27"
           x2="77"
           y2="59.27"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-30"
+          id="POWERPLANT_GRADIENT_BLUE-30"
           x1="73.47"
           y1="60.45"
           x2="77"
           y2="60.45"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-31"
+          id="POWERPLANT_GRADIENT_BLUE-31"
           x1="73.4"
           y1="61.63"
           x2="76.93"
           y2="61.63"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-32"
+          id="POWERPLANT_GRADIENT_BLUE-32"
           x1="0.25"
           y1="62.17"
           x2="52.19"
           y2="62.17"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-33"
+          id="POWERPLANT_GRADIENT_BLUE-33"
           x1="22.78"
           y1="74.6"
           x2="30.49"
           y2="74.6"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-34"
+          id="POWERPLANT_GRADIENT_BLUE-34"
           x1="21.23"
           y1="28.56"
           x2="23.39"
           y2="28.56"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-35"
+          id="POWERPLANT_GRADIENT_BLUE-35"
           x1="30.22"
           y1="28.41"
           x2="32.23"
           y2="28.41"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#POWERPLANT_GRADIENT_BLUE"
         />
       </defs>
       <g id="Layer_2" data-name="Layer 2">

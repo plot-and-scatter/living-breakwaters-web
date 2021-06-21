@@ -16,7 +16,7 @@ const Car3 = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="GRADIENT_BLUE"
+          id="CAR3_GRADIENT_BLUE"
           x1="19.9"
           y1="14.38"
           x2="22.72"
@@ -33,20 +33,20 @@ const Car3 = (props: PlaceableSVGProps): JSX.Element => {
           <stop offset="1" stopColor="#215a58" />
         </linearGradient>
         <linearGradient
-          id="GRADIENT_BLUE-2"
+          id="CAR3_GRADIENT_BLUE-2"
           x1="2.47"
           y1="14.38"
           x2="5.29"
           y2="14.38"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#CAR3_GRADIENT_BLUE"
         />
         <linearGradient
-          id="GRADIENT_BLUE-3"
+          id="CAR3_GRADIENT_BLUE-3"
           x1="0.25"
           y1="7.47"
           x2="24.94"
           y2="7.47"
-          xlinkHref="#GRADIENT_BLUE"
+          xlinkHref="#CAR3_GRADIENT_BLUE"
         />
       </defs>
       <g id="Layer_2" data-name="Layer 2">
