@@ -5,18 +5,30 @@ import NarrativeInput from './NarrativeInput'
 import NarrativeToggleButtons from './NarrativeToggleButtons'
 
 import './NarrativeSelect.scss'
+import { NarrativeType } from '../../@types/NarrativeType'
 
-export const STAGE_NAMES = [
+export const DEFAULT_STAGE_NAMES = [
   'Current state',
   'Sea level rise (SLR)',
   'SLR + storm'
 ]
 
+export const EXTENDED_STAGE_NAMES = [
+  'Current state',
+  'Rain event',
+  'Sea level rise (SLR)',
+  'SLR + storm'
+]
+
 interface Props {
+  activeNarrative: NarrativeType
   isCompact?: boolean
 }
 
-const NarrativeSelect = ({ isCompact }: Props): JSX.Element => {
+const NarrativeSelect = ({
+  activeNarrative,
+  isCompact
+}: Props): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
 
   return (
@@ -29,6 +41,12 @@ const NarrativeSelect = ({ isCompact }: Props): JSX.Element => {
       <NarrativeInput
         setNarrativeStage={setNarrativeStage}
         narrativeStage={narrativeStage}
+        stageNames={
+          activeNarrative === NarrativeType.FoodSecurity ||
+          activeNarrative === NarrativeType.UtilitySystems
+            ? EXTENDED_STAGE_NAMES
+            : DEFAULT_STAGE_NAMES
+        }
       />
       {/* <div className="mt-3 d-flex align-items-center justify-content-between">
         {STAGE_NAMES.map((_, index) => (

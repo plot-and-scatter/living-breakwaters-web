@@ -1,26 +1,26 @@
 import React, { useCallback } from 'react'
 
-import { STAGE_NAMES } from './NarrativeSelect'
-
-const MAX_NARRATIVE_STAGE = 2
-
 interface Props {
   narrativeStage: number
   setNarrativeStage: (stage: number) => void
+  stageNames: string[]
 }
 
 const NarrativeInput = ({
   narrativeStage,
-  setNarrativeStage
+  setNarrativeStage,
+  stageNames
 }: Props): JSX.Element => {
   const stages = []
-  for (let i = 0; i <= MAX_NARRATIVE_STAGE; i++) {
+  for (let i = 0; i < stageNames.length; i++) {
     stages.push(
       <div
         key={i}
-        className={`Stage ${narrativeStage === +i ? 'ActiveStage' : ''}`}
+        className={`text-center Stage ${
+          narrativeStage === +i ? 'ActiveStage' : ''
+        }`}
       >
-        {STAGE_NAMES[i]}
+        {stageNames[i]}
       </div>
     )
   }
@@ -38,7 +38,7 @@ const NarrativeInput = ({
       <input
         type="range"
         min="0"
-        max="2"
+        max={stageNames.length - 1}
         className="slider"
         id="myRange"
         value={narrativeStage}

@@ -40,12 +40,10 @@ const NarrativeFrame = (props: Props): JSX.Element => {
           setFrameContent={setFrameContent}
         />
       </div>
-      <div className="col-4 mt-4">
-        <NarrativeSelect />
+      <div className="col-6 mt-4">
+        <NarrativeSelect activeNarrative={props.activeNarrative} />
       </div>
-      <div className="col-6 offset-1 mt-4">
-        {frameContent || DEFAULT_CONTENT}
-      </div>
+      <div className="col-6 mt-4">{frameContent || DEFAULT_CONTENT}</div>
     </div>
   )
 }
