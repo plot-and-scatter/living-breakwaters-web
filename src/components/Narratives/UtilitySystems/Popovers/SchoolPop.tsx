@@ -23,7 +23,7 @@ const SchoolPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Office1 xOffset={0.77} yOffset={0.64} />
+      <Office1 xOffset={0.765} yOffset={0.62} scale={0.08} />
       <Textbox xOffset={0.78} yOffset={0.86} textboxWidth={70}>
         School
       </Textbox>
