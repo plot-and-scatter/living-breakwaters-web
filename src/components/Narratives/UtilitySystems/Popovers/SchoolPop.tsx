@@ -3,6 +3,7 @@ import React, { useCallback } from 'react'
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
+import Office1 from '../../PlaceableSVGs/Buildings/Office1'
 
 import './Popover.scss'
 
@@ -22,8 +23,9 @@ const SchoolPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Textbox xOffset={0.93} yOffset={0.9} textboxWidth={70}>
-        Retail
+      <Office1 xOffset={0.77} yOffset={0.64} />
+      <Textbox xOffset={0.78} yOffset={0.86} textboxWidth={70}>
+        School
       </Textbox>
     </svg>
   )

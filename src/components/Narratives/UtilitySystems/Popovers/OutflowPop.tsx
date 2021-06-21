@@ -3,6 +3,7 @@ import React, { useCallback } from 'react'
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
+import SewerSmall from '../../PlaceableSVGs/Objects/SewerSmall'
 
 import './Popover.scss'
 
@@ -22,8 +23,9 @@ const OutflowPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Textbox xOffset={0.93} yOffset={0.9} textboxWidth={70}>
-        Retail
+      <SewerSmall scale={0.2} xOffset={0.15} yOffset={0.77} />
+      <Textbox xOffset={0.2} yOffset={0.93} textboxWidth={70}>
+        Outflow
       </Textbox>
     </svg>
   )

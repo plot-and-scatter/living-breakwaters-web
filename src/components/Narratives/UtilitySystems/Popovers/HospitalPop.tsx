@@ -5,6 +5,7 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
 import './Popover.scss'
+import Office2 from '../../PlaceableSVGs/Buildings/Office2'
 
 const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
@@ -22,8 +23,9 @@ const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Textbox xOffset={0.93} yOffset={0.9} textboxWidth={70}>
-        Retail
+      <Office2 xOffset={0.935} yOffset={0.28} />
+      <Textbox xOffset={0.935} yOffset={0.86} textboxWidth={70}>
+        Hospital
       </Textbox>
     </svg>
   )
