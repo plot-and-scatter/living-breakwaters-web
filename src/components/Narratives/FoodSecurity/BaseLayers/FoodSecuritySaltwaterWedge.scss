@@ -1,4 +1,4 @@
-.SaltwaterWedge {
+.FoodSecuritySaltwaterWedge {
   .cls-1 {
     fill: none;
   }
@@ -9,6 +9,7 @@
     stroke-width: 0.5px;
   }
   .cls-3 {
-    fill: url(#STIPPLE_RED) !important;
+    // fill: url(#SALTWATERWEDGE_STIPPLE_RED) !important;
+    fill: rgba(30, 30, 30, 0.4);
   }
 }

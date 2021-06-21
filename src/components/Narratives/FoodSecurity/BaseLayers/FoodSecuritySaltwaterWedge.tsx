@@ -5,11 +5,11 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
-import './SaltwaterWedge.scss'
+import './FoodSecuritySaltwaterWedge.scss'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 
-const SaltwaterWedge = (props: Props): JSX.Element => {
+const FoodSecuritySaltwaterWedge = (props: Props): JSX.Element => {
   const d =
     props.stage === 0
       ? 'M203,.43,161.28,4.6,133.93,7.29a9.9,9.9,0,0,0-2.07.43c-5.39,1.73-29.49,4-31.3,4S61.07,16,2.08,16.07c-1,0-1.68,2.49-2.08,6.58.72,30,2,58.58,2,63,0,9.81,5.43,17.76,12.14,17.76H761.8C603.18,99.75,510,81,447.83,61.49c-8.95-2.81-31.56-10.16-64.4-19.44C307.9,20.69,287.74-3.52,203,.43Z'
@@ -19,14 +19,14 @@ const SaltwaterWedge = (props: Props): JSX.Element => {
 
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(0, 0, 761.8, 103.41)}
+      viewBoxObj={viewBox(11, -33, 761.8, 103.41)}
       {...props}
-      extraClasses={'SaltwaterWedge'}
+      extraClasses={'FoodSecuritySaltwaterWedge'}
     >
-      <defs>
-        <pattern
-          id="STIPPLE_RED"
-          data-name="STIPPLE_RED"
+      {/*<defs>
+         <pattern
+          id="SALTWATERWEDGE_STIPPLE_RED"
+          data-name="SALTWATERWEDGE_STIPPLE_RED"
           width="72"
           height="72"
           patternUnits="userSpaceOnUse"
@@ -894,7 +894,7 @@ const SaltwaterWedge = (props: Props): JSX.Element => {
             d="M56.43.69a.35.35,0,0,1-.26-.11.35.35,0,0,1-.11-.26.37.37,0,0,1,.11-.27.4.4,0,0,1,.53,0,.37.37,0,0,1,.11.27.35.35,0,0,1-.11.26A.39.39,0,0,1,56.43.69Z"
           />
         </pattern>
-      </defs>
+      </defs> */}
       <g id="Layer_2" data-name="Layer 2">
         <g id="EXISTING_SECTION" data-name="EXISTING SECTION">
           <g id="current_saltwater" data-name="current saltwater">
@@ -906,4 +906,4 @@ const SaltwaterWedge = (props: Props): JSX.Element => {
   )
 }
 
-export default SaltwaterWedge
+export default FoodSecuritySaltwaterWedge
