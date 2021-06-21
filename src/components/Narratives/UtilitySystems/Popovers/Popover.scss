@@ -7,6 +7,10 @@
       fill: #cc3333;
       stroke: #990000;
     }
+    polyline,
+    line {
+      stroke: #cc3333;
+    }
     transition: fill 0.5s;
   }
   .Textbox rect {
@@ -19,6 +23,11 @@
       path,
       polygon {
         fill: #f00;
+      }
+      polyline,
+      line {
+        stroke: #f00;
+        fill: none;
       }
     }
   }
