@@ -48,8 +48,6 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Tree xOffset={0.41} yOffset={0.64} scale={0.08} />
         <Tree xOffset={0.63} yOffset={0.655} scale={0.07} />
 
-        <Well xOffset={0.64} yOffset={0.842} />
-
         <IntertidalPop onClick={setFrameContent} />
         <BikewayPop onClick={setFrameContent} />
         <PumpStationPop onClick={setFrameContent} />

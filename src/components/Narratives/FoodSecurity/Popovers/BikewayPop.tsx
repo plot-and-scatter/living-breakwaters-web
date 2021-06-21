@@ -12,14 +12,14 @@ const BikewayPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 1 && onClick) {
+    if (narrativeStage > 2 && onClick) {
       onClick('Lorem ipsum bikeway')
     } else {
       onClick(undefined)
     }
   }, [narrativeStage, onClick])
 
-  const extraClasses = narrativeStage > 1 ? 'Red' : ''
+  const extraClasses = narrativeStage > 2 ? 'Red' : ''
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>

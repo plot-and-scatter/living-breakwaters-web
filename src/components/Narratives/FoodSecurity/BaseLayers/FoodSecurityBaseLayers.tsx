@@ -8,6 +8,7 @@ import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import FoodSecuritySaltwaterWedge from './FoodSecuritySaltwaterWedge'
+import FoodSecurityRainOverflow from './FoodSecurityRainOverflow'
 import SeaSurge from './SeaSurge'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}

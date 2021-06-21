@@ -13,7 +13,14 @@ export const DEFAULT_STAGE_NAMES = [
   'SLR + storm'
 ]
 
-export const EXTENDED_STAGE_NAMES = [
+export const FOOD_SEC_STAGE_NAMES = [
+  'Current state',
+  'Sea level rise (SLR)',
+  'SLR + rain event',
+  'SLR + storm surge'
+]
+
+export const UTIL_SYS_STAGE_NAMES = [
   'Current state',
   'Rain event',
   'Sea level rise (SLR)',
@@ -31,6 +38,13 @@ const NarrativeSelect = ({
 }: Props): JSX.Element => {
   const { narrativeStage, setNarrativeStage } = useNarrative()
 
+  const stageNames =
+    activeNarrative === NarrativeType.FoodSecurity
+      ? FOOD_SEC_STAGE_NAMES
+      : activeNarrative === NarrativeType.UtilitySystems
+      ? UTIL_SYS_STAGE_NAMES
+      : DEFAULT_STAGE_NAMES
+
   return (
     <div className="NarrativeSelect">
       {!isCompact && (
@@ -41,12 +55,7 @@ const NarrativeSelect = ({
       <NarrativeInput
         setNarrativeStage={setNarrativeStage}
         narrativeStage={narrativeStage}
-        stageNames={
-          activeNarrative === NarrativeType.FoodSecurity ||
-          activeNarrative === NarrativeType.UtilitySystems
-            ? EXTENDED_STAGE_NAMES
-            : DEFAULT_STAGE_NAMES
-        }
+        stageNames={stageNames}
       />
       {/* <div className="mt-3 d-flex align-items-center justify-content-between">
         {STAGE_NAMES.map((_, index) => (

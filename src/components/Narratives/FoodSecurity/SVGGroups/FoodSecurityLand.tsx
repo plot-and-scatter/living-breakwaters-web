@@ -15,6 +15,7 @@ import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
 import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import { SVG_FRAME_X, SVG_FRAME_Y } from '../../Frames/SVGFrame'
+import FoodSecurityRainOverflow from '../BaseLayers/FoodSecurityRainOverflow'
 
 const itemHelper = (objClass: string, id: number, index: number) => {
   return gsap.to(
@@ -38,7 +39,8 @@ const chainHelper = (id: number) => {
     itemHelper('fresh-water', id, id - 1),
     itemHelper('mean-sea-level', id, id - 1),
     itemHelper('ground', id, id - 1),
-    itemHelper('sea-surge', id, id - 1)
+    itemHelper('storm-surge', id, id - 1),
+    itemHelper('rain-overflow', id, id - 1)
   ]
 }
 
@@ -54,6 +56,7 @@ const FoodSecurityLand = (props: Props): JSX.Element => {
     timeline.current = new TimelineMax({ paused: true })
     timeline.current.add(chainHelper(1))
     timeline.current.add(chainHelper(2))
+    timeline.current.add(chainHelper(3))
   }, [])
 
   useEffect(() => {
@@ -68,7 +71,14 @@ const FoodSecurityLand = (props: Props): JSX.Element => {
       viewBoxObj={viewBox(0, 0, SVG_FRAME_X, SVG_FRAME_Y)}
       {...props}
     >
-      <g id="BaseLayers" data-name="Base Layers" opacity=".9">
+      <g id="BaseLayers" data-name="Base Layers">
+        <FoodSecurityRainOverflow stage={narrativeStage} />
+        <FoodSecurityBaseLayers
+          stage={3}
+          xOffset={0}
+          scale={1}
+          yOffset={0.52}
+        />
         <FoodSecurityBaseLayers
           stage={2}
           xOffset={0}
@@ -87,6 +97,7 @@ const FoodSecurityLand = (props: Props): JSX.Element => {
           scale={1}
           yOffset={0.52}
         />
+
         <SaturatedGround />
       </g>
     </PlaceableSVG>

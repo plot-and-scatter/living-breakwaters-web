@@ -9,11 +9,6 @@ $meanSeaLevel: lighten(#334455, 10%);
   --color-stop: #{darken($meanSeaLevel, 20%)};
 }
 
-#saltwater-wedge-gradient {
-  --color-start: #{$saltwaterWedge};
-  --color-stop: #{darken($saltwaterWedge, 20%)};
-}
-
 #fresh-water-gradient {
   --color-start: #{$freshWater};
   --color-stop: #{darken($freshWater, 20%)};
@@ -33,10 +28,7 @@ $meanSeaLevel: lighten(#334455, 10%);
         fill: url(#mean-sea-level-gradient) $meanSeaLevel;
         stroke: darken($meanSeaLevel, 10%);
       }
-      &.saltwater-wedge {
-        fill: url(#saltwater-wedge-gradient) $saltwaterWedge;
-        stroke: darken($saltwaterWedge, 10%);
-      }
+
       &.fresh-water {
         fill: url(#fresh-water-gradient) $freshWater;
         stroke: darken($freshWater, 10%);

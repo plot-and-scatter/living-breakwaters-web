@@ -57,7 +57,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
 
   const rainLines = []
 
-  for (let i = RAIN_WIDTH; i < totalWidth; i += rainLineSpacing) {
+  for (let i = RAIN_WIDTH; i < totalWidth - RAIN_WIDTH; i += rainLineSpacing) {
     rainLines.push(rain(i))
   }
 

@@ -7,6 +7,7 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import './Popover.scss'
 import Irrigation from '../../PlaceableSVGs/Objects/Irrigation'
 import Wheat from '../../PlaceableSVGs/Plants/Wheat'
+import Well from '../../PlaceableSVGs/Buildings/Well'
 
 const IrrigationPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
@@ -28,6 +29,7 @@ const IrrigationPop = (props: PlaceableSVGProps): JSX.Element => {
       <Wheat xOffset={0.49} yOffset={0.745} />
       <Wheat xOffset={0.54} yOffset={0.745} />
       <Wheat xOffset={0.59} yOffset={0.745} />
+      <Well xOffset={0.64} yOffset={0.842} />
       <Textbox xOffset={0.555} yOffset={0.85} textboxWidth={100}>
         Irrigation
       </Textbox>
