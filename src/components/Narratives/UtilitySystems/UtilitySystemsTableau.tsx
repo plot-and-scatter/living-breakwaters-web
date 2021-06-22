@@ -65,6 +65,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Car3 xOffset={0.66} yOffset={0.725} scale={0.02} />
         <Tree xOffset={0.69} yOffset={0.68} scale={0.04} />
         <Tree xOffset={0.78} yOffset={0.68} scale={0.04} />
+        <House1 scale={0.06} xOffset={0.725} yOffset={0.685} />
         <House1 scale={0.06} xOffset={0.82} yOffset={0.67} />
         <House1 scale={0.06} xOffset={0.905} yOffset={0.645} />
         <Tree xOffset={0.86} yOffset={0.66} scale={0.04} />

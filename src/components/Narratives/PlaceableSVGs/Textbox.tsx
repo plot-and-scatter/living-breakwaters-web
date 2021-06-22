@@ -25,6 +25,7 @@ const Textbox = (props: Props): JSX.Element => {
     >
       <g className="Textbox">
         <rect
+          className="DoNotHighlight"
           x={-(textboxWidth * 0.5)}
           y={-5}
           width={textboxWidth}

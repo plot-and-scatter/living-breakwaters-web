@@ -24,7 +24,6 @@ const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <House1 scale={0.06} xOffset={0.725} yOffset={0.685} />
       <Basement scale={0.0524} xOffset={0.729} yOffset={0.768} />
       <Textbox xOffset={0.78} yOffset={0.93} textboxWidth={90}>
         Basement

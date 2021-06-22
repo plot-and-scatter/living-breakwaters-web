@@ -16,7 +16,7 @@ const Retail = (props: PlaceableSVGProps): JSX.Element => {
     >
       <defs>
         <linearGradient
-          id="linear-gradient"
+          id="retail_linear-gradient"
           x1="0.25"
           y1="159.68"
           x2="146.25"

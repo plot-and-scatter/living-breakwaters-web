@@ -5,6 +5,8 @@ import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 const WIDTH = 2000
 const BASE_HEIGHT = 85
 
+import './FoodSecuritySeaLevel.scss'
+
 const FoodSecuritySeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
   const d =
     stage === 0
@@ -15,14 +17,11 @@ const FoodSecuritySeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
     stage < 3 ? `M0 110 h500 v50 h-500` : `M0 80 h2000 v50 h-2000`
 
   return (
-    <>
-      <path className="storm-surge" d={dStormSurge} />
-      <path className="higher-sea-level" d={d} />
-      <path
-        className="base-sea-level"
-        d={`M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20} H-${WIDTH}`}
-      />
-    </>
+    <g className="FoodSecuritySeaLevel">
+      {/* <path className="storm-surge" d={dStormSurge} /> */}
+      {/* <path className="higher-sea-level" d={d} /> */}
+      <path className="base-sea-level" d={`M0 246 h2000 v40 H-2000`} />
+    </g>
   )
 }
 

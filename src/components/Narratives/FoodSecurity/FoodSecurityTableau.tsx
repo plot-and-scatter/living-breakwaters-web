@@ -19,6 +19,9 @@ import Well from '../PlaceableSVGs/Buildings/Well'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
+import FoodSecurityRainOverflow from './BaseLayers/FoodSecurityRainOverflow'
+import FoodSecuritySeaLevel from './BaseLayers/FoodSecuritySeaLevel'
+import FoodSecurityGround from './BaseLayers/FoodSecurityGround'
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void
@@ -39,7 +42,10 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
     <div className="FoodSecurityTableau">
       <SVGFrame id="FoodSecurityTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
-        <FoodSecurityLand scale={1} xOffset={0} />
+        {/* <FoodSecurityLand scale={1} xOffset={0} /> */}
+        <FoodSecurityRainOverflow stage={narrativeStage} />
+        <FoodSecuritySeaLevel stage={narrativeStage} />
+        <FoodSecurityGround stage={narrativeStage} yOffset={0.783} />
         <Fish xOffset={0.05} yOffset={0.79} />
         <Birds xOffset={0.2} yOffset={0.3} />
         <DouglasFir xOffset={0.79} yOffset={0.515} scale={0.1} />

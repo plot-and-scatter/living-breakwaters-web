@@ -16,6 +16,9 @@ import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import { SVG_FRAME_X, SVG_FRAME_Y } from '../../Frames/SVGFrame'
 import FoodSecurityRainOverflow from '../BaseLayers/FoodSecurityRainOverflow'
+import FoodSecuritySeaLevel from '../BaseLayers/FoodSecuritySeaLevel'
+import FoodSecurityGround from '../BaseLayers/FoodSecurityGround'
+import FoodSecuritySaltwaterWedge from '../BaseLayers/FoodSecuritySaltwaterWedge'
 
 const itemHelper = (objClass: string, id: number, index: number) => {
   return gsap.to(
@@ -73,6 +76,9 @@ const FoodSecurityLand = (props: Props): JSX.Element => {
     >
       <g id="BaseLayers" data-name="Base Layers">
         <FoodSecurityRainOverflow stage={narrativeStage} />
+        <FoodSecuritySeaLevel stage={narrativeStage} />
+        <FoodSecurityGround stage={narrativeStage} yOffset={0.64} />
+        <FoodSecuritySaltwaterWedge stage={narrativeStage} yOffset={0.7} />
         <FoodSecurityBaseLayers
           stage={3}
           xOffset={0}

@@ -25,7 +25,7 @@ const BikewayPop = (props: PlaceableSVGProps): JSX.Element => {
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
       <Bicyclist xOffset={0.31} yOffset={0.71} />
       <Textbox xOffset={0.325} yOffset={0.83} textboxWidth={90}>
-        Bikeway
+        Dike
       </Textbox>
     </svg>
   )
