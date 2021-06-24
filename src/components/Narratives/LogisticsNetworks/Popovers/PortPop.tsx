@@ -4,7 +4,6 @@ import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import './Popover.scss'
 import Crane from '../../PlaceableSVGs/Maritime/Crane'
 import Gantry from '../../PlaceableSVGs/Maritime/Gantry'
 import CargoContainers from '../../PlaceableSVGs/Maritime/CargoContainers'

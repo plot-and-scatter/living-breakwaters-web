@@ -4,7 +4,6 @@ import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import './Popover.scss'
 import Tree from '../../PlaceableSVGs/Trees/Tree'
 import Train from '../../PlaceableSVGs/Vehicles/Train'
 import Truck3 from '../../PlaceableSVGs/Vehicles/Truck3'

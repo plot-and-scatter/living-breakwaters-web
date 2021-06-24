@@ -4,7 +4,6 @@ import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import './Popover.scss'
 import Irrigation from '../../PlaceableSVGs/Objects/Irrigation'
 import Wheat from '../../PlaceableSVGs/Plants/Wheat'
 import Well from '../../PlaceableSVGs/Buildings/Well'

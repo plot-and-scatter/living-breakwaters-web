@@ -5,8 +5,6 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 import SewerLarge from '../../PlaceableSVGs/Objects/SewerLarge'
 
-import './Popover.scss'
-
 const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

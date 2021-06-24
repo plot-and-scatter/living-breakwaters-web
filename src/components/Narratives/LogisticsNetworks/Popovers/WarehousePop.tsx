@@ -4,7 +4,6 @@ import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import './Popover.scss'
 import Warehouse from '../../PlaceableSVGs/Buildings/Warehouse'
 
 const WarehousePop = (props: PlaceableSVGProps): JSX.Element => {

@@ -4,7 +4,6 @@ import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import './Popover.scss'
 import IntertidalPlant from '../../PlaceableSVGs/Plants/IntertidalPlant'
 
 const IntertidalPop = (props: PlaceableSVGProps): JSX.Element => {

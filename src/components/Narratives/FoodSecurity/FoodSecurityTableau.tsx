@@ -1,3 +1,6 @@
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
+import { Power2, TimelineMax, gsap } from 'gsap'
+
 import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
@@ -9,7 +12,6 @@ import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
 import IntertidalPop from './Popovers/IntertidalPop'
 import IrrigationPop from './Popovers/IrrigationPop'
-import FoodSecurityLand from './SVGGroups/FoodSecurityLand'
 import LogisticsPop from './Popovers/LogisticsPop'
 import PumpStationPop from './Popovers/PumpStationPop'
 import SVGFrame from '../Frames/SVGFrame'
@@ -21,35 +23,66 @@ import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
 import FoodSecurityRainOverflow from './BaseLayers/FoodSecurityRainOverflow'
 import FoodSecuritySeaLevel from './BaseLayers/FoodSecuritySeaLevel'
+import FoodSecuritySeaLevelRise from './BaseLayers/FoodSecuritySeaLevelRise'
 import FoodSecurityGround from './BaseLayers/FoodSecurityGround'
+import { useRef } from 'react'
+import FixTypeLater from '../../../@types/FixTypeLater'
+
+if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void
 }
 
+const mt = 0.85
+
+const spinTree = (): FixTypeLater => {
+  const tl = gsap.timeline({ defaults: { duration: mt } })
+  tl.to('.Tree', { rotate: 90 }, 0)
+  return tl
+}
+
 const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
+  // useEffect(() => {
+  //   if (narrativeStage === 1) {
+  //     setShowRain(true)
+  //   } else {
+  //     setShowRain(false)
+  //   }
+  // }, [narrativeStage])
+
+  const prevNarrativeStage = useRef(narrativeStage)
+
+  const timeline = useRef<TimelineMax>()
+
   useEffect(() => {
-    if (narrativeStage === 2) {
-      setShowRain(true)
-    } else {
-      setShowRain(false)
-    }
+    // timeline.current = new TimelineMax({ paused: true })
+    timeline.current = new TimelineMax()
+    timeline.current.add(spinTree())
+    // timeline.current.add(spinSeaLevel())
+    // GSDevTools.create(timeline)
+  }, [])
+
+  useEffect(() => {
+    timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
+    // console.log(timeline.current)
+    prevNarrativeStage.current = narrativeStage
   }, [narrativeStage])
 
   return (
     <div className="FoodSecurityTableau">
       <SVGFrame id="FoodSecurityTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
-        {/* <FoodSecurityLand scale={1} xOffset={0} /> */}
-        <FoodSecurityRainOverflow stage={narrativeStage} />
-        <FoodSecuritySeaLevel stage={narrativeStage} />
+        <FoodSecuritySeaLevelRise />
+        <FoodSecuritySeaLevel />
         <FoodSecurityGround stage={narrativeStage} yOffset={0.783} />
+        <FoodSecurityRainOverflow />
+
         <Fish xOffset={0.05} yOffset={0.79} />
         <Birds xOffset={0.2} yOffset={0.3} />
         <DouglasFir xOffset={0.79} yOffset={0.515} scale={0.1} />
-
         <Tree xOffset={0.38} yOffset={0.67} scale={0.06} />
         <Tree xOffset={0.41} yOffset={0.64} scale={0.08} />
         <Tree xOffset={0.63} yOffset={0.655} scale={0.07} />

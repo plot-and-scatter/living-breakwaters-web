@@ -473,7 +473,7 @@ const Irrigation = (props: PlaceableSVGProps): JSX.Element => {
               y2="28.17"
             />
             <path
-              className="cls-2"
+              className="cls-2 DoNotFill"
               d="M195.09,28.17V4.65a128.77,128.77,0,0,0-64.86,0,128.81,128.81,0,0,0-64.87,0A127.22,127.22,0,0,0,31.3.51,127,127,0,0,0,.5,4.65V28.17"
             />
           </g>

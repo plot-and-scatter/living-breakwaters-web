@@ -1,14 +1,47 @@
 .PlaceableSVG {
   overflow: visible;
   transition: fill 0.5s ease;
-  &.Red {
-    path {
-      fill: red;
+}
+
+.NoDisplay {
+  display: none;
+}
+
+.Popover.Red {
+  cursor: pointer;
+  svg:not(.DoNotHighlight) {
+    rect:not(.DoNotFill),
+    path:not(.DoNotFill),
+    polygon:not(.DoNotFill) {
+      fill: #cc3333;
     }
+    polyline:not(.DoNotStroke),
+    line:not(.DoNotStroke),
+    rect:not(.DoNotStroke),
+    path:not(.DoNotStroke),
+    polygon:not(.DoNotStroke) {
+      stroke: #990000;
+    }
+    transition: fill 0.5s;
   }
-  &.RedOutline {
-    path {
-      stroke: red;
+  .Textbox rect {
+    fill: #cc3333;
+    stroke: #990000;
+  }
+  &:hover {
+    svg:not(.DoNotHighlight) {
+      rect:not(.DoNotFill),
+      path:not(.DoNotFill),
+      polygon:not(.DoNotFill) {
+        fill: #f00;
+      }
+      polyline:not(.DoNotStroke),
+      line:not(.DoNotStroke),
+      rect:not(.DoNotStroke),
+      path:not(.DoNotStroke),
+      polygon:not(.DoNotStroke) {
+        stroke: #cc3333;
+      }
     }
   }
 }

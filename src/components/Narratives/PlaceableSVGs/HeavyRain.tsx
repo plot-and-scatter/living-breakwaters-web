@@ -9,6 +9,7 @@ import './HeavyRain.scss'
 
 let heavyRainTimeline
 
+// TODO: More efficient rainfall code
 export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
   const el = document.getElementById(id)
   if (el) {

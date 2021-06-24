@@ -4,7 +4,6 @@ import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import './Popover.scss'
 import Office2 from '../../PlaceableSVGs/Buildings/Office2'
 
 const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {

@@ -5,8 +5,6 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 import Factory from '../../PlaceableSVGs/Buildings/Factory'
 
-import './Popover.scss'
-
 const TreatmentPlantPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

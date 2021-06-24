@@ -9,7 +9,7 @@ import { useRef } from 'react'
 import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 import { useNarrative } from '../../NarrativeContext'
 
-import './FoodSecurityRainOverflow.scss'
+import './FoodSecuritySeaLevelRise.scss'
 import FixTypeLater from '../../../../@types/FixTypeLater'
 
 const WIDTH = 300
@@ -31,21 +31,23 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
   })
 }
 
-const FoodSecurityRainOverflow = (): JSX.Element => {
+const FoodSecuritySeaLevel = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   useEffect(() => {
     toggleSeaLevelRise(narrativeStage)
   }, [narrativeStage])
 
-  const d =
-    narrativeStage < 2 ? `M290 250 v22 h710 v-22` : `M290 240 v22 h900 v-22`
-
   return (
-    <g className="FoodSecurityRainOverflow">
-      <path d={`M290 250 v22 h710 v-22`} id="RainOverflowNormal" />
+    <g className="FoodSecuritySeaLevelRise">
+      <path
+        d={`M0 240 h${WIDTH} v40 h-${WIDTH}`}
+        id="SeaLevelRisen"
+        className="NoDisplay"
+      />
+      <path d={`M0 246 h${WIDTH} v40 h-${WIDTH}`} id="SeaLevelNormal" />
     </g>
   )
 }
 
-export default FoodSecurityRainOverflow
+export default FoodSecuritySeaLevel
