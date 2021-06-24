@@ -22,8 +22,8 @@ const FoodSecurityRainOverflow = (): JSX.Element => {
   useEffect(() => {
     if (narrativeStage === 2) {
       const tl = new TimelineLite()
-      tl.to('#RainOverflowNormal', { y: -13, duration: 5, delay: 2 })
-      tl.to('#RainOverflowNormal', { x: -60, duration: 5 }, '>-0.5')
+      tl.to('#RainOverflowNormal', { y: -13, duration: 5 })
+      tl.to('#RainOverflowNormal', { x: -60, duration: 5 }, '>-2')
     } else {
       gsap.to('#RainOverflowNormal', { y: 0, x: 0, duration: 3, delay: 1 })
     }
