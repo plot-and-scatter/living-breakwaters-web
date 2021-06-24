@@ -20,12 +20,15 @@ const PowerStationPop = (props: PlaceableSVGProps): JSX.Element => {
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <PowerPlant scale={0.1} xOffset={0.5} yOffset={0.617} />
-      <Textbox xOffset={0.55} yOffset={0.93} textboxWidth={120}>
-        Power Station
-      </Textbox>
-    </svg>
+    <>
+      <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+        <PowerPlant scale={0.1} xOffset={0.5} yOffset={0.617} />
+        <Textbox xOffset={0.55} yOffset={0.93} textboxWidth={120}>
+          Power Station
+        </Textbox>
+      </svg>
+      <path className="GroundColor" d="M442 240 l 40 -2.5 v 5 h -40" />
+    </>
   )
 }
 

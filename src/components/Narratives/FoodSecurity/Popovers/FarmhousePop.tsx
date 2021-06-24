@@ -21,12 +21,15 @@ const FarmhousePop = (props: PlaceableSVGProps): JSX.Element => {
   const extraClasses = narrativeStage > 2 ? 'Red' : ''
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Farmhouse xOffset={0.7} yOffset={0.58} scale={0.12} />
-      <Textbox xOffset={0.76} yOffset={0.85} textboxWidth={105}>
-        Farmhouse
-      </Textbox>
-    </svg>
+    <>
+      <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+        <Farmhouse xOffset={0.7} yOffset={0.58} scale={0.12} />
+        <Textbox xOffset={0.76} yOffset={0.85} textboxWidth={105}>
+          Farmhouse
+        </Textbox>
+      </svg>
+      <rect className="GroundColor" x={550} y={242.5} width={110} height={5} />
+    </>
   )
 }
 

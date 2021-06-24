@@ -34,14 +34,6 @@ interface Props {
   setFrameContent?: (content: React.ReactNode) => void
 }
 
-const mt = 0.85
-
-const spinTree = (): FixTypeLater => {
-  const tl = gsap.timeline({ defaults: { duration: mt } })
-  tl.to('.Tree', { rotate: 90 }, 0)
-  return tl
-}
-
 const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
@@ -60,7 +52,6 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
   useEffect(() => {
     // timeline.current = new TimelineMax({ paused: true })
     timeline.current = new TimelineMax()
-    timeline.current.add(spinTree())
     // timeline.current.add(spinSeaLevel())
     // GSDevTools.create(timeline)
   }, [])
@@ -69,6 +60,11 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
     timeline.current.tweenFromTo(prevNarrativeStage.current, narrativeStage)
     // console.log(timeline.current)
     prevNarrativeStage.current = narrativeStage
+    if (narrativeStage == 2) {
+      setShowRain(true)
+    } else {
+      setShowRain(false)
+    }
   }, [narrativeStage])
 
   return (
@@ -77,8 +73,8 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
         <HeavyRain xOffset={0} yOffset={0.35} />
         <FoodSecuritySeaLevelRise />
         <FoodSecuritySeaLevel />
-        <FoodSecurityGround stage={narrativeStage} yOffset={0.783} />
         <FoodSecurityRainOverflow />
+        <FoodSecurityGround stage={narrativeStage} yOffset={0.783} />
 
         <Fish xOffset={0.05} yOffset={0.79} />
         <Birds xOffset={0.2} yOffset={0.3} />

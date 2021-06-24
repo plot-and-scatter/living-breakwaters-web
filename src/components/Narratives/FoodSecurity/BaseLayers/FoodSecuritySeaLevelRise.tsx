@@ -11,13 +11,11 @@ import { useNarrative } from '../../NarrativeContext'
 
 import './FoodSecuritySeaLevelRise.scss'
 import FixTypeLater from '../../../../@types/FixTypeLater'
+import { random } from 'gsap/src/all'
 
 const WIDTH = 300
 
-let seaLevelRiseTimeline
-
 export const toggleSeaLevelRise = (narrativeStage: number): void => {
-  if (seaLevelRiseTimeline) seaLevelRiseTimeline.clear()
   const from = '#SeaLevelNormal'
   const to = narrativeStage > 0 ? '#SeaLevelRisen' : '#SeaLevelNormal'
   gsap.to(from, {
@@ -29,6 +27,8 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
     // delay: 3, // TODO: Could delay further
     duration: 1
   })
+
+  // tl.to(from, { rotate: -1 })
 }
 
 const FoodSecuritySeaLevel = (): JSX.Element => {

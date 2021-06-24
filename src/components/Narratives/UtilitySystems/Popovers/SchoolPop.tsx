@@ -20,12 +20,15 @@ const SchoolPop = (props: PlaceableSVGProps): JSX.Element => {
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Office1 xOffset={0.765} yOffset={0.62} scale={0.08} />
-      <Textbox xOffset={0.78} yOffset={0.86} textboxWidth={70}>
-        School
-      </Textbox>
-    </svg>
+    <>
+      <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+        <Office1 xOffset={0.765} yOffset={0.62} scale={0.08} />
+        <Textbox xOffset={0.78} yOffset={0.86} textboxWidth={70}>
+          School
+        </Textbox>
+      </svg>
+      <path className="GroundColor" d="M610 237 l 70 -6.5 v 20 h -70" />
+    </>
   )
 }
 

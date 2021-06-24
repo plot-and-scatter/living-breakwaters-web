@@ -55,21 +55,25 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
         <BasementPop onClick={setFrameContent} />
         <HospitalPop onClick={setFrameContent} />
         <UndergroundParkingPop onClick={setFrameContent} />
-        <SewageBackupPop onClick={setFrameContent} />
 
         <Tree xOffset={0.425} yOffset={0.7} scale={0.04} />
         <Tree xOffset={0.425 + 0.03} yOffset={0.7} scale={0.04} />
-        <Tree xOffset={0.58} yOffset={0.68} scale={0.04} />
-        <Tree xOffset={0.58 + 0.03} yOffset={0.68} scale={0.04} />
+        <Tree xOffset={0.58} yOffset={0.685} scale={0.04} />
+        <Tree xOffset={0.58 + 0.03} yOffset={0.685} scale={0.04} />
         <TrafficLight scale={0.03} xOffset={0.65} yOffset={0.67} />
         <Car3 xOffset={0.66} yOffset={0.725} scale={0.02} />
-        <Tree xOffset={0.69} yOffset={0.68} scale={0.04} />
+        <Tree xOffset={0.69} yOffset={0.685} scale={0.04} />
         <Tree xOffset={0.78} yOffset={0.68} scale={0.04} />
         <House1 scale={0.06} xOffset={0.725} yOffset={0.685} />
         <House1 scale={0.06} xOffset={0.82} yOffset={0.67} />
-        <House1 scale={0.06} xOffset={0.905} yOffset={0.645} />
+
+        <path className="GroundColor" d="M655 233 l 50 -4.5 v 5 h -50" />
+
+        <House1 scale={0.06} xOffset={0.905} yOffset={0.647} />
         <Tree xOffset={0.86} yOffset={0.66} scale={0.04} />
         <Tree xOffset={0.86 + 0.03} yOffset={0.65} scale={0.04} />
+
+        <SewageBackupPop onClick={setFrameContent} />
       </SVGFrame>
     </div>
   )

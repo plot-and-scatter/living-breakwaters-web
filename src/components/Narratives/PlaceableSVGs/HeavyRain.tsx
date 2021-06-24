@@ -6,6 +6,9 @@ import PlaceableSVG from './PlaceableSVG'
 import { viewBox } from './PlaceableSVGHelper'
 
 import './HeavyRain.scss'
+import { useRef } from 'react'
+import gsap from 'gsap/all'
+import { random } from 'gsap/src/all'
 
 let heavyRainTimeline
 
@@ -49,11 +52,48 @@ const rain = (xOffset) => (
 const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
   const { showRain } = useNarrative()
 
+  const rainfall = useRef<TweenMax>()
+
   const totalWidth = 2200
   const rainLineSpacing = 20
 
   useEffect(() => {
-    toggleRainStorm('HeavyRain', showRain)
+    rainfall.current = gsap
+      .to('.RainLine', {
+        // rotation: 360,
+        duration: 1,
+        ease: 'none',
+        repeat: -1,
+        paused: true,
+        strokeDashoffset: 40
+        // x: random(0, 10)
+        // repeatRefresh: true
+        // transformOrigin: 'center center'
+      })
+      .timeScale(0)
+  }, [])
+
+  useEffect(() => {
+    console.log(`showRain ${showRain}`, rainfall.current)
+    if (showRain) {
+      rainfall.current?.play()
+      const tl = new TimelineLite()
+      tl.to('.Rainfall', { autoAlpha: 1, duration: 3 })
+      tl.to(rainfall.current!, { timeScale: 1, duration: 3 }, 0)
+    } else {
+      // Pause
+      console.log('HERE')
+
+      const tl = new TimelineLite()
+      tl.to(rainfall.current!, {
+        timeScale: 0,
+        duration: 3,
+        onComplete: function () {
+          this.pause()
+        }
+      })
+      tl.to('.Rainfall', { autoAlpha: 0, duration: 3 }, 0)
+    }
   }, [showRain])
 
   const rainLines = []

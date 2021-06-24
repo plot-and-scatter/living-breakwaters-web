@@ -16,34 +16,25 @@ const WIDTH = 300
 
 let seaLevelRiseTimeline
 
-export const toggleSeaLevelRise = (narrativeStage: number): void => {
-  if (seaLevelRiseTimeline) seaLevelRiseTimeline.clear()
-  const from = '#SeaLevelNormal'
-  const to = narrativeStage > 0 ? '#SeaLevelRisen' : '#SeaLevelNormal'
-  gsap.to(from, {
-    morphSVG: {
-      shape: to,
-      shapeIndex: 0
-    } as FixTypeLater,
-    ease: Power2.easeInOut,
-    // delay: 3, // TODO: Could delay further
-    duration: 1
-  })
-}
-
 const FoodSecurityRainOverflow = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   useEffect(() => {
-    toggleSeaLevelRise(narrativeStage)
+    if (narrativeStage === 2) {
+      const tl = new TimelineLite()
+      tl.to('#RainOverflowNormal', { y: -13, duration: 5, delay: 2 })
+      tl.to('#RainOverflowNormal', { x: -60, duration: 5 }, '>-0.5')
+    } else {
+      gsap.to('#RainOverflowNormal', { y: 0, x: 0, duration: 3, delay: 1 })
+    }
   }, [narrativeStage])
-
-  const d =
-    narrativeStage < 2 ? `M290 250 v22 h710 v-22` : `M290 240 v22 h900 v-22`
 
   return (
     <g className="FoodSecurityRainOverflow">
-      <path d={`M290 250 v22 h710 v-22`} id="RainOverflowNormal" />
+      <path
+        d={`M350 250 a30,11 0 0 0 -30,11 h710 v-11`}
+        id="RainOverflowNormal"
+      />
     </g>
   )
 }
