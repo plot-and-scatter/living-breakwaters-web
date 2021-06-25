@@ -57,7 +57,6 @@ export default function HTML(props) {
           integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
           crossOrigin="anonymous"
         ></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools3.min.js" />
 
         {props.headComponents}
       </head>
