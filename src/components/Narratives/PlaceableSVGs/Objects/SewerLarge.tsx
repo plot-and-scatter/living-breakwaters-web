@@ -26,6 +26,18 @@ const SewerLarge = (props: PlaceableSVGProps): JSX.Element => {
           </g>
         </g>
       </g>
+      <g id="Layer_2" data-name="Layer 2" className="Sewer">
+        <g id="EXISTING_OBJECTS_FRONT" data-name="EXISTING OBJECTS FRONT">
+          <g id="sewer_outflow" data-name="sewer outflow">
+            <polyline
+              className="cls-1"
+              points="689.6 0 689.6 11.87 408.98 21.66 0.03 28"
+            />
+            <line className="cls-1" x1="539.5" y1="7" x2="539.5" y2="17.94" />
+            <line className="cls-1" x1="367.27" y1="16" x2="367.27" y2="22.2" />
+          </g>
+        </g>
+      </g>
     </PlaceableSVG>
   )
 }

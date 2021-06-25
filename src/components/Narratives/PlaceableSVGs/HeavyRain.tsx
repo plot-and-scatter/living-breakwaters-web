@@ -1,38 +1,14 @@
 import { TimelineLite } from 'gsap'
-import React, { useEffect } from 'react'
-import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
-import { useNarrative } from '../NarrativeContext'
-import PlaceableSVG from './PlaceableSVG'
-import { viewBox } from './PlaceableSVGHelper'
-
-import './HeavyRain.scss'
 import { useRef } from 'react'
 import gsap from 'gsap/all'
-import { random } from 'gsap/src/all'
+import React, { useEffect } from 'react'
 
-let heavyRainTimeline
+import { useNarrative } from '../NarrativeContext'
+import { viewBox } from './PlaceableSVGHelper'
+import PlaceableSVG from './PlaceableSVG'
+import PlaceableSVGProps from '../../../@types/PlaceableSVGProps'
 
-// TODO: More efficient rainfall code
-export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
-  const el = document.getElementById(id)
-  if (el) {
-    if (heavyRainTimeline) heavyRainTimeline.clear()
-    if (toggleVar) {
-      heavyRainTimeline = new TimelineLite().to('.Rainfall', {
-        visibility: 'visible',
-        opacity: 1,
-        duration: 3
-      })
-      // .to('.SaturatedGround', { opacity: 1, duration: 1 })
-      // .to('#RainOverflow', { opacity: 1, duration: 1 })
-    } else {
-      heavyRainTimeline = new TimelineLite()
-        // .to('#RainOverflow', { opacity: 0, duration: 0.5 })
-        .to('.SaturatedGround', { opacity: 0, duration: 0.5 })
-        .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
-    }
-  }
-}
+import './HeavyRain.scss'
 
 const RAIN_WIDTH = -150
 
@@ -83,8 +59,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
       tl.to(rainfall.current!, { timeScale: 1, duration: 3 }, 0)
     } else {
       // Pause
-      console.log('HERE')
-
+      console.log('Here I am')
       const tl = new TimelineLite()
       tl.to(rainfall.current!, {
         timeScale: 0,

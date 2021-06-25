@@ -61,3 +61,12 @@
 .FillPatternCircles {
   fill: url(#pattern-circles); 
 }
+
+.Sewer {
+  polyline,
+  line {
+    stroke: #99ccff;
+    stroke-dasharray: 2 2;
+    stroke-width: 3px !important;
+  }
+}

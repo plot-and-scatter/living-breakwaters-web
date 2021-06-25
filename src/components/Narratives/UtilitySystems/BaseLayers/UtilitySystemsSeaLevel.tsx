@@ -1,27 +1,11 @@
 import React from 'react'
 
-import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
-
-const WIDTH = 2000
-const BASE_HEIGHT = 0
-
-const FoodSecuritySeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
-  const d =
-    stage === 0
-      ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20} H-${WIDTH}`
-      : stage === 1
-      ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 15} H-${WIDTH}`
-      : `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 0} H-${WIDTH}`
-
+const UtilitySystemsSeaLevel = (): JSX.Element => {
   return (
-    <>
-      <path className="higher-sea-level" d={d} />
-      <path
-        className="FillSea"
-        d={`M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20} H-${WIDTH}`}
-      />
-    </>
+    <g className="UtilitySystemsSeaLevel">
+      <path className="FillSea" d={`M0 249 h2000 v40 H-2000`} />
+    </g>
   )
 }
 
-export default FoodSecuritySeaLevel
+export default UtilitySystemsSeaLevel

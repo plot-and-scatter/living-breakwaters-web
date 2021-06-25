@@ -41,7 +41,7 @@ const UtilitySystemsSeaLevelRise = (): JSX.Element => {
         className="NoDisplay"
       />
       <path
-        d={`M0 246 h${WIDTH} v40 h-${WIDTH}`}
+        d={`M0 249 h${WIDTH} v40 h-${WIDTH}`}
         id="SeaLevelNormal"
         className="FillRed"
       />

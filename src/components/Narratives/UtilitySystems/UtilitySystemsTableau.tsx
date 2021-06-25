@@ -33,7 +33,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   useEffect(() => {
-    if (narrativeStage === 1) {
+    if (narrativeStage >= 1) {
       setShowRain(true)
     } else {
       setShowRain(false)
@@ -46,11 +46,11 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
         <HeavyRain xOffset={0} yOffset={0.35} />
 
         {/* <UtilitySystemsStormSurge /> */}
-        {/* <UtilitySystemsSeaLevelRise /> */}
-        {/* <UtilitySystemsSeaLevel stage={narrativeStage} /> */}
+        <UtilitySystemsSeaLevelRise />
+        <UtilitySystemsSeaLevel />
         <UtilitySystemsGround stage={narrativeStage} yOffset={0.8} />
 
-        <Fish xOffset={0.05} yOffset={0.79} />
+        <Fish xOffset={0.04} yOffset={0.8} />
         <Birds xOffset={0.2} yOffset={0.3} />
 
         <OutflowPop onClick={setFrameContent} />
