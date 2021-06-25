@@ -1,4 +1,4 @@
-/* globals findShapeIndex */
+// /* globals findShapeIndex */
 
 import React from 'react'
 import { useEffect } from 'react'
@@ -12,9 +12,7 @@ import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
 
 import './FoodSecuritySaltwaterWedge.scss'
 
-import findShapeIndex from '../../../../findShapeIndex.js'
 import { useRef } from 'react'
-;(window as FixTypeLater).findShapeIndex = findShapeIndex
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 

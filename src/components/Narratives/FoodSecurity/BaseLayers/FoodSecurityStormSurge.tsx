@@ -25,7 +25,6 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
     tl.to(
       from,
       {
-        y: -18,
         morphSVG: {
           shape: to,
           shapeIndex: 0
@@ -35,7 +34,7 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
         // delay: 1, // TODO: Could delay further
         duration: 6
       },
-      '>-0.5'
+      '>-1'
     )
 
     gsap.to(from, {

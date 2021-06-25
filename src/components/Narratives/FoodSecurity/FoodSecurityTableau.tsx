@@ -55,7 +55,6 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
     // timeline.current = new TimelineMax({ paused: true })
     timeline.current = new TimelineMax()
     // timeline.current.add(spinSeaLevel())
-    // GSDevTools.create(timeline)
   }, [])
 
   useEffect(() => {
