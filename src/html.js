@@ -58,6 +58,7 @@ export default function HTML(props) {
           crossOrigin="anonymous"
         ></script>
         <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools3.min.js" />
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

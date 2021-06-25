@@ -5,13 +5,10 @@ if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 import React from 'react'
 import { useEffect } from 'react'
-import { useRef } from 'react'
-import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
 import { useNarrative } from '../../NarrativeContext'
 
 import './FoodSecuritySeaLevelRise.scss'
 import FixTypeLater from '../../../../@types/FixTypeLater'
-import { random } from 'gsap/src/all'
 
 const WIDTH = 300
 

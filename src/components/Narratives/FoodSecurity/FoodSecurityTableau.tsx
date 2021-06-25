@@ -25,8 +25,10 @@ import FoodSecurityRainOverflow from './BaseLayers/FoodSecurityRainOverflow'
 import FoodSecuritySeaLevel from './BaseLayers/FoodSecuritySeaLevel'
 import FoodSecuritySeaLevelRise from './BaseLayers/FoodSecuritySeaLevelRise'
 import FoodSecurityGround from './BaseLayers/FoodSecurityGround'
+import FoodSecuritySaltwaterWedge from './BaseLayers/FoodSecuritySaltwaterWedge'
 import { useRef } from 'react'
 import FixTypeLater from '../../../@types/FixTypeLater'
+import FoodSecurityStormSurge from './BaseLayers/FoodSecurityStormSurge'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -71,7 +73,10 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
     <div className="FoodSecurityTableau">
       <SVGFrame id="FoodSecurityTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
+
+        <FoodSecurityStormSurge />
         <FoodSecuritySeaLevelRise />
+
         <FoodSecuritySeaLevel />
         <FoodSecurityRainOverflow />
         <FoodSecurityGround stage={narrativeStage} yOffset={0.783} />
@@ -83,7 +88,10 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Tree xOffset={0.41} yOffset={0.64} scale={0.08} />
         <Tree xOffset={0.63} yOffset={0.655} scale={0.07} />
 
+        <FoodSecuritySaltwaterWedge stage={narrativeStage} />
+
         <IntertidalPop onClick={setFrameContent} />
+
         <BikewayPop onClick={setFrameContent} />
         <PumpStationPop onClick={setFrameContent} />
         <IrrigationPop onClick={setFrameContent} />
