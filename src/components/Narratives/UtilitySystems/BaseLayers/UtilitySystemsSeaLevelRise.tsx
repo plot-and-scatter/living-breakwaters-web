@@ -12,7 +12,7 @@ const WIDTH = 300
 
 export const toggleSeaLevelRise = (narrativeStage: number): void => {
   const from = '#SeaLevelNormal'
-  const to = narrativeStage > 0 ? '#SeaLevelRisen' : '#SeaLevelNormal'
+  const to = narrativeStage > 1 ? '#SeaLevelRisen' : '#SeaLevelNormal'
   gsap.to(from, {
     morphSVG: {
       shape: to,
@@ -26,7 +26,7 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
   // tl.to(from, { rotate: -1 })
 }
 
-const FoodSecuritySeaLevel = (): JSX.Element => {
+const UtilitySystemsSeaLevelRise = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const FoodSecuritySeaLevel = (): JSX.Element => {
   }, [narrativeStage])
 
   return (
-    <g className="FoodSecuritySeaLevelRise">
+    <g className="UtilitySystemsSeaLevelRise">
       <path
         d={`M0 240 h${WIDTH} v40 h-${WIDTH}`}
         id="SeaLevelRisen"
@@ -49,4 +49,4 @@ const FoodSecuritySeaLevel = (): JSX.Element => {
   )
 }
 
-export default FoodSecuritySeaLevel
+export default UtilitySystemsSeaLevelRise

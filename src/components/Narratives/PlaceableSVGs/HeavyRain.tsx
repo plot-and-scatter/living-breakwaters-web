@@ -18,12 +18,11 @@ export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
   if (el) {
     if (heavyRainTimeline) heavyRainTimeline.clear()
     if (toggleVar) {
-      heavyRainTimeline = new TimelineLite()
-        .to('.LogisticsNetworksTableau svg', {
-          backgroundImage: 'linear-gradient(#666, #fff)',
-          duration: 1
-        })
-        .to('.Rainfall', { visibility: 'visible', opacity: 1, duration: 3 })
+      heavyRainTimeline = new TimelineLite().to('.Rainfall', {
+        visibility: 'visible',
+        opacity: 1,
+        duration: 3
+      })
       // .to('.SaturatedGround', { opacity: 1, duration: 1 })
       // .to('#RainOverflow', { opacity: 1, duration: 1 })
     } else {
@@ -31,10 +30,6 @@ export const toggleRainStorm = (id: string, toggleVar: boolean): void => {
         // .to('#RainOverflow', { opacity: 0, duration: 0.5 })
         .to('.SaturatedGround', { opacity: 0, duration: 0.5 })
         .to('.Rainfall', { visibility: 'hidden', opacity: 0, duration: 0.5 })
-        .to('.LogisticsNetworksTableau svg', {
-          backgroundImage: 'linear-gradient(#fff, #fff)',
-          duration: 1
-        })
     }
   }
 }
@@ -64,8 +59,8 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
         duration: 1,
         ease: 'none',
         repeat: -1,
-        paused: true,
-        strokeDashoffset: 40
+        paused: true
+        // strokeDashoffset: 40
         // x: random(0, 10)
         // repeatRefresh: true
         // transformOrigin: 'center center'
@@ -77,7 +72,13 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
     console.log(`showRain ${showRain}`, rainfall.current)
     if (showRain) {
       rainfall.current?.play()
-      const tl = new TimelineLite()
+      const tl = new TimelineLite().to(
+        'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau',
+        {
+          backgroundImage: 'linear-gradient(#666, #fff)',
+          duration: 1
+        }
+      )
       tl.to('.Rainfall', { autoAlpha: 1, duration: 3 })
       tl.to(rainfall.current!, { timeScale: 1, duration: 3 }, 0)
     } else {
@@ -92,7 +93,13 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
           this.pause()
         }
       })
-      tl.to('.Rainfall', { autoAlpha: 0, duration: 3 }, 0)
+      tl.to('.Rainfall', { autoAlpha: 0, duration: 3 }, 0).to(
+        'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau',
+        {
+          backgroundImage: 'linear-gradient(#fff, #fff)',
+          duration: 1
+        }
+      )
     }
   }, [showRain])
 

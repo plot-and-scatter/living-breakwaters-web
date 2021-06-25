@@ -28,7 +28,7 @@ const FarmhousePop = (props: PlaceableSVGProps): JSX.Element => {
           Farmhouse
         </Textbox>
       </svg>
-      <rect className="GroundColor" x={550} y={242.5} width={110} height={5} />
+      <rect className="FillGround" x={550} y={242.5} width={110} height={5} />
     </>
   )
 }

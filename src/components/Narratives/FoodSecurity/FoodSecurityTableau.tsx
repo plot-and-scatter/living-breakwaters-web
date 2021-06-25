@@ -1,14 +1,20 @@
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
-import { Power2, TimelineMax, gsap } from 'gsap'
-
+import { TimelineMax, gsap } from 'gsap'
 import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
+import { useRef } from 'react'
 import BikewayPop from './Popovers/BikewayPop'
 import Birds from '../PlaceableSVGs/Fauna/Birds'
 import DouglasFir from '../PlaceableSVGs/Trees/DouglasFir'
 import FarmhousePop from './Popovers/FarmhousePop'
 import Fish from '../PlaceableSVGs/Fauna/Fish'
+import FoodSecurityGround from './BaseLayers/FoodSecurityGround'
+import FoodSecurityRainOverflow from './BaseLayers/FoodSecurityRainOverflow'
+import FoodSecuritySaltwaterWedge from './BaseLayers/FoodSecuritySaltwaterWedge'
+import FoodSecuritySeaLevel from './BaseLayers/FoodSecuritySeaLevel'
+import FoodSecuritySeaLevelRise from './BaseLayers/FoodSecuritySeaLevelRise'
+import FoodSecurityStormSurge from './BaseLayers/FoodSecurityStormSurge'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
 import IntertidalPop from './Popovers/IntertidalPop'
 import IrrigationPop from './Popovers/IrrigationPop'
@@ -17,18 +23,9 @@ import PumpStationPop from './Popovers/PumpStationPop'
 import SVGFrame from '../Frames/SVGFrame'
 import Tree from '../PlaceableSVGs/Trees/Tree'
 import UnirrigatedPop from './Popovers/UnirrigatedPop'
-import Well from '../PlaceableSVGs/Buildings/Well'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
-import FoodSecurityRainOverflow from './BaseLayers/FoodSecurityRainOverflow'
-import FoodSecuritySeaLevel from './BaseLayers/FoodSecuritySeaLevel'
-import FoodSecuritySeaLevelRise from './BaseLayers/FoodSecuritySeaLevelRise'
-import FoodSecurityGround from './BaseLayers/FoodSecurityGround'
-import FoodSecuritySaltwaterWedge from './BaseLayers/FoodSecuritySaltwaterWedge'
-import { useRef } from 'react'
-import FixTypeLater from '../../../@types/FixTypeLater'
-import FoodSecurityStormSurge from './BaseLayers/FoodSecurityStormSurge'
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -75,7 +72,6 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
 
         <FoodSecurityStormSurge />
         <FoodSecuritySeaLevelRise />
-
         <FoodSecuritySeaLevel />
         <FoodSecurityRainOverflow />
         <FoodSecurityGround stage={narrativeStage} yOffset={0.783} />

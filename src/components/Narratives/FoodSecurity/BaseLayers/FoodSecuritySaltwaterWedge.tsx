@@ -1,18 +1,15 @@
 // /* globals findShapeIndex */
 
-import React from 'react'
 import { useEffect } from 'react'
-import FixTypeLater from '../../../../@types/FixTypeLater'
-
-import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
-import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
-import { useNarrative } from '../../NarrativeContext'
-import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
-import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
-
-import './FoodSecuritySaltwaterWedge.scss'
-
 import { useRef } from 'react'
+import React from 'react'
+
+import { useNarrative } from '../../NarrativeContext'
+import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
+import FixTypeLater from '../../../../@types/FixTypeLater'
+import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
 interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 
@@ -107,7 +104,7 @@ const FoodSecuritySaltwaterWedge = (props: Props): JSX.Element => {
             />
             <path
               transform="translate(0, 19)"
-              className="cls-3 saltwater-wedge"
+              className="cls-3 FillPatternCircles"
               d={`M203,.43,161.28,4.6,133.93,7.29a9.9,9.9,0,0,0-2.07.43c-5.39,1.73-29.49,4-31.3,4S61.07,16,2.08,16.07c-1,0-1.68,2.49-2.08,6.58.72,30,2,58.58,2,63,0,9.81,5.43,17.76,12.14,17.76H761.8C603.18,99.75,510,81,447.83,61.49c-8.95-2.81-31.56-10.16-64.4-19.44C307.9,20.69,287.74-3.52,203,.43Z`}
               id="SaltwaterWedgeNormal"
             />

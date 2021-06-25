@@ -1,20 +1,11 @@
+import { gsap } from 'gsap'
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
-import { Power2, TimelineMax, gsap } from 'gsap'
-
-if (gsap) gsap.registerPlugin(MorphSVGPlugin)
-
-import React from 'react'
 import { useEffect } from 'react'
-import { useRef } from 'react'
-import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import React from 'react'
+
 import { useNarrative } from '../../NarrativeContext'
 
-import './FoodSecurityRainOverflow.scss'
-import FixTypeLater from '../../../../@types/FixTypeLater'
-
-const WIDTH = 300
-
-let seaLevelRiseTimeline
+if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 const FoodSecurityRainOverflow = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
@@ -34,6 +25,7 @@ const FoodSecurityRainOverflow = (): JSX.Element => {
       <path
         d={`M350 250 a30,11 0 0 0 -30,11 h710 v-11`}
         id="RainOverflowNormal"
+        className="FillRed"
       />
     </g>
   )

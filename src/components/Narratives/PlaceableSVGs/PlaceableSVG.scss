@@ -45,6 +45,19 @@
     }
   }
 }
-.GroundColor {
+
+.FillGround {
   fill: #215a58;
+}
+
+.FillRed {
+  fill: #cc3333;
+}
+
+.FillSea {
+  fill: lighten(#266, 10%);
+}
+
+.FillPatternCircles {
+  fill: url(#pattern-circles); 
 }

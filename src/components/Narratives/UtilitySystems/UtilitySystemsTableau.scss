@@ -19,8 +19,8 @@ $meanSeaLevel: lighten(#266, 10%);
 .UtilitySystemsTableau {
   position: relative;
   svg#UtilitySystemsTableau {
-    // background-image: linear-gradient(#bbddff, #fff);
-    background: #fff;
+    background-image: linear-gradient(#fff, #fff);
+    // background: #fff;
     // border: solid #666 0.1vw;
     path {
       &.sea-surge {

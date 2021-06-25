@@ -1,28 +1,29 @@
 import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
+import BasementPop from './Popovers/BasementPop'
 import Birds from '../PlaceableSVGs/Fauna/Birds'
-import DouglasFir from '../PlaceableSVGs/Trees/DouglasFir'
+import Car3 from '../PlaceableSVGs/Vehicles/Car3'
 import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
-import UtilitySystemsLand from './SVGGroups/UtilitySystemsLand'
-import SVGFrame from '../Frames/SVGFrame'
-import Tree from '../PlaceableSVGs/Trees/Tree'
-import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
-import Car3 from '../PlaceableSVGs/Vehicles/Car3'
-
-import OutflowPop from './Popovers/OutflowPop'
-import TreatmentPlantPop from './Popovers/TreatmentPlantPop'
-import PowerStationPop from './Popovers/PowerStationPop'
-import SewageBackupPop from './Popovers/SewageBackupPop'
-import SchoolPop from './Popovers/SchoolPop'
-import BasementPop from './Popovers/BasementPop'
 import HospitalPop from './Popovers/HospitalPop'
+import House1 from '../PlaceableSVGs/Buildings/House1'
+import OutflowPop from './Popovers/OutflowPop'
+import PowerStationPop from './Popovers/PowerStationPop'
+import SchoolPop from './Popovers/SchoolPop'
+import SewageBackupPop from './Popovers/SewageBackupPop'
+import SVGFrame from '../Frames/SVGFrame'
+import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
+import TreatmentPlantPop from './Popovers/TreatmentPlantPop'
+import Tree from '../PlaceableSVGs/Trees/Tree'
 import UndergroundParkingPop from './Popovers/UndergroundParkingPop'
+import UtilitySystemsGround from './BaseLayers/UtilitySystemsGround'
+import UtilitySystemsSeaLevel from './BaseLayers/UtilitySystemsSeaLevel'
+import UtilitySystemsSeaLevelRise from './BaseLayers/UtilitySystemsSeaLevelRise'
+import UtilitySystemsStormSurge from './BaseLayers/UtilitySystemsStormSurge'
 
 import '../PlaceableSVGs/Elements.scss'
 import './UtilitySystemsTableau.scss'
-import House1 from '../PlaceableSVGs/Buildings/House1'
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void
@@ -32,7 +33,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   useEffect(() => {
-    if (narrativeStage === 2) {
+    if (narrativeStage === 1) {
       setShowRain(true)
     } else {
       setShowRain(false)
@@ -43,7 +44,12 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
     <div className="UtilitySystemsTableau">
       <SVGFrame id="UtilitySystemsTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
-        <UtilitySystemsLand />
+
+        {/* <UtilitySystemsStormSurge /> */}
+        {/* <UtilitySystemsSeaLevelRise /> */}
+        {/* <UtilitySystemsSeaLevel stage={narrativeStage} /> */}
+        <UtilitySystemsGround stage={narrativeStage} yOffset={0.8} />
+
         <Fish xOffset={0.05} yOffset={0.79} />
         <Birds xOffset={0.2} yOffset={0.3} />
 
@@ -67,7 +73,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
         <House1 scale={0.06} xOffset={0.725} yOffset={0.685} />
         <House1 scale={0.06} xOffset={0.82} yOffset={0.67} />
 
-        <path className="GroundColor" d="M655 233 l 50 -4.5 v 5 h -50" />
+        <path className="FillGround" d="M655 233 l 50 -4.5 v 5 h -50" />
 
         <House1 scale={0.06} xOffset={0.905} yOffset={0.647} />
         <Tree xOffset={0.86} yOffset={0.66} scale={0.04} />

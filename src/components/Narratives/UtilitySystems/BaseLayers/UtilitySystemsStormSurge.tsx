@@ -59,7 +59,7 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
   // tl.to(from, { rotate: -1 })
 }
 
-const FoodSecurityStormSurge = (): JSX.Element => {
+const UtilitySystemsStormSurge = (): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   useEffect(() => {
@@ -67,7 +67,7 @@ const FoodSecurityStormSurge = (): JSX.Element => {
   }, [narrativeStage])
 
   return (
-    <g className="FoodSecurityStormSurge">
+    <g className="UtilitySystemsStormSurge">
       <path
         d={`M-20 250 h${300} c 20 0, 8 8, 80 8 h600 v20 h-${
           290 + 60 + 600 + 20
@@ -78,10 +78,9 @@ const FoodSecurityStormSurge = (): JSX.Element => {
       <path
         d={`M-20 250 h${295} a 20 10, 0, 0, 1, 10 10 v40 h-${WIDTH + 30 + 20}`}
         id="StormSurgeNormal"
-        className="FillRed"
       />
     </g>
   )
 }
 
-export default FoodSecurityStormSurge
+export default UtilitySystemsStormSurge

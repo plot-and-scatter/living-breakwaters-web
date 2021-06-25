@@ -17,7 +17,7 @@ const FoodSecuritySeaLevel = ({ stage }: NarrativeStageProps): JSX.Element => {
     <>
       <path className="higher-sea-level" d={d} />
       <path
-        className="base-sea-level"
+        className="FillSea"
         d={`M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20} H-${WIDTH}`}
       />
     </>

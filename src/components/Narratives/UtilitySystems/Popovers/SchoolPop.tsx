@@ -27,7 +27,7 @@ const SchoolPop = (props: PlaceableSVGProps): JSX.Element => {
           School
         </Textbox>
       </svg>
-      <path className="GroundColor" d="M610 237 l 70 -6.5 v 20 h -70" />
+      <path className="FillGround" d="M610 237 l 70 -6.5 v 20 h -70" />
     </>
   )
 }

@@ -27,7 +27,7 @@ const PowerStationPop = (props: PlaceableSVGProps): JSX.Element => {
           Power Station
         </Textbox>
       </svg>
-      <path className="GroundColor" d="M442 240 l 40 -2.5 v 5 h -40" />
+      <path className="FillGround" d="M442 240 l 40 -2.5 v 5 h -40" />
     </>
   )
 }

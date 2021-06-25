@@ -21,7 +21,7 @@ const TreatmentPlantPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Factory xOffset={0.3} yOffset={0.655} scale={0.15} />
+      <Factory xOffset={0.3} yOffset={0.6565} scale={0.15} />
       <Textbox xOffset={0.37} yOffset={0.93} textboxWidth={130}>
         Treatment Plant
       </Textbox>

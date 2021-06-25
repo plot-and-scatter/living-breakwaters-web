@@ -31,7 +31,7 @@ const RetailPop = (props: PlaceableSVGProps): JSX.Element => {
           Retail
         </Textbox>
       </svg>
-      <path className="GroundColor" d="M700 244.5 l 85 -8.5 v 10 h -85" />
+      <path className="FillGround" d="M700 244.5 l 85 -8.5 v 10 h -85" />
     </>
   )
 }

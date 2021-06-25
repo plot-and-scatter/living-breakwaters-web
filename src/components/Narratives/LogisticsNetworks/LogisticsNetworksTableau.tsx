@@ -44,7 +44,7 @@ const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Office2 xOffset={0.7} yOffset={0.38} />
         <Tree xOffset={0.745} yOffset={0.71} />
         <Car3 xOffset={0.8} yOffset={0.75} />
-        <path className="GroundColor" d="M500 261.5 l 110 -12.5 v 15 h -110" />
+        <path className="FillGround" d="M500 261.5 l 110 -12.5 v 15 h -110" />
         <PortPop onClick={setFrameContent} />
         <CargoShippingPop onClick={setFrameContent} />
         <WarehousePop onClick={setFrameContent} />
