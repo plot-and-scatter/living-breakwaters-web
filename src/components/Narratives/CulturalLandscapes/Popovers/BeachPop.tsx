@@ -3,10 +3,10 @@ import React, { useCallback } from 'react'
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
+import House1 from '../../PlaceableSVGs/Buildings/House1'
+import Basement from '../../PlaceableSVGs/Buildings/Basement'
 
-import Office2 from '../../PlaceableSVGs/Buildings/Office2'
-
-const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {
+const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
@@ -22,20 +22,12 @@ const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <rect
-        className="Lights"
-        fill="yellow"
-        x={750}
-        y={125}
-        width={44}
-        height={70}
-      />
-      <Office2 xOffset={0.935} yOffset={0.28} />
-      <Textbox xOffset={0.935} yOffset={0.86} textboxWidth={70}>
-        Hospital
+      <Basement scale={0.0524} xOffset={0.729} yOffset={0.768} />
+      <Textbox xOffset={0.78} yOffset={0.93} textboxWidth={90}>
+        Basement
       </Textbox>
     </svg>
   )
 }
 
-export default HospitalPop
+export default BasementPop

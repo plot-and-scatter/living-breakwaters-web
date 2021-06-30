@@ -1,22 +1,23 @@
 import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
-import BasementPop from './Popovers/BasementPop'
+import ArchaeologyPop from './Popovers/ArchaeologyPop'
 import Birds from '../PlaceableSVGs/Fauna/Birds'
 import Car3 from '../PlaceableSVGs/Vehicles/Car3'
 import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
-import HospitalPop from './Popovers/HospitalPop'
+import BeachPop from './Popovers/BeachPop'
 import House1 from '../PlaceableSVGs/Buildings/House1'
-import OutflowPop from './Popovers/OutflowPop'
-import PowerStationPop from './Popovers/PowerStationPop'
-import SchoolPop from './Popovers/SchoolPop'
-import SewageBackupPop from './Popovers/SewageBackupPop'
+import BikePathPop from './Popovers/BikePathPop'
+import FishingPop from './Popovers/FishingPop'
+import HotelPop from './Popovers/HotelPop'
+import IntertidalPop from './Popovers/IntertidalPop'
 import SVGFrame from '../Frames/SVGFrame'
 import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
-import TreatmentPlantPop from './Popovers/TreatmentPlantPop'
+import ParkPop from './Popovers/ParkPop'
 import Tree from '../PlaceableSVGs/Trees/Tree'
-import UndergroundParkingPop from './Popovers/UndergroundParkingPop'
+import SubwayPop from './Popovers/SubwayPop'
+import TransitPop from './Popovers/TransitPop'
 import CulturalLandscapesGround from './BaseLayers/CulturalLandscapesGround'
 import CulturalLandscapesSeaLevel from './BaseLayers/CulturalLandscapesSeaLevel'
 import CulturalLandscapesSeaLevelRise from './BaseLayers/CulturalLandscapesSeaLevelRise'
@@ -53,14 +54,14 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Fish xOffset={0.04} yOffset={0.8} />
         <Birds xOffset={0.2} yOffset={0.3} />
 
-        <OutflowPop onClick={setFrameContent} />
-        <TreatmentPlantPop onClick={setFrameContent} />
-        <PowerStationPop onClick={setFrameContent} />
+        <BikePathPop onClick={setFrameContent} />
+        <ParkPop onClick={setFrameContent} />
+        <FishingPop onClick={setFrameContent} />
 
-        <SchoolPop onClick={setFrameContent} />
-        <BasementPop onClick={setFrameContent} />
-        <HospitalPop onClick={setFrameContent} />
-        <UndergroundParkingPop onClick={setFrameContent} />
+        <HotelPop onClick={setFrameContent} />
+        <ArchaeologyPop onClick={setFrameContent} />
+        <BeachPop onClick={setFrameContent} />
+        <SubwayPop onClick={setFrameContent} />
 
         <Tree xOffset={0.425} yOffset={0.7} scale={0.04} />
         <Tree xOffset={0.425 + 0.03} yOffset={0.7} scale={0.04} />
@@ -79,7 +80,8 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Tree xOffset={0.86} yOffset={0.66} scale={0.04} />
         <Tree xOffset={0.86 + 0.03} yOffset={0.65} scale={0.04} />
 
-        <SewageBackupPop onClick={setFrameContent} />
+        <IntertidalPop onClick={setFrameContent} />
+        <TransitPop onClick={setFrameContent} />
       </SVGFrame>
     </div>
   )

@@ -3,10 +3,10 @@ import React, { useCallback } from 'react'
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
+import House1 from '../../PlaceableSVGs/Buildings/House1'
 import Basement from '../../PlaceableSVGs/Buildings/Basement'
-import Car3 from '../../PlaceableSVGs/Vehicles/Car3'
 
-const UndergroundParkingPop = (props: PlaceableSVGProps): JSX.Element => {
+const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
@@ -22,15 +22,12 @@ const UndergroundParkingPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Basement xOffset={0.89} yOffset={0.766} scale={0.11} />
-      <Car3 scale={0.02} xOffset={0.905} yOffset={0.8} />
-      <Car3 scale={0.02} xOffset={0.935} yOffset={0.8} />
-      <Car3 scale={0.02} xOffset={0.965} yOffset={0.8} />
-      <Textbox xOffset={0.93} yOffset={0.93} textboxWidth={170}>
-        Underground Parking
+      <Basement scale={0.0524} xOffset={0.729} yOffset={0.768} />
+      <Textbox xOffset={0.78} yOffset={0.93} textboxWidth={90}>
+        Basement
       </Textbox>
     </svg>
   )
 }
 
-export default UndergroundParkingPop
+export default BasementPop

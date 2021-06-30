@@ -41,7 +41,8 @@ const NarrativeSelect = ({
   const stageNames =
     activeNarrative === NarrativeType.FoodSecurity
       ? FOOD_SEC_STAGE_NAMES
-      : activeNarrative === NarrativeType.UtilitySystems
+      : activeNarrative === NarrativeType.UtilitySystems ||
+        activeNarrative === NarrativeType.CulturalLandscapes
       ? UTIL_SYS_STAGE_NAMES
       : DEFAULT_STAGE_NAMES
 

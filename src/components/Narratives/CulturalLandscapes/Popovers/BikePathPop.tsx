@@ -3,9 +3,10 @@ import React, { useCallback } from 'react'
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
-import SewerSmall from '../../PlaceableSVGs/Objects/SewerSmall'
+import House1 from '../../PlaceableSVGs/Buildings/House1'
+import Basement from '../../PlaceableSVGs/Buildings/Basement'
 
-const OutflowPop = (props: PlaceableSVGProps): JSX.Element => {
+const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
@@ -21,12 +22,12 @@ const OutflowPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <SewerSmall scale={0.2} xOffset={0.15} yOffset={0.77} />
-      <Textbox xOffset={0.2} yOffset={0.93} textboxWidth={70}>
-        Outflow
+      <Basement scale={0.0524} xOffset={0.729} yOffset={0.768} />
+      <Textbox xOffset={0.78} yOffset={0.93} textboxWidth={90}>
+        Basement
       </Textbox>
     </svg>
   )
 }
 
-export default OutflowPop
+export default BasementPop
