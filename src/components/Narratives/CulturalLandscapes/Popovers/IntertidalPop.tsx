@@ -24,16 +24,16 @@ const IntertidalPop = (props: PlaceableSVGProps): JSX.Element => {
     <>
       <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
         <svg>
-          {/* <clipPath id="myClip">
+          <clipPath id="clIntertidalClip">
             <path
               // className="Red"
-              fill={'blue'}
+              style={{ fill: 'blue', stroke: 'none' }}
               fillOpacity={0.5}
-              d="M84 256 v -15 h 135 v 6.2 l -90 4.1 l -45 4.8 v 15"
+              d="M84 256.5 v -17 h 110 v 8 l -23 3.3 l -87 5 v 13"
             />
-          </clipPath> */}
+          </clipPath>
 
-          <g id="IntertidalPlants" clipPath="url(#myClip)">
+          <g id="IntertidalPlants" clipPath="url(#clIntertidalClip)">
             <IntertidalPlant xOffset={0.1 + 0.0} yOffset={0.8 - 0.01} />
             <IntertidalPlant xOffset={0.1 + 0.03} yOffset={0.8 - 0.02} />
             <IntertidalPlant xOffset={0.1 + 0.06} yOffset={0.8 - 0.025} />
