@@ -11,14 +11,14 @@ const SubwayPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 1 && onClick) {
+    if (narrativeStage >= 3 && onClick) {
       onClick('Lorem ipsum subway')
     } else {
       onClick(undefined)
     }
   }, [narrativeStage, onClick])
 
-  const extraClasses = narrativeStage > 1 ? 'Red' : ''
+  const extraClasses = narrativeStage >= 3 ? 'Red' : ''
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>

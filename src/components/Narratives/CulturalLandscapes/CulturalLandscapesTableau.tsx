@@ -54,8 +54,8 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
 
         <Basement xOffset={0.7} yOffset={0.83} scale={0.17} />
 
-        {/* <CulturalLandscapesStormSurge /> */}
-        {/* <CulturalLandscapesSeaLevelRise /> */}
+        <CulturalLandscapesStormSurge />
+        <CulturalLandscapesSeaLevelRise />
         <CulturalLandscapesSeaLevel />
         <CulturalLandscapesGround stage={narrativeStage} yOffset={0.8} />
 

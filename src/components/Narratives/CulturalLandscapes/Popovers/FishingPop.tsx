@@ -20,9 +20,11 @@ const FishingPop = (props: PlaceableSVGProps): JSX.Element => {
 
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
+  const offset = narrativeStage == 2 ? -0.02 : narrativeStage === 3 ? -0.035 : 0
+
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Rowboat scale={0.0524} xOffset={0.03} yOffset={0.768} />
+      <Rowboat scale={0.0524} xOffset={0.03} yOffset={0.768 + offset} />
       <Textbox xOffset={0.075} yOffset={0.93} textboxWidth={90}>
         Fishing
       </Textbox>

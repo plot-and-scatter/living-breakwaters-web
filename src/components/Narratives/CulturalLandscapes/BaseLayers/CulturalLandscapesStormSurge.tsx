@@ -72,7 +72,7 @@ const CulturalLandscapesStormSurge = (): JSX.Element => {
         // d={`M-20 250 h${300} c 20 0, 8 8, 80 8 h600 v20 h-${
         //   290 + 60 + 600 + 20
         // }`}
-        d={`M-20 250 h${800} v20 h-${800}`}
+        d={`M-20 250 h${800} v60 h-${800}`}
         id="StormSurgeRisen"
         className="NoDisplay"
       />

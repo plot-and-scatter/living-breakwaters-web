@@ -36,7 +36,7 @@ const CulturalLandscapesSeaLevelRise = (): JSX.Element => {
   return (
     <g className="CulturalLandscapesSeaLevelRise">
       <path
-        d={`M0 240 h${WIDTH} v40 h-${WIDTH}`}
+        d={`M0 243 h${WIDTH} v40 h-${WIDTH}`}
         id="SeaLevelRisen"
         className="NoDisplay"
       />
