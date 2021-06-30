@@ -1,21 +1,11 @@
 import React from 'react'
 
-import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
-
-const WIDTH = 1500
-const BASE_HEIGHT = 368
-
-const CulturalLandscapesSeaLevel = ({
-  stage
-}: NarrativeStageProps): JSX.Element => {
-  const d =
-    stage === 0
-      ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 20.5} H-${WIDTH}`
-      : stage === 1
-      ? `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT + 15} H-${WIDTH}`
-      : `M0 ${WIDTH} H${WIDTH} V${BASE_HEIGHT} H-${WIDTH}`
-
-  return <path className="mean-sea-level" d={d} />
+const CulturalLandscapesSeaLevel = (): JSX.Element => {
+  return (
+    <g className="CulturalLandscapesSeaLevel">
+      <path className="FillSea" d={`M0 249 h2000 v40 H-2000`} />
+    </g>
+  )
 }
 
 export default CulturalLandscapesSeaLevel

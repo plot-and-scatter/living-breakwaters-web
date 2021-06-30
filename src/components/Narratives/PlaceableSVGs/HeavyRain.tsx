@@ -49,7 +49,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
     if (showRain) {
       rainfall.current?.play()
       const tl = new TimelineLite().to(
-        'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau',
+        'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau, svg#CulturalLandscapes',
         {
           backgroundImage: 'linear-gradient(#666, #fff)',
           duration: 1
@@ -69,7 +69,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
         }
       })
       tl.to('.Rainfall', { autoAlpha: 0, duration: 3 }, 0).to(
-        'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau',
+        'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau, svg#CulturalLandscapes',
         {
           backgroundImage: 'linear-gradient(#fff, #fff)',
           duration: 1

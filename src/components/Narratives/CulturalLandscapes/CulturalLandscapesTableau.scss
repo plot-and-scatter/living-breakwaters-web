@@ -2,12 +2,14 @@
 
 $saltwaterWedge: lighten(#3a6393, 10%);
 $freshWater: lighten(#6f90c1, 10%);
-$meanSeaLevel: lighten(#334455, 10%);
+// $meanSeaLevel: lighten(#334455, 10%);
+$meanSeaLevel: lighten(#266, 10%);
 
 #mean-sea-level-gradient {
   --color-start: #{$meanSeaLevel};
   --color-stop: #{darken($meanSeaLevel, 20%)};
 }
+
 
 #fresh-water-gradient {
   --color-start: #{$freshWater};
@@ -17,16 +19,20 @@ $meanSeaLevel: lighten(#334455, 10%);
 .CulturalLandscapesTableau {
   position: relative;
   svg#CulturalLandscapesTableau {
-    background-image: linear-gradient(#bbddff, #fff);
+    background-image: linear-gradient(#fff, #fff);
+    // background: #fff;
     // border: solid #666 0.1vw;
     path {
       &.sea-surge {
         fill: rgba(#112233, 0.5);
         stroke: #123;
       }
-      &.mean-sea-level {
+      &.base-sea-level {
         fill: url(#mean-sea-level-gradient) $meanSeaLevel;
         stroke: darken($meanSeaLevel, 10%);
+      }
+      &.higher-sea-level {
+        fill: #cc3333;
       }
 
       &.fresh-water {

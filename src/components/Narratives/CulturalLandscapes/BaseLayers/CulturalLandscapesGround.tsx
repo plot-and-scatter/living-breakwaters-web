@@ -1,10 +1,32 @@
 import React from 'react'
 
-const CulturalLandscapesGround = (): JSX.Element => {
-  const d =
-    'M0 87c55-14 103-2 138-5s85-12 121-12c27-1 58-7 64-13s9-10 19-11 66-9 80-6 135 3 148 0-3-9 44-13l100-3c20-1 38-11 50-12 43-1 213-6 231-4s196 19 228 17 52-2 146-4c78-2 162-2 220-6 26-1 77 5 122 3l145-8 179-10-2 203H0z'
+import { viewBox } from '../../PlaceableSVGs/PlaceableSVGHelper'
+import NarrativeStageProps from '../../../../@types/NarrativeStageProps'
+import PlaceableSVG from '../../PlaceableSVGs/PlaceableSVG'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 
-  return <path className="ground" d={d} transform="translate(0 317)" />
+interface Props extends PlaceableSVGProps, NarrativeStageProps {}
+
+const CulturalLandscapesGround = (props: Props): JSX.Element => {
+  return (
+    <PlaceableSVG
+      viewBoxObj={viewBox(5, -25, 1198, 141.64)}
+      {...props}
+      extraClasses={'CulturalLandscapesGround'}
+      defaultScale={1}
+    >
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="EXISTING_SECTION">
+          <g id="section">
+            <polygon
+              className="cls-1 FillGround"
+              points="0 65.1 125.83 51.45 283.48 35.26 283.48 35.26 311.33 26.32 341.3 26.68 352.04 28.11 393.62 27.93 565.13 27.93 718.05 18.41 871.9 17.94 909.56 17.83 936.15 17.37 1089.41 1.16 1203.33 0 1202.94 141.63 0 141.63 0 65.1"
+            />
+          </g>
+        </g>
+      </g>
+    </PlaceableSVG>
+  )
 }
 
 export default CulturalLandscapesGround
