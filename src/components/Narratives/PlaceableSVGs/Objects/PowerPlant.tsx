@@ -478,19 +478,19 @@ const PowerPlant = (props: PlaceableSVGProps): JSX.Element => {
               d="M76.93,62.12a.88.88,0,0,0-.68-1h-2c-.66,0-.93.3-.86,1Z"
             />
             <path
-              className="cls-32"
+              className="cls-32 DoNotFill"
               d="M45.55,56.43c7.15,9.36,28,3.51,45.57,5.9"
             />
             <path
-              className="cls-32"
+              className="cls-32 DoNotFill"
               d="M43.56,32.74C60.61,52.64,64,56,91.43,55.9"
             />
             <path
-              className="cls-32"
+              className="cls-32 DoNotFill"
               d="M11.06,32.74c14.72,30.86,41.56,23,63.8,23.16"
             />
             <path
-              className="cls-32"
+              className="cls-32 DoNotFill"
               d="M9.07,57.29c15.91,4.15,47.27,6.06,66.12,5"
             />
             <path

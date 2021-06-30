@@ -35,8 +35,8 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
         duration: 1,
         ease: 'none',
         repeat: -1,
-        paused: true
-        // strokeDashoffset: 40
+        paused: true,
+        strokeDashoffset: 40
         // x: random(0, 10)
         // repeatRefresh: true
         // transformOrigin: 'center center'

@@ -45,7 +45,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
       <SVGFrame id="UtilitySystemsTableau">
         <HeavyRain xOffset={0} yOffset={0.35} />
 
-        {/* <UtilitySystemsStormSurge /> */}
+        <UtilitySystemsStormSurge />
         <UtilitySystemsSeaLevelRise />
         <UtilitySystemsSeaLevel />
         <UtilitySystemsGround stage={narrativeStage} yOffset={0.8} />

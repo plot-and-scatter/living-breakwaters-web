@@ -56,7 +56,7 @@ const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
       )
     } else if (narrativeStage === 2) {
       const tl = new TimelineLite()
-      tl.to('.SewerSmall .Sewer line, .SewerSmall .Sewer polyline', {
+      tl.to('.Sewer line, .Sewer polyline', {
         strokeDashoffset: -40,
         duration: 1.5,
         ease: 'none',
@@ -64,7 +64,7 @@ const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
         yoyo: true,
         delay: 1
       })
-      tl.to('.SewerSmall .Sewer line, .SewerSmall .Sewer polyline', {
+      tl.to(' .Sewer line,  .Sewer polyline', {
         duration: 0.6,
         ease: Power1.easeInOut,
         repeat: -1,

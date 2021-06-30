@@ -16,7 +16,7 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
     const to = '#StormSurgeRisen'
 
     const tl = new TimelineLite()
-    tl.to(from, { y: -18, duration: 3, ease: Power2.easeIn })
+    tl.to(from, { y: -11, duration: 3, ease: Power2.easeIn })
     tl.to(
       from,
       {
@@ -69,14 +69,16 @@ const UtilitySystemsStormSurge = (): JSX.Element => {
   return (
     <g className="UtilitySystemsStormSurge">
       <path
-        d={`M-20 250 h${300} c 20 0, 8 8, 80 8 h600 v20 h-${
-          290 + 60 + 600 + 20
-        }`}
+        // d={`M-20 250 h${300} c 20 0, 8 8, 80 8 h600 v20 h-${
+        //   290 + 60 + 600 + 20
+        // }`}
+        d={`M-20 250 h${800} v20 h-${800}`}
         id="StormSurgeRisen"
         className="NoDisplay"
       />
       <path
         d={`M-20 250 h${295} a 20 10, 0, 0, 1, 10 10 v40 h-${WIDTH + 30 + 20}`}
+        className="FillRed"
         id="StormSurgeNormal"
       />
     </g>
