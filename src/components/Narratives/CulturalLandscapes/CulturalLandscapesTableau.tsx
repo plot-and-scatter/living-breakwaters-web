@@ -7,7 +7,7 @@ import Bus from '../PlaceableSVGs/Vehicles/Bus'
 import Fish from '../PlaceableSVGs/Fauna/Fish'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
 import BeachPop from './Popovers/BeachPop'
-import House1 from '../PlaceableSVGs/Buildings/House1'
+import Basement from '../PlaceableSVGs/Buildings/Basement'
 import BikePathPop from './Popovers/BikePathPop'
 import FishingPop from './Popovers/FishingPop'
 import HotelPop from './Popovers/HotelPop'
@@ -51,6 +51,8 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
         <HeavyRain xOffset={0} yOffset={0.35} />
 
         <Retail xOffset={0.84} yOffset={0.48} />
+
+        <Basement xOffset={0.7} yOffset={0.83} scale={0.17} />
 
         {/* <CulturalLandscapesStormSurge /> */}
         {/* <CulturalLandscapesSeaLevelRise /> */}
