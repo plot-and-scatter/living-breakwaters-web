@@ -3,16 +3,16 @@ import React, { useCallback } from 'react'
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
-import House1 from '../../PlaceableSVGs/Buildings/House1'
-import Basement from '../../PlaceableSVGs/Buildings/Basement'
 
-const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
+import Rowboat from '../../PlaceableSVGs/People/Rowboat'
+
+const FishingPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
     if (narrativeStage > 0 && onClick) {
-      onClick('Lorem ipsum retail')
+      onClick('Lorem ipsum fishing')
     } else {
       onClick(undefined)
     }
@@ -22,12 +22,12 @@ const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
-      <Basement scale={0.0524} xOffset={0.729} yOffset={0.768} />
-      <Textbox xOffset={0.78} yOffset={0.93} textboxWidth={90}>
-        Basement
+      <Rowboat scale={0.0524} xOffset={0.03} yOffset={0.768} />
+      <Textbox xOffset={0.075} yOffset={0.93} textboxWidth={90}>
+        Fishing
       </Textbox>
     </svg>
   )
 }
 
-export default BasementPop
+export default FishingPop

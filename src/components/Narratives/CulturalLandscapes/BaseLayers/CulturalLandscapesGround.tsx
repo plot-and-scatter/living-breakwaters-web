@@ -10,17 +10,17 @@ interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 const CulturalLandscapesGround = (props: Props): JSX.Element => {
   return (
     <PlaceableSVG
-      viewBoxObj={viewBox(5, -25, 1198, 141.64)}
+      viewBoxObj={viewBox(0, -34, 1203.33, 124.91)}
       {...props}
       extraClasses={'CulturalLandscapesGround'}
       defaultScale={1}
     >
       <g id="Layer_2" data-name="Layer 2">
-        <g id="EXISTING_SECTION">
-          <g id="section">
-            <polygon
+        <g id="FUTURE_SECTION_CLICK" data-name="FUTURE SECTION CLICK">
+          <g id="section_copy_2" data-name="section copy 2">
+            <path
               className="cls-1 FillGround"
-              points="0 65.1 125.83 51.45 283.48 35.26 283.48 35.26 311.33 26.32 341.3 26.68 352.04 28.11 393.62 27.93 565.13 27.93 718.05 18.41 871.9 17.94 909.56 17.83 936.15 17.37 1089.41 1.16 1203.33 0 1202.94 141.63 0 141.63 0 65.1"
+              d="M935.85,10l67.31,0H1045V69.85l-41.87-.06H957.23a12,12,0,0,1-12-12V31.64h-62V2.76H655l-43.93.39L552.22,4.91,349.39,9.84l-48.07,3.84-46.69,6.79-45.87,2.37L105.9,28.92,4.1,40.09H0v84.82H1202.94l.39-100.9-.07-24h-172.7l-21.8,2.76H935.87"
             />
           </g>
         </g>

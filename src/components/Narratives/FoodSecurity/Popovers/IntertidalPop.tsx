@@ -5,7 +5,6 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
 import IntertidalPlant from '../../PlaceableSVGs/Plants/IntertidalPlant'
-import FoodSecuritySaltwaterWedge from '../BaseLayers/FoodSecuritySaltwaterWedge'
 
 const IntertidalPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props

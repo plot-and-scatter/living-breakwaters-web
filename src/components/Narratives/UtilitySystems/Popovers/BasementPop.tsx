@@ -12,7 +12,7 @@ const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
 
   const onClickText = useCallback(() => {
     if (narrativeStage > 0 && onClick) {
-      onClick('Lorem ipsum retail')
+      onClick('Lorem ipsum basement')
     } else {
       onClick(undefined)
     }
