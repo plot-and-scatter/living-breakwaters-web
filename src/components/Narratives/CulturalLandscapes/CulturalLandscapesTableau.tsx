@@ -23,6 +23,8 @@ import Tree from '../PlaceableSVGs/Trees/Tree'
 import SubwayPop from './Popovers/SubwayPop'
 import TransitPop from './Popovers/TransitPop'
 import CulturalLandscapesGround from './BaseLayers/CulturalLandscapesGround'
+import CulturalLandscapesContamination from './BaseLayers/CulturalLandscapesContamination'
+import CulturalLandscapesGroundwater from './BaseLayers/CulturalLandscapesGroundwater'
 import CulturalLandscapesSeaLevel from './BaseLayers/CulturalLandscapesSeaLevel'
 import CulturalLandscapesSeaLevelRise from './BaseLayers/CulturalLandscapesSeaLevelRise'
 import CulturalLandscapesStormSurge from './BaseLayers/CulturalLandscapesStormSurge'
@@ -73,6 +75,14 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
         <CulturalLandscapesSeaLevelRise />
         <CulturalLandscapesSeaLevel />
         <CulturalLandscapesGround stage={narrativeStage} yOffset={0.8} />
+
+        <CulturalLandscapesContamination
+          stage={narrativeStage}
+          yOffset={0.817}
+        />
+
+        <CulturalLandscapesGroundwater stage={narrativeStage} yOffset={0.875} />
+
         <Birds xOffset={0.2} yOffset={0.3} />
         <FishingPop onClick={setFrameContent} />
         <IntertidalPop onClick={setFrameContent} />
