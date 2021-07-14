@@ -40,7 +40,7 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   useEffect(() => {
-    if (narrativeStage >= 1) {
+    if (narrativeStage === 1) {
       setShowRain(true)
     } else {
       setShowRain(false)

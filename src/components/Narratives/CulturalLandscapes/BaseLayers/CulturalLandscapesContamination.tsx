@@ -12,7 +12,7 @@ interface Props extends PlaceableSVGProps, NarrativeStageProps {}
 export const toggleContamination = (narrativeStage: number): void => {
   const from = '#CulturalLandscapesContamination'
   gsap.to(from, {
-    autoAlpha: narrativeStage < 1 ? 0 : 1,
+    autoAlpha: narrativeStage === 1 ? 1 : 0,
     ease: Power2.easeInOut,
     // delay: 3, // TODO: Could delay further
     duration: 1,
@@ -64,6 +64,7 @@ const CulturalLandscapesContamination = (props: Props): JSX.Element => {
         <g id="FUTURE_SECTION" data-name="FUTURE SECTION">
           <g id="section_copy" data-name="section copy">
             <path
+              opacity="0"
               id="CulturalLandscapesContamination"
               className="cls-1 FillPatternCircles"
               d="M104.73,53.19C163.5,49.37,221.22,39.06,272.09,29s218.85-12,241.43-13.7c55.75-4.11,156.3-.5,182.55-4.93C717.06,6.84,714.34,0,714.34,0H656.42L612.5.39,553.6,2.16,350.77,7.08,302.7,10.92l-50,3.92L208.24,17,0,20.53V65.92"

@@ -70,7 +70,9 @@ const CulturalLandscapesGroundwater = (props: Props): JSX.Element => {
           <g id="section_copy_2" data-name="section copy 2">
             <polygon
               id="CulturalLandscapesGroundwater"
-              className="cls-1 FillPatternSquares"
+              className="cls-1"
+              fill="#112233"
+              fillOpacity={0.2}
               points="0 136.5 736.04 136.5 944.89 136.5 893.73 77.17 853.83 52.09 805.08 16.61 739.66 3.02 655.29 0 610.33 1.4 546.02 1.74 334.24 17.77 286.72 21.48 231.38 28.93 173.47 44.07 96.3 68.57 13.53 97.85 1.91 113.75 0 136.5"
             />
           </g>
