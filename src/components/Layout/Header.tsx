@@ -7,9 +7,7 @@ interface Props {
 }
 
 const Header = ({ children }: Props): JSX.Element => {
-  return (
-    <div className="Header shadow row align-items-center py-3">{children}</div>
-  )
+  return <div className="Header shadow row align-items-center">{children}</div>
 }
 
 export default Header
