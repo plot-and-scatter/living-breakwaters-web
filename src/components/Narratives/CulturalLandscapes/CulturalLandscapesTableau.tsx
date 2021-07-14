@@ -31,6 +31,17 @@ import CulturalLandscapesStormSurge from './BaseLayers/CulturalLandscapesStormSu
 
 import '../PlaceableSVGs/Elements.scss'
 import './CulturalLandscapesTableau.scss'
+import ALink from '../../Layout/ALink'
+
+export const DEFAULT_CONTENT = (
+  <p>
+    Cultural landscapes default content.{' '}
+    <ALink external href="">
+      Sample external link
+    </ALink>
+    .
+  </p>
+)
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void

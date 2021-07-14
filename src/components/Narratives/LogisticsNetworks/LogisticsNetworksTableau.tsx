@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
+import ALink from '../../Layout/ALink'
 import Car3 from '../PlaceableSVGs/Vehicles/Car3'
 import CargoShippingPop from './Popovers/CargoShippingPop'
 import HeavyRain from '../PlaceableSVGs/HeavyRain'
@@ -17,6 +18,24 @@ import WarehousePop from './Popovers/WarehousePop'
 
 import '../PlaceableSVGs/Elements.scss'
 import './LogisticsNetworksTableau.scss'
+
+export const DEFAULT_CONTENT = (
+  <p>
+    Seaports are essential for global trade-led development: they provide access
+    to global markets and supply-chains for all countries, and are integral to
+    maritime transport, as well as fisheries, and many economic activities in
+    coastal areas. However, due to their location in low-lying estuaries and
+    deltas, ports are extremely susceptible to the impacts of rising sea levels,
+    storm surges, waves and winds, as well as tectonic events (e.g. tsunamis).{' '}
+    <ALink
+      external
+      href="https://unctad.org/news/climate-change-impacts-seaports-growing-threat-sustainable-trade-and-development"
+    >
+      Please read this recent article for more information
+    </ALink>
+    .
+  </p>
+)
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void

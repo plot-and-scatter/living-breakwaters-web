@@ -1,49 +1,63 @@
 import React, { useEffect, useState } from 'react'
 import { NarrativeType } from '../../../@types/NarrativeType'
 
+import { DEFAULT_CONTENT as CULTURAL_LANDSCAPES } from '../CulturalLandscapes/CulturalLandscapesTableau'
+import { DEFAULT_CONTENT as FOOD_SECURITY } from '../FoodSecurity/FoodSecurityTableau'
+import { DEFAULT_CONTENT as LOGISTICS_NETWORKS } from '../LogisticsNetworks/LogisticsNetworksTableau'
+import { DEFAULT_CONTENT as UTILITY_SYSTEMS } from '../UtilitySystems/UtilitySystemsTableau'
+
 import NarrativeSelect from '../NarrativeSelect'
 import Tableau from '../Tableau'
 
 import './NarrativeFrame.scss'
+import { useNarrative } from '../NarrativeContext'
 
 interface Props {
   activeNarrative: NarrativeType
 }
 
-const DEFAULT_CONTENT = (
-  <p>
-    Coastal habitats adapt to environmental and climate change, e.g., sea-level
-    rise by migrating inland to retain their relative function and structure.
-    Coastal squeeze occurs where coastal armoring or other barriers prevent this
-    natural migration creating fixed margins between the land and sea (Doody,
-    2004; Lithgow et al., 2019). Coastal squeeze may lead to the loss of
-    intertidal habitats or even entire intertidal zones. The rate at which the
-    loss takes place is dependent on factors such as the geographical formation
-    of the coast (Doody, 2004).
-  </p>
-)
+const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
+  const [frameContent, setFrameContent] = useState<React.ReactNode>()
 
-const NarrativeFrame = (props: Props): JSX.Element => {
-  const [frameContent, setFrameContent] = useState<React.ReactNode>(
-    DEFAULT_CONTENT
-  )
+  const { setNarrativeStage } = useNarrative()
 
   useEffect(() => {
-    console.log('frameContent', frameContent)
-  }, [frameContent])
+    setFrameContent(undefined)
+    setNarrativeStage(0)
+  }, [activeNarrative])
+
+  useEffect(() => {
+    console.log('frameContent', frameContent, activeNarrative)
+    if (!frameContent) {
+      switch (activeNarrative) {
+        case NarrativeType.CulturalLandscapes:
+          setFrameContent(CULTURAL_LANDSCAPES)
+          break
+        case NarrativeType.UtilitySystems:
+          setFrameContent(UTILITY_SYSTEMS)
+          break
+        case NarrativeType.FoodSecurity:
+          setFrameContent(FOOD_SECURITY)
+          break
+        case NarrativeType.LogisticsNetworks:
+          setFrameContent(LOGISTICS_NETWORKS)
+          break
+      }
+    }
+  }, [activeNarrative, frameContent])
 
   return (
     <div className="NarrativeFrame row">
       <div className="col-12">
         <Tableau
-          activeNarrative={props.activeNarrative}
+          activeNarrative={activeNarrative}
           setFrameContent={setFrameContent}
         />
       </div>
       <div className="col-6 mt-4">
-        <NarrativeSelect activeNarrative={props.activeNarrative} />
+        <NarrativeSelect activeNarrative={activeNarrative} />
       </div>
-      <div className="col-6 mt-4">{frameContent || DEFAULT_CONTENT}</div>
+      <div className="col-6 mt-4">{frameContent}</div>
     </div>
   )
 }

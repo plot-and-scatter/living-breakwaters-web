@@ -26,6 +26,26 @@ import UnirrigatedPop from './Popovers/UnirrigatedPop'
 
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
+import ALink from '../../Layout/ALink'
+
+export const DEFAULT_CONTENT = (
+  <p>
+    Currently, dikes protect many low-lying agriculture lands from sea level
+    rise and coastal flooding. However, many dikes in BC generally do not meet
+    current provincial standards. Upgrading the dikes to meet the updated
+    standards is costly, particularly where major land acquisitions would be
+    required. For more information on the assessment of the dikes in the Lower
+    Mainland,{' '}
+    <ALink
+      external
+      isPDF
+      href="https://www.fraserbasin.bc.ca/_Library/Water_Flood_Strategy/Lower_Mainland_Dike_Assessment.pdf"
+    >
+      please follow this link
+    </ALink>
+    .
+  </p>
+)
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 

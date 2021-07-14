@@ -24,6 +24,17 @@ import UtilitySystemsStormSurge from './BaseLayers/UtilitySystemsStormSurge'
 
 import '../PlaceableSVGs/Elements.scss'
 import './UtilitySystemsTableau.scss'
+import ALink from '../../Layout/ALink'
+
+export const DEFAULT_CONTENT = (
+  <p>
+    Utility systems default content.{' '}
+    <ALink external href="">
+      Sample external link
+    </ALink>
+    .
+  </p>
+)
 
 interface Props {
   setFrameContent?: (content: React.ReactNode) => void
