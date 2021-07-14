@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
 import { useRef } from 'react'
-import BikewayPop from './Popovers/BikewayPop'
+import DikePop from './Popovers/DikePop'
 import Birds from '../PlaceableSVGs/Fauna/Birds'
 import DouglasFir from '../PlaceableSVGs/Trees/DouglasFir'
 import FarmhousePop from './Popovers/FarmhousePop'
@@ -107,7 +107,7 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
 
         <IntertidalPop onClick={setFrameContent} />
 
-        <BikewayPop onClick={setFrameContent} />
+        <DikePop onClick={setFrameContent} />
         <PumpStationPop onClick={setFrameContent} />
         <IrrigationPop onClick={setFrameContent} />
         <FarmhousePop onClick={setFrameContent} />

@@ -1,24 +1,27 @@
 import React, { useCallback } from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
+import Farmhouse from '../../PlaceableSVGs/Buildings/Farmhouse'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
-import Farmhouse from '../../PlaceableSVGs/Buildings/Farmhouse'
+const STAGE_2_3_CONTENT = (
+  <p>Flooding may cause property damage to farming operations.</p>
+)
 
 const FarmhousePop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 2 && onClick) {
-      onClick('Lorem ipsum farmhouse')
-    } else {
-      onClick(undefined)
+    if (onClick) {
+      if (narrativeStage === 2 || narrativeStage === 3)
+        onClick(STAGE_2_3_CONTENT)
+      else onClick(undefined)
     }
   }, [narrativeStage, onClick])
 
-  const extraClasses = narrativeStage > 2 ? 'Red' : ''
+  const extraClasses = narrativeStage > 1 ? 'Red' : ''
 
   return (
     <>

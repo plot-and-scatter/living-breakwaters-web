@@ -6,13 +6,21 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 
 import Bicyclist from '../../PlaceableSVGs/People/Bicyclist'
 
-const BikewayPop = (props: PlaceableSVGProps): JSX.Element => {
+const STAGE_3_CONTENT = (
+  <p>
+    Without adaptation, a combination of sea level rise and storm surge events
+    will lead to dike overtopping and subsequent flooding of low-lying
+    agricultural areas in coastal floodplains.
+  </p>
+)
+
+const DikePop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 2 && onClick) {
-      onClick('Lorem ipsum bikeway')
+    if (narrativeStage === 3 && onClick) {
+      onClick(STAGE_3_CONTENT)
     } else {
       onClick(undefined)
     }
@@ -23,11 +31,11 @@ const BikewayPop = (props: PlaceableSVGProps): JSX.Element => {
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
       <Bicyclist xOffset={0.31} yOffset={0.71} />
-      <Textbox xOffset={0.325} yOffset={0.83} textboxWidth={90}>
+      <Textbox xOffset={0.325} yOffset={0.83} textboxWidth={60}>
         Dike
       </Textbox>
     </svg>
   )
 }
 
-export default BikewayPop
+export default DikePop
