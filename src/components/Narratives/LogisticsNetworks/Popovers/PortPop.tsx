@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -8,20 +8,26 @@ import Crane from '../../PlaceableSVGs/Maritime/Crane'
 import Gantry from '../../PlaceableSVGs/Maritime/Gantry'
 import CargoContainers from '../../PlaceableSVGs/Maritime/CargoContainers'
 import PortContamination from '../../PlaceableSVGs/Overlays/PortContamination'
+import Warehouse from '../../PlaceableSVGs/Buildings/Warehouse'
+
+const STAGE_2_CONTENT = (
+  <p>
+    Sea level rise and storm surges will lead to periodic overtopping and
+    flooding of port facilities. This may lead to soil, groundwater, and surface
+    water pollution, due to the spillage of wastewater, nitrogen, sulfur oxides,
+    and volatile organic compounds.
+  </p>
+)
 
 const PortPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
-  // const [showContamination, setShowContamination] = useState<boolean>(false)
-
   const onClickText = useCallback(() => {
-    if (narrativeStage > 1 && onClick) {
-      onClick('Lorem ipsum port')
-      // setShowContamination(true)
+    if (narrativeStage === 2 && onClick) {
+      onClick(STAGE_2_CONTENT)
     } else {
       onClick(undefined)
-      // setShowContamination(false)
     }
   }, [narrativeStage, onClick])
 
@@ -35,8 +41,9 @@ const PortPop = (props: PlaceableSVGProps): JSX.Element => {
       {narrativeStage >= 2 && (
         <PortContamination yOffset={0.88} extraClasses={'DoNotHighlight'} />
       )}
-      <Textbox xOffset={0.25} yOffset={0.9} textboxWidth={60}>
-        Port
+      <Warehouse xOffset={0.34} yOffset={0.77} />
+      <Textbox xOffset={0.3} yOffset={0.9} textboxWidth={120}>
+        Port Facilities
       </Textbox>
     </svg>
   )

@@ -19,12 +19,16 @@ interface Props {
 const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
   const [frameContent, setFrameContent] = useState<React.ReactNode>()
 
-  const { setNarrativeStage } = useNarrative()
+  const { narrativeStage, setNarrativeStage } = useNarrative()
 
   useEffect(() => {
     setFrameContent(undefined)
     setNarrativeStage(0)
   }, [activeNarrative])
+
+  useEffect(() => {
+    setFrameContent(undefined)
+  }, [narrativeStage])
 
   useEffect(() => {
     console.log('frameContent', frameContent, activeNarrative)

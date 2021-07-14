@@ -7,14 +7,28 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import Tree from '../../PlaceableSVGs/Trees/Tree'
 import Train from '../../PlaceableSVGs/Vehicles/Train'
 import Truck3 from '../../PlaceableSVGs/Vehicles/Truck3'
+import ALink from '../../../Layout/ALink'
 
-const RightOfWayPop = (props: PlaceableSVGProps): JSX.Element => {
+const STAGE_2_CONTENT = (
+  <p>
+    <ALink
+      external
+      href="https://www.cbc.ca/news/canada/british-columbia/vancouver-port-strike-stops-90-of-container-truck-traffic-1.2567458"
+    >
+      The 2014 Vancouver Truckers Strike
+    </ALink>{' '}
+    provided a glimpse into the future of what the impacts of supply chain
+    disruptions could mean socially and economically.
+  </p>
+)
+
+const FreightTransportPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 1 && onClick) {
-      onClick('Lorem ipsum right of way')
+    if (narrativeStage === 2 && onClick) {
+      onClick(STAGE_2_CONTENT)
     } else {
       onClick(undefined)
     }
@@ -35,4 +49,4 @@ const RightOfWayPop = (props: PlaceableSVGProps): JSX.Element => {
   )
 }
 
-export default RightOfWayPop
+export default FreightTransportPop

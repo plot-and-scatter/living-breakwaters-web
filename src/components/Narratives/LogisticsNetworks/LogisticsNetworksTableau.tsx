@@ -11,10 +11,9 @@ import Office2 from '../PlaceableSVGs/Buildings/Office2'
 import Pier from '../PlaceableSVGs/Maritime/Pier'
 import PortPop from './Popovers/PortPop'
 import RetailPop from './Popovers/RetailPop'
-import RightOfWayPop from './Popovers/RightOfWayPop'
+import FreightTransportPop from './Popovers/FreightTransportPop'
 import SVGFrame from '../Frames/SVGFrame'
 import Tree from '../PlaceableSVGs/Trees/Tree'
-import WarehousePop from './Popovers/WarehousePop'
 
 import '../PlaceableSVGs/Elements.scss'
 import './LogisticsNetworksTableau.scss'
@@ -66,8 +65,8 @@ const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
         <path className="FillGround" d="M500 261.5 l 110 -12.5 v 15 h -110" />
         <PortPop onClick={setFrameContent} />
         <CargoShippingPop onClick={setFrameContent} />
-        <WarehousePop onClick={setFrameContent} />
-        <RightOfWayPop onClick={setFrameContent} />
+        {/* <WarehousePop onClick={setFrameContent} /> */}
+        <FreightTransportPop onClick={setFrameContent} />
         <RetailPop onClick={setFrameContent} />
         <Tree xOffset={0.84} yOffset={0.71} />
       </SVGFrame>

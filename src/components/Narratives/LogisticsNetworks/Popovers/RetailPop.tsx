@@ -5,13 +5,31 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Retail from '../../PlaceableSVGs/Buildings/Retail'
 import Textbox from '../../PlaceableSVGs/Textbox'
 
+const STAGE_1_CONTENT = (
+  <p>
+    Interruptions to shipping and cargo operations may affect the availability
+    as well as the price of items in stores.
+  </p>
+)
+
+// TODO: Should this be identical?
+
+const STAGE_2_CONTENT = (
+  <p>
+    Interruptions to shipping and cargo operations will affect the availability
+    as well as the price of retail items in stores.
+  </p>
+)
+
 const RetailPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 0 && onClick) {
-      onClick('Lorem ipsum retail')
+    if (narrativeStage === 1 && onClick) {
+      onClick(STAGE_1_CONTENT)
+    } else if (narrativeStage === 2 && onClick) {
+      onClick(STAGE_2_CONTENT)
     } else {
       onClick(undefined)
     }

@@ -1,17 +1,46 @@
 import React, { useCallback } from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
+import ALink from '../../../Layout/ALink'
 import CargoShip from '../../PlaceableSVGs/Maritime/CargoShip'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
+
+const STAGE_1_CONTENT = (
+  <p>
+    Due to the interconnected nature of logistics, climate change and sea level
+    rise may impact and disrupt cargo and shipping operations to and from port
+    facilities.{' '}
+    <ALink
+      external
+      href="https://link.springer.com/article/10.1057/s41278-018-0114-z"
+    >
+      This open access article
+    </ALink>{' '}
+    discusses the impacts of disruption of European port operations to
+    non-coastal regions that connect to ports through road, rail and inland
+    waterways networks, but which rely on ports for their import or export of
+    goods.
+  </p>
+)
+
+const STAGE_2_CONTENT = (
+  <p>
+    Due to the interconnected nature of logistics, climate change and sea level
+    rise will significantly impact and disrupt cargo and shipping operations to
+    and from port facilities.
+  </p>
+)
 
 const CargoShippingPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const onClickText = useCallback(() => {
-    if (narrativeStage > 0 && onClick) {
-      onClick('Lorem ipsum shipping')
+    if (narrativeStage === 1 && onClick) {
+      onClick(STAGE_1_CONTENT)
+    } else if (narrativeStage === 2 && onClick) {
+      onClick(STAGE_2_CONTENT)
     } else {
       onClick(undefined)
     }
