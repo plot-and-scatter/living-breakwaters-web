@@ -50,14 +50,6 @@ interface Props {
 const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
-  useEffect(() => {
-    if (narrativeStage === 1) {
-      setShowRain(true)
-    } else {
-      setShowRain(false)
-    }
-  }, [narrativeStage])
-
   // TODO: Add dashed line for sea level
 
   // TODO: With rain event, animate the washing away of the intertidal
@@ -74,6 +66,14 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
   // vs. groundwater
 
   // TODO: Don't completely flood the subway
+
+  useEffect(() => {
+    if (narrativeStage == 1) {
+      setShowRain(true)
+    } else {
+      setShowRain(false)
+    }
+  }, [narrativeStage])
 
   return (
     <div className="CulturalLandscapesTableau">

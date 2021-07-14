@@ -47,6 +47,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
   useEffect(() => {
     console.log(`showRain ${showRain}`, rainfall.current)
     if (showRain) {
+      console.log('Showing rain')
       rainfall.current?.play()
       const tl = new TimelineLite().to(
         'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau, svg#CulturalLandscapes',
@@ -59,7 +60,7 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
       tl.to(rainfall.current!, { timeScale: 1, duration: 3 }, 0)
     } else {
       // Pause
-      console.log('Here I am')
+      console.log('Hiding rain')
       const tl = new TimelineLite()
       tl.to(rainfall.current!, {
         timeScale: 0,
@@ -68,7 +69,8 @@ const HeavyRain = (props: PlaceableSVGProps): JSX.Element => {
           this.pause()
         }
       })
-      tl.to('.Rainfall', { autoAlpha: 0, duration: 3 }, 0).to(
+      tl.to('.Rainfall', { autoAlpha: 0, duration: 3 }, 0)
+      tl.to(
         'svg#UtilitySystemsTableau, svg#FoodSecurityTableau, svg#LogisticsNetworksTableau, svg#CulturalLandscapes',
         {
           backgroundImage: 'linear-gradient(#fff, #fff)',

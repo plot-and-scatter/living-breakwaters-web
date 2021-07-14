@@ -19,11 +19,12 @@ interface Props {
 const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
   const [frameContent, setFrameContent] = useState<React.ReactNode>()
 
-  const { narrativeStage, setNarrativeStage } = useNarrative()
+  const { narrativeStage, setNarrativeStage, setShowRain } = useNarrative()
 
   useEffect(() => {
     setFrameContent(undefined)
     setNarrativeStage(0)
+    setShowRain(false)
   }, [activeNarrative])
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
   }, [narrativeStage])
 
   useEffect(() => {
-    console.log('frameContent', frameContent, activeNarrative)
+    // console.log('frameContent', frameContent, activeNarrative)
     if (!frameContent) {
       switch (activeNarrative) {
         case NarrativeType.CulturalLandscapes:
