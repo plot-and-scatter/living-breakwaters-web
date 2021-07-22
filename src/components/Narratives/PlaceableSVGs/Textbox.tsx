@@ -9,6 +9,8 @@ import './Textbox.scss'
 interface Props extends PlaceableSVGProps {
   children: string
   textboxWidth?: number
+  height?: number
+  fontSize?: number
 }
 
 const DEFAULT_TEXTBOX_WIDTH = 150
@@ -29,9 +31,15 @@ const Textbox = (props: Props): JSX.Element => {
           x={-(textboxWidth * 0.5)}
           y={-5}
           width={textboxWidth}
-          height={30}
+          height={props.height || 30}
         />
-        <text x={10} y={10} dy={5} dx={-10}>
+        <text
+          x={10}
+          y={10}
+          dy={5}
+          dx={-10}
+          style={{ fontSize: props.fontSize }}
+        >
           {props.children}
         </text>
       </g>

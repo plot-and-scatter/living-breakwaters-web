@@ -44,6 +44,36 @@ const addAttributionControl = (map: mapboxgl.Map) => {
 export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
   const initializeMap = (setMap: SetMapType, mapRef: MapRefType) => {
     const map = new mapboxgl.Map(buildMapOptions(mapRef))
+
+    map.on('styleimagemissing', function (e) {
+      console.log('==> e', e)
+      const id = e.id // id of the missing image
+
+      // Check if this missing icon is
+      // one this function can generate.
+      const prefix = 'square-rgb-'
+      if (id.indexOf(prefix) !== 0) return
+
+      // Get the color from the id.
+      const rgb = id.replace(prefix, '').split(',').map(Number)
+
+      const width = 64 // The image will be 64 pixels square.
+      const bytesPerPixel = 4 // Each pixel is represented by 4 bytes: red, green, blue, and alpha.
+      const data = new Uint8Array(width * width * bytesPerPixel)
+
+      for (let x = 0; x < width; x++) {
+        for (let y = 0; y < width; y += 2) {
+          const offset = (y * width + x) * bytesPerPixel
+          data[offset + 0] = rgb[0] // red
+          data[offset + 1] = rgb[1] // green
+          data[offset + 2] = rgb[2] // blue
+          data[offset + 3] = 255 // alpha
+        }
+      }
+
+      map.addImage(id, { width: width, height: width, data: data })
+    })
+
     // addNavControl(map)
     addAttributionControl(map)
     map.on('load', () => {
@@ -100,6 +130,7 @@ export const addInitialLayerToMap = (map: MapType, layer: MapLayer): void => {
     if (type === 'fill') {
       paint[`fill-outline-color`] = layerToAdd.color
       if (layerToAdd[`fill-pattern`]) {
+        console.log('inHere', layerToAdd)
         paint[`fill-pattern`] = layerToAdd[`fill-pattern`]
       }
     }

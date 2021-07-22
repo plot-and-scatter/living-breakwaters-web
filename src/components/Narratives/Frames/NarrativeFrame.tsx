@@ -59,10 +59,17 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
           setFrameContent={setFrameContent}
         />
       </div>
-      <div className="col-6 mt-4">
+      <div className="col-6 offset-3 mt-3">
         <NarrativeSelect activeNarrative={activeNarrative} />
       </div>
-      <div className="col-6 mt-4">{frameContent}</div>
+      <div className="FrameContent rounded shadow col-6 mt-4">
+        {frameContent}
+        <div className="d-flex justify-content-between mb-1">
+          <div>&larr; Previous state</div>
+          <div>Next state &rarr;</div>
+        </div>
+      </div>
+      <div className="Line"></div>
     </div>
   )
 }

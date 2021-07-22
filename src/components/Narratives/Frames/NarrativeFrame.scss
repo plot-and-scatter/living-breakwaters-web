@@ -1,3 +1,33 @@
 .NarrativeFrame {
   font-size: 90%;
 }
+
+.FrameContent {
+  position: fixed;
+  top: 150px;
+  left: 80px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 13px !important;
+  border: solid 1px red;
+  h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  p {
+    font-size: 14px;
+  }
+  > .d-flex {
+    color: #444;
+  }
+}
+
+.Line {
+  position: fixed;
+  top: 444px;
+  left: 80px + 150px;
+  border-left: solid 1px red;
+  width: 0px;
+  height: 197px;
+}

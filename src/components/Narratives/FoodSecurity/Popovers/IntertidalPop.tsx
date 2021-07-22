@@ -8,18 +8,21 @@ import IntertidalPlant from '../../PlaceableSVGs/Plants/IntertidalPlant'
 import ALink from '../../../Layout/ALink'
 
 const STAGE_1_CONTENT = (
-  <p>
-    As sea level rises, coastal ecosystems are not able to migrate landwards due
-    to the presence of dikes, causing what is called “coastal habitat squeeze.”
-    These coastal ecosystems provide critical habitat for fish and migratory
-    birds, as well as coastal livelihoods.{' '}
-    <ALink
-      external
-      href="https://thenarwhal.ca/bc-climate-salt-marsh-sea-level-rise-fraser-delta/"
-    >
-      For more information, please visit a link to this recent news article.
-    </ALink>
-  </p>
+  <>
+    <h2>Intertidal</h2>
+    <p>
+      As sea level rises, coastal ecosystems are not able to migrate landwards
+      due to the presence of dikes, causing what is called “coastal habitat
+      squeeze.” These coastal ecosystems provide critical habitat for fish and
+      migratory birds, as well as coastal livelihoods.{' '}
+      <ALink
+        external
+        href="https://thenarwhal.ca/bc-climate-salt-marsh-sea-level-rise-fraser-delta/"
+      >
+        For more information, please visit a link to this recent news article.
+      </ALink>
+    </p>
+  </>
 )
 
 const STAGE_2_3_CONTENT = (

@@ -5,7 +5,8 @@
     "color": "#754634",
     "opacity": 0.6,
     "type": "fill",
-    "grouping": "land_uses"
+    "grouping": "land_uses",
+    "fill-pattern": "square-rgb-255,40,50"
   },
   "airport": {
     "name": "Airports",
@@ -217,7 +218,8 @@
     "color": "#51BBDE",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "flood_scenarios"
+    "grouping": "flood_scenarios",
+    "fill-pattern": "square-rgb-150,170,190"
   },
   "scenario_d": {
     "name": "Riverine: Fraser River 1 in 500 Year Flood +1m Sea Level Rise",

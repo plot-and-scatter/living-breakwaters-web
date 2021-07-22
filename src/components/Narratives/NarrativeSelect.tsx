@@ -50,7 +50,7 @@ const NarrativeSelect = ({
     <div className="NarrativeSelect">
       {!isCompact && (
         <>
-          <h4>Show what happens with...</h4>
+          <h4 className="mb-0">Show what happens with...</h4>
         </>
       )}
       <NarrativeInput

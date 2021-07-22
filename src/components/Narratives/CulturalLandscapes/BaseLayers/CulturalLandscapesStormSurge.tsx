@@ -40,6 +40,15 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
       duration: 3,
       ease: Power2.easeInOut
     })
+
+    // gsap.to('.Rowboat > g', {
+    //   y: -10,
+    //   repeat: -1,
+    //   yoyo: true,
+    //   duration: 3,
+    //   delay: 0.5,
+    //   ease: Power2.easeInOut
+    // })
   } else {
     const from = '#StormSurgeNormal'
     const to = '#StormSurgeNormal'
@@ -54,6 +63,9 @@ export const toggleSeaLevelRise = (narrativeStage: number): void => {
       duration: 1
     })
     tl.to(from, { y: 0, duration: 2 }, '>-0.5')
+    // gsap.to('.Rowboat > g', {
+    //   y: 0
+    // })
   }
 
   // tl.to(from, { rotate: -1 })
@@ -74,6 +86,14 @@ const CulturalLandscapesStormSurge = (): JSX.Element => {
         // }`}
         d={`M-20 250 h${800} v60 h-${800}`}
         id="StormSurgeRisen"
+        className="NoDisplay"
+      />
+      <path
+        // d={`M-20 250 h${300} c 20 0, 8 8, 80 8 h600 v20 h-${
+        //   290 + 60 + 600 + 20
+        // }`}
+        d={`M-20 250 h${620} l 40 30 h100 v30 h-${800}`}
+        id="StormSurgeRising"
         className="NoDisplay"
       />
       <path

@@ -20,7 +20,7 @@ const FishingPop = (props: PlaceableSVGProps): JSX.Element => {
 
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
-  const offset = narrativeStage == 2 ? -0.02 : narrativeStage === 3 ? -0.035 : 0
+  const offset = narrativeStage === 2 ? -0.02 : narrativeStage === 3 ? -0.02 : 0
 
   return (
     <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
