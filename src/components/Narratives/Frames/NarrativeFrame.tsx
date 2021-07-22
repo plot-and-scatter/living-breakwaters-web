@@ -24,7 +24,7 @@ interface Props {
 
 const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
   const [contentKey, setContentKey] = useState<string>()
-  const [left, setLeft] = useState<number>(0)
+  const [left, setLeft] = useState<number>()
   const [content, setContent] = useState<React.ReactNode>()
 
   const { narrativeStage, setNarrativeStage, setShowRain } = useNarrative()
@@ -59,7 +59,7 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
     setContent(undefined)
     setContentKey(undefined)
     setNarrativeStage(0)
-    setLeft(0)
+    setLeft(undefined)
     setShowRain(false)
   }, [activeNarrative])
 
@@ -71,20 +71,20 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
     console.log('====> contentKey', contentKey)
     let content
     if (!contentKey) {
-      switch (activeNarrative) {
-        case NarrativeType.CulturalLandscapes:
-          content = CULTURAL_LANDSCAPES
-          break
-        case NarrativeType.UtilitySystems:
-          content = UTILITY_SYSTEMS
-          break
-        case NarrativeType.FoodSecurity:
-          content = FOOD_SECURITY
-          break
-        case NarrativeType.LogisticsNetworks:
-          content = LOGISTICS_NETWORKS
-          break
-      }
+      // switch (activeNarrative) {
+      //   case NarrativeType.CulturalLandscapes:
+      //     content = CULTURAL_LANDSCAPES
+      //     break
+      //   case NarrativeType.UtilitySystems:
+      //     content = UTILITY_SYSTEMS
+      //     break
+      //   case NarrativeType.FoodSecurity:
+      //     content = FOOD_SECURITY
+      //     break
+      //   case NarrativeType.LogisticsNetworks:
+      //     content = LOGISTICS_NETWORKS
+      //     break
+      // }
     } else {
       switch (activeNarrative) {
         case NarrativeType.CulturalLandscapes:
@@ -118,7 +118,12 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
       <div className="col-6 offset-3 mt-3">
         <NarrativeSelect activeNarrative={activeNarrative} />
       </div>
-      <NarrativePopup left={left} content={content} contentKey={contentKey} />
+      <NarrativePopup
+        left={left}
+        content={content}
+        contentKey={contentKey}
+        setContentKey={setContentKey}
+      />
     </div>
   )
 }
