@@ -1,80 +1,124 @@
 import React, { useEffect, useState } from 'react'
 import { NarrativeType } from '../../../@types/NarrativeType'
 
+import { CulturalLandscapesPopupDictionary } from '../CulturalLandscapes/CulturalLandscapesPopupDictionary'
 import { DEFAULT_CONTENT as CULTURAL_LANDSCAPES } from '../CulturalLandscapes/CulturalLandscapesTableau'
 import { DEFAULT_CONTENT as FOOD_SECURITY } from '../FoodSecurity/FoodSecurityTableau'
 import { DEFAULT_CONTENT as LOGISTICS_NETWORKS } from '../LogisticsNetworks/LogisticsNetworksTableau'
 import { DEFAULT_CONTENT as UTILITY_SYSTEMS } from '../UtilitySystems/UtilitySystemsTableau'
-
+import { FoodSecurityPopupDictionary } from '../FoodSecurity/FoodSecurityPopupDictionary'
+import { LogisticsNetworksPopupDictionary } from '../LogisticsNetworks/LogisticsNetworksPopupDictionary'
+import { useCallback } from 'react'
+import { useNarrative } from '../NarrativeContext'
+import { UtilitySystemsPopupDictionary } from '../UtilitySystems/UtilitySystemsPopupDictionary'
+import FixTypeLater from '../../../@types/FixTypeLater'
+import NarrativePopup from './NarrativePopup'
 import NarrativeSelect from '../NarrativeSelect'
 import Tableau from '../Tableau'
 
 import './NarrativeFrame.scss'
-import { useNarrative } from '../NarrativeContext'
 
 interface Props {
   activeNarrative: NarrativeType
 }
 
 const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
-  const [activeFrameContentKey, setActiveFrameContentKey] = useState<string>()
-
-  const [frameContent, setFrameContent] = useState<{
-    content: React.ReactNode
-    left: number
-  }>()
+  const [contentKey, setContentKey] = useState<string>()
+  const [left, setLeft] = useState<number>(0)
+  const [content, setContent] = useState<React.ReactNode>()
 
   const { narrativeStage, setNarrativeStage, setShowRain } = useNarrative()
 
+  // useEffect(() => {
+  //   console.log('contentKey', contentKey)
+  //   if (contentKey && contentKey.event) {
+  //     const e = contentKey.event
+  //     const target = e.target
+  //     const popoverParent = e.target.closest('.Popover')
+  //     const textbox = popoverParent.querySelector('.Textbox text')
+  //     console.log('e', target, textbox.getBoundingClientRect())
+  //   }
+  // }, [contentKey])
+
+  const popoverClick = useCallback((event: Event, contentKey: string) => {
+    console.log('event', event)
+    console.log('contentKey', contentKey)
+    if (contentKey && event) {
+      const e: FixTypeLater = event
+      e.persist()
+      const popoverParent = e.target.closest('.Popover')
+      const textbox = popoverParent.querySelector('.Textbox text')
+      const bbox = textbox.getBoundingClientRect()
+      // console.log('e', target, textbox.getBoundingClientRect())
+      setLeft(bbox.x + bbox.width / 2)
+      setContentKey(contentKey)
+    }
+  }, [])
+
   useEffect(() => {
-    setFrameContent(undefined)
+    setContent(undefined)
+    setContentKey(undefined)
     setNarrativeStage(0)
+    setLeft(0)
     setShowRain(false)
   }, [activeNarrative])
 
-  useEffect(() => {
-    setFrameContent(undefined)
-  }, [narrativeStage])
+  // useEffect(() => {
+  //   setContent(undefined)
+  // }, [narrativeStage])
 
   useEffect(() => {
-    // console.log('frameContent', frameContent, activeNarrative)
-    if (!frameContent) {
+    console.log('====> contentKey', contentKey)
+    let content
+    if (!contentKey) {
       switch (activeNarrative) {
         case NarrativeType.CulturalLandscapes:
-          setFrameContent(CULTURAL_LANDSCAPES)
+          content = CULTURAL_LANDSCAPES
           break
         case NarrativeType.UtilitySystems:
-          setFrameContent(UTILITY_SYSTEMS)
+          content = UTILITY_SYSTEMS
           break
         case NarrativeType.FoodSecurity:
-          setFrameContent(FOOD_SECURITY)
+          content = FOOD_SECURITY
           break
         case NarrativeType.LogisticsNetworks:
-          setFrameContent(LOGISTICS_NETWORKS)
+          content = LOGISTICS_NETWORKS
+          break
+      }
+    } else {
+      switch (activeNarrative) {
+        case NarrativeType.CulturalLandscapes:
+          content =
+            CulturalLandscapesPopupDictionary[contentKey][narrativeStage]
+
+          break
+        case NarrativeType.UtilitySystems:
+          content = UtilitySystemsPopupDictionary[contentKey][narrativeStage]
+          break
+        case NarrativeType.FoodSecurity:
+          content = FoodSecurityPopupDictionary[contentKey][narrativeStage]
+          break
+        case NarrativeType.LogisticsNetworks:
+          content = LogisticsNetworksPopupDictionary[contentKey][narrativeStage]
+
           break
       }
     }
-  }, [activeNarrative, frameContent])
+    setContent(content)
+  }, [activeNarrative, contentKey, narrativeStage])
 
   return (
     <div className="NarrativeFrame row">
       <div className="col-12">
         <Tableau
           activeNarrative={activeNarrative}
-          setFrameContent={setFrameContent}
+          popoverClick={popoverClick}
         />
       </div>
       <div className="col-6 offset-3 mt-3">
         <NarrativeSelect activeNarrative={activeNarrative} />
       </div>
-      <div className="FrameContent rounded shadow col-6 mt-4">
-        {frameContent}
-        <div className="d-flex justify-content-between mb-1">
-          <div>&larr; Previous state</div>
-          <div>Next state &rarr;</div>
-        </div>
-      </div>
-      <div className="Line"></div>
+      <NarrativePopup left={left} content={content} contentKey={contentKey} />
     </div>
   )
 }

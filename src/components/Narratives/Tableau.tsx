@@ -10,27 +10,27 @@ import './Tableau.scss'
 
 interface Props {
   activeNarrative: NarrativeType
-  setFrameContent?: (content: React.ReactNode) => void
+  popoverClick?: (e: Event, contentKey: string) => void
 }
 
-const Tableau = ({ activeNarrative, setFrameContent }: Props): JSX.Element => {
+const Tableau = ({ activeNarrative, popoverClick }: Props): JSX.Element => {
   let tableau
 
   switch (activeNarrative) {
     case NarrativeType.LogisticsNetworks:
-      tableau = <LogisticsNetworksTableau setFrameContent={setFrameContent} />
+      tableau = <LogisticsNetworksTableau popoverClick={popoverClick} />
       break
     case NarrativeType.CulturalLandscapes:
-      tableau = <CulturalLandscapesTableau setFrameContent={setFrameContent} />
+      tableau = <CulturalLandscapesTableau popoverClick={popoverClick} />
       break
     case NarrativeType.UtilitySystems:
-      tableau = <UtilitySystemsTableau setFrameContent={setFrameContent} />
+      tableau = <UtilitySystemsTableau popoverClick={popoverClick} />
       break
     case NarrativeType.FoodSecurity:
-      tableau = <FoodSecurityTableau setFrameContent={setFrameContent} />
+      tableau = <FoodSecurityTableau popoverClick={popoverClick} />
       break
     default:
-      tableau = <FoodSecurityTableau setFrameContent={setFrameContent} />
+      tableau = <FoodSecurityTableau popoverClick={popoverClick} />
   }
 
   return <div className="Tableau">{tableau}</div>

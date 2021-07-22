@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 
 import { useEffect } from 'react'
 import { useNarrative } from '../../NarrativeContext'
@@ -40,18 +40,9 @@ export const contentMap = {
 }
 
 const PumpStationPop = (props: PlaceableSVGProps): JSX.Element => {
-  const { onClick } = props
   const { narrativeStage } = useNarrative()
 
   const rotateGear = useRef<gsap.core.Tween>()
-
-  const onClickText = useCallback(() => {
-    if (onClick) {
-      if (narrativeStage === 2) onClick(STAGE_2_CONTENT)
-      else if (narrativeStage === 3) onClick(STAGE_3_CONTENT)
-      else onClick(undefined)
-    }
-  }, [narrativeStage, onClick])
 
   useEffect(() => {
     rotateGear.current = gsap
@@ -90,7 +81,7 @@ const PumpStationPop = (props: PlaceableSVGProps): JSX.Element => {
   const extraClasses = narrativeStage > 1 ? 'Red' : ''
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+    <svg className={`Popover ${extraClasses}`} onClick={props.onClick}>
       <NewPumpStation xOffset={0.268} yOffset={0.7525} />
       <Gear xOffset={0.3315} yOffset={0.753} />
       <Textbox xOffset={0.325} yOffset={0.9} textboxWidth={130}>

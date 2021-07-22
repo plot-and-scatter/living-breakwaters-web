@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -27,24 +27,13 @@ export const contentMap = {
 }
 
 const RetailPop = (props: PlaceableSVGProps): JSX.Element => {
-  const { onClick } = props
   const { narrativeStage } = useNarrative()
-
-  const onClickText = useCallback(() => {
-    if (narrativeStage === 1 && onClick) {
-      onClick(STAGE_1_CONTENT)
-    } else if (narrativeStage === 2 && onClick) {
-      onClick(STAGE_2_CONTENT)
-    } else {
-      onClick(undefined)
-    }
-  }, [narrativeStage, onClick])
 
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
   return (
     <>
-      <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+      <svg className={`Popover ${extraClasses}`} onClick={props.onClick}>
         <Retail
           xOffset={0.88}
           yOffset={0.495}

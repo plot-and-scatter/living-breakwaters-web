@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -29,20 +29,12 @@ export const contentMap = {
 }
 
 const UnirrigatedPop = (props: PlaceableSVGProps): JSX.Element => {
-  const { onClick } = props
   const { narrativeStage } = useNarrative()
-
-  const onClickText = useCallback(() => {
-    if (narrativeStage === 1) onClick(STAGE_2_CONTENT)
-    else if (narrativeStage === 2 || narrativeStage === 3)
-      onClick(STAGE_3_CONTENT)
-    else onClick(undefined)
-  }, [narrativeStage, onClick])
 
   const extraClasses = narrativeStage > 2 ? 'Red' : ''
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+    <svg className={`Popover ${extraClasses}`} onClick={props.onClick}>
       <Bush1 xOffset={0.9} yOffset={0.741} />
       <Bush1 xOffset={0.92} yOffset={0.741} />
       <Bush1 xOffset={0.94} yOffset={0.741} />

@@ -27,6 +27,7 @@ import UnirrigatedPop from './Popovers/UnirrigatedPop'
 import '../PlaceableSVGs/Elements.scss'
 import './FoodSecurityTableau.scss'
 import ALink from '../../Layout/ALink'
+import { FoodSecurityPopupKey as PKey } from './FoodSecurityPopupDictionary'
 
 export const DEFAULT_CONTENT = (
   <p>
@@ -50,10 +51,10 @@ export const DEFAULT_CONTENT = (
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
 
 interface Props {
-  setFrameContent?: (content: React.ReactNode) => void
+  popoverClick?: (e: Event, contentKey: string) => void
 }
 
-const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
+const FoodSecurityTableau = ({ popoverClick }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   // useEffect(() => {
@@ -105,14 +106,13 @@ const FoodSecurityTableau = ({ setFrameContent }: Props): JSX.Element => {
 
         <FoodSecuritySaltwaterWedge stage={narrativeStage} />
 
-        <IntertidalPop onClick={setFrameContent} />
-
-        <DikePop onClick={setFrameContent} />
-        <PumpStationPop onClick={setFrameContent} />
-        <IrrigationPop onClick={setFrameContent} />
-        <FarmhousePop onClick={setFrameContent} />
-        <LogisticsPop onClick={setFrameContent} />
-        <UnirrigatedPop onClick={setFrameContent} />
+        <IntertidalPop onClick={(e) => popoverClick(e, PKey.Intertidal)} />
+        <DikePop onClick={(e) => popoverClick(e, PKey.Dike)} />
+        <PumpStationPop onClick={(e) => popoverClick(e, PKey.PumpStation)} />
+        <IrrigationPop onClick={(e) => popoverClick(e, PKey.Irrigation)} />
+        <FarmhousePop onClick={(e) => popoverClick(e, PKey.Farmhouse)} />
+        <LogisticsPop onClick={(e) => popoverClick(e, PKey.Logistics)} />
+        <UnirrigatedPop onClick={(e) => popoverClick(e, PKey.Unirrigated)} />
       </SVGFrame>
     </div>
   )

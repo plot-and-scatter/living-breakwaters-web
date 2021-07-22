@@ -25,6 +25,7 @@ import UtilitySystemsStormSurge from './BaseLayers/UtilitySystemsStormSurge'
 import '../PlaceableSVGs/Elements.scss'
 import './UtilitySystemsTableau.scss'
 import ALink from '../../Layout/ALink'
+import { UtilitySystemsPopupKey as PKey } from './UtilitySystemsPopupDictionary'
 
 export const DEFAULT_CONTENT = (
   <p>
@@ -37,10 +38,10 @@ export const DEFAULT_CONTENT = (
 )
 
 interface Props {
-  setFrameContent?: (content: React.ReactNode) => void
+  popoverClick?: (e: Event, contentKey: string) => void
 }
 
-const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
+const UtilitySystemsTableau = ({ popoverClick }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   useEffect(() => {
@@ -64,14 +65,18 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Fish xOffset={0.04} yOffset={0.8} />
         <Birds xOffset={0.2} yOffset={0.3} />
 
-        <OutflowPop onClick={setFrameContent} />
-        <TreatmentPlantPop onClick={setFrameContent} />
-        <PowerStationPop onClick={setFrameContent} />
+        <OutflowPop onClick={(e) => popoverClick(e, PKey.Outflow)} />
+        <TreatmentPlantPop
+          onClick={(e) => popoverClick(e, PKey.TreatmentPlant)}
+        />
+        <PowerStationPop onClick={(e) => popoverClick(e, PKey.PowerStation)} />
 
-        <SchoolPop onClick={setFrameContent} />
-        <BasementPop onClick={setFrameContent} />
-        <HospitalPop onClick={setFrameContent} />
-        <UndergroundParkingPop onClick={setFrameContent} />
+        <SchoolPop onClick={(e) => popoverClick(e, PKey.School)} />
+        <BasementPop onClick={(e) => popoverClick(e, PKey.Basement)} />
+        <HospitalPop onClick={(e) => popoverClick(e, PKey.Hospital)} />
+        <UndergroundParkingPop
+          onClick={(e) => popoverClick(e, PKey.UndergroundParking)}
+        />
 
         <Tree xOffset={0.425} yOffset={0.7} scale={0.04} />
         <Tree xOffset={0.425 + 0.03} yOffset={0.7} scale={0.04} />
@@ -90,7 +95,7 @@ const UtilitySystemsTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Tree xOffset={0.86} yOffset={0.66} scale={0.04} />
         <Tree xOffset={0.86 + 0.03} yOffset={0.65} scale={0.04} />
 
-        <SewageBackupPop onClick={setFrameContent} />
+        <SewageBackupPop onClick={(e) => popoverClick(e, PKey.SewageBackup)} />
       </SVGFrame>
     </div>
   )

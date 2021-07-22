@@ -17,6 +17,7 @@ import Tree from '../PlaceableSVGs/Trees/Tree'
 
 import '../PlaceableSVGs/Elements.scss'
 import './LogisticsNetworksTableau.scss'
+import { LogisticsNetworksPopupKey as PKey } from './LogisticsNetworksPopupDictionary'
 
 export const DEFAULT_CONTENT = (
   <p>
@@ -37,10 +38,10 @@ export const DEFAULT_CONTENT = (
 )
 
 interface Props {
-  setFrameContent?: (content: React.ReactNode) => void
+  popoverClick?: (e: Event, contentKey: string) => void
 }
 
-const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
+const LogisticsNetworksTableau = ({ popoverClick }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   useEffect(() => {
@@ -63,11 +64,16 @@ const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Tree xOffset={0.745} yOffset={0.71} />
         <Car3 xOffset={0.8} yOffset={0.75} />
         <path className="FillGround" d="M500 261.5 l 110 -12.5 v 15 h -110" />
-        <PortFacilitiesPop onClick={setFrameContent} />
-        <CargoShippingPop onClick={setFrameContent} />
-        {/* <WarehousePop onClick={setFrameContent} /> */}
-        <FreightTransportPop onClick={setFrameContent} />
-        <RetailPop onClick={setFrameContent} />
+        <PortFacilitiesPop
+          onClick={(e) => popoverClick(e, PKey.PortFacilities)}
+        />
+        <CargoShippingPop
+          onClick={(e) => popoverClick(e, PKey.CargoShipping)}
+        />
+        <FreightTransportPop
+          onClick={(e) => popoverClick(e, PKey.FreightTransport)}
+        />
+        <RetailPop onClick={(e) => popoverClick(e, PKey.Retail)} />
         <Tree xOffset={0.84} yOffset={0.71} />
       </SVGFrame>
     </div>

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -8,21 +8,18 @@ import IntertidalPlant from '../../PlaceableSVGs/Plants/IntertidalPlant'
 import ALink from '../../../Layout/ALink'
 
 const STAGE_1_CONTENT = (
-  <>
-    <h2>Intertidal</h2>
-    <p>
-      As sea level rises, coastal ecosystems are not able to migrate landwards
-      due to the presence of dikes, causing what is called “coastal habitat
-      squeeze.” These coastal ecosystems provide critical habitat for fish and
-      migratory birds, as well as coastal livelihoods.{' '}
-      <ALink
-        external
-        href="https://thenarwhal.ca/bc-climate-salt-marsh-sea-level-rise-fraser-delta/"
-      >
-        For more information, please visit a link to this recent news article.
-      </ALink>
-    </p>
-  </>
+  <p>
+    As sea level rises, coastal ecosystems are not able to migrate landwards due
+    to the presence of dikes, causing what is called “coastal habitat squeeze.”
+    These coastal ecosystems provide critical habitat for fish and migratory
+    birds, as well as coastal livelihoods.{' '}
+    <ALink
+      external
+      href="https://thenarwhal.ca/bc-climate-salt-marsh-sea-level-rise-fraser-delta/"
+    >
+      For more information, please visit a link to this recent news article.
+    </ALink>
+  </p>
 )
 
 const STAGE_2_3_CONTENT = (
@@ -40,27 +37,13 @@ export const contentMap = {
 }
 
 const IntertidalPop = (props: PlaceableSVGProps): JSX.Element => {
-  const { onClick } = props
   const { narrativeStage } = useNarrative()
-
-  const onClickText = useCallback(
-    (e) => {
-      if (narrativeStage === 1 && onClick) {
-        onClick(STAGE_1_CONTENT)
-      } else if ((narrativeStage === 2 || narrativeStage === 3) && onClick) {
-        onClick(STAGE_2_3_CONTENT)
-      } else {
-        onClick(undefined)
-      }
-    },
-    [narrativeStage, onClick]
-  )
 
   const extraClasses = narrativeStage >= 1 ? 'Red' : ''
 
   return (
     <>
-      <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+      <svg className={`Popover ${extraClasses}`} onClick={props.onClick}>
         <svg>
           <clipPath id="myClip">
             <path

@@ -1,37 +1,35 @@
 import React, { useEffect } from 'react'
 
 import { useNarrative } from '../NarrativeContext'
+import ALink from '../../Layout/ALink'
 import ArchaeologyPop from './Popovers/ArchaeologyPop'
-import Birds from '../PlaceableSVGs/Fauna/Birds'
-import Bus from '../PlaceableSVGs/Vehicles/Bus'
-import Fish from '../PlaceableSVGs/Fauna/Fish'
-import HeavyRain from '../PlaceableSVGs/HeavyRain'
-import BeachPop from './Popovers/BeachPop'
 import Basement from '../PlaceableSVGs/Buildings/Basement'
+import BeachPop from './Popovers/BeachPop'
 import BikePathPop from './Popovers/BikePathPop'
-import FishingPop from './Popovers/FishingPop'
-import HotelPop from './Popovers/HotelPop'
-import IntertidalPop from './Popovers/IntertidalPop'
-import SVGFrame from '../Frames/SVGFrame'
-import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
-
-import Midrise from '../PlaceableSVGs/Buildings/Midrise'
-import Office3 from '../PlaceableSVGs/Buildings/Office3'
-import ParkPop from './Popovers/ParkPop'
-import Retail from '../PlaceableSVGs/Buildings/Retail'
-import Tree from '../PlaceableSVGs/Trees/Tree'
-import SubwayPop from './Popovers/SubwayPop'
-import TransitPop from './Popovers/TransitPop'
-import CulturalLandscapesGround from './BaseLayers/CulturalLandscapesGround'
+import Birds from '../PlaceableSVGs/Fauna/Birds'
 import CulturalLandscapesContamination from './BaseLayers/CulturalLandscapesContamination'
+import CulturalLandscapesGround from './BaseLayers/CulturalLandscapesGround'
 import CulturalLandscapesGroundwater from './BaseLayers/CulturalLandscapesGroundwater'
 import CulturalLandscapesSeaLevel from './BaseLayers/CulturalLandscapesSeaLevel'
 import CulturalLandscapesSeaLevelRise from './BaseLayers/CulturalLandscapesSeaLevelRise'
 import CulturalLandscapesStormSurge from './BaseLayers/CulturalLandscapesStormSurge'
+import FishingPop from './Popovers/FishingPop'
+import HeavyRain from '../PlaceableSVGs/HeavyRain'
+import HotelPop from './Popovers/HotelPop'
+import IntertidalPop from './Popovers/IntertidalPop'
+import Midrise from '../PlaceableSVGs/Buildings/Midrise'
+import Office3 from '../PlaceableSVGs/Buildings/Office3'
+import ParkPop from './Popovers/ParkPop'
+import Retail from '../PlaceableSVGs/Buildings/Retail'
+import SubwayPop from './Popovers/SubwayPop'
+import SVGFrame from '../Frames/SVGFrame'
+import TrafficLight from '../PlaceableSVGs/Objects/TrafficLight'
+import TransitPop from './Popovers/TransitPop'
+import Tree from '../PlaceableSVGs/Trees/Tree'
 
 import '../PlaceableSVGs/Elements.scss'
 import './CulturalLandscapesTableau.scss'
-import ALink from '../../Layout/ALink'
+import { CulturalLandscapesPopupKey as PKey } from './CulturalLandscapesPopupDictionary'
 
 export const DEFAULT_CONTENT = (
   <p>
@@ -44,18 +42,13 @@ export const DEFAULT_CONTENT = (
 )
 
 interface Props {
-  setFrameContent?: (content: React.ReactNode) => void
+  popoverClick?: (e: Event, contentKey: string) => void
 }
 
-const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
+const CulturalLandscapesTableau = ({ popoverClick }: Props): JSX.Element => {
   const { narrativeStage, setShowRain } = useNarrative()
 
   // TODO: Add dashed line for sea level
-
-  // TODO: With rain event, animate the washing away of the intertidal
-  // area into the water
-
-  // TODO: Maybe with rain event, particles come from the bus / transit area too
 
   // TODO: With sea level rise, animate up the dashed line to match the new
   // sea level (or show another sea level); show there are changes to the
@@ -95,27 +88,18 @@ const CulturalLandscapesTableau = ({ setFrameContent }: Props): JSX.Element => {
         <CulturalLandscapesGroundwater stage={narrativeStage} yOffset={0.875} />
 
         <Birds xOffset={0.2} yOffset={0.3} />
-        <FishingPop onClick={setFrameContent} />
-        <IntertidalPop onClick={setFrameContent} />
-        <BeachPop onClick={setFrameContent} />
-        <BikePathPop onClick={setFrameContent} />
-        <ArchaeologyPop onClick={setFrameContent} />
-        <ParkPop onClick={setFrameContent} />
-        <TransitPop onClick={setFrameContent} />
-        <HotelPop onClick={setFrameContent} />
+        <FishingPop onClick={(e) => popoverClick(e, PKey.Fishing)} />
+        <IntertidalPop onClick={(e) => popoverClick(e, PKey.Intertidal)} />
+        <BeachPop onClick={(e) => popoverClick(e, PKey.Beach)} />
+        <BikePathPop onClick={(e) => popoverClick(e, PKey.BikePath)} />
+        <ArchaeologyPop onClick={(e) => popoverClick(e, PKey.Archaeology)} />
+        <ParkPop onClick={(e) => popoverClick(e, PKey.Park)} />
+        <TransitPop onClick={(e) => popoverClick(e, PKey.Transit)} />
+        <HotelPop onClick={(e) => popoverClick(e, PKey.Hotel)} />
         <Office3 xOffset={0.72} yOffset={0.59} />
-        <SubwayPop onClick={setFrameContent} />
-        {/* <Tree xOffset={0.425} yOffset={0.7} scale={0.04} /> */}
-        {/* <Tree xOffset={0.425 + 0.03} yOffset={0.7} scale={0.04} /> */}
-        {/* <Tree xOffset={0.58} yOffset={0.685} scale={0.04} /> */}
-        {/* <Tree xOffset={0.58 + 0.03} yOffset={0.685} scale={0.04} /> */}
+        <SubwayPop onClick={(e) => popoverClick(e, PKey.Subway)} />
         <TrafficLight scale={0.03} xOffset={0.53} yOffset={0.672} />
-        {/* <Tree xOffset={0.69} yOffset={0.685} scale={0.04} /> */}
         <Tree xOffset={0.585} yOffset={0.688} scale={0.04} />
-        {/* <House1 scale={0.06} xOffset={0.725} yOffset={0.685} /> */}
-        {/* <House1 scale={0.06} xOffset={0.82} yOffset={0.67} /> */}
-        {/* <path className="FillGround" d="M655 233 l 50 -4.5 v 5 h -50" /> */}
-        {/* <House1 scale={0.06} xOffset={0.905} yOffset={0.647} /> */}
         <Tree xOffset={0.775} yOffset={0.687} scale={0.04} />
         <Tree xOffset={0.775 + 0.03} yOffset={0.687} scale={0.04} />
         <Midrise xOffset={0.942} yOffset={0.656} />

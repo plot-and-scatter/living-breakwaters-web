@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -54,16 +54,7 @@ export const toggleContamination = (narrativeStage: number): void => {
 }
 
 const TreatmentPlantPop = (props: PlaceableSVGProps): JSX.Element => {
-  const { onClick } = props
   const { narrativeStage } = useNarrative()
-
-  const onClickText = useCallback(() => {
-    if (narrativeStage > 0 && onClick) {
-      onClick('Lorem ipsum retail')
-    } else {
-      onClick(undefined)
-    }
-  }, [narrativeStage, onClick])
 
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
@@ -72,7 +63,7 @@ const TreatmentPlantPop = (props: PlaceableSVGProps): JSX.Element => {
   }, [narrativeStage])
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+    <svg className={`Popover ${extraClasses}`} onClick={props.onClick}>
       <defs>
         <pattern
           id="pattern-circles"

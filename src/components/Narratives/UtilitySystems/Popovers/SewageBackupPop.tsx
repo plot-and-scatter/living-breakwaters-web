@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 
 import { useNarrative } from '../../NarrativeContext'
 import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
@@ -10,16 +10,7 @@ import { useEffect } from 'react'
 export const contentMap = {}
 
 const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
-  const { onClick } = props
   const { narrativeStage } = useNarrative()
-
-  const onClickText = useCallback(() => {
-    if (narrativeStage > 0 && onClick) {
-      onClick('Lorem ipsum retail')
-    } else {
-      onClick(undefined)
-    }
-  }, [narrativeStage, onClick])
 
   const animatePipes = useRef<gsap.core.Tween>()
 
@@ -87,7 +78,7 @@ const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
   const extraClasses = narrativeStage > 0 ? 'Red' : ''
 
   return (
-    <svg className={`Popover ${extraClasses}`} onClick={onClickText}>
+    <svg className={`Popover ${extraClasses}`} onClick={props.onClick}>
       <SewerLarge scale={0.6} xOffset={0.38} yOffset={0.737} />
       <Textbox xOffset={0.67} yOffset={0.93} textboxWidth={140}>
         Sewage Backup
