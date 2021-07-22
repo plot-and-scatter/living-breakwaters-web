@@ -6,6 +6,8 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 
 import Rowboat from '../../PlaceableSVGs/People/Rowboat'
 
+export const contentMap = {}
+
 const FishingPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

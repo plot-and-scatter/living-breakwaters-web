@@ -6,7 +6,9 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import House1 from '../../PlaceableSVGs/Buildings/House1'
 import Midden from '../../PlaceableSVGs/Objects/Midden'
 
-const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
+export const contentMap = {}
+
+const ArchaeologyPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
@@ -32,4 +34,4 @@ const BasementPop = (props: PlaceableSVGProps): JSX.Element => {
   )
 }
 
-export default BasementPop
+export default ArchaeologyPop

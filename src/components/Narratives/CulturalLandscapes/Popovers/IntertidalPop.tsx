@@ -6,6 +6,8 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 
 import IntertidalPlant from '../../PlaceableSVGs/Plants/IntertidalPlant'
 
+export const contentMap = {}
+
 const IntertidalPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

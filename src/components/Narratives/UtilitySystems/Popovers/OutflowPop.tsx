@@ -5,6 +5,8 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 import SewerSmall from '../../PlaceableSVGs/Objects/SewerSmall'
 
+export const contentMap = {}
+
 const OutflowPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

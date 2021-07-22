@@ -7,6 +7,8 @@ import House1 from '../../PlaceableSVGs/Buildings/House1'
 import Tree from '../../PlaceableSVGs/Trees/Tree'
 import ManDog from '../../PlaceableSVGs/People/ManDog'
 
+export const contentMap = {}
+
 const ParkPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

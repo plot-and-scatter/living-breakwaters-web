@@ -7,6 +7,8 @@ import Factory from '../../PlaceableSVGs/Buildings/Factory'
 import FixTypeLater from '../../../../@types/FixTypeLater'
 import { useEffect } from 'react'
 
+export const contentMap = {}
+
 export const toggleContamination = (narrativeStage: number): void => {
   if (narrativeStage === 2) {
     const from = '#SmallContamination'

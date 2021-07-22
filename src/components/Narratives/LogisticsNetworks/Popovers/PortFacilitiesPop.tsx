@@ -19,7 +19,11 @@ const STAGE_2_CONTENT = (
   </p>
 )
 
-const PortPop = (props: PlaceableSVGProps): JSX.Element => {
+export const contentMap = {
+  2: STAGE_2_CONTENT
+}
+
+const PortFacilitiesPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
@@ -49,4 +53,4 @@ const PortPop = (props: PlaceableSVGProps): JSX.Element => {
   )
 }
 
-export default PortPop
+export default PortFacilitiesPop

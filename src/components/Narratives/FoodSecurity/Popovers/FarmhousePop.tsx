@@ -9,6 +9,11 @@ const STAGE_2_3_CONTENT = (
   <p>Flooding may cause property damage to farming operations.</p>
 )
 
+export const contentMap = {
+  2: STAGE_2_3_CONTENT,
+  3: STAGE_2_3_CONTENT
+}
+
 const FarmhousePop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

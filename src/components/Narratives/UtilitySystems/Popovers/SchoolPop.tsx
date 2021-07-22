@@ -5,6 +5,8 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 import Office1 from '../../PlaceableSVGs/Buildings/Office1'
 
+export const contentMap = {}
+
 const SchoolPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

@@ -7,6 +7,8 @@ import PowerPlant from '../../PlaceableSVGs/Objects/PowerPlant'
 import { useEffect } from 'react'
 import FixTypeLater from '../../../../@types/FixTypeLater'
 
+export const contentMap = {}
+
 export const togglePowerOutage = (narrativeStage: number): void => {
   if (narrativeStage === 3) {
     const tl = new TimelineLite()

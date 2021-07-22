@@ -14,6 +14,10 @@ const STAGE_3_CONTENT = (
   </p>
 )
 
+export const contentMap = {
+  3: STAGE_3_CONTENT
+}
+
 const DikePop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

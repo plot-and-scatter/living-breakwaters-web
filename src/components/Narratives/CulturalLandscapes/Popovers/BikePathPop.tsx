@@ -7,6 +7,8 @@ import House1 from '../../PlaceableSVGs/Buildings/House1'
 import Bicyclist from '../../PlaceableSVGs/People/Bicyclist'
 import Tree from '../../PlaceableSVGs/Trees/Tree'
 
+export const contentMap = {}
+
 const BikePathPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

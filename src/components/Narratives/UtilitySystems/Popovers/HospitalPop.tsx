@@ -6,6 +6,8 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 
 import Office2 from '../../PlaceableSVGs/Buildings/Office2'
 
+export const contentMap = {}
+
 const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

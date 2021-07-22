@@ -17,7 +17,12 @@ interface Props {
 }
 
 const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
-  const [frameContent, setFrameContent] = useState<React.ReactNode>()
+  const [activeFrameContentKey, setActiveFrameContentKey] = useState<string>()
+
+  const [frameContent, setFrameContent] = useState<{
+    content: React.ReactNode
+    left: number
+  }>()
 
   const { narrativeStage, setNarrativeStage, setShowRain } = useNarrative()
 

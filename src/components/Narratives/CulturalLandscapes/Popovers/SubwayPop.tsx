@@ -6,6 +6,8 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import Subway from '../../PlaceableSVGs/Objects/Subway'
 import Basement from '../../PlaceableSVGs/Buildings/Basement'
 
+export const contentMap = {}
+
 const SubwayPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

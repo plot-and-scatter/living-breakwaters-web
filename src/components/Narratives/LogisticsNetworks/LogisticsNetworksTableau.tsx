@@ -10,7 +10,7 @@ import LogisticsNetworksLand from './SVGGroups/LogisticsNetworksLand'
 import Office1 from '../PlaceableSVGs/Buildings/Office1'
 import Office2 from '../PlaceableSVGs/Buildings/Office2'
 import Pier from '../PlaceableSVGs/Maritime/Pier'
-import PortPop from './Popovers/PortPop'
+import PortFacilitiesPop from './Popovers/PortFacilitiesPop'
 import RetailPop from './Popovers/RetailPop'
 import SVGFrame from '../Frames/SVGFrame'
 import Tree from '../PlaceableSVGs/Trees/Tree'
@@ -63,7 +63,7 @@ const LogisticsNetworksTableau = ({ setFrameContent }: Props): JSX.Element => {
         <Tree xOffset={0.745} yOffset={0.71} />
         <Car3 xOffset={0.8} yOffset={0.75} />
         <path className="FillGround" d="M500 261.5 l 110 -12.5 v 15 h -110" />
-        <PortPop onClick={setFrameContent} />
+        <PortFacilitiesPop onClick={setFrameContent} />
         <CargoShippingPop onClick={setFrameContent} />
         {/* <WarehousePop onClick={setFrameContent} /> */}
         <FreightTransportPop onClick={setFrameContent} />

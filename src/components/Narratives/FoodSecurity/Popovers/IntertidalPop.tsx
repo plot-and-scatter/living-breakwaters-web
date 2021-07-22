@@ -33,19 +33,28 @@ const STAGE_2_3_CONTENT = (
   </p>
 )
 
+export const contentMap = {
+  1: STAGE_1_CONTENT,
+  2: STAGE_2_3_CONTENT,
+  3: STAGE_2_3_CONTENT
+}
+
 const IntertidalPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
 
-  const onClickText = useCallback(() => {
-    if (narrativeStage === 1 && onClick) {
-      onClick(STAGE_1_CONTENT)
-    } else if ((narrativeStage === 2 || narrativeStage === 3) && onClick) {
-      onClick(STAGE_2_3_CONTENT)
-    } else {
-      onClick(undefined)
-    }
-  }, [narrativeStage, onClick])
+  const onClickText = useCallback(
+    (e) => {
+      if (narrativeStage === 1 && onClick) {
+        onClick(STAGE_1_CONTENT)
+      } else if ((narrativeStage === 2 || narrativeStage === 3) && onClick) {
+        onClick(STAGE_2_3_CONTENT)
+      } else {
+        onClick(undefined)
+      }
+    },
+    [narrativeStage, onClick]
+  )
 
   const extraClasses = narrativeStage >= 1 ? 'Red' : ''
 

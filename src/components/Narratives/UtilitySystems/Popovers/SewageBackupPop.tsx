@@ -7,6 +7,8 @@ import SewerLarge from '../../PlaceableSVGs/Objects/SewerLarge'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 
+export const contentMap = {}
+
 const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

@@ -22,6 +22,10 @@ const STAGE_2_CONTENT = (
   </p>
 )
 
+export const contentMap = {
+  2: STAGE_2_CONTENT
+}
+
 const FreightTransportPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()

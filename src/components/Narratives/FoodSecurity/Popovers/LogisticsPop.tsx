@@ -18,6 +18,12 @@ const STAGE_2_3_CONTENT = (
   </p>
 )
 
+export const contentMap = {
+  1: STAGE_1_CONTENT,
+  2: STAGE_2_3_CONTENT,
+  3: STAGE_2_3_CONTENT
+}
+
 const LogisticsPop = (props: PlaceableSVGProps): JSX.Element => {
   const { onClick } = props
   const { narrativeStage } = useNarrative()
