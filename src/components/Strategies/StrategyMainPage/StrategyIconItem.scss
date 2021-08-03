@@ -1,0 +1,21 @@
+.StrategyIconItem {
+  min-height: 150px;
+  // margin-left: -15px;
+  // margin-right: -15px;
+  a {
+    p {
+      line-height: 1.1;
+    }
+    color: white !important;
+    &:hover {
+      text-decoration: none;
+      .hidden {
+        visibility: visible;
+      }
+    }
+    .hidden {
+      visibility: hidden;
+      transition: color 0.25s;
+    }
+  }
+}

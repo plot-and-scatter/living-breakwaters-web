@@ -1,0 +1,15 @@
+.Well {
+  .cls-1 {
+    fill: #599f98;
+    stroke: #215a58;
+    stroke-width: 0.5px;
+  }
+  .cls-1,
+  .cls-2 {
+    stroke-miterlimit: 10;
+  }
+  .cls-2 {
+    stroke: #1f5957;
+    fill: url(#linear-gradient);
+  }
+}

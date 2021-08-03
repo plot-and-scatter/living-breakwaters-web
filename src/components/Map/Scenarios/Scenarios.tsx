@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 
 import ScenarioCard from './ScenarioCard'
+import ScenarioInfo from './ScenarioInfo'
 
 import SCENARIOS from '../../../static/scenarios.json'
 import './Scenarios.scss'
@@ -9,7 +10,16 @@ import image2 from '../../../../content/assets/images/bre-smith-A_-piDJKVsY-unsp
 import image3 from '../../../../content/assets/images/camilo-jimenez-vGu08RYjO-s-unsplash-clipped.jpg'
 import image4 from '../../../../content/assets/images/dan-meyers-IQVFVH0ajag-unsplash-clipped.jpg'
 
-const Scenarios = (): JSX.Element => {
+interface Props {
+  defaultScenarioKey?: string
+  lockScenario?: boolean
+}
+
+const Scenarios = ({
+  defaultScenarioKey,
+  lockScenario
+}: Props): JSX.Element => {
+  const [scenario, setScenario] = useState<string>(defaultScenarioKey || '')
   const [showScenarios, setShowScenarios] = useState<boolean>(false)
 
   const toggleShowScenariosCallback = useCallback(() => {
@@ -20,13 +30,21 @@ const Scenarios = (): JSX.Element => {
     showScenarios ? 'Active' : ''
   }`
 
+  const setScenarioCallback = useCallback(
+    (id: string) => {
+      setScenario(id)
+      setShowScenarios(false)
+    },
+    [scenario]
+  )
+
+  console.log('scenario', scenario)
+
   return (
     <div className="Scenarios">
-      <div>
-        <button className={classes} onClick={toggleShowScenariosCallback}>
-          <i className="fas fa-layer-group mr-1" /> Scenarios
-        </button>
-      </div>
+      <button className={classes} onClick={toggleShowScenariosCallback}>
+        <i className="fas fa-layer-group mr-1" /> Scenarios
+      </button>
       <div
         className="ScenarioInteraction"
         style={{
@@ -40,11 +58,21 @@ const Scenarios = (): JSX.Element => {
               i === 0 ? image1 : i === 1 ? image2 : i === 2 ? image3 : image4
             return (
               <div key={s.id} className="ScenarioCardWrapper">
-                <ScenarioCard scenario={s} image={image} />
+                <ScenarioCard
+                  scenario={s}
+                  image={image}
+                  setScenarioCallback={setScenarioCallback}
+                />
               </div>
             )
           })}
       </div>
+      {!lockScenario && (
+        <ScenarioInfo
+          scenarioKey={scenario}
+          setScenarioCallback={setScenarioCallback}
+        />
+      )}
     </div>
   )
 }

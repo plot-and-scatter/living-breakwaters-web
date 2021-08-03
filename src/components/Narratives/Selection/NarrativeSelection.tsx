@@ -1,11 +1,9 @@
 import React from 'react'
-import { Scenario, ScenarioType } from '../../../@types/Scenario'
-
-import SCENARIOS from '../../../static/scenarios.json'
+import { NarrativeType } from '../../../@types/NarrativeType'
 
 interface Props {
-  activeNarrative: ScenarioType
-  setActiveNarrative: (narrative: ScenarioType) => void
+  activeNarrative: NarrativeType
+  setActiveNarrative: (narrative: NarrativeType) => void
 }
 
 const NarrativeSelection = ({
@@ -13,7 +11,7 @@ const NarrativeSelection = ({
   setActiveNarrative
 }: Props): JSX.Element => {
   return (
-    <div className="StrategyDropdown dropdown mt-3">
+    <div className="StrategyDropdown dropdown">
       <button
         className={`btn dropdown-toggle btn-primary`}
         type="button"
@@ -26,15 +24,14 @@ const NarrativeSelection = ({
         Select a narrative
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        {Object.values(SCENARIOS).map((narrative, index) => {
-          const scenario = (narrative as unknown) as Scenario
+        {Object.values(NarrativeType).map((narrative, index) => {
           return (
             <button
               key={index}
               className="dropdown-item"
-              onClick={() => setActiveNarrative(scenario.id)}
+              onClick={() => setActiveNarrative(narrative)}
             >
-              {scenario.title}
+              {narrative}
             </button>
           )
         })}

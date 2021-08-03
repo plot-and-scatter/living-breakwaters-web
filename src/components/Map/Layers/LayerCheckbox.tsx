@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
+
+import { useMapManager } from '../../Data/MapLayerManager'
+import FixTypeLater from '../../../@types/FixTypeLater'
 import LayerLabel from './LayerLabel'
 
-import { useMapLayerManager } from '../../Data/MapLayerManager'
-
-interface IProps {
-  layer: any
+interface Props {
+  layer: FixTypeLater
 }
 
-const LayerCheckbox = ({ layer }: IProps) => {
-  const { showLayer, hideLayer, activeLayers } = useMapLayerManager()
+const LayerCheckbox = ({ layer }: Props): JSX.Element => {
+  const { showLayer, hideLayer, activeLayers } = useMapManager()
 
   const [checked, setIsChecked] = useState(activeLayers[layer.id])
 
@@ -37,9 +37,13 @@ const LayerCheckbox = ({ layer }: IProps) => {
             value={layer.id}
             className="form-check-input"
             onChange={onCheckboxChange}
-            checked={checked}
+            checked={checked ?? false}
           />
-          <label htmlFor={layer.id} className="form-check-label">
+          <label
+            htmlFor={layer.id}
+            className="form-check-label"
+            style={{ marginTop: '2px', cursor: 'pointer' }}
+          >
             {layer.name}
           </label>
         </div>
@@ -49,10 +53,3 @@ const LayerCheckbox = ({ layer }: IProps) => {
 }
 
 export default LayerCheckbox
-
-LayerCheckbox.propTypes = {
-  checked: PropTypes.bool,
-  checkedTs: PropTypes.number,
-  layer: PropTypes.object,
-  toggleIdCallback: PropTypes.func
-}

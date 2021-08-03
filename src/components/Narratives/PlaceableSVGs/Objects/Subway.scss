@@ -1,0 +1,37 @@
+.Subway {
+  .cls-1,
+  .cls-2,
+  .cls-3 {
+    stroke: #215a58;
+  }
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-5 {
+    stroke-miterlimit: 10;
+  }
+  .cls-1,
+  .cls-2 {
+    stroke-width: 0.5px;
+  }
+  .cls-1 {
+    fill: url(#subway-linear-gradient);
+  }
+  .cls-2 {
+    fill: url(#subway-linear-gradient-2);
+  }
+  .cls-3,
+  .cls-5 {
+    fill: #215a58;
+    stroke-width: 0.25px;
+  }
+  .cls-4 {
+    font-size: 6px;
+    fill: #fff;
+    font-family: ArialMT, Arial;
+    letter-spacing: -0.02em;
+  }
+  .cls-5 {
+    stroke: #fff;
+  }
+}

@@ -1,0 +1,76 @@
+.PlaceableSVG {
+  overflow: visible;
+  transition: fill 0.5s ease;
+}
+
+.NoDisplay {
+  display: none;
+}
+
+.Popover.Red {
+  cursor: pointer;
+  svg:not(.DoNotHighlight) {
+    rect:not(.DoNotFill),
+    path:not(.DoNotFill),
+    polygon:not(.DoNotFill) {
+      fill: #cc3333;
+    }
+    polyline:not(.DoNotStroke),
+    line:not(.DoNotStroke),
+    rect:not(.DoNotStroke),
+    path:not(.DoNotStroke),
+    polygon:not(.DoNotStroke) {
+      stroke: #990000;
+    }
+    transition: fill 0.5s;
+  }
+  .Textbox rect {
+    fill: #cc3333;
+    stroke: #990000;
+  }
+  &:hover {
+    svg:not(.DoNotHighlight) {
+      rect:not(.DoNotFill),
+      path:not(.DoNotFill),
+      polygon:not(.DoNotFill) {
+        fill: #f00;
+      }
+      polyline:not(.DoNotStroke),
+      line:not(.DoNotStroke),
+      rect:not(.DoNotStroke),
+      path:not(.DoNotStroke),
+      polygon:not(.DoNotStroke) {
+        stroke: #cc3333;
+      }
+    }
+  }
+}
+
+.FillGround {
+  fill: #215a58;
+}
+
+.FillRed {
+  fill: #cc3333;
+}
+
+.FillSea {
+  fill: lighten(#266, 10%);
+}
+
+.FillPatternCircles {
+  fill: url(#pattern-circles); 
+}
+
+.FillPatternSquares {
+  fill: url(#pattern-squares); 
+}
+
+.Sewer {
+  polyline,
+  line {
+    stroke: #99ccff;
+    stroke-dasharray: 2 2;
+    stroke-width: 3px !important;
+  }
+}

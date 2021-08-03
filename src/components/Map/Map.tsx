@@ -1,26 +1,73 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { setupBaseMap } from './mapHelper'
-import { useMapLayerManager } from '../Data/MapLayerManager'
+import { useMapManager } from '../Data/MapLayerManager'
 import Layers from './Layers/Layers'
 import Scenarios from './Scenarios/Scenarios'
 
-import './Map.scss'
+import SCENARIOS from '../../static/scenarios.json'
 
-const Map = (): JSX.Element => {
+import './Map.scss'
+import MapControls from './MapControls'
+import FixTypeLater from '../../@types/FixTypeLater'
+
+interface Props {
+  colWidth?: number
+  scenarioKey?: FixTypeLater
+  lockScenario?: boolean
+  mapHeightOverride?: number
+}
+
+const Map = ({
+  colWidth = 12,
+  scenarioKey,
+  lockScenario,
+  mapHeightOverride
+}: Props): JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null)
-  const { setMap } = useMapLayerManager()
+
+  const { hideAllLayers, showLayer, flyTo, setMap, map } = useMapManager()
+
+  const [time, setTime] = useState<number>(0)
+
+  // useEffect(() => {
+  //   if (scenarioKey) {
+  //     hideAllLayers()
+  //     // showLayer(scenario.layerIds)
+  //     // flyTo(scenario.flyTo)
+  //     // TODO: Bunching up all these calls at once means the first call (to
+  //     // hideAllLayers) gets clobbered by the later one (showLayer). Need to
+  //     // investigate this.
+  //     setTime(Date.now())
+  //   }
+  // }, [hideAllLayers, showLayer, flyTo, scenarioKey])
 
   useEffect(() => {
+    console.log('map', map)
+    if (map && scenarioKey) {
+      const scenario = SCENARIOS[scenarioKey]
+      console.log('scenario -->', scenario)
+      showLayer(scenario.layerIds)
+      flyTo(scenario.flyTo)
+    }
+  }, [scenarioKey, map, flyTo])
+
+  useEffect((): void => {
     setupBaseMap(setMap, mapRef)
   }, []) // Intentionally leave empty; only set up once, on instantiation
 
+  const style: React.CSSProperties = {}
+
+  if (mapHeightOverride) style.height = `${mapHeightOverride}px`
+  if (lockScenario) style.pointerEvents = `none`
+
   return (
     <div className="MapRow row">
-      <div className="col-12">
-        <Layers />
-        <Scenarios />
-        <div className="Map" id="Map" ref={mapRef} />
+      <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
+        {!lockScenario && <Layers />}
+        {!lockScenario && <Scenarios defaultScenarioKey={scenarioKey} />}
+        <MapControls />
+        <div className="Map" id="Map" ref={mapRef} style={style} />
       </div>
     </div>
   )

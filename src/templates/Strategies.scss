@@ -3,37 +3,65 @@
 $example-color-background: $gray-800;
 
 .ProtectBG {
-  background-color: darken(rgb(80, 140, 130), 10%);
+  background-color: rgb(80, 140, 130);
   color: white !important;
+  .hidden {
+    color: rgb(80, 140, 130);
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }
 }
 .AccommodateBG {
   background-color: #ffc107;
   color: #333 !important;
+  .hidden {
+    color: #ffc107;
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }
 }
 
-.Strategies, .Narratives {
+.RetreatBG {
+  background-color: #dc3545;
+  color: white !important;
+  .hidden {
+    color: #dc3545;
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }  
+}
+
+.AvoidBG {
+  background-color: #17a2b8;
+  color: white !important;
+  .hidden {
+    color: #17a2b8;
+  }
+  &:hover {
+    .hidden {
+      color: white
+    }
+  }  
+}
+
+.Annotation {
+  border-left: 0 !important;
+}
+
+.Strategies,
+.Narratives {
   color: $gray-700;
 
   font-size: 120%;
-
-  .Title {
-    border-bottom: solid 4px $example-color-background;
-    padding: 1.5rem 0rem;
-    background-color: lighten($color-brand-background, 10%);
-    color: white;
-
-    h1 {
-      margin: 0rem;
-      // padding-left: 1.5rem;
-      padding-left: 0rem;
-      font-weight: 600;
-      font-size: 150%;
-    }
-
-    h2 {
-      margin: 0rem;
-    }
-  }
 
   h2 {
     // font-size: 130%;
@@ -42,29 +70,6 @@ $example-color-background: $gray-800;
   }
 
   .Post {
-    .Summary {
-      // background-color: lighten($color-brand-background, 20%);
-      // background-color: darken(rgb(80, 140, 130), 10%);
-      color: white;
-      // background-color: $gray-100;
-      margin-left: -1.6rem;
-      margin-right: -1.5rem;
-      margin-top: -1.5rem;
-      margin-bottom: -1.5rem;
-      padding: 1.5rem 2.5rem;
-      font-size: 90%;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-600;
-      letter-spacing: 0.00rem;
-      border-right: solid 1px $gray-400;
-      // text-align: justify;
-      p {
-        &:last-of-type {
-          margin-bottom: 0rem;
-        }
-      }
-    }
     .Sidebar {
       border-left: solid 1px $gray-200;
       padding: 1.5rem;
@@ -97,7 +102,6 @@ $example-color-background: $gray-800;
   }
 
   .MoreInfo {
-    border-left: solid 1px $gray-400;
     .Benefits {
       // background-color: lighten($success, 56%);
       h2 {
@@ -125,7 +129,7 @@ $example-color-background: $gray-800;
         border-right: 0px;
       }
       padding: 1.5rem;
-      font-size: 75%;
+      font-size: 90%;
       ul {
         padding-left: 1.5rem;
       }
@@ -133,9 +137,10 @@ $example-color-background: $gray-800;
         font-weight: 600;
       }
     }
-    .Annotation, .Illustration {
+    .Annotation,
+    .Illustration {
       border-bottom: solid 1px $gray-400;
-      
+      border-left: none;
     }
   }
 
@@ -144,7 +149,7 @@ $example-color-background: $gray-800;
     font-size: 90%;
     img {
       width: 100%;
-      max-width: 100%; 
+      max-width: 100%;
       // margin-top: -3rem;
       margin-bottom: -15rem;
     }
@@ -155,13 +160,14 @@ $example-color-background: $gray-800;
     border-right: 0px;
   }
 
-  .Types, .Illustration {
+  .Types,
+  .Illustration {
     // border-right: solid 1px $gray-400;
     &:last-child {
       border-right: 0px;
     }
     padding: 1.5rem;
-    font-size: 75%;
+    font-size: 90%;
     ul {
       padding-left: 1.5rem;
     }
@@ -175,8 +181,8 @@ $example-color-background: $gray-800;
   }
 
   .Images {
-    font-weight: 600;
-    font-size: 80%;
+    // font-weight: 600;
+    font-size: 70% !important;
     background-color: $gray-800;
     color: white;
     padding: 1.5rem;
@@ -201,7 +207,7 @@ $example-color-background: $gray-800;
     background-color: lighten($example-color-background, 10%);
     border-top: solid $example-color-background 3px;
 
-    .ExamplesTitle {      
+    .ExamplesTitle {
       padding: 1.5rem;
       // text-align: center;
       h2 {

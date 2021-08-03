@@ -111,13 +111,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   await pagesFromNodes(
     STRATEGY_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}Strategy.jsx`,
+    `${TEMPLATES_DIR}Strategy.tsx`,
     graphql,
     createPage
   )
   await pagesFromNodes(
     SCENARIO_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}Scenario.jsx`,
+    `${TEMPLATES_DIR}ScenarioTemplate.tsx`,
     graphql,
     createPage
   )
@@ -149,6 +149,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     actions.setWebpackConfig({
       module: {
         rules: [
+          {
+            test: /@mapbox-gl/,
+            use: loaders.null()
+          },
           {
             test: /mapbox-gl/,
             use: loaders.null()

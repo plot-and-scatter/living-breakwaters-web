@@ -2,31 +2,37 @@
   "flood_scenarios": {
     "index": 0,
     "id": "flood_scenarios",
-    "name": "Flood Scenarios"
+    "name": "Flood Scenarios",
+    "icon": "water"
   },
   "emergency_preparedness": {
-    "index": 2,
+    "index": 70,
     "id": "emergency_preparedness",
-    "name": "Emergency Preparedness"
+    "name": "Emergency Preparedness",
+    "icon": "heartbeat"
   },
   "logistics": {
-    "index": 3,
+    "index": 60,
     "id": "logistics",
-    "name": "Logistics"
+    "name": "Logistics",
+    "icon": "plane"
   },
   "land_uses": {
-    "index": 4,
+    "index": 100,
     "id": "land_uses",
-    "name": "Land Uses"
+    "name": "Land Uses",
+    "icon": "city"
   },
   "utilities": {
-    "index": 5,
+    "index": 80,
     "id": "utilities",
-    "name": "Utilities"
+    "name": "Utilities",
+    "icon": "bolt"
   },
   "sensitive_ecosystems": {
     "index": 6,
     "id": "sensitive_ecosystems",
-    "name": "Sensitive Ecosystems"
+    "name": "Sensitive Ecosystems",
+    "icon": "feather-alt"
   }
 }

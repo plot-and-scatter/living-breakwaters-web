@@ -1,8 +1,8 @@
 {
-  "criticalInfrastructures": {
+  "logisticsNetworks": {
     "index": 0,
-    "id": "criticalInfrastructures",
-    "title": "Critical Infrastructures & Cascading Effects",
+    "id": "logisticsNetworks",
+    "title": "Logistics Networks",
     "intro": "As an interface between human and natural systems, infrastructures networks underpin the form and functioning of the built environment. As such, a failure in an infrastructure system can have cascading effects and impact ecosystems as well as city-wide water, energy, food, waste management, and transportation service provision. Sea level rise and flooding, in particular, pose significant challenges and risks. For example, the consequences of floods related to Hurricane Sandy in the New York area were manifold and extensive flooding disrupted transportation, heating, telecoms and sewage networks, and led to a breakdown of the electric grid that left over 21 million people without electricity for several days.",
     "layerIds": [
       "airport",
@@ -10,51 +10,68 @@
       "industrial",
       "pipeline",
       "port_of_vancouver_terminals",
-      "roadways",
       "scenario_a",
       "train_track",
       "transformer_station",
       "transmission_line",
       "waste"
-    ]
+    ],
+    "flyTo": {
+      "speed": 0.1,
+      "center": [-123.094847, 49.298140],
+      "zoom": 13,
+      "pitch": 60,
+      "bearing": 90
+    }
   },
-  "coastalHabitat": {
+  "culturalLandscapes": {
     "index": 1,
-    "id": "coastalHabitat",
-    "title": "Coastal Habitat Squeeze",
+    "id": "culturalLandscapes",
+    "title": "Cultural Landscapes",
     "intro": "The Fraser River Estuary, the largest estuary along the Pacific Coast of North America, provides critical stopover habitat for millions of migratory birds along the Pacific Flyway. This estuary habitat and its food web also support important fishes, including for hundreds of millions of out-migrating juvenile salmon each year that come from throughout the vast Fraser River watershed. The region also provides key habitat for white sturgeon, one of the largest freshwater fish in the world, and Pacific herring, which are a foundational part of the coastal food web. Moreover, these fish are tied to both Indigenous food sovereignty and ways of life. With most of the existing coastline fixed behind hard infrastructures (e.g., dikes and seawalls), coastal ecosystems in the region cannot migrate with rising sea levels. A lack of sediment and other factors further exacerbate this problem. Over the course of the 20th century, dredging (for navigation) and the construction of many jetties and breakwaters have significantly altered sedimentation patterns. Without any adaptation, these expansive habitats will likely disappear in certain locations by the end of the century.",
     "layerIds": [
       "aboriginal_land",
-      "agricultural_land_reserve",
       "eelgrasses",
       "estuary",
       "flood_protection_infrastructure",
       "mudflats",
       "open_space_protected_areas",
-      "port_of_vancouver_terminals",
       "sandflats",
-      "scenario_a",
-      "wetlands"
-    ]
-  },
-  "emergencyPreparedness": {
-    "index": 2,
-    "id": "emergencyPreparedness",
-    "title": "Emergency Preparedness",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu lectus, venenatis vel felis at, auctor dignissim neque. Nam ut turpis quis lorem faucibus placerat. Integer sed feugiat tellus, a tristique mi. Morbi mauris ligula, consectetur et felis quis, vehicula cursus nibh. In eget tellus nulla. Suspendisse nec ante orci. Nulla interdum nisi nec sem fermentum commodo. Curabitur accumsan ligula a leo facilisis volutpat. Sed vehicula gravida iaculis. Nulla fermentum placerat eros, non volutpat magna condimentum vel. Fusce fermentum imperdiet risus, id suscipit ante hendrerit in. Praesent dapibus volutpat dictum. Donec lobortis est et condimentum pellentesque. Suspendisse non placerat leo, quis pulvinar lorem.",
-    "layerIds": [
+      "wetlands",
       "scenario_a",
       "institutional",
-      "residential",
-      "aboriginal_land",
       "community_building",
       "community_centre",
       "religious_centre",
-      "schools",
+      "schools"
+    ],
+    "flyTo": {
+      "speed": 0.1,
+      "center": [-123.023958, 49.118110],
+      "zoom": 11,
+      "pitch": 75,
+      "bearing": -90
+    }
+  },
+  "utilitySystems": {
+    "index": 2,
+    "id": "utilitySystems",
+    "title": "Utility Systems",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean arcu lectus, venenatis vel felis at, auctor dignissim neque. Nam ut turpis quis lorem faucibus placerat. Integer sed feugiat tellus, a tristique mi. Morbi mauris ligula, consectetur et felis quis, vehicula cursus nibh. In eget tellus nulla. Suspendisse nec ante orci. Nulla interdum nisi nec sem fermentum commodo. Curabitur accumsan ligula a leo facilisis volutpat. Sed vehicula gravida iaculis. Nulla fermentum placerat eros, non volutpat magna condimentum vel. Fusce fermentum imperdiet risus, id suscipit ante hendrerit in. Praesent dapibus volutpat dictum. Donec lobortis est et condimentum pellentesque. Suspendisse non placerat leo, quis pulvinar lorem.",
+    "layerIds": [
       "transmission_line",
+      "pipeline",
+      "industrial",
       "transformer_station",
       "waste"
-    ]
+    ],
+    "flyTo": {
+      "speed": 0.1,
+      "center": [-122.944758, 49.174135],
+      "zoom": 10,
+      "pitch": 45,
+      "bearing": 60
+    }
   },
   "foodSecurity": {
     "index": 3,
@@ -68,9 +85,15 @@
       "airport",
       "industrial",
       "port_of_vancouver_terminals",
-      "roadways",
       "train_track",
       "flood_protection_infrastructure"
-    ]
+    ],
+    "flyTo": {
+      "speed": 0.1,
+      "center": [-123.070688, 49.025446],
+      "zoom": 12,
+      "pitch": 60,
+      "bearing": 0
+    }
   }
 }

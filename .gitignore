@@ -73,3 +73,6 @@ yarn-error.log
 
 # Office files
 ~$*.*x
+
+# Large PDFs
+*Antd.pdf

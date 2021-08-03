@@ -1,65 +1,46 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
+
+import { MapLayerGroup } from '../../../@types/MapLayerGroup'
 import LayerCheckbox from './LayerCheckbox'
-import { MapLayerGroup } from '../../Types/MapLayerGroup'
 
 import LAYERS from '../../../static/layers.json'
+import { useMapManager } from '../../Data/MapLayerManager'
+import LayerGroupToggleButton from './LayerGroupToggleButton'
 
 interface IProps {
   layerGroup: MapLayerGroup
 }
 
 const LayerGroup = ({ layerGroup }: IProps): JSX.Element => {
-  const [allChecked, setAllChecked] = useState(false)
-  const [expanded, setExpanded] = useState(true)
-  const [checkedTs, setCheckedTs] = useState(0)
-
-  const toggleExpanded = useCallback(() => {
-    setExpanded(!expanded)
-  }, [expanded, setExpanded])
-
-  const toggleCheckAll = useCallback(() => {
-    setAllChecked(!allChecked)
-    setCheckedTs(+new Date())
-  }, [setAllChecked, setCheckedTs])
+  const { showLayer, hideLayer, activeLayers } = useMapManager()
 
   const layers = Object.values(LAYERS)
     .filter((layer) => layer.grouping === layerGroup.id)
     .sort((a, b) => a.name.localeCompare(b.name))
-    .map((layer) => {
-      return (
-        <LayerCheckbox
-          key={layer.id}
-          layer={layer}
-          checked={allChecked}
-          checkedTs={checkedTs}
-        />
-      )
-    })
+
+  const layerCheckboxes = useMemo(
+    () =>
+      layers.map((layer) => {
+        return <LayerCheckbox key={layer.id} layer={layer} />
+      }),
+    [layers]
+  )
 
   return (
     <div className="LayerGroup pb-2">
-      <div className="d-flex align-items-baseline justify-content-between">
-        <h6 className="mb-1">{layerGroup.name}</h6>
+      <div
+        className="d-flex align-items-center justify-content-between"
+        style={{ borderBottom: 'solid 1px #333' }}
+      >
+        <h6 className="mb-1" style={{ fontSize: '0.85rem' }}>
+          <i className={`fas fa-${layerGroup.icon} mr-2`} />
+          {layerGroup.name}
+        </h6>
         <p className="mb-1">
-          <button
-            className="btn btn-sm btn-xs btn-outline-secondary ml-2"
-            onClick={toggleCheckAll}
-          >
-            {allChecked ? (
-              <>
-                <i className="fas fa-times mr-1" />
-                Uncheck all
-              </>
-            ) : (
-              <>
-                <i className="fas fa-check mr-1" />
-                Check all
-              </>
-            )}
-          </button>
+          <LayerGroupToggleButton layerGroup={layerGroup} />
         </p>
       </div>
-      <div>{layers}</div>
+      <div>{layerCheckboxes}</div>
     </div>
   )
 }

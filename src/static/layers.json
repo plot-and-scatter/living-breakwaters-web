@@ -5,7 +5,8 @@
     "color": "#754634",
     "opacity": 0.6,
     "type": "fill",
-    "grouping": "land_uses"
+    "grouping": "land_uses",
+    "fill-pattern": "square-rgb-255,40,50"
   },
   "airport": {
     "name": "Airports",
@@ -45,6 +46,7 @@
     "color": "#EC4E20",
     "opacity": 0.4,
     "type": "line",
+    "line-weight": 2,
     "grouping": "emergency_preparedness"
   },
   "eelgrasses": {
@@ -67,8 +69,9 @@
     "name": "Flood Protection Infrastructure",
     "id": "flood_protection_infrastructure",
     "color": "#0f9490",
-    "opacity": 0.6,
+    "opacity": 1,
     "type": "line",
+    "line-weight": 6,
     "grouping": "flood_scenarios"
   },
   "first_responder": {
@@ -141,6 +144,7 @@
     "color": "#886699",
     "opacity": 0.4,
     "type": "line",
+    "line-weight": 8,
     "grouping": "logistics"
   },
   "pipeline": {
@@ -184,52 +188,6 @@
     "type": "fill",
     "grouping": "emergency_preparedness"
   },
-  "roadways": {
-    "name": "Roadways",
-    "id": "roadways",
-    "color": "#66696c",
-    "opacity": 0.9,
-    "type": "line",
-    "grouping": "logistics",
-    "layers": [
-      {
-        "name": "Arterial Corridors",
-        "id": "roads_arterial",
-        "color": "#66696c",
-        "opacity": 0.9,
-        "type": "line",
-        "line-weight": 2,
-        "grouping": "logistics"
-      },
-      {
-        "name": "Expressway",
-        "id": "roads_expressway",
-        "color": "#66696c",
-        "opacity": 0.9,
-        "type": "line",
-        "line-weight": 4,
-        "grouping": "logistics"
-      },
-      {
-        "name": "Freeway",
-        "id": "roads_freeway",
-        "color": "#66696c",
-        "opacity": 0.9,
-        "type": "line",
-        "line-weight": 4,
-        "grouping": "logistics"
-      },
-      {
-        "name": "Exit Ramps",
-        "id": "roads_ramp",
-        "color": "#66696c",
-        "opacity": 0.9,
-        "type": "line",
-        "line-weight": 4,
-        "grouping": "logistics"
-      }
-    ]
-  },
   "sandflats": {
     "name": "Sandflats",
     "id": "sandflats",
@@ -260,7 +218,8 @@
     "color": "#51BBDE",
     "opacity": 0.4,
     "type": "fill",
-    "grouping": "flood_scenarios"
+    "grouping": "flood_scenarios",
+    "fill-pattern": "square-rgb-150,170,190"
   },
   "scenario_d": {
     "name": "Riverine: Fraser River 1 in 500 Year Flood +1m Sea Level Rise",

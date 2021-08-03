@@ -1,0 +1,74 @@
+@import "../../../scss/common.module";
+
+$saltwaterWedge: lighten(#3a6393, 10%);
+$freshWater: lighten(#6f90c1, 10%);
+// $meanSeaLevel: lighten(#334455, 10%);
+$meanSeaLevel: lighten(#266, 10%);
+
+#mean-sea-level-gradient {
+  --color-start: #{$meanSeaLevel};
+  --color-stop: #{darken($meanSeaLevel, 20%)};
+}
+
+
+#fresh-water-gradient {
+  --color-start: #{$freshWater};
+  --color-stop: #{darken($freshWater, 20%)};
+}
+
+.UtilitySystemsTableau {
+  position: relative;
+  svg#UtilitySystemsTableau {
+    background: #fff;
+    background-image: linear-gradient(#fff, #fff);
+    // background: #fff;
+    // border: solid #666 0.1vw;
+    path {
+      &.sea-surge {
+        fill: rgba(#112233, 0.5);
+        stroke: #123;
+      }
+      &.base-sea-level {
+        fill: url(#mean-sea-level-gradient) $meanSeaLevel;
+        stroke: darken($meanSeaLevel, 10%);
+      }
+      &.higher-sea-level {
+        fill: #cc3333;
+      }
+
+      &.fresh-water {
+        fill: url(#fresh-water-gradient) $freshWater;
+        stroke: darken($freshWater, 10%);
+      }
+      &.ground {
+        fill: lighten(#59452c, 40%);
+        stroke: #59452c;
+        stroke-width: 1px;
+      }
+    }
+    #Labels {
+      text {
+        font-size: 22px;
+        font-family: $font-family-sans-serif;
+        color: white;
+        fill: white;
+        stroke: black;
+        stroke-width: 0.2px;
+        text-anchor: middle;
+      }
+      #Subsidence {
+        fill: red;
+      }
+    }
+    #groundwater-1,
+    #groundwater-2 {
+      path {
+        visibility: hidden;
+      }
+      path.ground {
+        visibility: visible;
+        fill: red;
+      }
+    }
+  }
+}

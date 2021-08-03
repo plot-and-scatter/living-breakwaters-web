@@ -1,7 +1,7 @@
 export enum ScenarioType {
-  CriticalInfrastructures = 'criticalInfrastructures',
-  CoastalHabitat = 'coastalHabitat',
-  EmergencyPreparedness = 'emergencyPreparedness',
+  LogisticsNetworks = 'logisticsNetworks',
+  CulturalLandscapes = 'culturalLandscapes',
+  UtilitySystems = 'utilitySystems',
   FoodSecurity = 'foodSecurity'
 }
 

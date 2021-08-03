@@ -1,14 +1,19 @@
 import React, { useCallback, useState } from 'react'
-import { useMapLayerManager } from '../../Data/MapLayerManager'
+
+import { useMapManager } from '../../Data/MapLayerManager'
 import LayerLabel from './LayerLabel'
 import LayerSelect from './LayerSelect'
 
 import './Layers.scss'
 
-const Layers = () => {
+const Layers = (): JSX.Element => {
   const [showLayers, setShowLayers] = useState<boolean>(false)
 
-  const { activeLayers } = useMapLayerManager()
+  const { activeLayers } = useMapManager()
+
+  const activeLayerKeys = Object.keys(activeLayers).filter(
+    (layerKey) => activeLayers[layerKey] === true
+  )
 
   const toggleShowLayersCallback = useCallback(() => {
     setShowLayers(!showLayers)
@@ -16,16 +21,12 @@ const Layers = () => {
 
   const classes =
     `btn btn-outline-dark LayerToggle ` +
-    (showLayers ? 'Active' : '') +
-    (activeLayers.length > 0 ? 'HasLayers' : '')
-
-  const activeLayerKeys = Object.keys(activeLayers).filter(
-    (layerKey) => activeLayers[layerKey] === true
-  )
+    (showLayers ? 'Active ' : '') +
+    (activeLayerKeys.length > 0 ? 'HasLayers ' : '')
 
   return (
     <div className="Layers">
-      <div>
+      <div style={{ cursor: 'pointer' }}>
         <button
           className={classes}
           type="button"
@@ -34,7 +35,7 @@ const Layers = () => {
           <i className="fas fa-layer-group mr-1" /> Layers
         </button>
         {activeLayerKeys.length > 0 && !showLayers && (
-          <div className="ActiveLayers">
+          <div className="ActiveLayers" onClick={toggleShowLayersCallback}>
             {activeLayerKeys.map((layerKey: string) => (
               <LayerLabel key={layerKey} layerId={layerKey} />
             ))}

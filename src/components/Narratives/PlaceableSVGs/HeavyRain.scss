@@ -1,0 +1,17 @@
+.HeavyRain {
+  .RainLine {
+    stroke: lighten(#264b70, 20%);
+    stroke-dasharray: 4 10;
+    stroke-dashoffset: 1;
+    stroke-miterlimit: 10;
+    stroke-width: 2;
+    fill: none;
+    // animation: dash 0.5s linear infinite;
+  }
+
+  // @keyframes dash {
+  //   to {
+  //     stroke-dashoffset: 40;
+  //   }
+  // }
+}

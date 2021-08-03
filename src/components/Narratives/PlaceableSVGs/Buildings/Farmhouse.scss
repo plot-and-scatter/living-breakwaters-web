@@ -1,0 +1,18 @@
+.Farmhouse {
+  .cls-1,
+  .cls-2,
+  .cls-3 {
+    stroke: #215a58;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+  }
+  .cls-1 {
+    fill: url(#FARMHOUSE_GRADIENT_BLUE);
+  }
+  .cls-2 {
+    fill: url(#FARMHOUSE_GRADIENT_BLUE-2);
+  }
+  .cls-3 {
+    fill: none;
+  }
+}

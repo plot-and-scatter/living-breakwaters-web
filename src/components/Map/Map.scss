@@ -4,18 +4,7 @@
   height: calc(100vh - #{$header-height} - #{$footer-height} + #{$padding-size});
   // border-bottom: solid $color-brand-background 1px;
   margin-bottom: -$padding-size;
-}
-
-.LayerToggle {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1000;
-  background-color: #fff !important;
-  &:hover {
-    background-color: #eee !important;
-    color: #000 !important;
-  }
+  min-height: 300px;
 }
 
 .MapRow {

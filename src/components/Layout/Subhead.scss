@@ -1,0 +1,24 @@
+@import '../../scss/common.module';
+
+.Subhead {
+  
+  
+  
+
+}
+
+h2.Subhead {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: $color-brand;
+  border-bottom: solid 2px $color-brand-light;
+}
+
+h3.Subhead {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: lighten($color-brand, 10%);
+  // border-bottom: solid 2px $color-brand-light;
+}

@@ -1,0 +1,23 @@
+.Car3 {
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-4 {
+    stroke: #215a58;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 0.5px;
+  }
+  .cls-1 {
+    fill: url(#CAR3_GRADIENT_BLUE);
+  }
+  .cls-2 {
+    fill: url(#CAR3_GRADIENT_BLUE-2);
+  }
+  .cls-3 {
+    fill: url(#CAR3_GRADIENT_BLUE-3);
+  }
+  .cls-4 {
+    fill: none;
+  }
+}

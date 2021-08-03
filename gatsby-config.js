@@ -10,6 +10,7 @@ module.exports = {
     }
   },
   plugins: [
+    { resolve: `gatsby-plugin-anchor-links`, options: { offset: -100 } },
     `gatsby-plugin-catch-links`,
     `gatsby-remark-external-links`,
     {
@@ -49,7 +50,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`
             }
           },
-          `gatsby-remark-numbered-footnotes`,
+          {
+            resolve: `gatsby-remark-footnotes`,
+            options: {
+              useFootnoteMarkerText: true,
+              footnoteBackRefInnerTextStartPosition: 'front',
+              footnoteBackRefInnerText: '↑'
+            }
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`

@@ -1,0 +1,44 @@
+import React from 'react'
+
+import { useNarrative } from '../../NarrativeContext'
+import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
+import Textbox from '../../PlaceableSVGs/Textbox'
+
+import Rowboat from '../../PlaceableSVGs/People/Rowboat'
+import { CulturalLandscapesPopupKey } from '../CulturalLandscapesPopupDictionary'
+
+export const contentMap = {}
+
+const FishingPop = (props: PlaceableSVGProps): JSX.Element => {
+  const { onClick } = props
+  const { narrativeStage } = useNarrative()
+
+  // const onClickText = useCallback(
+  //   (event) => {
+  //     event.persist()
+  //     onClick({ event, key: CulturalLandscapesPopupKey.Fishing })
+
+  //     // if (narrativeStage > 0 && onClick) {
+  //     //   onClick('Lorem ipsum fishing')
+  //     // } else {
+  //     //   onClick(undefined)
+  //     // }
+  //   },
+  //   [narrativeStage, onClick]
+  // )
+
+  const extraClasses = narrativeStage > 0 ? 'Red' : ''
+
+  const offset = narrativeStage === 2 ? -0.02 : narrativeStage === 3 ? -0.02 : 0
+
+  return (
+    <svg className={`Popover ${extraClasses}`} onClick={onClick}>
+      <Rowboat scale={0.0524} xOffset={0.03} yOffset={0.768 + offset} />
+      <Textbox xOffset={0.075} yOffset={0.93} textboxWidth={90}>
+        Fishing
+      </Textbox>
+    </svg>
+  )
+}
+
+export default FishingPop
