@@ -1,6 +1,5 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { readBuilderProgram } from 'typescript'
 
 import './Nav.scss'
 import NavLink from './NavLink'
@@ -27,45 +26,46 @@ const Nav = (): JSX.Element => {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
-          {/* <NavLink path="/map" title="Map" /> */}
-          {/* <NavLink path="/narratives" title="Narratives" /> */}
-          {/* <NavLink path="/strategies" title="Strategies" /> */}
           <NavLink path="/about" title="About" />
-          <NavLink path="/cultural-landscapes" title="Cultural Landscapes" />
+          <NavLink path="/map" title="Map" />
+          <NavLink path="/narratives" title="Narratives" />
+          <NavLink path="/strategies" title="Adaptation Strategies" />
+          <NavLink path="/case-study" title="Case Study" />
+
+          {/* <NavLink path="/cultural-landscapes" title="Cultural Landscapes" />
           <NavLink path="/food-security" title="Food Security" />
           <NavLink path="/logistics-networks" title="Logistics Networks" />
-          <NavLink path="/utility-systems" title="Utility Systems" />
+          <NavLink path="/utility-systems" title="Utility Systems" /> */}
           {/* Put stories into a dropdown called "Challenges" */}
-          <div className="dropdown">
-            <button
-              className={`btn dropdown-toggle btn-primary}`}
-              type="button"
-              id="dropdownMenuButton"
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              style={{ color: `rgba(255, 255, 255, 0.5)` }}
             >
               Explore
-            </button>
+            </a>
             <div
               className="dropdown-menu dropdown-menu-right"
-              aria-labelledby="dropdownMenuButton"
+              aria-labelledby="navbarDropdownMenuLink"
             >
-              <Link className="dropdown-item" to="/map">
-                Map
+              <Link className="dropdown-item" to="/cultural-landscapes">
+                Cultural Landscapes
               </Link>
-              <Link className="dropdown-item" to="/narratives">
-                Narratives
+              <Link className="dropdown-item" to="/food-security">
+                Food Security
               </Link>
-              <Link className="dropdown-item" to="/strategies">
-                Adaptation Strategies
+              <Link className="dropdown-item" to="/logistics-networks">
+                Logistics Networks
               </Link>
-              <Link className="dropdown-item" to="/case-study">
-                Case study
+              <Link className="dropdown-item" to="/utility-systems">
+                Utility Systems
               </Link>
             </div>
-          </div>
+          </li>
 
           {/* <NavLink path="/contact" title="Contact" /> */}
         </ul>
