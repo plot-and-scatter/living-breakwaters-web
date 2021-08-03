@@ -85,8 +85,6 @@ const CulturalLandscapesTableau = ({ popoverClick }: Props): JSX.Element => {
           yOffset={0.817}
         />
 
-        <CulturalLandscapesGroundwater stage={narrativeStage} yOffset={0.875} />
-
         <Birds xOffset={0.2} yOffset={0.3} />
         <FishingPop onClick={(e) => popoverClick(e, PKey.Fishing)} />
         <IntertidalPop onClick={(e) => popoverClick(e, PKey.Intertidal)} />
@@ -103,6 +101,8 @@ const CulturalLandscapesTableau = ({ popoverClick }: Props): JSX.Element => {
         <Tree xOffset={0.775} yOffset={0.687} scale={0.04} />
         <Tree xOffset={0.775 + 0.03} yOffset={0.687} scale={0.04} />
         <Midrise xOffset={0.942} yOffset={0.656} />
+
+        <CulturalLandscapesGroundwater stage={narrativeStage} yOffset={0.875} />
       </SVGFrame>
     </div>
   )
