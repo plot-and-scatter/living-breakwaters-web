@@ -48,7 +48,7 @@ const LogisticsNetworkss = (props: FixTypeLater): JSX.Element => {
             21 million people without electricity for several days.
           </>
         }
-        scenarioKey={'logisticsNetworks'}
+        themeKey={'logisticsNetworks'}
         activeNarrative={NarrativeType.LogisticsNetworks}
         path={'logistics-networks'}
       />

@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/scenarios`,
-        name: `scenarios`
+        path: `${__dirname}/content/themes`,
+        name: `themes`
       }
     },
     {

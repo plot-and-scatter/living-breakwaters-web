@@ -9,6 +9,7 @@
     "@types/jquery": "^3.5.5",
     "@types/mapbox-gl": "2.1.1",
     "@types/react-dom": "^16.9.8",
+    "@types/turf": "^3.5.32",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "d3": "^5.16.0",

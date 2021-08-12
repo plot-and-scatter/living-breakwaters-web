@@ -56,7 +56,7 @@ const CulturalLandscapes = (props: FixTypeLater): JSX.Element => {
             21 million people without electricity for several days.
           </>
         }
-        scenarioKey={'culturalLandscapes'}
+        themeKey={'culturalLandscapes'}
         activeNarrative={NarrativeType.FoodSecurity}
         path={'cultural-landscapes'}
       />

@@ -25,11 +25,11 @@ const BASE_QUERY = (contentTypeFilter) => `
   }
 `
 
-const STRATEGY_RETRIEVAL_QUERY = BASE_QUERY`ne: "scenario"`
-const SCENARIO_RETRIEVAL_QUERY = BASE_QUERY`eq: "scenario"`
+const STRATEGY_RETRIEVAL_QUERY = BASE_QUERY`ne: "theme"`
+const THEME_RETRIEVAL_QUERY = BASE_QUERY`eq: "theme"`
 
 const STRATEGY_URL_PREFIX = `/strategies`
-const SCENARIO_URL_PREFIX = `/scenarios`
+const THEME_URL_PREFIX = `/themes`
 
 const pagesFromNodes = async (
   query,
@@ -116,8 +116,8 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage
   )
   await pagesFromNodes(
-    SCENARIO_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}ScenarioTemplate.tsx`,
+    THEME_RETRIEVAL_QUERY,
+    `${TEMPLATES_DIR}ThemeTemplate.tsx`,
     graphql,
     createPage
   )
@@ -128,8 +128,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const urlPrefix =
-      node.frontmatter.contentType === 'scenario'
-        ? SCENARIO_URL_PREFIX
+      node.frontmatter.contentType === 'theme'
+        ? THEME_URL_PREFIX
         : STRATEGY_URL_PREFIX
     const value = `${urlPrefix}${createFilePath({ node, getNode })}`
 

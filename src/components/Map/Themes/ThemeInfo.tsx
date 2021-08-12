@@ -1,36 +1,33 @@
 import React from 'react'
 
-import SCENARIOS from '../../../static/scenarios.json'
+import THEMES from '../../../static/themes.json'
 import { useMapManager } from '../../Data/MapLayerManager'
 
 interface Props {
-  scenarioKey: string
-  setScenarioCallback: FixTypeLater
+  themeKey: string
+  setThemeCallback: FixTypeLater
   hide?: boolean
 }
 
-import './ScenarioInfo.scss'
+import './ThemeInfo.scss'
 
-const ScenarioInfo = ({
-  scenarioKey,
-  setScenarioCallback
-}: Props): JSX.Element => {
+const ThemeInfo = ({ themeKey, setThemeCallback }: Props): JSX.Element => {
   const { flyTo } = useMapManager()
 
-  if (!scenarioKey) return <></>
+  if (!themeKey) return <></>
 
-  const scenario = SCENARIOS[scenarioKey]
+  const theme = THEMES[themeKey]
   return (
-    <div className="ScenarioInfo">
+    <div className="ThemeInfo">
       <div
         className="d-flex align-items-center"
         style={{ justifyContent: 'space-between' }}
       >
         <h4 className="mb-0">
-          {scenario.title}{' '}
+          {theme.title}{' '}
           <button
             className="btn btn-sm btn-outline-secondary ml-2"
-            onClick={() => flyTo(scenario.flyTo)}
+            onClick={() => flyTo(theme.flyTo)}
           >
             <i className="fas fa-bullseye mr-2" />
             Refocus
@@ -39,7 +36,7 @@ const ScenarioInfo = ({
         <div>
           <button
             className="btn btn-sm btn-outline-secondary"
-            onClick={() => setScenarioCallback(undefined)}
+            onClick={() => setThemeCallback(undefined)}
           >
             <i className="fas fa-times" />
           </button>
@@ -47,7 +44,7 @@ const ScenarioInfo = ({
       </div>
       <hr className="my-2" />
       <p className="mb-0" style={{ lineHeight: 1.3 }}>
-        <small>{scenario.intro}</small>
+        <small>{theme.intro}</small>
       </p>
       <button className="btn btn-sm btn-primary mt-2">
         See narrative <i className="fas ml-1 fa-arrow-right" />
@@ -56,4 +53,4 @@ const ScenarioInfo = ({
   )
 }
 
-export default ScenarioInfo
+export default ThemeInfo

@@ -85,7 +85,7 @@ const UtilitySystems = (props: FixTypeLater): JSX.Element => {
             </p>
           </>
         }
-        scenarioKey={'utilitySystems'}
+        themeKey={'utilitySystems'}
         activeNarrative={NarrativeType.FoodSecurity}
         path={'utility-systems'}
       />

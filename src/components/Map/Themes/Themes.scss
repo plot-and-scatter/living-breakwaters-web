@@ -2,7 +2,7 @@
 
 $toggle-button-width: 130px;
 
-.Scenarios {
+.Themes {
   // position: relative;
   // position: absolute;
   // z-index: 2500;
@@ -10,7 +10,7 @@ $toggle-button-width: 130px;
   // height: 100%;
 }
 
-.btn.ScenarioToggle {
+.btn.ThemeToggle {
   position: absolute;
   top: 1rem;
   right: 1rem !important;
@@ -34,7 +34,7 @@ $toggle-button-width: 130px;
   }
 }
 
-.ScenarioInteraction {
+.ThemeInteraction {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -54,7 +54,7 @@ $toggle-button-width: 130px;
   
 }
 
-// .ScenarioCardWrapper {
+// .ThemeCardWrapper {
 //   height: 300px;
 //   overflow-y: hidden;
 //   width: calc(100vw / 5);
@@ -74,7 +74,7 @@ $toggle-button-width: 130px;
 //   }
 // }
 
-.ScenarioCardWrapper {
+.ThemeCardWrapper {
   // height: 300px;
   // overflow-y: hidden;
   // width: calc(100vw / 5);
@@ -88,7 +88,7 @@ $toggle-button-width: 130px;
   // z-index: 800;
   // border: none;
   // border-right: solid $gray-800 1px;
-  &:last-child .ScenarioCard {
+  &:last-child .ThemeCard {
     margin-right: 0;
     border-right: 0;
     border-bottom: 0;

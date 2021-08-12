@@ -170,7 +170,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
             regarding coastal management. Therefore, adaptation solutions for
             coastal flooding ought to be developed taking into considerations a
             wide range of social and environmental conditions. These conditions
-            when considered collectively present scenarios that may require
+            when considered collectively present themes that may require
             different approaches to adaptation. For example, a nature-based
             solution (NBS) approach utilizing wetlands can be effective as wave
             attenuation during storm surges in order to protect people and

@@ -46,6 +46,9 @@ export default function HTML(props) {
           rel="stylesheet"
         />
 
+        {/* Turf for Mapbox */}
+        <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
         {/* GSAP */}
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"

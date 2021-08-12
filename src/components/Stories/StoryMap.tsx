@@ -10,17 +10,17 @@ const MAP_HEIGHT = 500
 
 export interface StoryMapProps {
   mapText: React.ReactNode
-  scenarioKey: string
+  themeKey: string
 }
 
 interface Props extends StoryMapProps {
   storyRef: React.MutableRefObject<HTMLDivElement>
 }
 
-const StoryMap = ({ mapText, scenarioKey, storyRef }: Props): JSX.Element => {
+const StoryMap = ({ mapText, themeKey, storyRef }: Props): JSX.Element => {
   useEffect(() => gsap.registerPlugin(ScrollTrigger), [])
 
-  const [mapScenarioKey, setMapScenarioKey] = useState<string>()
+  const [mapThemeKey, setMapThemeKey] = useState<string>()
 
   const mapRef = useRef(null)
 
@@ -43,7 +43,7 @@ const StoryMap = ({ mapText, scenarioKey, storyRef }: Props): JSX.Element => {
           // markers: true,
 
           onEnter: (): void => {
-            setMapScenarioKey(scenarioKey)
+            setMapThemeKey(themeKey)
           }
         }
       }
@@ -106,8 +106,8 @@ const StoryMap = ({ mapText, scenarioKey, storyRef }: Props): JSX.Element => {
             >
               <MapComponent
                 colWidth={12}
-                scenarioKey={mapScenarioKey}
-                lockScenario
+                themeKey={mapThemeKey}
+                lockTheme
                 mapHeightOverride={MAP_HEIGHT}
               />
             </div>

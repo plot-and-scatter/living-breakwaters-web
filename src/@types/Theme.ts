@@ -1,13 +1,13 @@
-export enum ScenarioType {
+export enum ThemeType {
   LogisticsNetworks = 'logisticsNetworks',
   CulturalLandscapes = 'culturalLandscapes',
   UtilitySystems = 'utilitySystems',
   FoodSecurity = 'foodSecurity'
 }
 
-export type Scenario = {
+export type Theme = {
   index: number
-  id: ScenarioType
+  id: ThemeType
   title: string
   intro: string
   layerIds: string[]

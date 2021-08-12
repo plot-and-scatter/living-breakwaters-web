@@ -2,31 +2,27 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useMapManager } from '../../Data/MapLayerManager'
 import FixTypeLater from '../../../@types/FixTypeLater'
 
-import './ScenarioCard.scss'
+import './ThemeCard.scss'
 
 interface IProps {
-  scenario: FixTypeLater
+  theme: FixTypeLater
   image: FixTypeLater
-  setScenarioCallback: FixTypeLater
+  setThemeCallback: FixTypeLater
 }
 
-const ScenarioCard = ({
-  scenario,
-  image,
-  setScenarioCallback
-}: IProps): JSX.Element => {
+const ThemeCard = ({ theme, image, setThemeCallback }: IProps): JSX.Element => {
   const { hideAllLayers, showLayer, flyTo } = useMapManager()
 
   const [time, setTime] = useState<number>(0)
 
-  const title = scenario.title
-  const intro = scenario.intro
+  const title = theme.title
+  const intro = theme.intro
 
-  const scenarioClickCallback = useCallback(() => {
-    setScenarioCallback(scenario.id)
+  const themeClickCallback = useCallback(() => {
+    setThemeCallback(theme.id)
     hideAllLayers()
-    // showLayer(scenario.layerIds)
-    // flyTo(scenario.flyTo)
+    // showLayer(theme.layerIds)
+    // flyTo(theme.flyTo)
     // TODO: Bunching up all these calls at once means the first call (to
     // hideAllLayers) gets clobbered by the later one (showLayer). Need to
     // investigate this.
@@ -35,19 +31,19 @@ const ScenarioCard = ({
 
   useEffect(() => {
     if (time) {
-      showLayer(scenario.layerIds)
-      flyTo(scenario.flyTo)
+      showLayer(theme.layerIds)
+      flyTo(theme.flyTo)
     }
   }, [time])
 
   // return (
   //   <div
-  //     className="ScenarioCard card"
+  //     className="ThemeCard card"
   //     style={{
   //       whiteSpace: 'normal',
   //       verticalAlign: 'top'
   //     }}
-  //     onClick={scenarioClickCallback}
+  //     onClick={themeClickCallback}
   //   >
   //     <img src={image} className="card-img-top" alt="" />
   //     <div className="card-header">
@@ -61,12 +57,12 @@ const ScenarioCard = ({
 
   return (
     <div
-      className="ScenarioCard"
+      className="ThemeCard"
       style={{
         whiteSpace: 'normal',
         verticalAlign: 'top'
       }}
-      onClick={scenarioClickCallback}
+      onClick={themeClickCallback}
     >
       {/* <img src={image} className="card-img-top" alt="" /> */}
       {title}
@@ -77,4 +73,4 @@ const ScenarioCard = ({
   )
 }
 
-export default ScenarioCard
+export default ThemeCard

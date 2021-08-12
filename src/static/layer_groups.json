@@ -1,7 +1,7 @@
 {
-  "flood_scenarios": {
+  "flood_themes": {
     "index": 0,
-    "id": "flood_scenarios",
+    "id": "flood_themes",
     "name": "Flood Scenarios",
     "icon": "water"
   },

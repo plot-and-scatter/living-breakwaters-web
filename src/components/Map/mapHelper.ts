@@ -41,9 +41,28 @@ const addAttributionControl = (map: mapboxgl.Map) => {
   map.addControl(new mapboxgl.AttributionControl())
 }
 
+// GeoJSON object to hold our measurement features
+const geojson = {
+  type: 'FeatureCollection',
+  features: []
+}
+
+// Used to draw a line between points
+const linestring = {
+  type: 'Feature',
+  geometry: {
+    type: 'LineString',
+    coordinates: []
+  }
+}
+
 export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
   const initializeMap = (setMap: SetMapType, mapRef: MapRefType) => {
     const map = new mapboxgl.Map(buildMapOptions(mapRef))
+
+    const distanceContainer = document.getElementById('distance')
+
+    console.log('distanceContainer', distanceContainer)
 
     map.on('styleimagemissing', function (e) {
       console.log('==> e', e)
@@ -76,7 +95,9 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
 
     // addNavControl(map)
     addAttributionControl(map)
+
     map.on('load', () => {
+      console.log('Starting load...', map)
       // map.addSource('mapbox-dem', {
       //   type: 'raster-dem',
       //   url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
@@ -84,20 +105,113 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
       //   maxzoom: 14
       // })
       // map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
-      // // add a sky layer that will show when the map is highly pitched
-      map.addLayer({
-        id: 'sky',
-        type: 'sky',
-        paint: {
-          'sky-type': 'atmosphere',
-          'sky-atmosphere-sun': [0.0, 0.0],
-          'sky-atmosphere-sun-intensity': 15
-        }
+
+      // Add a sky layer that will show when the map is highly pitched
+      // map.addLayer({
+      //   id: 'sky',
+      //   type: 'sky',
+      //   paint: {
+      //     'sky-type': 'atmosphere',
+      //     'sky-atmosphere-sun': [0.0, 0.0],
+      //     'sky-atmosphere-sun-intensity': 15
+      //   }
+      // })
+
+      console.log('  geojson', geojson)
+
+      // Add map measuring modes
+      map.addSource('geojson', {
+        type: 'geojson',
+        data: geojson
       })
+
+      // Add styles to the map
+      map.addLayer({
+        id: 'measure-points',
+        type: 'circle',
+        source: 'geojson',
+        paint: {
+          'circle-radius': 5,
+          'circle-color': '#000'
+        },
+        filter: ['in', '$type', 'Point']
+      })
+      map.addLayer({
+        id: 'measure-lines',
+        type: 'line',
+        source: 'geojson',
+        layout: {
+          'line-cap': 'round',
+          'line-join': 'round'
+        },
+        paint: {
+          'line-color': '#000',
+          'line-width': 2.5
+        },
+        filter: ['in', '$type', 'LineString']
+      })
+
+      console.log('==> Added layers', map.style)
+
+      map.on('click', function (e) {
+        console.log('map layers', map.getStyle().layers)
+
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ['measure-points']
+        })
+
+        // Remove the linestring from the group
+        // So we can redraw it based on the points collection
+        if (geojson.features.length > 1) geojson.features.pop()
+
+        // Clear the Distance container to populate it with a new value
+        distanceContainer.innerHTML = ''
+
+        // If a feature was clicked, remove it from the map
+        if (features.length) {
+          const id = features[0].properties.id
+          geojson.features = geojson.features.filter(function (point) {
+            return point.properties.id !== id
+          })
+        } else {
+          const point = {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [e.lngLat.lng, e.lngLat.lat]
+            },
+            properties: {
+              id: String(new Date().getTime())
+            }
+          }
+
+          geojson.features.push(point)
+        }
+
+        if (geojson.features.length > 1) {
+          linestring.geometry.coordinates = geojson.features.map(function (
+            point
+          ) {
+            return point.geometry.coordinates
+          })
+
+          geojson.features.push(linestring)
+
+          // Populate the distanceContainer with total distance
+          const value = document.createElement('pre')
+          value.textContent =
+            'Total distance: ' + turf.length(linestring).toLocaleString() + 'km'
+          distanceContainer.appendChild(value)
+        }
+
+        map.getSource('geojson').setData(geojson)
+      })
+
       setMap(map)
       map.resize()
     })
   }
+
   initializeMap(setMap, mapRef)
 }
 

@@ -5,7 +5,7 @@ import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
 
-const ScenarioTemplate = ({
+const ThemeTemplate = ({
   data,
   pageContext,
   location
@@ -71,12 +71,12 @@ const ScenarioTemplate = ({
   )
 }
 
-export default ScenarioTemplate
+export default ThemeTemplate
 
-ScenarioTemplate.propTypes = {}
+ThemeTemplate.propTypes = {}
 
 export const pageQuery = graphql`
-  query ScenarioBySlug($slug: String!) {
+  query ThemeBySlug($slug: String!) {
     site {
       siteMetadata {
         title

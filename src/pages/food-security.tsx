@@ -112,7 +112,7 @@ const FoodSecurity = (props: FixTypeLater): JSX.Element => {
             </p>
           </>
         }
-        scenarioKey={'foodSecurity'}
+        themeKey={'foodSecurity'}
         activeNarrative={NarrativeType.FoodSecurity}
         path={'food-security'}
       />
