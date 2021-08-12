@@ -17,7 +17,7 @@ $toggle-button-width: 100px;
   min-width: calc(#{$toggle-button-width} + #{$border-radius});
   padding: $padding-size / 2;
   position: relative;
-  top: 52px;
+  top: 52px + 48px;
   z-index: 1050;
   .LayerLabel {
     font-size: 75%;
@@ -39,7 +39,7 @@ $toggle-button-width: 100px;
   left: 1rem;
   opacity: 1;
   position: absolute;
-  top: 1rem;
+  top: 4rem;
   width: $toggle-button-width !important;
   z-index: 1150;
   &:hover {
@@ -72,7 +72,7 @@ $toggle-button-width: 100px;
 
 .LayerInteraction {
   position: absolute;
-  top: 53px;
+  top: 53px + 48px;
   left: $padding-size + 1;
   width: 60vw;
   z-index: 1000;

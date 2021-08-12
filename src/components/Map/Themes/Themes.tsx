@@ -35,8 +35,6 @@ const Themes = ({ defaultThemeKey, lockTheme }: Props): JSX.Element => {
     [theme]
   )
 
-  console.log('theme', theme)
-
   return (
     <div className="Themes">
       <button className={classes} onClick={toggleShowThemesCallback}>

@@ -1,25 +1,16 @@
 @import "../../../scss/common.module";
 
-$toggle-button-width: 130px;
-
-.Themes {
-  // position: relative;
-  // position: absolute;
-  // z-index: 2500;
-  // width: 100vw;
-  // height: 100%;
-}
+$toggle-button-width: 111px;
 
 .btn.ThemeToggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem !important;
   background-color: rgba(#fff, 0.8) !important;
   box-sizing: border-box;
-  // left: $padding-size * 2;
+  left: 1rem !important;
   opacity: 1;
+  position: absolute;
+  top: 1rem;
   width: $toggle-button-width !important;
-  z-index: 950;
+  z-index: 1050;
   &:hover {
     background-color: #eee !important;
     color: #000 !important;
@@ -40,15 +31,15 @@ $toggle-button-width: 130px;
   position: absolute;
   top: 53px;
   width: 25vw;
-  right: $padding-size + 1px;
+  left: $padding-size + 1px;
   // left: $toggle-button-width + $padding-size - 2;
   // width: calc(100vw - #{$padding-size * 2} - #{$toggle-button-width});
   z-index: 2500;
-  background-color: rgba(#fff, 0.8);
+  background-color: rgba(#fff, 0.95);
   border: solid $gray-800 1px;
   border-radius: $border-radius;
   border-bottom-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   border-bottom-left-radius: $border-radius;
   // padding: $padding-size;
   
