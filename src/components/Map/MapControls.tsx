@@ -97,8 +97,10 @@ const MapControls = (): JSX.Element => {
           className="btn btn-sm btn-outline-dark"
           onClick={onMeasureModeClick}
         >
-          <i className="fas fa-ruler mr-1" />
-          <div id="distance">0 dist</div>
+          <i className="fas fa-draw-polygon mr-1" />
+          <div id="distance">
+            0 km<sup>2</sup>
+          </div>
         </button>
       </div>
     </div>
