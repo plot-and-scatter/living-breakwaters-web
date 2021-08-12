@@ -196,34 +196,34 @@
     "type": "fill",
     "grouping": "sensitive_ecosystems"
   },
-  "theme_a": {
+  "scenario_a": {
     "name": "Coastal: 1 in 500 Year Storm Surge (Present Day)",
-    "id": "theme_a",
+    "id": "scenario_a",
     "color": "#238BAD",
     "opacity": 0.4,
     "type": "fill",
     "grouping": "flood_themes"
   },
-  "theme_b": {
+  "scenario_b": {
     "name": "Coastal: 1 in 500 Year Storm Surge + 1m Sea Level Rise",
-    "id": "theme_b",
+    "id": "scenario_b",
     "color": "#359CBE",
     "opacity": 0.5,
     "type": "fill",
     "grouping": "flood_themes"
   },
-  "theme_c": {
+  "scenario_c": {
     "name": "Riverine: Fraser River 1894 Flood Record + Peak Flow",
-    "id": "theme_c",
+    "id": "scenario_c",
     "color": "#51BBDE",
     "opacity": 0.4,
     "type": "fill",
     "grouping": "flood_themes",
     "fill-pattern": "square-rgb-150,170,190"
   },
-  "theme_d": {
+  "scenario_d": {
     "name": "Riverine: Fraser River 1 in 500 Year Flood +1m Sea Level Rise",
-    "id": "theme_d",
+    "id": "scenario_d",
     "color": "#46ACCF",
     "opacity": 0.5,
     "type": "fill",
