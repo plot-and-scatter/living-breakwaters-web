@@ -9,6 +9,7 @@ import Themes from './Themes/Themes'
 
 import './Map.scss'
 import THEMES from '../../static/themes.json'
+import MapInfoButton from './Controls/MapInfoButton'
 
 interface Props {
   colWidth?: number
@@ -65,6 +66,7 @@ const Map = ({
       <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
         {!lockTheme && <Layers />}
         {!lockTheme && <Themes defaultThemeKey={themeKey} />}
+        <MapInfoButton />
         <MapToolbox />
         <div className="Map" id="Map" ref={mapRef} style={style} />
       </div>

@@ -1,0 +1,41 @@
+.MapInfoButton {
+  height: 30px;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 60px;
+  z-index: 1100;
+  .btn {
+    background-color: rgba(#fff, 0.8) !important;
+    &:hover {
+      background-color: #eee !important;
+      color: #000 !important;
+    }
+  }
+  
+}
+.InfoPopup {
+  border: solid black 1px;
+  border-radius: 4px;
+  position: absolute;
+  width: 400px;
+  top: 4rem;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1300;
+  h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  background-color: rgba(#fff, 0.8);
+  .FrameContent {
+  }
+}
