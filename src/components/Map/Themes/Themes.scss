@@ -1,6 +1,6 @@
 @import "../../../scss/common.module";
 
-$toggle-button-width: 111px;
+$toggle-button-width: 112px;
 
 .btn.ThemeToggle {
   background-color: rgba(#fff, 0.8) !important;
@@ -30,7 +30,7 @@ $toggle-button-width: 111px;
   flex-direction: column;
   position: absolute;
   top: 53px;
-  width: 25vw;
+  width: 170px;
   left: $padding-size + 1px;
   // left: $toggle-button-width + $padding-size - 2;
   // width: calc(100vw - #{$padding-size * 2} - #{$toggle-button-width});

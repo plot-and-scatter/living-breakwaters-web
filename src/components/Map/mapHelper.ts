@@ -60,7 +60,7 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
   const initializeMap = (setMap: SetMapType, mapRef: MapRefType) => {
     const map = new mapboxgl.Map(buildMapOptions(mapRef))
 
-    const distanceContainer = document.getElementById('distance')
+    const distanceContainer = document.getElementById('AreaMeasurement')
 
     console.log('distanceContainer', distanceContainer)
 
@@ -98,24 +98,24 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
 
     map.on('load', () => {
       console.log('Starting load...', map)
-      // map.addSource('mapbox-dem', {
-      //   type: 'raster-dem',
-      //   url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
-      //   tileSize: 512,
-      //   maxzoom: 14
-      // })
-      // map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
+      map.addSource('mapbox-dem', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+        maxzoom: 14
+      })
+      map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
 
       // Add a sky layer that will show when the map is highly pitched
-      // map.addLayer({
-      //   id: 'sky',
-      //   type: 'sky',
-      //   paint: {
-      //     'sky-type': 'atmosphere',
-      //     'sky-atmosphere-sun': [0.0, 0.0],
-      //     'sky-atmosphere-sun-intensity': 15
-      //   }
-      // })
+      map.addLayer({
+        id: 'sky',
+        type: 'sky',
+        paint: {
+          'sky-type': 'atmosphere',
+          'sky-atmosphere-sun': [0.0, 0.0],
+          'sky-atmosphere-sun-intensity': 15
+        }
+      })
 
       console.log('  geojson', geojson)
 

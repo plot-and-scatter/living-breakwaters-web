@@ -1,17 +1,14 @@
-.MapControls {
-  position: absolute;
-  top: 1rem;
-  z-index: 1025;
-  // left: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 250px;
-  left: 0;
-  right: 0;
+.MapToolbox {
   height: 30px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 150px;
+  z-index: 1025;
 
-
-  
+  > div {
+    margin-bottom: 1rem;
+  }
 
   .btn {
     background-color: rgba(#fff, 0.8) !important;

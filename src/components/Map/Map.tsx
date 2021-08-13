@@ -2,20 +2,19 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import { setupBaseMap } from './mapHelper'
 import { useMapManager } from '../Data/MapLayerManager'
+import FixTypeLater from '../../@types/FixTypeLater'
 import Layers from './Layers/Layers'
+import MapToolbox from './Controls/MapToolbox'
 import Themes from './Themes/Themes'
 
-import THEMES from '../../static/themes.json'
-
 import './Map.scss'
-import MapControls from './MapControls'
-import FixTypeLater from '../../@types/FixTypeLater'
+import THEMES from '../../static/themes.json'
 
 interface Props {
   colWidth?: number
-  themeKey?: FixTypeLater
   lockTheme?: boolean
   mapHeightOverride?: number
+  themeKey?: FixTypeLater
 }
 
 const Map = ({
@@ -66,7 +65,7 @@ const Map = ({
       <div className={`col-${colWidth}`} style={{ position: 'relative' }}>
         {!lockTheme && <Layers />}
         {!lockTheme && <Themes defaultThemeKey={themeKey} />}
-        <MapControls />
+        <MapToolbox />
         <div className="Map" id="Map" ref={mapRef} style={style} />
       </div>
     </div>
