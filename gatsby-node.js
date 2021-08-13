@@ -115,12 +115,6 @@ exports.createPages = async ({ graphql, actions }) => {
     graphql,
     createPage
   )
-  await pagesFromNodes(
-    THEME_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}ThemeTemplate.tsx`,
-    graphql,
-    createPage
-  )
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

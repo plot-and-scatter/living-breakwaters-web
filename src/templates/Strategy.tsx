@@ -102,7 +102,6 @@ export const pageQuery = graphql`
       id
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        description
         strategyTypes
         title
       }
