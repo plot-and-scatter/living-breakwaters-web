@@ -45,6 +45,12 @@ export default function HTML(props) {
           href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
           rel="stylesheet"
         />
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.3.0/mapbox-gl-draw.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.3.0/mapbox-gl-draw.css"
+          type="text/css"
+        ></link>
 
         {/* Turf for Mapbox */}
         <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>

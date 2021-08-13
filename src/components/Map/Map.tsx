@@ -67,7 +67,11 @@ const Map = ({
         {!lockTheme && <Layers />}
         {!lockTheme && <Themes defaultThemeKey={themeKey} />}
         <MapInfoButton />
-        <MapToolbox />
+        {/* <MapToolbox /> */}
+        <div className="calculation-box">
+          <p>Click the map to draw a polygon.</p>
+          <div id="calculated-area" className="mt-2"></div>
+        </div>
         <div className="Map" id="Map" ref={mapRef} style={style} />
       </div>
     </div>

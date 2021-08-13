@@ -4,6 +4,8 @@ import React, { useCallback, useEffect, useState } from 'react'
 
 import { useMapManager } from '../../Data/MapLayerManager'
 
+import './PolygonDrawingTool.scss'
+
 const PolygonDrawingTool = (): JSX.Element => {
   const { map } = useMapManager()
 
@@ -12,12 +14,6 @@ const PolygonDrawingTool = (): JSX.Element => {
   const onMeasureModeClick = useCallback(() => {
     setMeasureMode(!measureMode)
   }, [map, measureMode])
-
-  useEffect(() => {
-    if (measureMode) {
-      console.log('Hi')
-    }
-  }, [measureMode])
 
   return (
     <div className="PolygonDrawingTool">

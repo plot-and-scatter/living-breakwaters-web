@@ -15,3 +15,31 @@
     padding: 0;
   }
 }
+
+.mapboxgl-ctrl button {
+  border-color: $gray-800 !important;
+}
+
+.mapboxgl-ctrl-group {
+  border-color: $gray-800 !important;
+  box-shadow: $gray-800 0px 0px 0px 1px !important;
+}
+
+.calculation-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 10px;
+  p {
+    font-size: 12px !important;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  right: 56px;
+  padding: 8px;
+  position: absolute;
+  // text-align: center;
+  width: 110px;
+  z-index: 1500;
+  border-radius: 4px;
+  border: solid 1px $gray-800;
+}

@@ -1,3 +1,5 @@
+/* globals MapboxDraw */
+
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import mapboxgl from '!mapbox-gl'
 
@@ -117,95 +119,37 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
         }
       })
 
-      console.log('  geojson', geojson)
-
-      // Add map measuring modes
-      map.addSource('geojson', {
-        type: 'geojson',
-        data: geojson
-      })
-
-      // Add styles to the map
-      map.addLayer({
-        id: 'measure-points',
-        type: 'circle',
-        source: 'geojson',
-        paint: {
-          'circle-radius': 5,
-          'circle-color': '#000'
+      const draw = new MapboxDraw({
+        displayControlsDefault: false,
+        // Select which mapbox-gl-draw control buttons to add to the map.
+        controls: {
+          polygon: true,
+          trash: true
         },
-        filter: ['in', '$type', 'Point']
+        // Set mapbox-gl-draw to draw by default.
+        // The user does not have to click the polygon control button first.
+        defaultMode: 'draw_polygon'
       })
-      map.addLayer({
-        id: 'measure-lines',
-        type: 'line',
-        source: 'geojson',
-        layout: {
-          'line-cap': 'round',
-          'line-join': 'round'
-        },
-        paint: {
-          'line-color': '#000',
-          'line-width': 2.5
-        },
-        filter: ['in', '$type', 'LineString']
-      })
+      map.addControl(draw)
+      map.addControl(new mapboxgl.NavigationControl({ visualizePitch: true }))
 
-      console.log('==> Added layers', map.style)
+      map.on('draw.create', updateArea)
+      map.on('draw.delete', updateArea)
+      map.on('draw.update', updateArea)
 
-      map.on('click', function (e) {
-        console.log('map layers', map.getStyle().layers)
+      function updateArea(e) {
+        const data = draw.getAll()
+        const answer = document.getElementById('calculated-area')
+        if (data.features.length > 0) {
+          const area = turf.area(data)
+          // Convert from m^2 to km^2, then restrict to 2 decimal places
+          const rounded_area = Math.round((area / 1000000) * 100) / 100
 
-        const features = map.queryRenderedFeatures(e.point, {
-          layers: ['measure-points']
-        })
-
-        // Remove the linestring from the group
-        // So we can redraw it based on the points collection
-        if (geojson.features.length > 1) geojson.features.pop()
-
-        // Clear the Distance container to populate it with a new value
-        distanceContainer.innerHTML = ''
-
-        // If a feature was clicked, remove it from the map
-        if (features.length) {
-          const id = features[0].properties.id
-          geojson.features = geojson.features.filter(function (point) {
-            return point.properties.id !== id
-          })
+          answer.innerHTML = `<p>Area: <strong>${rounded_area}</strong> km<sup>2</sup></p>`
         } else {
-          const point = {
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [e.lngLat.lng, e.lngLat.lat]
-            },
-            properties: {
-              id: String(new Date().getTime())
-            }
-          }
-
-          geojson.features.push(point)
+          answer.innerHTML = ''
         }
-
-        if (geojson.features.length > 1) {
-          linestring.geometry.coordinates = geojson.features.map(function (
-            point
-          ) {
-            return point.geometry.coordinates
-          })
-
-          geojson.features.push(linestring)
-
-          // Populate the distanceContainer with total distance
-          const value = document.createElement('pre')
-          value.textContent =
-            'Total distance: ' + turf.length(linestring).toLocaleString() + 'km'
-          distanceContainer.appendChild(value)
-        }
-
-        map.getSource('geojson').setData(geojson)
-      })
+      }
 
       setMap(map)
       map.resize()

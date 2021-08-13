@@ -11,12 +11,12 @@ import './MapToolbox.scss'
 const MapToolbox = (): JSX.Element => {
   return (
     <div className="MapToolbox">
-      <div className="btn-group w-100">
+      {/* <div className="btn-group w-100">
         <ZoomInButton />
         <ZoomOutButton />
         <ResetButton />
-      </div>
-      <BaseLayerSelect />
+      </div> */}
+      {/* <BaseLayerSelect /> */}
       <PolygonDrawingTool />
     </div>
   )
