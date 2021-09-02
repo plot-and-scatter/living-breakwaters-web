@@ -16,8 +16,8 @@ const MapToolbox = (): JSX.Element => {
         <ZoomOutButton />
         <ResetButton />
       </div> */}
-      {/* <BaseLayerSelect /> */}
-      <PolygonDrawingTool />
+      <BaseLayerSelect />
+      {/* <PolygonDrawingTool /> */}
     </div>
   )
 }

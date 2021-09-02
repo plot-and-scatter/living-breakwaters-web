@@ -1,10 +1,10 @@
 .MapToolbox {
   height: 30px;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  width: 150px;
-  z-index: 1025;
+  top: 4rem;
+  // width: 150px;
+  left: 1rem;
+  z-index: 999;
   > div {
     margin-bottom: 1rem;
   }

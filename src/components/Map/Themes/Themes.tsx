@@ -38,7 +38,7 @@ const Themes = ({ defaultThemeKey, lockTheme }: Props): JSX.Element => {
   return (
     <div className="Themes">
       <button className={classes} onClick={toggleShowThemesCallback}>
-        <i className="fas fa-layer-group mr-1" /> Themes
+        <i className="fas fa-list mr-1" /> Themes
       </button>
       <div
         className="ThemeInteraction"
