@@ -20,7 +20,7 @@ const About = (props: FixTypeLater): JSX.Element => {
         bgImage={image}
         textDark
       >
-        About Living Breakwaters
+        About Changing Coastlines
       </BannerRow>
     </Layout>
   )

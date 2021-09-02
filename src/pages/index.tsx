@@ -22,14 +22,14 @@ class Index extends React.Component {
 
         {/* <BannerRow bgOpacity={0.2} bgImage={image}>
           <div className="col-12 text-center">
-            <span className="Cutout">Living Breakwaters</span>
+            <span className="Cutout">Changing Coastlines</span>
           </div>
         </BannerRow> */}
 
         <BannerRow bgOpacity={0.3} bgImage={image} short>
           <a id="intro" />
           <div className="col-6 offset-3 text-center">
-            <p className="Cutout mb-5">Living Breakwaters</p>
+            <p className="Cutout mb-5">Changing Coastlines</p>
           </div>
           <div
             className="lead col-6 offset-3"
@@ -41,7 +41,7 @@ class Index extends React.Component {
               infrastructures, and beaches, impacting municipalities, First
               Nations, and Provincial and Federal governments. In order to
               implement mitigation and adaptation strategies, Natural Resources
-              Canada has provided generous support to the Living Breakwaters
+              Canada has provided generous support to the Changing Coastlines
               project to develop a layered approach to coastal adaptation that
               incorporates living systems and enhances local and regional
               ecosystems and spatial quality while reducing flood/erosion risks

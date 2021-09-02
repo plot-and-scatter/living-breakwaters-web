@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: '/living-breakwaters-web',
   siteMetadata: {
-    title: `Living Breakwaters`,
+    title: `Changing Coastlines`,
     author: `Frank Hangler`,
-    description: `Living Breakwaters online platform.`,
+    description: `Changing Coastlines online platform.`,
     siteUrl: `https://plotandscatter.com/living-breakwaters-web`,
     social: {
       twitter: `livingbreakwaters`

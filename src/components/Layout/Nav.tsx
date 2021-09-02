@@ -11,7 +11,7 @@ const Nav = (): JSX.Element => {
       style={{ zIndex: 3000 }}
     >
       <Link className="navbar-brand" to="/">
-        Living Breakwaters
+        Changing Coastlines
       </Link>
       <button
         className="navbar-toggler"
