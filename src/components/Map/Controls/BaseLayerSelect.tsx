@@ -26,6 +26,8 @@ const BaseLayerSelect = (): JSX.Element => {
 
   const [baseLayerIndex, setBaseLayerIndex] = useState<number>(0)
 
+  const { activeLayers, resetLayers, showLayer } = useMapManager()
+
   useEffect(() => {
     if (baseLayerIndex >= BASE_LAYER_STYLES.length) {
       setBaseLayerIndex(0)
@@ -33,7 +35,15 @@ const BaseLayerSelect = (): JSX.Element => {
       if (map) {
         // TODO: THIS OBLITERATES ALL OTHER LAYERS!
         // MAKE IT NOT DO THAT
+        const _activeLayers = Object.assign({}, activeLayers)
         map.setStyle(BASE_LAYER_STYLES[baseLayerIndex])
+        // setActiveLayers(_activeLayers)
+        resetLayers()
+        console.log('_activeLayers', _activeLayers)
+        Object.keys(_activeLayers).forEach((l) => {
+          console.log('-->', l)
+          showLayer(l)
+        })
       }
     }
   }, [baseLayerIndex, map])

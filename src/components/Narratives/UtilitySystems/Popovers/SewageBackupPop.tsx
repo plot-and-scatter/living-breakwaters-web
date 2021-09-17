@@ -6,8 +6,35 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import SewerLarge from '../../PlaceableSVGs/Objects/SewerLarge'
 import { useRef } from 'react'
 import { useEffect } from 'react'
+import ALink from '../../../Layout/ALink'
 
-export const contentMap = {}
+const STAGE_2_CONTENT = (
+  <p>
+    When treatment systems become overloaded from sea level rise combined with
+    high tides and storms, communities will flood from backed up sewers.{' '}
+    <ALink
+      external
+      href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017EF000805"
+    >
+      This article discusses
+    </ALink>{' '}
+    how people impacted by sea level rise due to loss of wastewater services
+    could be five times as high as previous predictions of the number of people
+    who experience direct flooding of their homes or property.
+  </p>
+)
+
+const STAGE_3_CONTENT = (
+  <p>
+    If no actions are undertaken, sewage backup will happen more frequently,
+    even in the absence of a storm or high tide.
+  </p>
+)
+
+export const contentMap = {
+  2: STAGE_2_CONTENT,
+  3: STAGE_3_CONTENT
+}
 
 const SewageBackupPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()

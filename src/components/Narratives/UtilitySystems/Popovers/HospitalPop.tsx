@@ -6,7 +6,16 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 
 import Office2 from '../../PlaceableSVGs/Buildings/Office2'
 
-export const contentMap = {}
+const STAGE_3_CONTENT = (
+  <p>
+    Power outages may impact operations of essential services that are located
+    within or outside of the floodplain, including hospitals and schools.
+  </p>
+)
+
+export const contentMap = {
+  3: STAGE_3_CONTENT
+}
 
 const HospitalPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()

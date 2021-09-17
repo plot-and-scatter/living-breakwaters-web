@@ -6,7 +6,17 @@ import PlaceableSVGProps from '../../../../@types/PlaceableSVGProps'
 import Textbox from '../../PlaceableSVGs/Textbox'
 import Tree from '../../PlaceableSVGs/Trees/Tree'
 
-export const contentMap = {}
+const STAGE_3_CONTENT = (
+  <p>
+    Trails and bikeways, often co-located along waterfronts, will be
+    inaccessible during flood events, limiting options for recreation and those
+    using theses transportation networks for commuting.
+  </p>
+)
+
+export const contentMap = {
+  3: STAGE_3_CONTENT
+}
 
 const BikePathPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()

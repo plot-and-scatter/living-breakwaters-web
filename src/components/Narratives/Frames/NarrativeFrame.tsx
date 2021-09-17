@@ -104,8 +104,20 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
           break
       }
     }
+    console.log(
+      'activeNarrative',
+      activeNarrative,
+      'narrativeStage',
+      narrativeStage,
+      '==> content',
+      content,
+      CulturalLandscapesPopupDictionary,
+      CulturalLandscapesPopupDictionary[contentKey]
+    )
     setContent(content)
   }, [activeNarrative, contentKey, narrativeStage])
+
+  console.log('--> content', content)
 
   return (
     <div className="NarrativeFrame row">

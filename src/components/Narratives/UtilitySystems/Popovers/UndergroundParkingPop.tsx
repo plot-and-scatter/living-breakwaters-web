@@ -6,7 +6,17 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import Basement from '../../PlaceableSVGs/Buildings/Basement'
 import Car3 from '../../PlaceableSVGs/Vehicles/Car3'
 
-export const contentMap = {}
+const STAGE_1_CONTENT = <p></p>
+
+const STAGE_2_CONTENT = <p></p>
+
+const STAGE_3_CONTENT = <p></p>
+
+export const contentMap = {
+  1: STAGE_1_CONTENT,
+  2: STAGE_2_CONTENT,
+  3: STAGE_3_CONTENT
+}
 
 const UndergroundParkingPop = (props: PlaceableSVGProps): JSX.Element => {
   const { narrativeStage } = useNarrative()

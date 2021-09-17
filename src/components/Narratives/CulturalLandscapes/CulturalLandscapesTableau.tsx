@@ -30,6 +30,7 @@ import Tree from '../PlaceableSVGs/Trees/Tree'
 import '../PlaceableSVGs/Elements.scss'
 import './CulturalLandscapesTableau.scss'
 import { CulturalLandscapesPopupKey as PKey } from './CulturalLandscapesPopupDictionary'
+import Bus from '../PlaceableSVGs/Vehicles/Bus'
 
 export const DEFAULT_CONTENT = (
   <p>
@@ -86,13 +87,19 @@ const CulturalLandscapesTableau = ({ popoverClick }: Props): JSX.Element => {
         />
 
         <Birds xOffset={0.2} yOffset={0.3} />
-        <FishingPop onClick={(e) => popoverClick(e, PKey.Fishing)} />
+        <FishingPop
+          onClick={(e) => {
+            console.log('Clicky')
+            popoverClick(e, PKey.Fishing)
+          }}
+        />
         <IntertidalPop onClick={(e) => popoverClick(e, PKey.Intertidal)} />
         <BeachPop onClick={(e) => popoverClick(e, PKey.Beach)} />
         <BikePathPop onClick={(e) => popoverClick(e, PKey.BikePath)} />
         <ArchaeologyPop onClick={(e) => popoverClick(e, PKey.Archaeology)} />
         <ParkPop onClick={(e) => popoverClick(e, PKey.Park)} />
-        <TransitPop onClick={(e) => popoverClick(e, PKey.Transit)} />
+        {/* <TransitPop onClick={(e) => popoverClick(e, PKey.Transit)} /> */}
+        <Bus xOffset={0.545} yOffset={0.721} scale={0.02} />
         <HotelPop onClick={(e) => popoverClick(e, PKey.Hotel)} />
         <Office3 xOffset={0.72} yOffset={0.59} />
         <SubwayPop onClick={(e) => popoverClick(e, PKey.Subway)} />

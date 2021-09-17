@@ -6,8 +6,36 @@ import Textbox from '../../PlaceableSVGs/Textbox'
 import Factory from '../../PlaceableSVGs/Buildings/Factory'
 import FixTypeLater from '../../../../@types/FixTypeLater'
 import { useEffect } from 'react'
+import ALink from '../../../Layout/ALink'
 
-export const contentMap = {}
+const STAGE_2_CONTENT = (
+  <p>
+    Treatment plants take are designed to take advantage of gravity and as such
+    located in low-lying areas adjacent to waterbodies. Flooding due to sea
+    level rise can damage these plants, causing them to leak raw sewage and
+    suspended solids the nearby environment.
+  </p>
+)
+
+const STAGE_3_CONTENT = (
+  <p>
+    Without redesign, treatment plants will become increasingly vulnerable to
+    flooding during high tides and storm events.{' '}
+    <ALink
+      external
+      href="https://dailyhive.com/vancouver/iona-island-wastewater-treatment-plant-design-cost-escalation"
+    >
+      Please follow this link
+    </ALink>{' '}
+    to learn more about how Metro Vancouver is addressing these challenges in
+    the redesign of the Iona Waste Water Treatment Plant.
+  </p>
+)
+
+export const contentMap = {
+  2: STAGE_2_CONTENT,
+  3: STAGE_3_CONTENT
+}
 
 export const toggleContamination = (narrativeStage: number): void => {
   if (narrativeStage === 2) {

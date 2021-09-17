@@ -7,7 +7,18 @@ import PowerPlant from '../../PlaceableSVGs/Objects/PowerPlant'
 import { useEffect } from 'react'
 import FixTypeLater from '../../../../@types/FixTypeLater'
 
-export const contentMap = {}
+const STAGE_3_CONTENT = (
+  <p>
+    Sea level rise will cause significant challenges to our energy
+    infrastructures. Many parts of this systems, including power plants,
+    electrical substations, power lines, are located in floodplain and
+    vulnerable to flooding.
+  </p>
+)
+
+export const contentMap = {
+  3: STAGE_3_CONTENT
+}
 
 export const togglePowerOutage = (narrativeStage: number): void => {
   if (narrativeStage === 3) {

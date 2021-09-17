@@ -32,6 +32,8 @@ type MapLayerManagerType = {
   map: Map
   setMap: React.Dispatch<React.SetStateAction<Map>>
   showLayer: (id?: string | string[]) => void
+  resetLayers: () => void
+  setBaseLayer: () => void
 }
 
 const MapLayerManagerContext = React.createContext<
@@ -58,6 +60,9 @@ function useMapManager(): MapLayerManagerType {
   const showLayer = useCallback(
     (id?: string | string[]) => {
       const layers = layersToToggle(id)
+
+      console.log('====> LAYERS', layers)
+      console.log(' -- loaded layers --', loadedLayers)
 
       layers.forEach((l) => {
         // If the layer is loaded, set to visible; otherwise add to map
@@ -107,6 +112,11 @@ function useMapManager(): MapLayerManagerType {
     [map]
   )
 
+  const resetLayers = useCallback(() => {
+    setLoadedLayers({})
+    setActiveLayers({})
+  }, [])
+
   return {
     activeLayers,
     showLayer,
@@ -114,7 +124,9 @@ function useMapManager(): MapLayerManagerType {
     map,
     setMap,
     flyTo,
-    hideAllLayers
+    hideAllLayers,
+    resetLayers,
+    loadedLayers
   }
 }
 
