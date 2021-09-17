@@ -178,13 +178,11 @@ const NarrativeFrame = ({
         </div>
       </div>
       {activeNarrative && (
-        <>
-          <div className="col-12">
-            <Tableau
-              activeNarrative={activeNarrative}
-              popoverClick={popoverClick}
-            />
-          </div>
+        <div className="TableauWrapper col-12">
+          <Tableau
+            activeNarrative={activeNarrative}
+            popoverClick={popoverClick}
+          />
           <div className="col-6 offset-3 mt-3">
             <NarrativeSelect activeNarrative={activeNarrative} />
           </div>
@@ -194,7 +192,7 @@ const NarrativeFrame = ({
             contentKey={contentKey}
             setContentKey={setContentKey}
           />
-        </>
+        </div>
       )}
       {!activeNarrative && (
         <>
@@ -210,31 +208,34 @@ const NarrativeFrame = ({
                 <img src={image1} style={{ maxWidth: '100%' }} />
               </div>
               <div
-                className="col-12"
+                className="col-12 mt-5"
                 onClick={() =>
                   setActiveNarrative(NarrativeType.LogisticsNetworks)
                 }
                 style={{ cursor: 'pointer' }}
               >
                 <h4 className="mt-2">Logistics Networks</h4>
+                <p>{LOGISTICS_NETWORKS}</p>
                 <img src={image2} style={{ maxWidth: '100%' }} />
               </div>
               <div
-                className="col-12"
+                className="col-12 mt-5"
                 onClick={() =>
                   setActiveNarrative(NarrativeType.CulturalLandscapes)
                 }
                 style={{ cursor: 'pointer' }}
               >
                 <h4 className="mt-2">Cultural Landscapes</h4>
+                <p>{CULTURAL_LANDSCAPES}</p>
                 <img src={image3} style={{ maxWidth: '100%' }} />
               </div>
               <div
-                className="col-12"
+                className="col-12 mt-5"
                 onClick={() => setActiveNarrative(NarrativeType.FoodSecurity)}
                 style={{ cursor: 'pointer' }}
               >
                 <h4 className="mt-2">Food Security</h4>
+                <p>{FOOD_SECURITY}</p>
                 <img src={image4} style={{ maxWidth: '100%' }} />
               </div>
             </div>

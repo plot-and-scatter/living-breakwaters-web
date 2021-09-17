@@ -19,7 +19,7 @@ const ScenarioTemplate = ({ data, pageContext }: Props): JSX.Element => {
   console.log(pageQuery)
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
