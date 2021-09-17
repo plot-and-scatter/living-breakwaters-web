@@ -28,7 +28,7 @@ import ALink from '../../Layout/ALink'
 import { UtilitySystemsPopupKey as PKey } from './UtilitySystemsPopupDictionary'
 
 export const DEFAULT_CONTENT = (
-  <p>
+  <>
     As sea levels rise, coastal communities will experience more frequent and
     persistent nuisance flooding, and low-lying areas may be permanently
     inundated. Critical components of lifeline infrastructure networks in these
@@ -37,7 +37,7 @@ export const DEFAULT_CONTENT = (
     critical infrastructures and utility systems that are exposed to sea level
     rise and coastal flooding are important first steps in understanding how to
     better adapt coastal communities to future conditions.
-  </p>
+  </>
 )
 
 interface Props {

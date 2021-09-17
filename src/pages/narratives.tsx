@@ -31,7 +31,10 @@ const Narratives = (props: FixTypeLater): JSX.Element => {
         </div>
       </Header>
       <div className="Narratives">
-        <NarrativeFrame activeNarrative={activeNarrative} />
+        <NarrativeFrame
+          activeNarrative={activeNarrative}
+          setActiveNarrative={setActiveNarrative}
+        />
       </div>
     </Layout>
   )

@@ -20,7 +20,7 @@ import './LogisticsNetworksTableau.scss'
 import { LogisticsNetworksPopupKey as PKey } from './LogisticsNetworksPopupDictionary'
 
 export const DEFAULT_CONTENT = (
-  <p>
+  <>
     Seaports are essential for global trade-led development: they provide access
     to global markets and supply-chains for all countries, and are integral to
     maritime transport, as well as fisheries, and many economic activities in
@@ -34,7 +34,7 @@ export const DEFAULT_CONTENT = (
       Please read this recent article for more information
     </ALink>
     .
-  </p>
+  </>
 )
 
 interface Props {

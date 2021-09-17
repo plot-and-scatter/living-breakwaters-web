@@ -1,6 +1,5 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { createImportSpecifier } = require('typescript')
 
 const TEMPLATES_DIR = `./src/templates/`
 
@@ -26,22 +25,19 @@ const BASE_QUERY = (contentTypeFilter) => `
   }
 `
 
-const STRATEGY_RETRIEVAL_QUERY = BASE_QUERY`ne: "theme"`
-const THEME_RETRIEVAL_QUERY = BASE_QUERY`eq: "theme"`
+const STRATEGY_RETRIEVAL_QUERY = BASE_QUERY`ne: "narrative"`
+const NARRATIVE_RETRIEVAL_QUERY = BASE_QUERY`eq: "narrative"`
 
 const STRATEGY_URL_PREFIX = `/strategies`
-const THEME_URL_PREFIX = `/themes`
+const NARRATIVE_URL_PREFIX = `/narratives`
 
-const pagesFromNodes = async (
+const pagesFromStrategyNodes = async (
   query,
   templatePath,
   graphql,
   createPageMethod
 ) => {
   const gqlMarkdownNodes = await graphql(query)
-
-  console.log('---')
-  console.log('gqlMarkdownNodes', gqlMarkdownNodes)
 
   if (gqlMarkdownNodes.errors) {
     throw gqlMarkdownNodes.errors
@@ -111,23 +107,54 @@ const pagesFromNodes = async (
     })
 }
 
+const pagesFromNarrativeNodes = async (
+  query,
+  templatePath,
+  graphql,
+  createPageMethod
+) => {
+  const markdownNodes = await graphql(query)
+
+  console.log('here')
+  console.log('markdownNodes', markdownNodes)
+
+  if (markdownNodes.errors) {
+    throw markdownNodes.errors
+  }
+
+  // Create pages.
+  const pages = markdownNodes.data.allMarkdownRemark.edges
+
+  pages.forEach((page, index) => {
+    const previous = index === pages.length - 1 ? null : pages[index + 1].node
+    const next = index === 0 ? null : pages[index - 1].node
+
+    createPageMethod({
+      path: page.node.fields.slug,
+      component: path.resolve(templatePath),
+      context: {
+        slug: page.node.fields.slug,
+        previous,
+        next
+      }
+    })
+  })
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  console.log('  start')
-  await pagesFromNodes(
+  await pagesFromStrategyNodes(
     STRATEGY_RETRIEVAL_QUERY,
     `${TEMPLATES_DIR}Strategy.tsx`,
     graphql,
     createPage
   )
-  console.log('  mid')
-  await pagesFromNodes(
-    THEME_RETRIEVAL_QUERY,
-    `${TEMPLATES_DIR}Theme.tsx`,
+  await pagesFromNarrativeNodes(
+    NARRATIVE_RETRIEVAL_QUERY,
+    `${TEMPLATES_DIR}Narrative.tsx`,
     graphql,
     createPage
   )
-  console.log('  done')
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -135,12 +162,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const urlPrefix =
-      node.frontmatter.contentType === 'theme'
-        ? THEME_URL_PREFIX
+      node.frontmatter.contentType === 'narrative'
+        ? NARRATIVE_URL_PREFIX
         : STRATEGY_URL_PREFIX
     const value = `${urlPrefix}${createFilePath({ node, getNode })}`
-
-    console.log('urlPrefix', urlPrefix, 'value', value)
 
     createNodeField({
       name: `slug`,

@@ -33,7 +33,7 @@ import { CulturalLandscapesPopupKey as PKey } from './CulturalLandscapesPopupDic
 import Bus from '../PlaceableSVGs/Vehicles/Bus'
 
 export const DEFAULT_CONTENT = (
-  <p>
+  <>
     Our coastlines are places inhabited by people for thousands of years. They
     are home to various important cultural sites and landscapes. The identity of
     many coastlines is tied in tangible and intangible ways to centuries of
@@ -42,7 +42,7 @@ export const DEFAULT_CONTENT = (
     flooding as a result of sea level rise and storm surges. This will have
     substantial impacts on the daily lives of local communities as well as
     tourism and livelihoods depending on cultural landscapes.
-  </p>
+  </>
 )
 
 interface Props {

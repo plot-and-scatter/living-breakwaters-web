@@ -16,13 +16,22 @@ import NarrativePopup from './NarrativePopup'
 import NarrativeSelect from '../NarrativeSelect'
 import Tableau from '../Tableau'
 
+import image1 from '../../../../content/assets/images/utility-systems.png'
+import image2 from '../../../../content/assets/images/logistics-networks.png'
+import image3 from '../../../../content/assets/images/cultural-landscapes.png'
+import image4 from '../../../../content/assets/images/food-security.png'
+
 import './NarrativeFrame.scss'
 
 interface Props {
   activeNarrative: NarrativeType
+  setActiveNarrative: FixTypeLater
 }
 
-const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
+const NarrativeFrame = ({
+  activeNarrative,
+  setActiveNarrative
+}: Props): JSX.Element => {
   const [contentKey, setContentKey] = useState<string>()
   const [left, setLeft] = useState<number>()
   const [content, setContent] = useState<React.ReactNode>()
@@ -139,7 +148,7 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
 
   return (
     <div className="NarrativeFrame row">
-      <div className="col">
+      <div className="col-12">
         <div className="row mt-5">
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
             <p className="lead">
@@ -168,21 +177,70 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="col-12">
-        <Tableau
-          activeNarrative={activeNarrative}
-          popoverClick={popoverClick}
-        />
-      </div>
-      <div className="col-6 offset-3 mt-3">
-        <NarrativeSelect activeNarrative={activeNarrative} />
-      </div>
-      <NarrativePopup
-        left={left}
-        content={content}
-        contentKey={contentKey}
-        setContentKey={setContentKey}
-      />
+      {activeNarrative && (
+        <>
+          <div className="col-12">
+            <Tableau
+              activeNarrative={activeNarrative}
+              popoverClick={popoverClick}
+            />
+          </div>
+          <div className="col-6 offset-3 mt-3">
+            <NarrativeSelect activeNarrative={activeNarrative} />
+          </div>
+          <NarrativePopup
+            left={left}
+            content={content}
+            contentKey={contentKey}
+            setContentKey={setContentKey}
+          />
+        </>
+      )}
+      {!activeNarrative && (
+        <>
+          <div className="col-6 mt-5 offset-3">
+            <div className="row">
+              <div
+                className="col-12"
+                onClick={() => setActiveNarrative(NarrativeType.UtilitySystems)}
+                style={{ cursor: 'pointer' }}
+              >
+                <h4 className="mt-2">Utility Systems</h4>
+                <p>{UTILITY_SYSTEMS}</p>
+                <img src={image1} style={{ maxWidth: '100%' }} />
+              </div>
+              <div
+                className="col-12"
+                onClick={() =>
+                  setActiveNarrative(NarrativeType.LogisticsNetworks)
+                }
+                style={{ cursor: 'pointer' }}
+              >
+                <h4 className="mt-2">Logistics Networks</h4>
+                <img src={image2} style={{ maxWidth: '100%' }} />
+              </div>
+              <div
+                className="col-12"
+                onClick={() =>
+                  setActiveNarrative(NarrativeType.CulturalLandscapes)
+                }
+                style={{ cursor: 'pointer' }}
+              >
+                <h4 className="mt-2">Cultural Landscapes</h4>
+                <img src={image3} style={{ maxWidth: '100%' }} />
+              </div>
+              <div
+                className="col-12"
+                onClick={() => setActiveNarrative(NarrativeType.FoodSecurity)}
+                style={{ cursor: 'pointer' }}
+              >
+                <h4 className="mt-2">Food Security</h4>
+                <img src={image4} style={{ maxWidth: '100%' }} />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

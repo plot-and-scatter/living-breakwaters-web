@@ -30,7 +30,7 @@ import ALink from '../../Layout/ALink'
 import { FoodSecurityPopupKey as PKey } from './FoodSecurityPopupDictionary'
 
 export const DEFAULT_CONTENT = (
-  <p>
+  <>
     Currently, dikes protect many low-lying agriculture lands from sea level
     rise and coastal flooding. However, many dikes in BC generally do not meet
     current provincial standards. Upgrading the dikes to meet the updated
@@ -45,7 +45,7 @@ export const DEFAULT_CONTENT = (
       please follow this link
     </ALink>
     .
-  </p>
+  </>
 )
 
 if (gsap) gsap.registerPlugin(MorphSVGPlugin)
