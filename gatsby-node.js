@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createImportSpecifier } = require('typescript')
 
 const TEMPLATES_DIR = `./src/templates/`
 
@@ -38,6 +39,9 @@ const pagesFromNodes = async (
   createPageMethod
 ) => {
   const gqlMarkdownNodes = await graphql(query)
+
+  console.log('---')
+  console.log('gqlMarkdownNodes', gqlMarkdownNodes)
 
   if (gqlMarkdownNodes.errors) {
     throw gqlMarkdownNodes.errors
@@ -109,12 +113,21 @@ const pagesFromNodes = async (
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  console.log('  start')
   await pagesFromNodes(
     STRATEGY_RETRIEVAL_QUERY,
     `${TEMPLATES_DIR}Strategy.tsx`,
     graphql,
     createPage
   )
+  console.log('  mid')
+  await pagesFromNodes(
+    THEME_RETRIEVAL_QUERY,
+    `${TEMPLATES_DIR}Theme.tsx`,
+    graphql,
+    createPage
+  )
+  console.log('  done')
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -126,6 +139,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         ? THEME_URL_PREFIX
         : STRATEGY_URL_PREFIX
     const value = `${urlPrefix}${createFilePath({ node, getNode })}`
+
+    console.log('urlPrefix', urlPrefix, 'value', value)
 
     createNodeField({
       name: `slug`,

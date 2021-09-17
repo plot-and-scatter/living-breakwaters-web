@@ -29,6 +29,7 @@ const Nav = (): JSX.Element => {
           <NavLink path="/about" title="About" />
           <NavLink path="/map" title="Map" />
           <NavLink path="/narratives" title="Narratives" />
+          {/* <NavLink path="/themes" title="Themes" /> */}
           <NavLink path="/strategies" title="Adaptation Strategies" />
           <NavLink path="/case-study" title="Case Study" />
 

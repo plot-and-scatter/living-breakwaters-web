@@ -16,9 +16,7 @@ const Narratives = (props: FixTypeLater): JSX.Element => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
-  const [activeNarrative, setActiveNarrative] = useState(
-    NarrativeType.CulturalLandscapes // DEFAULT NARRATIVE Default
-  )
+  const [activeNarrative, setActiveNarrative] = useState()
 
   return (
     <Layout location={props.location} title={siteTitle}>

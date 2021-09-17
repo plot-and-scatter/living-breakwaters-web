@@ -26,6 +26,7 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
   const [contentKey, setContentKey] = useState<string>()
   const [left, setLeft] = useState<number>()
   const [content, setContent] = useState<React.ReactNode>()
+  const [topContent, setTopContent] = useState<React.ReactNode>()
 
   const { narrativeStage, setNarrativeStage, setShowRain } = useNarrative()
 
@@ -117,10 +118,56 @@ const NarrativeFrame = ({ activeNarrative }: Props): JSX.Element => {
     setContent(content)
   }, [activeNarrative, contentKey, narrativeStage])
 
-  console.log('--> content', content)
+  useEffect(() => {
+    let newTopContent
+    switch (activeNarrative) {
+      case NarrativeType.CulturalLandscapes:
+        newTopContent = CULTURAL_LANDSCAPES
+        break
+      case NarrativeType.UtilitySystems:
+        newTopContent = UTILITY_SYSTEMS
+        break
+      case NarrativeType.FoodSecurity:
+        newTopContent = FOOD_SECURITY
+        break
+      case NarrativeType.LogisticsNetworks:
+        newTopContent = LOGISTICS_NETWORKS
+        break
+    }
+    setTopContent(newTopContent)
+  }, [activeNarrative])
 
   return (
     <div className="NarrativeFrame row">
+      <div className="col">
+        <div className="row mt-5">
+          <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <p className="lead">
+              {!activeNarrative && (
+                <>
+                  Narrative introduction text. Sed ut perspiciatis unde omnis
+                  iste natus error sit voluptatem accusantium doloremque
+                  laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                  inventore veritatis et quasi architecto beatae vitae dicta
+                  sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                  aspernatur aut odit aut fugit, sed quia consequuntur magni
+                  dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                  quisquam est, qui dolorem ipsum quia dolor sit amet,
+                  consectetur, adipisci velit, sed quia non numquam eius modi
+                  tempora incidunt ut labore et dolore magnam aliquam quaerat
+                  voluptatem. Ut enim ad minima veniam, quis nostrum
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut
+                  aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                  reprehenderit qui in ea voluptate velit esse quam nihil
+                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                  voluptas nulla pariatur?
+                </>
+              )}
+              {activeNarrative && topContent}
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="col-12">
         <Tableau
           activeNarrative={activeNarrative}

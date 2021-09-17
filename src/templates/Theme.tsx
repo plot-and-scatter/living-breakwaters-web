@@ -7,9 +7,6 @@ import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
-import StrategyCitations from '../components/Strategies/StrategyDetail/StrategyCitations'
-import StrategyDetail from '../components/Strategies/StrategyDetail/StrategyDetail'
-import StrategySelect from './StrategySelect'
 import Title from '../components/Layout/Title'
 
 import './Strategies.scss'
@@ -32,19 +29,8 @@ const Strategy = ({
           headingGroup={'Adaptation Strategy'}
           title={post.frontmatter.title}
         />
-        <div className="col-6">
-          <StrategySelect
-            currentPost={post}
-            strategies={data.allMarkdownRemark.edges}
-          />
-        </div>
       </Header>
       <div className="Strategies">
-        <StrategyDetail
-          data={data}
-          pageContext={pageContext}
-          citationHTML={post.html}
-        />
         {/* <StrategyCitations citationHTML={post.html} /> */}
         {/* <hr style={{ marginBottom: '1rem' }} />
         <ul
@@ -79,7 +65,7 @@ const Strategy = ({
 export default Strategy
 
 export const pageQuery = graphql`
-  query StrategyBySlug($slug: String!, $animationSlug: String!) {
+  query NarrativeBySlug($slug: String!, $animationSlug: String!) {
     site {
       siteMetadata {
         title
@@ -107,7 +93,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { contentType: { eq: "theme" } } }
+      filter: { frontmatter: { contentType: { eq: "strategy" } } }
       sort: { fields: [frontmatter___title], order: ASC }
       limit: 1000
     ) {

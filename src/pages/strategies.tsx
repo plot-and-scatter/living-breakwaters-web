@@ -70,7 +70,7 @@ const Strategies = (props: FixTypeLater): JSX.Element => {
       </Header>
       <div className="row mt-5">
         <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <p>
+          <p className="lead">
             Coastal zones are some of the most ecologically sensitive and
             diverse habitats in the world. Currently, these areas are
             experiencing the detrimental effects of sea-level rise (SLR) and the
