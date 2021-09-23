@@ -1,8 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-import './Nav.scss'
 import NavLink from './NavLink'
+
+import './Nav.scss'
 
 const Nav = (): JSX.Element => {
   return (
@@ -29,15 +30,7 @@ const Nav = (): JSX.Element => {
           <NavLink path="/about" title="About" />
           <NavLink path="/map" title="Map" />
           <NavLink path="/narratives" title="Narratives" />
-          {/* <NavLink path="/themes" title="Themes" /> */}
           <NavLink path="/strategies" title="Adaptation Strategies" />
-          <NavLink path="/case-study" title="Case Study" />
-
-          {/* <NavLink path="/cultural-landscapes" title="Cultural Landscapes" />
-          <NavLink path="/food-security" title="Food Security" />
-          <NavLink path="/logistics-networks" title="Logistics Networks" />
-          <NavLink path="/utility-systems" title="Utility Systems" /> */}
-          {/* Put stories into a dropdown called "Challenges" */}
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -47,28 +40,17 @@ const Nav = (): JSX.Element => {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Explore
+              Case Studies
             </a>
             <div
               className="dropdown-menu dropdown-menu-right"
               aria-labelledby="navbarDropdownMenuLink"
             >
               <Link className="dropdown-item" to="/cultural-landscapes">
-                Cultural Landscapes
-              </Link>
-              <Link className="dropdown-item" to="/food-security">
-                Food Security
-              </Link>
-              <Link className="dropdown-item" to="/logistics-networks">
-                Logistics Networks
-              </Link>
-              <Link className="dropdown-item" to="/utility-systems">
-                Utility Systems
+                Point Grey Cliffs
               </Link>
             </div>
           </li>
-
-          {/* <NavLink path="/contact" title="Contact" /> */}
         </ul>
       </div>
     </nav>
