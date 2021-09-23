@@ -46,7 +46,7 @@ const Nav = (): JSX.Element => {
               className="dropdown-menu dropdown-menu-right"
               aria-labelledby="navbarDropdownMenuLink"
             >
-              <Link className="dropdown-item" to="/cultural-landscapes">
+              <Link className="dropdown-item" to="/case-study-point-grey">
                 Point Grey Cliffs
               </Link>
             </div>
