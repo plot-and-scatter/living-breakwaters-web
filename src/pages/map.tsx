@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { MapLayerManagerProvider } from '../components/Data/MapLayerManager'
+import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
-import MapComponent from '../components/Map/Map'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
-import Header from '../components/Layout/Header'
 import Title from '../components/Layout/Title'
+import MapFrame from '../components/Map/MapFrame'
 
 const Map = ({ data }: SitePageProps): JSX.Element => {
   const siteTitle = data.site.siteMetadata.title
@@ -18,9 +17,7 @@ const Map = ({ data }: SitePageProps): JSX.Element => {
       <Header>
         <Title headingGroup="Map" />
       </Header>
-      <MapLayerManagerProvider>
-        <MapComponent />
-      </MapLayerManagerProvider>
+      <MapFrame />
     </Layout>
   )
 }

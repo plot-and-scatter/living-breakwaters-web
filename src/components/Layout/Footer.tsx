@@ -9,16 +9,9 @@ interface Props {
 const Footer = ({ title }: Props): JSX.Element => {
   return (
     <footer className="Footer container-fluid py-2 text-muted">
-      <div className="row">
-        <div className="col">
-          <h5>{title}</h5>
-        </div>
-      </div>
       <div className="row pt-0">
         <div className="col">
-          UBC SALA
-          <br />
-          <a href="https://sala.ubc.ca/">https://sala.ubc.ca/</a>
+          <h5>{title}</h5>
         </div>
         <div className="col text-right">
           <small className="text-muted">

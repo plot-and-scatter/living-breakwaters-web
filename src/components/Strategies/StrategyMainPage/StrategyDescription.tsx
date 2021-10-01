@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 
 import { StrategyGQLEdge } from '../../../@types/StrategyGQL'
 import { StrategyType } from '../../../@types/StrategyType'
+import Subhead from '../../Layout/Subhead'
 import StrategyIconItem from './StrategyIconItem'
 import StrategyListItem from './StrategyListItem'
 
@@ -33,9 +34,13 @@ const StrategyDescription = ({
             <StrategyListItem strategy={strategy} key={i} />
           ))}
         </div> */}
-        <div className="col-12">{children}</div>
+        <div className="col-12">
+          {' '}
+          <Subhead level={2}>{strategyType}</Subhead>
+          {children}
+        </div>
         <div className="col-12 mb-5">
-          <div className="row">
+          <div className="row Highlight">
             {relevantStrategies.map((strategy, i) => (
               <StrategyIconItem strategy={strategy} key={i} />
             ))}

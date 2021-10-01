@@ -18,7 +18,7 @@ const MapInfoButton = (): JSX.Element => {
       </div>
       {infoPopupVisible && (
         <div className="InfoPopup">
-          <div className="NarrativeContent rounded shadow">
+          <div className="NarrativeContent rounded shadow Highlight">
             <div className="d-flex p-2 justify-content-between align-items-center">
               <h2 className="my-0">Lorem Ipsum</h2>
               <button

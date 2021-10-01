@@ -16,12 +16,13 @@ import NarrativePopup from './NarrativePopup'
 import NarrativeSelect from '../NarrativeSelect'
 import Tableau from '../Tableau'
 
-import image1 from '../../../../content/assets/images/utility-systems.png'
-import image2 from '../../../../content/assets/images/logistics-networks.png'
-import image3 from '../../../../content/assets/images/cultural-landscapes.png'
-import image4 from '../../../../content/assets/images/food-security.png'
+import utilitySystems from '../../../../content/assets/images/utility-systems.png'
+import logisticsNetworks from '../../../../content/assets/images/logistics-networks.png'
+import culturalLandscapes from '../../../../content/assets/images/cultural-landscapes.png'
+import foodSecurity from '../../../../content/assets/images/food-security.png'
 
 import './NarrativeFrame.scss'
+import NarrativeDescription from './NarrativeDescription'
 
 interface Props {
   activeNarrative: NarrativeType
@@ -153,7 +154,7 @@ const NarrativeFrame = ({
           <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
             <p className="lead">
               {!activeNarrative && (
-                <>
+                <div className="Highlight">
                   Narrative introduction text. Sed ut perspiciatis unde omnis
                   iste natus error sit voluptatem accusantium doloremque
                   laudantium, totam rem aperiam, eaque ipsa quae ab illo
@@ -170,7 +171,7 @@ const NarrativeFrame = ({
                   reprehenderit qui in ea voluptate velit esse quam nihil
                   molestiae consequatur, vel illum qui dolorem eum fugiat quo
                   voluptas nulla pariatur?
-                </>
+                </div>
               )}
               {activeNarrative && topContent}
             </p>
@@ -196,48 +197,36 @@ const NarrativeFrame = ({
       )}
       {!activeNarrative && (
         <>
-          <div className="col-6 mt-5 offset-3">
+          <div className="col-6 offset-3">
             <div className="row">
-              <div
-                className="col-12"
-                onClick={() => setActiveNarrative(NarrativeType.UtilitySystems)}
-                style={{ cursor: 'pointer' }}
-              >
-                <h4 className="mt-2">Utility Systems</h4>
-                <p>{UTILITY_SYSTEMS}</p>
-                <img src={image1} style={{ maxWidth: '100%' }} />
-              </div>
-              <div
-                className="col-12 mt-5"
+              <NarrativeDescription
+                title="Logistics Networks"
                 onClick={() =>
                   setActiveNarrative(NarrativeType.LogisticsNetworks)
                 }
-                style={{ cursor: 'pointer' }}
-              >
-                <h4 className="mt-2">Logistics Networks</h4>
-                <p>{LOGISTICS_NETWORKS}</p>
-                <img src={image2} style={{ maxWidth: '100%' }} />
-              </div>
-              <div
-                className="col-12 mt-5"
+                image={logisticsNetworks}
+                content={LOGISTICS_NETWORKS}
+              />
+              <NarrativeDescription
+                title="Cultural Landscapes"
                 onClick={() =>
                   setActiveNarrative(NarrativeType.CulturalLandscapes)
                 }
-                style={{ cursor: 'pointer' }}
-              >
-                <h4 className="mt-2">Cultural Landscapes</h4>
-                <p>{CULTURAL_LANDSCAPES}</p>
-                <img src={image3} style={{ maxWidth: '100%' }} />
-              </div>
-              <div
-                className="col-12 mt-5"
+                image={culturalLandscapes}
+                content={CULTURAL_LANDSCAPES}
+              />
+              <NarrativeDescription
+                title="Utility Systems"
+                onClick={() => setActiveNarrative(NarrativeType.UtilitySystems)}
+                image={utilitySystems}
+                content={UTILITY_SYSTEMS}
+              />
+              <NarrativeDescription
+                title="Food Security"
                 onClick={() => setActiveNarrative(NarrativeType.FoodSecurity)}
-                style={{ cursor: 'pointer' }}
-              >
-                <h4 className="mt-2">Food Security</h4>
-                <p>{FOOD_SECURITY}</p>
-                <img src={image4} style={{ maxWidth: '100%' }} />
-              </div>
+                image={foodSecurity}
+                content={FOOD_SECURITY}
+              />
             </div>
           </div>
         </>

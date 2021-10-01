@@ -2,14 +2,18 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout/Layout'
-import SEO from '../components/SEO'
+import ALink from '../components/Layout/ALink'
 import BannerRow from '../components/Rows/BannerRow'
 import ContentRow from '../components/Rows/ContentRow'
+import InteractiveFeature from '../components/Layout/InteractiveFeature'
+import Layout from '../components/Layout/Layout'
+import SEO from '../components/SEO'
+import Subhead from '../components/Layout/Subhead'
 
 import image from '../../content/assets/images/annie-spratt-E5PDOC7mTvc-unsplash.jpg'
-import Subhead from '../components/Layout/Subhead'
-import ALink from '../components/Layout/ALink'
+import mapPreview from '../../content/assets/images/map-preview.png'
+import narrativePreview from '../../content/assets/images/narrative-preview.png'
+import strategyPreview from '../../content/assets/images/strategy-preview.png'
 
 class Index extends React.Component {
   render() {
@@ -58,19 +62,60 @@ class Index extends React.Component {
               integrating coastal ecosystem adaptive capacity with nature-based
               ecosystem, and governance solutions
             </p>
-            <p>
-              This project is meant to be a resource for planners, designers,
-              and coastal managers in the Fraser River Delta as well as
-              audiences globally. It provides different resources in the form of
-              interactive maps, narrative sections, and visualizations of a wide
-              range of flood adaptation approaches that incorporates strategies
-              for coastal environmental design based on the idea of designing
-              with nature. It is our hope that these resources help audiences
-              better understand the spatial challenges and potential strategies
-              to tackle coastal flood adaptation.
-            </p>
           </div>
         </BannerRow>
+
+        <ContentRow rowClasses="">
+          <Subhead>Interactive features</Subhead>
+          <p>
+            This project is meant to be a resource for planners, designers, and
+            coastal managers in the Fraser River Delta as well as audiences
+            globally. It provides different resources in the form of interactive
+            maps, narrative sections, and visualizations of a wide range of
+            flood adaptation approaches that incorporates strategies for coastal
+            environmental design based on the idea of designing with nature. It
+            is our hope that these resources help audiences better understand
+            the spatial challenges and potential strategies to tackle coastal
+            flood adaptation.
+          </p>
+        </ContentRow>
+
+        <div className="row">
+          <div className="col-10 offset-1">
+            <div className="row">
+              <InteractiveFeature title="Map" image={mapPreview} path={'map'}>
+                <strong>
+                  Explore the changing coastlines of the Fraser River Delta with
+                  our dynamic map.
+                </strong>{' '}
+                Apply layers indicating land uses, utilities, sensitive
+                ecosystems, and possible flood events.
+              </InteractiveFeature>
+              <InteractiveFeature
+                title="Narratives"
+                image={narrativePreview}
+                path={'narratives'}
+              >
+                <strong>
+                  See the possible impacts of heavy rain events and sea level
+                  rise on the region.
+                </strong>{' '}
+                A series of animated narratives show potential disruptions to
+                agriculture, ports, and more.
+              </InteractiveFeature>
+              <InteractiveFeature
+                title="Strategies"
+                image={strategyPreview}
+                path={'strategies'}
+              >
+                <strong>Review responses to sea level rise.</strong> Browse
+                dozens of strategies, including real-world examples, across four
+                categories of response (protect, accommodate, retreat, and
+                avoid).
+              </InteractiveFeature>
+            </div>
+          </div>
+        </div>
 
         <ContentRow rowClasses="p-5">
           <Subhead>Why Coastal Adaptation?</Subhead>
