@@ -17,32 +17,28 @@ const StrategyDropdown = ({
   strategies
 }: Props): JSX.Element => {
   const colorClass = active ? colorForStrategy(label) : 'secondary'
+
   return (
-    <div className="StrategyDropdown dropdown mr-3">
+    <div className="btn-group">
       <button
-        className={`btn btn-sm dropdown-toggle btn-${colorClass}`}
         type="button"
-        id="dropdownMenuButton"
+        className={`btn btn-${colorClass} dropdown-toggle ml-3`}
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
-        style={{ color: 'white' }}
       >
         {label}
       </button>
-      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        {strategies.map((strategyNode, index) => {
-          const strategy = strategyNode.node
-          return (
-            <Link
-              key={index}
-              className="dropdown-item"
-              to={strategy.fields.slug}
-            >
-              {strategy.frontmatter.title}
-            </Link>
-          )
-        })}
+      <div className="dropdown-menu dropdown-menu-right">
+        {strategies.map((s) => (
+          <Link
+            key={s.node.fields.slug}
+            className="dropdown-item"
+            to={s.node.fields.slug}
+          >
+            {s.node.frontmatter.title}
+          </Link>
+        ))}
       </div>
     </div>
   )

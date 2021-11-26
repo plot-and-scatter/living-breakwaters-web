@@ -107,7 +107,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { contentType: { eq: "theme" } } }
+      filter: { frontmatter: { contentType: { eq: "strategy" } } }
       sort: { fields: [frontmatter___title], order: ASC }
       limit: 1000
     ) {
