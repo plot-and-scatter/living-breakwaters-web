@@ -41,4 +41,4 @@ excerpt: "Located offshore, barrier islands are dynamic landforms that are forme
 [^i3]:
   NPS. Barrier Islands Provide Protection for Wildlife, Plants, and Humans. https://www.nps.gov/guis/learn/nature/images/WildernessLandingPage.jpg?maxwidth=1200&autorotate=false.
 [^i4]:
-  Figure 1. Baurick, T. (2020). Building barriers: Inside the race to save Louisiana's first line of storm defense. https://www.nola.com/news/environment/article_df61c669-14cc-5ba7-821d-2ee7c57becd9.html -->
+  Figure 1. Baurick, T. (2020). Building barriers: Inside the race to save Louisiana's first line of storm defense. https://www.nola.com/news/environment/article_df61c669-14cc-5ba7-821d-2ee7c57becd9.html

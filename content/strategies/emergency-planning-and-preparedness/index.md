@@ -39,4 +39,4 @@ excerpt: "Emergency planning and preparedness is a coordinated process that invo
 <!-- Images -->
 
 [^i1]:
-  Figure 1. Ministry of Land, Infrastructure, Transport and Tourism, Kanto Regional Development Bureau (2011). Tokyo Rinkai Disaster Prevention Park. https://www.gotokyo.org/en/spot/484/images/484_0341_1_1400x1100.jpg. -->
+  Figure 1. Ministry of Land, Infrastructure, Transport and Tourism, Kanto Regional Development Bureau (2011). Tokyo Rinkai Disaster Prevention Park. https://www.gotokyo.org/en/spot/484/images/484_0341_1_1400x1100.jpg.

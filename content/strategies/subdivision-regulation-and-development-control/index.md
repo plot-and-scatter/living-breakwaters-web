@@ -18,4 +18,4 @@ excerpt: "A subdivision regulation is a planning tool that can be used to establ
 [^5]:
   Richardson, G.R.A. and Otero, J. (2012). Land use planning tools for local adaptation to climate change. Ottawa, Ont.: Government of Canada, 38 p.. https://www.nrcan.gc.ca/sites/www.nrcan.gc.ca/files/earthsciences/files/landuse-e.pdf
 [^6]:  
-  Ministry of Municipal Affairs and Housing, Ontario. (2020). Subdivisions. https://www.ontario.ca/document/citizens-guide-land-use-planning/subdivisions -->
+  Ministry of Municipal Affairs and Housing, Ontario. (2020). Subdivisions. https://www.ontario.ca/document/citizens-guide-land-use-planning/subdivisions

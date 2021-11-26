@@ -46,4 +46,4 @@ excerpt: "Beach nourishment (beach renourishment, beach replenishment, or sand r
   Figure 1. Finkl C.W., Walker H.J. (2005) Beach Nourishment. In: Schwartz M.L. (eds) Encyclopedia of Coastal Science. Encyclopedia of Earth Science Series. Springer, Dordrecht. https://doi.org/10.1007/1-4020-3880-1_35 
 [^i5]:
   Figure 2. Parlee Beach Provincial Park
-  Best Management Practices https://www.bienvenuenb.ca/content/dam/gnb/Departments/eco-bce/Promo/Parlee_Beach/pdfs/10_parlee_beach_provincial_park_bmp_July_19_2017-e.pdf -->
+  Best Management Practices https://www.bienvenuenb.ca/content/dam/gnb/Departments/eco-bce/Promo/Parlee_Beach/pdfs/10_parlee_beach_provincial_park_bmp_July_19_2017-e.pdf

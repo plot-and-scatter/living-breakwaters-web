@@ -41,4 +41,4 @@ excerpt: "Floodwalls are typically vertical structural barriers that are used in
 [^i2]:
   The City of Richmond Has Built a Bigger Flood Wall for Britannia Shipyards. https://images.glaciermedia.ca/polopoly_fs/1.23138688.1515437941!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/shipyards-wall.jpg.
 [^i3]:
-  Figure 1 English, T. (2016). Mobile Flood Walls Keep This Austrian Town Safe. https://interestingengineering.com/mobile-flood-walls-keeps-austrian-town-safe -->
+  Figure 1 English, T. (2016). Mobile Flood Walls Keep This Austrian Town Safe. https://interestingengineering.com/mobile-flood-walls-keeps-austrian-town-safe

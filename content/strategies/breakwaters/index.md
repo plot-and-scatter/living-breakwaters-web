@@ -51,4 +51,4 @@ excerpt: "Breakwaters are linear, offshore, or onshore structures built to prote
 [^i5]:
   Figure 2. Rebuild by design. Living breakwater south shore Staten Island. http://www.rebuildbydesign.org/our-work/all-proposals/winning-projects/ny-living-breakwaters
 [^i6]:
-  Figure 3. Wageningen University and Research. (2018). Oyster reefs used to counter large waves. https://www.wur.nl/en/Research-Results/Research-Institutes/marine-research/show-marine/Oyster-reefs-used-to-counter-large-waves.htm -->
+  Figure 3. Wageningen University and Research. (2018). Oyster reefs used to counter large waves. https://www.wur.nl/en/Research-Results/Research-Institutes/marine-research/show-marine/Oyster-reefs-used-to-counter-large-waves.htm

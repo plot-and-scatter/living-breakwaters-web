@@ -31,4 +31,4 @@ excerpt: "Wet floodproofing is the measure of allowing water to enter and exit a
 <!-- Images -->
 
 [^i1]:
-  Figure 1 and 2. Anonymous. (n.d.). CHAPTER 6 – WET FLOODPROOFING.https://www.fema.gov/media-library-data/20130726-1608-20490-7205/fema551_ch_06.pdf -->
+  Figure 1 and 2. Anonymous. (n.d.). CHAPTER 6 – WET FLOODPROOFING.https://www.fema.gov/media-library-data/20130726-1608-20490-7205/fema551_ch_06.pdf

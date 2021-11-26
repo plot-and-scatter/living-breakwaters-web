@@ -31,4 +31,4 @@ excerpt: "Seawalls are hard engineered structures built parallel to the shorelin
 [^i4]:
   Figure 2 Israel, M. H. (2014). Seawalls Units Herzliya Marina. https://econcretetech.com/seawall-units-herzliya-marina/
 [^i5]:
-  Figure 3. O’Neill, E. (2018). Seattle's New Seawall Is Built To Help Salmon  https://www.opb.org/news/article/seattle-seawall-new-salmon-juvenile/ -->
+  Figure 3. O’Neill, E. (2018). Seattle's New Seawall Is Built To Help Salmon  https://www.opb.org/news/article/seattle-seawall-new-salmon-juvenile/

@@ -30,4 +30,4 @@ excerpt: "Early warning systems form an important element of disaster risk manag
 [^11]:
   Keoduangsine, S., Goodwin, R., & Gardner-Stephen, P. (2014). A Review of Flood Warning Systems in Developed and Developing Countries. International Journal of Future Computer and Communication, 3(3), 172.     
 [^12]:
-  United Nations, DHI Centre of Water and Environment. (n.d). Early warning systems for floods. https://www.ctc-n.org/sites/www.ctc-n.org/files/resources/early_warning_systems_for_floods_0.pdf -->
+  United Nations, DHI Centre of Water and Environment. (n.d). Early warning systems for floods. https://www.ctc-n.org/sites/www.ctc-n.org/files/resources/early_warning_systems_for_floods_0.pdf

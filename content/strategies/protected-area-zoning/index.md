@@ -29,4 +29,4 @@ excerpt: "Zoning is a process that gives local and national agencies the autonom
 <!-- Images -->
 
 [^i1]:
-  De Julio De. (2016). KAA - Iya del Gran Chaco National Park and Natural Area of Integrated Management. Protected Areas: Bolivia. http://protarbol.blogspot.com/2016/07/kaa-iya-del-gran-chaco-national-park.html -->
+  De Julio De. (2016). KAA - Iya del Gran Chaco National Park and Natural Area of Integrated Management. Protected Areas: Bolivia. http://protarbol.blogspot.com/2016/07/kaa-iya-del-gran-chaco-national-park.html

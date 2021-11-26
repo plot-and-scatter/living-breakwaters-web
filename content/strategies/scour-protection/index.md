@@ -47,4 +47,4 @@ excerpt: "Scours are property-specific structural tools that are used to protect
 [^i1]:
   Figure 1. Envirostruct Services. (2020). Scour Protection. http://estruct.com.au/waterways/revetment-walls/scour-protection/ 
 [^i2]:
-  Figure 2. “Gulf of Mexico Wave Protection.” Contech Engineered Solutions, https://www.conteches.com/knowledge-center/case-studies/details/slug/gulf-of-mexico-wave-protection. -->
+  Figure 2. “Gulf of Mexico Wave Protection.” Contech Engineered Solutions, https://www.conteches.com/knowledge-center/case-studies/details/slug/gulf-of-mexico-wave-protection. 

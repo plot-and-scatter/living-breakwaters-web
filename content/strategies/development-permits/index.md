@@ -42,4 +42,4 @@ excerpt: "Development permits regulate land use to ensure that areas are develop
 [^17]:  
   FEMA. (2020). Permit for Floodplain Development. https://www.fema.gov/glossary/permit-floodplain-development
 [^18]:  
-  King County. (2020). Shorelines. The Department of Local Services, Permitting Division. https://www.kingcounty.gov/depts/local-services/permits/permits-inspections/land-use-permits/shorelines.aspx -->
+  King County. (2020). Shorelines. The Department of Local Services, Permitting Division. https://www.kingcounty.gov/depts/local-services/permits/permits-inspections/land-use-permits/shorelines.aspx

@@ -28,4 +28,4 @@ excerpt: "Land acquisition is the process of purchasing or expropriating land wi
 [^10]:
   Anonymous. (n.d). Land Acquisition guidelines. Reclamation lands handbook. https://www.usbr.gov/lands/LandsHandbook/Chapter06.pdf
 [^11]:
-  Larimer County. (2016). Land use tools. Land acquisition. Planning for Hazards. https://www.planningforhazards.com/land-acquisition -->
+  Larimer County. (2016). Land use tools. Land acquisition. Planning for Hazards. https://www.planningforhazards.com/land-acquisition

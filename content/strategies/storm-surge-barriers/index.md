@@ -45,4 +45,4 @@ excerpt: "Storm surge barriers are heavily engineered movable or fixed barriers/
 [^i3]:
   Figure 2. Science Hudson.org. (2020). Hudson River Storm Surge Barriers https://www.scenichudson.org/our-work/advocacy/storm-surge-barriers/
 [^i4]:
-  Figure 3. BBC New. 2007. New Thames barrier could be built http://news.bbc.co.uk/2/hi/uk_news/6964281.stm -->
+  Figure 3. BBC New. 2007. New Thames barrier could be built http://news.bbc.co.uk/2/hi/uk_news/6964281.stm

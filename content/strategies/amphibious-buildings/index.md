@@ -32,4 +32,4 @@ excerpt: "Amphibious architecture is an adaptation strategy where structures are
 [^i3]:
   Figure 3. Morphosis Team. (2009). FLOAT House. https://www.morphosis.com/architecture/126/.
 [^i4]:
-  Figure 4. Mangione, K. (2019). Figure 4. Noticed the blue cabin floating in False Creek? Here's what it is. https://bc.ctvnews.ca/noticed-the-blue-cabin-floating-in-false-creek-here-s-what-it-is-1.4565356 -->
+  Figure 4. Mangione, K. (2019). Figure 4. Noticed the blue cabin floating in False Creek? Here's what it is. https://bc.ctvnews.ca/noticed-the-blue-cabin-floating-in-false-creek-here-s-what-it-is-1.4565356

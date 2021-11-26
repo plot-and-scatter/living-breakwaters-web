@@ -44,4 +44,4 @@ excerpt: "Reefs are under and near water ecosystems that provide protection agai
 [^i2]:
   Intertidal Reefs Protect PEI Shoreline from Storm Surge. https://www.princeedwardisland.ca/sites/default/files/styles/news_node_featured_image/public/images/news/souris-breakwater-sized.gif?itok=D-Rkar_7.
 [^i3]:
-  Figure 1. National Oceanic and Atmospheric Administration. (2019). Coral reef ecosystems. https://www.noaa.gov/education/resource-collections/marine-life/coral-reef-ecosystems -->
+  Figure 1. National Oceanic and Atmospheric Administration. (2019). Coral reef ecosystems. https://www.noaa.gov/education/resource-collections/marine-life/coral-reef-ecosystems

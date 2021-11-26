@@ -32,4 +32,4 @@ excerpt: "In British Columbia, the foreshore is defined as the land that exists 
 [^12]:
   Ministry of Environment, Lands and Parks Land and Water Programs Branch. (1995). Riparian Rights and Public Foreshore Use In the Administration of Aquatic Crown Land. https://www.obwb.ca/fileadmin/docs/riparian_regulations_BC_Gov.pdf
 [^13]:
-  Ministry of Sustainable Resource Management. (2002). Government of British Columbia. Memorandum of agreement. https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/land-water-use/crown-land/land-use-plans-and-objectives/coastal-marine/nanaimo-estuary-mp/moa_head_lease_renewal.pdf?bcgovtm=CSMLS -->
+  Ministry of Sustainable Resource Management. (2002). Government of British Columbia. Memorandum of agreement. https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/land-water-use/crown-land/land-use-plans-and-objectives/coastal-marine/nanaimo-estuary-mp/moa_head_lease_renewal.pdf?bcgovtm=CSMLS
