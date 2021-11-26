@@ -20,6 +20,12 @@ export const MIN_ZOOM = 8
 export const MAX_ZOOM = 20
 export const START_ZOOM = 9
 
+// Southwest coordinates, northeast coordinates
+export const MAP_BOUNDS: [LngLatCoordinate, LngLatCoordinate] = [
+  [-124, 48.75],
+  [-121, 49.5]
+]
+
 export const BASE_LAYER_URL = process.env.REACT_APP_BASE_LAYER_URL
 
 const buildMapOptions = (mapRef: MapRefType) => {
@@ -30,6 +36,7 @@ const buildMapOptions = (mapRef: MapRefType) => {
     minZoom: MIN_ZOOM,
     maxZoom: MAX_ZOOM,
     zoom: START_ZOOM,
+    maxBounds: MAP_BOUNDS,
     attributionControl: false
   }
   return options
