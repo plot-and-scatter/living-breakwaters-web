@@ -49,11 +49,7 @@ const StoryNarrative = ({
           onUpdate: (scrollTrigger): void => {
             if (narrativeRef.current) {
               const progress = scrollTrigger.progress
-              console.log(
-                '-->',
-                narrativeRef.current.offsetHeight,
-                narrativeRef.current.scrollHeight
-              )
+
               narrativeRef.current.scrollTop =
                 progress *
                 (narrativeRef.current.scrollHeight -

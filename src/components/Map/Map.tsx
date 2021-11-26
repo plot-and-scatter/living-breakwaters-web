@@ -43,10 +43,8 @@ const Map = ({
   // }, [hideAllLayers, showLayer, flyTo, themeKey])
 
   useEffect(() => {
-    console.log('map', map)
     if (map && themeKey) {
       const theme = THEMES[themeKey]
-      console.log('theme -->', theme)
       showLayer(theme.layerIds)
       flyTo(theme.flyTo)
     }
