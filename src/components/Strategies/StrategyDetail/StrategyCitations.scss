@@ -1,12 +1,12 @@
-.Citations {
-  .footnotes {
-    hr {
-      display: none;
-    }
-  }
-  br {
+.footnotes {
+  hr {
     display: none;
   }
+}
+br {
+  display: none;
+}
+.footnotes {
   ol {
     padding-left: 0;
     columns: 4;

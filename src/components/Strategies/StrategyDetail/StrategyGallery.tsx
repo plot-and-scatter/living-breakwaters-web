@@ -1,6 +1,8 @@
 import React from 'react'
 import FixTypeLater from '../../../@types/FixTypeLater'
 
+import './StrategyCitations.scss'
+
 interface Props {
   images: string[]
   citationHTML: FixTypeLater
@@ -8,12 +10,10 @@ interface Props {
 
 const StrategyGallery = ({ images, citationHTML }: Props): JSX.Element => {
   return (
-    <div className="col-4 Images">
-      <div className="row ImagesTitle">
-        <h2>
-          <i className="fas fa-book mr-2"></i> Citations
-        </h2>
-      </div>
+    <div className="col Images">
+      <h2>
+        <i className="fas fa-book mr-2 py-5"></i> Citations
+      </h2>
 
       {/* {images &&
         images.map((imageHtml, index) => {

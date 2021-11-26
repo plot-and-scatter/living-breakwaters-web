@@ -8,7 +8,7 @@ interface Props {
 
 const Footer = ({ title }: Props): JSX.Element => {
   return (
-    <footer className="Footer container-fluid py-2 text-muted">
+    <footer className="Footer container-fluid py-3 text-muted">
       <div className="row pt-0">
         <div className="col">
           <h5>{title}</h5>

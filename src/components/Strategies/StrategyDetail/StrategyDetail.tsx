@@ -50,13 +50,15 @@ const StrategyDetail = ({
         />
       </div>
 
-      <div className="row BottomBG">
+      <div className="BottomBG">
         <StrategyProjects examples={pageContext.subpages.examples} />
+        {/* <StrategyCitations citationHTML={citationHTML} /> */}
+      </div>
+      <div className="row BottomBG">
         <StrategyGallery
           images={pageContext.subpages.images}
           citationHTML={citationHTML}
         />
-        {/* <StrategyCitations citationHTML={citationHTML} /> */}
       </div>
     </div>
   )

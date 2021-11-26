@@ -33,4 +33,4 @@ excerpt: "Evacuation routes are accessways that are constructed above flood leve
 <!-- Images -->
 
 [^i1]:
-  Figure 1. Aurecon. (n.d). Windsor Flood Evacuation Route, Australia. https://www.aurecongroup.com/projects/transport/windsor-flood-evacuation-route -->
+  Figure 1. Aurecon. (n.d). Windsor Flood Evacuation Route, Australia. https://www.aurecongroup.com/projects/transport/windsor-flood-evacuation-route

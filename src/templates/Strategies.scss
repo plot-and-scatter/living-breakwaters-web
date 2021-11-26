@@ -184,12 +184,10 @@ $example-color-background: $gray-800;
     font-size: 70% !important;
     background-color: $gray-800;
     color: white;
-    padding: 1.5rem;
     img {
       border: solid 1px $gray-600;
     }
     h2 {
-      padding-left: 2rem;
       margin-bottom: 0;
       font-size: 2rem;
       font-weight: 600;
@@ -207,7 +205,7 @@ $example-color-background: $gray-800;
     border-top: solid $example-color-background 3px;
 
     .ExamplesTitle {
-      padding: 1.5rem;
+      // padding: 1.5rem;
       // text-align: center;
       h2 {
         padding-left: 0.5rem;
@@ -246,7 +244,7 @@ $example-color-background: $gray-800;
 
     .Example {
       // padding: 1.5rem;
-      padding: 1rem;
+      // padding: 1rem;
       // padding-top: 2rem;
       // padding-bottom: 2rem;
     }
