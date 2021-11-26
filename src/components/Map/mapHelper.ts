@@ -126,6 +126,8 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
       'top-right'
     )
 
+    map.addControl(new mapboxgl.ScaleControl({ position: 'bottom-left' }))
+
     map.on('load', () => {
       console.log('Starting load...', map)
       map.addSource('mapbox-dem', {
