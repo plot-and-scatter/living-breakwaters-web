@@ -2,6 +2,14 @@
 
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import mapboxgl from '!mapbox-gl'
+import {
+  DPI,
+  Format,
+  MapboxExportControl,
+  PageOrientation,
+  Size
+} from '@watergis/mapbox-gl-export'
+import '@watergis/mapbox-gl-export/css/styles.css'
 
 import { LngLatCoordinate } from '../../@types/LngLatCoordinate'
 import { MapLayer } from '../../@types/MapLayer'
@@ -104,6 +112,19 @@ export const setupBaseMap = (setMap: SetMapType, mapRef: MapRefType): void => {
 
     // addNavControl(map)
     addAttributionControl(map)
+
+    map.addControl(
+      new MapboxExportControl({
+        PageSize: Size.A3,
+        PageOrientation: PageOrientation.Portrait,
+        Format: Format.PNG,
+        DPI: DPI[96],
+        Crosshair: true,
+        PrintableArea: true,
+        accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
+      }),
+      'top-right'
+    )
 
     map.on('load', () => {
       console.log('Starting load...', map)
