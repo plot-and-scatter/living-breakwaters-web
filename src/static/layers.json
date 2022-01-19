@@ -5,8 +5,7 @@
     "color": "#754634",
     "opacity": 0.6,
     "type": "fill",
-    "grouping": "land_uses",
-    "fill-pattern": "square-rgb-255,40,50"
+    "grouping": "land_uses"
   },
   "airport": {
     "name": "Airports",
@@ -35,7 +34,7 @@
   "commercial": {
     "name": "Commercial",
     "id": "commercial",
-    "color": "#2B59C3",
+    "color": "#cc33cc",
     "opacity": 0.5,
     "type": "fill",
     "grouping": "land_uses"
@@ -85,7 +84,7 @@
   "hospital": {
     "name": "Hospital",
     "id": "hospital",
-    "color": "#dc1f26",
+    "color": "#66ccff",
     "opacity": 0.4,
     "type": "fill",
     "grouping": "emergency_preparedness"
@@ -93,7 +92,7 @@
   "hospital_label": {
     "name": "Hospital (labels)",
     "id": "hospital_label",
-    "color": "#dc1f26",
+    "color": "#66ccff",
     "opacity": 0.4,
     "type": "circle",
     "grouping": "emergency_preparedness"
@@ -101,7 +100,7 @@
   "industrial": {
     "name": "Industrial",
     "id": "industrial",
-    "color": "#F5BB00",
+    "color": "#554488",
     "opacity": 0.5,
     "type": "fill",
     "grouping": "land_uses"
@@ -109,8 +108,8 @@
   "institutional": {
     "name": "Institutional",
     "id": "institutional",
-    "color": "#594157",
-    "opacity": 0.5,
+    "color": "#66ccff",
+    "opacity": 0.8,
     "type": "fill",
     "grouping": "land_uses"
   },
@@ -167,7 +166,7 @@
   "residential": {
     "name": "Residential",
     "id": "residential",
-    "color": "#3b9441",
+    "color": "#F5BB00",
     "opacity": 0.5,
     "type": "fill",
     "grouping": "land_uses"
@@ -175,8 +174,8 @@
   "ritual_cultural_area": {
     "name": "Cemeteries",
     "id": "ritual_cultural_area",
-    "color": "#444648",
-    "opacity": 0.4,
+    "color": "#44aa77",
+    "opacity": 0.5,
     "type": "fill",
     "grouping": "land_uses"
   },
@@ -211,15 +210,16 @@
     "opacity": 0.5,
     "type": "fill",
     "grouping": "flood_themes"
+    
   },
   "scenario_c": {
     "name": "Riverine: Fraser River 1894 Flood Record + Peak Flow",
     "id": "scenario_c",
     "color": "#51BBDE",
-    "opacity": 0.4,
+    "opacity": 1,
     "type": "fill",
     "grouping": "flood_themes",
-    "fill-pattern": "square-rgb-150,170,190"
+    "fill-pattern": "square-rgb-110,130,150"
   },
   "scenario_d": {
     "name": "Riverine: Fraser River 1 in 500 Year Flood +1m Sea Level Rise",
@@ -267,8 +267,8 @@
   "agricultural_land_reserve": {
     "name": "Agricultural Land Reserve",
     "id": "agricultural_land_reserve",
-    "color": "#DE9151",
-    "opacity": 0.3,
+    "color": "#99ff99",
+    "opacity": 0.4,
     "type": "fill",
     "grouping": "land_uses"
   },

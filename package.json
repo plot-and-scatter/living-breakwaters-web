@@ -44,7 +44,7 @@
     "gh-pages": "^2.0.0",
     "gsap": "./gsap-bonus.tgz",
     "mapbox-gl": "^2.1.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
