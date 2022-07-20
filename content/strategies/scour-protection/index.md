@@ -2,7 +2,7 @@
 title: Scour Protection
 date: "2020-10-23T00:00:00.000Z"
 contentType: "strategy"
-strategyTypes: "Accommodate"
+strategyTypes: "Protect"
 excerpt: "Scours are property-specific structural tools that are used to protect shoreline structures or building foundations from exposure to the corrosive effects of moving water."
 ---
 
