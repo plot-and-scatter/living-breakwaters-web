@@ -23,7 +23,7 @@ const StrategyIconItem = ({ strategy }: Props): JSX.Element => {
   return (
     <div className={`col-6 col-sm-4 StrategyIconItem mb-4`}>
       <Link to={slug}>
-        <div className={`${strategyType}Item p-2 h-100 d-flex `}>
+        <div className={`${strategyType}Item p-2 h-100 d-flex`}>
           <div className="Title">
             <p>{strategy.node.frontmatter.title}</p>
           </div>
