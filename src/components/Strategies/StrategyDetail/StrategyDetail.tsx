@@ -1,19 +1,17 @@
 import React from 'react'
-import FixTypeLater from '../../../@types/FixTypeLater'
 
 import { StrategyMainPageGQL } from '../../../@types/StrategyGQL'
 import { StrategyPageContext } from '../../../@types/StrategyPageContext'
 import StrategyCitations from './StrategyCitations'
-import StrategyGallery from './StrategyGallery'
 import StrategyHowItWorks from './StrategyHowItWorks'
 import StrategyItemList from './StrategyItemList'
 import StrategyProjects from './StrategyProjects'
 import StrategySummary from './StrategySummary'
 
 interface Props {
+  citationHTML: string
   data: StrategyMainPageGQL
   pageContext: StrategyPageContext
-  citationHTML: FixTypeLater
 }
 
 const StrategyDetail = ({
@@ -49,16 +47,11 @@ const StrategyDetail = ({
           type={'Challenges'}
         />
       </div>
-
       <div className="BottomBG">
         <StrategyProjects examples={pageContext.subpages.examples} />
-        {/* <StrategyCitations citationHTML={citationHTML} /> */}
       </div>
       <div className="row BottomBG">
-        <StrategyGallery
-          images={pageContext.subpages.images}
-          citationHTML={citationHTML}
-        />
+        <StrategyCitations citationHTML={citationHTML} />
       </div>
     </div>
   )
