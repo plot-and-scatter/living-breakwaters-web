@@ -3,10 +3,10 @@
 $example-color-background: $gray-800;
 
 .ProtectBG {
-  background-color: rgb(80, 140, 130);
+  background-color: $color-red;
   color: white !important;
   .hidden {
-    color: rgb(80, 140, 130);
+    color: $color-red;
   }
   &:hover {
     .hidden {
@@ -15,10 +15,10 @@ $example-color-background: $gray-800;
   }
 }
 .AccommodateBG {
-  background-color: #ffc107;
+  background-color: $color-yellow;
   color: #333 !important;
   .hidden {
-    color: #ffc107;
+    color: $color-yellow;
   }
   &:hover {
     .hidden {
@@ -28,10 +28,10 @@ $example-color-background: $gray-800;
 }
 
 .RetreatBG {
-  background-color: #dc3545;
+  background-color: $color-green;
   color: white !important;
   .hidden {
-    color: #dc3545;
+    color: $color-green;
   }
   &:hover {
     .hidden {
@@ -41,10 +41,10 @@ $example-color-background: $gray-800;
 }
 
 .AvoidBG {
-  background-color: #17a2b8;
+  background-color: $color-teal;
   color: white !important;
   .hidden {
-    color: #17a2b8;
+    color: $color-teal;
   }
   &:hover {
     .hidden {

@@ -1,12 +1,16 @@
+@import "../../../scss/common.module";
+
 .StrategyIconItem {
   min-height: 150px;
   // margin-left: -15px;
   // margin-right: -15px;
+  
   a {
+    
     p {
       line-height: 1.1;
+      font-size: 0.9rem !important;
     }
-    color: white !important;
     &:hover {
       text-decoration: none;
       .hidden {
@@ -17,5 +21,39 @@
       visibility: hidden;
       transition: color 0.25s;
     }
+  }
+  div.d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // border: solid 1px #ddd;
+    height: 100%;
+    border-radius: 1rem;
+    transition: border-color 0.25s;
+    &:hover {
+      border-color: #bbb;
+    }
+  }
+  div.Title {
+    height: 50px;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 0.5rem;
+  }
+  div.Action {
+    font-size: 0.8rem !important;
+  }
+
+  .ProtectItem {
+    color: $color-red;
+  }
+  .AccommodateItem {
+    color: darken($color-yellow, 10%);
+  }
+  .RetreatItem {
+    color: $color-green;
+  }
+  .AvoidItem {
+    color: $color-teal;
   }
 }
