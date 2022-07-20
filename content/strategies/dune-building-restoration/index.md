@@ -37,4 +37,4 @@ excerpt: "Dunes develop from sand deposits that represent a store of sediment in
 [^i4]:
   Figure 2. Sustainable Earth Actions. (nd). Hondsbossche and Pettemer Sea defence. https://www.vanoord.com/sustainability/climate/hondsbossche-and-pettemer-sea-defence
 [^i5]:
-  Figure 3. Insert link -->
+  Figure 3. Insert link

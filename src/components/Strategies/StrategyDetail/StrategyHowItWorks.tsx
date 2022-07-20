@@ -30,7 +30,7 @@ const HowItWorks = ({ images }: Props): JSX.Element => {
           {images
             .sort((a, b) => a.relativePath.localeCompare(b.relativePath))
             .map((_, index) => {
-              console.log('_', _)
+              // console.log('_', _)
               return (
                 <li
                   key={index}

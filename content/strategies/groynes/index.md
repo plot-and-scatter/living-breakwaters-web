@@ -45,4 +45,4 @@ excerpt: "Groynes are rigid structures, typically constructed using heavy materi
 [^i3]:
   Figure 1. The constructor. (2020). Gyrones and their classification. https://theconstructor.org/water-resources/hydraulic-structures/groynes-classification/30554/  
 [^i4]:
-  Figure 2. https://www.dreamstime.com/photos-images/aberdeen-scotland-beach.html -->
+  Figure 2. https://www.dreamstime.com/photos-images/aberdeen-scotland-beach.html

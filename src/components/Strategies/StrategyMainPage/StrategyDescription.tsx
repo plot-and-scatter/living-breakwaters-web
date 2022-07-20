@@ -40,7 +40,7 @@ const StrategyDescription = ({
           {children}
         </div>
         <div className="col-12 mb-5">
-          <div className="row Highlight">
+          <div className="row">
             {relevantStrategies.map((strategy, i) => (
               <StrategyIconItem strategy={strategy} key={i} />
             ))}

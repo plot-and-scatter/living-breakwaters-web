@@ -75,12 +75,7 @@ const StoryMap = ({ mapText, themeKey, storyRef }: Props): JSX.Element => {
           onUpdate: (scrollTrigger): void => {
             if (mapRef.current) {
               const progress = scrollTrigger.progress
-              console.log(scrollTrigger)
-              console.log(
-                '-->',
-                mapRef.current.offsetHeight,
-                mapRef.current.scrollHeight
-              )
+
               mapRef.current.scrollTop =
                 progress *
                 (mapRef.current.scrollHeight - mapRef.current.offsetHeight)

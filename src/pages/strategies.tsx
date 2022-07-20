@@ -20,11 +20,11 @@ import './Strategies.scss'
 export const colorForStrategy = (strategy: StrategyType): string => {
   switch (strategy) {
     case StrategyType.Protect:
-      return 'primary'
+      return 'danger'
     case StrategyType.Accommodate:
       return 'warning'
     case StrategyType.Retreat:
-      return 'danger'
+      return 'primary'
     case StrategyType.Avoid:
       return 'info'
     default:

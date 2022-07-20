@@ -30,4 +30,4 @@ excerpt: "Transfer of Development Rights (TDR), also commonly referred to as Tra
 [^11]:  
   Anonymous. (n.d). Environmental Tools: Transfer of Development Rights (TDR) https://www.alberta.ca/assets/documents/ep-environmental-tools-transfer-of-development-rights.pdf
 [^12]:  
-  Green Light Expediting. (n.d). The three types of Development Rights Transfer https://greenlightexpediting.com/blog/the-three-types-of-development-rights-transfer  -->
+  Green Light Expediting. (n.d). The three types of Development Rights Transfer https://greenlightexpediting.com/blog/the-three-types-of-development-rights-transfer

@@ -39,9 +39,7 @@ const BaseLayerSelect = (): JSX.Element => {
         map.setStyle(BASE_LAYER_STYLES[baseLayerIndex])
         // setActiveLayers(_activeLayers)
         resetLayers()
-        console.log('_activeLayers', _activeLayers)
         Object.keys(_activeLayers).forEach((l) => {
-          console.log('-->', l)
           showLayer(l)
         })
       }

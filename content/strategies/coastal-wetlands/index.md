@@ -49,4 +49,4 @@ excerpt: "Coastal wetlands represent ecosystems that are permanently or seasonal
 [^i6]:
   Figure 4. Port of Vancouver. (2020). New Brighton Park Shoreline Habitat Restoration Project. https://www.portvancouver.com/new-brighton-park-shoreline-habitat-restoration-project/
 [^i7]:
-  (a) Video https://youtu.be/H5IsENv48-I?list=PLcLNnQfI92DdSOcDZYLKlhXoGpXGlopnf -->
+  (a) Video https://youtu.be/H5IsENv48-I?list=PLcLNnQfI92DdSOcDZYLKlhXoGpXGlopnf 

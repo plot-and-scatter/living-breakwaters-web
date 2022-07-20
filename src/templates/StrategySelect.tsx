@@ -11,8 +11,22 @@ interface Props {
   strategies: StrategyGQLEdge[]
 }
 
+{
+  /* <li className="nav-item dropdown">
+<a
+  className="nav-link dropdown-toggle"
+  href="#"
+  id="navbarDropdownMenuLink"
+  data-toggle="dropdown"
+  aria-haspopup="true"
+  aria-expanded="false"
+>
+  Case Studies
+</a> */
+}
+
 const StrategySelect = ({ currentPost, strategies }: Props): JSX.Element => (
-  <div className="StrategySelect d-flex">
+  <div className="text-right">
     {Object.values(StrategyType).map((strategyType, index) => {
       const filteredStrategies = strategies.filter(
         (s) => s.node.frontmatter.strategyTypes === strategyType

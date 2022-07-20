@@ -25,4 +25,4 @@ excerpt: "Secondary dikes work in conjunction with primary dikes to reduce the i
 <!-- Images -->
 
 [^i1]:
-  A Typical Sleeper Dike near the Hondsbossche Zeewering. https://upload.wikimedia.org/wikipedia/commons/3/3b/SlaperdijkHondsbossche.jpg. -->
+  A Typical Sleeper Dike near the Hondsbossche Zeewering. https://upload.wikimedia.org/wikipedia/commons/3/3b/SlaperdijkHondsbossche.jpg.

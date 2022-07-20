@@ -37,4 +37,4 @@ excerpt: "Dry floodproofing is a practice of utilizing waterproof membranes and 
 [^i1]:
   Figure 1. FEMA (n.d) Chapter 7 dry floodproofing. Retrieve from https://www.fema.gov/media-library-data/20130726-1608-20490-9182/fema_551_ch_07.pdf
 [^i2]:
-  Figure 2. Wikimedian Commonsé (2020). File:Hamburg, HafenCity, Bebauung am Sandtorkai -- 2016 -- 3036.jpg -->
+  Figure 2. Wikimedian Commonsé (2020). File:Hamburg, HafenCity, Bebauung am Sandtorkai -- 2016 -- 3036.jpg

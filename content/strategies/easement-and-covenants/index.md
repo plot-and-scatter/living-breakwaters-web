@@ -40,4 +40,4 @@ excerpt: "An easement or covenant is a legal agreement that allows the owner of 
 [^16]:
   Environment Canada. (2004). CONSERVATION EASEMENTS, COVENANTS AND SERVITUDES IN CANADA. A Legal Review. http://nawcc.wetlandnetwork.ca/conseasecov04-1.pdf 
 [^17]:
-  Arlington Group Planning and Architecture Inc. (2013). SEA LEVEL RISE ADAPTATION PRIMER A TOOLKIT TO BUILD ADAPTIVE CAPACITY ON CANADA’S SOUTH COASTS. https://www.cip-icu.ca/Files/Awards/Planning-Excellence/Sea-Level-Rise-_Final_Report-MAIN.aspx -->
+  Arlington Group Planning and Architecture Inc. (2013). SEA LEVEL RISE ADAPTATION PRIMER A TOOLKIT TO BUILD ADAPTIVE CAPACITY ON CANADA’S SOUTH COASTS. https://www.cip-icu.ca/Files/Awards/Planning-Excellence/Sea-Level-Rise-_Final_Report-MAIN.aspx

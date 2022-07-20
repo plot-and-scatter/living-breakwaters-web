@@ -49,4 +49,4 @@ excerpt: "A land trust is a non-profit private organization created for the purp
 [^i1]:
   Spreckelsville, Maui. https://images.squarespace-cdn.com/content/v1/57dc7b882994ca976a693629/1475012201416-UVDR4AJLKD2JGAJTXP6K/ke17ZwdGBToddI8pDm48kA9rhCjhJUYcQpKsBaLXN1ZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIye_uGeP4isZUnhF2J4BSLX0iSmbQA7pLf20f1CNe8SkKMshLAGzx4R3EDFOm1kBS/image-asset.jpeg?format=750w.
 [^i2]:
-  The Englishman River Estuary. https://www.naturetrust.bc.ca/wp-content/uploads/2017/06/englishman-river-aerial-shot-2017-1024x685.jpg. -->
+  The Englishman River Estuary. https://www.naturetrust.bc.ca/wp-content/uploads/2017/06/englishman-river-aerial-shot-2017-1024x685.jpg.

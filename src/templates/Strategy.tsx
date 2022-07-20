@@ -7,7 +7,6 @@ import Header from '../components/Layout/Header'
 import Layout from '../components/Layout/Layout'
 import SEO from '../components/SEO'
 import SitePageProps from '../@types/SitePageProps'
-import StrategyCitations from '../components/Strategies/StrategyDetail/StrategyCitations'
 import StrategyDetail from '../components/Strategies/StrategyDetail/StrategyDetail'
 import StrategySelect from './StrategySelect'
 import Title from '../components/Layout/Title'
@@ -45,32 +44,6 @@ const Strategy = ({
           pageContext={pageContext}
           citationHTML={post.html}
         />
-        {/* <StrategyCitations citationHTML={post.html} /> */}
-        {/* <hr style={{ marginBottom: '1rem' }} />
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul> */}
       </div>
     </Layout>
   )
@@ -107,7 +80,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { contentType: { eq: "theme" } } }
+      filter: { frontmatter: { contentType: { eq: "strategy" } } }
       sort: { fields: [frontmatter___title], order: ASC }
       limit: 1000
     ) {

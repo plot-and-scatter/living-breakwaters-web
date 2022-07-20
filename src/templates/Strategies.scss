@@ -3,10 +3,10 @@
 $example-color-background: $gray-800;
 
 .ProtectBG {
-  background-color: rgb(80, 140, 130);
+  background-color: $color-red;
   color: white !important;
   .hidden {
-    color: rgb(80, 140, 130);
+    color: $color-red;
   }
   &:hover {
     .hidden {
@@ -15,10 +15,10 @@ $example-color-background: $gray-800;
   }
 }
 .AccommodateBG {
-  background-color: #ffc107;
+  background-color: $color-yellow;
   color: #333 !important;
   .hidden {
-    color: #ffc107;
+    color: $color-yellow;
   }
   &:hover {
     .hidden {
@@ -28,10 +28,10 @@ $example-color-background: $gray-800;
 }
 
 .RetreatBG {
-  background-color: #dc3545;
+  background-color: $color-green;
   color: white !important;
   .hidden {
-    color: #dc3545;
+    color: $color-green;
   }
   &:hover {
     .hidden {
@@ -41,10 +41,10 @@ $example-color-background: $gray-800;
 }
 
 .AvoidBG {
-  background-color: #17a2b8;
+  background-color: $color-teal;
   color: white !important;
   .hidden {
-    color: #17a2b8;
+    color: $color-teal;
   }
   &:hover {
     .hidden {
@@ -184,12 +184,10 @@ $example-color-background: $gray-800;
     font-size: 70% !important;
     background-color: $gray-800;
     color: white;
-    padding: 1.5rem;
     img {
       border: solid 1px $gray-600;
     }
     h2 {
-      padding-left: 2rem;
       margin-bottom: 0;
       font-size: 2rem;
       font-weight: 600;
@@ -207,7 +205,7 @@ $example-color-background: $gray-800;
     border-top: solid $example-color-background 3px;
 
     .ExamplesTitle {
-      padding: 1.5rem;
+      // padding: 1.5rem;
       // text-align: center;
       h2 {
         padding-left: 0.5rem;
@@ -246,7 +244,7 @@ $example-color-background: $gray-800;
 
     .Example {
       // padding: 1.5rem;
-      padding: 1rem;
+      // padding: 1rem;
       // padding-top: 2rem;
       // padding-bottom: 2rem;
     }

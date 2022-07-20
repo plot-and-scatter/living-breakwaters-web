@@ -45,4 +45,4 @@ excerpt: "Dikes are linear compacted earth structures implemented to protect coa
 [^i3]:
   Figure 2. Delta works. https://www.dutchwatermanagement.com/delta-works-1997-netherlands
 [^i4]:
-  Figure 3. Richmond News. Richmond's $300 million dyke plan forges ahead https://www.richmond-news.com/news/richmond-s-300-million-dyke-plan-forges-ahead-1.15299874  -->
+  Figure 3. Richmond News. Richmond's $300 million dyke plan forges ahead https://www.richmond-news.com/news/richmond-s-300-million-dyke-plan-forges-ahead-1.15299874
